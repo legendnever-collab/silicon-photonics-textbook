@@ -1,0 +1,8 @@
+{
+ "question":"같은 λ₀와 L에서 n_eff가 커졌습니다. 무엇을 확실히 말할 수 있을까요?",
+ "choices":[
+  {"text":"축 방향 Phase 누적량이 커지고 Guided Wavelength가 짧아진다.","feedback":"맞습니다. β = 2πn_eff/λ₀이 커져 같은 L에서 φ가 더 크게 쌓입니다. λg = λ₀/n_eff는 짧아집니다. Power가 커지거나 Pulse가 반드시 더 늦게 도착한다고 이 정보만으로 결론 내릴 수는 없습니다.","correct":true,"concept":"축 방향 Phase 변화율"},
+  {"text":"Core 안의 Power 비율을 알면 n_eff를 항상 가중평균으로 계산할 수 있다.","feedback":"n_eff는 경계조건을 만족하는 β에서 정의합니다. 단순한 Core/Cladding Power 가중평균 공식은 일반적으로 성립하지 않습니다. Notebook의 n_eff는 가정한 입력이며 어떤 Power 비율에서 추정한 값이 아닙니다.","concept":"Effective Index의 단순 평균 오개념"},
+  {"text":"n_eff만으로 짧은 Pulse의 도달 시간을 정확하게 계산할 수 있다.","feedback":"단색 Phase와 Pulse Envelope의 전파는 다릅니다. Pulse에는 dβ/dω로 결정되는 Group Velocity가 필요합니다. β가 Frequency에 따라 어떻게 변하는지 모르면 n_eff 하나만으로 정확한 Group Delay를 구할 수 없습니다.","concept":"Phase와 Group Velocity의 혼동"}
+ ],"why":"동일한 L 안에 더 많은 Phase Cycle이 들어가면 축 방향 Wavelength는 짧아집니다. n_eff는 바로 그 변화율을 진공에 대한 비율로 표현합니다. 이 정의는 입력 Power를 필요로 하지 않습니다.","simple":"10 µm 길이에 물결 무늬가 몇 번 들어가는지 생각해 보세요. n_eff가 크면 같은 거리에 더 많은 주기가 들어갑니다. 이 ‘물결 간격’의 설명과 Pulse 전체가 이동하는 속도는 다른 질문입니다.","math":"φ = (2π/λ₀)n_eff L이므로 고정 λ₀, L에서 ∂φ/∂n_eff = 2πL/λ₀ > 0입니다. λg = λ₀/n_eff이므로 ∂λg/∂n_eff < 0입니다. Group Index는 n_g = n_eff − λ₀(dn_eff/dλ₀)이며 이번 고정 입력 계산으로 그 미분은 얻을 수 없습니다.","notebook":"λ₀ = 1550 nm, L = 10 µm에서 n_eff를 2.40 → 2.60으로 바꾸세요. 전체 Cycle 수와 Phase 원을 함께 보세요. 원이 반복되어도 전체 누적 Phase는 계속 증가합니다. 이 입력은 실제 Strip Solver의 결과를 뜻하지 않습니다."
+}

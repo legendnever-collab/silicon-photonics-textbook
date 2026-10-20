@@ -1,0 +1,8 @@
+{
+ "question":"Waveguide가 TE₀와 TE₁을 지원한다면, 실제 전파 상태에 대해 무엇을 알 수 있을까요?",
+ "choices":[
+  {"text":"두 Mode가 반드시 같은 Power로 동시에 전파한다.","feedback":"지원하는 Mode의 수는 가능한 해의 수입니다. 입력 Field의 공간 분포와 Polarization이 각 Mode에 얼마나 겹치는지에 따라 여기되는 Power가 달라집니다. 존재 조건과 여기 조건을 구분해야 합니다.","concept":"Supported Mode와 Excited Mode의 혼동"},
+  {"text":"두 형태가 허용되며, 실제 여기 비율은 입력 Field에 달려 있다.","feedback":"그렇습니다. Mode는 Waveguide가 허용하는 해이고, 입력은 그중 어떤 조합을 만들지 정합니다. 한 Mode만 여기하면 단면의 상대 분포가 유지되지만 여러 Mode의 합은 서로 다른 β 때문에 진행하며 간섭할 수 있습니다.","concept":"Eigenmode와 입력 Overlap 구별","correct":true},
+  {"text":"TE₁의 음수 Field 영역에서는 Power가 뒤로 흐른다.","feedback":"Signed Field의 음수는 같은 기준 순간의 위상 반전을 뜻합니다. 이 Slab의 +z 전파 TE Mode에서 축 방향 평균 Power Density는 |Ey|²에 비례하므로 Field 부호가 바뀐다고 뒤로 흐르지 않습니다.","concept":"Field 부호와 에너지 방향의 혼동"}
+ ],"why":"가능한 진동 형태와 실제로 만들어진 진동은 다릅니다. 입력 Field를 허용된 Mode들의 합으로 분해할 때 계수는 각각의 Overlap으로 정해집니다. Mode가 3개 존재해도 대칭과 정렬 때문에 특정 Mode만 여기될 수 있습니다.","simple":"줄이 낼 수 있는 여러 진동 형태와 실제 손으로 만든 진동을 구별해 보세요. 가능한 형태가 여러 개라고 항상 모든 형태가 같은 세기로 섞이는 것은 아닙니다. Waveguide도 입력 모양이 중요합니다.","math":"E = Σ aₘ eₘ exp[i(βₘz − ωt)]로 씁니다. eₘ은 각 Mode의 Profile이고 aₘ은 여기 계수입니다. 서로 다른 βₘ의 Phase 차이가 z에 따라 달라집니다. 정규화 방식과 전체 Vector Field에 맞는 Overlap 적분이 필요하며, 이 Notebook은 aₘ을 계산하지 않습니다.","notebook":"TE₀와 TE₁을 비교해 Node를 찾아 보세요. Field²로 바꾸면 양·음 Lobe가 모두 양수가 됩니다. Polarization 개념도에서는 유한한 Width/Height와 주된 Field 방향을 확인하세요. 그 그림은 2D Mode Solver 결과가 아닙니다."
+}

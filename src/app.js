@@ -57,7 +57,14 @@ function renderNotebook(){
  }else renderAdvancedNotebook(l);
  updateNotebook();
 }
-function renderAdvancedNotebook(){throw Error('Lesson notebook not implemented');}
+function renderAdvancedNotebook(l){
+ if(l.id==='1.2'){
+  const view=settings().view==='polarization'?'polarization':'modes';
+  $('#notebook').innerHTML=shell(view==='modes'?'Analytical · Slab TE':'Conceptual','Mode의 공간적 형태',`<div class="segmented"><button data-view="modes" aria-pressed="${view==='modes'}">Slab Mode</button><button data-view="polarization" aria-pressed="${view==='polarization'}">TE / TM 개념</button></div><div id="notebook-plot"></div><div id="mode-buttons" class="segmented"></div><div id="field-toggle" class="segmented"><button data-field="signed">Signed Field</button><button data-field="intensity">Field²</button></div><div class="readout" id="notebook-readout" role="status"></div>`,`<p>Slab: x 방향 Width d = 500 nm, y 방향 무한, z 방향 전파. λ₀ = 1550 nm, nCore = 3.48, nClad = 1.444. Ey인 TE만 풉니다. 유한한 Height의 Strip Mode가 아닙니다.</p><p>해석적으로 유도한 Slab 고유방정식을 80회 Bisection으로 풉니다. 그래프는 실제 1D 해의 성분 Ey 또는 Ey²이며 최대 진폭 1로 정규화합니다. 수치 근 찾기는 Full-vector Simulation 또는 실측 검증을 의미하지 않습니다.</p><p>Polarization 그림은 Conceptual이며 화살표 크기는 실제 Field 세기를 뜻하지 않습니다.</p>`);
+ }else if(l.id==='1.3'){
+  $('#notebook').innerHTML=shell('Analytical · Phase','길이에 쌓이는 Phase',`<div id="notebook-plot"></div><p class="plot-caption">단색 Wave의 정규화된 cos(βz)와 전체 Phase의 2π 나머지. 진폭은 1이며 Power를 계산하지 않습니다.</p>${slider('neff','가정한 n_eff',num('neff',2.4,1.5,3.4),1.5,3.4,.01,'')}${slider('length','전파 길이 L',num('length',10,0,20),0,20,.1,'µm')}<div class="readout" id="notebook-readout" role="status"></div>`,`<p>λ₀ = 1550 nm 고정. 균일한 단면, 단일 Mode, 실수 n_eff, 무손실 단색 전파를 가정합니다. n_eff Slider는 예제 입력이며 2D Strip Solver 결과가 아닙니다.</p><p>β는 rad/µm, L과 λ는 µm로 변환합니다. φ는 rad, φ/(2π)는 Cycle 수입니다. Group Velocity, Dispersion, 실제 Input Coupling은 계산하지 않습니다.</p>`);
+ }else renderEngineeringNotebook(l);
+}
 function updateNotebook(){
  if(current().id!=='1.1'){updateAdvancedNotebook();return;}
  const theta=num('angle',45,5,80), tc=P.criticalAngle(),tir=theta>tc, rad=theta*Math.PI/180;
@@ -65,9 +72,39 @@ function updateNotebook(){
  const x=240,y=150,len=130,s=Math.sin(rad),c=Math.cos(rad),ratio=3.48/1.444*s;
  const transmit=tir?`<path d="M110 126 Q240 110 370 126" stroke="var(--plot)" fill="none" stroke-width="2" stroke-dasharray="4 5"/><text x="274" y="90">Evanescent field</text>`:(()=>{const t=Math.asin(ratio);return `<path class="ray" d="M${x} ${y} L${x+120*Math.sin(t)} ${y-120*Math.cos(t)}"/><text x="330" y="79">Refracted ray</text>`;})();
  $('#notebook-plot').innerHTML=svg(`Normal 기준 입사각 ${theta}도. ${tir?'TIR, Cladding에 Evanescent Field 존재':'전파하는 굴절파 존재'}`,`<rect class="core" x="20" y="150" width="460" height="150" rx="5"/><line class="axis" x1="20" y1="150" x2="480" y2="150"/><line x1="240" x2="240" y1="45" y2="300" stroke="var(--muted)" stroke-dasharray="5 5"/><text x="252" y="40">Normal</text><text x="30" y="57">SiO₂ · n₂ = 1.444</text><text x="30" y="285">Si · n₁ = 3.48</text><path class="ray" d="M${x-len*s} ${y+len*c} L${x} ${y} L${x+len*s} ${y+len*c}"/>${transmit}<circle cx="240" cy="150" r="4" fill="var(--warm)"/><text x="155" y="211">θ₁ = ${theta}°</text><text x="300" y="252">Reflected ray</text>`);
- $('#notebook-readout').innerHTML=`<p>Critical Angle θc = <strong>${tc.toFixed(2)}°</strong></p><p>${tir?`θ₁ &gt; θc → <strong>TIR 条件を満たします</strong>`.replace('条件を満たします','조건을 만족합니다'):`θ₁ &lt; θc → 굴절각 θ₂ = <strong>${(Math.asin(ratio)*180/Math.PI).toFixed(1)}°</strong>`}</p><p class="caption">${tir?'바깥으로 진행하는 굴절파는 없지만 경계의 Field는 사라지지 않습니다.':'일부 빛이 Cladding으로 전파할 수 있습니다. 반사되는 성분도 존재합니다.'}</p>`;
+ $('#notebook-readout').innerHTML=`<p>Critical Angle θc = <strong>${tc.toFixed(2)}°</strong></p><p>${tir?`θ₁ &gt; θc → <strong>TIR 조건을 만족합니다</strong>`:`θ₁ &lt; θc → 굴절각 θ₂ = <strong>${(Math.asin(ratio)*180/Math.PI).toFixed(1)}°</strong>`}</p><p class="caption">${tir?'바깥으로 진행하는 굴절파는 없지만 경계의 Field는 사라지지 않습니다.':'일부 빛이 Cladding으로 전파할 수 있습니다. 반사되는 성분도 존재합니다.'}</p>`;
 }
-function updateAdvancedNotebook(){}
+function fieldPlot(model,mode,kind='signed'){
+ const extent=Math.max(.8,model.a+.35), left=49,right=475,top=45,bottom=245,mid=(top+bottom)/2;
+ const X=x=>left+(x+extent)/(2*extent)*(right-left),Y=e=>kind==='intensity'?bottom-170*e:mid-85*e;
+ const values=Array.from({length:501},(_,i)=>{const x=-extent+2*extent*i/500,e=P.slabField(mode,x);return `${i?'L':'M'}${X(x).toFixed(2)} ${Y(kind==='intensity'?e*e:e).toFixed(2)}`;}).join(' ');
+ const ticks=[-extent,-model.a,0,model.a,extent].filter((v,i,a)=>!i||v-a[i-1]>.05);
+ return svg(`1D symmetric Slab TE${mode.m}, ${kind==='intensity'?'normalized Ey squared':'normalized signed Ey'} versus x in micrometers`, `<rect class="core" x="${X(-model.a)}" y="${top}" width="${X(model.a)-X(-model.a)}" height="${bottom-top}"/><text x="${X(-model.a)+5}" y="34">Si Core</text><text x="340" y="34">SiO₂</text><line class="axis" x1="${left}" x2="${right}" y1="${Y(0)}" y2="${Y(0)}"/><line class="axis" x1="${left}" x2="${left}" y1="${top}" y2="${bottom}"/><path class="field" d="${values}"/>${ticks.map(x=>`<line class="axis" x1="${X(x)}" x2="${X(x)}" y1="${bottom}" y2="${bottom+5}"/><text x="${X(x)}" y="${bottom+24}" text-anchor="middle">${x.toFixed(2)}</text>`).join('')}<text x="12" y="65">1</text><text x="8" y="${Y(0)+5}">0</text>${kind==='signed'?'<text x="4" y="235">−1</text>':''}<text x="245" y="301" text-anchor="middle">x (µm) · ${kind==='intensity'?'Ey² / max|Ey|²':'Ey / max|Ey|'}</text>`);
+}
+function updateAdvancedNotebook(){
+ const l=current();
+ if(l.id==='1.2'){
+  if(settings().view==='polarization'){
+   $('#notebook-plot').innerHTML=svg('Conceptual polarization of a finite strip: propagation z, width x, height y. Quasi TE predominantly Ex, quasi TM predominantly Ey.',`<rect class="core" x="100" y="100" width="280" height="115"/><rect x="100" y="100" width="280" height="115" stroke="var(--muted)" fill="none"/><path class="curve" d="M130 158 H345 M335 150 L345 158 L335 166"/><path class="ray" d="M240 202 V113 M232 123 L240 113 L248 123"/><text x="100" y="255">x · Width</text><text x="31" y="115">y</text><text x="30" y="137">Height</text><text x="291" y="145">Ex</text><text x="247" y="124">Ey</text><text x="105" y="62">z: propagation out of cross section</text><text x="50" y="298">Quasi-TE: Ex dominant · Quasi-TM: Ey dominant</text>`);
+   $('#mode-buttons').innerHTML='';$('#field-toggle').hidden=true;
+   $('#notebook-readout').innerHTML='<p><strong>유한한 Silicon Strip의 개념도</strong></p><p>Chip 면: x–z, Height: y. 실제 Strip에서는 종방향 성분도 존재할 수 있습니다. 화살표는 주된 방향을 설명하며 정량 Field Profile이 아닙니다.</p><p class="caption">이 Notebook의 Slab TE는 Ey 성분입니다. Slab의 불변 축과 Chip의 면을 다르게 정의했기 때문에 이름만 보고 Strip Quasi-TE와 동일시하지 마세요.</p>';
+  }else{
+   const model=P.slabTE(500),index=Math.round(num('mode',0,0,model.modes.length-1)),mode=model.modes[index],kind=settings().field==='intensity'?'intensity':'signed';
+   $('#notebook-plot').innerHTML=fieldPlot(model,mode,kind);$('#field-toggle').hidden=false;
+   $('#mode-buttons').innerHTML=model.modes.map(m=>`<button data-mode="${m.m}" aria-pressed="${m.m===index}">TE${m.m===0?'₀':m.m===1?'₁':'₂'}</button>`).join('');
+   document.querySelectorAll('[data-field]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.field===kind)));
+   $('#notebook-readout').innerHTML=`<p>TE<sub>${mode.m}</sub> · 내부 Node <strong>${mode.m}개</strong> · n_eff <strong>${mode.neff.toFixed(4)}</strong></p><p>허용된 Slab TE Mode: ${model.modes.length}개. 최대 진폭 1로 각각 정규화했으므로 Mode 사이 Power 크기를 비교하지 않습니다.</p><p class="caption">Analytical model · 수치 근 찾기. 2D Strip 또는 측정 결과가 아닙니다.</p>`;
+  }
+ }else if(l.id==='1.3'){
+  const n=num('neff',2.4,1.5,3.4),L=num('length',10,0,20),p=P.phase(n,1550,L),angle=p.phi%(2*Math.PI);
+  $('#neff-value').textContent=n.toFixed(2);$('#length-value').textContent=L.toFixed(1)+' µm';
+  const path=Array.from({length:801},(_,i)=>{const z=i/800*3.1;return `${i?'L':'M'}${(42+z/3.1*420).toFixed(2)} ${(95-38*Math.cos(p.beta*z)).toFixed(2)}`;}).join(' ');
+  $('#notebook-plot').innerHTML=svg('Normalized real field cos beta z for first 3.1 micrometers and phase modulo 2 pi at selected length',`<line class="axis" x1="42" x2="462" y1="95" y2="95"/><path class="curve" d="${path}"/><text x="30" y="40">Re(E) / E₀ · first 3.1 µm</text><text x="42" y="155">0</text><text x="427" y="155">3.1 µm</text><circle cx="112" cy="237" r="45" stroke="var(--line)" fill="none"/><path class="curve" d="M112 237 L${112+42*Math.cos(angle)} ${237-42*Math.sin(angle)}"/><text x="185" y="226">φ mod 2π = ${angle.toFixed(3)} rad</text><text x="185" y="252">${p.cycles.toFixed(3)} cycles in ${L.toFixed(1)} µm</text><text x="30" y="310">λg = ${(p.guidedUm*1000).toFixed(1)} nm</text>`);
+  $('#notebook-readout').innerHTML=`<p>β = 2π × ${n.toFixed(2)} / 1.55 = <strong>${p.beta.toFixed(3)} rad/µm</strong></p><p>φ = ${p.beta.toFixed(3)} × ${L.toFixed(1)} = <strong>${p.phi.toFixed(3)} rad</strong></p><p>λg = 1.55 / ${n.toFixed(2)} = <strong>${p.guidedUm.toFixed(3)} µm</strong></p><p class="caption">위 그래프는 같은 길이의 확대 구간입니다. L만 바꾸면 β와 물결 간격은 그대로이고 누적 Phase만 변합니다.</p>`;
+ }else updateEngineeringNotebook();
+}
+function renderEngineeringNotebook(){throw Error('Engineering notebook not implemented');}
+function updateEngineeringNotebook(){}
 function showSession(){remember();$('#session-content').innerHTML=lessons.map(l=>`<div class="session-item"><span>${l.id} · ${l.short}</span><span>${state.completed.includes(l.id)?'읽음으로 기록':'자유롭게 학습 중'}</span></div>`).join('');$('#session-dialog').showModal();}
 $('#lesson-nav').addEventListener('click',e=>navigateClick(e));
 $('#reading').addEventListener('click',e=>{
@@ -83,7 +120,7 @@ $('#reading').addEventListener('input',e=>{if(e.target.dataset.note){state.notes
 $('#reading').addEventListener('change',e=>{if(e.target.id==='prediction'){state.predictions[state.lesson]=Number(e.target.value);$('#prediction-feedback').textContent='';save();}});
 $('#notebook').addEventListener('input',e=>{if(e.target.dataset.setting){settings()[e.target.dataset.setting]=Number(e.target.value);updateNotebook();save();}});
 $('#notebook').addEventListener('change',e=>{if(e.target.dataset.selectSetting){settings()[e.target.dataset.selectSetting]=e.target.value;updateNotebook();save();}});
-$('#notebook').addEventListener('click',e=>{const b=e.target.closest('[data-view]');if(b){settings().view=b.dataset.view;renderNotebook();save();}const m=e.target.closest('[data-mode]');if(m){settings().mode=Number(m.dataset.mode);updateNotebook();save();}});
+$('#notebook').addEventListener('click',e=>{const b=e.target.closest('[data-view]');if(b){settings().view=b.dataset.view;renderNotebook();save();}const f=e.target.closest('[data-field]');if(f){settings().field=f.dataset.field;updateNotebook();save();}const m=e.target.closest('[data-mode]');if(m){settings().mode=Number(m.dataset.mode);updateNotebook();save();}});
 function onScroll(){if(navigating)return;clearTimeout(scrollTimer);scrollTimer=setTimeout(remember,250);}
 $('#reading').addEventListener('scroll',onScroll,{passive:true});window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('pagehide',remember);
 matchMedia('(max-width:760px)').addEventListener('change',()=>{placeNotebook();setupObserver();});
