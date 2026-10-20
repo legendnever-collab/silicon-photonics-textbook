@@ -1,0 +1,25 @@
+{
+  "question": "Pin=1 mW인 Lossless 50:50 Forward Splitter의 각 출력은?",
+  "choices": [
+    {
+      "text": "P=0.5 mW, 정규화 진폭 0.5이다.",
+      "feedback": "Power 값은 맞지만 진폭은 다릅니다. 0.5²=0.25이므로 두 출력의 합은 0.5 mW뿐입니다. 진폭은 √0.5입니다.",
+      "concept": "Power와 Amplitude의 선형 혼동"
+    },
+    {
+      "text": "P=0.5 mW, 진폭은 1/√2 √mW이다.",
+      "feedback": "맞습니다. 두 진폭 제곱을 합하면 1 mW입니다. 다만 각 출력의 복소 Phase까지 정하려면 소자의 Field Convention이 필요합니다.",
+      "concept": "정규화와 보존",
+      "correct": true
+    },
+    {
+      "text": "각 출력에 3 dB가 있으므로 입력의 절반은 소자에서 흡수된다.",
+      "feedback": "각 출력의 3.010 dB는 절반이 다른 출력으로 간 결과입니다. 두 출력 합을 사용한 Excess Loss는 0 dB이며 이 모델에는 흡수가 없습니다.",
+      "concept": "분배와 소실의 혼동"
+    }
+  ],
+  "why": "시간 평균 Power는 E와 H의 곱을 적분한 값입니다. 고정된 Mode의 두 Field가 a에 비례하므로 Power는 |a|²에 비례합니다. 정규화하면 계수를 1로 둘 수 있습니다.",
+  "simple": "절반의 Power를 만들려면 Field를 절반보다 조금 크게 남겨야 합니다. 0.707을 두 번 제곱해 더하면 약 1입니다. 서로 다른 길에서 오는 빛을 합칠 때는 이 진폭과 Phase를 함께 씁니다.",
+  "math": "P₁/Pin=rη이고 |a₁/ain|=√(rη)입니다. r=1/2, η=1이면 1/√2입니다. 단일 Port IL=−10log₁₀(rη), EL=−10log₁₀η로 서로 다릅니다.",
+  "notebook": "Notebook의 r와 Excess Loss를 따로 조작하세요. r를 바꾸면 분배가 변하고 두 출력의 합은 일정합니다. Excess Loss를 키우면 합계가 줄고 그 차이는 Loss 항에 기록됩니다."
+}

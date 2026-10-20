@@ -1,0 +1,64 @@
+{
+  "id": "2.1",
+  "short": "Power & Field",
+  "title": "How Do We Split Optical Power?",
+  "time": "15–25분",
+  "lead": "Chapter 1에서 배운 Mode를 이제 회로의 입력으로 사용합니다. Power와 Field를 구별하는 것이 모든 Passive Component 계산의 출발점입니다.",
+  "question": "입력 1 mW를 두 출력에 절반씩 나눌 때 Field Amplitude도 절반이 될까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "하나의 길에서 여러 경로로",
+      "scene": "passive",
+      "html": "<p>Chapter 1에서는 하나의 Waveguide가 어떤 공간적 Mode를 유지하는지 살펴봤습니다. 이제 동일한 단일 Mode를 전달하는 경로들을 연결해 봅니다. 한 Laser를 두 경로에 공급하거나, 한쪽을 Reference로 남기거나, 서로 다른 Phase를 만든 뒤 다시 합치려면 먼저 <strong>Optical Power Splitting</strong>이 필요합니다. 이 Chapter는 원본 교재 Chapter 4의 DC → Y-branch → MZI → Ring → Bragg 순서로 소자를 배웁니다. 이번 짧은 Lesson은 그 앞에 놓은 Power/Field 선수 개념입니다.</p><p>‘절반으로 나눈다’는 문장만으로는 충분하지 않습니다. 측정기로 읽는 Power와 간섭 계산에 더하는 Complex Field는 다른 물리량이기 때문입니다. 두 양을 혼동하면 Power Conservation을 어기거나 MZI의 최대 출력이 입력보다 커지는 잘못된 결과를 얻습니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Power는 제곱이고, 간섭은 Field의 합입니다",
+      "scene": "passive",
+      "html": "<p>고정된 Frequency에서 한 Mode의 Electric/Magnetic Field 분포를 일정한 기준으로 정규화하면, 그 Mode를 얼마나 강하게 여기했는지 하나의 <strong>Complex Modal Amplitude a</strong>로 표현할 수 있습니다. 여기서는 <strong>|a|² = P</strong>가 되도록 Power-normalized Mode를 씁니다. P를 mW로 표시하면 a의 단위는 √mW입니다. 이 a는 단면의 한 지점에서 읽은 Electric Field E [V/m] 자체가 아닙니다.</p><p>실제 Guided Power는 단면을 지나는 시간 평균 Poynting Vector의 적분, P = ½ Re∫(E×H*)·ẑ dA로 정의됩니다. 같은 Mode의 E와 H를 함께 두 배로 키우면 P는 네 배가 됩니다. 이 관계를 간단히 다루기 위한 정규화가 |a|²입니다. 서로 다른 Impedance나 Mode 크기를 가진 E [V/m]를 아무 정규화 없이 비교해서 P∝|E|²의 동일 계수를 적용하면 안 됩니다.</p><p>입력 Port 하나와 출력 Port 두 개인 <strong>1×2 Splitter</strong>는 Forward 입력을 두 갈래로 보냅니다. <strong>2×2 Coupler</strong>는 두 입력과 두 출력의 Field 관계를 함께 정의합니다. 한쪽만 입력해 똑같이 50:50 Power를 얻더라도, 두 입력을 동시에 사용할 때의 Phase 관계와 역방향 동작까지 같다는 뜻은 아닙니다.</p><p>또한 Passive는 각 출력이 입력보다 작다는 말만을 뜻하지 않습니다. 이상적인 Lossless 소자에서는 모든 출력 Power의 합이 입력과 같습니다. 실제로는 방사·흡수·원하지 않는 Mode·반사 등 다른 채널로 Power가 갈 수 있습니다. 어느 Port를 출력 합에 포함했는지부터 명시해야 합니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "분배율과 손실을 따로 계산합니다",
+      "scene": "passive",
+      "html": "<div class=\"equation\">η = 10<sup>−EL/10</sup><br>P₁ = rηP<sub>in</sub>, P₂ = (1−r)ηP<sub>in</sub><br>|a₁| = √P₁, |a₂| = √P₂</div><dl class=\"terms\"><dt>r</dt><dd>수집된 Forward Power의 출력 1 분배 비율 · 0–1</dd><dt>EL</dt><dd>Excess Loss · dB. 두 유효 출력의 합이 입력보다 감소한 정도</dd><dt>η</dt><dd>수집한 두 출력의 총 Power 효율 · 무차원</dd><dt>a</dt><dd>Power-normalized Modal Amplitude · √mW, 복소 Phase는 별도</dd></dl><p>한 Port의 <strong>Insertion Loss</strong>는 IL₁ = −10 log₁₀(P₁/Pin) = EL −10 log₁₀r입니다. 반면 Excess Loss는 −10 log₁₀[(P₁+P₂)/Pin]입니다. 따라서 이상적인 50:50에서 한 출력은 약 3.010 dB 낮지만 Excess Loss는 0 dB입니다. 나머지 절반은 다른 출력에 있으며 소실된 것이 아닙니다.</p><div class=\"worked\"><h3>Worked Example · 1 mW의 50:50 분배</h3><p>Pin = 1 mW, r = 0.5, EL = 0 dB이면 P₁ = P₂ = 0.5 mW입니다. |ain| = 1 √mW이고 각 출력 |a| = √0.5 ≈ <strong>0.7071 √mW</strong>입니다. 만약 각 a를 0.5로 놓으면 합계 Power는 0.25+0.25 = 0.5 mW가 되어, 가정에 없던 손실 50%를 만든 셈입니다.</p><p>EL = 1 dB이면 η ≈ 0.7943이고 각 출력은 0.3972 mW입니다. 총 유효 출력 0.7943 mW와 미수집/손실 채널 0.2057 mW의 합이 입력입니다. 이 단순 Ledger는 흡수와 방사를 개별적으로 구분하지 않습니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "수치가 맞아도 물리량의 이름을 확인합니다",
+      "scene": "passive",
+      "html": "<p>다음 질문에서는 Output Power의 값만 고르지 말고 그 값에 대응하는 Amplitude를 함께 생각해 보세요. Offline Guided Tutor는 미리 작성한 설명을 제공하며 자유 입력을 자동 평가하지 않습니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "예측한 뒤 Power Ledger를 확인합니다",
+      "scene": "passive",
+      "html": "<p>Notebook에서 r를 0.5로 두고 Excess Loss를 0에서 1 dB로 바꾸기 전에 두 출력의 합을 예측해 보세요. 그 다음 r만 0.8로 바꾸면 합계가 변하는지도 확인합니다. r는 총량의 배분이고 η는 유효 출력으로 남는 총량입니다.</p><p>Figure의 Waveguide 선 굵기는 Power를 그린 것이 아닙니다. 숫자와 정규화 곡선을 읽어 주세요. 이번 모델은 <em>Forward Power Ledger</em>이며 완전한 Reciprocal 3-port Scattering Matrix가 아닙니다. Phase를 포함한 2×2 Matrix는 다음 Lesson에서 배웁니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "Power 정규화는 다음 식을 읽는 언어입니다",
+      "scene": "passive",
+      "html": "<ul><li>Power는 |a|²이며 50:50 Power의 각 진폭 비율은 1/√2입니다.</li><li>한 Port의 3 dB 분배 손실과 전체 Excess Loss를 구별합니다.</li><li>간섭에서는 Power끼리 더하기 전에 Complex Field가 어떻게 결합되는지 알아야 합니다.</li></ul><p>다음에는 Chapter 1의 Evanescent Tail이 다른 Waveguide와 겹칠 때 생기는 Directional Coupling부터 살펴봅니다. 그 뒤 원본의 다음 Section인 Y-branch를 배우며, MMI는 비교를 위한 보충 내용으로 덧붙입니다.</p>"
+    }
+  ],
+  "prediction": "Lossless 50:50에서 각 출력의 정규화 진폭은?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "1/√2이며 두 출력 Power의 합은 1이다",
+    "0.5이므로 Power 합도 1이다",
+    "1이므로 두 출력 Power의 합은 2이다"
+  ],
+  "predictionFeedback": "50:50는 Power 비율입니다. 두 진폭의 제곱 합 (1/√2)²+(1/√2)²=1을 확인하세요. 진폭만 합해서 에너지 보존을 검사하지 않습니다.",
+  "reflection": "한 Port의 3 dB Insertion Loss와 0 dB Excess Loss가 동시에 가능한 이유를 Power와 Field로 설명해 보세요.",
+  "sources": [
+    "C0"
+  ]
+}

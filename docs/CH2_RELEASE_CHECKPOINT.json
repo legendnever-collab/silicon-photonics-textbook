@@ -1,0 +1,55 @@
+{
+  "version": "0.2.0-rc",
+  "dateKST": "2026-10-21",
+  "status": "PASS",
+  "baseChapter1": "32910d500ba66ed9ceccf48373ec796c8e28e44a",
+  "pr": "https://github.com/legendnever-collab/silicon-photonics-textbook/pull/2",
+  "checkpointRemoteCommits": {
+    "D0": "a319d97d8e879e39cab4c47f89bcfe6a75bbcae2",
+    "D1": "241067041695aa4ce7b1a2d69154ba6f2f8ab8a1",
+    "D2": "9d2062ff151e144663a84d3471018a1a0bf95cc9"
+  },
+  "build": {
+    "path": "dist/silicon-photonics-textbook-v0.2.0.html",
+    "sha256": "f108bb1ef4c90598ca56f1f806a3fc46c2bf2fa55666288b2754bac1372a7a68",
+    "sourceHash": "23caa1efe82e1f237997cc4f51fb17adfd0552018332da421027d3d40c918c24"
+  },
+  "counts": {
+    "lessons": 10,
+    "chapter2Lessons": 5,
+    "chapter2Figures": 17,
+    "analyticalFigures": 10,
+    "conceptualFigures": 7,
+    "unitContentTests": 41,
+    "chapter1IntegratedBrowserScenarios": 32,
+    "chapter2BrowserScenarios": 15
+  },
+  "physicsChecks": [
+    "Splitter conservation and square-root amplitudes",
+    "DC quadrature, mismatch and power periodicity",
+    "Phase units/index/path/periodicity",
+    "UdaggerDU independent complex matrix multiplication",
+    "MZI complementary ports and loss ledger",
+    "Ring critical coupling, a=1 all-pass and independent ng FSR",
+    "Bragg tanh/sech and independent RK4 transfer propagation"
+  ],
+  "chapter1StandaloneSha256": "35d44b6e612e16633d819aaba2a1b0372d5c96e1b16ffeb1553cb89320f17da1",
+  "storage": {
+    "legacy": "sipt-ch1-v1",
+    "integrated": "sipt-textbook-v2",
+    "legacyWrites": false,
+    "schemaVersion": 1
+  },
+  "knownLimitations": [
+    "Original full chapter body not acquired; official detailed contents verified",
+    "No fabricated PDK/measurement/FDTD/FEM results",
+    "MMI and Y structures are Conceptual, not full-wave fields",
+    "Ring theta sweep is not a dispersion-calibrated wavelength spectrum",
+    "Uniform Bragg only; advanced structures described with mapped follow-up locations",
+    "Chromium emulation only; no physical mobile hardware or education-effectiveness study",
+    "D1/D2 archives are partial previews with original Ch1 font subset"
+  ],
+  "mergeAuthorized": false,
+  "chapter3Started": false,
+  "next": "User learning review; stop at RC"
+}

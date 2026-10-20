@@ -1,9 +1,9 @@
 (function(){
 'use strict';
-const {lessons}=TEXTBOOK, P=Photonics, $=s=>document.querySelector(s), key='sipt-ch1-v1';
+const {lessons}=TEXTBOOK, P=Photonics, $=s=>document.querySelector(s), key=TEXTBOOK.multiChapter?'sipt-textbook-v2':'sipt-ch1-v1';
 const defaults=()=>({version:1,lesson:lessons[0].id,theme:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light',positions:{},notes:{},answers:{},extras:{},predictions:{},settings:{},completed:[]});
 let state=defaults(), storageOK=true, observer, navigating=false, scrollTimer;
-try{const stored=localStorage.getItem(key);if(stored)state=validate(JSON.parse(stored));}catch(e){storageOK=false;}
+try{const stored=localStorage.getItem(key)||(TEXTBOOK.multiChapter?localStorage.getItem('sipt-ch1-v1'):null);if(stored)state=validate(JSON.parse(stored));}catch(e){storageOK=false;}
 function validate(v){
  if(!v||v.version!==1||!lessons.some(l=>l.id===v.lesson))throw Error('이 Chapter와 호환되는 version 1 기록이 아닙니다.');
  const clean=defaults();clean.lesson=v.lesson;clean.theme=v.theme==='dark'?'dark':'light';
@@ -14,6 +14,7 @@ function validate(v){
   const pred=v.predictions?.[id];if(Number.isInteger(pred)&&pred>=0&&pred<l.predictionOptions.length)clean.predictions[id]=pred;
   for(const type of ['reflection','prediction','explanation']){const n=v.notes?.[id+':'+type];if(typeof n==='string')clean.notes[id+':'+type]=n.slice(0,12000);}
   clean.settings[id]={};for(const [k,val] of Object.entries(v.settings?.[id]||{})){if(typeof val==='number'&&Number.isFinite(val))clean.settings[id][k]=Math.max(-100000,Math.min(100000,val));if(['signed','intensity','modes','polarization','field','dispersion','strip','linear','db'].includes(val))clean.settings[id][k]=val;}
+ if(id.startsWith('2.'))clean.settings[id]=Ch2Notebook.sanitize(id,clean.settings[id]);
  }
  clean.completed=Array.isArray(v.completed)?v.completed.filter(id=>lessons.some(l=>l.id===id)):[];return clean;
 }
@@ -25,11 +26,11 @@ function num(k,def,min,max){const v=settings()[k];return typeof v==='number'&&Nu
 function setTheme(){document.documentElement.dataset.theme=state.theme;$('#theme').textContent=state.theme==='dark'?'Light':'Dark';$('#theme').setAttribute('aria-label',`${state.theme==='dark'?'Light':'Dark'} Theme로 전환`);}
 function position(){return matchMedia('(max-width:760px)').matches?window.scrollY:$('#reading').scrollTop;}
 function remember(){state.positions[state.lesson]=position();save();}
-function renderNav(){const nav=$('#lesson-nav');nav.innerHTML=lessons.map(l=>`<button data-lesson="${l.id}" ${l.id===state.lesson?'aria-current="page"':''}><span>LESSON ${l.id}</span>${l.short}</button>`).join('');}
-const sourceLinks={R1:['MIT · Dielectric Waveguides','https://web.mit.edu/6.013_book/www/chapter13/13.5.html'],R2:['MIT OCW · Lecture 15','https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/resources/lec15/'],R3:['Ansys · Mode List and Deck','https://optics.ansys.com/hc/en-us/articles/360034396734-FDE-solver-analysis-Mode-List-and-Deck'],R4:['RP Photonics · Effective Refractive Index','https://www.rp-photonics.com/effective_refractive_index.html'],R5:['RP Photonics · Propagation Losses','https://www.rp-photonics.com/propagation_losses.html'],R6:['RP Photonics · Bend Losses','https://www.rp-photonics.com/bend_losses.html']};
+function renderNav(){const nav=$('#lesson-nav');const activeChapter=state.lesson.split('.')[0];if(TEXTBOOK.multiChapter){let chapterNav=$('#chapter-nav');if(!chapterNav){chapterNav=document.createElement('nav');chapterNav.id='chapter-nav';chapterNav.setAttribute('aria-label','Chapter 선택');nav.before(chapterNav);chapterNav.addEventListener('click',navigateClick);}chapterNav.innerHTML=['1','2'].map(c=>`<button data-lesson="${c}.1" ${c===activeChapter?'aria-current="page"':''}>Chapter ${c} · ${c==='1'?'Waveguides':'Passive Components'}</button>`).join('');}nav.innerHTML=lessons.filter(l=>!TEXTBOOK.multiChapter||l.id.startsWith(activeChapter+'.')).map(l=>`<button data-lesson="${l.id}" ${l.id===state.lesson?'aria-current="page"':''}><span>LESSON ${l.id}</span>${l.short}</button>`).join('');}
+const sourceLinks={C0:['Chrostowski & Hochberg · Chapter 4 / Official Contents','https://assets.cambridge.org/97811070/85459/toc/9781107085459_toc.pdf'],C1:['Yariv · Coupled-mode theory for guided-wave optics','https://doi.org/10.1109/JQE.1973.1077767'],C2:['Soldano & Pennings · MMI self-imaging','https://doi.org/10.1109/50.372474'],C3:['Bogaerts et al. · Silicon microring resonators','https://www.photonics.intec.ugent.be/download/pub_3105.pdf'],C4:['Ansys · Uniform Grating Coupled-wave Model','https://optics.ansys.com/hc/en-us/articles/39728177095059-Grating-Options-in-the-TWLM'],R1:['MIT · Dielectric Waveguides','https://web.mit.edu/6.013_book/www/chapter13/13.5.html'],R2:['MIT OCW · Lecture 15','https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/resources/lec15/'],R3:['Ansys · Mode List and Deck','https://optics.ansys.com/hc/en-us/articles/360034396734-FDE-solver-analysis-Mode-List-and-Deck'],R4:['RP Photonics · Effective Refractive Index','https://www.rp-photonics.com/effective_refractive_index.html'],R5:['RP Photonics · Propagation Losses','https://www.rp-photonics.com/propagation_losses.html'],R6:['RP Photonics · Bend Losses','https://www.rp-photonics.com/bend_losses.html']};
 function renderLesson(focus=false){
  navigating=true;observer?.disconnect();$('.workspace').append($('#notebook'));const l=current();renderNav();
- $('#reading').innerHTML=`<div class="chapter-label">CHAPTER 01 · FUNDAMENTALS OF OPTICAL WAVEGUIDES</div><div class="lesson-time">Lesson ${l.id} · ${l.time} 예상 · 학습 시간 미검증</div><h1>${l.title}</h1><p class="lead">${l.lead}</p><blockquote class="opening-question">${l.question}</blockquote>${l.sections.map(s=>`<section id="section-${s.key}" class="reading-section" data-section="${s.key}" data-scene="${s.scene}"><div class="section-label">${s.label}</div><h2>${s.title}</h2>${s.html}${s.key==='tutor'?tutorHTML(l):''}${s.key==='experiment'?experimentHTML(l):''}${s.key==='summary'?reflectionHTML(l):''}</section>`).join('')}<details class="source-links"><summary>이 Lesson의 참고자료와 모델 구분</summary><ul>${l.sources.map(id=>`<li>[${id}] <a href="${sourceLinks[id][1]}" target="_blank" rel="noopener noreferrer">${sourceLinks[id][0]}</a></li>`).join('')}</ul><p>본문과 그림은 독자적으로 작성했습니다. 원서 PDF는 확보하지 못했으며 확인하지 않은 페이지를 인용하지 않습니다. 전체 출처/모델 조건은 Repository의 references/SOURCE_MAPPING.md에 기록합니다.</p></details><footer class="lesson-footer"><button id="mark-read" aria-pressed="${state.completed.includes(l.id)}">${state.completed.includes(l.id)?'읽음 기록됨 · 취소':'이 Lesson 읽음으로 기록'}</button>${lessons.indexOf(l)<lessons.length-1?`<button class="primary" data-lesson="${lessons[lessons.indexOf(l)+1].id}">다음 Lesson 읽기 →</button>`:'<a href="#section-summary">Chapter Review로 돌아가기 ↑</a>'}</footer>`;
+ $('#reading').innerHTML=`<div class="chapter-label">${l.id.startsWith('2.')?'CHAPTER 02 · PASSIVE COMPONENTS & INTERFERENCE':'CHAPTER 01 · FUNDAMENTALS OF OPTICAL WAVEGUIDES'}</div><div class="lesson-time">Lesson ${l.id} · ${l.time} 예상 · 학습 시간 미검증</div><h1>${l.title}</h1><p class="lead">${l.lead}</p><blockquote class="opening-question">${l.question}</blockquote>${l.sections.map(s=>`<section id="section-${s.key}" class="reading-section" data-section="${s.key}" data-scene="${s.scene}"><div class="section-label">${s.label}</div><h2>${s.title}</h2>${s.html}${s.key==='tutor'?tutorHTML(l):''}${s.key==='experiment'?experimentHTML(l):''}${s.key==='summary'?reflectionHTML(l):''}</section>`).join('')}<details class="source-links"><summary>이 Lesson의 참고자료와 모델 구분</summary><ul>${l.sources.map(id=>`<li>[${id}] <a href="${sourceLinks[id][1]}" target="_blank" rel="noopener noreferrer">${sourceLinks[id][0]}</a></li>`).join('')}</ul><p>${l.id.startsWith('2.')?'원본 Chapter 4의 공식 목차·세부 Section을 확인했습니다. 전체 본문·원본 실험 데이터는 재현하지 않았습니다. 독자 작성한 본문·SVG·해석 모델의 대응과 축소 이유는 TEXTBOOK_SOURCE_MAPPING.md에 기록합니다.':'본문과 그림은 독자적으로 작성했습니다. 원서 PDF는 확보하지 못했으며 확인하지 않은 페이지를 인용하지 않습니다. 전체 출처/모델 조건은 Repository의 references/SOURCE_MAPPING.md에 기록합니다.'}</p></details><footer class="lesson-footer"><button id="mark-read" aria-pressed="${state.completed.includes(l.id)}">${state.completed.includes(l.id)?'읽음 기록됨 · 취소':'이 Lesson 읽음으로 기록'}</button>${lessons.indexOf(l)<lessons.length-1?`<button class="primary" data-lesson="${lessons[lessons.indexOf(l)+1].id}">다음 Lesson 읽기 →</button>`:'<a href="#section-summary">Chapter Review로 돌아가기 ↑</a>'}</footer>`;
  TeachingFigures.mount($('#reading'),l.id,settings());
  for(const el of document.querySelectorAll('[data-note]'))el.value=state.notes[l.id+':'+el.dataset.note]||'';
  const pred=$('#prediction');if(pred)pred.value=state.predictions[l.id]||0;
@@ -59,7 +60,7 @@ function setupObserver(){
   const context=$('#notebook-context');if(context)context.textContent=`지금 읽는 절 · ${section.querySelector('h2').textContent}`;
   $('#notebook').dataset.scene=topic;
   document.querySelectorAll('.teaching-figure').forEach(el=>el.classList.toggle('figure-active',el===active));
-  if(current().id==='1.2'&&topic!==connectedTopic){
+  if(current().id==='2.5'&&['ring','bragg','circuit'].includes(topic)&&topic!==connectedTopic){connectedTopic=topic;settings().ch2View=['ring','bragg','circuit'].indexOf(topic);renderNotebook();const c=$('#notebook-context');if(c)c.textContent=`지금 읽는 절 · ${section.querySelector('h2').textContent}`;}else if(current().id==='1.2'&&topic!==connectedTopic){
    const previous=connectedTopic;connectedTopic=topic;
    const view=topic==='polarization'?'polarization':'modes';
    if(previous&&settings().view!==view){settings().view=view;renderNotebook();const c=$('#notebook-context');if(c)c.textContent=`지금 읽는 절 · ${section.querySelector('h2').textContent}`;}
@@ -74,6 +75,7 @@ function slider(id,label,value,min,max,step,unit){return `<div class="controls">
 function svg(label,body,view='0 0 500 320'){return `<svg class="plot" viewBox="${view}" role="img" aria-label="${esc(label)}">${body}</svg>`;}
 function renderNotebook(){
  const l=current();
+ if(l.id.startsWith('2.')){$('#notebook').innerHTML=Ch2Notebook.render(l,settings(),{shell,slider});Ch2Notebook.update(l,settings());return;}
  if(l.id==='1.1'){
   $('#notebook').innerHTML=shell('Analytical + Conceptual','Index Contrast와 TIR',`<div id="notebook-plot"></div><p class="plot-caption">Conceptual ray diagram · 각도는 경계의 Normal 기준입니다. 선의 굵기는 Power나 반사율을 나타내지 않습니다.</p>${slider('angle','입사각 θ₁',num('angle',45,5,80),5,80,1,'°')}<div class="readout" id="notebook-readout" role="status"></div>`,`<p>Snell’s Law와 θc 계산은 Analytical입니다. 그림은 Conceptual입니다. λ₀ = 1550 nm 부근의 예시 nCore = 3.48, nClad = 1.444를 고정합니다.</p><p>평탄한 무한 경계, 투명한 선형·등방성·비자성 매질을 가정합니다. Polarization별 Fresnel 반사율, Evanescent Field 크기, 실제 Strip Mode를 계산하지 않습니다.</p>`);
  }else renderAdvancedNotebook(l);
@@ -88,6 +90,7 @@ function renderAdvancedNotebook(l){
  }else renderEngineeringNotebook(l);
 }
 function updateNotebook(){
+ if(current().id.startsWith('2.')){Ch2Notebook.update(current(),settings());return;}
  if(current().id!=='1.1'){updateAdvancedNotebook();return;}
  const theta=num('angle',45,5,80), tc=P.criticalAngle(),tir=theta>tc, rad=theta*Math.PI/180;
  $('#angle-value').textContent=theta+' °';
@@ -179,14 +182,14 @@ $('#reading').addEventListener('input',e=>{if(e.target.dataset.note){state.notes
 $('#reading').addEventListener('change',e=>{if(e.target.id==='prediction'){state.predictions[state.lesson]=Number(e.target.value);$('#prediction-feedback').textContent='';save();}});
 $('#notebook').addEventListener('input',e=>{if(e.target.dataset.setting){settings()[e.target.dataset.setting]=Number(e.target.value);updateNotebook();TeachingFigures.refresh($('#reading'),settings());save();}});
 $('#notebook').addEventListener('change',e=>{if(e.target.dataset.selectSetting){settings()[e.target.dataset.selectSetting]=e.target.value;updateNotebook();TeachingFigures.refresh($('#reading'),settings());save();}});
-$('#notebook').addEventListener('click',e=>{const b=e.target.closest('[data-view]');if(b){settings().view=b.dataset.view;renderNotebook();save();}const f=e.target.closest('[data-field]');if(f){settings().field=f.dataset.field;updateNotebook();TeachingFigures.refresh($('#reading'),settings());save();}const m=e.target.closest('[data-mode]');if(m){settings().mode=Number(m.dataset.mode);updateNotebook();TeachingFigures.refresh($('#reading'),settings());save();}});
+$('#notebook').addEventListener('click',e=>{const ch2=e.target.closest('[data-ch2-view]');if(ch2){settings().ch2View=Number(ch2.dataset.ch2View);renderNotebook();save();}const b=e.target.closest('[data-view]');if(b){settings().view=b.dataset.view;renderNotebook();save();}const f=e.target.closest('[data-field]');if(f){settings().field=f.dataset.field;updateNotebook();TeachingFigures.refresh($('#reading'),settings());save();}const m=e.target.closest('[data-mode]');if(m){settings().mode=Number(m.dataset.mode);updateNotebook();TeachingFigures.refresh($('#reading'),settings());save();}});
 function onScroll(){if(navigating)return;clearTimeout(scrollTimer);scrollTimer=setTimeout(remember,250);}
 $('#reading').addEventListener('scroll',onScroll,{passive:true});window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('pagehide',remember);
 matchMedia('(max-width:760px)').addEventListener('change',()=>{placeNotebook();setupObserver();});
 $('#theme').onclick=()=>{state.theme=state.theme==='dark'?'light':'dark';setTheme();save();};
 $('.brand').onclick=e=>{e.preventDefault();remember();state.lesson=lessons[0].id;state.positions[state.lesson]=0;save();renderLesson(true);};
 $('#session').onclick=showSession;$('#close-session').onclick=()=>$('#session-dialog').close();
-$('#export').onclick=()=>{remember();const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));a.download='silicon-photonics-ch1-study-record.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
+$('#export').onclick=()=>{remember();const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));a.download=TEXTBOOK.multiChapter?'silicon-photonics-study-record.json':'silicon-photonics-ch1-study-record.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
 $('#import').onchange=async e=>{$('#import-status').textContent='불러오는 중…';try{const file=e.target.files[0];if(!file)return;if(file.size>1000000)throw Error('1 MB 이하의 학습 기록을 선택해 주세요.');const clean=validate(JSON.parse(await file.text()));state=clean;setTheme();save();renderLesson();$('#import-status').textContent='학습 기록을 불러왔습니다.';}catch(err){$('#import-status').textContent='가져오지 못했습니다. '+err.message;}e.target.value='';};
 TeachingFigures.bind({get:()=>settings(),set:(k,v)=>{settings()[k]=v;save();}});
 setTheme();renderLesson();save();

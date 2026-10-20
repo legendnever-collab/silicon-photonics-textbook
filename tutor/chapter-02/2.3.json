@@ -1,0 +1,25 @@
+{
+  "question": "Lossless Waveguide 한 경로에 exp(iπ)를 곱했습니다. 올바른 설명은?",
+  "choices": [
+    {
+      "text": "Power가 음수가 되거나 0이 된다.",
+      "feedback": "Field의 부호가 바뀌어도 |−a|²=|a|²입니다. 단독 경로의 Power가 0이 되려면 진폭을 실제로 줄이거나 다른 Field와 같은 Port에서 상쇄해야 합니다.",
+      "concept": "Field 부호와 Power 혼동"
+    },
+    {
+      "text": "그 경로의 Power는 같고 다른 Field와 결합할 때 Relative Phase가 영향을 준다.",
+      "feedback": "맞습니다. exp(iπ)의 절댓값은 1입니다. 두 Arm의 Field 합에서만 Cross Term이 나타나며 Combiner의 Phase 기준도 포함해야 합니다.",
+      "concept": "Phase와 단독 Power 구분",
+      "correct": true
+    },
+    {
+      "text": "두 Arm에 같은 공통 Phase를 더하면 언제나 MZI 출력이 바뀐다.",
+      "feedback": "두 출력 Field에 같은 exp(iχ)가 곱해지면 그 절댓값 제곱은 변하지 않습니다. 출력 Power에 중요한 것은 상대 Phase입니다.",
+      "concept": "Absolute와 Relative Phase 혼동"
+    }
+  ],
+  "why": "Phase Factor는 복소 평면에서 Vector를 회전시키지만 길이는 바꾸지 않습니다. 한 경로의 Power는 Vector 길이의 제곱이고, 간섭은 두 Vector의 합의 길이를 측정하는 과정입니다.",
+  "simple": "시계 바늘을 회전해도 바늘 길이는 같습니다. 두 바늘을 더한 결과는 방향에 따라 달라집니다. 실제 간섭에서는 두 Field가 같은 Mode/Port에서 겹쳐야 이 더하기가 가능합니다.",
+  "math": "|a e^(iφ)|²=|a|². |a+b|²=|a|²+|b|²+2Re(ab*)에서 마지막 Cross Term이 상대 Phase에 의존합니다. 공통 Phase χ는 ab*에서 소거됩니다.",
+  "notebook": "ΔL 0, 약 0.161, 0.323, 0.646 µm를 비교하세요. Field의 높이가 유지되고 상대 위치가 변합니다. 계산된 Δφ를 다음 MZI Lesson의 Phase Slider 값과 연결해 보세요."
+}

@@ -44,3 +44,16 @@ Chapter 1 사용자 학습 검토와 명시적 승인 전 main 병합 금지. Ch
 - `artifacts/v0.1.1/`: Browser 보고서와 Desktop/Mobile Screenshot.
 
 2D Scalar 근사의 Numerical 수렴은 실제 Silicon Strip의 물리적 정확도를 보장하지 않습니다. Bend Figure는 Conceptual 또는 합성 데이터 기반 Illustrative입니다. 실제 학습 효과와 Figure 밀도는 사용자 검토를 기다립니다.
+
+## v0.2.0 · Chapter 2 Release Candidate
+
+- Offline 통합 교재: `dist/silicon-photonics-textbook-v0.2.0.html` (Chapter 1+2).
+- Chapter 1 원본 실행 파일 `dist/chapter-01.html`과 Save key는 보존합니다.
+- 원본 순서/Section 대응: [TEXTBOOK_SOURCE_MAPPING.md](TEXTBOOK_SOURCE_MAPPING.md).
+- 학습: Power/Field 선수 개념 → DC → Y-branch → MMI 보충 → Phase → MZI → Ring → Bragg → Passive PIC Exercise.
+- Figure/검증/검토: `docs/CH2_FIGURE_INVENTORY.md`, `notebook/CH2_MODEL_CONTRACT.md`, `docs/CH2_QA_REPORT.md`, `docs/CH2_LEARNING_REVIEW.md`.
+- Checkpoints: `checkpoints/v0.2.0/D0-textbook.html`–`D3-textbook.html`.
+- Build: `npm run build`; Unit/Content: `npm test`; Ch1 Browser Regression: `npm run test:browser`; Ch2 Browser: `npm run test:ch2:browser`.
+- Browser tests require Playwright and Chromium (or `BROWSER_EXECUTABLE_PATH`). Set `TEXTBOOK_HTML=/dist/silicon-photonics-textbook-v0.2.0.html` to run the existing Chapter 1 scenarios against the integrated artifact. This repository has no configured GitHub Actions workflow; reports record local execution.
+
+This branch is a Draft stacked on `feature/ch1-textbook-pilot` (PR #1), for user learning review. No main merge and no Chapter 3 implementation.
