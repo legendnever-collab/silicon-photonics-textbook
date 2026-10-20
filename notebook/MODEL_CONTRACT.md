@@ -1,0 +1,22 @@
+# Physics model contract
+
+## Coordinate system and fidelity
+Every quantitative result names a model. Slab: x transverse finite full-width d=2a, y invariant/infinite, z propagation. Ey-only TE field. Strip diagram: x Width, y Height, chip plane x–z, z propagation. Strip Quasi-TE means predominantly Ex; the Slab's TE label must not be transferred without checking coordinates.
+
+## Symmetric dielectric Slab
+At fixed λ0, real n1>n2>0, equal μ, lossless isotropic media:
+
+E''y + [k0²n²(x) − β²]Ey = 0.
+
+Inside |x|≤a: Ey = cos(hx) for even modes, sin(hx) for odd modes. Outside: match edge amplitude and decay exp[−q(|x|−a)] with odd parity as needed. h²=n1²k0²−β²; q²=β²−n2²k0². Continuity of Ey and dEy/dx gives u tan u=w (even), −u cot u=w (odd), u=ha, w=qa, V²=u²+w². Equivalent monotone equation: u=mπ/2+atan2(w,u). Solve in (mπ/2,min[V,(m+1)π/2]) with 80 Bisection steps. Mode exists only when V>mπ/2; implementation tolerance 1e−10 in V. β=√(n2²k0²+q²). Units inside functions: nm inputs, µm spatial coordinates, β/h/q in rad/µm or 1/µm.
+
+For TE, Sz=β|Ey|²/(2ωμ), so Core Power Fraction equals the unweighted |Ey|² integral ratio. Exact internal integral: a[1±sin(2u)/(2u)], plus for even and minus for odd. Exact total outside integral: edgeAmplitude²/q. Profiles independently normalized to max|Ey|=1 do not imply equal launched Power. Display windows truncate the drawing, but Gamma integrates the infinite tails analytically. Count includes TE family only, not TM or radiation continuum. Solver results are exact to numerical root tolerance for this ideal model, not validated manufacturing data or 2D Strip simulation.
+
+## Phase
+λUm=λNm/1000; β=2πneff/λUm; φ=βLUm; λg=λUm/neff. Real fixed neff is an explicitly assumed input. Phase modulo 2π is separate from accumulated Phase. The cosine sketch is fixed to the first 3.1 µm; it does not stretch with L. Group Velocity and Dispersion are excluded.
+
+## Loss ledger
+Synthetic b(R) [dB/90°]: (2µm,.4), (5µm,.08), (10µm,.02), (20µm,.005). Author-selected exercise inputs; no measurement, PDK calibration, interpolation or extrapolation. n_eff/Geometry models do not determine b(R). α=3dB/cm, straight path=2mm, N=4 quarter-circle Bends. Length[cm]=2/10+NπR/(2×10000). Propagation=αLength, extra Bend=Nb(R), Total=sum, transmission=10^(−Total/10). Corner footprint R² is a centerline bounding square, not device/chip area. Width, spacing, reflection, interference, transitions, thermal/process tolerances are excluded. Compare defined constraints only; no real-world radius recommendation.
+
+## Analytical vs numerical vs conceptual
+Analytical: Snell angle, Phase and dB ledger; analytical Slab model whose transcendental roots are found numerically. Independent finite-difference eigenvalue convergence checks can validate the implementation within the same idealized Slab model. They do not turn the Strip illustration or synthetic Bend table into validated device results. Conceptual: ray paths, Strip geometry, polarization arrows.

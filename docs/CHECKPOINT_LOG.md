@@ -22,3 +22,14 @@
 - 한글 Font를 SIL OFL 라이선스와 함께 Inline subset으로 포함. 외부 Font 요청 없음.
 - Chromium에서 1.1/1.2/1.3 전환, Mode/Field 표시, Polarization, Phase 확인. Runtime Error 0.
 - `checkpoints/C2-chapter-01.html` 보존. 자동 테스트 8 PASS.
+
+## C2 remote record
+- GitHub Commit: `f8729e5c34075c4c816ea44e8f1e01a05fadf869`.
+- Remote Tree: `ec09cc19d098c723819719dfda58bcee02e20f53`.
+
+## C3 · Geometry & Engineering Application
+- Lesson 1.4: Width-dependent Slab TE Profile, all supported TE branches, Core Power Fraction, separate finite Strip illustration.
+- Lesson 1.5: synthetic Bend data, physical path length and dB Power ledger, explicit footprint constraints and Chapter Learning Review.
+- All 5 Lessons have complete A–F, Worked Example, three-choice Tutor, extra explanations, Prediction and Reflection.
+- `notebook/MODEL_CONTRACT.md` states equations, derivation, units and limits.
+- `checkpoints/C3-chapter-01.html` preserved before release QA.

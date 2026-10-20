@@ -37,5 +37,14 @@
     const edge=even?Math.cos(u):Math.sin(u)*(xUm<0?-1:1);
     return edge*Math.exp(-q*(ax-a));
   }
-  root.Photonics = {criticalAngle, phase, slabTE, slabField};
+  // Synthetic exercise inputs only; not a fit to measured or simulated Silicon bends.
+  const bendTable=Object.freeze([{radius:2,bendDb:.4},{radius:5,bendDb:.08},{radius:10,bendDb:.02},{radius:20,bendDb:.005}].map(Object.freeze));
+  function designLedger(index=2,alphaDbCm=3,straightMm=2,count=4) {
+    if(!Number.isInteger(index)||!bendTable[index]||!(alphaDbCm>=0&&straightMm>=0&&Number.isInteger(count)&&count>=0)) throw new RangeError('Invalid ledger inputs');
+    const {radius,bendDb}=bendTable[index],bendLengthUm=count*Math.PI*radius/2;
+    const lengthCm=straightMm/10+bendLengthUm/10000;
+    const propagationDb=alphaDbCm*lengthCm,bendsDb=count*bendDb,totalDb=propagationDb+bendsDb;
+    return {radius,bendDb,bendLengthUm,lengthCm,propagationDb,bendsDb,totalDb,transmission:10**(-totalDb/10),footprint:radius*radius};
+  }
+  root.Photonics = {criticalAngle, phase, slabTE, slabField, bendTable, designLedger};
 })(globalThis);
