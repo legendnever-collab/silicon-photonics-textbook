@@ -1,0 +1,4 @@
+node_modules/
+artifacts/browser-results.json
+artifacts/*.png
+artifacts/independent-validation.json
