@@ -1,0 +1,65 @@
+{
+  "id": "2.4",
+  "short": "MZI",
+  "title": "Mach–Zehnder Interferometer",
+  "time": "15–25분",
+  "lead": "두 Field가 다시 만나는 과정을 Matrix와 Phasor로 연결합니다. 밝고 어두운 Port는 Phase를 Power로 읽는 두 개의 상보적 관측입니다.",
+  "question": "한 Port에서 빛이 상쇄된다면 입력 에너지는 어디로 갈까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "Phase를 관측할 수 있는 Power로 바꿉니다",
+      "scene": "passive",
+      "html": "<p>단독 Waveguide의 Power Detector는 Absolute Phase를 읽지 못합니다. 그러나 다른 경로의 Field를 Reference로 사용해 같은 출력 Mode에 겹치면 Relative Phase가 Power에 나타납니다. <strong>Mach–Zehnder Interferometer, MZI</strong>는 이 원리를 Splitter, 두 Arm, Combiner로 구현한 대표적인 Passive Circuit입니다.</p><p>이번 Lesson은 원본 §4.3에 대응합니다. 핵심은 cos² 식의 암기가 아니라, 왜 각 Arm의 진폭에 1/√2가 두 번 적용되는지, Coupler가 도입한 ±i를 어떻게 처리하는지, 한 출력에서 감소한 Power가 다른 출력으로 어떻게 가는지를 설명하는 것입니다. Active PN Phase Shifter나 전기적 Modulation은 이번 Chapter의 범위가 아닙니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Splitter에서 Detector까지 Field를 따라갑니다",
+      "scene": "passive",
+      "html": "<p>입력의 정규화 진폭을 1로 둡니다. 50:50 Input Coupler U를 지나면 Upper Arm은 1/√2, Lower Arm은 i/√2가 됩니다. 여기에 각 Arm의 Propagation Phase exp(iφu), exp(iφl)가 곱해집니다. Output Coupler에서도 각 Arm의 진폭이 각 출력으로 나뉘므로, 각 Output에 기여하는 크기는 1/2입니다. 두 기여의 합 또는 차가 Output Field입니다.</p><p><strong>Port Convention.</strong> DC Lesson에서 U=(1/√2)[[1,i],[i,1]]를 사용했습니다. 이번 회로의 Output Coupler는 U†=(1/√2)[[1,−i],[−i,1]]로 정의합니다. 이는 Port Phase를 명시한 이상적인 재위상 기준입니다. U† D U에서 Δφ=0이면 원래 입력에 해당하는 Port 1로 모두 나옵니다. 동일한 U를 두 번 쓰는 다른 흔한 기준에서는 Port 1/2의 밝고 어두운 이름이 바뀔 수 있습니다. 두 기준의 식을 중간에 섞지 않습니다.</p><p>Lower의 공통 Phase를 빼면 두 출력 진폭은 a₁=(exp(iΔφ)+1)/2, a₂=i(1−exp(iΔφ))/2입니다. Δφ=0에서 두 Arm 기여가 Port 1에는 더해지고 Port 2에는 상쇄됩니다. Δφ=π에서는 반대입니다. 한 Port의 Destructive Interference는 에너지가 없어졌다는 뜻이 아니라 다른 Port로 향하는 결합 결과입니다.</p><p><strong>Coherence 조건.</strong> 두 Arm이 같은 Frequency와 겹치는 Mode/Polarization을 유지하며 관측 중 Relative Phase가 안정적이라고 가정합니다. 빠르게 흔들리는 Phase를 평균하거나 서로 직교하는 Mode를 합치면 같은 Fringe Contrast를 얻지 못합니다. 이 Notebook은 그런 통계적/편광 효과를 계산하지 않습니다.</p><p><strong>Extinction Ratio, ER</strong>는 특정 출력의 최대/최소 Power 비율입니다. 완전히 균형 잡힌 이상 모델의 최소는 0이므로 ER은 무한대입니다. 실제 Loss·분배 불균형·누설·측정 Noise Floor가 있으면 유한합니다. ‘이상 모델의 0’을 제작 장치에서 무한 ER을 얻었다는 주장으로 바꾸지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "두 번의 50:50 분배에서 cos²까지",
+      "scene": "passive",
+      "html": "<div class=\"equation\">E<sub>out</sub> = U† diag(e<sup>iφᵤ</sup>, e<sup>iφₗ</sup>) U [1,0]<sup>T</sup><br>a₁ = (e<sup>iΔφ</sup>+1)/2<br>a₂ = i(1−e<sup>iΔφ</sup>)/2<br>T₁ = |a₁|² = cos²(Δφ/2)<br>T₂ = |a₂|² = sin²(Δφ/2)</div><dl class=\"terms\"><dt>Δφ</dt><dd>Upper − Lower Propagation Phase · rad</dd><dt>T₁,T₂</dt><dd>Pin으로 정규화한 Output Power · 무차원</dd><dt>U†</dt><dd>U의 Conjugate Transpose · 출력 Port Convention</dd><dt>ER</dt><dd>10 log₁₀(Pmax/Pmin) · dB; 같은 Port의 Phase Sweep 최대/최소</dd></dl><p>전개하면 T₁=(1+cosΔφ)/2입니다. ±1/2 Field가 먼저 더해지고 그 절댓값을 제곱해서 Cross Term이 생깁니다. T₁+T₂=1은 두 Coupler와 Arm이 모두 Lossless라는 가정에서 성립합니다.</p><div class=\"worked\"><h3>Worked Example · 세 가지 Relative Phase</h3><p>Δφ=0: a₁=1, a₂=0 → (T₁,T₂)=(1,0). Δφ=π/2: a₁=(1+i)/2, a₂=(1+i)/2 → 각각 |a|²=1/2. Δφ=π: a₁=0, a₂=i → (0,1). 1 mW 입력이면 이 정규화 수치에 1 mW를 곱합니다. Arm 두 개의 0.5 mW를 무조건 모든 Port에 다시 더하면 안 됩니다.</p><p>이전 Lesson의 ΔL≈0.322917 µm, neff=2.4, λ₀=1550 nm는 Δφ=π이므로 Port 2가 밝습니다. 이는 이번 U† Convention의 결과입니다.</p></div><details><summary>Unequal Arms, Loss와 Spectral FSR</summary><p>실수 진폭 잔존율 gu, gl을 넣으면 a₁=(gu exp(iΔφ)+gl)/2이고 a₂=i(gl−gu exp(iΔφ))/2입니다. α[dB/cm], L[µm]일 때 gj=10^(−αLj/200000)입니다. 두 출력 합은 (gu²+gl²)/2이며 감소량은 Propagation Loss입니다. 분배 불균형 r는 다음 Circuit Notebook의 U(r)로 별도 계산합니다.</p><p>Δφ(λ)=2πneff(λ)ΔL/λ, ng=neff−λdneff/dλ이면, 국소적인 FSRλ≈λ²/(ng|ΔL|)입니다. 예를 들어 λ=1.55 µm, ng=4, ΔL=100 µm일 때 약 6.01 nm입니다. 이는 ng가 근방에서 천천히 변한다는 가정이며 Phase Index neff=2.4를 무조건 대입하면 안 됩니다. 이번 Notebook은 Phase 축을 직접 Sweep하여 Dispersion 예측과 분리합니다.</p></details>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "상쇄되는 것은 한 Port의 Field입니다",
+      "scene": "passive",
+      "html": "<p>아래 질문에서는 Output Port 하나만 보지 말고 두 Port를 함께 생각하세요. Tutor 설명에서 수식 전개와 Notebook을 연결한 뒤 Phasor의 길이와 그 제곱이 일치하는지 확인해 봅니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "Field 합과 Transfer Curve를 동시에 확인합니다",
+      "scene": "passive",
+      "html": "<p>Notebook에서 Δφ/π를 0 → 0.5 → 1 → 2로 바꾸세요. Figure 2.4B의 두 Transfer Curve와 Figure 2.4C의 Port 1 Phasor가 같은 Parameter와 Model Output을 사용합니다. Vector 합이 0일 때 T₁=0이 되고 T₂=1입니다. Slider를 움직여도 전체 Page를 새로 그리지 않아 Field와 Curve를 연속해서 읽을 수 있습니다.</p><p>그 다음, 두 출력의 합이 1이 아닌 실제 실험을 상상해 보세요. Loss가 있는지, 모든 Port를 측정했는지, 입력 Reference가 맞는지 등을 확인해야 합니다. 다음 Lesson의 Passive Circuit Ledger에서는 Propagation Loss와 Split Ratio를 포함해 이 균형을 다시 계산합니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "MZI는 Phase를 두 출력의 Power로 읽습니다",
+      "scene": "passive",
+      "html": "<ul><li>두 번의 진폭 분배와 복소 Phase를 연속적으로 적용합니다.</li><li>이번 U† 기준에서 T₁=cos²(Δφ/2), T₂=sin²(Δφ/2)입니다.</li><li>상보적 출력의 합은 이상 Lossless 조건에서 1입니다.</li><li>ER과 FSR에는 각각 불균형/손실과 Group Index 가정이 중요합니다.</li></ul><p>원본 순서의 다음은 Ring Resonator입니다. MZI가 두 번 만나는 경로의 간섭이라면, Ring은 재순환한 Field가 매번 Bus Field와 만납니다. 이어 Bragg Grating에서는 전진·후진 Field의 결합을 배운 뒤 Passive PIC 실습으로 Chapter를 마무리합니다.</p>"
+    }
+  ],
+  "prediction": "Δφ를 0에서 π로 바꾸면 두 출력은?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Port1 1→0, Port2 0→1이며 합은 1이다",
+    "두 출력 모두 0이 되어 에너지가 사라진다",
+    "두 출력 모두 1이 되어 에너지가 두 배가 된다"
+  ],
+  "predictionFeedback": "이번 U† Convention에서 (T₁,T₂)는 (1,0)에서 (0,1)로 바뀝니다. 한 Port의 상쇄는 다른 Port의 보강과 연결되며 이상 Lossless 전체 Power는 보존됩니다.",
+  "reflection": "1/√2를 두 번 적용하는 이유와 Port 1에서 cos²(Δφ/2)가 나오는 과정을 Complex Field로 설명해 보세요.",
+  "sources": [
+    "C0",
+    "C1"
+  ]
+}

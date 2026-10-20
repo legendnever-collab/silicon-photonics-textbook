@@ -89,3 +89,8 @@
 - D1: Lessons 2.1–2.2, six figures including Y-branch and Conceptual MMI, shared Power/DC models, integrated chapter navigation and read-only Ch1 save migration. Ch1 standalone bytes preserved.
 - Verification: original 21 unit tests and 32 browser scenarios PASS; new physics 12 PASS (including models used in next checkpoints); D1 browser 12 PASS with 4 viewport sizes × Light/Dark, no runtime/console errors or runtime HTTP requests.
 - D1 HTML: checkpoints/v0.2.0/D1-textbook.html. Seven available lessons. Existing source renderer changes limited to registration hook and app dispatch/navigation/storage extension.
+
+## v0.2.0 D2
+- Lessons 2.3–2.4: β/OPL/Relative Phase, lossless separate-arm distinction, explicit U†DU MZI convention, complex field/transfer/phasor figures. Nine lessons and 11 Ch2 figures available.
+- Browser 13 scenarios PASS including phase worked value, MZI 0/π/2/π, shared Figure/Notebook state, focus retention and viewport/theme matrix. D2 HTML and Browser evidence preserved.
+- Desktop integrated shell uses flex height to retain full header while reading/notebook independently scroll. Existing Ch1 standalone remains byte-identical.
