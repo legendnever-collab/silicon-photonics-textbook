@@ -83,3 +83,9 @@
 - Figure Inventory, Physics Figure Validation, Scalar raw evidence, reproduction requirements, user learning review and updated QA preserved.
 - Final F3 HTML/SHA256 and screenshots preserved. Source/Commit identity is recorded by Git history and PR #1, avoiding a self-referential commit hash.
 - User learning review pending. Main not merged; Chapter 2 not started; no Full-vector Solver expansion.
+
+## v0.2.0 D0–D1
+- D0 f3a44fb: official Cambridge Chapter 4 section/page/order mapping before implementation; architecture and physics contracts; D0 HTML preserves Chapter 1 baseline.
+- D1: Lessons 2.1–2.2, six figures including Y-branch and Conceptual MMI, shared Power/DC models, integrated chapter navigation and read-only Ch1 save migration. Ch1 standalone bytes preserved.
+- Verification: original 21 unit tests and 32 browser scenarios PASS; new physics 12 PASS (including models used in next checkpoints); D1 browser 12 PASS with 4 viewport sizes × Light/Dark, no runtime/console errors or runtime HTTP requests.
+- D1 HTML: checkpoints/v0.2.0/D1-textbook.html. Seven available lessons. Existing source renderer changes limited to registration hook and app dispatch/navigation/storage extension.
