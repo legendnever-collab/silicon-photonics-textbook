@@ -14,3 +14,8 @@
 
 ## Original calculations
 Snell’s Law Example, Phase Example, Slab root equation, TE Power Fraction 적분과 dB Ledger를 명시적인 가정에서 직접 계산한다. nSi=3.48, nSiO2=1.444는 1550nm 부근의 교육용 고정값이며 실측/분산식 fitting 결과가 아니다. Width, λ와 n 이외에 실제 Strip Height를 넣는 대체식을 만들지 않는다. Bisection/경계 연속/독립 Finite Difference 검증 범위는 QA 보고서에 기록한다.
+
+## v0.1.1 Figure upgrade additions
+- R7: University of Illinois, Photonic Devices Research Group, “Finite Difference Method for Modesolving”, https://vcsel.mntl.illinois.edu/research/fdm/ (accessed 2026-10-21). Supports the Helmholtz-to-finite-grid eigenproblem formulation. The scalar implementation and validation scripts here are independently authored; no external solver code is copied.
+- R3 was rechecked for β/k₀ and the distinction between modal polarization definitions. No Ansys solver was run.
+- Four user-supplied Figure references were inspected for pedagogy (field map / slab k-vector / transverse mode / bend comparison); screenshots are not republished and no reference-image number is used as simulation input.

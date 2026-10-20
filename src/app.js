@@ -13,7 +13,7 @@ function validate(v){
   if(['why','simple','math','notebook'].includes(v.extras?.[id]))clean.extras[id]=v.extras[id];
   const pred=v.predictions?.[id];if(Number.isInteger(pred)&&pred>=0&&pred<l.predictionOptions.length)clean.predictions[id]=pred;
   for(const type of ['reflection','prediction','explanation']){const n=v.notes?.[id+':'+type];if(typeof n==='string')clean.notes[id+':'+type]=n.slice(0,12000);}
-  clean.settings[id]={};for(const [k,val] of Object.entries(v.settings?.[id]||{})){if(typeof val==='number'&&Number.isFinite(val))clean.settings[id][k]=Math.max(-100000,Math.min(100000,val));if(['signed','intensity','modes','polarization','field','dispersion','strip'].includes(val))clean.settings[id][k]=val;}
+  clean.settings[id]={};for(const [k,val] of Object.entries(v.settings?.[id]||{})){if(typeof val==='number'&&Number.isFinite(val))clean.settings[id][k]=Math.max(-100000,Math.min(100000,val));if(['signed','intensity','modes','polarization','field','dispersion','strip','linear','db'].includes(val))clean.settings[id][k]=val;}
  }
  clean.completed=Array.isArray(v.completed)?v.completed.filter(id=>lessons.some(l=>l.id===id)):[];return clean;
 }

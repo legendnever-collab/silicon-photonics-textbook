@@ -1,6 +1,6 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {createHash} from 'node:crypto';
 import '../notebook/models.js';
-const catalog=JSON.parse(fs.readFileSync('figures/catalog.json'));globalThis.TEXTBOOK={figures:catalog};await import('../figures/renderer.js');
+const catalog=JSON.parse(fs.readFileSync('figures/catalog.json'));globalThis.TEXTBOOK={figures:catalog,scalar:JSON.parse(fs.readFileSync('notebook/data/scalar-modes.json'))};await import('../figures/renderer.js');
 const F=globalThis.TeachingFigures,P=globalThis.Photonics,base=JSON.parse(fs.readFileSync('docs/FIGURE_BASELINE.json'));
 test('upgrade preserves all original textbook/tutor/model source bytes',()=>{for(const [path,hash] of Object.entries(base.sourceHashes))assert.equal(createHash('sha256').update(fs.readFileSync(path)).digest('hex'),hash,path);});
 test('TE0/TE1 phase sign, evanescent decay and square normalization',()=>{const m=P.slabTE(500);for(const mode of m.modes.slice(0,2)){assert.ok(Math.abs(P.slabField(mode,mode.a+.1)/P.slabField(mode,mode.a)-Math.exp(-mode.q*.1))<1e-12);const fields=Array.from({length:1001},(_,i)=>P.slabField(mode,-mode.a+2*mode.a*i/1000));assert.ok(Math.max(...fields.map(Math.abs))<=1+1e-12);assert.ok(Math.max(...fields.map(Math.abs))>.9999);assert.ok(fields.every(e=>e*e>=0&&e*e<=1+1e-12));}assert.equal(P.slabField(m.modes[1],0),0);assert.ok(P.slabField(m.modes[1],-.1)*P.slabField(m.modes[1],.1)<0);});

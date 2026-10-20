@@ -1,0 +1,268 @@
+{
+  "status": "VALIDATED_SCALAR_DISCRETIZATION",
+  "metadata": {
+    "colormap_rgb": [
+      [
+        18,
+        26,
+        60
+      ],
+      [
+        37,
+        95,
+        140
+      ],
+      [
+        44,
+        154,
+        150
+      ],
+      [
+        242,
+        201,
+        95
+      ],
+      [
+        251,
+        249,
+        206
+      ]
+    ],
+    "colormap_positions": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "method": "2D scalar 5-point cell-centered finite difference; subcell area-averaged n^2; sparse symmetric shift-invert eigenproblem",
+    "equation": "(dxx+dyy+k0^2*n^2)u=beta^2*u",
+    "boundary": "u=0 at x,y=\u00b1domain halfwidth; odd ghost values at boundary faces",
+    "lambda_nm": 1550,
+    "n_core": 3.48,
+    "n_clad": 1.444,
+    "height_nm": 220,
+    "polarization": "none; scalar fundamental u00, not TE/TM or quasi-TE",
+    "limits": "Scalar approximation omits vector/interface conditions; especially inaccurate for high-contrast silicon. Converging scalar discretization does not validate actual strip neff, polarization, loss or power.",
+    "display": "101\u00d7101 samples over \u00b11 \u00b5m; interpolated from the solved grid for display, common 0\u20131 relative squared-field scale",
+    "status": "VALIDATED_SCALAR_DISCRETIZATION"
+  },
+  "homogeneous_box_check": {
+    "N": 120,
+    "length_um": 2.0,
+    "exact_discrete_error": 3.788080960021034e-13,
+    "continuum_beta_squared_error": 0.0002818485702746898
+  },
+  "validation": [
+    {
+      "width_nm": 220,
+      "grid": [
+        {
+          "width_nm": 220,
+          "step_nm": 20,
+          "half_domain_um": 1.0,
+          "neff": 2.1631284499538492,
+          "beta_um_inv": 8.76860444793044,
+          "relative_eigen_residual": 4.05704957951805e-14,
+          "symmetry_error": 1.6653345369377348e-15,
+          "scalar_core_overlap": 0.5717109688113526
+        },
+        {
+          "width_nm": 220,
+          "step_nm": 10,
+          "half_domain_um": 1.0,
+          "neff": 2.1695266289550204,
+          "beta_um_inv": 8.794540541022608,
+          "relative_eigen_residual": 1.6358615629269665e-13,
+          "symmetry_error": 4.440892098500626e-15,
+          "scalar_core_overlap": 0.5773487964438199
+        },
+        {
+          "width_nm": 220,
+          "step_nm": 5,
+          "half_domain_um": 1.0,
+          "neff": 2.168147426772956,
+          "beta_um_inv": 8.788949713354235,
+          "relative_eigen_residual": 6.67762788110712e-13,
+          "symmetry_error": 1.2323475573339238e-14,
+          "scalar_core_overlap": 0.5761570306849138
+        }
+      ],
+      "domain": [
+        {
+          "width_nm": 220,
+          "step_nm": 10,
+          "half_domain_um": 1.0,
+          "neff": 2.1695266289550204,
+          "beta_um_inv": 8.794540541022608,
+          "relative_eigen_residual": 1.6358615629269665e-13,
+          "symmetry_error": 4.440892098500626e-15,
+          "scalar_core_overlap": 0.5773487964438199
+        },
+        {
+          "width_nm": 220,
+          "step_nm": 10,
+          "half_domain_um": 1.3,
+          "neff": 2.169531773751214,
+          "beta_um_inv": 8.794561396317997,
+          "relative_eigen_residual": 1.8170296537908896e-12,
+          "symmetry_error": 3.164135620181696e-15,
+          "scalar_core_overlap": 0.5773221619295467
+        },
+        {
+          "width_nm": 220,
+          "step_nm": 10,
+          "half_domain_um": 1.6,
+          "neff": 2.1695318621413113,
+          "beta_um_inv": 8.794561754622102,
+          "relative_eigen_residual": 2.3205278390249345e-11,
+          "symmetry_error": 2.55351295663786e-15,
+          "scalar_core_overlap": 0.5773215375110224
+        }
+      ],
+      "grid_delta_last": 0.001379202182064443,
+      "domain_delta_last": 8.839009746353099e-08
+    },
+    {
+      "width_nm": 500,
+      "grid": [
+        {
+          "width_nm": 500,
+          "step_nm": 20,
+          "half_domain_um": 1.0,
+          "neff": 2.613715715630478,
+          "beta_um_inv": 10.595135601028257,
+          "relative_eigen_residual": 2.8984590395648296e-14,
+          "symmetry_error": 2.4424906541753444e-15,
+          "scalar_core_overlap": 0.7626063204346695
+        },
+        {
+          "width_nm": 500,
+          "step_nm": 10,
+          "half_domain_um": 1.0,
+          "neff": 2.618193074848578,
+          "beta_um_inv": 10.613285328547052,
+          "relative_eigen_residual": 1.1656020682373622e-13,
+          "symmetry_error": 6.328271240363392e-15,
+          "scalar_core_overlap": 0.7661786864583496
+        },
+        {
+          "width_nm": 500,
+          "step_nm": 5,
+          "half_domain_um": 1.0,
+          "neff": 2.617240108967165,
+          "beta_um_inv": 10.609422321305543,
+          "relative_eigen_residual": 4.4718281171193273e-13,
+          "symmetry_error": 7.549516567451064e-15,
+          "scalar_core_overlap": 0.7654458065647407
+        }
+      ],
+      "domain": [
+        {
+          "width_nm": 500,
+          "step_nm": 10,
+          "half_domain_um": 1.0,
+          "neff": 2.618193074848578,
+          "beta_um_inv": 10.613285328547052,
+          "relative_eigen_residual": 1.1656020682373622e-13,
+          "symmetry_error": 6.328271240363392e-15,
+          "scalar_core_overlap": 0.7661786864583496
+        },
+        {
+          "width_nm": 500,
+          "step_nm": 10,
+          "half_domain_um": 1.3,
+          "neff": 2.6181932981655187,
+          "beta_um_inv": 10.613286233799775,
+          "relative_eigen_residual": 1.1186358008670508e-13,
+          "symmetry_error": 3.552713678800501e-15,
+          "scalar_core_overlap": 0.766177397640646
+        },
+        {
+          "width_nm": 500,
+          "step_nm": 10,
+          "half_domain_um": 1.6,
+          "neff": 2.6181932991302665,
+          "beta_um_inv": 10.613286237710541,
+          "relative_eigen_residual": 1.137093804906791e-13,
+          "symmetry_error": 2.886579864025407e-15,
+          "scalar_core_overlap": 0.7661773899143168
+        }
+      ],
+      "grid_delta_last": 0.000952965881413359,
+      "domain_delta_last": 9.647478371732632e-10
+    },
+    {
+      "width_nm": 800,
+      "grid": [
+        {
+          "width_nm": 800,
+          "step_nm": 20,
+          "half_domain_um": 1.0,
+          "neff": 2.7377892157898396,
+          "beta_um_inv": 11.098088370842222,
+          "relative_eigen_residual": 2.6445113632870496e-14,
+          "symmetry_error": 4.773959005888173e-15,
+          "scalar_core_overlap": 0.7939521923055585
+        },
+        {
+          "width_nm": 800,
+          "step_nm": 10,
+          "half_domain_um": 1.0,
+          "neff": 2.7411642667442484,
+          "beta_um_inv": 11.111769706692366,
+          "relative_eigen_residual": 1.0159016946489868e-13,
+          "symmetry_error": 8.104628079763643e-15,
+          "scalar_core_overlap": 0.7968499711459356
+        },
+        {
+          "width_nm": 800,
+          "step_nm": 5,
+          "half_domain_um": 1.0,
+          "neff": 2.7403254784121645,
+          "beta_um_inv": 11.108369537322053,
+          "relative_eigen_residual": 4.0977718971139587e-13,
+          "symmetry_error": 1.554312234475219e-14,
+          "scalar_core_overlap": 0.7961938950494785
+        }
+      ],
+      "domain": [
+        {
+          "width_nm": 800,
+          "step_nm": 10,
+          "half_domain_um": 1.0,
+          "neff": 2.7411642667442484,
+          "beta_um_inv": 11.111769706692366,
+          "relative_eigen_residual": 1.0159016946489868e-13,
+          "symmetry_error": 8.104628079763643e-15,
+          "scalar_core_overlap": 0.7968499711459356
+        },
+        {
+          "width_nm": 800,
+          "step_nm": 10,
+          "half_domain_um": 1.3,
+          "neff": 2.7411647355884146,
+          "beta_um_inv": 11.111771607230931,
+          "relative_eigen_residual": 1.0445640260756879e-13,
+          "symmetry_error": 3.9968028886505635e-15,
+          "scalar_core_overlap": 0.7968477180360881
+        },
+        {
+          "width_nm": 800,
+          "step_nm": 10,
+          "half_domain_um": 1.6,
+          "neff": 2.7411647369745333,
+          "beta_um_inv": 11.111771612849797,
+          "relative_eigen_residual": 1.0631230140768511e-13,
+          "symmetry_error": 3.774758283725532e-15,
+          "scalar_core_overlap": 0.796847708202628
+        }
+      ],
+      "grid_delta_last": 0.0008387883320839506,
+      "domain_delta_last": 1.3861187753150261e-09
+    }
+  ],
+  "dataset_sha256": "a1c4c6c690cda70a12f75878851fac48b8ae37dfdaff85de9e66630852f1b53e",
+  "script_sha256": "5284e1a1fac67550e576f1caed0c07234c70d7564308acdd2e21e08987ec3c04",
+  "numpy": "2.3.5"
+}

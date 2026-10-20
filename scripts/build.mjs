@@ -8,12 +8,12 @@ for(const name of (await readdir(new URL('textbook/chapter-01/',root))).filter(x
   lesson.tutor=JSON.parse(await read('tutor/'+lesson.id+'.json'));
   lessons.push(lesson);
 }
-const [template,style,models,app,figureStyle,figureRenderer,figureCatalog]=await Promise.all(['src/index.html','src/styles.css','notebook/models.js','src/app.js','figures/styles.css','figures/renderer.js','figures/catalog.json'].map(read));
-const sources=['figures/catalog.json','figures/styles.css','figures/renderer.js','src/index.html','src/styles.css','src/app.js','notebook/models.js','assets/pretendard-ch1.b64','assets/Pretendard-LICENSE.txt',...lessons.flatMap(l=>['textbook/chapter-01/'+l.id+'.json','tutor/'+l.id+'.json'])];
+const [template,style,models,app,figureStyle,figureRenderer,figureCatalog,scalarData]=await Promise.all(['src/index.html','src/styles.css','notebook/models.js','src/app.js','figures/styles.css','figures/renderer.js','figures/catalog.json','notebook/data/scalar-modes.json'].map(read));
+const sources=['notebook/data/scalar-modes.json','figures/catalog.json','figures/styles.css','figures/renderer.js','src/index.html','src/styles.css','src/app.js','notebook/models.js','assets/pretendard-ch1.b64','assets/Pretendard-LICENSE.txt',...lessons.flatMap(l=>['textbook/chapter-01/'+l.id+'.json','tutor/'+l.id+'.json'])];
 const hash=createHash('sha256');
 for(const path of sources.sort()) hash.update(path+'\0'+await read(path)+'\0');
 const sourceHash=hash.digest('hex');
-const safeData=JSON.stringify({lessons,figures:JSON.parse(figureCatalog),sourceHash}).replace(/</g,'\\u003c');
+const safeData=JSON.stringify({lessons,figures:JSON.parse(figureCatalog),scalar:JSON.parse(scalarData),sourceHash}).replace(/</g,'\\u003c');
 const font=await read('assets/pretendard-ch1.b64');
 const fontLicense=await read('assets/Pretendard-LICENSE.txt');
 const html=template.replace('/* STYLE */',()=>`/* ${fontLicense.replaceAll('*/','* /')} */\n@font-face{font-family:TextbookKR;src:url(data:font/woff;base64,${font.trim()}) format('woff');font-style:normal;font-weight:400;font-display:swap}`+style+figureStyle).replace('/* DATA */',()=>`window.TEXTBOOK=${safeData};`).replace('/* MODELS */',()=>models).replace('/* FIGURES */',()=>figureRenderer).replace('/* APP */',()=>app);

@@ -61,3 +61,11 @@
 - 17 Node tests PASS; original 15 Browser Scenarios PASS. Figure smoke: cutoff handling, normalization switch, Zoom/Escape, live Phase and mobile panning PASS; runtime errors 0.
 - Original screenshot/report artifacts preserved; future browser outputs go to artifacts/v0.1.1/.
 - F1 Offline HTML preserved under checkpoints/v0.1.1/F1-chapter-01.html.
+
+## v0.1.1 F2 · 2D Mode & Geometry Visualization
+- Added Numerical Scalar 2D profiles for W=220/500/800nm, H=220nm, λ0=1550nm, Si/SiO2. Explicitly not Full-vector/TE/TM or measured Strip predictions.
+- Reproduction script, 20→10→5nm Grid comparison, ±1→±1.3→±1.6µm Domain comparison, residual/symmetry and independent homogeneous-box check preserved.
+- Numerical samples and six linear/dB colored PNG encodings cross-checked exactly, including y orientation. Common relative scale; no real Power/Loss claim.
+- Figures 1.2B (2D map), 1.4A (width comparison + y=0 cuts), 1.4B (existing analytical Slab branches + TE count). Notebook Width updates the analytical Figure only; scalar cases are explicitly precomputed selections.
+- 20 Node tests PASS; Figure smoke for scalar scale/case, live Slab and Mobile zoom PASS with runtime errors 0.
+- Updated Model Contract and sources. F2 HTML preserved under checkpoints/v0.1.1/F2-chapter-01.html.
