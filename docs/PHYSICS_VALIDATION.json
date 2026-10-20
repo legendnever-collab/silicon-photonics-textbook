@@ -1,0 +1,117 @@
+{
+  "method": "Independent centered finite-difference TE eigenproblem on \u00b112 \u00b5m domain; grid convergence 5\u21922.5\u21921.25 nm. Independent quadrature of infinite-tail power fraction.",
+  "scope": "Same ideal 1D symmetric Slab only. Does not validate actual Strip modes, synthetic bend data or manufacturing accuracy.",
+  "results": [
+    {
+      "width_nm": 220,
+      "analytic_neff": [
+        2.8517389867322747
+      ],
+      "finite_difference": [
+        {
+          "dx_nm": 5,
+          "neff": [
+            2.8519952078968744
+          ],
+          "max_abs_error": 0.00025622116459977917
+        },
+        {
+          "dx_nm": 2.5,
+          "neff": [
+            2.8518030551278404
+          ],
+          "max_abs_error": 6.406839556571953e-05
+        },
+        {
+          "dx_nm": 1.25,
+          "neff": [
+            2.8517550046492897
+          ],
+          "max_abs_error": 1.6017917014998773e-05
+        }
+      ],
+      "gamma_integral_max_error": 1.1102230246251565e-16
+    },
+    {
+      "width_nm": 500,
+      "analytic_neff": [
+        3.275676203074698,
+        2.6129913144616403,
+        1.4569106738402184
+      ],
+      "finite_difference": [
+        {
+          "dx_nm": 5,
+          "neff": [
+            3.275730642790055,
+            2.6132706011054845,
+            1.4571146821679188
+          ],
+          "max_abs_error": 0.0002792866438441344
+        },
+        {
+          "dx_nm": 2.5,
+          "neff": [
+            3.275689816773652,
+            2.6130611444522795,
+            1.4569615227020811
+          ],
+          "max_abs_error": 6.982999063920303e-05
+        },
+        {
+          "dx_nm": 1.25,
+          "neff": [
+            3.2756796067350655,
+            2.6130087724799065,
+            1.4569233761853289
+          ],
+          "max_abs_error": 1.7458018266136577e-05
+        }
+      ],
+      "gamma_integral_max_error": 1.1102230246251565e-16
+    },
+    {
+      "width_nm": 800,
+      "analytic_neff": [
+        3.384578535379801,
+        3.0858022067285336,
+        2.5376910278423916,
+        1.6505434616005064
+      ],
+      "finite_difference": [
+        {
+          "dx_nm": 5,
+          "neff": [
+            3.384595950827122,
+            3.0858915672327543,
+            2.5379723860026373,
+            1.6511407595979166
+          ],
+          "max_abs_error": 0.0005972979974102621
+        },
+        {
+          "dx_nm": 2.5,
+          "neff": [
+            3.384582890376343,
+            3.0858245512170557,
+            2.537761374742481,
+            1.650692737896735
+          ],
+          "max_abs_error": 0.00014927629622873972
+        },
+        {
+          "dx_nm": 1.25,
+          "neff": [
+            3.3845796242021198,
+            3.085807793123368,
+            2.537708615029956,
+            1.6505807776597092
+          ],
+          "max_abs_error": 3.7316059202874285e-05
+        }
+      ],
+      "gamma_integral_max_error": 0.0
+    }
+  ],
+  "status": "PASS"
+}

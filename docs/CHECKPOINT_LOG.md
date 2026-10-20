@@ -33,3 +33,17 @@
 - All 5 Lessons have complete A–F, Worked Example, three-choice Tutor, extra explanations, Prediction and Reflection.
 - `notebook/MODEL_CONTRACT.md` states equations, derivation, units and limits.
 - `checkpoints/C3-chapter-01.html` preserved before release QA.
+
+## C3 remote record
+- GitHub Commit: `9a131e7e9e30966997203bdf08f69da8a69d25ec`.
+- Remote/Local Tree: `904ac6ddb2589a5208c9b76754e8324defc55ad2`.
+
+## C4 · Chapter 1 Release Candidate
+- 5 Lessons completed. Source/Content/Model/Build tests: 11 PASS.
+- Actual Chromium Browser: 15 Scenario PASS, Desktop/Mobile/Theme/Keyboard/Touch button/Save/Resume/Backup/Offline.
+- Runtime Error 0, Console Error 0, external HTTP(S) request 0.
+- Mobile notebook-removal regression found and fixed; complete suite re-run.
+- Slab independent Finite Difference and quadrature PASS. Exact grids/errors in PHYSICS_VALIDATION.json.
+- Final HTML, deterministic hash, C4 snapshot, five screenshots and QA/learning review report preserved.
+- `docs/RELEASE_CHECKPOINT.json` carries baseline, build hashes and verification scope. The C4 Commit itself is recorded by the Git history/PR to avoid a self-referential commit hash.
+- User learning review pending. Main not merged. Chapter 2 not started.

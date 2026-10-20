@@ -1,0 +1,35 @@
+{
+  "version": "0.1.0-rc.1",
+  "checkpoint": "C4",
+  "status": "ready-for-user-learning-review",
+  "mainBaseline": "a40bb926b5e4adab9aad09a67a11765feef979cc",
+  "branch": "feature/ch1-textbook-pilot",
+  "mergeAuthorized": false,
+  "chapter2Started": false,
+  "remoteCheckpoints": {
+    "C1": "eb31f0c3fb55e57c248d1f1d9b1b23c9cca810be",
+    "C2": "f8729e5c34075c4c816ea44e8f1e01a05fadf869",
+    "C3": "9a131e7e9e30966997203bdf08f69da8a69d25ec"
+  },
+  "build": {
+    "version": "0.1.0-rc.1",
+    "lessons": [
+      "1.1",
+      "1.2",
+      "1.3",
+      "1.4",
+      "1.5"
+    ],
+    "sourceHash": "b69098ecc858d6973af61e39a0989caa6d85fcde2fec57d9b7b808c061552741",
+    "htmlSha256": "c7ae1459b2697da1399b59bbacad35acc3401df3be76bc4262e53671e3120d70"
+  },
+  "verification": {
+    "nodeTests": 11,
+    "browserScenarios": 15,
+    "browser": "133.0.6943.0",
+    "independentSlabValidation": "PASS",
+    "runtimeErrors": 0,
+    "externalRequests": 0,
+    "learningEffectiveness": "requires user review"
+  }
+}
