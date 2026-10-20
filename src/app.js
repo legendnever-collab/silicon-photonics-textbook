@@ -30,6 +30,7 @@ const sourceLinks={R1:['MIT · Dielectric Waveguides','https://web.mit.edu/6.013
 function renderLesson(focus=false){
  navigating=true;observer?.disconnect();$('.workspace').append($('#notebook'));const l=current();renderNav();
  $('#reading').innerHTML=`<div class="chapter-label">CHAPTER 01 · FUNDAMENTALS OF OPTICAL WAVEGUIDES</div><div class="lesson-time">Lesson ${l.id} · ${l.time} 예상 · 학습 시간 미검증</div><h1>${l.title}</h1><p class="lead">${l.lead}</p><blockquote class="opening-question">${l.question}</blockquote>${l.sections.map(s=>`<section id="section-${s.key}" class="reading-section" data-section="${s.key}" data-scene="${s.scene}"><div class="section-label">${s.label}</div><h2>${s.title}</h2>${s.html}${s.key==='tutor'?tutorHTML(l):''}${s.key==='experiment'?experimentHTML(l):''}${s.key==='summary'?reflectionHTML(l):''}</section>`).join('')}<details class="source-links"><summary>이 Lesson의 참고자료와 모델 구분</summary><ul>${l.sources.map(id=>`<li>[${id}] <a href="${sourceLinks[id][1]}" target="_blank" rel="noopener noreferrer">${sourceLinks[id][0]}</a></li>`).join('')}</ul><p>본문과 그림은 독자적으로 작성했습니다. 원서 PDF는 확보하지 못했으며 확인하지 않은 페이지를 인용하지 않습니다. 전체 출처/모델 조건은 Repository의 references/SOURCE_MAPPING.md에 기록합니다.</p></details><footer class="lesson-footer"><button id="mark-read" aria-pressed="${state.completed.includes(l.id)}">${state.completed.includes(l.id)?'읽음 기록됨 · 취소':'이 Lesson 읽음으로 기록'}</button>${lessons.indexOf(l)<lessons.length-1?`<button class="primary" data-lesson="${lessons[lessons.indexOf(l)+1].id}">다음 Lesson 읽기 →</button>`:'<a href="#section-summary">Chapter Review로 돌아가기 ↑</a>'}</footer>`;
+ TeachingFigures.mount($('#reading'),l.id,settings());
  for(const el of document.querySelectorAll('[data-note]'))el.value=state.notes[l.id+':'+el.dataset.note]||'';
  const pred=$('#prediction');if(pred)pred.value=state.predictions[l.id]||0;
  renderTutor();renderNotebook();placeNotebook();
@@ -175,9 +176,9 @@ $('#reading').addEventListener('click',e=>{
 function navigateClick(e){const b=e.target.closest('[data-lesson]');if(!b)return;remember();state.lesson=b.dataset.lesson;save();renderLesson(true);$('#lesson-nav [aria-current]').scrollIntoView({block:'nearest',inline:'nearest'});}
 $('#reading').addEventListener('input',e=>{if(e.target.dataset.note){state.notes[state.lesson+':'+e.target.dataset.note]=e.target.value.slice(0,12000);save();}});
 $('#reading').addEventListener('change',e=>{if(e.target.id==='prediction'){state.predictions[state.lesson]=Number(e.target.value);$('#prediction-feedback').textContent='';save();}});
-$('#notebook').addEventListener('input',e=>{if(e.target.dataset.setting){settings()[e.target.dataset.setting]=Number(e.target.value);updateNotebook();save();}});
-$('#notebook').addEventListener('change',e=>{if(e.target.dataset.selectSetting){settings()[e.target.dataset.selectSetting]=e.target.value;updateNotebook();save();}});
-$('#notebook').addEventListener('click',e=>{const b=e.target.closest('[data-view]');if(b){settings().view=b.dataset.view;renderNotebook();save();}const f=e.target.closest('[data-field]');if(f){settings().field=f.dataset.field;updateNotebook();save();}const m=e.target.closest('[data-mode]');if(m){settings().mode=Number(m.dataset.mode);updateNotebook();save();}});
+$('#notebook').addEventListener('input',e=>{if(e.target.dataset.setting){settings()[e.target.dataset.setting]=Number(e.target.value);updateNotebook();TeachingFigures.refresh($('#reading'),settings());save();}});
+$('#notebook').addEventListener('change',e=>{if(e.target.dataset.selectSetting){settings()[e.target.dataset.selectSetting]=e.target.value;updateNotebook();TeachingFigures.refresh($('#reading'),settings());save();}});
+$('#notebook').addEventListener('click',e=>{const b=e.target.closest('[data-view]');if(b){settings().view=b.dataset.view;renderNotebook();save();}const f=e.target.closest('[data-field]');if(f){settings().field=f.dataset.field;updateNotebook();TeachingFigures.refresh($('#reading'),settings());save();}const m=e.target.closest('[data-mode]');if(m){settings().mode=Number(m.dataset.mode);updateNotebook();TeachingFigures.refresh($('#reading'),settings());save();}});
 function onScroll(){if(navigating)return;clearTimeout(scrollTimer);scrollTimer=setTimeout(remember,250);}
 $('#reading').addEventListener('scroll',onScroll,{passive:true});window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('pagehide',remember);
 matchMedia('(max-width:760px)').addEventListener('change',()=>{placeNotebook();setupObserver();});
@@ -186,5 +187,6 @@ $('.brand').onclick=e=>{e.preventDefault();remember();state.lesson=lessons[0].id
 $('#session').onclick=showSession;$('#close-session').onclick=()=>$('#session-dialog').close();
 $('#export').onclick=()=>{remember();const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));a.download='silicon-photonics-ch1-study-record.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
 $('#import').onchange=async e=>{$('#import-status').textContent='불러오는 중…';try{const file=e.target.files[0];if(!file)return;if(file.size>1000000)throw Error('1 MB 이하의 학습 기록을 선택해 주세요.');const clean=validate(JSON.parse(await file.text()));state=clean;setTheme();save();renderLesson();$('#import-status').textContent='학습 기록을 불러왔습니다.';}catch(err){$('#import-status').textContent='가져오지 못했습니다. '+err.message;}e.target.value='';};
+TeachingFigures.bind({get:()=>settings(),set:(k,v)=>{settings()[k]=v;save();}});
 setTheme();renderLesson();save();
 })();

@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0-rc.1",
+  "version": "0.1.1",
   "lessons": [
     "1.1",
     "1.2",
@@ -7,6 +7,6 @@
     "1.4",
     "1.5"
   ],
-  "sourceHash": "b69098ecc858d6973af61e39a0989caa6d85fcde2fec57d9b7b808c061552741",
-  "htmlSha256": "c7ae1459b2697da1399b59bbacad35acc3401df3be76bc4262e53671e3120d70"
+  "sourceHash": "19fa19d020ea6be02477e4a241f79180a6cbe8a74dc9b45ebc40505825e1046a",
+  "htmlSha256": "f6e1d0cfae81ab3825516f72b2a7c9c2a79f7d49a8cb87783b7406b08abf1970"
 }

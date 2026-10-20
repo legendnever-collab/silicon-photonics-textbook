@@ -53,3 +53,11 @@
 - Existing content, Tutor and model hashes captured in FIGURE_BASELINE.json.
 - Original HTML preserved as checkpoints/v0.1.1/F0-chapter-01.html.
 - New Figure plan and bounded Scalar approach in FIGURE_AUDIT.md. No product/model changes at F0.
+
+## v0.1.1 F1 · Analytical Figure Upgrade
+- 1.1A Core/Cladding, 1.1B Slab TE0 Tail, 1.2A TE0/TE1 Signed/Field² comparison, 1.3A kCore/β/h/q, 1.3B live Phase inserted into unchanged textbook paragraphs.
+- Reuses original slabTE/slabField/phase. All baseline textbook, Tutor and model source hashes still identical.
+- Native SVG captions, classifications, model details and keyboard/mobile scrollable zoom.
+- 17 Node tests PASS; original 15 Browser Scenarios PASS. Figure smoke: cutoff handling, normalization switch, Zoom/Escape, live Phase and mobile panning PASS; runtime errors 0.
+- Original screenshot/report artifacts preserved; future browser outputs go to artifacts/v0.1.1/.
+- F1 Offline HTML preserved under checkpoints/v0.1.1/F1-chapter-01.html.
