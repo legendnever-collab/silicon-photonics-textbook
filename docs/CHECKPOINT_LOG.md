@@ -47,3 +47,9 @@
 - Final HTML, deterministic hash, C4 snapshot, five screenshots and QA/learning review report preserved.
 - `docs/RELEASE_CHECKPOINT.json` carries baseline, build hashes and verification scope. The C4 Commit itself is recorded by the Git history/PR to avoid a self-referential commit hash.
 - User learning review pending. Main not merged. Chapter 2 not started.
+
+## v0.1.1 F0 · Recovery & Figure Audit
+- PR #1/main/development HEAD verified. Baseline 11 Node tests + 15 Chromium scenarios PASS.
+- Existing content, Tutor and model hashes captured in FIGURE_BASELINE.json.
+- Original HTML preserved as checkpoints/v0.1.1/F0-chapter-01.html.
+- New Figure plan and bounded Scalar approach in FIGURE_AUDIT.md. No product/model changes at F0.
