@@ -1,0 +1,25 @@
+{
+  "question": "내부 손실이 없는 a=1인 단일 Bus All-pass Ring의 정상상태 Power Transmission은?",
+  "choices": [
+    {
+      "text": "Resonance에서 반드시 0이 된다.",
+      "feedback": "Bus Notch에는 내부 손실 또는 다른 출력 채널이 필요합니다. a=1인 이상 단일 Bus All-pass는 크기 Transmission이 1입니다. Phase와 내부 Stored Energy는 변할 수 있습니다.",
+      "concept": "모든 Ring은 Power Notch라는 오개념"
+    },
+    {
+      "text": "크기는 모든 Phase에서 1이며 Phase response는 변할 수 있다.",
+      "feedback": "맞습니다. 에너지를 소모하거나 다른 Port로 보낼 채널이 없는 정상상태입니다. Critical Coupling Notch는 t=a<1의 내부 손실을 포함합니다.",
+      "concept": "All-pass 크기와 Phase 구분",
+      "correct": true
+    },
+    {
+      "text": "Bragg Grating과 같으므로 사라진 Through는 모두 뒤로 반사된다.",
+      "feedback": "이 모델의 All-pass Ring에는 Backreflection 항이 없습니다. Bragg는 전진·후진 Mode를 결합하며 R+T를 계산하는 다른 구조입니다.",
+      "concept": "출력 채널의 혼동"
+    }
+  ],
+  "why": "Ring의 반복 Field 합에서 내부 손실이 0이면 Coupler의 Unitary 성질로 모든 입력 Power가 Bus로 다시 나와야 합니다. Critical Coupling에서는 내부 손실률과 Bus로부터의 결합이 균형을 이룹니다.",
+  "simple": "같은 한 출구만 있고 내부에서 에너지를 쓰지 않는 정상상태라면 입력 Energy가 그 출구로 다시 나옵니다. 내부에서 에너지를 소모하면 출구가 어두울 수 있습니다. MZI의 두 출구와 Bragg의 앞뒤 출구는 따로 세어야 합니다.",
+  "math": "|H|²=(t²+a²−2ta cosθ)/(1+t²a²−2ta cosθ). a=1이면 분자=분모라 T=1입니다. t=a<1, θ=0이면 분자=0입니다. Bragg는 δ=0에서 R=tanh²κL, T=sech²κL로 R+T=1입니다.",
+  "notebook": "Ring 탭에서 t=a=0.9, θ=0을 확인한 뒤 a=1로 바꾸세요. Bragg 탭에서는 R와 T를 함께 읽고 Circuit 탭에서는 P1+P2+Loss=Pin을 확인하세요. 서로 다른 모델의 출력 채널을 혼합하지 마세요."
+}

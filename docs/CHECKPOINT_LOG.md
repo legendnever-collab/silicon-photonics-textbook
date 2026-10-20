@@ -94,3 +94,10 @@
 - Lessons 2.3–2.4: β/OPL/Relative Phase, lossless separate-arm distinction, explicit U†DU MZI convention, complex field/transfer/phasor figures. Nine lessons and 11 Ch2 figures available.
 - Browser 13 scenarios PASS including phase worked value, MZI 0/π/2/π, shared Figure/Notebook state, focus retention and viewport/theme matrix. D2 HTML and Browser evidence preserved.
 - Desktop integrated shell uses flex height to retain full header while reading/notebook independently scroll. Existing Ch1 standalone remains byte-identical.
+
+## v0.2.0 D3 · Release Candidate
+- Remote checkpoints: D0 a319d97d8e879e39cab4c47f89bcfe6a75bbcae2; D1 241067041695aa4ce7b1a2d69154ba6f2f8ab8a1; D2 9d2062ff151e144663a84d3471018a1a0bf95cc9. Local authoring commits preserve the same checkpoint trees; connector-created commits retain a fast-forward remote history.
+- Complete Lesson 2.5 Ring→Bragg→Passive PIC, shared analytical models, 17 classified figures, read-linked Ring/Bragg/Circuit notebook, original key read-only migration, robust imported parameter bounds, extended Korean font coverage.
+- Unit/content 41 PASS; integrated Chapter1 browser 32 PASS; Chapter2 browser 15 PASS. Four viewport sizes × Light/Dark; no runtime/console errors or runtime HTTP requests.
+- D0–D3 standalone HTML preserved; D3 matches dist/silicon-photonics-textbook-v0.2.0.html. SHA256 manifest dist/CH2_SHA256SUMS.txt. QA/Inventory/Review/Release Checkpoint docs saved.
+- PR #2 remains Draft, base feature/ch1-textbook-pilot. User learning review pending. No main merge, no Chapter3 implementation.

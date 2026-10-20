@@ -1,8 +1,8 @@
 import {createRequire} from 'node:module';import {mkdir,writeFile,readFile} from 'node:fs/promises';import {pathToFileURL} from 'node:url';import assert from 'node:assert/strict';
 const require=createRequire(import.meta.url);let pw;try{pw=require('playwright');}catch{pw=require(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES+'/playwright');}
 const browser=await pw.chromium.launch({headless:true,args:['--no-sandbox','--no-zygote','--disable-dev-shm-usage'],...(process.env.BROWSER_EXECUTABLE_PATH?{executablePath:process.env.BROWSER_EXECUTABLE_PATH}:{})});
-const report={status:'RUNNING',version:'0.1.1',browser:await browser.version(),scenarios:[],runtimeErrors:[],consoleErrors:[],externalRequests:[]},url=pathToFileURL(process.cwd()+'/dist/chapter-01.html').href;
-const output='artifacts/v0.1.1';await mkdir(output,{recursive:true});
+const report={status:'RUNNING',version:'0.1.1',browser:await browser.version(),scenarios:[],runtimeErrors:[],consoleErrors:[],externalRequests:[]},url=pathToFileURL(process.cwd()+(process.env.TEXTBOOK_HTML||'/dist/chapter-01.html')).href;
+const output=process.env.TEXTBOOK_HTML?'artifacts/v0.2.0/ch1-regression':'artifacts/v0.1.1';await mkdir(output,{recursive:true});
 function monitor(p){p.on('pageerror',e=>report.runtimeErrors.push(e.message));p.on('console',m=>{if(m.type()==='error')report.consoleErrors.push(m.text());});p.on('request',r=>{if(/^https?:/.test(r.url()))report.externalRequests.push(r.url());});}
 async function run(name,fn){await fn();report.scenarios.push({name,status:'PASS'});console.log('PASS Figure:',name);}
 async function select(p,id){await p.locator('#lesson-nav [data-lesson="'+id+'"]').click();await p.waitForFunction(id=>document.title.includes('Lesson '+id),id);await p.evaluate(()=>new Promise(requestAnimationFrame));}

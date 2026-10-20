@@ -14,6 +14,7 @@ function validate(v){
   const pred=v.predictions?.[id];if(Number.isInteger(pred)&&pred>=0&&pred<l.predictionOptions.length)clean.predictions[id]=pred;
   for(const type of ['reflection','prediction','explanation']){const n=v.notes?.[id+':'+type];if(typeof n==='string')clean.notes[id+':'+type]=n.slice(0,12000);}
   clean.settings[id]={};for(const [k,val] of Object.entries(v.settings?.[id]||{})){if(typeof val==='number'&&Number.isFinite(val))clean.settings[id][k]=Math.max(-100000,Math.min(100000,val));if(['signed','intensity','modes','polarization','field','dispersion','strip','linear','db'].includes(val))clean.settings[id][k]=val;}
+ if(id.startsWith('2.'))clean.settings[id]=Ch2Notebook.sanitize(id,clean.settings[id]);
  }
  clean.completed=Array.isArray(v.completed)?v.completed.filter(id=>lessons.some(l=>l.id===id)):[];return clean;
 }
@@ -59,7 +60,7 @@ function setupObserver(){
   const context=$('#notebook-context');if(context)context.textContent=`지금 읽는 절 · ${section.querySelector('h2').textContent}`;
   $('#notebook').dataset.scene=topic;
   document.querySelectorAll('.teaching-figure').forEach(el=>el.classList.toggle('figure-active',el===active));
-  if(current().id==='1.2'&&topic!==connectedTopic){
+  if(current().id==='2.5'&&['ring','bragg','circuit'].includes(topic)&&topic!==connectedTopic){connectedTopic=topic;settings().ch2View=['ring','bragg','circuit'].indexOf(topic);renderNotebook();const c=$('#notebook-context');if(c)c.textContent=`지금 읽는 절 · ${section.querySelector('h2').textContent}`;}else if(current().id==='1.2'&&topic!==connectedTopic){
    const previous=connectedTopic;connectedTopic=topic;
    const view=topic==='polarization'?'polarization':'modes';
    if(previous&&settings().view!==view){settings().view=view;renderNotebook();const c=$('#notebook-context');if(c)c.textContent=`지금 읽는 절 · ${section.querySelector('h2').textContent}`;}
@@ -188,7 +189,7 @@ matchMedia('(max-width:760px)').addEventListener('change',()=>{placeNotebook();s
 $('#theme').onclick=()=>{state.theme=state.theme==='dark'?'light':'dark';setTheme();save();};
 $('.brand').onclick=e=>{e.preventDefault();remember();state.lesson=lessons[0].id;state.positions[state.lesson]=0;save();renderLesson(true);};
 $('#session').onclick=showSession;$('#close-session').onclick=()=>$('#session-dialog').close();
-$('#export').onclick=()=>{remember();const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));a.download='silicon-photonics-ch1-study-record.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
+$('#export').onclick=()=>{remember();const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));a.download=TEXTBOOK.multiChapter?'silicon-photonics-study-record.json':'silicon-photonics-ch1-study-record.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
 $('#import').onchange=async e=>{$('#import-status').textContent='불러오는 중…';try{const file=e.target.files[0];if(!file)return;if(file.size>1000000)throw Error('1 MB 이하의 학습 기록을 선택해 주세요.');const clean=validate(JSON.parse(await file.text()));state=clean;setTheme();save();renderLesson();$('#import-status').textContent='학습 기록을 불러왔습니다.';}catch(err){$('#import-status').textContent='가져오지 못했습니다. '+err.message;}e.target.value='';};
 TeachingFigures.bind({get:()=>settings(),set:(k,v)=>{settings()[k]=v;save();}});
 setTheme();renderLesson();save();

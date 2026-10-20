@@ -1,0 +1,66 @@
+{
+  "id": "2.5",
+  "short": "Filters & PIC",
+  "title": "Ring Resonators, Bragg Gratings and Your First Passive PIC",
+  "time": "30–45분",
+  "lead": "원본의 MZI 다음 순서인 Ring과 Bragg를 먼저 배웁니다. 서로 다른 간섭 구조를 비교한 뒤 Power와 Phase Ledger로 첫 Passive Circuit을 읽습니다.",
+  "question": "같은 Waveguide와 Coupler로 어떻게 재순환 Resonance와 특정 파장의 반사를 만들 수 있을까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "두 경로에서 반복 간섭으로 확장합니다",
+      "scene": "passive",
+      "html": "<p>지금까지는 빛을 나누고 한 번 다시 합치는 MZI를 배웠습니다. 원본 Chapter 4는 여기서 멈추지 않습니다. §4.4의 <strong>Ring Resonator</strong>와 §4.5의 <strong>Waveguide Bragg Grating Filter</strong>가 이어집니다. 이번 Lesson에서도 그 순서를 유지합니다. Part A는 재순환하는 Field, Part B는 전후진 Field의 결합을 다루며, Part C에서 앞서 배운 MZI의 Engineering Ledger를 완성합니다.</p><p>Ring과 Bragg는 선택적으로 건너뛰는 이름 소개가 아닙니다. 각 구조의 원리, 기초 Transfer Function, Worked Example과 Notebook을 제공합니다. 다만 상세 제작 형상·원본 실험 데이터·Apodized/Phase-shifted Grating의 Full-wave 계산까지 이 이상 모델로 대체하지는 않습니다. 마지막 실습은 최적화 조건을 통과해야 하는 Mission이 아니라, 예측과 계산을 비교해 스스로 물리적 판단을 적는 교재형 Exercise입니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Part A Ring → Part B Bragg → Part C Circuit",
+      "scene": "passive",
+      "html": "<h3 id=\"ring-resonator\" data-notebook-scene=\"ring\">Part A · 원본 §4.4 Ring Resonator</h3><p>직선 Bus Waveguide 옆에 닫힌 Ring을 Coupling시키면 일부 Field가 Ring에 들어가 한 바퀴 돈 뒤 다시 Coupling 지점에 도착합니다. 도착한 Field는 Bus의 직접 전달 Field와 간섭합니다. MZI의 두 경로와 달리 Ring에는 이전 Round-trip의 기여들이 계속 남을 수 있어 <strong>Feedback Interference</strong>가 생깁니다. 한 바퀴 Phase θ가 2πm을 만족하면 같은 Phase로 재방문하는 Resonance 조건입니다.</p><p>여기서는 Bus 하나만 있는 <strong>All-pass Ring</strong>을 사용합니다. Self-coupling의 실수 진폭을 t, 한 바퀴 뒤 남는 진폭을 a로 정의합니다. Power Survival은 a²이며 a가 Power 비율이 아님에 주의합니다. Ring 내부 Field가 커져도 Bus Through Power는 감소할 수 있습니다. <strong>Critical Coupling</strong> t=a&lt;1에서는 Resonance의 직접 전달과 재결합 Field가 상쇄되어 Bus Through가 0이 됩니다. 정상상태에서 그 Power는 내부 손실로 소모됩니다. 이 단일 Bus 모델에는 Drop Port가 없습니다.</p><p>반대로 내부 손실이 없는 a=1인 이상 All-pass Ring은 정상상태의 Bus Transmission 크기가 모든 θ에서 1입니다. Phase와 내부 Stored Energy는 변할 수 있지만 에너지를 소모하거나 다른 출력으로 보내지 않기 때문입니다. 따라서 ‘Ring이면 언제나 Power Notch가 나타난다’는 결론은 틀립니다. 실제 Resonator의 Q, Linewidth, Backscattering, 온도 변화, Add-drop 출력은 추가 모델과 측정이 필요합니다.</p><p>여러 Resonance 사이의 <strong>Free Spectral Range, FSR</strong>는 한 바퀴 누적 Phase가 파장에 따라 2π 변하는 간격입니다. 위상에 쓰는 neff와 Spectrum 미분에 쓰는 ng를 구별해야 합니다. Notebook은 θ를 직접 Sweep하며, 별도 가정한 ng로 국소 FSR만 계산합니다. 이 θ 그래프를 실제 파장 Spectrum이라고 표시하지 않습니다.</p><h3 id=\"bragg-grating\" data-notebook-scene=\"bragg\">Part B · 원본 §4.5 Waveguide Bragg Grating</h3><p>Waveguide를 따라 Refractive Index 또는 Width를 주기적으로 바꾸면 각 위치에서 약하게 뒤로 산란된 Field들이 생깁니다. 특정 파장에서는 이 후진 성분의 Phase가 정렬되어 큰 반사를 만듭니다. 1차 <strong>Bragg Condition</strong>은 λB≈2neffΛ입니다. Λ는 Grating Period입니다. 이 장치는 진행 방향을 뒤집는 Guided-wave Filter이며 Fiber/Free-space로 빛을 방출하는 Optical I/O의 Grating Coupler와 다릅니다.</p><p>DC가 서로 다른 Guide의 같은 방향 Field를 결합한다면, 균일 Bragg Grating은 같은 Guide의 <strong>Forward/Backward Mode</strong>를 결합합니다. κg는 그 결합 세기이고 Detuning δ=β−π/Λ는 Bragg 조건에서 벗어난 정도입니다. DC의 cos²/sin²를 그대로 가져올 수 없습니다. 뒤쪽 끝에서 들어오는 Backward 입력이 없다는 경계조건 때문에 Resonance에서 R=tanh²(κgLg)가 나옵니다.</p><p>원본의 설계 Section은 TMM, 물리 구조, FDTD와 제작 비교로 이어집니다. <strong>Transfer Matrix Method, TMM</strong>는 각 구간에서 Forward/Backward Field의 관계를 행렬로 만들고, 구간 행렬들을 순서대로 곱해 전체 경계조건을 적용하는 방법입니다. 이번 Notebook은 Uniform CMT의 해석해만 사용합니다. Corrugation 크기에서 κg를 추정하거나 실제 Lithography를 계산한 결과는 아닙니다.</p><details><summary>원본 §4.5.3–4.5.8 · 제작과 심화 구조로 이어지는 길</summary><p>Strip과 Rib Grating은 Etch와 Mode Overlap이 달라 같은 형상 변화가 같은 κg를 주지 않습니다. Period는 반사 중심을 정하지만 실제 제작된 Width·Sidewall·Etch Depth가 neff와 κg를 함께 바꿀 수 있습니다. 따라서 경험식은 제작 데이터로 맞춰야 하며 이상 Layout 값을 그대로 측정 성능으로 읽으면 안 됩니다.</p><p><strong>Spiral Grating</strong>은 긴 Grating을 작은 Footprint에 배치하지만 Bend와 공정 균일도를 함께 봐야 합니다. 온도에 따른 Index/Length 변화는 반사 파장도 바꿉니다. <strong>Phase-shifted Grating</strong>은 주기 구조 중간의 위상 결함으로 Stopband 안의 좁은 Resonance를 만들 수 있습니다. <strong>Multi-period Grating</strong>은 여러 주기 성분으로 반사 대역을 구성합니다. <strong>Grating-assisted Contra-directional Coupler</strong>는 서로 다른 Guide의 전진/후진 Mode를 Phase Matching하여 결합합니다.</p><p>이 심화 구조의 정량 Spectrum은 이번 Uniform Notebook이 계산하지 않습니다. 후속 Passive Advanced의 Grating-TMM/Fabrication에서 구간 행렬, 제작 형상과 실험을 연결하도록 예약했습니다. Ring의 Add-drop/Q와 원본 실험 비교도 Ring-Filters에서 다룹니다. 상세 대응은 TEXTBOOK_SOURCE_MAPPING.md에서 확인할 수 있습니다.</p></details><h3 id=\"passive-circuit\" data-notebook-scene=\"circuit\">Part C · Guided Engineering Exercise</h3><p>이제 Laser Input → Splitter → 두 Optical Arm → Combiner → 두 Optical Output을 읽어 봅니다. Ring이나 Bragg를 마지막 MZI Circuit에 억지로 넣을 필요는 없습니다. 방금 배운 세 Filter의 차이를 이해한 상태에서, 가장 단순한 Feed-forward 구조에 이전 Lesson의 모든 계산을 적용합니다.</p><p>Notebook의 <strong>Ring / Bragg / Circuit</strong> 탭은 서로 다른 명시 모델입니다. Circuit에서는 두 Coupler의 Through Power 비율 r, ΔL, λ₀, neff, Propagation Loss α를 설정합니다. 두 Arm 기준 길이는 1 mm이며 Upper만 ΔL만큼 더 깁니다. r는 독립 Coupler Parameter로 사용하며 같은 회로에 별도의 DC κL를 중복 적용하지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "세 구조의 식은 서로 다른 경계조건을 반영합니다",
+      "scene": "passive",
+      "html": "<h3>Ring Transfer · 정상상태의 반복 합</h3><div class=\"equation\">H = (t − ae<sup>iθ</sup>)/(1−tae<sup>iθ</sup>)<br>T = |H|², θ = β(2πR)<br>FSR<sub>λ</sub> ≈ λ₀²/(n<sub>g</sub>2πR)</div><dl class=\"terms\"><dt>t,a</dt><dd>Self-coupling 진폭과 Round-trip 진폭 잔존율 · 0–1</dd><dt>θ,R</dt><dd>Round-trip Phase [rad], Ring Radius [µm]</dd><dt>ng</dt><dd>Group Index, neff−λ dneff/dλ · 국소 FSR에 사용</dd></dl><div class=\"worked\" id=\"ring-example\"><h3>Worked Example A · Ring의 Critical Coupling</h3><p>t=a=0.9, θ=0이면 분자는 0, 분모는 1−0.81=0.19이므로 T=0입니다. θ=π이면 H=1.8/1.81이고 T≈<strong>0.9890</strong>입니다. a=1로 바꾸면 임의 θ에서 |H|²=1이며 Lossless All-pass의 크기 특성이 됩니다.</p><p>λ₀=1.55 µm, R=10 µm, ng=4이면 FSR≈1.55²/(4×2π×10)=0.009559 µm≈<strong>9.56 nm</strong>입니다. 이 국소 근사에서 Index 4는 ng이며, Phase Index를 4로 가정했다는 뜻은 아닙니다.</p></div><h3>Uniform Bragg Transfer · 전후진 결합</h3><div class=\"equation\">δ = β−π/Λ, s² = κg²−δ²<br>f = sinh(sLg)/s<br>D = |cosh(sLg)−iδf|²<br>R = κg²|f|²/D, T = 1/D<br>δ=0: R=tanh²(κgLg), T=sech²(κgLg)</div><dl class=\"terms\"><dt>κg, δ</dt><dd>Grating Coupling과 Detuning · µm⁻¹</dd><dt>Lg, Λ</dt><dd>Grating Length와 Period · µm (Period 예제는 nm로 환산)</dd><dt>s</dt><dd>δ²&gt;κg²이면 허수; sinh(ix)=i sinx로 연속 계산</dd><dt>가정</dt><dd>Uniform, 실수 κg, Lossless, 하나의 전진/후진 Mode, 오른쪽 입사 없음</dd></dl><div class=\"worked\" id=\"bragg-example\"><h3>Worked Example B · Bragg 중심과 반사율</h3><p>neff=2.4에서 λB=1550 nm인 1차 Grating은 Λ≈1550/(2×2.4)=<strong>322.917 nm</strong>입니다. κg=0.01 µm⁻¹, Lg=100 µm이면 κgLg=1이고 R=tanh²1≈<strong>0.5800</strong>, T≈<strong>0.4200</strong>입니다. Lg=200 µm이면 R≈0.9293으로 커집니다. Energy Conservation은 R+T=1이며 이때 T는 Bus Ring의 Through가 아니라 Grating의 Forward Transmission입니다.</p></div><h3>Passive Circuit · 단위를 맞춘 Ledger</h3><div class=\"equation\">U(r)=[[√r,i√(1−r)],[i√(1−r),√r]]<br>gⱼ=10<sup>−αLⱼ/(20×10000)</sup><br>Eout=U(r)† diag(gᵤe<sup>iφᵤ</sup>,gₗe<sup>iφₗ</sup>)U(r)[√Pin,0]<sup>T</sup><br>P₁+P₂ = Pin[r gᵤ²+(1−r)gₗ²]</div><p>α는 Power Loss 계수 [dB/cm]이고 L은 µm이므로 10000으로 나누어 cm로 변환합니다. Field 잔존율에는 10이 아니라 20을 사용합니다. 분배·전파·합성을 한 번씩만 적용하며 각 Port의 Power는 계산한 Field의 절댓값 제곱입니다.</p><div class=\"worked\"><h3>Worked Example C · Phase 0에서 손실까지 확인</h3><p>Pin=1 mW, r=0.5, λ₀=1550 nm, neff=2.4, 두 Arm 모두 L=1000 µm=0.1 cm, α=3 dB/cm로 둡니다. ΔL=0이므로 Δφ=0입니다. 각 Arm의 Power Survival은 10^(−0.3/10)≈0.933254입니다. 따라서 Port1≈<strong>0.933254 mW</strong>, Port2=0, Propagation Loss≈<strong>0.066746 mW</strong>이며 합은 1 mW입니다.</p><p>α=0으로 두고 ΔL≈0.322917 µm를 주면 Port1≈0, Port2≈1 mW가 됩니다. 실제 Slider는 0.001 µm 간격이므로 정확한 Zero보다 작은 잔여가 남을 수 있습니다. α&gt;0이고 길이가 다르면 두 Arm의 잔존 진폭도 조금 달라져 이상적인 상쇄가 깨집니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "서로 다른 간섭을 같은 말로 섞지 않습니다",
+      "scene": "passive",
+      "html": "<p>Ring의 Bus Notch와 MZI의 Dark Port는 둘 다 Field Interference이지만, 전체 Energy Ledger는 다릅니다. MZI에는 두 출력이 있고 단일 Bus Ring에는 내부 손실이 있습니다. Bragg에는 전진과 후진 출력이 있습니다. Notebook의 각 탭에서 무엇을 입력/출력으로 세는지 먼저 확인하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "예측 → 계산 → 관찰 → 설계 판단",
+      "scene": "passive",
+      "html": "<ol><li><strong>Ring:</strong> t=a=0.9, θ=0의 Through를 예측한 뒤 확인하세요. a=1로 바꿔 Notch가 사라지는 이유를 적습니다.</li><li><strong>Bragg:</strong> κg=0.01 µm⁻¹, Lg=100 µm에서 δ=0의 R/T를 손으로 계산한 뒤 확인합니다. δ를 바꾸면 왜 반사가 변하는지 설명합니다.</li><li><strong>Circuit:</strong> r=0.5, ΔL=0, λ=1550 nm, neff=2.4, α=3 dB/cm 조건을 읽고 예상 Output Power를 메모합니다.</li><li>β와 Δφ를 계산하고 Matrix의 각 Arm Field를 구합니다. Notebook Ledger의 두 Port 및 Loss와 비교합니다.</li><li>r를 0.6으로 바꾸거나 ΔL을 약 0.323 µm로 바꾸어, Dark Port의 잔여와 Propagation Loss가 어떻게 다른지 관찰합니다.</li><li>Phase 민감도, Loss, Split Ratio 균형 사이의 Trade-off를 자신의 말로 정리합니다. 완료는 정답 최적화 수치로 차단하지 않습니다.</li></ol><p>Ring·Bragg 탭과 본문 Figure는 각 모델의 설정을 공유합니다. Circuit Figure 2.5A/B는 같은 Ledger 결과를 사용합니다. 실제 Foundry 값, FDTD/FEM 결과, 측정 Spectrum, 제조 수율은 계산하지 않습니다. neff를 바꿨다는 이유로 같은 단면의 Loss나 κ까지 자동으로 바뀌었다고 해석하면 안 됩니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "Chapter Review · 구조가 달라도 Field와 경계조건을 따릅니다",
+      "scene": "passive",
+      "html": "<ul><li><strong>Splitter:</strong> Power와 진폭을 구별하고 분배와 Excess Loss를 분리했습니다.</li><li><strong>DC → Y → MMI:</strong> Evanescent Coupling, 대칭 분기, Self-imaging의 차이를 배웠습니다.</li><li><strong>Phase → MZI:</strong> OPL 차이가 Relative Phase를 만들고 Combiner가 이를 두 Output Power로 읽습니다.</li><li><strong>Ring:</strong> 재순환 Field의 정상상태 간섭과 Critical Coupling을 이해했습니다.</li><li><strong>Bragg:</strong> 주기 섭동이 Forward/Backward Mode를 결합하고 반사를 만든다는 것을 배웠습니다.</li></ul><p><strong>학습 점검:</strong> ‘왜 Power가 진폭의 제곱인가?’, ‘왜 DC Power가 되돌아오는가?’, ‘Y의 반대칭 역입력은 어디로 가는가?’, ‘MMI는 어떤 Mode를 겹치는가?’, ‘한 MZI Port가 어두울 때 Power는 어디로 가는가?’, ‘Lossless All-pass Ring에 Power Notch가 없는 이유는?’, ‘Bragg와 I/O Grating Coupler는 무엇이 다른가?’를 설명해 보세요.</p><p>원본 실험·공정·TMM 심화는 Source Mapping의 Passive Advanced 위치로 이어집니다. 이번 Release Candidate는 여기서 사용자 학습 검토를 기다립니다. Chapter 3 또는 Active Modulation은 아직 개발하지 않았습니다. 읽음 표시는 학습 기록이며 통과 Gate가 아닙니다.</p>"
+    }
+  ],
+  "prediction": "Critical Coupling의 All-pass Ring과 Lossless MZI에서 어두운 출력의 Energy는?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Ring은 내부 손실, MZI는 다른 Port로 가며 구조의 Energy Ledger가 다르다",
+    "두 장치 모두 Energy가 보존되지 않는다",
+    "두 장치 모두 반드시 뒤로 반사된다"
+  ],
+  "predictionFeedback": "단일 Bus Ring의 Critical Coupling은 t=a<1인 내부 손실과 외부 결합의 균형입니다. 반면 이상 Lossless MZI의 상쇄 Power는 다른 Output에 나타납니다. Bragg에서는 뒤로 향하는 Reflection을 따로 셉니다.",
+  "reflection": "Ring·Bragg·MZI의 출력 채널을 비교하고, Circuit의 Split Ratio·ΔL·Loss를 바꾼 설계 판단을 수치와 함께 설명해 보세요.",
+  "sources": [
+    "C0",
+    "C3",
+    "C4"
+  ]
+}

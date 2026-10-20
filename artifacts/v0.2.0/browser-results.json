@@ -13,7 +13,15 @@
       "status": "PASS"
     },
     {
+      "name": "D3 Ring, Bragg and Circuit notebooks retain independent settings and match shared model",
+      "status": "PASS"
+    },
+    {
       "name": "Chapter1 data migration keeps original key untouched, Ch2 resume/backup restore",
+      "status": "PASS"
+    },
+    {
+      "name": "out-of-range imported physics settings clamp safely, malformed records retain current state",
       "status": "PASS"
     },
     {

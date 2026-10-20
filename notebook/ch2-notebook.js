@@ -14,5 +14,6 @@ function render(l,s,{shell,slider}){const d=def(l,s);return shell('Analytical ·
 function update(l,s){const d=def(l,s),r=Ch2Graphics[d.kind](s);document.querySelector('#notebook-plot').innerHTML=r.graphic;document.querySelector('#notebook-readout').innerHTML=r.values;for(const [k,,value,,, ,unit] of d.controls){const el=document.getElementById(k+'-value');if(el)el.textContent=(Number.isFinite(s[k])?s[k]:value)+' '+unit;}
  for(const b of document.querySelectorAll('[data-ch2-view]'))b.setAttribute('aria-pressed',String(Number(b.dataset.ch2View)===Math.round(s.ch2View||0)));
 }
-root.Ch2Notebook={render,update};
+function sanitize(id,s){const out={},list=id==='2.5'?[defs.ring,defs.bragg,defs.circuit]:[defs[id]];for(const d of list)for(const [key,,,min,max] of d.controls)if(Number.isFinite(s[key]))out[key]=Math.max(min,Math.min(max,s[key]));if(id==='2.5'&&Number.isFinite(s.ch2View))out.ch2View=Math.max(0,Math.min(2,Math.round(s.ch2View)));return out;}
+root.Ch2Notebook={render,update,sanitize};
 })(globalThis);
