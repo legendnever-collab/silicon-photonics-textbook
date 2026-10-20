@@ -1,18 +1,21 @@
 {
-  "version": "0.1.0-rc.1",
-  "checkpoint": "C4",
+  "version": "0.1.1",
+  "checkpoint": "F3",
   "status": "ready-for-user-learning-review",
-  "mainBaseline": "a40bb926b5e4adab9aad09a67a11765feef979cc",
+  "initialMain": "a40bb926b5e4adab9aad09a67a11765feef979cc",
+  "pilotBaseline": "21c3e2d4a2696332c492fd1bc6768270b67a465b",
   "branch": "feature/ch1-textbook-pilot",
+  "pr": 1,
   "mergeAuthorized": false,
   "chapter2Started": false,
   "remoteCheckpoints": {
-    "C1": "eb31f0c3fb55e57c248d1f1d9b1b23c9cca810be",
-    "C2": "f8729e5c34075c4c816ea44e8f1e01a05fadf869",
-    "C3": "9a131e7e9e30966997203bdf08f69da8a69d25ec"
+    "F0": "df1c7516cc93002d48e20c58e3b1d0f7bee574c1",
+    "F1": "d527554143a98a0729e51e7bff812a2a862096fe",
+    "F2": "ab70b482ed0e76ce112d83cec0c97f9a478a89b9"
   },
+  "figures": 10,
   "build": {
-    "version": "0.1.0-rc.1",
+    "version": "0.1.1",
     "lessons": [
       "1.1",
       "1.2",
@@ -20,16 +23,17 @@
       "1.4",
       "1.5"
     ],
-    "sourceHash": "b69098ecc858d6973af61e39a0989caa6d85fcde2fec57d9b7b808c061552741",
-    "htmlSha256": "c7ae1459b2697da1399b59bbacad35acc3401df3be76bc4262e53671e3120d70"
+    "sourceHash": "ef2af09ad24b7193a96a459e42c80334d40495a8ac8c09f9bd61998f34d7af7f",
+    "htmlSha256": "35d44b6e612e16633d819aaba2a1b0372d5c96e1b16ffeb1553cb89320f17da1"
   },
-  "verification": {
-    "nodeTests": 11,
-    "browserScenarios": 15,
-    "browser": "133.0.6943.0",
-    "independentSlabValidation": "PASS",
+  "scalarDatasetSHA256": "a1c4c6c690cda70a12f75878851fac48b8ae37dfdaff85de9e66630852f1b53e",
+  "tests": {
+    "node": 21,
+    "originalBrowser": 15,
+    "figureBrowser": 17,
     "runtimeErrors": 0,
-    "externalRequests": 0,
-    "learningEffectiveness": "requires user review"
+    "runtimeHTTPRequests": 0,
+    "physicalDeviceAccuracy": "not validated",
+    "educationalEffectiveness": "pending user review"
   }
 }

@@ -69,3 +69,17 @@
 - Figures 1.2B (2D map), 1.4A (width comparison + y=0 cuts), 1.4B (existing analytical Slab branches + TE count). Notebook Width updates the analytical Figure only; scalar cases are explicitly precomputed selections.
 - 20 Node tests PASS; Figure smoke for scalar scale/case, live Slab and Mobile zoom PASS with runtime errors 0.
 - Updated Model Contract and sources. F2 HTML preserved under checkpoints/v0.1.1/F2-chapter-01.html.
+
+## v0.1.1 remote checkpoint records
+- F0: df1c7516cc93002d48e20c58e3b1d0f7bee574c1
+- F1: d527554143a98a0729e51e7bff812a2a862096fe
+- F2: ab70b482ed0e76ce112d83cec0c97f9a478a89b9
+
+## v0.1.1 F3 · Bend Figure & Final Integration
+- 1.5A Conceptual Bend comparison; 1.5B Illustrative synthetic Bend Loss / analytical Total / Footprint graph. Existing table and coefficients unchanged.
+- 10 Figures complete with captions/classifications/parameters/limits. Nearby Figure highlights; zoom supports keyboard/Escape/focus return and sticky Mobile close.
+- 21 Node tests PASS. Existing 15 + new 17 actual Chromium Browser Scenarios PASS across 1440×900, 1366×768, 390×844 and 320×740, each Light/Dark.
+- Runtime Error, Console Error, external HTTP(S) requests all 0. Original textbook/Tutor/model hashes unchanged.
+- Figure Inventory, Physics Figure Validation, Scalar raw evidence, reproduction requirements, user learning review and updated QA preserved.
+- Final F3 HTML/SHA256 and screenshots preserved. Source/Commit identity is recorded by Git history and PR #1, avoiding a self-referential commit hash.
+- User learning review pending. Main not merged; Chapter 2 not started; no Full-vector Solver expansion.

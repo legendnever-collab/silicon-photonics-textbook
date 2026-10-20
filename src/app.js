@@ -50,7 +50,7 @@ let connectedTopic='';
 function setupObserver(){
  observer?.disconnect();connectedTopic='';
  const mobile=matchMedia('(max-width:760px)').matches,root=mobile?null:$('#reading');
- const targets=[...document.querySelectorAll('[data-section], [data-notebook-scene]')];
+ const targets=[...document.querySelectorAll('[data-section], [data-notebook-scene], [data-figure]')];
  function connect(){
   const top=(root?root.getBoundingClientRect().top:0)+80;
   const reached=targets.filter(el=>el.getBoundingClientRect().top<=top);
@@ -58,6 +58,7 @@ function setupObserver(){
   const section=active.closest('[data-section]'),topic=active.dataset.notebookScene||section.dataset.scene;
   const context=$('#notebook-context');if(context)context.textContent=`지금 읽는 절 · ${section.querySelector('h2').textContent}`;
   $('#notebook').dataset.scene=topic;
+  document.querySelectorAll('.teaching-figure').forEach(el=>el.classList.toggle('figure-active',el===active));
   if(current().id==='1.2'&&topic!==connectedTopic){
    const previous=connectedTopic;connectedTopic=topic;
    const view=topic==='polarization'?'polarization':'modes';

@@ -2,3 +2,4 @@ node_modules/
 artifacts/browser-results.json
 artifacts/*.png
 artifacts/independent-validation.json
+artifacts/v0.1.1/chapter-01-*.jpg

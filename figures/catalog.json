@@ -112,5 +112,34 @@
     "meaning": "Single-mode 조건은 재료·파장·Geometry·Polarization과 모델 범위에 의존합니다.",
     "source": "notebook/models.js slabTE",
     "live": true
+  },
+  {
+    "id": "1.5A",
+    "lesson": "1.5",
+    "title": "Bend Radius와 Radiation을 구별해 보기",
+    "classification": "Conceptual",
+    "anchor": "#section-concept > p:nth-of-type(2)",
+    "renderer": "bend",
+    "parameters": "Small R = 2 µm / Large R = 10 µm · 동일한 중심선 Radius Scale의 90° Circular Bend. 선 굵기는 실제 Waveguide Width나 Field 세기가 아닙니다.",
+    "limits": "자체 제작한 정성 그림입니다. Maxwell/BPM/FDTD Field Radiation Map, 정량 Radiation Rate 또는 Loss 계산 결과가 아닙니다. 점선 화살표의 개수·길이로 손실량을 읽지 않습니다.",
+    "see": "같은 축척에서 작은 Radius와 큰 Radius의 경로와 공간을 비교합니다.",
+    "notice": "작은 R의 급한 곡률과 큰 R의 넓은 Bounding Square를 보세요. 점선 화살표는 가능한 Radiation의 개념만 나타냅니다.",
+    "meaning": "곡률을 완만하게 하면 Radiation을 줄이는 데 도움이 될 수 있지만 더 큰 Footprint와 경로 길이가 필요합니다.",
+    "source": "Original SVG, qualitative bend physics; no bend EM solver"
+  },
+  {
+    "id": "1.5B",
+    "lesson": "1.5",
+    "title": "가정한 Bend Loss와 Footprint의 Trade-off",
+    "classification": "Illustrative",
+    "anchor": "#section-equation > .worked",
+    "renderer": "tradeoff",
+    "parameters": "기존 합성 표: R = 2/5/10/20 µm에서 b(R) = 0.4/0.08/0.02/0.005 dB/90°. α = 3 dB/cm, 직선 2 mm, 90° Circular Bend 4개. Total은 기존 Analytical Ledger로 계산합니다. A = R²는 한 코너의 중심선 Bounding Square [µm²].",
+    "limits": "물리 Solver가 산출한 Radius–Loss 곡선이 아닙니다. 네 점은 교육용 후보이며 사이 값을 추정·보간하거나 실제 공정의 Radius 권고로 사용하지 않습니다. 실제 Radiation Map/실측/PDK 데이터가 아닙니다.",
+    "see": "네 Radius 후보의 가정한 추가 Bend Loss, 계산한 Total Loss와 한 코너 면적을 비교합니다.",
+    "notice": "Notebook의 Radius를 바꾸면 같은 후보가 강조됩니다. Loss 0.8 dB와 면적 100 µm² 제약을 함께 보세요.",
+    "meaning": "Bend 추가 손실과 경로 길이에 따른 손실을 구별하고, 공간 조건 안에서 선택 이유를 설명합니다.",
+    "source": "notebook/models.js bendTable / designLedger; synthetic inputs unchanged",
+    "live": true
   }
 ]
