@@ -1,0 +1,70 @@
+{
+  "browser": "133.0.6943.0",
+  "playwright": "1.62.1",
+  "scenarios": [
+    {
+      "name": "Offline standalone, 5 navigable Lessons, Korean font and first layout",
+      "status": "PASS"
+    },
+    {
+      "name": "TIR below/above critical angle with keyboard slider",
+      "status": "PASS"
+    },
+    {
+      "name": "All Lessons: A–F, two misconception feedbacks, all tutor explanations",
+      "status": "PASS"
+    },
+    {
+      "name": "Mode nodes, signed/intensity toggles, polarization and scroll-linked diagram",
+      "status": "PASS"
+    },
+    {
+      "name": "Phase calculator Worked Example and doubling L",
+      "status": "PASS"
+    },
+    {
+      "name": "Geometry: 1→3→5 modes, all branches, selected unavailable mode clamps",
+      "status": "PASS"
+    },
+    {
+      "name": "Loss ledger and explicit competing constraints",
+      "status": "PASS"
+    },
+    {
+      "name": "Theme via keyboard preserves current learning state",
+      "status": "PASS"
+    },
+    {
+      "name": "Notes, prediction, tutor, parameter and scroll resume after reload",
+      "status": "PASS"
+    },
+    {
+      "name": "Study record export and valid restore with completion entry",
+      "status": "PASS"
+    },
+    {
+      "name": "Malformed/future/oversized study records are rejected without replacing active state",
+      "status": "PASS"
+    },
+    {
+      "name": "Mobile 390px: inline notebook, touch-size controls, no horizontal overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "Mobile 320px / Dark / Reduced motion / keyboard navigation",
+      "status": "PASS"
+    },
+    {
+      "name": "Storage denied: lesson and notes still work with visible export fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "No runtime errors, no console errors, no HTTP requests in offline use",
+      "status": "PASS"
+    }
+  ],
+  "runtimeErrors": [],
+  "externalRequests": [],
+  "consoleErrors": [],
+  "status": "PASS"
+}

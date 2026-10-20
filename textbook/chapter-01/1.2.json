@@ -1,0 +1,66 @@
+{
+  "id": "1.2",
+  "short": "Optical Modes",
+  "title": "What Is an Optical Mode?",
+  "time": "6–8분",
+  "lead": "같은 Waveguide도 빛을 여러 공간적 형태로 전달할 수 있습니다. Mode는 그중 허용된 형태입니다.",
+  "question": "같은 색의 빛이라도, 단면에서 다른 모양으로 전파할 수 있을까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "빛의 경로만 알아서는 부족합니다",
+      "scene": "modes",
+      "html": "<p>Lesson 1.1에서는 높은 n의 Core와 낮은 n의 Cladding이 빛을 국소화할 수 있음을 배웠습니다. 이제 같은 Waveguide에 빛을 넣어도 입력의 모양에 따라 다른 결과가 생기는 이유를 생각해 보겠습니다. 어떤 입력은 하나의 안정된 Field Pattern으로 전달되고, 어떤 입력은 여러 Pattern이 섞여 전파합니다.</p><p><strong>Optical Mode</strong>를 알면 Coupling할 때 왜 위치와 Polarization을 맞춰야 하는지, Width가 커질 때 왜 단순히 빛의 통로만 넓어지는 것이 아닌지 이해할 수 있습니다. Mode는 빛 한 개의 이동 경로나 주파수의 별명이 아닙니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "전파하면서 자기 모양을 유지하는 Field Pattern",
+      "scene": "modes",
+      "html": "<p>단면과 재료가 z 방향으로 일정한 이상적인 Waveguide를 생각해 봅니다. 특정 Frequency에서 Maxwell 방정식과 경계조건을 만족하는 Field가 있다면, 그 Field는 z 방향으로 나아가며 전체에 같은 Phase Factor를 곱하는 방식으로 표현될 수 있습니다. 단면의 상대적인 분포는 유지됩니다. 이것이 여기서 말하는 Guided Mode입니다.</p><p>가장 낮은 차수의 <strong>Fundamental Mode</strong>는 단순한 대칭 Slab에서 내부 Node가 없는 형태입니다. <strong>Higher-order Mode</strong>에는 Field가 0을 통과하며 부호가 바뀌는 Node가 생깁니다. 부호가 음수라고 음의 Power가 흐른다는 뜻은 아닙니다. 단색 실수 기준 Field의 부호 차이는 같은 순간에 반대 위상으로 진동함을 나타냅니다.</p><p><strong>Mode Profile</strong>을 볼 때는 색이 무엇을 나타내는지 먼저 확인해야 합니다. Electric Field E의 한 성분인지, |E|²인지, 시간 평균 Poynting Vector인지에 따라 의미가 다릅니다. Notebook은 1D Slab의 <strong>Ey/max|Ey|</strong>와 그 제곱을 번갈아 보여 줍니다. Slab TE에서는 축 방향 Power Density가 |Ey|²에 비례하지만 일반적인 2D Vector Field의 임의 성분 하나에 같은 해석을 적용할 수는 없습니다.</p><div data-notebook-scene=\"polarization\"><p><strong>TE</strong>는 전파 축 z에 대한 Electric Field의 종방향 성분 Ez가 0인 경우, <strong>TM</strong>은 Hz가 0인 경우를 뜻합니다. y 방향으로 무한한 Slab에서는 이 분리가 정확히 가능합니다. 이 Notebook의 Slab은 x 방향으로만 제한되며 E가 y 방향인 TE 해를 계산합니다.</p><p>반면 실제 Silicon Strip은 x 방향 Width와 y 방향 Height가 모두 유한합니다. 일반적으로 전기장과 자기장의 여러 성분이 섞인 Hybrid Mode가 됩니다. Chip 면을 x–z, 높이를 y로 정의하면 주된 Electric Field가 Chip 면 안에 있는 것을 보통 <strong>Quasi-TE</strong>, 주로 수직인 것을 <strong>Quasi-TM</strong>이라고 부릅니다. 정확한 정의는 축과 Solver Convention을 함께 확인해야 합니다. Notebook의 Polarization 그림은 이 차이를 보여 주는 Conceptual Illustration입니다.</p></div>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "공간 분포와 전파하는 Phase를 분리합니다",
+      "scene": "modes",
+      "html": "<div class='equation'>E(x,y,z,t) = Re{e(x,y) e<sup>i(βz − ωt)</sup>}<span class='caption'>[R1, R3] 단색·선형·z 불변 Waveguide의 단일 Mode. e: 복소 Field Profile [V/m], β: Propagation Constant [rad/m], z: 거리 [m], ω: Angular Frequency [rad/s], t: 시간 [s].</span></div><p>e(x,y)는 단면에서의 형태를, 지수 함수는 위치와 시간에 따른 공통 Phase를 나타냅니다. 여기서는 lossless Guided Mode를 다루므로 β를 실수로 둡니다. 실제 손실 구조에서는 진폭의 감쇠도 포함해야 합니다. 여러 Mode를 동시에 여기하면 이 식 하나가 아니라 Mode별 항의 합이 되며, 서로 다른 β 때문에 총 Field Pattern이 z에 따라 달라질 수 있습니다.</p><div class='worked'><h3>Worked Example · Field의 부호와 제곱</h3><p>어떤 정규화된 Mode에서 두 위치의 Ey가 +0.5와 −0.5라고 합시다. 제곱은 두 곳 모두 0.25입니다. 즉 |Ey|² 그림만으로는 두 곳이 반대 위상이라는 사실을 읽을 수 없습니다. 가운데 Ey = 0인 Node가 있으면 제곱에서도 0이지만, 양·음 Lobe는 모두 양수로 보입니다.</p><p>Notebook에서 Width 500 nm, TE₁을 고른 뒤 ‘Signed Field’와 ‘Field²’를 비교하세요. 이 Mode의 중심은 Node입니다. TE₀로 바꾸면 중심에서 가장 큰 같은 부호의 Lobe가 보입니다. 이 차이는 임의로 그린 Gaussian의 개수를 늘려 만든 결과가 아니라 Slab 경계조건을 푼 해입니다.</p></div><details><summary>왜 허용된 Mode만 생길까요?</summary><p>Core 내부에는 진동하는 해, Cladding에는 감소하는 해가 필요합니다. 양쪽 경계에서 Ey와 그 미분을 함께 맞추려면 임의의 횡 방향 파수가 허용되지 않습니다. 이 동시 조건을 만족하는 값이 Eigenvalue이고, 그 값에 대응하는 Field가 Eigenmode입니다. 수학적으로는 미분 방정식에 경계조건을 부여했기 때문에 생기는 선택입니다.</p></details>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "Mode의 개수와 실제 여기되는 빛을 구별합니다",
+      "scene": "modes",
+      "html": "<p>어떤 Waveguide가 TE₀와 TE₁을 모두 지원한다고 합시다. 그것이 입력과 무관하게 두 Mode에 같은 Power를 넣는다는 뜻일까요?</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "같은 단면에서 서로 다른 허용된 형태를 비교합니다",
+      "scene": "modes",
+      "html": "<p>Notebook은 nCore = 3.48, nClad = 1.444, λ₀ = 1550 nm인 대칭 Slab을 사용합니다. Width 500 nm에서는 TE₀, TE₁, TE₂가 허용됩니다. Mode를 바꾸어 Node와 Cladding Tail을 비교하고, Signed Field와 Field²의 차이를 관찰하세요.</p><p>각 Mode는 보기 쉽게 최대 진폭을 1로 정규화합니다. 따라서 두 그래프의 높이가 같아도 실제 Power가 같다는 뜻은 아닙니다. ‘허용된다’는 것은 가능한 해의 존재이며, 실제로 어떤 Mode에 얼마나 들어가는지는 입력 Field와 Mode의 Overlap에 달려 있습니다. 여기서는 그 Coupling Power를 계산하지 않습니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "모양, Phase, Polarization을 구별해서 읽습니다",
+      "scene": "modes",
+      "html": "<ul><li>Mode는 전체 경계조건을 만족하며 전파하는 허용된 Field Pattern입니다.</li><li>Field의 부호는 Phase 정보입니다. |E|²에는 이 부호가 남지 않습니다.</li><li>Slab의 TE/TM과 실제 Strip의 Quasi-TE/Quasi-TM을 구별해야 합니다.</li></ul><p>허용된 Mode들은 모양뿐 아니라 z 방향의 Phase 변화율도 다릅니다. 다음 Lesson에서 그 변화율을 n_eff로 표현합니다.</p>"
+    }
+  ],
+  "prediction": "TE₁의 Signed Field를 제곱해서 보면 무엇이 사라질까요?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Field의 양·음 부호 정보가 사라진다",
+    "Node가 전부 사라진다",
+    "Mode가 Fundamental Mode로 바뀐다"
+  ],
+  "predictionFeedback": "제곱하면 부호 정보는 없어지지만 Node는 남습니다. Mode 자체가 바뀌지는 않습니다. 표시하는 물리량이 달라진 것입니다.",
+  "reflection": "Mode가 허용된다는 것과 그 Mode가 실제로 여기된다는 것은 어떻게 다를까요?",
+  "sources": [
+    "R1",
+    "R2",
+    "R3"
+  ]
+}
