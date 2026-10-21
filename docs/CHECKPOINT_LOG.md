@@ -108,3 +108,8 @@
 - Physics: original 41 tests preserved; new analytical physics tests 10 PASS, including independent 2D complex quadrature and Jones/Stokes comparison. No Vector/FDTD/device-efficiency claims.
 - New storage key v3 migrates v2/Ch1 read-only; new chapter descriptor navigation. Ch1 and v0.2.0 HTML retained byte-for-byte. E1 HTML preserved (12 available lessons).
 - Browser runtime setup is being recovered in the current environment; browser verification is not yet claimed at this authoring checkpoint.
+
+## v0.3.0 E2
+- Complete 3.3 Edge Coupler/Inverse Taper/Overlay/Alignment and 3.4 Jones State/PDL/Polarization Diversity in original order. Nine Ch3 figures and four Ch3 lessons are available.
+- Unit/content 51 PASS (existing 41 + new physics 10). Browser 13 scenarios PASS: all available A–F/Tutor/Figures, Gaussian/Grating, edge Offset/Tilt, Jones phase projection, 4 viewports × Light/Dark, offline no runtime/console errors or runtime HTTP requests.
+- Recovered Chrome Headless Shell 131.0.6778.204 for browser verification. Current E2 source/HTML and screenshots saved; E2 standalone snapshot preserved. User review and no-main-merge policy remain.

@@ -1,0 +1,66 @@
+{
+  "id": "3.3",
+  "short": "Edge Coupler",
+  "title": "Edge Couplers, Inverse Tapers and Alignment",
+  "time": "15–25분",
+  "lead": "Facet에서 Mode 크기를 맞춘 뒤 Chip 내부의 작은 Mode로 연결합니다. 공간 정렬과 Angular Error를 분리해 관찰하고, Taper의 역할과 모델의 범위를 구별합니다.",
+  "question": "Silicon을 더 가늘게 만든 Inverse Taper가 어떻게 Fiber와 더 큰 Mode로 만날 수 있을까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "끝면에서 Mode를 받아 Chip 내부로 전달합니다",
+      "scene": "io",
+      "html": "<p>원본 §5.3의 Edge Coupler는 Chip의 끝면, 즉 <strong>Facet</strong> 쪽으로 빛을 주고받습니다. Surface Grating처럼 길이 방향의 주기로 외부 Wave의 Momentum을 바꾸는 대신, 외부 Field와 Facet의 Guided Mode를 맞추고 그 Mode를 Chip 내부로 전달합니다. 따라서 Mode 변환 구조와 실제 Facet 접근·정렬 조건을 함께 설계해야 합니다.</p><p>이번 Lesson은 먼저 Inverse Taper와 Overlay의 원리를 이해하고, 명시한 Gaussian Profile로 크기·위치·각도 오차의 영향을 나눠 계산합니다. ‘좁은 Tip이면 효율이 얼마’라는 임의 함수를 만들지 않습니다. Geometry를 바꾸면 Mode가 실제로 어떻게 달라지는지는 별도의 Vector Mode/Propagation 계산이 필요합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "작은 Core와 작은 Mode를 동일시하지 않습니다",
+      "scene": "io",
+      "html": "<p><strong>Inverse Taper</strong>는 Facet 쪽 Silicon Core를 가늘게 하고 내부로 갈수록 넓히는 구조입니다. 매우 좁은 Silicon Tip에서는 Confinement가 약해져 주변 낮은 Index 영역에 Field가 더 펼쳐질 수 있습니다. 따라서 Core가 작아져도 Mode의 공간 분포는 오히려 커질 수 있습니다. 이 관계는 Chapter 1에서 Core 밖의 Evanescent Field와 Cutoff를 배웠던 내용에 연결됩니다.</p><p>그대로 가늘게만 만들면 언제나 좋은 것은 아닙니다. 어떤 Local Mode가 존재하는지, Substrate로 새는 성분이나 제작 가능한 Tip 크기는 무엇인지 확인해야 합니다. <strong>Overlay Waveguide</strong>는 낮은 Index의 더 큰 구조에 Field를 담아 Fiber와의 Profile을 맞추고, 길이에 따라 Silicon Mode로 옮기는 방식입니다. 실제 Mode는 Silicon과 Overlay를 함께 포함한 단면의 해입니다.</p><p><strong>Adiabatic Transition</strong>은 변화하는 단면의 Local Mode를 따라가면서 다른 Mode나 Radiation으로의 전환을 작게 하는 조건입니다. 단순히 길다는 이유만으로 충분하지 않고, Mode 간 β 차이와 단면의 변화율을 함께 봅니다. EME는 Local Mode 기저를 연결하는 방법이며 FDTD는 시간 영역의 Field를 전파시키는 방법입니다. 이번 정성 도식은 어느 쪽 Solver의 결과도 아닙니다.</p><p><strong>Lateral Offset</strong>은 두 Mode 중심이 같은 평면에서 어긋난 경우입니다. Gaussian 반경이 같으면 Offset Penalty는 exp[−Δx²/w²]입니다. 반경이 커지면 같은 이동 거리의 상대 Penalty는 작아집니다. 하지만 처음부터 Size Mismatch가 있으면 중심 정렬의 절대 Overlap 자체가 낮을 수 있으므로, 절대 η와 η(Δx)/η(0)를 나눠 읽어야 합니다.</p><p><strong>Angular Error</strong>는 Intensity가 같은 모양으로 겹쳐도 단면에 Phase Gradient를 만듭니다. 이번에는 같은 평면의 Field 하나에 exp(iqx)를 곱한 작은 각도 모델을 사용합니다. 큰 Mode일수록 단면 전체에 더 많은 Phase 차이가 쌓일 수 있으므로, Lateral Tolerance가 좋아지는 방향이 Angular Tolerance에도 항상 좋은 것은 아닙니다. 실제 Gap·NA·Facet Refraction·Wavefront Curvature는 이 모델의 범위 밖입니다.</p><p>실제 장치의 Tolerance를 말하려면 어떤 기준점에서 몇 dB 낮아지는지, 어느 방향의 이동인지, 여러 오차가 동시에 있는지 명시해야 합니다. 하나의 Gaussian 1 dB 거리에서 전체 Assembly Yield를 바로 얻을 수는 없습니다. Yield에는 오차 분포와 실제 Geometry/공정 결과가 필요합니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "크기·위치·각도의 Penalty를 나눕니다",
+      "scene": "io",
+      "html": "<div class=\"equation\">S=w₁²+w₂², q=(2πn/λ₀)sinδθ<br>η = [2w₁w₂/S]² × exp[−2Δx²/S] × exp[−q²w₁²w₂²/(2S)]<br>η(Δx)/η(0)=exp[−2Δx²/S]<br>Δx<sub>1dB</sub>=√(S ln10/20)</div><dl class=\"terms\"><dt>w₁,w₂,Δx</dt><dd>가정한 Gaussian 반경과 Lateral Offset · µm</dd><dt>δθ</dt><dd>작은 Angular Error · °, 수식은 rad</dd><dt>q</dt><dd>평면의 Phase Gradient · rad/µm. n=1, λ₀=1.55 µm 고정</dd><dt>Δx1dB</dt><dd>같은 Size/Tilt 조건의 중심 정렬 대비 1 dB Offset · µm</dd></dl><div class=\"worked\"><h3>Worked Example · 같은 5.2 µm Mode의 정렬</h3><p>w₁=w₂=5.2 µm, δθ=0이면 Δx=0에서 η=1입니다. Δx=2 µm에서는 η=exp(−4/27.04)≈<strong>0.8625</strong>이고 약 <strong>0.642 dB</strong> 낮아집니다. 상대 1 dB 거리는 Δx1dB=5.2√(ln10/10)≈<strong>2.495 µm</strong>입니다.</p><p>Offset을 0으로 돌리고 δθ=1°를 주면 q≈0.07075 rad/µm, ηtilt=exp[−(qw)²/4]≈<strong>0.9667</strong>입니다. 이 Angular Penalty는 같은 평면의 Phase Ramp만으로 계산한 값이며 Facet에서의 굴절이나 실제 Optical Gap 전파 결과가 아닙니다.</p></div><details><summary>Adiabatic 조건을 식으로 읽는 방법</summary><div class=\"equation\">|⟨m|∂/∂z|n⟩| ≪ |βₙ−βₘ|</div><p>Local Mode의 변화가 다른 Mode의 상대 Phase 누적보다 충분히 느려야 한다는 개념적인 기준입니다. 양쪽 단위는 1/길이이며, 실제 Vector Mode 정규화·방사 채널·축방향 변화의 해석이 필요합니다. Local β가 비슷해지는 구간에서는 같은 길이 변화라도 전환이 커질 수 있습니다. 이 식에 임의의 β 값을 넣어 ‘필수 Taper 길이’를 생성하지 않습니다.</p></details>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "큰 Mode가 모든 정렬 오차에 유리할까요?",
+      "scene": "io",
+      "html": "<p>공간적인 위치 오차와 Phase Gradient가 있는 각도 오차는 같은 효과가 아닙니다. 큰 Mode의 Lateral Tolerance와 Angular Sensitivity를 나눠 생각한 뒤 Tutor의 설명과 비교해 보세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "Offset과 Tilt를 각각 한 번씩만 바꿉니다",
+      "scene": "io",
+      "html": "<p>먼저 Fiber와 Facet Gaussian 반경을 5.2 µm로 맞추고 Tilt=0에서 Δx를 0, 2.0, 2.5 µm로 움직이세요. Figure의 곡선은 중심 정렬 대비 상대 값이고, Readout의 η는 Size와 Tilt까지 포함한 절대 Scalar Overlap입니다. 두 값을 같은 이름으로 비교하지 않습니다.</p><p>Δx=0을 유지하고 Tilt를 0°→1°→3°로 바꾸세요. 다음 두 반경을 3 µm로 맞춘 경우와 비교합니다. Mode 크기가 변하면 위치 오차와 각도 오차의 민감도가 반대 방향으로 움직일 수 있습니다. 그림의 실제 Inverse Taper Width는 Slider와 연결하지 않으며, 이 실험은 주어진 Profile 간 비교입니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "Facet에서의 일치와 Taper 안의 전달은 모두 필요합니다",
+      "scene": "io",
+      "html": "<ul><li>Inverse Taper는 작은 Core가 더 큰 Mode를 만들 수 있다는 원리를 이용합니다.</li><li>Overlay와 Local Mode 전환은 실제 단면/전파 Solver로 확인해야 합니다.</li><li>Size Mismatch, Offset, Tilt는 분리한 후 같은 조건에서 합칩니다.</li><li>상대 1 dB 거리를 실제 조립 수율로 바로 읽지 않습니다.</li></ul><p>이제 공간적인 Profile과 Phase를 다뤘습니다. 다음에는 모양이 완벽하게 맞아도 Polarization이 다르면 결합이 줄어드는 이유를 배웁니다. Fiber의 두 직교 성분을 PIC의 원하는 입력 Mode에 어떻게 연결할지 생각해 보겠습니다.</p>"
+    }
+  ],
+  "prediction": "같은 반경을 키울 때 Offset과 Tilt의 민감도는?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "같은 위치 이동에는 더 관대해질 수 있지만 같은 Tilt에는 더 민감해질 수 있다",
+    "두 오차에 항상 같은 비율로 유리하다",
+    "크기는 Phase Gradient와 무관하므로 Tilt Penalty는 없다"
+  ],
+  "predictionFeedback": "같은 반경 w이면 Offset factor=exp(−Δx²/w²), Tilt factor=exp[−(qw)²/4]입니다. w가 커질 때 두 항의 민감도가 반대가 될 수 있습니다. 실제 Facet의 전체 공차는 추가 검증이 필요합니다.",
+  "reflection": "Inverse Taper의 Core 크기와 Mode 크기 관계, 그리고 Lateral/Tilt 오차의 Trade-off를 설명해 보세요.",
+  "sources": [
+    "I0",
+    "I1",
+    "I2"
+  ]
+}
