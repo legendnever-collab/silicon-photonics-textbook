@@ -54,5 +54,61 @@
     "parameters": "R_eq[Ω], C_total[fF], Frequency[GHz]; τ_RC=RC. Shot Noise는 독립 Equivalent Noise B와 Unity Gain Poisson Model.",
     "limits": "Transit Bandwidth/RC와 Transit 결합, Thermal/Amplifier/APD Noise, Receiver SNR은 계산하지 않습니다.",
     "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
+  },
+  {
+    "id": "5.3A",
+    "lesson": "5.3",
+    "title": "Ge-on-Si Detector Cross-section",
+    "classification": "Conceptual",
+    "renderer": "detectorGe",
+    "anchor": "#section-concept > p:first-of-type",
+    "see": "Si Waveguide 위의 Ge 흡수 영역, p/n Contacts와 Oxide를 구별합니다.",
+    "notice": "Optical z는 지면 안 방향이고 Carrier는 x 방향으로 수집됩니다.",
+    "meaning": "Optical Coupling/Absorption과 전하 수집을 같은 구조에서 함께 설계해야 합니다.",
+    "parameters": "횡단면 x–y; 비축척 개념도. Photon Energy만 λ에서 계산합니다.",
+    "limits": "실제 PDK Stack, 독립적인 Ge Mode 해, Doping Profile 또는 Field Map이 아닙니다.",
+    "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
+  },
+  {
+    "id": "5.3B",
+    "lesson": "5.3",
+    "title": "Simplified Fabrication Flow",
+    "classification": "Conceptual",
+    "renderer": "detectorFabrication",
+    "anchor": "#section-equation > .worked",
+    "see": "Si 준비, Ge Epitaxy, Junction/Contacts, Passivation/Test의 논리를 봅니다.",
+    "notice": "실제 공정 순서, Mask, 온도, 치수는 지정하지 않았습니다.",
+    "meaning": "Interface Defect와 Contact는 Optical Absorption 이후의 Collection 및 Leakage에도 중요합니다.",
+    "parameters": "Foundry-independent integration concept; 실제 단계와 순서는 Process에 따라 달라집니다.",
+    "limits": "공정 Recipe나 제조 가능성을 검증한 것이 아닙니다. 실제 Mask Stack으로 사용하지 않습니다.",
+    "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
+  },
+  {
+    "id": "5.4A",
+    "lesson": "5.4",
+    "title": "Photoconductive, PIN and APD Architectures",
+    "classification": "Conceptual",
+    "renderer": "detectorArchitectures",
+    "anchor": "#section-concept > p:first-of-type",
+    "see": "Conductivity Change, Drift Collection, Absorption/Charge/Multiplication 영역을 비교합니다.",
+    "notice": "동일한 Box 크기는 동일한 실제 치수나 성능을 뜻하지 않습니다.",
+    "meaning": "Gain의 원리와 Charge Region의 Field Engineering 역할을 구별합니다.",
+    "parameters": "각 구조는 자체 비축척 개념도. APD Layer는 설계 원리 예시이며 실제 Device Stack이 아닙니다.",
+    "limits": "Mobility/Lifetime, Doping, Electric Field, Gain–Bandwidth를 계산하지 않습니다.",
+    "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
+  },
+  {
+    "id": "5.4B",
+    "lesson": "5.4",
+    "title": "APD Multiplication Concept",
+    "classification": "Conceptual",
+    "renderer": "detectorAvalanche",
+    "anchor": "#section-equation > .worked",
+    "see": "Primary Electron과 Impact Ionization으로 생성된 Secondary Pair를 구별합니다.",
+    "notice": "그림의 Pair 수는 고정된 예시이며 M을 사건 시뮬레이션으로 표현하지 않습니다.",
+    "meaning": "M은 Primary Photon QE와 다르며 Mean Current를 키우는 별도 Gain입니다.",
+    "parameters": "Mean I_photo=M I_primary, M≥1; 입력 λ, η_ext, Power는 Primary를 정의합니다.",
+    "limits": "APD Noise/Excess Noise Factor/Breakdown/SNR/Operating Bias를 예측하지 않습니다.",
+    "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
   }
 ]
