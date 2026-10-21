@@ -1,0 +1,58 @@
+[
+  {
+    "id": "3.1A",
+    "lesson": "3.1",
+    "title": "Fiber and Target Mode Profiles",
+    "classification": "Analytical",
+    "anchor": "#section-concept > p:first-of-type",
+    "renderer": "ioModes",
+    "see": "공통 평면에서 단위 Power로 정규화한 두 Scalar Gaussian의 Intensity Map입니다.",
+    "notice": "Core Width가 아니라 Gaussian Mode 반경 w를 바꿉니다. 두 Map은 공통 표시 Scale입니다.",
+    "meaning": "입력 Power가 같아도 Field 크기와 위치가 다르면 같은 Mode가 아닙니다.",
+    "parameters": "x,y −12…12µm; MFD=2w; color=sqrt(I/common Imax). 무한 평면 정규화 해의 유한 표시 창.",
+    "limits": "실제 Vector Eigenmode/Si 단면 해가 아닙니다. 색의 밝기 자체가 Input Power는 아닙니다.",
+    "source": "Original SVG / IOPhysics. Sources and derivation: TEXTBOOK_SOURCE_MAPPING.md / notebook/CH3_MODEL_CONTRACT.md"
+  },
+  {
+    "id": "3.1B",
+    "lesson": "3.1",
+    "title": "Normalized Gaussian Mode Overlap",
+    "classification": "Analytical",
+    "anchor": "#section-equation > .worked",
+    "renderer": "ioOverlap",
+    "see": "Target 반경에 따른 동일 평면의 정규화 Overlap입니다.",
+    "notice": "ηsize, Offset Factor와 η를 분리해 읽습니다.",
+    "meaning": "Amplitude 투영의 절댓값 제곱이 정규화 Power Overlap입니다.",
+    "parameters": "반경 w₂ µm, η 무차원; 두 Profile·Offset은 Notebook과 동일 입력.",
+    "limits": "동일 매질/공통 평면/Planar wavefront/같은 Polarization. 실제 Facet Reflection/총 Device Efficiency는 별도입니다.",
+    "source": "Original SVG / IOPhysics. Sources and derivation: TEXTBOOK_SOURCE_MAPPING.md / notebook/CH3_MODEL_CONTRACT.md"
+  },
+  {
+    "id": "3.2A",
+    "lesson": "3.2",
+    "title": "Grating Momentum and Fiber Angle",
+    "classification": "Conceptual",
+    "anchor": "#section-concept > p:nth-of-type(2)",
+    "renderer": "ioGrating",
+    "see": "Guided 방향, Normal, 방사각과 Period의 관계입니다.",
+    "notice": "θ의 Normal 기준과 +z 부호를 확인하세요.",
+    "meaning": "Grating Spatial Frequency가 두 Wave의 축 방향 Phase 차이를 연결합니다.",
+    "parameters": "1차 회절·nclad=1; matched Period 수치는 주어진 ngrat로 계산. 구조 도식은 비축척.",
+    "limits": "선/홈 모양은 EM 계산이 아닙니다. ngrat는 Geometry Solver 결과가 아닌 독립 입력입니다.",
+    "source": "Original SVG / IOPhysics. Sources and derivation: TEXTBOOK_SOURCE_MAPPING.md / notebook/CH3_MODEL_CONTRACT.md"
+  },
+  {
+    "id": "3.2B",
+    "lesson": "3.2",
+    "title": "Finite Array Phase Factor",
+    "classification": "Analytical",
+    "anchor": "#section-equation > .worked",
+    "renderer": "ioArray",
+    "see": "파장에 따른 N개 동일 산란 기여의 상대 Coherent Factor입니다.",
+    "notice": "F=1은 실제 Efficiency 100%가 아닙니다. 현재 λ의 Marker를 읽으세요.",
+    "meaning": "공간적으로 누적된 Relative Phase가 보강/상쇄를 만듭니다.",
+    "parameters": "λ1450–1650nm, 고정 ngrat,θ,Λ,N; F=|Σexp(ijΔβΛ)/N|².",
+    "limits": "산란 강도·Directionality·BOX·분산·반사·Fiber Overlap 미포함. 실제 장치 Bandwidth를 추출하지 않습니다.",
+    "source": "Original SVG / IOPhysics. Sources and derivation: TEXTBOOK_SOURCE_MAPPING.md / notebook/CH3_MODEL_CONTRACT.md"
+  }
+]

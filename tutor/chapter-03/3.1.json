@@ -1,0 +1,25 @@
+{
+  "question": "정렬된 두 Scalar Profile의 Overlap이 1입니다. 무엇을 결론 내릴 수 있나요?",
+  "choices": [
+    {
+      "text": "실제 Fiber–Silicon Interface도 모든 손실 없이 100% 결합한다.",
+      "feedback": "Overlap은 명시한 공통 평면·매질의 두 Profile에 대한 결과입니다. 실제 Facet의 Impedance/Reflection, Mode Conversion, Taper Loss와 Polarization은 따로 확인해야 합니다.",
+      "concept": "Overlap과 장치 효율의 혼동"
+    },
+    {
+      "text": "주어진 정규화 Profile의 공간·Phase 일치는 완벽하며, 실제 장치의 나머지 채널은 별도다.",
+      "feedback": "맞습니다. Scalar η는 Profile 투영의 한 부분입니다. 실제 총 효율에 적용하려면 같은 조건인지와 Vector/Fresnel/다른 채널의 처리를 확인해야 합니다.",
+      "concept": "모델 범위와 채널",
+      "correct": true
+    },
+    {
+      "text": "Field를 두 배로 키우면 정규화 Overlap도 항상 네 배로 증가한다.",
+      "feedback": "정규화 Overlap은 입력과 Target의 Power로 나누므로 공통 Amplitude 크기에 의존하지 않습니다. 실제 결합 Power는 정규화 Efficiency에 입력 Power를 곱한 값입니다.",
+      "concept": "정규화 Efficiency와 절대 Power 혼동"
+    }
+  ],
+  "why": "기저 투영은 Field의 유사성을 정규화해 계산합니다. Cauchy–Schwarz 부등식으로 0≤|∫ψ₂*ψ₁|²≤1입니다. 실제 다른 재료 경계에서 어떤 Field가 만들어지는지는 이 적분만으로 풀지 않습니다.",
+  "simple": "입구의 모양과 들어오는 무늬가 잘 맞는지를 먼저 따지는 계산입니다. 잘 맞아도 입구에서 반사되거나 연결부에서 다른 Mode가 생길 수 있으므로 실제 장치 효율은 별도로 봐야 합니다.",
+  "math": "각 Profile의 ∫|ψ|²=1이면 η=|∫ψ₂*ψ₁|²입니다. 중심 정렬 Gaussian의 적분은 2w₁w₂/(w₁²+w₂²)이므로 η는 그 제곱입니다. 공통 exp(iχ)의 절댓값은 1이므로 η에 영향이 없습니다.",
+  "notebook": "반경을 같게 한 뒤 Δx만 바꾸세요. η가 줄어도 각 Map의 전체 Power는 1입니다. 크기 Slider를 실제 Silicon Tip Width로 읽지 말고 주어진 Scalar Profile의 반경으로 읽어 주세요."
+}

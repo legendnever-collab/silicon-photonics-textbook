@@ -101,3 +101,10 @@
 - Unit/content 41 PASS; integrated Chapter1 browser 32 PASS; Chapter2 browser 15 PASS. Four viewport sizes × Light/Dark; no runtime/console errors or runtime HTTP requests.
 - D0–D3 standalone HTML preserved; D3 matches dist/silicon-photonics-textbook-v0.2.0.html. SHA256 manifest dist/CH2_SHA256SUMS.txt. QA/Inventory/Review/Release Checkpoint docs saved.
 - PR #2 remains Draft, base feature/ch1-textbook-pilot. User learning review pending. No main merge, no Chapter3 implementation.
+
+## v0.3.0 E0–E1 · Optical I/O
+- User selected original textbook order. E0 7dc04da maps original Chapter 5 sections/pages before implementation; active devices deferred to later learning.
+- E1 completes 3.1 Coupling/normalized Gaussian overlap and 3.2 Surface Grating/phase matching. Four classified Figures, A–F prose, independent worked examples, misconception-specific Tutor, shared Notebook models.
+- Physics: original 41 tests preserved; new analytical physics tests 10 PASS, including independent 2D complex quadrature and Jones/Stokes comparison. No Vector/FDTD/device-efficiency claims.
+- New storage key v3 migrates v2/Ch1 read-only; new chapter descriptor navigation. Ch1 and v0.2.0 HTML retained byte-for-byte. E1 HTML preserved (12 available lessons).
+- Browser runtime setup is being recovered in the current environment; browser verification is not yet claimed at this authoring checkpoint.

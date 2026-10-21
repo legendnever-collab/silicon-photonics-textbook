@@ -1,0 +1,25 @@
+{
+  "question": "Grating Array Factor F=1을 얻었습니다. 올바른 해석은?",
+  "choices": [
+    {
+      "text": "이 Grating의 실제 Fiber Coupling Efficiency가 100%로 검증됐다.",
+      "feedback": "F는 동일 산란 기여들의 상대 Phase 합을 정규화한 값입니다. 실제 산란 Envelope, 위/아래 Directionality, Fiber Overlap, Reflection 등을 풀지 않았으므로 총 효율을 알 수 없습니다.",
+      "concept": "정규화 Array Factor를 Device 성능으로 오해"
+    },
+    {
+      "text": "주어진 Period·Index·각도에서 동일 기여의 Phase가 맞았고, 실제 효율은 다른 채널도 필요하다.",
+      "feedback": "맞습니다. ΔβΛ가 2π 주기 안에서 정렬되었음을 뜻합니다. 원하는 실제 설계에서는 해당 차수와 방사 가능 여부, 전체 Field와 손실도 확인해야 합니다.",
+      "concept": "위상 조건과 성능 분리",
+      "correct": true
+    },
+    {
+      "text": "원본 Bragg Filter와 같으므로 원하는 출력은 항상 Guide 뒤쪽의 Reflection이다.",
+      "feedback": "Bragg Filter는 전진·후진 Guided Mode를 결합합니다. Surface Grating은 외부 방사 Mode와 Guided Mode를 연결합니다. 주기 구조라는 공통점만으로 출력 채널을 같게 놓으면 안 됩니다.",
+      "concept": "두 Grating 용도의 혼동"
+    }
+  ],
+  "why": "Phase 합은 산란 기여들이 서로 상쇄되는지 보강되는지를 설명합니다. 같은 Phase라도 원하는 방향이 아닌 곳으로 방사하거나 Fiber Profile과 맞지 않으면 해당 Fiber에 전달되는 Power는 작을 수 있습니다.",
+  "simple": "여러 사람이 같은 박자로 맞춘 것과 소리가 원하는 마이크에 얼마나 들어오는지는 다른 문제입니다. 여기서는 박자에 해당하는 Relative Phase만 계산합니다. 이 비유는 실제 Field 계산을 대신하지 않습니다.",
+  "math": "βg−k₀nclad sinθ−2π/Λ=0이면 Σexp(ijδ)=N이므로 F=|N/N|²=1입니다. 실제 η에는 산란 세기와 Directionality, Vector Overlap 등 추가 입력/계산이 필요합니다.",
+  "notebook": "Period와 θ를 바꾸고 F와 Δβ를 함께 보세요. N을 바꾸면 상대 Envelope가 달라지지만 실제 측정 Bandwidth나 Efficiency라고 부르지 않습니다. θ의 Normal 기준과 부호도 확인하세요."
+}

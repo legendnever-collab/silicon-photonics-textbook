@@ -1,0 +1,1 @@
+9f0753c00cff9fcd189e3eadab0edc20a713e7d03b330b9299f1fc43d2e370bd  silicon-photonics-textbook-v0.3.0.html
