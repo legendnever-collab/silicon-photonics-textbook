@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';import vm from 'node:vm';
+const sandbox={};sandbox.globalThis=sandbox;vm.runInNewContext(readFileSync('notebook/ch4-models.js','utf8'),sandbox);const P=sandbox.ActivePhysics;
+test('Plasma at 1550nm: increased carriers lower bulk index and raise absorption',()=>{const p=P.plasma(1e17,1e17),q=P.plasma(2e17,2e17);assert.ok(q.dn<p.dn);assert.ok(q.alphaCm>p.alphaCm);assert.ok(P.plasmaChange(2e17,2e17,1e17,1e17).dn>0);});
+test('Ideal PN depletion width increases with reverse bias',()=>{let a=P.depletion({vr:0}),b=P.depletion({vr:4});assert.ok(b.widthUm>a.widthUm);assert.ok(Math.abs(a.acceptorSideUm+a.donorSideUm-a.widthUm)<1e-10);});
+test('Phase units and pi voltage-length',()=>{const p=P.phase({dNeff:0.001,lengthUm:775,lambdaNm:1550});assert.ok(Math.abs(p.phi-Math.PI)<1e-12);assert.ok(Math.abs(P.vpiL({sensitivityPerV:.001,lambdaNm:1550}).vpiLUmV-775)<1e-10);});
+test('MZI complementary ports and phase',()=>{for(const d of [0,Math.PI/2,Math.PI,2*Math.PI]){const a=P.mzi(d);assert.ok(Math.abs(a.sum-1)<1e-12);}assert.ok(P.mzi(0).port1>.9999&&P.mzi(Math.PI).port1<1e-12);});
+test('RC -3dB frequency',()=>{const r=P.rc({rOhm:100,cFf:50,frequencyGhz:1/(2*Math.PI*100*50e-15)/1e9});assert.ok(Math.abs(r.powerRatio-.5)<1e-10);});
+test('Ring passive and resonance shift',()=>{for(const a of [.5,.9])for(const t of [0,.2,Math.PI]){const x=P.ring({selfCoupling:a,roundtripAmplitude:.8,detuningRad:t});assert.ok(x.transmission>=0&&x.transmission<=1);}assert.ok(P.ring({deltaNeff:.001}).shiftNm>0);});
+test('Attenuation monotonic and 0 power loss',()=>{assert.equal(P.attenuation({alphaCm:0}).transmission,1);assert.ok(P.attenuation({alphaCm:20}).transmission<P.attenuation({alphaCm:10}).transmission);});
+test('Thermal step, bounded and MZI sum',()=>{const a=P.thermal({timeMs:0}),b=P.thermal({timeMs:100});assert.equal(a.deltaK,0);assert.ok(b.deltaK>0&&b.deltaK<b.steadyK);assert.ok(Math.abs(b.port1+b.port2-1)<1e-12);});
+test('Reject invalid physical domains',()=>{assert.throws(()=>P.depletion({vr:-1}));assert.throws(()=>P.plasma(-1,10));assert.throws(()=>P.rc({rOhm:0}));});
