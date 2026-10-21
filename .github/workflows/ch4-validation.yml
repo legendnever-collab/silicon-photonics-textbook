@@ -1,0 +1,36 @@
+name: Chapter 4 validation
+on:
+  push:
+    branches: [feature/ch4-modulators]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify textbook models and content
+        run: npm test
+      - name: Build standalone offline textbook
+        run: npm run build
+      - name: Check deterministic build
+        run: |
+          cp dist/CH4_SHA256SUMS.txt /tmp/ch4-sha
+          npm run build
+          cmp /tmp/ch4-sha dist/CH4_SHA256SUMS.txt
+          cd dist && sha256sum -c CH4_SHA256SUMS.txt
+      - name: Upload offline HTML for study review
+        uses: actions/upload-artifact@v4
+        with:
+          name: silicon-photonics-textbook-v0.4.0
+          path: |
+            dist/silicon-photonics-textbook-v0.4.0.html
+            dist/CH4_SHA256SUMS.txt
+            dist/ch4-build-info.json
+          retention-days: 30
