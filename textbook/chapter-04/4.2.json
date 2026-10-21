@@ -1,0 +1,65 @@
+{
+  "id": "4.2",
+  "short": "PN Phase Shifter",
+  "title": "How Does Reverse Bias Change Optical Phase?",
+  "time": "15–22분",
+  "lead": "PN Junction에서 Reverse Bias를 증가시키면 Depletion Region이 넓어집니다. 이 전기적 변화가 실제 Optical Mode의 Phase까지 이어지려면 무엇을 계산해야 할까요?",
+  "question": "Reverse Voltage가 증가했을 때 Depletion Width가 커지면, 그 자체로 VπL을 알 수 있을까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "Carrier와 Light가 만나는 영역",
+      "scene": "junction",
+      "html": "<p>Silicon의 Carrier Density는 물리적으로 바꾸어야 합니다. <strong>PN Junction</strong>은 p-type과 n-type 영역을 접합하여 전기장과 Depletion Region을 형성합니다. Reverse Bias를 걸면 자유 Carrier가 비어 있는 영역이 확장됩니다.</p><p>목표는 전압을 Optical Phase의 변화로 연결하는 것입니다. 그러나 전압과 광학 Phase 사이에는 전하 분포, 복소 굴절률, Mode Overlap이라는 세 단계가 존재합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Depletion과 Optical Overlap",
+      "scene": "junction",
+      "html": "<p>이상적인 Abrupt PN Junction에서는 Ionized Donor/Acceptor가 형성한 Space Charge Region이 전압에 따라 확장됩니다. 정성적 Figure의 파란/붉은 영역이 실제 TCAD Electron/Hole Distribution이라고 오해해서는 안 됩니다.</p><p>Reverse Bias가 증가하면 일정 영역의 Free Carrier가 줄어들어 Silicon의 Bulk Plasma Dispersion 기여가 달라집니다. 하지만 Optical Phase Response는 <strong>전하가 제거된 정확한 위치</strong>와 Optical Mode Profile의 겹침에 달려 있습니다. 서로 다른 Junction Position과 Doping에서는 같은 Depletion Width라도 Δn_eff가 다를 수 있습니다.</p><p>또한 Junction Capacitance와 Electrode Resistance는 동작 속도에 영향을 줍니다. <strong>Lumped RC Bandwidth</strong>는 첫 단순화이며, 실제 Traveling-wave MZM은 RF Loss, Impedance, Microwave/Optical Velocity Matching을 함께 다뤄야 합니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "Depletion Width · Phase · VπL · RC",
+      "scene": "junction",
+      "html": "<div class=\"equation\">W = √[(2ε<sub>Si</sub>/q)(1/N<sub>A</sub>+1/N<sub>D</sub>)(V<sub>bi</sub>+V<sub>R</sub>)]<br>Δφ=(2π/λ₀)Δn<sub>eff</sub>L<br>f<sub>3dB,RC</sub> = 1/(2πRC)<br>VπL = λ₀/[2|∂n<sub>eff</sub>/∂V|] (상수 민감도 모델)</div><p>W는 Abrupt 1D Junction의 총 Depletion Width입니다. N_A,N_D를 cm⁻³로 받으면 SI인 m⁻³로 변환해야 합니다. Δn_eff는 이 W 식에서 <strong>자동으로 나오지 않습니다.</strong> VπL에는 실제 Mode와 Carrier 변화에서 구한 ∂n_eff/∂V가 필요합니다.</p><div class=\"worked\"><h3>Worked Example · 두 계산은 독립</h3><p>N_A=N_D=10¹⁷ cm⁻³, 300 K, 이상적 Silicon, V_R=2 V를 가정하면 W≈0.271 µm입니다. 별도로 Δn_eff=−0.001, L=775 µm, λ₀=1550 nm를 가정하면 Δφ=−π입니다. 첫 결과로 두 번째 값을 도출한 것은 아닙니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "전기적 폭과 광학적 Phase를 구분합니다",
+      "scene": "junction",
+      "html": "<p>PN Junction의 Depletion Width를 계산한 후 실제 Device의 Optical Phase를 바로 예측할 수 있을까요? 모델의 범위를 확인해 봅니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "Reverse Bias를 바꿔 Depletion Width를 확인합니다",
+      "scene": "junction",
+      "html": "<p>Reverse Bias를 0→4 V로 바꾸어 1D Abrupt Junction의 W를 관찰하세요. 다음 R,C를 바꾸어 RC -3 dB Frequency가 변화하는 방향을 확인하세요.</p><p>Notebook의 별도 Δn_eff 입력은 <strong>가정한 Device Effective Index Change</strong>입니다. Depletion Width로부터 추정된 결과가 아니며 실제 TCAD나 Full-vector Mode 계산이 아닙니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "TCAD가 필요한 경계를 이해합니다",
+      "scene": "junction",
+      "html": "<ul><li>Reverse Bias는 PN Junction의 Depletion Region을 확장합니다.</li><li>Optical Phase는 Δn_eff와 Active Length로 계산합니다.</li><li>VπL와 RC는 다른 물리 지표이며 실제 Device에서는 전하·광학·전기 모델이 필요합니다.</li></ul><p>다음에는 이 Phase Shifter를 Chapter 2의 MZI 한쪽 Arm에 연결해 보겠습니다.</p>"
+    }
+  ],
+  "prediction": "N_A,N_D 고정에서 Reverse Bias를 증가시키면?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "이상적인 1D Depletion Width가 증가한다",
+    "Depletion Width는 반드시 줄어든다",
+    "이 식만으로 실제 Optical VπL도 자동 결정된다"
+  ],
+  "predictionFeedback": "Abrupt Junction의 W는 √(Vbi+VR)에 비례해 증가하지만, 실제 Optical VπL은 Carrier·Mode Overlap과 Voltage Response가 필요합니다.",
+  "reflection": "PN Reverse Bias → Depletion Width → Carrier Redistribution → Δn_eff → Phase에서 실제 계산이 필요한 단계를 설명하세요.",
+  "sources": [
+    "A0",
+    "A2"
+  ]
+}

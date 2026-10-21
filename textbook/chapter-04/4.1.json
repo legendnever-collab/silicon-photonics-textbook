@@ -1,0 +1,65 @@
+{
+  "id": "4.1",
+  "short": "Plasma Dispersion",
+  "title": "How Do Free Carriers Change Silicon Optics?",
+  "time": "12–18분",
+  "lead": "Passive Waveguide에서 고정된 n_eff를 다뤘다면, 이제 Carrier Density를 변경하여 Silicon의 Refractive Index와 Absorption을 조절하는 Active Photonics를 시작합니다.",
+  "question": "Carrier를 증가시키면 빛의 Phase만 변할까요, 아니면 Optical Loss도 달라질까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "빛을 전기적으로 조절한다는 뜻",
+      "scene": "carriers",
+      "html": "<p>Chapter 1에서 굴절률은 Waveguide가 빛을 붙잡는 이유를 설명했습니다. Chapter 2에서는 Phase Difference가 MZI 출력 Power를 결정했습니다. 이제 <strong>같은 Waveguide의 Optical Property 자체를 전압과 전류로 바꾸는 방법</strong>을 배우겠습니다.</p><p>Silicon은 일반적인 조건에서 강한 Bulk Pockels Effect를 이용하는 소재가 아닙니다. 실제 Silicon Modulator에서는 Carrier Depletion, Injection, Accumulation으로 Free-carrier 농도를 변경하는 <strong>Plasma Dispersion Effect</strong>가 핵심입니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Electron과 Hole이 Silicon Optical Property를 바꿉니다",
+      "scene": "carriers",
+      "html": "<p>Conduction Band의 <strong>Electron</strong>과 Valence Band의 <strong>Hole</strong>은 Optical Frequency의 전기장에 반응합니다. Free Carrier의 농도가 달라지면 복소 유전율이 달라지고, 그 결과 실수 Refractive Index뿐 아니라 Free-carrier Absorption도 변화합니다.</p><p>일반적으로 1550 nm에서 Carrier가 늘어나는 경우 Silicon의 Index는 낮아지고 Absorption은 커지는 방향을 보입니다. 이 두 효과를 반드시 함께 고려해야 합니다. Phase Shift가 커져도 삽입 Loss가 동시에 커질 수 있습니다.</p><p>Bulk Silicon의 Material Index 변화 <strong>Δn_Si</strong>는 Waveguide Mode의 <strong>Δn_eff</strong>와 같지 않습니다. 실제 Modulator에서는 전하가 어디에 분포하고 Optical Mode와 얼마나 겹치는지 계산해야 합니다. Chapter 1에서 공부한 Field Distribution이 다시 필요한 이유입니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "Material Index와 Mode Index를 구별합니다",
+      "scene": "carriers",
+      "html": "<div class=\"equation\">Δn<sub>Si</sub> ≈ −(8.8×10⁻²² N + 8.5×10⁻¹⁸ P<sup>0.8</sup>)<br>Δα<sub>Si</sub> ≈ 8.5×10⁻¹⁸ N + 6.0×10⁻¹⁸ P [cm⁻¹]</div><p>위 식은 1550 nm의 Soref–Bennett 근사 경험식입니다. N과 P는 cm⁻³ 단위의 가정된 비음수 Carrier Density이며, Δn과 Δα는 <strong>Carrier가 없는 참조 상태</strong>에 대한 Bulk Material의 기여입니다. Doping/Temperature/Wavelength에 따른 실제 적용 정확도를 검증한 것이 아닙니다.</p><div class=\"worked\"><h3>Worked Example · 두 물리 효과를 따로 읽기</h3><p>N=P=10¹⁷ cm⁻³라고 가정하면 Δn_Si≈−4.26×10⁻⁴, Δα≈1.45 cm⁻¹입니다. Power Absorption만 dB/cm로 바꾸면 4.343×1.45≈6.30 dB/cm입니다. 이 숫자를 실제 Waveguide Loss라고 사용하면 안 됩니다. Mode Overlap, Geometry와 전하 분포를 반영하지 않았기 때문입니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "Index만 바뀐다고 단정하면?",
+      "scene": "carriers",
+      "html": "<p>Material과 Guided Mode의 차이를 확인하겠습니다. <strong>Bulk Δn_Si가 곧 실제 MZM의 Δn_eff</strong>라는 주장에는 어떤 문제가 있을까요?</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "Carrier Density와 Δn, Δα를 각각 관찰하세요",
+      "scene": "carriers",
+      "html": "<p>Physics Notebook에서 Electron/Hole Density를 개별적으로 조절하세요. Material Δn과 Absorption이 어떤 방향으로 바뀌는지 미리 예측한 뒤 두 결과를 확인합니다.</p><p>이 모델은 경험식 계산이며, 전극 전압에서 Carrier Density를 계산하지 않습니다. 다음 Lesson의 PN Junction은 Carrier 분포를 전기적으로 제어하는 단계입니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "Phase와 Absorption을 함께 생각합니다",
+      "scene": "carriers",
+      "html": "<ul><li>Plasma Dispersion은 Refractive Index와 Absorption 모두에 영향을 줍니다.</li><li>Material Δn과 Optical Mode의 Δn_eff는 구별해야 합니다.</li><li>Carrier Distribution과 Mode Overlap 없이는 실제 Modulator 효율을 예측할 수 없습니다.</li></ul><p>다음은 PN Junction을 사용하여 Carrier를 제거하는 방법을 배우겠습니다.</p>"
+    }
+  ],
+  "prediction": "Electron과 Hole Density를 동시에 증가시키면?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Bulk Δn은 음의 방향, Free-carrier Absorption은 증가",
+    "Refractive Index는 증가하고 Loss는 항상 0",
+    "Phase만 바뀌고 Absorption은 변하지 않음"
+  ],
+  "predictionFeedback": "1550 nm 경험식에서는 Carrier 증가가 Bulk Index 감소와 Free-carrier Absorption 증가를 함께 만듭니다. 이는 Waveguide Δn_eff/Total Loss를 직접 예측하지는 않습니다.",
+  "reflection": "Carrier가 Δn과 Δα를 동시에 바꾸는 이유와, Material Δn에서 실제 Device Phase로 바로 갈 수 없는 이유를 설명하세요.",
+  "sources": [
+    "A0",
+    "A1"
+  ]
+}
