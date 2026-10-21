@@ -1,0 +1,65 @@
+{
+  "id": "3.4",
+  "short": "Polarization",
+  "title": "Polarization, Jones States and Diversity",
+  "time": "15–25분",
+  "lead": "Field의 공간 모양이 같아도 Vector 방향과 상대 Phase가 다르면 같은 Optical State가 아닙니다. 두 직교 성분의 복소 Amplitude로 결합과 손실을 설명합니다.",
+  "question": "같은 Intensity를 가진 Linear, Circular Polarization을 원하는 PIC Mode로 똑같이 넣을 수 있을까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "좋은 Spatial Overlap만으로 충분하지 않습니다",
+      "scene": "io",
+      "html": "<p>지금까지의 Gaussian 모델은 두 Profile의 Polarization이 같다고 가정했습니다. 이제 이 가정을 풀어 봅니다. 같은 모양으로 같은 위치에 들어오는 빛도 원하는 Vector Mode와 Polarization이 직교하면 결합 성분이 0이 될 수 있습니다. 반대로 서로 다른 두 Polarization을 둘 다 사용하도록 Interface를 설계할 수도 있습니다.</p><p>원본 §5.4의 Polarization은 Grating과 Edge Coupler 모두에 연결되는 조건입니다. Fiber에서는 두 직교 성분을 생각할 수 있고, Chip의 높은 Index Contrast와 비대칭 단면에서는 Quasi-TE/TM의 Profile·Index·Coupling 응답이 달라질 수 있습니다. 이번 Lesson은 공통 기준면의 Jones State로 이 차이의 출발점을 이해합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "진폭 두 개와 상대 Phase가 상태를 정합니다",
+      "scene": "io",
+      "html": "<p>한 지점의 Transverse Field를 두 직교 기준축 x,y의 Complex Amplitude로 나타낸 것을 <strong>Jones Vector</strong>라고 합니다. 공통 Absolute Phase는 관측 Power에 영향을 주지 않으므로, 전체 크기를 정규화하고 성분의 상대 진폭과 Relative Phase를 사용합니다. Ex와 Ey의 상대 Phase가 0 또는 π이면 직선으로 진동하고, 다른 Phase에서는 일반적으로 타원을 그립니다.</p><p>여기서는 전파 +z, 시간 exp(−iωt), j=[cosψ, exp(iχ)sinψ]를 사용합니다. ψ는 두 성분의 혼합 정도이고 χ는 y 성분의 x 대비 Relative Phase입니다. ψ=45°, χ=±90°이면 두 성분 크기가 같고 Quadrature이므로 원을 그립니다. 원편광의 좌·우 손잡이 명칭은 바라보는 방향과 시간 Convention에 따라 혼동될 수 있어, 그림에는 성분과 Convention을 직접 적습니다.</p><p><strong>Projection.</strong> 수신 Mode가 공통 기준의 Linear Polarization u=[cosα,sinα]를 받는다면 결합 진폭은 u†j이고 Power 비율은 |u†j|²입니다. 직교한 다른 Analyzer의 결과를 합하면 정규화 입력 Power 1이 됩니다. 한쪽 Projection이 0이라고 모든 에너지가 사라진 것은 아닙니다. 실제 소자에서 그 다른 성분이 반사·흡수·다른 출력으로 가는지는 구조가 결정합니다.</p><p><strong>TE/TM와 좌표.</strong> Chapter 1의 Chip 단면에서 x를 Width, y를 Height, z를 전파축으로 두면 Quasi-TE는 주로 Ex, Quasi-TM는 주로 Ey라는 설명을 사용했습니다. Fiber가 기울어져 들어오는 경우 그 Transverse 기준축을 Chip 기준으로 연결하는 변환도 필요합니다. 이번 Notebook은 이미 같은 기준면/기저로 표현한 두 성분을 가정하며, 실제 Quasi-TE/TM Mode Solver나 3D 좌표 변환을 계산하지 않습니다.</p><p><strong>Polarization Dependent Loss, PDL</strong>은 입력 Polarization에 따른 최대/최소 Power Transmission의 비율을 dB로 나타냅니다. 공간적으로 좋은 정렬을 해도 PDL이 크면 입력 State 변화에 따라 전달 Power가 달라집니다. 하나의 Polarization에 대한 IL과 전체 State를 바꿔 측정하는 PDL은 다른 지표입니다.</p><p><strong>Polarization Diversity</strong>는 입력의 두 직교 성분을 나눈 뒤 필요한 회전/변환을 거쳐 두 처리 경로로 보내는 방식입니다. 2D Polarization-splitting Grating이나 Splitter/Rotator가 이 목적에 쓰일 수 있습니다. 이는 한 성분을 단순히 버리는 Analyzer와 다른 구조입니다. 실제 두 경로의 Loss와 불균형까지 0이라는 뜻은 아닙니다.</p><p>Jones Vector는 Fully Polarized Coherent State를 나타냅니다. 두 성분의 Phase 관계가 무작위인 Unpolarized Light를 한 개의 고정 Jones Vector로 표현하면 안 됩니다. 그 경우 Stokes/Coherency 같은 통계적 표현이 필요하며, 이번 Notebook의 범위 밖입니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "복소 Vector의 내적을 Power로 바꿉니다",
+      "scene": "io",
+      "html": "<div class=\"equation\">j = [cosψ, exp(iχ)sinψ]<sup>T</sup>, j†j=1<br>uα = [cosα,sinα]<sup>T</sup><br>η∥=|uα†j|², η⊥=1−η∥<br>Linear input, χ=0°: η∥=cos²(ψ−α)<br>Linear input, χ=±180°: η∥=cos²(ψ+α)</div><dl class=\"terms\"><dt>ψ,χ</dt><dd>혼합각, y/x Relative Phase · ° 입력, 내부 rad</dd><dt>α</dt><dd>Linear 수신/Analyzer의 방향 · °</dd><dt>η∥,η⊥</dt><dd>두 직교 Linear Channel의 Power 비율 · 무차원</dd><dt>Assumptions</dt><dd>정규화 Fully Polarized State, 공통 기저, 이상 Projection</dd></dl><div class=\"worked\"><h3>Worked Example · Linear와 Circular 입력</h3><p>x Linear 입력 ψ=0에서 Analyzer α=60°이면 η∥=cos²60°=<strong>0.25</strong>, η⊥=0.75입니다. 1 mW 입력이라면 이상적인 두 채널은 0.25/0.75 mW입니다. 반면 ψ=45°, χ=90°의 Circular State는 어떤 Linear Analyzer 방향에서도 η∥=<strong>0.5</strong>입니다.</p><p>ψ=45°, χ=0°와 χ=180°는 각 성분의 |Ex|²=|Ey|²=0.5가 같습니다. 하지만 α=45°에서 첫 번째는 η∥=1, 두 번째는 0입니다. 직교 축의 Power만으로 Relative Phase를 모두 알 수 없다는 예입니다.</p></div><div class=\"equation\">가정한 독립 Power Transmissions Tx,Ty:<br>T(ψ)=Tx cos²ψ+Ty sin²ψ<br>PDL=10log₁₀[Tmax/Tmin]</div><p>Tx=1, Ty=0.1이면 PDL=10 dB이고 ψ=45°에서 T=0.55입니다. Ty=0이면 이상 PDL은 무한대입니다. 두 값 모두 0이면 최대/최소 비율이 정의되지 않습니다. 이것은 독립적으로 가정한 대각 Transmission 예이며 실제 Grating/Edge Device의 PDL 데이터가 아닙니다.</p>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "Intensity가 같아도 Relative Phase는 다를 수 있습니다",
+      "scene": "io",
+      "html": "<p>두 성분의 Power가 각각 0.5라는 정보만으로 Polarization State를 결정할 수 있을까요? j의 Relative Phase와 Analyzer 방향을 함께 생각한 뒤 Tutor 설명을 읽어 보세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "Polarization State와 수신 기저를 따로 바꿉니다",
+      "scene": "io",
+      "html": "<p>먼저 ψ=45°, χ=0°로 두고 Analyzer를 0°→45°→90°로 움직입니다. 다음 χ=180°로 바꿔 같은 위치의 Transmission을 비교합니다. 성분의 Power는 같아도 45° Analyzer에서는 결과가 바뀝니다. Field Ellipse Figure와 Projection Curve가 같은 State를 사용합니다.</p><p>χ=90°에서 ψ=45°인 원편광도 확인합니다. Linear Analyzer 방향을 바꾸어도 각 채널은 0.5입니다. ψ와 χ를 바꿀 때 Curve는 변하지만 두 직교 출력의 합은 항상 1입니다. 이 결과를 실제 단일 Polarization Coupler의 총 효율로 읽지 말고 이상적인 기저 Projection으로 읽어 주세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "Optical I/O에는 Vector State도 포함됩니다",
+      "scene": "io",
+      "html": "<ul><li>정규화 Jones Vector는 두 성분의 복소 진폭을 나타냅니다.</li><li>Polarization 결합은 u†j의 크기 제곱입니다.</li><li>같은 Intensity 성분도 Relative Phase에 따라 다른 상태가 됩니다.</li><li>PDL과 단일 상태의 IL을 구별하고, Diversity는 두 성분의 처리 구조로 이해합니다.</li></ul><p>다음은 Chapter의 마지막 Engineering Exercise입니다. 공간 Overlap과 Polarization Projection, Interface Residual Loss, Route Loss를 중복 없이 연결해 실제 입력 대비 Output Power를 계산하겠습니다.</p>"
+    }
+  ],
+  "prediction": "ψ=45°에서 χ를 0°→180°로 바꾸고 α=45°를 유지하면?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "성분 Power는 같지만 Analyzer Transmission은 1→0으로 바뀐다",
+    "각 성분 Power가 같으므로 어떤 Analyzer 결과도 같다",
+    "Polarization은 Phase와 무관하므로 상태가 같다"
+  ],
+  "predictionFeedback": "χ는 성분 사이의 Relative Phase입니다. j=(1,1)/√2와 (1,−1)/√2는 α=45° 기저에 대해 서로 직교합니다. 성분별 Intensity만으로 이 차이를 볼 수 없습니다.",
+  "reflection": "동일한 Ex/Ey Intensity에서 서로 다른 Polarization을 만드는 Relative Phase와, PDL·Diversity의 의미를 설명해 보세요.",
+  "sources": [
+    "I0",
+    "I4"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "3.1",
+  "short": "Coupling Basics",
+  "title": "Why Is Fiber-to-Chip Coupling Difficult?",
+  "time": "15–25분",
+  "lead": "Chapter 1의 Mode와 Chapter 2의 Field 정규화를 외부 Optical Interface에 적용합니다. 빛이 Chip에 도착하는 것과 원하는 Guided Mode로 들어가는 것은 서로 다른 조건입니다.",
+  "question": "Fiber에서 나온 빛이 Silicon Core를 향하면, 그 Power가 모두 PIC의 단일 Mode가 될까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "회로의 입구와 출구도 Optical Component입니다",
+      "scene": "io",
+      "html": "<p>Chapter 2에서 Laser Input을 회로의 입력으로 두었을 때, 우리는 이미 원하는 Guided Mode가 여기되었다고 가정했습니다. 실제 장치에서는 그 앞에 Fiber나 Free-space에서 Chip으로 들어오는 <strong>Optical I/O</strong>가 있습니다. 밖에서 온 Field가 원하는 Mode로 얼마나 잘 결합하는지에 따라 같은 Laser Power라도 회로에 전달되는 Power가 달라집니다.</p><p>이번 앱 Chapter 3는 원본 교재 Chapter 5의 순서를 따릅니다. 먼저 Coupling의 어려움을 이해하고, Grating Coupler, Edge Coupler, Polarization을 배운 뒤 I/O Ledger를 완성합니다. 앞서 배운 Bragg Grating Filter는 Guided Field를 뒤로 반사하는 소자였고, 이번 Surface Grating은 Chip 밖의 Field와 연결하는 장치입니다. 두 개념은 분명히 구별하겠습니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Core가 겹쳐도 Mode가 같지는 않습니다",
+      "scene": "io",
+      "html": "<p>Chapter 1에서 Mode는 전체 경계조건을 만족하는 Field Pattern이었습니다. Fiber의 Core 크기, Gaussian에 가까운 Mode Field Diameter, Silicon Core의 Width는 같은 양이 아닙니다. 두 물체의 중심을 정확히 맞추어도 Field의 크기·공간 분포·Phase·Polarization이 맞지 않으면 원하는 Mode에 전달되는 성분은 작을 수 있습니다.</p><p><strong>Mode Overlap</strong>은 입력 Field를 수신 Mode라는 기저에 투영했을 때 남는 성분을 나타냅니다. 여기서는 먼저 같은 평면과 같은 매질의 두 Scalar Profile을 사용합니다. 각 Profile을 ∫|ψ|²dA=1로 정규화하면 복소 겹침 a=∫ψtarget*ψin dA이고, ηoverlap=|a|²입니다. 모양만 비슷한지 보는 것이 아니라, Field를 같은 정규화와 Phase 기준에서 적분한다는 점이 중요합니다.</p><p>예를 들어 입력과 Target의 Intensity가 같아도 한쪽 Field가 단면을 따라 빠르게 Phase를 바꾸면 적분 중 서로 상쇄될 수 있습니다. 반대로 공통 Absolute Phase를 곱하는 것은 η를 바꾸지 않습니다. 이는 Chapter 2의 MZI에서 Relative Phase와 공통 Phase를 구별했던 원리와 연결됩니다.</p><p>실제 Vector Mode에서는 E와 H의 Poynting Power 정규화가 필요합니다. 서로 다른 재료·Impedance가 만나는 Facet에서는 반사와 전파 가능한 채널도 고려해야 합니다. 따라서 <strong>Scalar Overlap을 실제 총 Coupling Efficiency와 동일시하지 않습니다.</strong> 이번 Lesson의 Gaussian 모델은 원리를 분리해 공부하기 위한 공통 평면의 해석 예제입니다.</p><p>출력 중 원하는 Guided Mode로 가지 않은 Power가 모두 흡수되었다고 단정해서도 안 됩니다. 다른 Mode, Reflection, Radiation이나 수집되지 않은 채널로 갈 수 있습니다. Notebook의 Overlap Deficit은 이 채널들을 구분하지 않습니다. 실제 Return Loss는 뒤로 돌아오는 Power를 별도로 측정하거나 계산해야 합니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "Gaussian 크기와 겹침을 정규화해 계산합니다",
+      "scene": "io",
+      "html": "<div class=\"equation\">ψ<sub>w</sub>(x,y) = √(2/π)/w · exp[−(x²+y²)/w²]<br>∫|ψ<sub>w</sub>|²dA = 1, MFD = 2w<br>η = |∫ψ₂*ψ₁dA|²<br>중심 정렬: η<sub>size</sub> = [2w₁w₂/(w₁²+w₂²)]²</div><dl class=\"terms\"><dt>w</dt><dd>1/e Field radius = 1/e² Intensity radius · µm</dd><dt>MFD</dt><dd>이 Gaussian 정의의 Mode Field Diameter · µm</dd><dt>ψ</dt><dd>단위 Power로 정규화한 Scalar Profile · µm⁻¹</dd><dt>η</dt><dd>주어진 두 Scalar Profile 사이의 Power Overlap · 0–1</dd></dl><div class=\"worked\"><h3>Worked Example · 같거나 다른 Mode 크기</h3><p>가정한 Fiber Gaussian 반경 w₁=5.2 µm이면 MFD=10.4 µm입니다. Target 반경 w₂=2.0 µm, 같은 중심·Phase·Polarization이면 η=[2×5.2×2/(5.2²+2²)]²≈<strong>0.4490</strong>입니다. Overlap Penalty는 −10log₁₀η≈<strong>3.48 dB</strong>입니다. 중심 정렬이 완벽해도 크기 차이 때문에 1이 되지 않습니다.</p><p>w₂를 5.2 µm로 같게 만들면 이 가정에서 η=1입니다. 하지만 실제 소자의 Facet Reflection이나 Taper Loss가 0이 되었다는 뜻은 아닙니다. 두 Profile 사이의 한 가지 제한만 제거한 것입니다.</p></div><details><summary>크기 이외에 위치가 다르면</summary><div class=\"equation\">S = w₁²+w₂²<br>η(Δx,Δy) = η<sub>size</sub> exp[−2(Δx²+Δy²)/S]</div><p>단위는 모두 µm로 맞춥니다. 위치가 달라져도 각 입력 Profile의 전체 Power는 1이며 겹침만 줄어듭니다. 실제 Taper Geometry를 바꾸어 w₂를 얻는 계산은 이 식이 하지 않습니다.</p></details>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "모양의 겹침과 전체 장치 효율을 구별합니다",
+      "scene": "io",
+      "html": "<p>중심을 잘 맞췄다는 조건만으로 Efficiency가 1인지 판단할 수 있을까요? 다음 질문에서 Field 정규화, 공간 모양, 실제 Interface의 나머지 채널을 나누어 생각해 보세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "Mode 크기부터 비교한 뒤 위치를 바꿉니다",
+      "scene": "io",
+      "html": "<p>Notebook에서 w₁=5.2 µm, w₂=2.0 µm와 5.2 µm를 차례로 비교하세요. Figure의 두 Map은 동일한 Unit-power 정규화를 사용하며 표시에는 공통 Intensity Scale의 제곱근을 사용합니다. 밝기의 차이를 실제 Laser Power 차이로 읽으면 안 됩니다. 두 Profile의 전체 Power는 같습니다.</p><p>다음 Δx를 0에서 2 µm로 옮겨 Overlap을 비교합니다. 한 Profile이 옮겨져도 그 자체의 정규화는 바뀌지 않습니다. 먼저 예측을 기록하고, ηsize와 Offset Factor가 어떻게 곱해지는지 확인하세요. 이 Lesson은 Diffraction Propagation이나 Facet 재료 경계의 Vector 해를 계산하지 않습니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "잘 도착하는 것과 잘 결합하는 것은 다릅니다",
+      "scene": "io",
+      "html": "<ul><li>Core Geometry와 Mode Field 크기를 구별했습니다.</li><li>Overlap은 정규화된 Complex Field의 투영이며 Power는 그 크기의 제곱입니다.</li><li>같은 중심에서도 크기·Phase·Polarization이 맞아야 합니다.</li><li>총 Interface Efficiency에는 Reflection과 다른 손실 채널이 추가됩니다.</li></ul><p>다음에는 Chip의 윗면에서 들어오는 Field를 Guided Mode로 연결하는 Grating Coupler를 봅니다. 왜 Period와 Fiber Angle을 함께 정해야 하는지 Chapter 2의 Phase 개념을 이용해 설명하겠습니다.</p>"
+    }
+  ],
+  "prediction": "같은 중심에서 Target 반경을 2.0→5.2 µm로 바꾸면?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "이 Gaussian 모델의 Size Overlap이 1에 가까워진다",
+    "Core 중심이 같으므로 처음부터 언제나 1이다",
+    "Profile의 전체 Power가 자동으로 증가한다"
+  ],
+  "predictionFeedback": "두 반경이 같을 때 정규화된 Profile이 같아져 ηsize=1입니다. 전체 Power가 증가한 것이 아니며 실제 Device의 Reflection/Taper Loss를 없앴다는 뜻도 아닙니다.",
+  "reflection": "정렬은 같지만 크기가 다른 두 Mode의 Overlap과 실제 Coupling Efficiency를 구별해 설명해 보세요.",
+  "sources": [
+    "I0",
+    "I1",
+    "I2"
+  ]
+}

@@ -17,3 +17,7 @@
 
 ## Checkpoints
 C1 Foundation + 1.1, C2 1.2 + 1.3, C3 1.4 + 1.5, C4 QA + Release Candidate. 각 시점에 standalone HTML을 보존하고 Commit/Push한다. main 병합은 사용자 명시적 승인 후에만 허용한다.
+
+## 2026-10-21 · Original sequence after Chapters 1–2
+
+Chapter1/2 are merged on main 61d570c. User explicitly selected original textbook order for Chapter3. App Chapter3 therefore covers original Chapter5 Optical I/O: 3.1 coupling challenge/overlap → 3.2 grating → 3.3 edge → 3.4 polarization → 3.5 ledger. The earlier PN/Active preview is deferred to a future chapter following Optical I/O. Teaching remains A–F prose with original worked examples, offline Tutor and shared analytical notebook; no game structure. Stop at v0.3.0 RC for user learning review; do not merge or implement the next chapter automatically.

@@ -57,3 +57,15 @@ Chapter 1 사용자 학습 검토와 명시적 승인 전 main 병합 금지. Ch
 - Browser tests require Playwright and Chromium (or `BROWSER_EXECUTABLE_PATH`). Set `TEXTBOOK_HTML=/dist/silicon-photonics-textbook-v0.2.0.html` to run the existing Chapter 1 scenarios against the integrated artifact. This repository has no configured GitHub Actions workflow; reports record local execution.
 
 This branch is a Draft stacked on `feature/ch1-textbook-pilot` (PR #1), for user learning review. No main merge and no Chapter 3 implementation.
+
+## v0.3.0 · Chapter 3 Optical I/O
+
+- Integrated offline textbook: `dist/silicon-photonics-textbook-v0.3.0.html` (Chapters 1–3).
+- Original sequence: Coupling Challenge → Grating Coupler → Edge Coupler → Polarization → I/O Ledger. App Chapter3 maps to original Chapter5. Active components are later.
+- Mapping: `TEXTBOOK_SOURCE_MAPPING.md`; model contract: `notebook/CH3_MODEL_CONTRACT.md`.
+- QA/inventory/review: `docs/CH3_QA_REPORT.md`, `docs/CH3_FIGURE_INVENTORY.md`, `docs/CH3_LEARNING_REVIEW.md`.
+- E0–E3 HTML: `checkpoints/v0.3.0/`. Build hash: `dist/CH3_SHA256SUMS.txt`; all checkpoint hashes: `dist/CH3_CHECKPOINT_SHA256SUMS.txt`.
+- Current build: `npm run build`; all unit/content checks: `npm test`; Ch3 browser: `npm run test:ch3:browser`.
+- Run Ch1/2 regressions against current HTML with `TEXTBOOK_HTML=/dist/silicon-photonics-textbook-v0.3.0.html`; use `CH2_ARTIFACT_DIR=artifacts/v0.3.0/ch2-regression` for Ch2 reports. Playwright and compatible browser required; optional `BROWSER_EXECUTABLE_PATH`.
+- Current data uses `sipt-textbook-v3`, read-only migration from v2 then original Ch1. Backup/Restore transfers records across Browser-dependent file origins.
+- Prior HTML/source/model/catalog data remain intact. Scalar Gaussian, relative array factor and ideal Jones projections are declared teaching approximations, not device/PDK/full-wave results.

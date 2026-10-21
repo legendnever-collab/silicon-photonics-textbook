@@ -7,7 +7,7 @@ let playwright;
 try{playwright=require('playwright');}catch{playwright=require(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES+'/playwright');}
 const browser=await playwright.chromium.launch({headless:true,...(process.env.BROWSER_EXECUTABLE_PATH?{executablePath:process.env.BROWSER_EXECUTABLE_PATH}:{}),args:['--no-sandbox','--no-zygote','--disable-dev-shm-usage']});
 const report={browser:await browser.version(),playwright:require((process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES?process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES+'/playwright/package.json':'playwright/package.json')).version,scenarios:[],runtimeErrors:[],externalRequests:[],consoleErrors:[]};
-const outDir=process.env.TEXTBOOK_HTML?'artifacts/v0.2.0/ch1-regression':'artifacts/v0.1.1';
+const outDir=process.env.TEXTBOOK_HTML?(process.env.TEXTBOOK_HTML.includes('v0.3.0')?'artifacts/v0.3.0/ch1-regression':'artifacts/v0.2.0/ch1-regression'):'artifacts/v0.1.1';
 const url=pathToFileURL(process.cwd()+(process.env.TEXTBOOK_HTML||'/dist/chapter-01.html')).href;
 await mkdir(outDir,{recursive:true});
 function monitor(page){page.on('pageerror',e=>report.runtimeErrors.push(e.message));page.on('console',m=>{if(m.type()==='error')report.consoleErrors.push(m.text());});page.on('request',r=>{if(/^https?:/.test(r.url()))report.externalRequests.push(r.url());});}

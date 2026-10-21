@@ -1,14 +1,16 @@
 {
   "name": "silicon-photonics-textbook",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-textbook.mjs",
+    "build": "node scripts/build-chapter3.mjs",
     "test": "node --test tests/*.test.mjs",
     "test:browser": "node tests/browser.mjs && node tests/figures-browser.mjs",
     "serve": "python3 -m http.server 8080",
-    "test:ch2:browser": "node tests/ch2-browser.mjs"
+    "test:ch2:browser": "node tests/ch2-browser.mjs",
+    "build:ch2": "node scripts/build-textbook.mjs",
+    "test:ch3:browser": "node tests/ch3-browser.mjs"
   },
   "engines": {
     "node": ">=20"

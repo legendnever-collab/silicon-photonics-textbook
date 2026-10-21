@@ -1,0 +1,25 @@
+{
+  "question": "Inverse Taper와 정렬 공차를 올바르게 설명한 것은?",
+  "choices": [
+    {
+      "text": "Silicon Tip을 좁히면 Mode도 언제나 작아져 Fiber와의 Mismatch가 커진다.",
+      "feedback": "Core와 Mode 크기는 같지 않습니다. Confinement가 약해지면 Field가 주변으로 펼쳐질 수 있습니다. 실제 크기와 Leakage는 전체 단면의 Local Mode를 풀어 확인해야 합니다.",
+      "concept": "Core Width와 Mode Radius 혼동"
+    },
+    {
+      "text": "Field를 확장해 Facet의 공간 일치를 개선할 수 있지만 Taper 전환과 Offset/Tilt는 따로 확인해야 한다.",
+      "feedback": "맞습니다. Facet Overlap, Adiabatic Transfer, Reflection과 제조 가능성은 연결되어 있지만 서로 다른 검증입니다. Scalar 반경 Slider가 실제 Tip Geometry를 풀지는 않습니다.",
+      "concept": "인터페이스와 전파를 구분",
+      "correct": true
+    },
+    {
+      "text": "Mode를 크게 하면 위치와 각도 오차가 모두 무조건 줄며 수율을 알 수 있다.",
+      "feedback": "큰 Mode는 같은 Lateral Offset에 관대해질 수 있지만 Phase Gradient에 의한 Angular Penalty는 커질 수 있습니다. Yield에는 실제 오차 분포와 장치 응답이 더 필요합니다.",
+      "concept": "Tolerance를 수율과 동일시"
+    }
+  ],
+  "why": "Facet의 입력 투영과 길이 방향의 Local Mode 전달은 별개입니다. 첫 번째가 좋아도 Taper 변화가 빠르면 다른 Mode로 전달될 수 있으며, Lateral/Angular 오차는 Amplitude와 Phase에 서로 다른 영향을 줍니다.",
+  "simple": "작은 Silicon이 약하게 빛을 붙잡으면 빛의 무늬가 주변으로 넓어질 수 있습니다. 넓은 무늬는 조금 옆으로 움직여도 겹치지만, 기울어진 Phase가 넓은 영역에 쌓이면 적분이 상쇄될 수 있습니다.",
+  "math": "같은 w에서 ηoffset=e^(−Δx²/w²), ηtilt=e^(−q²w²/4)입니다. w를 두 배로 하면 같은 Offset의 지수 크기는 1/4, 같은 q의 지수 크기는 4배입니다. 이것은 공통 평면 Gaussian 모델의 결과입니다.",
+  "notebook": "먼저 w₁=w₂, Tilt=0에서 상대 Offset 곡선을 읽으세요. 그 다음 Offset=0에서 Tilt만 바꾸세요. 두 실험의 원인을 구별한 뒤 실제 Taper/Facet의 빠진 항목을 메모해 보세요."
+}

@@ -43,3 +43,30 @@
 MMI는 공식 Chapter 4 목차의 독립 Section이 아니다. 사용자가 요구한 비교 학습을 위해 2.2 말미에 추가한다. Self-imaging은 Conceptual이며 Full-wave 결과로 표시하지 않는다. 참고: Soldano & Pennings, “Optical multi-mode interference devices based on self-imaging”, JLT 13, 615–627 (1995), DOI 10.1109/50.372474. Coupler를 이해한 뒤 다른 분배 원리를 비교하는 교육적 확장이다.
 
 원본의 DC→Y→MZI→Ring→Bragg 순서는 유지한다. 위 Passive Advanced 명칭은 후속 학습 위치의 예약이며 이번 릴리스의 완성 콘텐츠가 아니다. 이번 Chapter에서 모든 핵심 소자의 개념·기초 식·예제를 제공하되, 확인하지 못한 제작·실험·고급 Numerical 내용을 완성했다고 표시하지 않는다. Active Modulation 및 Chapter 3는 시작하지 않는다.
+
+# Chapter 3 mapping · v0.3.0 · Optical I/O
+
+Verified 2026-10-21, before Chapter 3 implementation. User chose **original sequence** explicitly. Official Cambridge Contents (same PDF above, printed viii) places Optical I/O after Fundamental Building Blocks and before Active Components. App Chapter 3 therefore maps to original Chapter 5, pp.162–214. Earlier PN Phase Shifter preview is superseded by this user choice; active devices follow I/O in a future chapter. Full paid chapter text/figures were not acquired; the following headings/pages are verified from official contents. New prose, worked examples and diagrams are independently authored.
+
+| Original section / start page | Detailed contents (paraphrased) | App location / treatment | Reason and follow-up |
+|---|---|---|---|
+| 5.1 / 162 | Fiber–chip coupling challenge | 3.1 Mode size, spatial/phase overlap and loss | Scalar Gaussian is a declared teaching profile, not a solved silicon Mode |
+| 5.2 / 163 | Grating coupler | 3.2 surface access and radiation phase matching | Preserve original order; distinguish Ch2 reflective Bragg |
+| 5.2.1 / 164 | Performance | 3.2 efficiency, bandwidth, directionality, return loss | Definitions; no assumed measured device values |
+| 5.2.2 / 165 | Theory | 3.2 k matching and finite array sum | Analytical phase condition and normalized coherent array only |
+| 5.2.3 / 168 | Design methodology | 3.2 ordered design workflow | Avoid a fake geometry-to-efficiency fit |
+| 169–173 | Analytic design, 2D FDTD, results, design parameters | 3.2 period example, method comparison | FDTD results not fabricated; I/O Advanced §GC-Vector-Solver for mesh/port convergence and spectral extraction |
+| 177 | Cladding / buried oxide | 3.2 upward/downward channels and substrate interference | Qualitative; I/O Advanced §GC-Stack for stack-calibrated field model |
+| 179–181 | Focusing geometry, mask layout, 3D modelling | 3.2 focusing/taper and fabrication notes | Conceptual; I/O Advanced §GC-3D-Layout for transverse focusing/actual GDS and fabrication rules |
+| 5.2.4 / 181 | Experimental results | 3.2 measurement/de-embedding notes | No original measurements reproduced; I/O Advanced §GC-Measurement |
+| 5.3 / 182 | Edge coupler | 3.3 facet mode matching | Original order retained |
+| 5.3.1 / 183 | Nano-taper; overlap calculation; FDTD approach (187) | 3.3 inverse taper concept; Gaussian mismatch/offset/tilt; overlap limits | No tip-width→Mode-size shortcut; I/O Advanced §Edge-EME-FDTD for vector eigenmodes and adiabatic propagation |
+| 5.3.2 / 189 | Overlay waveguide and EME | 3.3 overlay concept / local modes / EME | Conceptual architecture; I/O Advanced §Edge-Overlay for validated 3D transfer |
+| 5.4 / 190 | Polarization | 3.4 Jones states, projection, PDL and diversity | Scalar spatial and Jones polarization assumptions separated |
+| 5.5 / 193 | Problems | 3.1–3.5 independent worked examples/Tutor; 3.5 ledger | Newly written exercises; no copyrighted problem reproduction |
+| 5.6 / 193 | Code listings | notebook/ch3-models.js + independent numerical checks | Offline analytical teaching models instead of copied commercial scripts |
+| References / 211 | References | Lesson sources and contract | First-party documentation and research papers, no unverified page quotations |
+
+Added scaffolding: normalized overlap integral is introduced in 3.1 before the original edge-coupler overlap detail, so students can distinguish overlap and total coupling before comparing interfaces. A small-angle same-plane Gaussian tilt factor extends this bridge. Polarization is only named as an assumption until 3.4, where the original order is preserved. 3.5 is a new synthesis exercise using independent input factors, not an additional original textbook section. No original principal component is skipped. Advanced labels above reserve future learning locations; they are not implemented content.
+
+Primary supporting sources checked: Ansys "Understanding the mode overlap calculation" (https://optics.ansys.com/hc/en-us/articles/360034396834-Understanding-the-mode-overlap-calculation), Ansys "Overlap analysis – Modal Analysis Tab" (https://optics.ansys.com/hc/en-us/articles/360034917453-Overlap-analysis-Modal-Analysis-Tab), Flexcompute "Mode overlap integral between a waveguide mode and a Gaussian mode" (https://www.flexcompute.com/tidy3d/examples/notebooks/ModeOverlap/), Hadden et al. arXiv:2207.06157 (grating phase-matching convention only; its GaN geometry/performance is not imported). Source formulas are re-derived and examples are original assumptions. Real Vector/Fresnel/EME/FDTD results are outside this release.

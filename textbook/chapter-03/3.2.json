@@ -1,0 +1,65 @@
+{
+  "id": "3.2",
+  "short": "Grating Coupler",
+  "title": "Surface Grating Couplers and Phase Matching",
+  "time": "15–25분",
+  "lead": "주기 구조가 추가하는 Spatial Momentum으로 바깥 Field와 Guided Field의 Phase를 연결합니다. Phase가 맞는 조건과 높은 효율을 만드는 조건을 따로 배웁니다.",
+  "question": "왜 Grating Period만 바꾸어도 Fiber가 바라보는 각도와 결합 파장이 달라질까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "윗면에서 Chip에 접근하는 방법",
+      "scene": "io",
+      "html": "<p>Surface Grating Coupler는 Chip 윗면 근처의 주기 구조를 이용해 외부 Optical Field와 Guided Mode를 연결합니다. Fiber를 위에서 놓을 수 있어 입출력 위치와 Wafer-level 접근을 설계할 여지가 생깁니다. 그러나 주기 구조가 있다는 사실만으로 빛이 원하는 방향과 원하는 Mode에 잘 결합하는 것은 아닙니다.</p><p>원본 §5.2는 성능 지표, 이론, 설계 방법, 실험 순서로 이어집니다. 이번 Lesson도 먼저 무엇을 Efficiency로 부르는지 정하고, 그 다음 Phase Matching을 계산한 뒤 실제 설계에서 더 필요한 항목을 정리합니다. 본문은 Grating을 반사 필터로 사용했던 Chapter 2와 직접 연결됩니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Period는 Phase를 맞추고, 구조는 나머지 채널을 정합니다",
+      "scene": "io",
+      "html": "<p>Guided Field는 축 z를 따라 exp(iβgz)로 Phase를 누적합니다. 외부로 나가는 Plane Wave의 z 방향 성분은 kparallel=k₀nclad sinθ입니다. 여기서 θ는 <strong>Chip Surface Normal</strong>에서 잰 각도입니다. 이 두 Phase 누적이 다르면 긴 영역의 산란 기여가 상쇄될 수 있습니다. Grating은 Spatial Frequency G=2π/Λ를 제공하여 그 차이를 맞춥니다.</p><p>이번에는 전파 +z, 시간 exp(−iωt), 위쪽으로 나가는 Field의 +z 성분을 양으로 정합니다. 1차 조건은 βg−kparallel=G입니다. Fiber를 반대쪽으로 기울이거나 반대 방향 Guided Mode를 쓰면 부호를 일관되게 바꿔야 합니다. 단순히 sinθ의 절댓값을 넣으면 원래 정의와 다른 설계가 됩니다.</p><p><strong>Grating 영역의 Effective Phase Index ngrat</strong>는 그 주기 구조 안의 전파를 근사하는 입력입니다. 이전 Chapter의 고정된 Strip neff와 자동으로 같은 값이 아니며 Group Index도 아닙니다. 이 Notebook은 ngrat를 Geometry에서 풀지 않습니다. 주어진 값에서 Period, 각도, 파장 관계만 계산합니다.</p><p><strong>성능 지표.</strong> Coupling Efficiency는 원하는 외부/Guided Mode로 가는 Power 비율입니다. Directionality는 전체 방사 중 원하는 위쪽 방향으로 향하는 비율이며, Mode Overlap은 방사된 Field가 Fiber Mode와 맞는 정도입니다. 반사, 아래쪽 누설, 불완전한 산란과 연결부 손실도 영향을 줍니다. 따라서 Phase Matching의 만족이 Efficiency=1을 보장하지 않습니다. Bandwidth와 Return Loss 역시 별도의 성능입니다.</p><p><strong>Uniform Array Model.</strong> N개의 동일한 산란 기여가 있다고 가정해 상대 Phase만 합하면 정규화된 Array Factor를 계산할 수 있습니다. Phase가 맞을 때 최대가 되고 N이 늘면 Phase Mismatch에 더 민감해집니다. 하지만 각 위치의 실제 산란 세기, Guided Power 감소, Gaussian Apodization, 반사와 BOX 간섭을 모두 생략하므로 이 그래프는 실제 Grating의 Coupling Spectrum이 아닙니다.</p><details><summary>원본 설계 Section · BOX, Focusing, Layout, 2D/3D와 측정</summary><p>실제 설계는 Waveguide/Cladding/Etch 구조에서 Mode를 구하고, 방사 방향·Profile·반사를 계산한 뒤 Fiber와의 Vector Overlap을 확인합니다. BOX와 Substrate는 아래쪽 Field가 반사되어 위쪽 Field와 간섭하는 Phase를 바꿀 수 있습니다. 이를 검증하지 않고 특정 BOX가 항상 더 좋은 효율을 준다고 단정할 수 없습니다.</p><p>Focusing Grating의 곡선 Groove는 횡 방향 Phase를 맞춰 좁은 Guide로 연결하는 구조적 방법입니다. 이는 1D Uniform Array만으로 검증할 수 없습니다. 2D FDTD의 단면 가정과 3D의 횡 방향 Focusing/Polarization 차이, Mesh/Port 수렴을 확인해야 합니다. 실제 Mask의 최소 Feature, Etch·Width 오차와 측정 Fiber 정렬도 별도로 봅니다.</p><p>측정에서는 Input/Output 두 Interface, Route Loss, Reference와 정렬 조건을 구분해야 합니다. 두 Coupler의 총 Loss를 하나의 값으로 착각하지 않습니다. 원본 실험 수치나 FDTD 결과를 이 릴리스에서 재현한 것은 아니며, 후속 GC-Vector-Solver/Stack/3D-Layout/Measurement로 연결합니다.</p></details>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "길이 방향 Phase 조건을 직접 계산합니다",
+      "scene": "io",
+      "html": "<div class=\"equation\">βg = (2π/λ₀)ngrat, k∥ = (2π/λ₀)nclad sinθ<br>βg−k∥ = 2π/Λ<br>Λ = λ₀ / (ngrat−nclad sinθ)<br>sinθmatch = (ngrat−λ₀/Λ)/nclad</div><dl class=\"terms\"><dt>λ₀, Λ</dt><dd>Vacuum Wavelength와 Period · Notebook nm, 내부 µm</dd><dt>θ</dt><dd>Surface Normal 기준 방사각 · °, 수식 내부 rad</dd><dt>ngrat</dt><dd>Grating 영역의 주어진 Phase Index 근사 · 무차원</dd><dt>βg,G,k∥</dt><dd>길이 방향 Phase 누적 / Spatial Momentum · rad/µm</dd></dl><div class=\"worked\"><h3>Worked Example · 1550 nm, +10°의 Period</h3><p>ngrat=2.4, nclad=1, λ₀=1550 nm, θ=+10°이면 Λ=1550/(2.4−sin10°)≈<strong>696.21 nm</strong>입니다. θ=0이면 Λ≈645.83 nm이고, −10°이면 약 602.26 nm입니다. 각도의 부호가 바뀌면 같은 식의 결과도 달라집니다. Slider는 1 nm 간격이므로 Λ=696 nm에서 작은 Mismatch가 남을 수 있습니다.</p><p>|sinθmatch|&gt;1인 조건에서는 이 매질로 나가는 해당 차수의 Propagating Wave가 없습니다. 예를 들어 λ₀=1550 nm, Λ=400 nm, ngrat=2.4이면 sinθmatch=−1.475입니다. 이를 억지로 실수 각도로 표시하지 않습니다.</p></div><div class=\"equation\">Δβ = βg−k∥−G, δ = ΔβΛ<br>F = |(1/N) Σ<sub>j=0</sub><sup>N−1</sup> exp(ijδ)|²<br>δ→0: F→1</div><p>F는 동일한 N개 기여를 총 진폭 N으로 정규화한 상대 Coherent Factor입니다. F=1은 이 정규화의 최댓값이며 실제 100% Coupling이 아닙니다. 파장 곡선에서는 ngrat와 nclad를 고정하고 Phase 조건만 Sweep합니다.</p>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "Phase가 맞으면 모든 Power가 Fiber로 갈까요?",
+      "scene": "io",
+      "html": "<p>Phase Matching은 멀리 떨어진 산란 기여가 서로 보강될 수 있는 조건입니다. Directionality와 Mode Shape, 실제 산란 강도는 다른 조건이라는 것을 생각하며 Tutor에 답해 보세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "Period, 각도, 산란 기여 수를 분리합니다",
+      "scene": "io",
+      "html": "<p>ngrat=2.4, θ=10°, Λ=696 nm, λ₀=1550 nm에서 Δβ와 F를 확인하세요. 먼저 θ를 0°로 바꾸면 1550 nm 지점의 결과가 어떻게 바뀔지 예측합니다. 이후 Λ를 약 646 nm로 바꾸어 새 각도의 조건을 다시 맞춥니다.</p><p>다음 N만 바꾸어 같은 Phase Mismatch의 상대 민감도를 관찰하세요. N을 늘려 F 곡선이 좁아져도 실제 장치의 1 dB Bandwidth를 얻은 것은 아닙니다. N이 실제 방사 Envelope와 어떻게 연결되는지 풀지 않았기 때문입니다. 구조 Figure의 선이나 Groove 높이 역시 EM Field가 아닌 개념도입니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "공간적 주기는 Phase Matching의 설계 변수입니다",
+      "scene": "io",
+      "html": "<ul><li>외부 Wave의 축 방향 Phase와 Guided Wave의 Phase를 Grating G가 연결합니다.</li><li>Period, Angle, Wavelength는 부호 Convention 아래 함께 결정됩니다.</li><li>그 조건과 실제 Coupling Efficiency·Directionality·Bandwidth는 구별합니다.</li><li>BOX·Apodization·Focusing·2D/3D·실험은 후속 검증 단계입니다.</li></ul><p>다음은 Chip 끝면으로 빛을 넣는 Edge Coupler입니다. 이번에는 공간적인 산란 주기 대신, Facet의 Mode 크기를 Fiber와 맞추고 그 Mode를 Chip 내부로 부드럽게 전달하는 과정을 살펴봅니다.</p>"
+    }
+  ],
+  "prediction": "같은 Index에서 Fiber Angle을 +10°→0°로 바꾸면?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "1550 nm에 맞는 Period가 약 696→646 nm로 달라진다",
+    "Angle은 Mode Phase와 무관해서 Period가 같다",
+    "Phase Matching만 맞추면 실제 효율도 항상 100%다"
+  ],
+  "predictionFeedback": "Λ=λ/(ngrat−nclad sinθ)이므로 +10°와 0°의 matched Period가 다릅니다. F의 최댓값 1은 상대 Phase Factor의 정규화이며 실제 장치 효율을 뜻하지 않습니다.",
+  "reflection": "Bragg Filter와 Surface Grating Coupler의 출력 채널 차이, Phase Matching과 실제 Efficiency의 차이를 설명해 보세요.",
+  "sources": [
+    "I0",
+    "I3"
+  ]
+}
