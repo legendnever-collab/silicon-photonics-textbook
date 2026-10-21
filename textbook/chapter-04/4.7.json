@@ -1,0 +1,65 @@
+{
+  "id": "4.7",
+  "short": "Thermo-optic Switch",
+  "title": "How Does a Thermo-optic Switch Route Light?",
+  "time": "15–20분",
+  "lead": "Chapter 2 MZI의 두 Output Port, Chapter 4 Thermal Tuning을 연결해 Optical Switching을 이해합니다. 마지막에는 PN, MZM, MRM, PIN VOA 및 Heater의 역할을 스스로 비교합니다.",
+  "question": "같은 MZI에서도 Heater Power를 바꿔 빛의 출구를 바꿀 수 있을까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "Active Photonic Circuit의 첫 종합",
+      "scene": "switch",
+      "html": "<p>이번 장의 출발점은 Carrier에 따라 Material Index와 Absorption이 변한다는 사실이었습니다. 이제 그 물리적 변화가 실제 <strong>Optical Device Function</strong>으로 이어지는 전체 경로를 정리합니다.</p><p>Thermo-optic Switch는 Heated Arm의 Phase를 변화시켜 MZI Output Port 사이에 Optical Power를 재분배할 수 있습니다. Data Modulation에 필요한 전기적 속도와 Switch의 Retuning 요구조건은 서로 다릅니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Thermal Phase Shifter + MZI",
+      "scene": "switch",
+      "html": "<p>이상적인 Balanced MZI에서 두 Port는 서로 보완적인 Optical Transmission을 갖습니다. Heater로 한 Arm의 Phase를 π만큼 변화시키면 두 Port의 선호 출력이 서로 바뀔 수 있습니다. 즉 Heater Power로 Light Routing State를 선택합니다.</p><p>실제 Thermo-optic Switch에서는 Heater Efficiency, Thermal Crosstalk, Nonuniform Temperature, Insertion Loss, Extinction Ratio, Static Heater Power 및 Switch Time을 함께 고려해야 합니다. 이 Lesson의 Figure는 이상적인 위상-간섭 결과와 단일 Thermodynamic RC만 계산합니다.</p><p>Chapter 4의 기법을 비교하면 PN Depletion은 Carrier Removal에 기반한 고속 Phase Control, PIN Injection은 Carrier Storage를 동반할 수 있는 Index/Absorption Control, MRM은 Resonance Detuning, Heater는 안정적인 Operating Point 제어의 한 수단입니다. 어떤 기술이 가장 좋다는 결론은 Device Specification과 검증 데이터가 있어야 가능합니다.</p><p>Switching은 출력을 어느 Port로 보낼지 결정하는 기능이고, Modulation은 데이터를 표현하기 위해 신호를 시간적으로 바꾸는 기능입니다. 둘 다 Interference를 이용할 수 있지만 Speed, Loss, Power, Control Precision의 요구사항은 다릅니다. Thermo-optic Switch를 이해했다고 해서 실제 200G MZM의 RF Design을 검증한 것은 아닙니다.</p><p>마지막으로 모델의 완전성을 확인해 봅니다. Heater Step은 Time에 따른 ΔT를 계산하고, 같은 ΔT에서 Δn_eff를 계산하며, 동일한 Δn_eff로 Phase와 두 Port Power를 계산해야 합니다. 각 Figure에서 Parameter가 다른 별도의 모델을 사용하면 겉보기로는 그럴듯해도 인과관계가 끊어집니다. 모든 도식과 Readout을 하나의 Model Output으로 연결하는 이유입니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "Heater → ΔT → Δφ → Optical Port",
+      "scene": "switch",
+      "html": "<div class=\"equation\">ΔT(t)=R<sub>th</sub>P[1−exp(−t/τ<sub>th</sub>)]<br>Δφ(t)=(2π/λ₀)(dn<sub>eff</sub>/dT)ΔT(t)L<br>P<sub>1</sub>/P<sub>in</sub>=cos²[Δφ(t)/2]<br>P<sub>2</sub>/P<sub>in</sub>=sin²[Δφ(t)/2]</div><div class=\"worked\"><h3>Worked Example · Thermal Switching Condition</h3><p>목표 Δφ=π라면 필요한 ΔT_π = λ₀/[2(dn_eff/dT)L]입니다. d n_eff/dT=10⁻⁴/K, L=1 mm, λ₀=1550 nm를 독립적으로 가정하면 ΔT_π≈7.75 K입니다. R_th=1000 K/W라면 정상상태 P≈7.75 mW가 됩니다. 실제 제작 Device에서 이 Efficiency를 보장하지 않습니다.</p></div><p>정상상태에서 얻는 π Phase와 주어진 시간에 얻는 Phase는 달라야 합니다. τ_th를 고려해 같은 Source의 상태로 계산하세요.</p>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "Model은 실제 Switch의 Loss와 Crosstalk을 예측하지 않습니다",
+      "scene": "switch",
+      "html": "<p>이번 Chapter를 마치기 전에 Device 수준의 성능과 이상적인 교육용 회로 모델을 구별하는지 확인합니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "한 회로를 처음부터 끝까지 계산해 봅니다",
+      "scene": "switch",
+      "html": "<p>Notebook에서 Heater Power와 Time을 조절하세요. Phase가 π에 가까워지면 두 Output Port의 Power가 교환되는 현상을 관찰하고, 동일 P라도 t가 짧을 때는 완전히 Switch되지 않는 이유를 설명합니다.</p><p>목표는 특정 Heater의 실제 효율을 예측하는 것이 아니라 <strong>Thermal Dynamics → Effective Index → Phase → Optical Switching</strong>을 하나의 인과관계로 이해하는 것입니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "Chapter 4 Review와 다음 Chapter 연결",
+      "scene": "switch",
+      "html": "<ul><li>Plasma Dispersion은 Active Silicon Photonics에서 Index와 Absorption을 바꿉니다.</li><li>Depletion, Injection, Resonance 및 Thermal Tuning은 다른 소자/시간응답을 만듭니다.</li><li>실제 Device Design에는 전하·광학·RF·Thermal Solver와 측정이 필요합니다.</li></ul><p>이제 다음 원본 Chapter 7인 Detectors를 공부할 준비가 되었습니다. 아직 Chapter 5 코드는 개발하지 않습니다.</p>"
+    }
+  ],
+  "prediction": "충분한 시간 후 Heater가 Δφ=π를 만들면 Lossless MZI 두 Port는?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "입력 Power가 한 Port에서 다른 Port로 이동한다",
+    "두 Port 모두 Power=0",
+    "항상 Input과 무관한 새로운 Energy가 생성된다"
+  ],
+  "predictionFeedback": "이상적인 Lossless MZI에서는 한 Port의 Transmission이 0이 되고 반대 Port의 Transmission은 1이 됩니다. 현실의 Loss/Crosstalk은 이 근사 밖입니다.",
+  "reflection": "PN Phase Shifter, MZM, MRM, PIN VOA, Thermo-optic Switch가 각각 어떤 물리 경로로 Optical Power를 바꾸는지 비교하세요.",
+  "sources": [
+    "A0",
+    "A3"
+  ]
+}

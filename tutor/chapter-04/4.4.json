@@ -1,0 +1,22 @@
+{
+  "question": "고 Q Ring의 Optical Transmission Spectrum만으로 3 dB EO Modulation Bandwidth를 알아낼 수 있나요?",
+  "choices": [
+    {
+      "text": "예. Spectral Linewidth만 알면 실제 전체 EO Bandwidth가 자동 확정됩니다.",
+      "feedback": "Photon Lifetime 관련 광학 제한과 전기 RC/Carrier Transport 등이 별개이며 측정/모델이 필요합니다."
+    },
+    {
+      "text": "아닙니다. Cavity Dynamics, Junction RC와 Carrier Transport까지 필요합니다.",
+      "feedback": "맞습니다. 정적 Ring Spectrum은 동적 전체 Device Response를 직접 나타내지 않습니다.",
+      "correct": true
+    },
+    {
+      "text": "고 Q는 모든 경우 속도를 무한히 증가시킵니다.",
+      "feedback": "더 좁은 Resonance는 민감도를 높일 수 있지만 Photon Lifetime과 Thermal Stability에 제한을 줍니다."
+    }
+  ],
+  "why": "광학 Spectrum의 폭과 시간응답 사이에는 관계가 있으나 전기/Carrier 동역학을 포함해야 실제 EO Bandwidth가 됩니다.",
+  "simple": "민감한 공명기는 작은 변화를 잘 보여주지만 반응 속도와 온도 변화에도 민감할 수 있습니다.",
+  "math": "T=(r²+a²−2ra cosθ)/(1+r²a²−2ra cosθ); Δλ≈λΔn_eff/ng. 두 식을 전기 주파수 응답으로 오용하지 않습니다.",
+  "notebook": "r=a, θ=0에서 Transmission Dip을 확인한 다음 r−a를 바꾸세요."
+}

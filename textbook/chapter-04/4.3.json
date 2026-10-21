@@ -1,0 +1,65 @@
+{
+  "id": "4.3",
+  "short": "MZI Modulation",
+  "title": "From Voltage to Optical Power",
+  "time": "13–18분",
+  "lead": "Chapter 2에서 MZI는 Phase Difference를 출력 Power로 변환했습니다. 이제 PN Phase Shifter의 Voltage-controlled Δn_eff를 그 한쪽 Arm에 넣어 MZM의 작동 원리를 완성합니다.",
+  "question": "전압이 Optical Field를 직접 흡수하지 않아도, 왜 Output Power가 달라질 수 있을까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "Passive Interference에서 Active Modulation으로",
+      "scene": "mzi",
+      "html": "<p>Chapter 2에서는 Passive MZI에 두 Optical Path를 주고 Interference를 공부했습니다. Chapter 4.2에서 PN Junction이 Phase Shifter를 만들 수 있다는 것도 배웠습니다. 두 지식을 연결하면 **Mach–Zehnder Modulator(MZM)**가 됩니다.</p><p>전압이 Photon의 에너지를 직접 크게 바꾸는 것이 아니라, 한 경로에 전달되는 Field의 Phase를 제어하고, 두 경로의 간섭 조건을 바꾸어 Output Port의 Power를 조절합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Complex Field가 합쳐지는 순간",
+      "scene": "mzi",
+      "html": "<p>이상적인 50:50 Splitter는 하나의 Optical Input을 두 경로로 나눕니다. 한 Arm의 Phase가 φ₁, 다른 Arm이 φ₂라면 Combiner의 한 출력은 두 복소 Field의 합, 다른 출력은 차에 해당하는 Port Convention을 가집니다.</p><p>절대 Phase가 아니라 <strong>Δφ=φ₁−φ₂</strong>가 중요합니다. Δφ=0에서는 한 Port에 Power가 집중되고, Δφ=π에서는 보완적인 다른 Port로 Power가 이동합니다. Lossless Model에서는 두 출력의 합이 항상 입력 Power와 같습니다.</p><p>실제 MZM에서는 각 Arm의 Insertion Loss, Electrode RC 및 Traveling-wave, Chirp와 Bias Drift, Extinction Ratio와 Laser Noise 등 추가 효과를 고려합니다. 이번 Lesson은 <strong>정상 상태의 이상적인 Field Interference</strong>를 정확하게 이해하는 것이 목적입니다.</p><p>Complex Optical Field를 더하는 과정에서 한쪽 Port는 Constructive Interference가 최대일 때 다른 Port는 Destructive Interference를 경험할 수 있습니다. 본 교재의 Port Convention에서 Δφ=0이면 Port 1에 모두 모이고, π라면 Port 2로 이동합니다. 실험에 앞서 이 결과를 손으로 유도해 보는 것이 Slider를 조작하는 것보다 중요합니다.</p><p>실제 Modulator는 한쪽 Arm만 Driven하는 Single-arm 방식, 양쪽 Arm에 반대 Phase를 걸 수 있는 Push–Pull 방식 등 다양한 구성을 가집니다. 동일한 Relative Phase를 만들더라도 광학 Chirp, 구동 전압, Common-mode 성분과 Loss Imbalance는 달라질 수 있습니다. 지금 배우는 Cosine Transfer는 이러한 설계 차이를 이해하기 위한 첫 출발점입니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "Voltage → Δn_eff → Δφ → Transmission",
+      "scene": "mzi",
+      "html": "<div class=\"equation\">Δφ = (2π/λ₀)·Δn<sub>eff</sub>(V)·L + φ<sub>bias</sub><br>T₁ = cos²(Δφ/2)<br>T₂ = sin²(Δφ/2)<br>T₁+T₂=1</div><p>가정한 Linear Index Sensitivity S=∂n_eff/∂V에서 Δn_eff(V)=S·V라고 두는 간단한 예제입니다. S를 PN Junction의 Depletion Width에서 계산한 값이라고 주장하지 않습니다. 실제 Vπ 및 Loss를 알기 위해서는 Device Simulation/Measurement가 필요합니다.</p><div class=\"worked\"><h3>Worked Example · Phase π를 만들어 보기</h3><p>λ₀=1550 nm, L=1 mm, |S|=10⁻³/V를 가정하면 Vπ=λ₀/(2|S|L)=0.775 V입니다. Input Power를 1로 정규화하면 Δφ=0에서 T₁=1, T₂=0이고 Δφ=π에서 T₁=0, T₂=1입니다. 이 값은 이상적인 50:50, Lossless 조건에 한정됩니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "Phase와 Power를 혼동하지 않습니다",
+      "scene": "mzi",
+      "html": "<p>PN Phase Shifter는 Δn_eff를 통해 Phase를 조절합니다. 그런데 MZI Combiner를 지나면 왜 Optical Power가 변할까요?</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "가정한 Device Sensitivity를 조작합니다",
+      "scene": "mzi",
+      "html": "<p>Notebook에서 Applied Voltage와 Effective Index Sensitivity를 변경하며 Phase와 두 Output Power를 함께 관찰합니다. 특히 V=0, Vπ/2, Vπ 조건을 비교해 보세요.</p><p>Voltage→Δn_eff는 교육용 Linear Sensitivity 입력입니다. 실제 PN Junction의 Carrier Distribution, Voltage-dependent Absorption과 RF 동작을 계산한 결과가 아닙니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "MZM은 MZI의 Phase를 제어합니다",
+      "scene": "mzi",
+      "html": "<ul><li>MZM은 전압으로 Optical Phase를 조절하고, Interference를 통해 Output Power를 바꿉니다.</li><li>두 Port의 Power는 이상적인 Lossless Model에서 보완적입니다.</li><li>VπL는 Device Sensitivity가 있어야 정의됩니다.</li></ul><p>다음은 MZI 대신 Ring Resonance를 이용하는 Micro-ring Modulator를 배웁니다.</p>"
+    }
+  ],
+  "prediction": "Lossless MZI에서 Δφ를 0에서 π로 바꾸면?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "두 Port의 정규화 Power가 서로 교환된다",
+    "두 Port Power가 모두 같은 방향으로 사라진다",
+    "Power는 Phase와 무관하므로 변화하지 않는다"
+  ],
+  "predictionFeedback": "T₁=cos²(Δφ/2), T₂=sin²(Δφ/2)이므로 한 Port에서 다른 Port로 전달됩니다. Lossless Model에서 합은 1입니다.",
+  "reflection": "PN Junction의 Voltage 변경이 왜 MZI Combiner에서 Intensity Modulation으로 변환되는지 설명하세요.",
+  "sources": [
+    "A0",
+    "C0"
+  ]
+}

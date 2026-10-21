@@ -1,0 +1,22 @@
+{
+  "question": "Heater에 10 mW를 공급했을 때 Optical Phase는 즉시 정상상태가 되나요?",
+  "choices": [
+    {
+      "text": "그렇습니다. ΔT=RthP만 계산하면 시간의 영향은 없습니다.",
+      "feedback": "RthP는 정상상태입니다. Thermal Capacitance와 열확산 때문에 T(t)가 시간에 따라 변합니다."
+    },
+    {
+      "text": "아닙니다. Thermal Time Constant에 따라 천천히 접근합니다.",
+      "feedback": "맞습니다. 정상상태와 시간응답을 분리해 공부해야 합니다.",
+      "correct": true
+    },
+    {
+      "text": "항상 수백 GHz 이상의 Optical Modulation을 만듭니다.",
+      "feedback": "Thermo-optic Tuning의 속도는 구조의 열 응답에 제한되며, RF Modulation과 동일하지 않습니다."
+    }
+  ],
+  "why": "Heater는 Temperature를 올리고 열용량은 온도 응답을 느리게 합니다. τth=RthCth가 시간 단위입니다.",
+  "simple": "컵을 데우는 것처럼 바로 최고 온도가 되지 않고 서서히 올라갑니다.",
+  "math": "ΔT(t)=RthP(1−e^{−t/τ}); Δφ=(2π/λ)S_TOΔT L.",
+  "notebook": "P와 t를 바꿀 때 ΔT와 두 Optical Port를 함께 관찰하세요."
+}

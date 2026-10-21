@@ -1,0 +1,22 @@
+{
+  "question": "1D PN Depletion Width W만 알면 VπL을 결정할 수 있을까요?",
+  "choices": [
+    {
+      "text": "예. W는 Phase Shifter의 Optical Mode Overlap과 동일합니다.",
+      "feedback": "W는 전기적 Space Charge Region의 폭입니다. Optical Mode 분포와 Carrier-dependent Index가 빠져 있습니다."
+    },
+    {
+      "text": "아닙니다. 전하 분포와 Optical Mode Overlap, 전압 감도가 필요합니다.",
+      "feedback": "맞습니다. 전기적 Depletion과 Optical Phase를 연결하려면 전기적·광학적 모델이 필요합니다.",
+      "correct": true
+    },
+    {
+      "text": "RC Bandwidth만 알면 VπL을 계산할 수 있습니다.",
+      "feedback": "RC는 Small-signal Electrical Response의 근사이고 VπL은 전기 광학 Phase Sensitivity 지표입니다."
+    }
+  ],
+  "why": "W는 전기적 폭입니다. 실제 Mode와의 공간 중첩을 통해 Δn_eff로 변환합니다.",
+  "simple": "전압을 올려 비어 있는 공간이 넓어져도, 빛이 그 공간에 얼마나 있는지는 또 다른 질문입니다.",
+  "math": "Δφ=(2π/λ₀)Δn_eff L, f3dB=1/(2πRC). 두 식은 독립 입력으로 표시합니다.",
+  "notebook": "VR Slider와 별도의 Δn_eff 입력을 섞지 말고 모델 조건을 비교하세요."
+}

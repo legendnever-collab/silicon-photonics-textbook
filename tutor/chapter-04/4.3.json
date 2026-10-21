@@ -1,0 +1,22 @@
+{
+  "question": "이상적인 Lossless MZI에서 Phase만 조절했을 때 두 Output Port의 Power 합은?",
+  "choices": [
+    {
+      "text": "Phase가 π일 때 두 Port 합이 모두 0이 됩니다.",
+      "feedback": "보완적인 두 Port를 모두 모으면 Lossless Model에서 Power는 보존됩니다."
+    },
+    {
+      "text": "항상 입력 Power와 같습니다.",
+      "feedback": "맞습니다. Δφ는 두 Port 사이의 Power 분배를 바꾸며, 이 이상 모델에서는 전체 Power가 보존됩니다.",
+      "correct": true
+    },
+    {
+      "text": "Phase 자체가 Power이므로 π를 곱해 계산합니다.",
+      "feedback": "Phase의 단위는 rad이고 Power는 Field Amplitude 크기의 제곱과 연결됩니다."
+    }
+  ],
+  "why": "출력 두 포트는 간섭하는 복소 Field 조합이며 Δφ가 에너지 분배를 정합니다.",
+  "simple": "두 물결이 같은 위상으로 만나면 한쪽 출구에서 강해지고, 반대 출구에서는 약해집니다.",
+  "math": "|1+e^{iΔφ}|²/4=cos²(Δφ/2), |1−e^{iΔφ}|²/4=sin²(Δφ/2).",
+  "notebook": "Voltage를 바꿀 때 Phase와 두 Transmission Curve를 같이 보세요."
+}

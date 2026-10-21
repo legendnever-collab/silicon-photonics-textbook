@@ -1,0 +1,22 @@
+{
+  "question": "Forward-biased PIN의 Voltage를 입력하면 이 Loss 식으로 곧바로 Δα를 계산할 수 있나요?",
+  "choices": [
+    {
+      "text": "예. Δα=Voltage/L로 무조건 결정됩니다.",
+      "feedback": "Carrier Injection/Transport/Optical Overlap이 빠져 있습니다. Voltage는 곧 Absorption Coefficient가 아닙니다."
+    },
+    {
+      "text": "아닙니다. 주입 Carrier와 재료 흡수, Optical Mode Overlap을 먼저 알아야 합니다.",
+      "feedback": "맞습니다. 본 예제의 Δα는 독립 입력이며 실제 Device Control Voltage와 연결된 것이 아닙니다.",
+      "correct": true
+    },
+    {
+      "text": "Loss는 Phase와 동일한 단위 rad이므로 Voltage가 필요 없습니다.",
+      "feedback": "Phase와 Power Attenuation은 복소 Optical Response의 다른 부분이며 단위도 다릅니다."
+    }
+  ],
+  "why": "전압으로 Carrier를 주입하고, 그 Carrier의 재료 광학 특성 및 Mode Overlap으로 Δα_eff가 정해집니다.",
+  "simple": "같은 광로에 빛을 더 많이 흡수하는 영역을 만든다고 생각하면 됩니다. 얼마나 흡수할지는 별도 모델이 필요합니다.",
+  "math": "T=e^{-αL}; loss[dB]=(10/ln10)αL. 여기서 α는 Power 감쇠계수입니다.",
+  "notebook": "α Slider는 cm⁻¹ 단위, L Slider는 mm 단위이므로 내부에서 L/10으로 cm 변환합니다."
+}

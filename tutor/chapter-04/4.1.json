@@ -1,0 +1,22 @@
+{
+  "question": "Bulk Silicon 계산에서 Δn_Si가 −4×10⁻⁴라면 실제 PN Waveguide Δn_eff도 반드시 같은가요?",
+  "choices": [
+    {
+      "text": "예. 같은 Silicon이므로 두 값은 언제나 같습니다.",
+      "feedback": "Material 변화가 어디에 존재하는지와 Optical Mode Overlap이 결정되지 않았습니다. Δn_eff는 Field Weighting과 Vector Mode를 고려해야 합니다."
+    },
+    {
+      "text": "아닙니다. 전하 분포 및 Optical Mode Overlap을 알아야 합니다.",
+      "feedback": "정확합니다. Material의 복소 Index 변화는 시작점이며 Device의 유효 Index와 Loss는 별도 계산이 필요합니다.",
+      "correct": true
+    },
+    {
+      "text": "Absorption만 고려하면 Phase는 바뀌지 않습니다.",
+      "feedback": "Free Carrier는 실수 Index와 Absorption에 모두 영향을 주므로 Phase 효과를 버릴 수 없습니다."
+    }
+  ],
+  "why": "실제 Device는 공간적으로 다른 Carrier Density를 가지므로 전기/광학 Solver가 필요합니다.",
+  "simple": "재료의 색이 조금 바뀌어도 실제 빛의 공간 분포와 겹치는 영역에 따라 효과가 달라집니다.",
+  "math": "Δφ=(2π/λ₀)·Δn_eff·L입니다. Δn_eff를 Material Δn과 같게 두는 것은 별도 가정입니다.",
+  "notebook": "N/P Slider는 1550 nm Bulk 경험식 입력이며 Voltage → N/P 변환은 하지 않습니다."
+}
