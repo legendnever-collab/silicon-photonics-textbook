@@ -29,7 +29,7 @@ test('14 chapter-4 figures use classified and reproducible renderer',()=>{
 test('Chapter 4 uses separate persistent storage with v3/v2 fallback',()=>{
  const app=fs.readFileSync('src/app.js','utf8'),build=fs.readFileSync('scripts/build-chapter4.mjs','utf8');
  assert.ok(app.includes('Ch4Notebook.sanitize'));assert.ok(app.includes('Ch4Notebook.update'));
- for(const s of ['sipt-textbook-v4','sipt-textbook-v3','chapter-04','ch4-models.js','ch4-renderer.js','ch4-notebook.js'])assert.ok(build.includes(s));
+ for(const s of ['sipt-textbook-v4','sipt-textbook-v3',"'04'",'ch4-models.js','ch4-renderer.js','ch4-notebook.js'])assert.ok(build.includes(s));
  assert.ok(build.includes('v0.4.0.html'));
 });
 test('v0.3.0 standalone and chapter 1/2 preserved',()=>{
