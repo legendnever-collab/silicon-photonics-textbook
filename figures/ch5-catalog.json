@@ -1,0 +1,58 @@
+[
+  {
+    "id": "5.1A",
+    "lesson": "5.1",
+    "title": "Photon Absorption to Photocurrent",
+    "classification": "Conceptual",
+    "renderer": "detectorCollection",
+    "anchor": "#section-concept > p:first-of-type",
+    "see": "Photon 흡수 뒤 Electron과 Hole이 반대 Contacts로 이동하고 외부 회로에 전류가 흐릅니다.",
+    "notice": "e⁻와 h⁺ 화살표는 Carrier 이동 방향입니다. Electric Field는 n→p이며 Electron 이동은 그 반대입니다.",
+    "meaning": "Pair 한 개의 완전 수집은 외부 회로에서 q의 기여이며 2q가 아닙니다.",
+    "parameters": "PIN 예시 · 비축척. Readout은 별도 Photon Counting 계산이며 η_ext를 독립 입력으로 사용합니다.",
+    "limits": "Carrier Path는 개념도입니다. 공간 Field, Doping, Generation Map, 실제 이동 시간은 계산하지 않았습니다.",
+    "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
+  },
+  {
+    "id": "5.1B",
+    "lesson": "5.1",
+    "title": "Responsivity vs Wavelength",
+    "classification": "Analytical",
+    "renderer": "detectorResponsivity",
+    "anchor": "#section-equation > .worked",
+    "see": "선택 η_ext와 비교 η=0.5,1.0의 Unity-gain R(λ) 곡선을 봅니다.",
+    "notice": "η를 고정한 계산입니다. λ가 길면 W당 Photon 수가 많아져 R이 증가합니다.",
+    "meaning": "R=ηqλ/hc이며 같은 Plane에서 I=RP를 계산합니다.",
+    "parameters": "λ 800–1800nm; 독립 η_ext [0,1]; R[A/W]; Reference Plane은 Detector Coupling 앞 Waveguide.",
+    "limits": "실제 Ge Spectral Response가 아닙니다. Bandgap, Strain, Material absorption, Gain, Saturation을 예측하지 않습니다.",
+    "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
+  },
+  {
+    "id": "5.2A",
+    "lesson": "5.2",
+    "title": "Transit Time vs RC Response",
+    "classification": "Conceptual",
+    "renderer": "detectorTiming",
+    "anchor": "#section-concept > p:first-of-type",
+    "see": "Carrier Collection Path와 Small-signal RC Circuit을 나란히 비교합니다.",
+    "notice": "W는 Carrier 이동 거리, C_total은 Junction/Parasitic/Load를 포함하는 독립 입력입니다.",
+    "meaning": "RC와 Transit의 물리적 원인이 다르므로 하나의 시간 상수로 동일시하지 않습니다.",
+    "parameters": "상수 Drift Velocity 가정의 W/v와 독립 Lumped RC. 구조는 비축척 개념도입니다.",
+    "limits": "생성 위치별 Current Impulse나 실제 종합 Bandwidth를 계산하지 않습니다. RC Circuit은 1차 등가입니다.",
+    "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
+  },
+  {
+    "id": "5.2B",
+    "lesson": "5.2",
+    "title": "First-order RC Frequency Response",
+    "classification": "Analytical",
+    "renderer": "detectorBandwidth",
+    "anchor": "#section-equation > .worked",
+    "see": "|H_RC(f)| 곡선과 지정 Probe Frequency에서의 값, Transit 시간과 PIN Noise를 봅니다.",
+    "notice": "f_RC의 Magnitude 0.7071, Power 0.5입니다. Noise B는 f_RC와 독립입니다.",
+    "meaning": "Capacitance 감소는 RC Pole을 올리지만 Transit 지배 Device 성능 개선을 보장하지 않습니다.",
+    "parameters": "R_eq[Ω], C_total[fF], Frequency[GHz]; τ_RC=RC. Shot Noise는 독립 Equivalent Noise B와 Unity Gain Poisson Model.",
+    "limits": "Transit Bandwidth/RC와 Transit 결합, Thermal/Amplifier/APD Noise, Receiver SNR은 계산하지 않습니다.",
+    "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
+  }
+]
