@@ -1,0 +1,65 @@
+{
+  "id": "4.6",
+  "short": "Active Tuning",
+  "title": "Carrier Injection or Thermal Tuning?",
+  "time": "12–18분",
+  "lead": "Optical Phase는 Carrier Injection으로도 바꿀 수 있고, Heater가 만든 Temperature Change로도 바꿀 수 있습니다. 물리적 제어 경로와 시간 응답을 비교합니다.",
+  "question": "같은 Phase Shift를 만들 수 있다면 Carrier와 Heater는 서로 교환 가능한 소자일까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "광학 위상을 맞추는 두 가지 방법",
+      "scene": "thermal",
+      "html": "<p>실제 PIC에서는 Fabrication Variation, Laser Wavelength Drift 및 Ring Resonance Offset을 조정해야 합니다. <strong>Active Tuning</strong>은 목표 Optical Operating Point를 유지하기 위한 방법입니다.</p><p>Plasma Dispersion으로 Carrier를 조절할 수도 있고, Silicon의 Thermo-optic Effect를 이용하여 Temperature를 바꿀 수도 있습니다. 두 방식은 필요한 Electric Drive, Static Power 및 Time Constant 측면에서 다릅니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "PIN Phase Shifter와 Thermo-optic Effect",
+      "scene": "thermal",
+      "html": "<p>Forward-biased PIN Phase Shifter는 Carrier Injection이 Refractive Index를 바꾸는 경로입니다. 고속 Depletion 방식보다 큰 Carrier Storage와 Recombination Time의 영향을 받을 수 있습니다.</p><p>반면 Heater는 전기 에너지를 열로 바꾸어 Waveguide의 Temperature를 높입니다. Silicon의 Thermo-optic Coefficient가 양의 값인 조건에서 Effective Index가 증가하고 Optical Phase가 누적됩니다. <strong>Bulk Si dn/dT와 Waveguide dn_eff/dT를 구별</strong>해야 합니다.</p><p>실제 열확산은 여러 시간 상수와 인접 소자 간 Thermal Crosstalk을 포함합니다. Notebook의 한 개 R_th, C_th를 가진 Lumped Thermal Model은 첫 번째 학습 근사이며, 실제 Heater Layout이나 실측 Temperature를 예측하지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "Temperature에서 Phase까지",
+      "scene": "thermal",
+      "html": "<div class=\"equation\">ΔT<sub>steady</sub> = R<sub>th</sub> P<sub>heater</sub><br>ΔT(t) = ΔT<sub>steady</sub>[1−exp(−t/τ<sub>th</sub>)]<br>Δn<sub>eff</sub> = (dn<sub>eff</sub>/dT) ΔT<br>Δφ=(2π/λ₀)Δn<sub>eff</sub>L</div><p>R_th는 K/W, P는 W, τ_th는 ms, t는 ms입니다. Effective Thermo-optic Sensitivity는 독립적인 Mode Parameter이며 Bulk Si 값과 자동으로 동일하지 않습니다.</p><div class=\"worked\"><h3>Worked Example · Heater Step</h3><p>R_th=1000 K/W, P=10 mW이면 정상상태 ΔT=10 K입니다. t=τ_th에서는 ΔT≈6.32 K이고, t가 충분히 길면 10 K에 가까워집니다. 실제 Device의 Response Time을 이 숫자로 예측하려면 측정하거나 Electrothermal Model을 따로 검증해야 합니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "Power, Phase와 Time Constant는 독립입니다",
+      "scene": "thermal",
+      "html": "<p>Heater를 통해 Optical Phase를 제어하더라도 Temperature가 즉시 정상 상태에 도달하지 않는 이유를 설명합니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "Heater Step Response를 관찰합니다",
+      "scene": "thermal",
+      "html": "<p>Notebook에서 Heater Power와 Elapsed Time을 변경해 ΔT, Δn_eff, Δφ를 동시에 봅니다. Time을 0→5τ_th로 이동하면 무엇이 달라지는지 예측하세요.</p><p>시간에 따른 Phase가 MZI에 연결되면 보완적인 두 Optical Output도 같이 변합니다. 그러나 이 시간응답을 PN Junction RF Bandwidth와 동일시하지 않습니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "빠른 Data와 느린 Alignment를 구별합니다",
+      "scene": "thermal",
+      "html": "<ul><li>Carrier Injection과 Heater는 다른 경로로 Δn_eff를 제어합니다.</li><li>Thermal Response에는 Power, R_th, τ_th가 모두 중요합니다.</li><li>정상상태 Phase Tuning과 고속 Data Modulation은 별도 설계 문제입니다.</li></ul><p>다음은 Thermal Phase를 사용해 실제 Optical Switch를 설명합니다.</p>"
+    }
+  ],
+  "prediction": "Heater Power Step 입력 후 t=0에 Temperature는?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "첫 순간의 ΔT는 0이고 시간에 따라 정상상태로 접근한다",
+    "첫 순간 정상상태까지 무한히 상승한다",
+    "Heater Power와 관계없이 ΔT=0이 유지된다"
+  ],
+  "predictionFeedback": "1st-order Lumped Thermal Model에서 ΔT(t)=R_th P[1−exp(−t/τ)]입니다. t=0에서는 0이고 정상상태에는 지수적으로 접근합니다.",
+  "reflection": "PIN Phase Shifter와 Thermal Tuning이 서로 다른 속도/소비전력 문제를 만드는 이유를 설명하세요.",
+  "sources": [
+    "A0",
+    "A3"
+  ]
+}

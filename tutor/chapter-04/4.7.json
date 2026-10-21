@@ -1,0 +1,22 @@
+{
+  "question": "Chapter 4의 Thermal 모델에서 Lossless MZI가 Port를 완전히 전환했다면 실제 Device Loss도 0이라고 결론내릴 수 있나요?",
+  "choices": [
+    {
+      "text": "네. Ideal Transfer가 1이면 실제 Waveguide와 Interface Loss도 반드시 0입니다.",
+      "feedback": "이상 모델은 Splitter imbalance, Heater Absorption, Coupling/Propagation Loss와 Crosstalk 등을 생략합니다."
+    },
+    {
+      "text": "아닙니다. Ideal Transfer는 간섭에 의한 Port 분배만 설명합니다.",
+      "feedback": "정확합니다. 실제 Device IL와 ER는 공정/물리 모델 또는 측정으로 별도 평가해야 합니다.",
+      "correct": true
+    },
+    {
+      "text": "Heater Temperature는 Optical Phase에 절대 영향을 주지 않습니다.",
+      "feedback": "Thermo-optic Effect는 Δn_eff를 통해 Phase를 변화시키므로 이상적인 Switching 설명에 사용됩니다."
+    }
+  ],
+  "why": "Ideal Model은 학습에 필요한 하나의 효과를 분리해 설명합니다. 실제 Performance는 누락된 손실/불균형의 영향까지 필요합니다.",
+  "simple": "길을 바꾸는 분기기의 동작을 이해했다고 도로 전체의 마찰이 없다는 뜻은 아닙니다.",
+  "math": "P1=cos²(φ/2), P2=sin²(φ/2); φ는 Thermal Step Model이 계산합니다.",
+  "notebook": "Power/Time 변경 후 Phase와 두 Optical Transmission이 같은 계산 상태에서 반영되는지 확인하세요."
+}

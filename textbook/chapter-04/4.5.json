@@ -1,0 +1,65 @@
+{
+  "id": "4.5",
+  "short": "Forward PIN / VOA",
+  "title": "How Does Carrier Injection Attenuate Light?",
+  "time": "12–18분",
+  "lead": "Reverse-biased PN의 Depletion과 달리 Forward-biased PIN은 Carrier Injection을 이용합니다. Phase 제어뿐 아니라 Optical Attenuation을 능동적으로 만들 수 있습니다.",
+  "question": "주입한 Carrier가 늘면 같은 Waveguide의 Optical Power는 어떻게 줄어들 수 있을까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "Depletion과 Injection은 서로 다릅니다",
+      "scene": "pin",
+      "html": "<p>Chapter 4.2에서는 Reverse Bias가 Junction의 Carrier를 제거하는 Depletion Regime를 배웠습니다. 이제 <strong>Forward-biased PIN Junction</strong>에서는 Carrier를 Active Region으로 주입하는 Injection Regime를 이해합니다.</p><p>주입 Carrier가 만든 Free-carrier Absorption을 이용하면 전기적 제어만으로 Optical Intensity를 낮추는 Variable Optical Attenuator(VOA)를 만들 수 있습니다. 이 경우 MZI를 통해 Phase를 Power로 변환할 필요가 없습니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "PIN Junction과 Absorption",
+      "scene": "pin",
+      "html": "<p>PIN Junction은 p형과 n형 사이에 본래 낮은 Doping의 Intrinsic Region을 두고 있습니다. Forward Bias에서는 Electron과 Hole이 Injection/Transport되어 Optical Mode와 겹치는 위치의 Carrier Density가 변할 수 있습니다.</p><p>Free-carrier Injection은 Index와 Absorption 둘 다 바꿉니다. 따라서 PIN Phase Shifter와 VOA는 서로 완전히 독립된 Effect가 아니라, 같은 Carrier Control의 다른 이용 방식입니다. 이 Lesson은 먼저 Power Absorption에 주목합니다.</p><p>실제 Injection Dynamics는 Carrier Lifetime, Diffusion, Recombination 및 Device Geometry에 의해 결정됩니다. 임의의 Voltage-to-Carrier Density 곡선을 만들면 물리적으로 타당하지 않으므로, Notebook에서는 <strong>가정한 추가 Absorption Coefficient</strong>만 직접 입력하도록 합니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "Power Attenuation의 지수 법칙",
+      "scene": "pin",
+      "html": "<div class=\"equation\">P(L)/P(0) = exp(−Δα·L)<br>IL = −10log₁₀[P(L)/P(0)] = 4.343·Δα·L</div><p>Δα는 <strong>Power Attenuation Coefficient</strong>이고 cm⁻¹, L은 cm입니다. Field Amplitude 감쇠계수로 정의할 때는 지수의 Factor가 달라지므로 정의를 명확히 합니다. 산란/반사 및 입력 Connector Loss는 포함되지 않습니다.</p><div class=\"worked\"><h3>Worked Example · Carrier-induced extra Loss</h3><p>Δα=10 cm⁻¹, L=1 mm=0.1 cm이라면 T=e⁻¹≈0.368, 추가 IL≈4.343 dB입니다. 여기서 Δα는 실측/TCAD 결과가 아닌 <strong>독립적으로 가정한 숫자</strong>입니다. 이를 특정 PIN Voltage의 Loss로 오해하지 마세요.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "Carrier Lifetime 없이 Speed를 주장할 수 없습니다",
+      "scene": "pin",
+      "html": "<p>주입한 Carrier가 Optical Phase와 Absorption에 미치는 관계를 생각해 봅니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "Δα와 Active Length를 조절합니다",
+      "scene": "pin",
+      "html": "<p>Notebook에서 Δα와 Active Length L을 변화시키고 Output Transmission과 추가 Loss[dB]의 관계를 관찰합니다. 동일한 Δα에서 L을 늘릴수록 Power가 지수적으로 감소합니다.</p><p>실제 PIN VOA의 Control Voltage를 입력받지 않습니다. Carrier Dynamics를 풀지 않았으므로 응답 시간이나 소비 전력을 예측하지 않습니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "Variable Optical Attenuator 이해",
+      "scene": "pin",
+      "html": "<ul><li>Forward PIN은 Carrier Injection으로 Free-carrier Absorption을 조절할 수 있습니다.</li><li>Power Attenuation은 정의된 α와 L에 대해 exp(−αL)입니다.</li><li>적용 Voltage, Speed, Device Loss는 전하 수송과 Mode Overlap이 있어야 계산할 수 있습니다.</li></ul><p>다음 Lesson에서 Injection과 Thermal Tuning을 비교합니다.</p>"
+    }
+  ],
+  "prediction": "Δα=10 cm⁻¹ 고정에서 Length를 두 배로 늘리면?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Transmission은 감소하고 Loss[dB]는 두 배가 된다",
+    "Transmission은 정확히 두 배 증가한다",
+    "Loss가 Waveguide Length와 무관하다"
+  ],
+  "predictionFeedback": "T=exp(−αL)이며 dB Loss는 αL에 비례합니다. Length 2배는 Power Transmission을 제곱합니다.",
+  "reflection": "Depletion Phase Shifter와 Forward PIN VOA의 Control Mechanism, Loss/Speed 근본 차이를 설명하세요.",
+  "sources": [
+    "A0",
+    "A1"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "4.4",
+  "short": "Ring Modulators",
+  "title": "How Does Resonance Turn Index into Intensity?",
+  "time": "15–22분",
+  "lead": "Chapter 2의 Ring Resonator에 Carrier-driven Effective Index 변화가 생기면 Resonance가 이동합니다. 고정된 Laser Wavelength에서 Through Port Transmission이 왜 바뀌는지 설명합니다.",
+  "question": "Ring Resonance를 약간 움직였을 뿐인데, 왜 고정 파장 Laser의 Output Power가 크게 달라질까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "Interference와 Resonance의 민감도",
+      "scene": "ring",
+      "html": "<p>Chapter 2에서 Ring Resonator는 한 바퀴 돌아온 Optical Field와 Bus Waveguide의 Field가 간섭하는 구조였습니다. 이 <strong>Resonant Filter</strong>를 Active하게 만들면 Micro-ring Modulator(MRM)가 됩니다.</p><p>MZI와 달리 Ring은 Resonance 근처에서 작은 Phase 또는 Index 변화가 큰 Transmission 변화를 일으킬 수 있습니다. 작은 Footprint와 구동 규모의 장점이 있지만, Wavelength/Temperature Drift와 Photon Lifetime에 민감해지는 새로운 Trade-off가 생깁니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Ring의 Coupling과 Loss, Resonance",
+      "scene": "ring",
+      "html": "<p>Bus Waveguide와 Ring 사이의 Coupler는 일부 Optical Field를 Ring 내부로 전달하고, Ring은 한 바퀴 돌며 Phase와 Loss를 누적합니다. Through Port Field는 직접 지나간 Field와 Ring에서 누적되어 나온 Field의 Coherent Sum입니다.</p><p><strong>Self-coupling Amplitude r</strong>와 <strong>Roundtrip Amplitude a</strong>는 Power가 아니라 Field Amplitude입니다. Resonance 조건에서 r=a일 때 이상적인 단일 Bus All-pass Ring의 Through Port Transmission은 0이 될 수 있습니다. 이 상황을 Critical Coupling이라고 합니다.</p><p>PN Junction이 Ring 일부 또는 전체의 Δn_eff를 바꾸면 Resonance Wavelength가 이동합니다. 하지만 Thermal Drift도 같은 방식으로 Resonance를 이동시킬 수 있기 때문에, 실제 MRM에서는 Laser Locking과 Tuning이 중요합니다. DC Optical Response와 고속 EO Response를 혼동하지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "All-pass Ring Transfer와 Resonance Shift",
+      "scene": "ring",
+      "html": "<div class=\"equation\">T<sub>through</sub>(θ) = (r²+a²−2ra cosθ)/(1+r²a²−2ra cosθ)<br>Δλ<sub>res</sub> ≈ λ<sub>res</sub> Δn<sub>eff</sub>/n<sub>g</sub></div><p>첫 식은 이상적인 단일 Bus, Lossy Ring의 Through Power Transfer입니다. r과 a는 [0,1]의 실수 Amplitude이고 θ는 Roundtrip Phase입니다. Resonance Shift 근사는 작은 Δn_eff, 고정 Geometry 및 Group Index를 가정합니다. <strong>Group Index</strong>는 Phase Index와 구별해야 합니다.</p><div class=\"worked\"><h3>Worked Example · 작은 Index 변화</h3><p>λ=1550 nm, n_g=4.0, Δn_eff=−1×10⁻⁴이면 Δλ_res≈−0.03875 nm입니다. Wavelength 이동이 작아 보여도 Linewidth가 좁은 Ring에서는 고정된 Laser의 Transmission 변화가 클 수 있습니다. 그러나 단순 정적 Transfer 곡선만으로 EO Bandwidth를 계산할 수는 없습니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "Resonance Dip과 전기적 Bandwidth는 같은가?",
+      "scene": "ring",
+      "html": "<p>Ring의 Through Spectrum과 EO Small-signal Response가 왜 서로 다른 측정인지 확인합니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "Detuning과 Coupling을 분리해 관찰합니다",
+      "scene": "ring",
+      "html": "<p>Notebook에서 Roundtrip Phase(Detuning), r과 a를 조절하며 Resonance Dip 깊이를 비교합니다. Δn_eff 입력을 바꿔 Shifted Resonance가 어느 방향으로 이동하는지 함께 확인합니다.</p><p>이 Figure는 정적 All-pass Ring Model입니다. Carrier Lifetime, Traveling RF Electrode, Photon Lifetime, RC가 포함되지 않아 실제 Gb/s Modulation을 예측하지 않습니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "Micro-ring의 장점과 Trade-off",
+      "scene": "ring",
+      "html": "<ul><li>MRM은 Δn_eff를 Resonance Wavelength 이동으로 변환합니다.</li><li>Critical Coupling은 Amplitude 조건이고 Optical Spectrum과 Dynamic Bandwidth는 다릅니다.</li><li>고 Q Resonance의 민감도는 Thermal Drift와 Optical/Electrical Speed Trade-off도 가져옵니다.</li></ul><p>다음에는 Carrier를 제거하는 대신 주입하는 PIN 구조를 배웁니다.</p>"
+    }
+  ],
+  "prediction": "Δn_eff가 음의 방향으로 바뀌면 n_g>0 조건의 Ring Resonance는?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "더 짧은 Wavelength 쪽으로 이동한다",
+    "항상 더 긴 Wavelength 쪽으로 이동한다",
+    "Resonance는 Index와 무관하다"
+  ],
+  "predictionFeedback": "Δλ_res≈λΔn_eff/ng이므로 이 모델에서는 Δn_eff<0일 때 Blue Shift입니다. 이것만으로 고속 응답은 알 수 없습니다.",
+  "reflection": "MZM과 MRM이 Phase 변화로 Optical Intensity를 제어하는 방법의 차이와 MRM에서 Thermal Control이 중요한 이유를 설명하세요.",
+  "sources": [
+    "A0",
+    "C3"
+  ]
+}
