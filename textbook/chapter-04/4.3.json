@@ -18,7 +18,7 @@
       "label": "B · Learn the concept",
       "title": "Complex Field가 합쳐지는 순간",
       "scene": "mzi",
-      "html": "<p>이상적인 50:50 Splitter는 하나의 Optical Input을 두 경로로 나눕니다. 한 Arm의 Phase가 φ₁, 다른 Arm이 φ₂라면 Combiner의 한 출력은 두 복소 Field의 합, 다른 출력은 차에 해당하는 Port Convention을 가집니다.</p><p>절대 Phase가 아니라 <strong>Δφ=φ₁−φ₂</strong>가 중요합니다. Δφ=0에서는 한 Port에 Power가 집중되고, Δφ=π에서는 보완적인 다른 Port로 Power가 이동합니다. Lossless Model에서는 두 출력의 합이 항상 입력 Power와 같습니다.</p><p>실제 MZM에서는 각 Arm의 Insertion Loss, Electrode RC 및 Traveling-wave, Chirp와 Bias Drift, Extinction Ratio와 Laser Noise 등 추가 효과를 고려합니다. 이번 Lesson은 <strong>정상 상태의 이상적인 Field Interference</strong>를 정확하게 이해하는 것이 목적입니다.</p>"
+      "html": "<p>이상적인 50:50 Splitter는 하나의 Optical Input을 두 경로로 나눕니다. 한 Arm의 Phase가 φ₁, 다른 Arm이 φ₂라면 Combiner의 한 출력은 두 복소 Field의 합, 다른 출력은 차에 해당하는 Port Convention을 가집니다.</p><p>절대 Phase가 아니라 <strong>Δφ=φ₁−φ₂</strong>가 중요합니다. Δφ=0에서는 한 Port에 Power가 집중되고, Δφ=π에서는 보완적인 다른 Port로 Power가 이동합니다. Lossless Model에서는 두 출력의 합이 항상 입력 Power와 같습니다.</p><p>실제 MZM에서는 각 Arm의 Insertion Loss, Electrode RC 및 Traveling-wave, Chirp와 Bias Drift, Extinction Ratio와 Laser Noise 등 추가 효과를 고려합니다. 이번 Lesson은 <strong>정상 상태의 이상적인 Field Interference</strong>를 정확하게 이해하는 것이 목적입니다.</p><p>Complex Optical Field를 더하는 과정에서 한쪽 Port는 Constructive Interference가 최대일 때 다른 Port는 Destructive Interference를 경험할 수 있습니다. 본 교재의 Port Convention에서 Δφ=0이면 Port 1에 모두 모이고, π라면 Port 2로 이동합니다. 실험에 앞서 이 결과를 손으로 유도해 보는 것이 Slider를 조작하는 것보다 중요합니다.</p><p>실제 Modulator는 한쪽 Arm만 Driven하는 Single-arm 방식, 양쪽 Arm에 반대 Phase를 걸 수 있는 Push–Pull 방식 등 다양한 구성을 가집니다. 동일한 Relative Phase를 만들더라도 광학 Chirp, 구동 전압, Common-mode 성분과 Loss Imbalance는 달라질 수 있습니다. 지금 배우는 Cosine Transfer는 이러한 설계 차이를 이해하기 위한 첫 출발점입니다.</p>"
     },
     {
       "key": "equation",
