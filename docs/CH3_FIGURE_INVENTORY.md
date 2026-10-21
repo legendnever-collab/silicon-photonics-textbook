@@ -17,3 +17,5 @@
 | 3.5B | Optical I/O Power Ledger | Analytical | Pin1mW; Fiber w5.2µm; Facet w,Δx,Linear ψ,Residual IL,αdB/cm,Lmm,Output IL는 Notebook 공유. |
 
 All Figures include assumptions, limitations, What You See / What to Notice / Physics Meaning, and Zoom. Analytical Gaussian maps are sampled formula values, not EM-solver results. A Conceptual grating sketch can display a separately calculated matched period without making its geometry a solved field. No new Ch3 Numerical/Full-wave classification is used.
+
+Release review R3: Figure 3.5B and the shared Notebook also show Pout in dBm alongside mW. 1 mW input is 0 dBm; zero output is −∞ dBm. Existing 11 figures and their classifications/axes remain unchanged.

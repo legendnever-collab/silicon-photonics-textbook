@@ -12,8 +12,8 @@
   },
   "html": {
     "path": "dist/silicon-photonics-textbook-v0.3.0.html",
-    "sha256": "be36de0b6fe8910b3a9f731a274b4678017b44bd1884963f57bbdcab774ce668",
-    "sourceHash": "4a150bfe084181b01ae38d5fe3bc7bfdfd0b6c2ea5461000191c1b1c43fcd6b6"
+    "sha256": "0f55380c219f31ec57b90288f529d8be32eea3d0fbedba5374d83c8e6602a8ad",
+    "sourceHash": "81ca57d79da92d08a2eb4add2f7822706c624b9d2390ed415919e07f1ea1db3d"
   },
   "tests": {
     "unitAndContent": 59,
@@ -49,5 +49,33 @@
   ],
   "mergeAuthorized": false,
   "nextChapterStarted": false,
-  "next": "Stop at RC for user learning review"
+  "next": "Stop at RC for user learning review",
+  "recoveryBaselineCommit": "83d363d19bf803874e66142fedc7ed72f4c6a17f",
+  "reviewCheckpointCommit": "594b9381a6545698d083a0af4dab6803efa47a43",
+  "originalE3HtmlSha256": "be36de0b6fe8910b3a9f731a274b4678017b44bd1884963f57bbdcab774ce668",
+  "releaseReview": {
+    "checkpoints": [
+      "R0",
+      "R1",
+      "R2",
+      "R3"
+    ],
+    "status": "PASS",
+    "sourceOfTruth": "Exact embedded sourceHash and matching HTML; final commit is reported in PR #3",
+    "changes": [
+      "Qualify Malus expressions for chi=0 and chi=+/-180 deg",
+      "Explain mW/dBm and show output dBm, including zero-power -infinity",
+      "Use English Assumptions term to avoid serif Korean fallback squares"
+    ],
+    "modelImplementationChanged": false,
+    "browserReports": {
+      "ch1-browser-results.json": 15,
+      "ch1-figure-browser-results.json": 17,
+      "ch2-browser-results.json": 15,
+      "ch3-browser-results.json": 15
+    },
+    "artifacts": "artifacts/v0.3.0/release-review/",
+    "sha256Manifest": "dist/CH3_CHECKPOINT_SHA256SUMS.txt",
+    "mergeReadiness": "Technical checks pass; awaiting user learning review and explicit merge approval"
+  }
 }

@@ -1,6 +1,6 @@
 35d44b6e612e16633d819aaba2a1b0372d5c96e1b16ffeb1553cb89320f17da1  dist/chapter-01.html
 f108bb1ef4c90598ca56f1f806a3fc46c2bf2fa55666288b2754bac1372a7a68  dist/silicon-photonics-textbook-v0.2.0.html
-be36de0b6fe8910b3a9f731a274b4678017b44bd1884963f57bbdcab774ce668  dist/silicon-photonics-textbook-v0.3.0.html
+0f55380c219f31ec57b90288f529d8be32eea3d0fbedba5374d83c8e6602a8ad  dist/silicon-photonics-textbook-v0.3.0.html
 f108bb1ef4c90598ca56f1f806a3fc46c2bf2fa55666288b2754bac1372a7a68  checkpoints/v0.3.0/E0-textbook.html
 9f0753c00cff9fcd189e3eadab0edc20a713e7d03b330b9299f1fc43d2e370bd  checkpoints/v0.3.0/E1-textbook.html
 97967a39cf6dee1bd8e7344fa1658edfd3ffd42ded9dae39c02a7ca5846611ec  checkpoints/v0.3.0/E2-textbook.html

@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "version": "0.1.1",
+  "browser": "131.0.6778.204",
+  "scenarios": [
+    {
+      "name": "1440×900 light: ten figures, captions, model conditions, zoom, readable text",
+      "status": "PASS"
+    },
+    {
+      "name": "1440×900 dark: ten figures, captions, model conditions, zoom, readable text",
+      "status": "PASS"
+    },
+    {
+      "name": "1366×768 light: ten figures, captions, model conditions, zoom, readable text",
+      "status": "PASS"
+    },
+    {
+      "name": "1366×768 dark: ten figures, captions, model conditions, zoom, readable text",
+      "status": "PASS"
+    },
+    {
+      "name": "390×844 light: ten figures, captions, model conditions, zoom, readable text",
+      "status": "PASS"
+    },
+    {
+      "name": "390×844 dark: ten figures, captions, model conditions, zoom, readable text",
+      "status": "PASS"
+    },
+    {
+      "name": "320×740 light: ten figures, captions, model conditions, zoom, readable text",
+      "status": "PASS"
+    },
+    {
+      "name": "320×740 dark: ten figures, captions, model conditions, zoom, readable text",
+      "status": "PASS"
+    },
+    {
+      "name": "TE0/TE1 actual cutoff and amplitude/squared-field distinction",
+      "status": "PASS"
+    },
+    {
+      "name": "Scalar computed cases, real eigenvalues, shared linear and dB scales",
+      "status": "PASS"
+    },
+    {
+      "name": "Phase figure and notebook share model parameters and retain slider focus",
+      "status": "PASS"
+    },
+    {
+      "name": "Geometry scalar comparison stays distinct from live analytical Slab count",
+      "status": "PASS"
+    },
+    {
+      "name": "Bend comparison qualitative; trade-off matches unchanged synthetic ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "Figure selections restore with original session and textbook content remains readable",
+      "status": "PASS"
+    },
+    {
+      "name": "Reading highlights nearby figure without forced page changes",
+      "status": "PASS"
+    },
+    {
+      "name": "Mobile zoom has scrollable large figure and reachable non-wrapping close control",
+      "status": "PASS"
+    },
+    {
+      "name": "No runtime errors, console errors or runtime HTTP requests",
+      "status": "PASS"
+    }
+  ],
+  "runtimeErrors": [],
+  "consoleErrors": [],
+  "externalRequests": []
+}
