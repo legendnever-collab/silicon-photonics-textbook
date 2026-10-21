@@ -1,0 +1,67 @@
+{
+  "id": "5.1",
+  "short": "Photon → Current",
+  "title": "How Does Light Become Electrical Current?",
+  "time": "15–22분",
+  "lead": "Chapter 4에서는 전기 입력이 빛을 조절했습니다. 이제 빛이 흡수되어 Electron–Hole Pair를 만들고, 수집된 전하가 외부 회로의 Current가 되는 과정을 배웁니다.",
+  "question": "1550 nm의 빛이 들어오면 어떻게 전류가 생성될까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "빛을 전류로 읽는 첫 단계",
+      "scene": "detector",
+      "html": "<p>Chapter 1의 Mode는 빛이 어디에 분포하는지, Chapter 3의 Coupling은 얼마나 많은 Optical Power가 Device에 도달하는지 설명했습니다. Detector에서는 그 빛의 일부가 흡수된 뒤 실제 전하로 수집되어야 합니다. <strong>빛의 도달, 흡수, 전하 생성, 수집</strong>은 서로 다른 단계입니다.</p><p>Responsivity를 단순한 성능 숫자로 외우기보다 Photon 한 개가 운반하는 Energy와 수집 전하를 세어 보면 단위 A/W의 의미를 이해할 수 있습니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "흡수된 Photon이 모두 검출되는 것은 아닙니다",
+      "scene": "detector",
+      "html": "<p>Photon Energy가 허용된 전자 전이에 충분하고 광학적 전이 확률도 존재하면, 흡수된 Photon은 Valence Band의 Electron을 들뜨게 하고 Hole을 남길 수 있습니다. 이 <strong>Electron–Hole Pair</strong>는 아직 외부 회로에서 측정한 전류와 같지 않습니다. Recombination으로 사라지거나 Trap에 붙잡힐 수도 있기 때문입니다.</p><p>PIN의 Built-in Electric Field와 Reverse Bias는 Electron과 Hole을 반대 방향으로 이동시켜 Contacts로 수집합니다. 두 Carrier가 이동하면서 외부 회로에 유도되는 전하를 합하면, Unity Gain과 완전 수집 조건에서 한 Pair당 전하 q가 기여합니다. Electron과 Hole이 둘이라는 이유로 <strong>2q를 곱하지 않습니다.</strong></p><p>이 Chapter의 <strong>External Quantum Efficiency η_ext</strong>는 Detector Coupling Region 앞의 Waveguide Reference Plane을 통과한 Photon 중 수집 전하에 기여한 비율입니다. 따라서 Coupling, Absorption, Collection의 손실이 이미 포함됩니다. Fiber 입력을 기준으로 바꾸면 Fiber-to-chip Loss까지 반영한 다른 η가 됩니다.</p><p><strong>Internal Quantum Efficiency η_int</strong>는 여기서 Absorbed Photon당 수집된 Pair 수로 정의하며 Collection/Recombination을 포함합니다. 문헌마다 Internal Reference Plane의 사용법이 다를 수 있으므로 정의를 먼저 읽어야 합니다. Absorption이 90%라고 해도 Collection이 불완전하면 η_ext는 90%가 되지 않습니다.</p><p>Responsivity는 같은 Reference Plane의 Photocurrent를 Optical Power로 나눈 비율입니다. 동일한 R에서도 입력 Power가 두 배이면 선형 범위의 Photocurrent는 두 배입니다. 반대로 높은 R만으로 높은 속도나 낮은 Noise를 보장할 수 없습니다. Carrier Gain이 있는 APD는 5.4에서 구분합니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "Photon Counting에서 A/W까지",
+      "scene": "detector",
+      "html": "<div class=\"equation\">E_ph = hc/λ<br>Φ = P_opt / E_ph<br>R = η_ext qλ/(hc)<br>I_primary = R P_opt</div><p>h=6.62607015×10⁻³⁴ J·s, c=299792458 m/s, q=1.602176634×10⁻¹⁹ C입니다. λ는 nm에서 m로, Power는 µW에서 W로 변환합니다. C/J=A/W이므로 R의 단위가 확인됩니다. 표시 Current는 양의 크기이며 Diode의 Signed I–V Convention을 정의한 값은 아닙니다.</p><div class=\"worked\"><h3>Worked Example · 같은 Photon, 다른 수집 확률</h3><p>λ=1550 nm이면 E_ph≈0.800 eV입니다. Unity-gain Ideal R은 η=0.5, 0.8, 1.0에서 각각 약 0.625, 1.000, 1.250 A/W입니다. η_ext=0.8, P=100 µW라면 I≈100 µA입니다. 독립적인 교육용 η를 가정한 계산이며 실제 Ge Device 측정값이 아닙니다.</p></div><p>R(λ) 그래프는 η를 고정한 비례 관계입니다. 실제 Material에서는 η 자체가 λ에 따라 달라지므로 이 직선을 Ge의 Spectral Responsivity로 읽으면 안 됩니다.</p>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "100개의 Photon을 어떻게 세나요?",
+      "scene": "detector",
+      "html": "<p>Photon 100개 중 80개가 수집 전하에 기여한다면 η_ext는 80%입니다. 이미 External QE에 들어 있는 Coupling Loss를 다시 곱하면 어떤 오류가 생기는지 Tutor와 확인하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "η, λ, Power를 따로 바꿔 보세요",
+      "scene": "detector",
+      "html": "<p>η_ext를 0.5 → 0.8 → 1.0으로 바꾸고 R과 Photocurrent가 같은 비율로 달라지는지 확인하세요. Power만 바꾸면 R은 유지되며 Current만 바뀝니다. λ를 바꿀 때는 고정 η라는 가정이 실제 Material Spectrum과 다른 점을 설명해 보세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "흡수와 수집을 구별합니다",
+      "scene": "detector",
+      "html": "<ul><li>Photon Energy와 Photon Flux는 다른 양입니다.</li><li>Generation과 Collection을 거쳐야 외부 Current가 생깁니다.</li><li>QE와 R은 Reference Plane을 공유해야 합니다.</li><li>Responsivity [A/W]와 Photocurrent [A]는 구별합니다.</li></ul><p>다음은 같은 전하를 얼마나 빨리 수집할 수 있는지 살펴보겠습니다.</p>"
+    }
+  ],
+  "prediction": "η_ext를 높이고 입력 Power는 고정하면?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "R과 I가 같은 비율로 증가",
+    "R만 증가하고 I는 일정",
+    "I와 RC Bandwidth가 반드시 함께 증가"
+  ],
+  "predictionFeedback": "Unity Gain과 선형 범위에서는 R∝η_ext, I=RP입니다. RC와 Transit은 이 계산에서 결정하지 않습니다.",
+  "reflection": "Absorption Efficiency, Internal QE, External QE의 분모를 각각 적고 R과 I의 차이를 자신의 말로 설명하세요.",
+  "sources": [
+    "D0",
+    "D1",
+    "D2",
+    "D3"
+  ]
+}

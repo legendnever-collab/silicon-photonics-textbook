@@ -1,0 +1,22 @@
+{
+  "question": "Notebook에서 RC Bandwidth와 APD Mean Current를 계산했습니다. 어떤 결론이 타당할까요?",
+  "choices": [
+    {
+      "text": "RC와 Mean Current는 명시한 가정의 결과이며 Overall Bandwidth와 APD Noise/SNR에는 별도 검증이 필요합니다.",
+      "feedback": "맞습니다. 독립 입력의 교육 모델이 설명하는 범위를 구별하고 Generation/Collection Profile, External Circuit, Excess Noise 등 부족한 정보를 명시합니다.",
+      "correct": true
+    },
+    {
+      "text": "수치가 나왔으므로 실제 Ge-on-Si PDK Device 성능을 검증했습니다.",
+      "feedback": "가정한 값을 식에 넣는 일은 실제 Material/Geometry/Process의 검증과 다릅니다. 측정이나 검증된 Solver 결과가 필요합니다."
+    },
+    {
+      "text": "RC Bandwidth를 Data Rate로 보고, M배 Current에서 SNR도 M배라고 판단합니다.",
+      "feedback": "Data Rate에는 System 조건이, APD Noise에는 Excess Noise 등이 필요합니다. Current Gain과 RC만으로 Link/SNR을 결정하지 않습니다."
+    }
+  ],
+  "why": "식으로 구한 양의 이름을 정확히 읽는 것이 중요합니다. RC Pole은 종합 Device 응답이 아니며 APD Mean Current는 Noise 모델을 대신하지 않습니다.",
+  "simple": "계산표는 제한된 조건을 보여 줍니다. 무엇을 입력했고 무엇을 계산했는지 구별한 뒤, 다루지 않은 과정에는 어떤 정보가 필요한지 적어 보세요.",
+  "math": "η_ext의 각 Factor는 한 번씩 적용합니다. I_primary=RP, I_APD=M I_primary, f_RC=1/(2πRC)이며 Total f, SNR, BER을 구하는 모델은 정의하지 않았습니다.",
+  "notebook": "같은 입력에서 Figure 5.7A와 Notebook을 비교하세요. M=1의 PIN Noise 표시와 M>1에서 APD Noise가 미모델화로 전환되는 차이를 확인합니다."
+}

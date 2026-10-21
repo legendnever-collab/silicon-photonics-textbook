@@ -1,0 +1,67 @@
+{
+  "id": "5.3",
+  "short": "Ge-on-Si Fabrication",
+  "title": "How Are Silicon Photonic Detectors Fabricated?",
+  "time": "15–22분",
+  "lead": "같은 1550 nm 빛도 Material에 따라 흡수되는 정도가 다릅니다. Photon Energy와 Band Structure를 연결하고 Ge-on-Si의 제작 원리와 한계를 살펴봅니다.",
+  "question": "Silicon Waveguide의 빛을 검출하려면 왜 Germanium을 사용하는 경우가 많을까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "Guiding Material과 Absorber의 역할",
+      "scene": "detector",
+      "html": "<p>Chapter 1의 Silicon Waveguide는 Telecom 빛을 비교적 적은 흡수로 전달하는 데 유리했습니다. 그러나 그 장점이 Detector에서는 제약이 됩니다. 전달할 때는 Power를 남겨 두어야 하지만, 검출할 때는 <strong>유용한 Absorption</strong>을 만들어야 하기 때문입니다.</p><p>Chapter 3의 Coupling 이후 빛이 Absorption Region과 겹치게 설계하고, Chapter 4의 Junction 원리로 생성된 전하를 수집하면 Material 선택과 Device 구조가 연결됩니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Band Structure에서 제작 공정까지",
+      "scene": "detector",
+      "html": "<p>λ=1550 nm Photon의 Energy는 약 0.80 eV입니다. 보통 300 K 부근 Crystalline Silicon의 Indirect Bandgap은 약 1.12 eV이므로 이 Photon Energy에서 일반적인 <strong>Intrinsic Band-to-band Absorption</strong>은 약합니다. 모든 Silicon 흡수가 완전히 0이라는 뜻은 아닙니다. Defect-assisted Process, Free-carrier Absorption 등은 다른 물리 과정입니다.</p><p>Germanium은 Indirect Gap 약 0.66 eV, Direct Gap 약 0.80 eV 부근의 Band Structure를 가지며 Telecom Detector에 유용합니다. 하지만 Bandgap 숫자 하나가 Absorption Coefficient를 결정하지는 않습니다. 특히 1550 nm 부근에서 <strong>Strain, Temperature, Composition, Transition Probability</strong>가 Optical Absorption을 바꿉니다. Notebook은 Energy만 비교하며 Ge의 Spectrum을 생성하지 않습니다.</p><p><strong>Ge-on-Si Integration</strong>은 Silicon Waveguide에서 전파한 Mode를 Ge Absorption Region에 전달하고 PIN Junction과 Contacts를 형성하는 접근입니다. 자체 Cross-section은 가능한 구조의 원리를 설명하는 개념도이며 Foundry Mask Stack이 아닙니다. 광 전파 방향 z와 Carrier 수집 방향 x를 분리해서 읽어야 합니다.</p><p>개념적인 제작 흐름은 Silicon Guiding Region과 성장 영역 준비, Ge Epitaxial Growth, Junction/Contact 형성, Passivation과 전기·광학 시험입니다. 실제 Implant, Anneal, Selective Growth, Planarization, Metal 순서는 공정에 따라 다릅니다. 여기서는 임의의 온도·두께·Mask 번호나 공정 Recipe를 제시하지 않습니다.</p><p>Si/Ge의 Lattice Mismatch와 Thermal History는 Defect와 Interface State에 영향을 줄 수 있습니다. 이들은 Recombination과 Dark Current를 바꾸므로 Absorption만 좋게 만드는 것으로는 충분하지 않습니다. Epitaxial Quality, Surface Passivation, Contact Resistance를 함께 검증해야 실제 Photo Response를 알 수 있습니다. 높은 Absorption이 높은 Collection을 자동으로 보장하지 않는다는 5.1의 구분이 다시 중요합니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "Energy 비교의 정확한 범위",
+      "scene": "detector",
+      "html": "<div class=\"equation\">E_ph [eV] ≈ 1239.84 / λ[nm]<br>1550 nm → E_ph ≈ 0.800 eV</div><p>300 K 부근의 Si Eg≈1.12 eV, Ge Indirect Eg≈0.66 eV, Direct Eg≈0.80 eV는 에너지 위치를 설명하는 대략적 값입니다. 흡수 확률이나 실제 Detector QE를 이 값만으로 계산하지 않습니다. Gap에는 Temperature와 Strain 의존성이 있습니다.</p><div class=\"worked\"><h3>Worked Example · Energy 조건과 성능 예측의 차이</h3><p>1550 nm에서 0.80 eV&lt;Si의 보통 Bandgap이므로 일반적인 Intrinsic Si는 효율적인 Telecom Absorber로 쓰기 어렵습니다. Ge에서는 유용한 전이가 가능하지만, 이 사실만으로 η_ext=1이나 특정 R, Bandwidth를 지정할 수는 없습니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "Si와 Ge의 역할을 연결합니다",
+      "scene": "detector",
+      "html": "<p>Bandgap 비교는 출발점입니다. Si가 빛을 잘 전달한다는 사실과 Ge가 Detector에 유용하다는 사실을 하나의 Optical Path로 연결해 보세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "Energy와 Device Response를 혼동하지 마세요",
+      "scene": "detector",
+      "html": "<p>Notebook의 λ를 바꿔 E_ph가 어떻게 변하는지 보세요. 그림 속 Absorber의 크기나 색은 바뀌지 않습니다. Material Absorption Spectrum을 계산하지 않기 때문입니다. Epitaxial Defect가 광학과 전기 응답 중 어느 쪽에 영향을 주는지도 적어 보세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "제작은 전하 수집 품질에도 영향을 줍니다",
+      "scene": "detector",
+      "html": "<ul><li>Telecom에서 Si의 낮은 Intrinsic Absorption은 Guiding에 유용하지만 검출에는 제약입니다.</li><li>Ge-on-Si는 Absorption과 Silicon Integration을 연결합니다.</li><li>Bandgap은 실제 Absorption Spectrum 또는 QE가 아닙니다.</li><li>Fabrication Defect와 Interface Quality는 Dark Current와 Collection에 영향을 줍니다.</li></ul><p>다음은 서로 다른 Detector Architecture가 전하를 처리하는 방법입니다.</p>"
+    }
+  ],
+  "prediction": "λ를 길게 하면 Photon Energy는?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "작아짐",
+    "커짐",
+    "Material Gap과 무조건 같아짐"
+  ],
+  "predictionFeedback": "E_ph=hc/λ이므로 λ 증가 시 Energy는 감소합니다. Bandgap은 독립적인 Material Property이며 Spectrum은 별도 정보가 필요합니다.",
+  "reflection": "Si Guiding과 Ge Absorption의 역할 및 Bandgap 비교만으로 실제 Detector QE를 결정할 수 없는 이유를 설명하세요.",
+  "sources": [
+    "D0",
+    "D1",
+    "D2",
+    "D3"
+  ]
+}

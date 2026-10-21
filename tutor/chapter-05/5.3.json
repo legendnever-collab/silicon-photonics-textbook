@@ -1,0 +1,22 @@
+{
+  "question": "1550 nm의 Photon Energy와 Si Bandgap 비교에서 어떤 결론을 내릴 수 있나요?",
+  "choices": [
+    {
+      "text": "Si에서 모든 광학적 Loss가 정확히 0입니다.",
+      "feedback": "Intrinsic Band-to-band Absorption이 약하다는 것과 모든 Loss가 0이라는 것은 다릅니다. Defect/Free-carrier/Scattering Loss는 남을 수 있습니다."
+    },
+    {
+      "text": "Ge의 실제 External QE는 자동으로 100%입니다.",
+      "feedback": "Ge가 유용한 Absorber여도 Coupling, Spectrum, Collection, Interface Defect와 Geometry를 계산해야 실제 QE를 예측할 수 있습니다."
+    },
+    {
+      "text": "일반적인 Si의 Intrinsic Absorption은 약하며, Ge의 유용성은 별도 Material/Device 조건과 함께 판단합니다.",
+      "feedback": "맞습니다. Photon Energy 비교는 전이 가능성을 이해하는 단계이며 Absorption Coefficient나 실제 QE를 대신하지 않습니다.",
+      "correct": true
+    }
+  ],
+  "why": "Band Structure는 필요한 물리 조건이지만 Optical Mode Overlap, Absorption 확률과 Carrier 수집 효율까지 결정하지 않습니다.",
+  "simple": "문을 통과할 Energy가 충분해도 모든 Photon이 문에 도달하고 전하로 수집되는 것은 아닙니다. Material과 Device를 구별하세요.",
+  "math": "E_ph=hc/λ로 1550 nm에서 약 0.80 eV입니다. 이 에너지 비교에 η_ext=1을 자동으로 대입하는 계산은 정당화되지 않습니다.",
+  "notebook": "λ Slider는 Photon Energy만 바꿉니다. Cross-section과 Fabrication Flow는 비축척 Conceptual이며 실제 PDK Stack이나 Spectrum이 아닙니다."
+}

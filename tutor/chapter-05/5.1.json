@@ -1,0 +1,22 @@
+{
+  "question": "1550 nm에서 External QE가 80%라면 Reference Plane의 Photon 100개 중 평균 몇 개가 검출 전하에 기여하나요?",
+  "choices": [
+    {
+      "text": "80개입니다. 이 η_ext에는 정의된 Plane 뒤의 Coupling Loss도 포함됩니다.",
+      "feedback": "맞습니다. 평균 80개이며 실제 사건 수는 변동합니다. Absorption만의 비율이 아니라 수집까지 포함한 External QE입니다.",
+      "correct": true
+    },
+    {
+      "text": "160개입니다. Electron과 Hole이 각각 전하를 만들기 때문입니다.",
+      "feedback": "한 Pair의 두 Carrier가 외부 회로에 기여하는 총 전하는 완전 수집 시 q입니다. 2q로 두 배 계산하지 않습니다."
+    },
+    {
+      "text": "80개에서 Coupling Efficiency를 반드시 한 번 더 곱합니다.",
+      "feedback": "External QE에 이미 Coupling이 들어 있으면 중복 계산입니다. Plane을 바꾸거나 Factorized QE를 정의했을 때만 별도로 계산합니다."
+    }
+  ],
+  "why": "Photon Flux와 수집 전하의 비율을 먼저 정의해야 Optical Coupling과 Carrier Collection의 손실을 중복 적용하지 않습니다.",
+  "simple": "입구를 지난 100개 중 최종 출구까지 기여한 80개를 셌다면, 중간 입구 손실을 다시 빼면 같은 손실을 두 번 세게 됩니다.",
+  "math": "Φ=P/(hc/λ), I=η_ext qΦ이므로 R=I/P=η_ext qλ/(hc)입니다. Photon 1개당 완전 수집 Pair 1개에서 q가 기여합니다.",
+  "notebook": "η_ext Slider는 이미 합성된 QE입니다. Power를 바꿔 Current와 R을 비교하고 5.5에서 Factorized QE와 연결하세요."
+}

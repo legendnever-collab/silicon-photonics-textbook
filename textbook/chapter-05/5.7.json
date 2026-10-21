@@ -1,0 +1,67 @@
+{
+  "id": "5.7",
+  "short": "Detector Design Review",
+  "title": "Detector Design Review and Worked Problems",
+  "time": "15–22분",
+  "lead": "Photon Energy부터 Responsivity, Absorption, RC, Dark-current Noise까지 명시한 가정으로 연결합니다. 계산 가능한 양과 실제 Device에서 추가 검증할 양을 나누어 설명합니다.",
+  "question": "Detector Specification을 보면 어떤 Reference Plane과 물리적 제한부터 확인해야 할까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "수치 계산 전에 Reference Plane을 확인합니다",
+      "scene": "detector",
+      "html": "<p>지금까지 배운 식을 조합하기 전에 입력의 정의를 확인합니다. Reference Plane이 Fiber 입력인지, Waveguide인지, Absorber 입구인지에 따라 같은 Device라도 External R의 의미가 달라집니다. Input Power와 QE의 분모가 같은 위치를 기준으로 하는지 먼저 확인하세요.</p><p>이번 Review는 계산 결과의 전제와 한계를 설명하는 Engineering Exercise입니다. 원서 7.6 Problems와 7.7 Code Listings는 본문에 접근하지 못했으므로, 여기서는 독자 작성한 Worked Problems와 공개 JS 모델을 사용합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "계산과 Engineering Interpretation",
+      "scene": "detector",
+      "html": "<p><strong>Step 1 · Photon Energy와 Reference Plane</strong>. 1550 nm에서 Photon Energy는 약 0.80 eV입니다. Power를 측정하는 Plane을 Detector Coupling 앞의 Waveguide로 정의하고, 그 뒤의 Coupling/Absorption/Collection을 Factorized QE에 각각 한 번씩 반영합니다. 5.1의 독립 η_ext 입력과 다른 방식이므로 기존의 External QE를 추가로 곱하지 않습니다.</p><p><strong>Step 2 · Unity-gain R과 Primary Current</strong>. α_eff와 L에서 η_abs를 계산하고, η_ext를 구성한 뒤 R=η_ext qλ/(hc), I_primary=RP로 진행합니다. Unity-gain Ideal Limit과 가정한 η_ext의 R을 나누어 읽으세요. Dark Current는 입사 Power로 생긴 전류가 아니므로 Photo Current에 섞지 않습니다.</p><p><strong>Step 3 · Electrical Response</strong>. R_eq와 C_total에서 First-order RC만 계산합니다. Carrier의 W/v는 별도의 시간 척도입니다. 실제 Overall Bandwidth에는 Carrier Impulse Response, Field/Generation Profile, Contact/Interconnect와 외부 회로가 필요합니다. GHz를 그대로 Gb/s로 변환해 Link 성능을 선언하지 않습니다.</p><p><strong>Step 4 · Noise와 Architecture</strong>. M=1에서는 독립 입력 Noise B에 대한 단순 Poisson Shot Noise를 표시합니다. Dark-only Contribution도 따로 확인합니다. M&gt;1이면 평균 Photo Current만 계산하고 APD Noise와 SNR은 미모델화 상태로 표시합니다. PIN 식을 그대로 적용해 SNR 개선을 예측하지 않습니다.</p><p><strong>Step 5 · Design Interpretation</strong>. 높은 Absorption이 짧은 Transit 시간이나 작은 C를 보장하지는 않습니다. Ge-on-Si에서는 Material과 Interface, Contact Geometry, Doping, Bias, Optical Mode, Temperature를 검증해야 합니다. 이번 식은 각 요소의 역할을 이해하는 도구이며 Fabricated Device의 Spec이나 PDK를 생성하지 않습니다. 계산 결과와 Model Boundary를 함께 설명하세요.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "동일 입력으로 재현 가능한 계산",
+      "scene": "detector",
+      "html": "<div class=\"equation\">E = hc/λ<br>η_abs = 1−exp(−α_eff L)<br>η_ext = η_coupling η_abs η_collection<br>R_ext = η_ext qλ/(hc)<br>I_primary = R_ext P<br>f_RC = 1/(2π R_eq C_total)<br>i_dark,rms = √(2q I_dark B), M=1</div><div class=\"worked\"><h3>Worked Example · 재현 가능한 Detector Ledger</h3><p>λ=1550 nm, P=100 µW, α_eff=1000 cm⁻¹, L=20 µm, Coupling=0.9, Collection=0.9를 가정합니다. E≈0.7999 eV, Unity-gain Limit≈1.2502 A/W, η_abs≈0.8647, η_ext≈0.7004, R_ext≈0.8756 A/W, I_primary≈87.56 µA입니다.</p><p>R_eq=50 Ω, C_total=100 fF에서 f_RC≈31.83 GHz입니다. I_dark=10 nA, B=10 GHz이면 Dark-only Shot Noise≈5.66 nA rms입니다. M=5를 가정하면 평균 Photo Current≈437.8 µA이지만 APD Noise는 이 표로 계산할 수 없습니다.</p></div><p>Practice A: P를 절반으로 줄이면 R과 Current 중 무엇이 변하는지 계산하세요. Practice B: C를 절반으로 줄여 RC와 Transit을 구별하세요. Practice C: Collection을 절반으로 줄여도 Absorption Curve는 유지되는 이유를 설명하세요.</p><p>Code Connection: notebook/ch5-models.js의 photon, current, rc, shot, absorption, externalQE 함수와 입력 단위를 연결해 보세요. 각 함수의 결과는 실제 Device Spec이 아닌 명시적 모델의 출력입니다.</p>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "표의 수치로 어떤 결론까지 내릴 수 있나요?",
+      "scene": "detector",
+      "html": "<p>출력된 수치 가운데 실제 Overall Device Bandwidth나 SNR까지 설명하는 양이 있을까요? Tutor에서 모델이 뒷받침하는 결론을 선택하고, 부족한 입력과 물리 과정을 적어 보세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "Worked Problems를 재현합니다",
+      "scene": "detector",
+      "html": "<p>Notebook에서 Baseline을 재현한 뒤 P, Collection, C, M을 한 번에 하나씩 바꾸세요. 입력 단위와 Reference Plane을 기록하고 Figure 5.7A의 결과와 비교합니다. M&gt;1이면 Noise 항목이 미모델화로 전환되는지도 확인하세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "Chapter Summary와 학습의 되돌아보기",
+      "scene": "detector",
+      "html": "<div class=\"chapter-review\"><h3>Chapter 5 Summary · 빛에서 전류까지</h3><p>Photon Absorption → Electron–Hole Generation → Drift/Diffusion → Collection → Current를 설명할 수 있나요? η와 R, R과 I, Absorption과 External QE를 구별하면 수치를 물리적으로 해석할 수 있습니다.</p><ul><li>RC와 Transit은 서로 다른 제한이며 Bandwidth와 Data Rate도 다릅니다.</li><li>Ge는 Telecom에서 유용한 흡수를 제공하지만 Material Quality와 Interface는 Collection/Dark에도 영향을 줍니다.</li><li>PIN은 Unity-gain Drift Collection, APD는 Impact Ionization과 Noise/Speed Trade-off를 구분합니다.</li><li>Orientation, Length, Width/Height, Contacts, External Load를 함께 검토합니다.</li><li>Optical Solver는 유용한 Generation을, Electronic Solver는 Collection과 응답을 다룹니다.</li></ul><p>모델 수치를 실측이나 PDK Spec으로 부르지 않고 미계산 물리를 명시하세요. 후속 System Design에서는 TIA/DSP 등의 역할이 추가됩니다. 이번 Release의 학습 범위는 Chapter 5까지입니다.</p></div>"
+    }
+  ],
+  "prediction": "P만 절반으로 줄이고 나머지 입력은 고정하면?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "R은 일정하고 Primary Current는 절반",
+    "R과 Current가 모두 반드시 절반",
+    "실제 Bandwidth가 반드시 두 배"
+  ],
+  "predictionFeedback": "선형 교육 모델에서 R은 QE와 λ로 결정되고 I=RP이므로 P만 절반으로 줄이면 Current가 절반입니다. Saturation/Heating 등의 Feedback은 포함하지 않습니다.",
+  "reflection": "Photon에서 Current까지의 전 과정, RC/Transit, Ge/PIN/APD와 Geometry의 Trade-off를 설명하고 이번 모델이 예측하지 못하는 물리량을 3개 적으세요.",
+  "sources": [
+    "D0",
+    "D1",
+    "D2",
+    "D3"
+  ]
+}

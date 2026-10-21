@@ -1,0 +1,22 @@
+{
+  "question": "APD의 M을 크게 하면 Responsivity와 SNR은 항상 함께 좋아질까요?",
+  "choices": [
+    {
+      "text": "아닙니다. 평균 Photo Current는 커지지만 Excess Noise와 응답 시간을 함께 고려해야 합니다.",
+      "feedback": "맞습니다. Mean Gain은 Signal을 키우지만 Multiplication Noise와 Build-up, Receiver 조건이 있어 SNR의 단조 개선을 보장하지 않습니다.",
+      "correct": true
+    },
+    {
+      "text": "예. M배 늘어난 Current는 모두 Noise 없는 Signal입니다.",
+      "feedback": "Impact Ionization은 확률적입니다. Excess Noise를 제외한 Mean Current 계산만으로 Noise 없는 증폭이라고 할 수 없습니다."
+    },
+    {
+      "text": "예. Unity-gain PIN Shot Noise 식에 I_photo만 M배 대입하면 APD Noise가 완성됩니다.",
+      "feedback": "APD Noise에는 Excess Noise Factor와 Multiplication 위치별 Dark Current 등이 필요합니다. PIN 식을 그대로 사용하지 않습니다."
+    }
+  ],
+  "why": "흡수 확률과 수집 확률은 Primary QE이며, Avalanche Gain은 수집 전하가 증폭되는 별도의 확률 과정입니다. Noise와 Build-up도 고려해야 합니다.",
+  "simple": "작은 소리를 크게 틀어도 잡음이 함께 커지고 증폭 과정이 새 잡음을 만들 수 있습니다. 출력 크기만으로 더 잘 들린다고 결론내릴 수 없습니다.",
+  "math": "I_APD=M R_unity P는 평균 Photo Current 관계입니다. Noise에는 M²와 Excess Noise 등 별도 모델이 필요해 이번 Notebook에서 계산하지 않습니다.",
+  "notebook": "M Slider는 Primary Current를 유지하고 Multiplied Mean Current만 바꿉니다. APD에서는 PIN Noise 수치를 표시하지 않습니다."
+}

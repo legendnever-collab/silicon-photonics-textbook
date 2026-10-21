@@ -1,0 +1,22 @@
+{
+  "question": "Detector Length가 Absorption을 높일 수 있는데 왜 실제 Design에 제한을 둘까요?",
+  "choices": [
+    {
+      "text": "Length가 늘면 실제 Bandwidth는 어떤 구조에서도 정확히 반비례로 감소하기 때문입니다.",
+      "feedback": "보편적인 L→Bandwidth 법칙은 없습니다. Optical Length와 Carrier 경로, Capacitance의 관계는 Junction/Contact Geometry에 따라 다릅니다."
+    },
+    {
+      "text": "Absorption 이득은 포화되며 Geometry/Contacts/Load와 함께 Collection, Capacitance와 Footprint를 검토해야 합니다.",
+      "feedback": "맞습니다. 단순 Absorption 개선만으로 실제 전기 응답이나 최적 Geometry를 결정하지 않습니다. 명시한 모델과 독립 검증이 필요합니다.",
+      "correct": true
+    },
+    {
+      "text": "Absorption Efficiency가 곧 External QE이므로 나머지는 무시할 수 있습니다.",
+      "feedback": "Coupling과 Collection 손실이 남을 수 있습니다. Factorized η_ext는 각 정의된 Efficiency를 중복 없이 한 번씩 곱합니다."
+    }
+  ],
+  "why": "길이로 늘어나는 유용한 Absorption은 포화되지만 Contacts, Geometry와 전기적 경로의 비용은 별도입니다. 플랫폼마다 다른 상관관계를 검증해야 합니다.",
+  "simple": "빛을 잡는 통로를 길게 하는 것과 전하가 출구까지 이동하는 방향은 다를 수 있습니다. 들어온 양과 실제 배출 속도를 따로 확인하세요.",
+  "math": "η_abs=1−exp(−α_eff L)이고 η_ext=η_coupling η_abs η_collection입니다. τ_tr=W/v와 f_RC=1/(2πRC)는 별도 입력입니다.",
+  "notebook": "Length를 바꿔도 C와 W는 그대로입니다. 임의 Device Correlation을 숨겨 넣지 않았기 때문입니다. 직접 C/W를 바꿔 구별하세요."
+}

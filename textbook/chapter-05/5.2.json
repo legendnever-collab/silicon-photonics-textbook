@@ -1,0 +1,67 @@
+{
+  "id": "5.2",
+  "short": "Response & Noise",
+  "title": "What Limits Photodetector Bandwidth?",
+  "time": "15–22분",
+  "lead": "빛의 흡수는 빠르게 일어나도 전하 이동과 전기 회로의 충전은 시간이 걸립니다. Transit, RC와 Dark Current를 서로 다른 원인으로 나누어 학습합니다.",
+  "question": "빛을 전류로 바꿀 수 있다면 왜 무한히 빠른 Optical Signal을 검출할 수 없을까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "전하와 회로 모두 시간이 필요합니다",
+      "scene": "detector",
+      "html": "<p>Chapter 4에서 Lumped RC가 Modulator의 응답을 늦추는 것을 배웠습니다. Detector에도 Capacitance가 있으며, 여기에 <strong>Carrier를 수집하는 시간</strong>이 추가됩니다. 좋은 Absorber가 곧 빠른 Detector라는 결론은 성립하지 않습니다.</p><p>Bandwidth는 정해진 Small-signal 입력과 출력 사이의 Frequency Response를 설명합니다. Bit Rate는 Modulation, Coding, Receiver와 Noise에 의존하므로 두 숫자를 바로 같은 것으로 두지 않습니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "이동 시간, 충전 시간, 어두울 때의 전류",
+      "scene": "detector",
+      "html": "<p><strong>Transit Time</strong>은 Carrier가 생성된 위치에서 수집될 때까지 이동하는 시간과 관련됩니다. 높은 Electric Field에서는 Drift가 빨라질 수 있으나 Velocity Saturation, 서로 다른 Electron/Hole 속도, Recombination과 Diffusion Tail이 실제 응답을 바꿉니다. 광 전파 방향의 Detector Length와 Junction을 가로지르는 Carrier 이동 거리는 일반적으로 다른 방향입니다.</p><p>상수 Drift Velocity v를 가정하면 이동 거리 W에 대해 τ_tr≈W/v라는 시간 척도를 얻습니다. 그러나 생성 위치마다 두 Carrier의 경로가 다르고 유도 Current Impulse Shape도 다르므로 <strong>1/τ_tr를 실제 −3 dB Bandwidth라고 단정하지 않습니다.</strong> 이번 Notebook은 Transit 시간만 표시합니다.</p><p><strong>RC Response</strong>는 Junction, Pad, Interconnect, Load의 총 Capacitance C_total이 Small-signal Equivalent Resistance R_eq를 통해 충방전되는 효과입니다. R_eq는 단순히 어느 Resistor 하나의 값으로 가정하지 말고 사용한 Equivalent Circuit에서 정의해야 합니다. Notebook에서는 전체를 독립적인 입력 두 개로 지정한 First-order Model만 풉니다.</p><p><strong>Dark Current</strong>는 입사 Power가 0이어도 Bias와 Temperature에서 흐를 수 있는 Current입니다. Thermal Generation, Interface/Defect States, Surface Leakage 등이 원인이 될 수 있습니다. 평균 DC Current와 그 통계적 Noise는 다른 물리량입니다. Dark Offset을 빼도 Shot Noise는 사라지지 않습니다.</p><p>이상적인 Poisson 전하 사건의 단순 Shot-noise Model에서는 Photo와 Dark Current가 Noise Variance에 기여합니다. Noise를 적분하는 <strong>Equivalent Electrical Noise Bandwidth B</strong>는 독립 입력이며 자동으로 f_RC와 같지 않습니다. Thermal Noise, TIA Noise, 1/f Noise, APD Excess Noise는 포함하지 않습니다. APD Gain에 이 식을 그대로 적용하지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "서로 다른 모델을 분리해서 씁니다",
+      "scene": "detector",
+      "html": "<div class=\"equation\">τ_RC = R_eq C_total<br>f_RC = 1/(2π R_eq C_total)<br>|H_RC(f)| = [1+(f/f_RC)²]⁻¹ᐟ²<br>τ_tr ≈ W/v_drift<br>i_shot,rms = √[2q(I_primary + I_dark)B]</div><p>R_eq [Ω], C_total [F], f [Hz], W [m], v [m/s], B [Hz]로 계산합니다. f_RC에서 Amplitude는 1/√2, Power는 1/2로 −3.0103 dB입니다. 서로 다른 물리적 응답을 근거 없이 합친 Total Bandwidth는 제공하지 않습니다.</p><div class=\"worked\"><h3>Worked Example · 두 시간 척도</h3><p>R_eq=50 Ω, C_total=100 fF라면 τ_RC=5 ps, f_RC≈31.83 GHz입니다. W=1 µm, v=10⁵ m/s이면 τ_tr=10 ps입니다. 이 두 숫자만으로 실제 전체 Bandwidth를 결정할 수는 없습니다.</p><p>I_primary=100 µA, I_dark=10 nA, B=10 GHz라면 총 단순 Shot Noise≈0.566 µA rms, Dark-only≈5.66 nA rms입니다. 두 rms를 더하지 말고 제곱을 더합니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "Capacitance를 줄이면 언제나 빨라질까요?",
+      "scene": "detector",
+      "html": "<p>Capacitance를 절반으로 줄였을 때 이 RC 모델의 f_RC는 두 배가 됩니다. Carrier 수집이 지배적인 Device에서도 같은 개선이 나타날지 Tutor와 구분해 보세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "한 번에 하나의 원인을 바꾸세요",
+      "scene": "detector",
+      "html": "<p>C_total을 100→50 fF로 줄이고 RC Curve와 수치를 비교하세요. W를 늘리면 Transit 시간이 바뀌지만 RC Curve는 그대로입니다. B를 네 배로 키우면 Shot Noise rms는 두 배가 되는지도 확인하세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "물리적 제한을 구분합니다",
+      "scene": "detector",
+      "html": "<ul><li>RC와 Transit은 원인이 서로 다른 제한입니다.</li><li>Dark Current의 평균과 Shot Noise rms를 구별합니다.</li><li>Noise B와 RC −3 dB Frequency는 같은 정의가 아닙니다.</li><li>Bandwidth만으로 Data Rate를 예측하지 않습니다.</li></ul><p>다음은 Telecom 빛을 흡수할 Material과 Ge-on-Si 공정을 배웁니다.</p>"
+    }
+  ],
+  "prediction": "C_total만 절반으로 줄이면?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "RC f는 두 배, Transit 시간은 일정",
+    "모든 Device의 총 Bandwidth가 정확히 두 배",
+    "Dark Current가 반드시 절반"
+  ],
+  "predictionFeedback": "독립 입력 RC 모델에서는 f_RC가 두 배입니다. Transit, Dark Current, 실제 Device의 총 Bandwidth를 이 변화만으로 예측하지 않습니다.",
+  "reflection": "Capacitance 감소만으로 전체 Bandwidth를 보장할 수 없는 이유와 Dark Current DC 및 Shot Noise rms의 차이를 설명하세요.",
+  "sources": [
+    "D0",
+    "D1",
+    "D2",
+    "D3"
+  ]
+}
