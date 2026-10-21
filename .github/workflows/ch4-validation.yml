@@ -25,6 +25,12 @@ jobs:
           npm run build
           cmp /tmp/ch4-sha dist/CH4_SHA256SUMS.txt
           cd dist && sha256sum -c CH4_SHA256SUMS.txt
+      - name: Install browser validation dependencies
+        run: |
+          npm install --no-save --no-package-lock playwright@1.62.0
+          npx playwright install --with-deps chromium
+      - name: Chapter 4 browser interactions and offline test
+        run: npm run test:ch4:browser
       - name: Upload offline HTML for study review
         uses: actions/upload-artifact@v4
         with:
@@ -33,4 +39,5 @@ jobs:
             dist/silicon-photonics-textbook-v0.4.0.html
             dist/CH4_SHA256SUMS.txt
             dist/ch4-build-info.json
+            artifacts/v0.4.0/browser-results.json
           retention-days: 30
