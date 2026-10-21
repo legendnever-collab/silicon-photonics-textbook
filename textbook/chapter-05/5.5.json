@@ -1,0 +1,67 @@
+{
+  "id": "5.5",
+  "short": "Geometry & Contacts",
+  "title": "How Geometry Changes Detector Performance",
+  "time": "15–22분",
+  "lead": "Optical Length를 늘려 Absorption을 높이는 일과 Carrier 경로를 줄여 빠르게 수집하는 일은 같은 방향의 문제가 아닙니다. Junction, Contacts, Load를 함께 읽습니다.",
+  "question": "Detector를 크게 만들면 빛을 더 많이 흡수하니 언제나 더 좋은 설계일까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "Optical과 Electrical Design을 함께 읽습니다",
+      "scene": "detector",
+      "html": "<p>Chapter 1의 Mode와 Chapter 3의 Coupling을 설계해 Absorber에 빛을 보내더라도, Geometry는 Optical과 Electrical Domain에 서로 다른 영향을 줍니다. <strong>길수록 좋다</strong> 또는 <strong>작을수록 빠르다</strong>라는 단일 규칙으로 Device를 결정할 수 없습니다.</p><p>원서의 Junction Orientation → Geometry → Contacts → External Load 순서로 변수를 구분하고 계산 가능한 Absorption만 정량화하겠습니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Orientation에서 External Load까지",
+      "scene": "detector",
+      "html": "<p><strong>PIN Junction Orientation</strong>이 Lateral이면 Carrier가 주로 옆 방향으로, Vertical이면 두께 방향으로 수집될 수 있습니다. Optical Propagation은 Waveguide를 따라 진행하므로 Absorption Length와 Transit Distance가 독립적으로 설계될 여지가 있습니다. 실제 전기장은 2D/3D이고 전하 생성 위치도 분포하므로 개념도의 화살표를 균일한 Field 해로 읽지 않습니다.</p><p><strong>Detector Length L</strong>은 가정한 α_eff 아래에서 Absorption을 증가시킵니다. 그러나 충분히 긴 영역에서는 남은 Power가 작아져 추가 길이의 효과가 줄어듭니다. Waveguide 반사, Mode Evolution, Contact Absorption과 비균일 Ge가 있으면 단순 지수 모델과 달라질 수 있습니다.</p><p><strong>Width / Height</strong>는 Optical Mode Overlap, Junction Area, Depletion Width와 Carrier 수집 경로를 바꿀 수 있습니다. Area가 커지면 특정 평행판 가정에서는 C≈εA/d가 증가할 수 있으나 Fringing, 실제 Junction Profile, Pad Parasitics가 추가됩니다. 이 Chapter는 Length→Capacitance의 임의 상관식을 만들지 않습니다. C_total과 W를 각각 독립 입력으로 두어 가정의 위치를 드러냅니다.</p><p><strong>Contact Material</strong>은 Optical Absorption, Contact Resistance, Schottky/Ohmic 특성과 공정 호환성에 영향을 줍니다. <strong>Contact Geometry</strong>를 Mode에서 멀리 두면 Metal Optical Loss를 줄일 수 있지만 Carrier 경로와 Series Resistance가 달라질 수 있습니다. 좁은 Contact가 무조건 좋다고 단정할 수 없습니다. 전하 수집의 균일성, Current Crowding과 Fabrication Margin도 중요합니다.</p><p><strong>External Load</strong>는 Small-signal R_eq와 C_total에 포함되는 외부 회로의 일부입니다. 특정 Detector 단독의 Junction C만 줄여도 Pad와 Load가 지배하면 RC 개선은 작을 수 있습니다. Contact/Geometry를 바꾸며 얻는 Absorption 증가가 Transit 또는 RC 변화와 어떤 관계인지는 실제 구조와 Model이 필요합니다. 이번 Figure는 구조적 Trade-off를 설명하며 최적 Device를 자동 추천하지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "Effective Power Absorption의 한계",
+      "scene": "detector",
+      "html": "<div class=\"equation\">P(z)/P(0) = exp(−α_eff z)<br>η_abs(L) = 1 − exp(−α_eff L)<br>η_ext = η_coupling η_abs η_collection<br>R_ext = η_ext qλ/(hc)</div><p>α_eff [cm⁻¹]와 L [µm]는 α_eff L×10⁻⁴로 무차원화합니다. α_eff는 Guided Power의 유효 흡수계수라는 독립 가정이며 Field Amplitude 감쇠계수가 아닙니다. η_collection은 흡수된 Photon당 수집된 Pair 비율로 정의합니다.</p><div class=\"worked\"><h3>Worked Example · 흡수와 External QE</h3><p>α_eff=1000 cm⁻¹, L=20 µm이면 η_abs≈0.8647입니다. Coupling=0.9, Collection=0.9이면 η_ext≈0.7004, 1550 nm에서 R_ext≈0.8756 A/W입니다. 이미 이 방식으로 만든 η_ext에 Absorption을 또 곱하지 않습니다.</p><p>L=40 µm이면 η_abs≈0.9817이지만, 실제 Capacitance나 Device Bandwidth는 이 식만으로 결정되지 않습니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "Length 증가의 대가를 설명하세요",
+      "scene": "detector",
+      "html": "<p>Absorption Curve가 포화되는 것과 Electrical Load가 커질 수 있는 이유를 따로 설명해 보세요. 길이 제한에는 Footprint와 공정 제약도 있지만 이들을 하나의 가짜 최적화 점수로 합치지 않습니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "입력의 독립성을 확인합니다",
+      "scene": "detector",
+      "html": "<p>L과 α_eff만 바꿔 Absorption/η_ext/R을 확인하세요. 이어 독립 C_total과 Transit W를 바꿔 보세요. L만 바꿀 때 이 두 입력이 자동 변경되지 않는 이유는 실제 Device의 상관관계를 가정하지 않았기 때문입니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "크기와 성능의 관계에는 가정이 필요합니다",
+      "scene": "detector",
+      "html": "<ul><li>Optical Propagation Length와 Carrier Transit Distance는 다릅니다.</li><li>Absorption은 길이에 따라 포화될 수 있습니다.</li><li>Width/Height, Contact Material/Geometry와 External Load는 별도 검토 대상입니다.</li><li>η_ext의 Factor를 한 번씩만 적용합니다.</li></ul><p>이 관계를 실제 Geometry에서 예측하려면 어떤 Solver 정보가 필요한지 다음 Lesson에서 확인합니다.</p>"
+    }
+  ],
+  "prediction": "L만 늘리고 α와 C, W는 고정하면?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Absorption 증가·포화, 지정 RC/Transit은 일정",
+    "Carrier Transit Distance도 자동으로 같은 비율 증가",
+    "External QE가 100% 초과"
+  ],
+  "predictionFeedback": "지수 흡수 모델은 Absorption만 증가시킵니다. 실제 Geometry에 따른 C/W 변화는 별도 모델 없이는 만들지 않습니다.",
+  "reflection": "Optical Length, Carrier Transit Distance, Capacitance와 Contact Geometry를 구별하고 Absorption→External QE의 Reference Plane을 적으세요.",
+  "sources": [
+    "D0",
+    "D1",
+    "D2",
+    "D3"
+  ]
+}

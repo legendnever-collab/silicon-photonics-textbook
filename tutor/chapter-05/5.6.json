@@ -1,0 +1,22 @@
+{
+  "question": "Optical Solver에서 Absorption이 90%라면 External Quantum Efficiency도 반드시 90%일까요?",
+  "choices": [
+    {
+      "text": "예. Absorbed Optical Power는 곧 수집 전하이기 때문입니다.",
+      "feedback": "흡수 위치와 유용한 Pair Generation, Recombination과 Collection이 남아 있습니다. Metal Absorption을 유용한 Ge 흡수와 혼동하면 안 됩니다."
+    },
+    {
+      "text": "예. 큰 Optical Field를 보면 External Current를 바로 알 수 있습니다.",
+      "feedback": "Normalized Field와 Power Density, Generation Rate 및 Current는 단위가 다릅니다. Source Normalization과 Transport가 필요합니다."
+    },
+    {
+      "text": "아닙니다. Absorption Plane, Coupling, 유용한 Generation과 Collection을 확인해야 합니다.",
+      "feedback": "맞습니다. 동일한 흡수에서도 전하 수집 손실이 존재할 수 있습니다. External QE는 동일한 Reference Plane의 수집 전하/Photon 비율입니다.",
+      "correct": true
+    }
+  ],
+  "why": "Optical Solver는 전하 수집을 자동으로 해결하지 않습니다. Electrical Transport에 Generation Source와 공정/접촉/전기장 모델이 추가로 필요합니다.",
+  "simple": "빛을 잡았다는 사실과 전하가 출구까지 살아서 도착했다는 사실은 다릅니다. 잡은 위치와 이동 중 손실도 살펴야 합니다.",
+  "math": "Photon당 한 Pair라는 가정에서 G=p_abs/E_ph이며 I_ideal=q∫GdV입니다. 실제 Unity-gain Current에는 Collection과 Reference Plane의 손실이 반영됩니다.",
+  "notebook": "α/L을 유지하고 Collection을 바꾸면 Absorption Curve는 같지만 η_ext와 Current가 변합니다. 이 차이를 Optical/Electrical Domain과 연결하세요."
+}

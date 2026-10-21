@@ -110,5 +110,61 @@
     "parameters": "Mean I_photo=M I_primary, M≥1; 입력 λ, η_ext, Power는 Primary를 정의합니다.",
     "limits": "APD Noise/Excess Noise Factor/Breakdown/SNR/Operating Bias를 예측하지 않습니다.",
     "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
+  },
+  {
+    "id": "5.5A",
+    "lesson": "5.5",
+    "title": "Detector Length and Effective Absorption",
+    "classification": "Analytical",
+    "renderer": "detectorAbsorption",
+    "anchor": "#section-concept > p:first-of-type",
+    "see": "Solid는 Absorption Fraction, Dashed는 남은 Guided Power Fraction을 보여 줍니다.",
+    "notice": "L과 α_eff는 광학 흡수만 결정합니다. C/W를 독립적으로 유지합니다.",
+    "meaning": "Absorption 포화와 Collection/Coupling 손실을 분리하고 QE를 중복 곱하지 않습니다.",
+    "parameters": "η_abs=1−exp(−α_eff L×10⁻⁴), α_eff[cm⁻¹], L[µm]; Factorized η_ext.",
+    "limits": "반사/Mode Evolution, Material Spectrum, 실제 Length→Capacitance/Transit 상관관계를 포함하지 않습니다.",
+    "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
+  },
+  {
+    "id": "5.5B",
+    "lesson": "5.5",
+    "title": "Junction Orientation, Contacts and Load",
+    "classification": "Conceptual",
+    "renderer": "detectorOrientation",
+    "anchor": "#section-equation > .worked",
+    "see": "Lateral/Vertical Collection과 Optical Propagation z를 구별합니다.",
+    "notice": "Contact가 광학 흡수와 Resistance를 함께 바꿀 수 있습니다.",
+    "meaning": "Absorption, Carrier Transit, Capacitance를 같은 한 변수로 대체할 수 없습니다.",
+    "parameters": "비축척 구조; Junction C와 Pad/Load C는 별도 기여. 수치 상관식 없음.",
+    "limits": "실제 Field/Profile, Fringing Capacitance와 Contact Material 손실을 계산하지 않습니다.",
+    "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
+  },
+  {
+    "id": "5.6A",
+    "lesson": "5.6",
+    "title": "Optical Generation to Electrical Collection",
+    "classification": "Conceptual",
+    "renderer": "detectorGeneration",
+    "anchor": "#section-concept > p:first-of-type",
+    "see": "Field→Useful Absorption→Pair Generation→Transport→Current의 물리량을 구별합니다.",
+    "notice": "Metal 흡수를 모두 유용한 Ge Pair Generation으로 세면 안 됩니다.",
+    "meaning": "Optical과 Electrical Domain을 연결할 때 공간 Source와 단위 정규화가 필요합니다.",
+    "parameters": "G=p_abs,useful/E_ph는 Photon당 Pair 하나를 가정한 관계. 자체 흐름도이며 공간 해 없음.",
+    "limits": "기존 Si Scalar Profile을 실제 Ge Field/Generation Map으로 재사용하거나 주장하지 않습니다.",
+    "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
+  },
+  {
+    "id": "5.6B",
+    "lesson": "5.6",
+    "title": "Optical vs Electrical Simulation Domains",
+    "classification": "Conceptual",
+    "renderer": "detectorDomains",
+    "anchor": "#section-equation > .worked",
+    "see": "Eigenmode/FDTD와 Semiconductor Transport/TCAD의 역할을 비교합니다.",
+    "notice": "연결 정보 G(r), 좌표, Mesh, Optical Input Power의 기준이 중요합니다.",
+    "meaning": "높은 Optical Absorption도 불완전한 Collection이면 높은 External QE를 보장하지 않습니다.",
+    "parameters": "숫자는 독립적인 Coupling/Absorption/Collection의 Lumped 교육 모델입니다.",
+    "limits": "FDTD/TCAD를 실행하거나 실제 Device Geometry에 대해 검증한 결과가 아닙니다.",
+    "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
   }
 ]
