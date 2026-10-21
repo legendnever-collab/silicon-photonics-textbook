@@ -14,7 +14,8 @@
     "3.1",
     "3.2",
     "3.3",
-    "3.4"
+    "3.4",
+    "3.5"
   ],
   "sources": [
     "assets/Pretendard-LICENSE.txt",
@@ -50,6 +51,7 @@
     "textbook/chapter-03/3.2.json",
     "textbook/chapter-03/3.3.json",
     "textbook/chapter-03/3.4.json",
+    "textbook/chapter-03/3.5.json",
     "tutor/1.1.json",
     "tutor/1.2.json",
     "tutor/1.3.json",
@@ -63,8 +65,9 @@
     "tutor/chapter-03/3.1.json",
     "tutor/chapter-03/3.2.json",
     "tutor/chapter-03/3.3.json",
-    "tutor/chapter-03/3.4.json"
+    "tutor/chapter-03/3.4.json",
+    "tutor/chapter-03/3.5.json"
   ],
-  "sourceHash": "321f283d6bf262076f797f2217b3eee5a4f3eb110aaf5ccf321196e7a7a80924",
-  "htmlSha256": "97967a39cf6dee1bd8e7344fa1658edfd3ffd42ded9dae39c02a7ca5846611ec"
+  "sourceHash": "4a150bfe084181b01ae38d5fe3bc7bfdfd0b6c2ea5461000191c1b1c43fcd6b6",
+  "htmlSha256": "be36de0b6fe8910b3a9f731a274b4678017b44bd1884963f57bbdcab774ce668"
 }

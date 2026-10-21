@@ -18,6 +18,14 @@
       "status": "PASS"
     },
     {
+      "name": "IO power ledger matches worked conditions, avoids double count and handles orthogonal state",
+      "status": "PASS"
+    },
+    {
+      "name": "v2 migration is read-only, v3 resume and full backup restore preserve Ch1/2/3 notes",
+      "status": "PASS"
+    },
+    {
       "name": "all Ch3 figure zooms support Escape and restore focus",
       "status": "PASS"
     },

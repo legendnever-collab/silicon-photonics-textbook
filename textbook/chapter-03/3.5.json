@@ -1,0 +1,66 @@
+{
+  "id": "3.5",
+  "short": "I/O Ledger",
+  "title": "Engineering an Optical I/O Power Ledger",
+  "time": "15–25분",
+  "lead": "앞서 배운 공간·Phase·Polarization을 실제 입력과 출력의 Power로 연결합니다. 서로 다른 정의의 Loss를 중복해서 곱하지 않고, 계산에 포함된 채널과 빠진 채널을 설명합니다.",
+  "question": "Interface의 전체 Insertion Loss를 이미 알고 있을 때, Mode Overlap Penalty를 또 곱해도 될까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "소자의 숫자를 연결하기 전에 정의를 맞춥니다",
+      "scene": "io",
+      "html": "<p>Optical I/O를 비교할 때는 Efficiency와 Loss가 어떤 기준면, 어떤 Mode, 어떤 Polarization을 포함하는지부터 읽어야 합니다. 같은 ‘1 dB’라도 전체 Interface Loss인지, Profile Mismatch를 제외한 추가 Loss인지에 따라 연결 방법이 달라집니다. 숫자만 더하면 같은 손실을 두 번 셀 수 있습니다.</p><p>이번 마지막 Lesson은 원본의 Problems와 학습 목표를 바탕으로 새로 작성한 <strong>Guided Engineering Exercise</strong>입니다. Fiber Input → I/O Interface → On-chip Route → Output의 Power를 계산합니다. 모든 Parameter는 가정한 입력이며 특정 Foundry나 실제 장치의 추천 성능이 아닙니다. 최적화 점수나 정답 Gate 없이 자신의 설계 설명으로 Chapter를 마무리합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "각 Factor가 포함하는 채널을 먼저 적습니다",
+      "scene": "io",
+      "html": "<p>첫째, 입력 Fiber와 주어진 Facet Gaussian Profile의 <strong>Spatial Overlap ηspatial</strong>을 계산합니다. 둘째, 공통 기저의 Linear Polarization을 수신 x축에 투영해 <strong>ηpol</strong>을 구합니다. 세 번째 <strong>Residual Interface Loss</strong>는 이 두 Penalty를 <em>제외한</em> 독립 추가 손실로 정의합니다. 실제 반사나 Taper 전달을 계산한 것이 아니라 외부에서 주어진 가정입니다.</p><p>이렇게 정의할 때만 ηspatial×ηpol×ηresidual을 곱할 수 있습니다. 실제 Interface의 측정 Total IL이 이미 공간·편광·반사·연결 손실을 포함한다면, 측정값을 ηtotal로 한 번만 사용해야 합니다. 이때 공간과 편광 Penalty를 다시 곱하면 중복입니다. Factorization 자체도 공간 Profile과 Polarization이 분리된다는 이 모델의 가정이며 실제 Vector Device에서는 정확히 분리되지 않을 수 있습니다.</p><p>Chip 내부 Route에는 α[dB/cm]와 길이 L[mm]를 사용합니다. 앞선 Chapter의 dB/cm와 mm→cm 변환을 다시 적용합니다. Output Interface Loss는 <strong>Total IL</strong>로 정의해 한 번만 적용합니다. 출력에 또 Gaussian/Polarization Factor를 붙이지 않습니다.</p><p>각 단계의 Power를 순서대로 계산하면 그 단계에서 남은 Power와 감소량을 기록할 수 있습니다. 모든 단계의 감소량을 더해 최종 출력에 합하면 입력과 같아야 합니다. 다만 ‘감소량’이 어디로 갔는지까지 이 단순 Ledger가 풀지는 않습니다. 실제 Reflection/Radiation/Absorption을 나누려면 해당 채널을 가진 Solver나 측정이 필요합니다.</p><p><strong>Grating과 Edge를 비교하는 기준.</strong> Grating은 Surface 접근과 방사 Phase Matching을, Edge는 Facet 접근과 Mode 변환을 요구합니다. 실제 Bandwidth, Polarization 응답, Alignment와 공정 제약은 구현에 따라 달라집니다. 이번 Gaussian Ledger의 값을 Grating 전체의 효율로 치환하거나, 어느 방식이 항상 우수하다는 결론을 내리지 않습니다.</p><div class=\"table-wrap\"><table><thead><tr><th>검토 조건</th><th>Surface Grating</th><th>Edge Coupler</th></tr></thead><tbody><tr><th>외부 접근</th><td>Chip 윗면과 방사각</td><td>끝면·Facet/패키지 접근</td></tr><tr><th>핵심 Field 과정</th><td>주기 구조의 방사·Mode Overlap</td><td>Facet 일치와 Local Mode 변환</td></tr><tr><th>이번 정량 범위</th><td>Phase 조건과 상대 Array Factor</td><td>가정한 Profile의 Overlap</td></tr><tr><th>후속 검증</th><td>BOX/Apodization/Focusing/Vector Spectrum</td><td>Taper/Overlay/반사/3D 전달</td></tr></tbody></table></div>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "Sequential Power와 dB 계산이 같은지 확인합니다",
+      "scene": "io",
+      "html": "<div class=\"equation\">P₁=Pinηspatial<br>P₂=P₁ηpol<br>P₃=P₂10<sup>−ILresidual/10</sup><br>P₄=P₃10<sup>−(αLmm/10)/10</sup><br>Pout=P₄10<sup>−ILout/10</sup><br>Pout + Σ(Pbefore−Pafter) = Pin</div><dl class=\"terms\"><dt>Pin,Pout</dt><dd>입출력 Optical Power · mW</dd><dt>α,Lmm</dt><dd>Propagation Loss [dB/cm], Route Length [mm]; Lcm=Lmm/10</dd><dt>ILresidual</dt><dd>Spatial/Polarization을 제외한 Interface Loss · dB</dd><dt>ILout</dt><dd>출력 Interface의 Total Loss · dB, 한 번만 적용</dd></dl><div class=\"worked\"><h3>Worked Example · 1 mW 입력의 I/O Ledger</h3><p>가정한 Fiber와 Facet 반경을 모두 5.2 µm, Offset=0, Linear Polarization Error=0으로 둡니다. 따라서 ηspatial=ηpol=1입니다. Residual Interface IL=1 dB, α=3 dB/cm, L=2 mm=0.2 cm, Output Total IL=1 dB이면 Route는 0.6 dB이고 Total은 <strong>2.6 dB</strong>입니다.</p><p>Pout=1×10^(−2.6/10)≈<strong>0.549541 mW</strong>입니다. 입력 Polarization을 x축에서 45°인 Linear State로 바꾸면 ηpol=0.5가 되어 Pout≈<strong>0.274770 mW</strong>, Total≈<strong>5.610 dB</strong>입니다. 0.5를 Field Amplitude로 잘못 제곱해 0.25를 적용하면 3 dB를 추가로 중복 잃습니다.</p><p>Notebook 기본값 w₂=4.0 µm에서는 Spatial Overlap≈0.934205이므로 기본 Pout≈<strong>0.513384 mW</strong>입니다. Worked Example의 반경 5.2 µm를 먼저 넣어 비교한 뒤, 다른 조건을 한 번에 하나씩 바꿔 보세요.</p></div><details><summary>Interface의 측정 Total IL이 주어진 다른 문제</summary><p>입력 Interface Total IL이 2 dB이고 그것이 이미 정렬·편광·반사·Taper를 포함한다면, 입력 Interface의 전송은 10^(−2/10) 한 번입니다. 여기에 이번 Spatial Factor와 Polarization Factor를 다시 곱하면 안 됩니다. 이 Notebook은 Residual 정의를 사용하므로 측정 Total IL을 Residual Slider에 그대로 넣어서는 안 됩니다.</p></details>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "손실의 크기보다 정의가 먼저입니다",
+      "scene": "io",
+      "html": "<p>아래 Tutor는 중복 계산과 단위 변환을 점검합니다. 수식으로 설명을 읽은 뒤 현재 Notebook의 각 Stage가 무엇을 포함하는지 직접 말해 보세요. 자유 메모는 자동으로 채점하지 않습니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "예측을 쓰고 Ledger와 비교합니다",
+      "scene": "io",
+      "html": "<ol><li>기본 조건에서 입력과 각 Factor의 의미를 읽고 예상 Pout을 적습니다.</li><li>반경을 5.2 µm, Offset=0, Polarization Error=0으로 맞춰 Worked Example의 0.549541 mW를 확인합니다.</li><li>Polarization Error만 45°로 바꾸어 Output이 절반이 되는지 확인합니다.</li><li>Offset만 2 µm로 바꾸거나 Route Length를 바꾸어 Spatial Penalty와 Propagation Loss의 차이를 설명합니다.</li><li>각 단계 Lost Power와 최종 Pout의 합이 1 mW인지 확인합니다.</li><li>이 결과에서 알 수 없는 것—실제 Return Loss, 제조 수율, Grating/Edge의 우열—을 모델의 빠진 채널과 연결해 정리합니다.</li></ol><p>Slider의 값은 현재 Figure와 Ledger가 공유합니다. Figure의 Schematic은 Conceptual이며 Graph와 숫자만 명시한 해석식에서 계산합니다. 실제 장치 데이터가 생기면 입력 정의와 기준면을 먼저 맞춘 다음 교체해야 합니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "Chapter Review · Fiber에서 Guided Mode까지",
+      "scene": "io",
+      "html": "<ul><li><strong>Coupling Challenge:</strong> 같은 중심에서도 공간·Phase·Polarization과 경계가 맞아야 합니다.</li><li><strong>Grating:</strong> 주기 구조의 Phase Matching과 실제 Device Efficiency를 구별했습니다.</li><li><strong>Edge:</strong> Facet Mode 일치와 Inverse Taper/Overlay의 전파 변환을 구별했습니다.</li><li><strong>Polarization:</strong> Jones Vector와 공통 기저의 Projection으로 입력 State를 설명했습니다.</li><li><strong>Ledger:</strong> 독립적인 Factor의 의미를 명시하고 손실을 한 번씩만 적용했습니다.</li></ul><p><strong>자기 설명:</strong> ‘왜 완전한 중심 정렬이 Efficiency=1이 아닌가?’, ‘Grating Period와 θ의 부호가 왜 중요한가?’, ‘왜 작은 Silicon Tip이 큰 Mode를 만들 수 있는가?’, ‘같은 성분 Power인데 왜 다른 Polarization State인가?’, ‘Total IL과 Residual Loss를 어떻게 구별하는가?’를 자신의 말로 답해 보세요.</p><p>원본 순서상 다음은 Active Components와 Modulators입니다. 이번 Chapter의 Release Candidate는 여기서 학습 검토를 기다립니다. PN Phase Shifter나 다음 Chapter의 코드는 추가하지 않습니다. I/O Advanced의 Vector/EME/FDTD/제작/측정 심화 위치는 Source Mapping에서 확인할 수 있습니다.</p>"
+    }
+  ],
+  "prediction": "입력 Interface의 측정 Total IL을 사용하면서 Overlap Penalty를 또 곱하면?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "이미 포함한 항목을 중복 계산할 수 있으므로 정의와 기준면을 확인한다",
+    "항상 더 정확해지므로 모든 Penalty를 무조건 곱한다",
+    "dB 단위면 물리량 정의와 상관없이 더해도 된다"
+  ],
+  "predictionFeedback": "Total IL에 이미 Spatial/Polarization 등이 포함됐다면 해당 Penalty를 다시 적용하지 않습니다. 이번 Notebook의 Interface Slider는 두 항을 제외한 Residual Loss로 명시했습니다.",
+  "reflection": "현재 I/O Ledger의 입력 정의, Output Power의 변화 원인, 실제 장치 검증에서 추가로 필요한 채널을 수치와 함께 설명해 보세요.",
+  "sources": [
+    "I0",
+    "I1",
+    "I2"
+  ]
+}

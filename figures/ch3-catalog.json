@@ -124,5 +124,33 @@
     "parameters": "입력 성분과 두 TE 처리 경로의 정성 Schematic.",
     "limits": "실제 Loss·불균형·PDL=0 또는 장치 제작을 검증한 결과가 아닙니다.",
     "source": "Original SVG / IOPhysics. Sources and derivation: TEXTBOOK_SOURCE_MAPPING.md / notebook/CH3_MODEL_CONTRACT.md"
+  },
+  {
+    "id": "3.5A",
+    "lesson": "3.5",
+    "title": "Optical I/O Circuit and Definitions",
+    "classification": "Conceptual",
+    "anchor": "#section-concept > p:nth-of-type(3)",
+    "renderer": "ioCircuit",
+    "see": "Fiber부터 Input Interface, Chip Route, Output Interface까지의 경로입니다.",
+    "notice": "Residual Interface Loss와 Output Total IL의 정의가 다릅니다.",
+    "meaning": "Factor가 포함한 채널을 알아야 손실을 중복하지 않습니다.",
+    "parameters": "Pin1mW의 Sequential Ledger Schematic; Geometry는 정성적입니다.",
+    "limits": "실제 Packaging Layout·Reflection 분해·효율 예측·Grating/Edge 성능 순위가 아닙니다.",
+    "source": "Original SVG / IOPhysics. Sources and derivation: TEXTBOOK_SOURCE_MAPPING.md / notebook/CH3_MODEL_CONTRACT.md"
+  },
+  {
+    "id": "3.5B",
+    "lesson": "3.5",
+    "title": "Optical I/O Power Ledger",
+    "classification": "Analytical",
+    "anchor": "#section-experiment > p:last-of-type",
+    "renderer": "ioLedger",
+    "see": "현재 Factor를 순서대로 적용한 각 Stage의 Power와 감소량입니다.",
+    "notice": "Pout+ΣLost=Pin을 확인하고 단위를 맞춥니다.",
+    "meaning": "공간/편광/추가 손실/전파를 독립 가정에서 한 번씩 연결합니다.",
+    "parameters": "Pin1mW; Fiber w5.2µm; Facet w,Δx,Linear ψ,Residual IL,αdB/cm,Lmm,Output IL는 Notebook 공유.",
+    "limits": "Gaussian/Jones 분리가 가능한 공통 평면 모델입니다. 실제 Total IL을 Residual에 중복 대입하지 않습니다. PDK/수율/실측값이 아닙니다.",
+    "source": "Original SVG / IOPhysics. Sources and derivation: TEXTBOOK_SOURCE_MAPPING.md / notebook/CH3_MODEL_CONTRACT.md"
   }
 ]

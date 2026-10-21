@@ -113,3 +113,12 @@
 - Complete 3.3 Edge Coupler/Inverse Taper/Overlay/Alignment and 3.4 Jones State/PDL/Polarization Diversity in original order. Nine Ch3 figures and four Ch3 lessons are available.
 - Unit/content 51 PASS (existing 41 + new physics 10). Browser 13 scenarios PASS: all available A–F/Tutor/Figures, Gaussian/Grating, edge Offset/Tilt, Jones phase projection, 4 viewports × Light/Dark, offline no runtime/console errors or runtime HTTP requests.
 - Recovered Chrome Headless Shell 131.0.6778.204 for browser verification. Current E2 source/HTML and screenshots saved; E2 standalone snapshot preserved. User review and no-main-merge policy remain.
+
+## v0.3.0 E3 · Release Candidate
+- Complete five Optical I/O lessons in original order, including independent worked examples, offline Tutor, 11 classified Figures (7 Analytical/4 Conceptual), shared Models/Notebook and sequential I/O ledger.
+- User explicitly chose original sequence; original Chapter5 detailed mapping precedes implementation. Active/PN and next chapter remain unimplemented.
+- Tests: unit/content59 PASS; current integrated HTML Ch1 Browser32 + Ch2 Browser15 + Ch3 Browser15 =62 PASS. Runtime/console errors0, runtime HTTP requests0. Four viewports × Light/Dark, keyboard, zoom, read-only save migration, all-chapter backup/restore and malformed input bounds verified.
+- Original Ch1/2 source/model/catalog/data/artifact hashes preserved; Ch3 source/HTML parity and deterministic build verified. Font543 Korean syllables, missing0.
+- E0 remote6d8e4b082c1150b03eaa62303ab53d92c27d98cd; E1 db88a963ce71536dd1aa5b744968e9dbcf3ee617; E2 61bb80cac31ae5febc7d1c4736d2e81988825f72. Local checkpoint trees are mirrored exactly with fast-forward remote commits.
+- E3 and earlier snapshots: checkpoints/v0.3.0/. Final dist/silicon-photonics-textbook-v0.3.0.html. Manifest, QA, Inventory, Review and Release Checkpoint docs saved.
+- PR #3 remains Draft based on main. Stop for user learning review; no main merge.

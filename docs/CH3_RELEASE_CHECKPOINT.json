@@ -1,0 +1,53 @@
+{
+  "version": "0.3.0-rc",
+  "dateKST": "2026-10-21",
+  "status": "PASS",
+  "baseMain": "61d570cdb22bf693ce1fb8b2502865295d55d56c",
+  "pr": "https://github.com/legendnever-collab/silicon-photonics-textbook/pull/3",
+  "curriculum": "Original Chapter 5 Optical IO: challenge, grating, edge, polarization, new ledger exercise",
+  "checkpointRemoteCommits": {
+    "E0": "6d8e4b082c1150b03eaa62303ab53d92c27d98cd",
+    "E1": "db88a963ce71536dd1aa5b744968e9dbcf3ee617",
+    "E2": "61bb80cac31ae5febc7d1c4736d2e81988825f72"
+  },
+  "html": {
+    "path": "dist/silicon-photonics-textbook-v0.3.0.html",
+    "sha256": "be36de0b6fe8910b3a9f731a274b4678017b44bd1884963f57bbdcab774ce668",
+    "sourceHash": "4a150bfe084181b01ae38d5fe3bc7bfdfd0b6c2ea5461000191c1b1c43fcd6b6"
+  },
+  "tests": {
+    "unitAndContent": 59,
+    "chapter1Browser": 32,
+    "chapter2Browser": 15,
+    "chapter3Browser": 15,
+    "browserTotal": 62
+  },
+  "figures": {
+    "Analytical": 7,
+    "Conceptual": 4
+  },
+  "browser": "Chrome Headless Shell 131.0.6778.204",
+  "runtimeErrors": 0,
+  "consoleErrors": 0,
+  "runtimeHttpRequests": 0,
+  "storage": {
+    "current": "sipt-textbook-v3",
+    "readOnlyFallback": [
+      "sipt-textbook-v2",
+      "sipt-ch1-v1"
+    ],
+    "schema": 1
+  },
+  "limits": [
+    "Full paid textbook chapter body not acquired; official detailed contents verified",
+    "Scalar common-plane Gaussian overlap, not fabricated silicon vector modes",
+    "Relative grating array factor is not absolute coupling efficiency or real bandwidth",
+    "Edge taper/overlay and polarization diversity structural figures are Conceptual",
+    "Jones models fully polarized coherent states, not unpolarized mixtures",
+    "Loss ledger uses independent assumed residual factors; no measured PDK/reflection/yield data",
+    "Chromium emulation only, not physical Android/iOS or education-effectiveness study"
+  ],
+  "mergeAuthorized": false,
+  "nextChapterStarted": false,
+  "next": "Stop at RC for user learning review"
+}
