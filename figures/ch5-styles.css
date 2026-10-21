@@ -1,0 +1,5 @@
+/* Scoped to Chapter 5; original chapter typography and figure files unchanged. */
+#reading[data-chapter="5"],#notebook[data-chapter="5"]{overflow-wrap:anywhere;min-width:0}
+#reading[data-chapter="5"] .source-links a{word-break:break-word}
+#notebook[data-chapter="5"] .notebook-top{flex-wrap:wrap;gap:8px}
+#notebook[data-chapter="5"] .control-row output{flex-shrink:0}

@@ -13,7 +13,6 @@
     "test:ch3:browser": "node tests/ch3-browser.mjs",
     "build:ch3": "node scripts/build-chapter3.mjs",
     "test:ch4:browser": "node tests/ch4-browser.mjs",
-    "build:ch4": "node scripts/build-chapter4.mjs",
     "test:ch5:browser": "node tests/ch5-browser.mjs"
   },
   "engines": {

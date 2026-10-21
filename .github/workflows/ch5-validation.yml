@@ -1,0 +1,52 @@
+name: Chapter 5 validation
+on:
+  push:
+    branches: [feature/ch5-detectors]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Rebuild and verify all textbook models, content and parity
+        run: |
+          npm run build
+          npm test
+      - name: Verify deterministic offline release and retained Chapter4
+        run: |
+          cp dist/CH5_SHA256SUMS.txt /tmp/ch5-sha
+          npm run build
+          cmp /tmp/ch5-sha dist/CH5_SHA256SUMS.txt
+          cd dist
+          sha256sum -c CH5_SHA256SUMS.txt
+          sha256sum -c CH4_SHA256SUMS.txt
+      - name: Install browser dependencies
+        run: |
+          npm install --no-save --no-package-lock playwright@1.62.0
+          npx playwright install --with-deps chromium
+      - name: Offline Chapter5 and integrated navigation across four viewports and two themes
+        run: npm run test:ch5:browser
+      - name: Original Chapter1–4 browser regression suites
+        run: |
+          npm run test:browser
+          npm run test:ch2:browser
+          npm run test:ch3:browser
+          npm run test:ch4:browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: silicon-photonics-textbook-v0.5.0-review
+          path: |
+            dist/silicon-photonics-textbook-v0.5.0.html
+            dist/CH5_SHA256SUMS.txt
+            dist/ch5-build-info.json
+            artifacts/v0.5.0/
+          retention-days: 30

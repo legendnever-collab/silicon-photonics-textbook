@@ -9,7 +9,7 @@
     "see": "Photon 흡수 뒤 Electron과 Hole이 반대 Contacts로 이동하고 외부 회로에 전류가 흐릅니다.",
     "notice": "e⁻와 h⁺ 화살표는 Carrier 이동 방향입니다. Electric Field는 n→p이며 Electron 이동은 그 반대입니다.",
     "meaning": "Pair 한 개의 완전 수집은 외부 회로에서 q의 기여이며 2q가 아닙니다.",
-    "parameters": "PIN 예시 · 비축척. Readout은 별도 Photon Counting 계산이며 η_ext를 독립 입력으로 사용합니다.",
+    "parameters": "PIN 예시 · 비축척. Readout은 별도 Photon Counting 계산이며 η_ext를 독립 입력으로 사용합니다. Source: 자체 작성 SVG/Model; official Chapter 7 목차; notebook/CH5_MODEL_CONTRACT.md. Full text/원본 Figure는 재현하지 않았습니다.",
     "limits": "Carrier Path는 개념도입니다. 공간 Field, Doping, Generation Map, 실제 이동 시간은 계산하지 않았습니다.",
     "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
   },
@@ -23,7 +23,7 @@
     "see": "선택 η_ext와 비교 η=0.5,1.0의 Unity-gain R(λ) 곡선을 봅니다.",
     "notice": "η를 고정한 계산입니다. λ가 길면 W당 Photon 수가 많아져 R이 증가합니다.",
     "meaning": "R=ηqλ/hc이며 같은 Plane에서 I=RP를 계산합니다.",
-    "parameters": "λ 800–1800nm; 독립 η_ext [0,1]; R[A/W]; Reference Plane은 Detector Coupling 앞 Waveguide.",
+    "parameters": "λ 800–1800nm; 독립 η_ext [0,1]; R[A/W]; Reference Plane은 Detector Coupling 앞 Waveguide. Source: 자체 작성 SVG/Model; official Chapter 7 목차; notebook/CH5_MODEL_CONTRACT.md. Full text/원본 Figure는 재현하지 않았습니다.",
     "limits": "실제 Ge Spectral Response가 아닙니다. Bandgap, Strain, Material absorption, Gain, Saturation을 예측하지 않습니다.",
     "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
   },
@@ -37,7 +37,7 @@
     "see": "Carrier Collection Path와 Small-signal RC Circuit을 나란히 비교합니다.",
     "notice": "W는 Carrier 이동 거리, C_total은 Junction/Parasitic/Load를 포함하는 독립 입력입니다.",
     "meaning": "RC와 Transit의 물리적 원인이 다르므로 하나의 시간 상수로 동일시하지 않습니다.",
-    "parameters": "상수 Drift Velocity 가정의 W/v와 독립 Lumped RC. 구조는 비축척 개념도입니다.",
+    "parameters": "상수 Drift Velocity 가정의 W/v와 독립 Lumped RC. 구조는 비축척 개념도입니다. Source: 자체 작성 SVG/Model; official Chapter 7 목차; notebook/CH5_MODEL_CONTRACT.md. Full text/원본 Figure는 재현하지 않았습니다.",
     "limits": "생성 위치별 Current Impulse나 실제 종합 Bandwidth를 계산하지 않습니다. RC Circuit은 1차 등가입니다.",
     "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
   },
@@ -51,7 +51,7 @@
     "see": "|H_RC(f)| 곡선과 지정 Probe Frequency에서의 값, Transit 시간과 PIN Noise를 봅니다.",
     "notice": "f_RC의 Magnitude 0.7071, Power 0.5입니다. Noise B는 f_RC와 독립입니다.",
     "meaning": "Capacitance 감소는 RC Pole을 올리지만 Transit 지배 Device 성능 개선을 보장하지 않습니다.",
-    "parameters": "R_eq[Ω], C_total[fF], Frequency[GHz]; τ_RC=RC. Shot Noise는 독립 Equivalent Noise B와 Unity Gain Poisson Model.",
+    "parameters": "R_eq[Ω], C_total[fF], Frequency[GHz]; τ_RC=RC. Shot Noise는 독립 Equivalent Noise B와 Unity Gain Poisson Model. Source: 자체 작성 SVG/Model; official Chapter 7 목차; notebook/CH5_MODEL_CONTRACT.md. Full text/원본 Figure는 재현하지 않았습니다.",
     "limits": "Transit Bandwidth/RC와 Transit 결합, Thermal/Amplifier/APD Noise, Receiver SNR은 계산하지 않습니다.",
     "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
   },
@@ -65,7 +65,7 @@
     "see": "Si Waveguide 위의 Ge 흡수 영역, p/n Contacts와 Oxide를 구별합니다.",
     "notice": "Optical z는 지면 안 방향이고 Carrier는 x 방향으로 수집됩니다.",
     "meaning": "Optical Coupling/Absorption과 전하 수집을 같은 구조에서 함께 설계해야 합니다.",
-    "parameters": "횡단면 x–y; 비축척 개념도. Photon Energy만 λ에서 계산합니다.",
+    "parameters": "횡단면 x–y; 비축척 개념도. Photon Energy만 λ에서 계산합니다. Source: 자체 작성 SVG/Model; official Chapter 7 목차; notebook/CH5_MODEL_CONTRACT.md. Full text/원본 Figure는 재현하지 않았습니다.",
     "limits": "실제 PDK Stack, 독립적인 Ge Mode 해, Doping Profile 또는 Field Map이 아닙니다.",
     "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
   },
@@ -79,7 +79,7 @@
     "see": "Si 준비, Ge Epitaxy, Junction/Contacts, Passivation/Test의 논리를 봅니다.",
     "notice": "실제 공정 순서, Mask, 온도, 치수는 지정하지 않았습니다.",
     "meaning": "Interface Defect와 Contact는 Optical Absorption 이후의 Collection 및 Leakage에도 중요합니다.",
-    "parameters": "Foundry-independent integration concept; 실제 단계와 순서는 Process에 따라 달라집니다.",
+    "parameters": "Foundry-independent integration concept; 실제 단계와 순서는 Process에 따라 달라집니다. Source: 자체 작성 SVG/Model; official Chapter 7 목차; notebook/CH5_MODEL_CONTRACT.md. Full text/원본 Figure는 재현하지 않았습니다.",
     "limits": "공정 Recipe나 제조 가능성을 검증한 것이 아닙니다. 실제 Mask Stack으로 사용하지 않습니다.",
     "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
   },
@@ -93,7 +93,7 @@
     "see": "Conductivity Change, Drift Collection, Absorption/Charge/Multiplication 영역을 비교합니다.",
     "notice": "동일한 Box 크기는 동일한 실제 치수나 성능을 뜻하지 않습니다.",
     "meaning": "Gain의 원리와 Charge Region의 Field Engineering 역할을 구별합니다.",
-    "parameters": "각 구조는 자체 비축척 개념도. APD Layer는 설계 원리 예시이며 실제 Device Stack이 아닙니다.",
+    "parameters": "각 구조는 자체 비축척 개념도. APD Layer는 설계 원리 예시이며 실제 Device Stack이 아닙니다. Source: 자체 작성 SVG/Model; official Chapter 7 목차; notebook/CH5_MODEL_CONTRACT.md. Full text/원본 Figure는 재현하지 않았습니다.",
     "limits": "Mobility/Lifetime, Doping, Electric Field, Gain–Bandwidth를 계산하지 않습니다.",
     "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
   },
@@ -107,7 +107,7 @@
     "see": "Primary Electron과 Impact Ionization으로 생성된 Secondary Pair를 구별합니다.",
     "notice": "그림의 Pair 수는 고정된 예시이며 M을 사건 시뮬레이션으로 표현하지 않습니다.",
     "meaning": "M은 Primary Photon QE와 다르며 Mean Current를 키우는 별도 Gain입니다.",
-    "parameters": "Mean I_photo=M I_primary, M≥1; 입력 λ, η_ext, Power는 Primary를 정의합니다.",
+    "parameters": "Mean I_photo=M I_primary, M≥1; 입력 λ, η_ext, Power는 Primary를 정의합니다. Source: 자체 작성 SVG/Model; official Chapter 7 목차; notebook/CH5_MODEL_CONTRACT.md. Full text/원본 Figure는 재현하지 않았습니다.",
     "limits": "APD Noise/Excess Noise Factor/Breakdown/SNR/Operating Bias를 예측하지 않습니다.",
     "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
   },
@@ -121,7 +121,7 @@
     "see": "Solid는 Absorption Fraction, Dashed는 남은 Guided Power Fraction을 보여 줍니다.",
     "notice": "L과 α_eff는 광학 흡수만 결정합니다. C/W를 독립적으로 유지합니다.",
     "meaning": "Absorption 포화와 Collection/Coupling 손실을 분리하고 QE를 중복 곱하지 않습니다.",
-    "parameters": "η_abs=1−exp(−α_eff L×10⁻⁴), α_eff[cm⁻¹], L[µm]; Factorized η_ext.",
+    "parameters": "η_abs=1−exp(−α_eff L×10⁻⁴), α_eff[cm⁻¹], L[µm]; Factorized η_ext. Source: 자체 작성 SVG/Model; official Chapter 7 목차; notebook/CH5_MODEL_CONTRACT.md. Full text/원본 Figure는 재현하지 않았습니다.",
     "limits": "반사/Mode Evolution, Material Spectrum, 실제 Length→Capacitance/Transit 상관관계를 포함하지 않습니다.",
     "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
   },
@@ -135,7 +135,7 @@
     "see": "Lateral/Vertical Collection과 Optical Propagation z를 구별합니다.",
     "notice": "Contact가 광학 흡수와 Resistance를 함께 바꿀 수 있습니다.",
     "meaning": "Absorption, Carrier Transit, Capacitance를 같은 한 변수로 대체할 수 없습니다.",
-    "parameters": "비축척 구조; Junction C와 Pad/Load C는 별도 기여. 수치 상관식 없음.",
+    "parameters": "비축척 구조; Junction C와 Pad/Load C는 별도 기여. 수치 상관식 없음. Source: 자체 작성 SVG/Model; official Chapter 7 목차; notebook/CH5_MODEL_CONTRACT.md. Full text/원본 Figure는 재현하지 않았습니다.",
     "limits": "실제 Field/Profile, Fringing Capacitance와 Contact Material 손실을 계산하지 않습니다.",
     "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
   },
@@ -149,7 +149,7 @@
     "see": "Field→Useful Absorption→Pair Generation→Transport→Current의 물리량을 구별합니다.",
     "notice": "Metal 흡수를 모두 유용한 Ge Pair Generation으로 세면 안 됩니다.",
     "meaning": "Optical과 Electrical Domain을 연결할 때 공간 Source와 단위 정규화가 필요합니다.",
-    "parameters": "G=p_abs,useful/E_ph는 Photon당 Pair 하나를 가정한 관계. 자체 흐름도이며 공간 해 없음.",
+    "parameters": "G=p_abs,useful/E_ph는 Photon당 Pair 하나를 가정한 관계. 자체 흐름도이며 공간 해 없음. Source: 자체 작성 SVG/Model; official Chapter 7 목차; notebook/CH5_MODEL_CONTRACT.md. Full text/원본 Figure는 재현하지 않았습니다.",
     "limits": "기존 Si Scalar Profile을 실제 Ge Field/Generation Map으로 재사용하거나 주장하지 않습니다.",
     "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
   },
@@ -163,8 +163,22 @@
     "see": "Eigenmode/FDTD와 Semiconductor Transport/TCAD의 역할을 비교합니다.",
     "notice": "연결 정보 G(r), 좌표, Mesh, Optical Input Power의 기준이 중요합니다.",
     "meaning": "높은 Optical Absorption도 불완전한 Collection이면 높은 External QE를 보장하지 않습니다.",
-    "parameters": "숫자는 독립적인 Coupling/Absorption/Collection의 Lumped 교육 모델입니다.",
+    "parameters": "숫자는 독립적인 Coupling/Absorption/Collection의 Lumped 교육 모델입니다. Source: 자체 작성 SVG/Model; official Chapter 7 목차; notebook/CH5_MODEL_CONTRACT.md. Full text/원본 Figure는 재현하지 않았습니다.",
     "limits": "FDTD/TCAD를 실행하거나 실제 Device Geometry에 대해 검증한 결과가 아닙니다.",
+    "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
+  },
+  {
+    "id": "5.7A",
+    "lesson": "5.7",
+    "title": "Photodetector Performance Summary",
+    "classification": "Analytical",
+    "renderer": "detectorSummary",
+    "anchor": "#section-concept > p:first-of-type",
+    "see": "동일 입력에서 Photon Energy, R, Primary/Multiplied Current, RC와 Noise를 정리합니다.",
+    "notice": "M>1이면 PIN Noise 수치가 APD 예측으로 오인되지 않도록 미모델화로 표시합니다.",
+    "meaning": "모든 계산은 입력 단위와 Reference Plane이 명시된 제한된 모델입니다.",
+    "parameters": "Factorized η_ext, Power[µW], λ[nm], α_eff[cm⁻¹], L[µm], R[Ω], C[fF], I_dark[nA], Noise B[GHz], M≥1. Source: 자체 작성 SVG/Model; official Chapter 7 목차; notebook/CH5_MODEL_CONTRACT.md. Full text/원본 Figure는 재현하지 않았습니다.",
+    "limits": "Total Device Bandwidth, APD Excess Noise/SNR, Breakdown, PDK/Fabricated Spec은 예측하지 않습니다.",
     "source": "Original SVG and educational model; CH5_MODEL_CONTRACT.md; CH5_TEXTBOOK_SOURCE_MAPPING.md"
   }
 ]

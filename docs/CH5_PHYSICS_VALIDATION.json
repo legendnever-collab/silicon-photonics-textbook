@@ -1,0 +1,14 @@
+{
+  "independentMethod": "Python Decimal exact SI constants; 45-digit context (RC pi listed separately from JS)",
+  "photonEnergyEv": "0.799898054407743627340340287470169401494825564",
+  "unityGainResponsivityLimitAw": "1.25015931028912780436569612073849871466361963",
+  "etaAbs_at_alpha1000_L20": "0.864664716763387308106000505027515596592368454",
+  "etaExt_at_coupling09_collection09": "0.700378420578343719565860409072287633239818448",
+  "externalResponsivityAw": "0.875584603211610860362220149611854918785082774",
+  "primaryCurrentA_at_100uW": "0.0000875584603211610860362220149611854918785082774",
+  "darkOnlyShotRmsA_at10nA_10GHz": "5.66070072340871947637435171907358541934181588E-9",
+  "pinTotalShotRmsA_at_factorizedBaseline": "5.29717171709432934439746612958700755583021660E-7",
+  "modelTestCommand": "node --test tests/ch5-physics.test.mjs",
+  "modelTestsPassed": 7,
+  "domainBoundaries": "APD mean gain only; RC and transit not combined; no generated PDK, full-wave, TCAD or receiver performance"
+}
