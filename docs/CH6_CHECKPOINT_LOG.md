@@ -10,3 +10,6 @@ Implemented6.1–6.2 A–F prose,5 classified figures,3 analytical model familie
 
 ## D2 — Integration
 Added6.3–6.6,all three original co-packaging routes,bonded overlap,III–V/Ge growth and explicitly bounded Raman supplement.12 original figures.105 Node tests PASS. Chromium smoke:6 lessons,28 structure selections,18 Tutor choices,0 runtime errors. Font fallback13 missing Hangul added, prior fonts unchanged. Next:D3 synthesis and migration tests.
+
+## D3 — Learning completion
+Added6.7 synthesis,3 worked problems,chapter summary,reflection and backup review.118 Node tests PASS. Full CH6/integrated browser matrix58 scenarios PASS across4viewports×2themes:all36 lessons,tutors,4interactions,control node/focus,persistence,download/restore,invalid backups,read-only v5/v4 migration. Fixed320px select overflow. Captions then received specific observation questions; final D4 rerun targets final stable HTML. Previous Ch1–5 original artifact browser suites119 scenarios PASS(70 Ch1–4 +49 Ch5); evidence copied into current regression folder and prior reports/screenshots restored. Next:D4 final stable build/SHA,visual review,CI workflow and handoff.

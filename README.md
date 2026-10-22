@@ -3,7 +3,7 @@
 기술 용어는 영어, 설명은 한글인 독립적인 Interactive Textbook입니다. 교재 설명 → Guided Tutor → Physics Notebook을 연결합니다. 게임이나 최적화 퍼즐을 중심으로 만들지 않습니다.
 
 ## Run offline
-`dist/chapter-01.html`을 다운로드한 후 Browser로 엽니다. HTML 하나에 Source·Content·모델이 포함되며 외부 Script/Font/API를 요청하지 않습니다. Source 파일 `src/index.html`은 Build Template입니다.
+현재 통합판 `dist/silicon-photonics-textbook-v0.6.0.html`을 다운로드한 후 Browser로 엽니다. HTML 하나에 Source·Content·모델이 포함되며 외부 Script/Font/API를 요청하지 않습니다. Source 파일 `src/index.html`은 Build Template입니다.
 
 ## Reproduce
 Node.js 20 이상. Production Build에는 npm 의존성이 없습니다.
@@ -14,7 +14,7 @@ npm test
 npm run serve
 ```
 
-`http://localhost:8080/dist/chapter-01.html`에서도 실행할 수 있습니다. Browser QA는 Playwright와 Chromium이 설치된 환경에서 `npm run test:browser`로 수행합니다. Browser 의존성은 `tests/README.md`를 따릅니다.
+`http://localhost:8080/dist/silicon-photonics-textbook-v0.6.0.html`에서도 실행할 수 있습니다. Browser QA는 Playwright와 Chromium이 설치된 환경에서 `npm run test:browser`로 수행합니다. Browser 의존성은 `tests/README.md`를 따릅니다.
 
 ## Learning review
 Chapter 1은 약 30–45분을 목표로 한 Pilot입니다. 실제 학습 시간과 교육 효과는 아직 사용자 검토가 필요합니다. 자동 테스트 통과와 학습 효과 검증을 구별합니다. Save/Resume는 같은 Origin/Browser의 Local Storage를 사용하며 기록 JSON으로 백업할 수 있습니다. 파일 위치/Browser가 바뀌면 자동으로 공유되지 않습니다.
@@ -30,7 +30,7 @@ Chapter 1은 약 30–45분을 목표로 한 Pilot입니다. 실제 학습 시�
 - `dist/`: Offline HTML, Build Info, SHA256
 - `checkpoints/`: 단계별 Offline HTML 보존
 
-Chapter 1 사용자 학습 검토와 명시적 승인 전 main 병합 금지. Chapter 2 자동 시작 금지. 저작권이 있는 교재 PDF·원본 그림·표는 포함하지 않습니다.
+아래 각 과거 Release의 승인 대기 문구는 당시 기록입니다. 현재 Chapter1–5는 병합 완료, Chapter6은 사용자 학습 검토 및 명시적 승인 전 main 병합 금지. Chapter7 자동 시작 금지. 저작권이 있는 교재 PDF·원본 그림·표는 포함하지 않습니다.
 
 ## v0.1.1 · Figure & Physics Upgrade
 10개의 번호가 있는 Inline Figure를 추가했습니다. 기존 본문·Tutor·검증된 Analytical Model은 그대로 유지합니다. Figure별 Caption, 분류, 계산 조건, 한계와 모바일 확대를 제공합니다.
@@ -69,3 +69,15 @@ This branch is a Draft stacked on `feature/ch1-textbook-pilot` (PR #1), for user
 - Run Ch1/2 regressions against current HTML with `TEXTBOOK_HTML=/dist/silicon-photonics-textbook-v0.3.0.html`; use `CH2_ARTIFACT_DIR=artifacts/v0.3.0/ch2-regression` for Ch2 reports. Playwright and compatible browser required; optional `BROWSER_EXECUTABLE_PATH`.
 - Current data uses `sipt-textbook-v3`, read-only migration from v2 then original Ch1. Backup/Restore transfers records across Browser-dependent file origins.
 - Prior HTML/source/model/catalog data remain intact. Scalar Gaussian, relative array factor and ideal Jones projections are declared teaching approximations, not device/PDK/full-wave results.
+
+## v0.6.0 · Chapter6 Lasers — current review candidate
+
+현재 `npm run build`는 `scripts/build-chapter6.mjs`로 Chapter1–6의36개 Lesson을 통합합니다. Chapter6은7개 A–F Lesson,13개 독자 Figure,Offline Guided Tutor와4가지 Interaction(Threshold,L–I,Power & Heat,Integration Structure)을 제공합니다. 기술 용어 영어·서술 한글, Light/Dark,Mobile,Save/Resume·Backup/Restore를 유지합니다.
+
+- 실행: `dist/silicon-photonics-textbook-v0.6.0.html`
+- 검증: `npm test`, `npm run test:ch6:browser`, `python3 tests/ch6-independent-validation.py`
+- 이전 재현 경로: `build:ch2`, `build:ch3`, `build:ch4`, `build:ch5`; 기존 Chapter1–5 Source/HTML은 byte-identical입니다. CH6 전용 빌드가 checked additive hooks를 in-memory로 적용하여 기존 공통 app과 과거 manifest를 보존합니다.
+- 기록: 새 `sipt-textbook-v6`가 기존v5/v4 이하를 Read-only로 읽으며 원본 Key를 수정하지 않습니다.
+- 범위: 공식 Chapter8 목차·공개 Summary 기반. Full text/원본 Equation·Figure·Problem 미확인.8.6의 원본 세부 기술 목록은 미확인이며 Raman은 별도1차 연구의 보충입니다.
+- 검토: `docs/CH6_LEARNING_REVIEW.md`, 결과/제한은 `docs/CH6_QA_REPORT.md`; Source Mapping/Model Contract/Figure Inventory를 함께 확인합니다.
+- 승인 전 main 병합 금지,Chapter7 자동 시작 금지. Remote Push/PR/CI 상태는 QA Report의 실제 관측 결과를 따릅니다.

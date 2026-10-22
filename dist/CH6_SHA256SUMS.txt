@@ -1,1 +1,1 @@
-8b180b74bf12491e40fb67595c998b5756de76402bedfb0bc90a365bb0a95c82  silicon-photonics-textbook-v0.6.0.html
+966f939610401c72ac939761eb55188e4a940754aa6153b55759f3497d1f005b  silicon-photonics-textbook-v0.6.0.html

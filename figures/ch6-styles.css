@@ -4,3 +4,4 @@
 #notebook[data-chapter="6"] .notebook-top{flex-wrap:wrap;gap:8px}
 #notebook[data-chapter="6"] .control-row output{flex-shrink:0}
 #notebook[data-chapter="6"] [hidden]{display:none}
+#notebook[data-chapter="6"] select{width:100%;max-width:100%;min-width:0;box-sizing:border-box}

@@ -1,0 +1,54 @@
+name: Chapter 6 validation
+on:
+  push:
+    branches: [feature/ch6-lasers]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build and verify models,content,source parity and independent calculation
+        run: |
+          npm run build
+          npm test
+          python3 tests/ch6-independent-validation.py
+      - name: Byte-identical rebuild and retained Chapter5 SHA
+        run: |
+          cp dist/silicon-photonics-textbook-v0.6.0.html /tmp/ch6-before.html
+          npm run build
+          cmp /tmp/ch6-before.html dist/silicon-photonics-textbook-v0.6.0.html
+          cd dist
+          sha256sum -c CH6_SHA256SUMS.txt
+          sha256sum -c CH5_SHA256SUMS.txt
+      - name: Install test-only browser dependencies
+        run: |
+          npm install --no-save --no-package-lock playwright@1.62.0
+          npx playwright install --with-deps chromium
+      - name: Chapter6 matrix and integrated36-lesson navigation
+        run: npm run test:ch6:browser
+      - name: Preserved Chapter1–5 original browser regressions
+        run: |
+          npm run test:browser
+          npm run test:ch2:browser
+          npm run test:ch3:browser
+          npm run test:ch4:browser
+          npm run test:ch5:browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: silicon-photonics-textbook-v0.6.0-review
+          path: |
+            dist/silicon-photonics-textbook-v0.6.0.html
+            dist/CH6_SHA256SUMS.txt
+            dist/ch6-build-info.json
+            artifacts/v0.6.0/
+          retention-days: 30
