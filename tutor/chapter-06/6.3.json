@@ -1,0 +1,22 @@
+{
+  "question": "Si Reflector까지 Feedback이 이어진다면 Cavity는 어디인가요?",
+  "choices": [
+    {
+      "text": "Gain Chip과 Si Feedback Path를 포함합니다.",
+      "feedback": "맞습니다. 설계된 Optical 왕복 경로가 Cavity입니다. Package 경계나 Gain Material 경계와 반드시 같지 않습니다.",
+      "correct": true
+    },
+    {
+      "text": "Gain Chip 안만 Cavity이며 나머지는 무관합니다.",
+      "feedback": "Gain이 있는 영역과 Feedback Loop는 다른 경계입니다. Remote Reflector까지 이어지는 경로를 빠뜨렸습니다."
+    },
+    {
+      "text": "Package 전체의 모든 재료가 Cavity입니다.",
+      "feedback": "Cavity는 설계된 Optical Feedback 경로입니다. 모든 Package 재료가 동일한 Optical Mode에 참여하지 않습니다."
+    }
+  ],
+  "why": "Feedback 경계를 찾아야 왕복 Loss와 Phase를 셀 수 있습니다. Output 전달 경로와 Cavity 내부 경로를 나누는 첫 단계입니다.",
+  "simple": "소리가 증폭되는 장소와 메아리가 돌아오는 길은 다를 수 있습니다. 여기서는 빛이 되돌아오는 전체 경로를 따라 Cavity를 찾습니다.",
+  "math": "동일 Interface를 왕복 한 번씩 지나는 가정에서는 Power Factor가 η²입니다. 단방향1 dB이면 왕복2 dB이며 Gain/Reflector/Phase를 별도로 봅니다.",
+  "notebook": "구조 선택을 바꿔 Gain 영역과 점선 Cavity가 같은 범위를 차지하는지 비교하세요. 이 선택은 구조 설명이며 자동 Threshold 점수는 계산하지 않습니다."
+}

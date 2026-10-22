@@ -1,0 +1,22 @@
+{
+  "question": "All-silicon Raman Laser에서 External Pump를 제외하고 전체 효율을 말해도 되나요?",
+  "choices": [
+    {
+      "text": "아니요.Pump 생성과 전달의 Energy 경계를 포함해야 합니다.",
+      "feedback": "맞습니다. Source 재료와 Energy Input 경계는 다릅니다. Pump를 제외한 수치를 전체 효율이라고 말하면 안 됩니다.",
+      "correct": true
+    },
+    {
+      "text": "예.Si 안에서 발진하므로 소비 전력이 없습니다.",
+      "feedback": "빛의 Energy는 Pump에서 옵니다. 재료 이름은 Energy 보존을 바꾸지 않습니다."
+    },
+    {
+      "text": "예.Stokes Energy가 있으므로 WPE는 항상1입니다.",
+      "feedback": "Stokes 생성의 존재만으로 Pump 변환·전달·전기 공급의 손실이 사라지지는 않습니다."
+    }
+  ],
+  "why": "새로운 Gain 메커니즘도 Energy Source를 필요로 합니다. 공급 경계를 표시하는6.1의 원칙은 Raman 보충 예에도 그대로 적용됩니다.",
+  "simple": "다른 색의 빛을 만들더라도 원래 들어온 빛의 Energy가 필요합니다. 그 빛을 만든 전원까지 포함해야 전체 소비를 비교할 수 있습니다.",
+  "math": "한 사건의 hν_p=hν_s+hΩ는 Energy 보존입니다. 전체 P_elec→P_pump→P_Stokes의 효율은 별도의 변환·전달 효율들을 알아야 계산됩니다.",
+  "notebook": "본문 Raman Figure는 Energy 경로만 보여 줍니다. Notebook 구조 선택은 위치에 관한 비교이며 Pump Power나 Raman Threshold를 예측하지 않습니다."
+}

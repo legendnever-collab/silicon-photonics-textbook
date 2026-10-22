@@ -7,3 +7,6 @@ Clean checkout, no prior CH6 work, PR5 merged and main matches.99 baseline Node 
 
 ## D1 — External laser and modelling
 Implemented6.1–6.2 A–F prose,5 classified figures,3 analytical model families,offline Tutors and Notebook.105 Node tests PASS(99 baseline+6 physics).Independent Decimal values match.31-lesson first HTML opens in Chromium; model selector and readouts verified. Recovered existing /tmp/chromium after CDN download failure; baseline Ch5 browser now49 scenarios PASS,0 runtime/network/text overflow. No production dependency added. Next:D2 integration6.3–6.6.
+
+## D2 — Integration
+Added6.3–6.6,all three original co-packaging routes,bonded overlap,III–V/Ge growth and explicitly bounded Raman supplement.12 original figures.105 Node tests PASS. Chromium smoke:6 lessons,28 structure selections,18 Tutor choices,0 runtime errors. Font fallback13 missing Hangul added, prior fonts unchanged. Next:D3 synthesis and migration tests.

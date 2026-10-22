@@ -1,0 +1,65 @@
+{
+  "id": "6.6",
+  "short": "Alternative Mechanisms",
+  "title": "Does Every Light Source Use the Same Gain Mechanism?",
+  "time": "15–22분",
+  "lead": "원본8.6의 제목은 확인했지만 세부 기술 목록은 확보하지 못했습니다. 별도1차 연구의 Raman Laser를 보충 예로 삼아 Light Generation과 Integration 위치를 구별합니다.",
+  "question": "All-silicon Light Source라고 하면 외부 Energy Supply도 필요 없을까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "확인한 범위 안에서 비교합니다",
+      "scene": "laser",
+      "html": "<p>원본8.6 Alternative Light Sources는 공식 목차에서 확인했습니다. 전체 본문과 세부 대상은 확인하지 못했으므로 임의의 기술 목록을 원본의 설명이라고 제시하지 않습니다.</p><p>이 Lesson은 독립적인1차 논문 Rong et al.(2005)의 Continuous-wave Raman Silicon Laser를 <strong>보충 읽기</strong>로 다룹니다. 원본8.6에 대한 기술별 대응은 원문 확보 후 보완할 남은 범위입니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Raman Gain을 보충 예로 읽습니다",
+      "scene": "laser",
+      "html": "<p><strong>Stimulated Raman Scattering</strong>은 Optical Pump에서 다른 주파수의 빛으로 Energy를 전달하는 비선형 상호작용입니다. 낮은 주파수의 Stokes Light와 Material의 진동에 Energy가 분배됩니다. III–V Carrier Recombination Gain과 다른 메커니즘이므로 Silicon의 Indirect Bandgap만으로 이 가능성을 부정할 수 없습니다.</p><p>Raman Laser에도 Gain과 Feedback이 필요합니다. Cavity는 적절한 Stokes 주파수에서 왕복 조건을 만족해야 하며, Pump는 외부에서 공급해야 합니다. 따라서 All-silicon이라는 Material 표현이 외부 Source나 소비 전력이 필요 없다는 뜻은 아닙니다. Pump 생성·전달 손실과 Material 내부 손실을 전체 장부에서 고려해야 합니다.</p><p>확인한2005년 연구는 Si에서 Continuous-wave Raman Lasing을 다루는1차 자료입니다. 그 논문의 측정값이나 공정·Spectrum을 이 앱의 데이터처럼 재현하지 않습니다. Two-photon Absorption과 그에 따른 Free-carrier Loss 같은 제한 요인은 Pumping 조건에서 중요할 수 있지만, 이 장의 정량 모델은 그 Carrier Dynamics를 풀지 않습니다.</p><p>Figure의 Pump, Stokes, Phonon은 Energy 흐름을 보여 주는 개념도입니다. 그림의 화살표 두께는 측정한 Power가 아니며, 주파수·길이·Threshold를 계산하지 않았습니다. Uniform FP Threshold 식에 Pump Power를 임의 Gain으로 환산해 대입하거나, 전기 주입 L–I Curve를 Raman Laser의 응답이라고 표시하지 않습니다.</p><p><strong>Mechanism</strong>은 어떻게 Gain을 만드는지, <strong>Integration Location</strong>은 Source를 어디에 어떻게 배치하는지 묻습니다. External·Co-packaged·Bonded·Grown과 Carrier Recombination·Raman은 서로 다른 질문의 답입니다. LED나 기타 대체 Source도 필요한 Coherence·Spectrum·Coupling 요구가 다를 수 있으나, 확인하지 않은 목록을 이 교재의 범위로 확대하지 않습니다. 이번 장의 목적은 그 분류 축과 Energy Input을 구별하는 데 있습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "Pump Energy도 장부에 넣습니다",
+      "scene": "laser",
+      "html": "<div class=\"equation\">hν_p = hν_s + hΩ<br>ν_p &gt; ν_s,   Ω = ν_p − ν_s</div><p>한 번의 Stokes 변환 사건에서 Pump Photon Energy는 Stokes Photon과 진동 Energy로 나뉩니다. ν는 Hz, hν는 J입니다. 이 관계는 전체 Device WPE나 Pump-to-Stokes 효율을 정하지 않습니다.</p><div class=\"worked\"><h3>Worked Example · 정규화된 Energy 장부</h3><p>독자적인 정규화 예로 Pump Energy를1.00, Stokes Energy를0.90이라고 두면 나머지0.10은 같은 사건의 진동 Energy입니다. 이는 임의 주파수비의 교육 예이며 실제 Si Raman Shift나 Device 효율을 나타내지 않습니다. 모든 Pump가 Stokes로 변환된다는 뜻도 아닙니다.</p></div><p>Electrical Input을 계산하려면 Pump Source의 효율과 변환·전달 손실까지 추가해야 합니다.</p>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "Light Source 종류와 배치가 같은 분류인가요?",
+      "scene": "laser",
+      "html": "<p>Tutor에서는 All-silicon이라는 재료 이름이 Energy Supply의 범위를 말하는지 묻습니다. Optical Pump를 어디에 기록해야 하는지 생각해 보세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "메커니즘과 위치를 별도로 기록합니다",
+      "scene": "laser",
+      "html": "<p>본문의 두 Figure에서 Gain 메커니즘과 Integration 위치가 서로 다른 축인지 확인하세요. Notebook의 구조 선택은 위치 비교만 바꿉니다. 이 선택이 Raman Spectrum이나 Pump Threshold를 계산한다고 해석하지 마세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "새 메커니즘도 에너지가 필요합니다",
+      "scene": "laser",
+      "html": "<ul><li>Raman은 Carrier Recombination과 다른 Gain 메커니즘입니다.</li><li>Optical Pump도 외부 Energy Input입니다.</li><li>Material·Mechanism·Integration Location을 구별합니다.</li><li>원본8.6 세부 목록 미확인은 남은 Source 범위로 명시합니다.</li></ul><p>다음에는 같은 기준으로 Power·Heat와 구조 선택 이유를 종합합니다.</p>"
+    }
+  ],
+  "prediction": "Raman Gain을 사용하는 Si Source의 Energy Input은?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Optical Pump가 필요하며 Pump 생성 전력도 별도입니다.",
+    "Si가 빛을 만들므로 공급 Energy는0입니다.",
+    "항상6.2의 전기 주입 L–I와 같습니다."
+  ],
+  "predictionFeedback": "Optical Pump의 Energy를 포함해야 합니다. All-silicon은 Material 표현이며 무료 Energy나 전체 효율100%를 뜻하지 않습니다.",
+  "reflection": "Raman Gain과 Carrier Recombination Gain의 차이, 그리고 Integration Location과의 차이를 각각 한 문장으로 적으세요.",
+  "sources": [
+    "L0",
+    "L6"
+  ]
+}

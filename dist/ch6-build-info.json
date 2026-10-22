@@ -31,7 +31,11 @@
     "5.6",
     "5.7",
     "6.1",
-    "6.2"
+    "6.2",
+    "6.3",
+    "6.4",
+    "6.5",
+    "6.6"
   ],
   "sources": [
     "assets/NotoSansKR-OFL.txt",
@@ -104,6 +108,10 @@
     "textbook/chapter-05/5.7.json",
     "textbook/chapter-06/6.1.json",
     "textbook/chapter-06/6.2.json",
+    "textbook/chapter-06/6.3.json",
+    "textbook/chapter-06/6.4.json",
+    "textbook/chapter-06/6.5.json",
+    "textbook/chapter-06/6.6.json",
     "tutor/1.1.json",
     "tutor/1.2.json",
     "tutor/1.3.json",
@@ -134,8 +142,12 @@
     "tutor/chapter-05/5.6.json",
     "tutor/chapter-05/5.7.json",
     "tutor/chapter-06/6.1.json",
-    "tutor/chapter-06/6.2.json"
+    "tutor/chapter-06/6.2.json",
+    "tutor/chapter-06/6.3.json",
+    "tutor/chapter-06/6.4.json",
+    "tutor/chapter-06/6.5.json",
+    "tutor/chapter-06/6.6.json"
   ],
-  "sourceHash": "0940dce537158433cf4a93989112dbe96a68a299098da09ba56992831d30314b",
-  "htmlSha256": "f60ad5868aafd4c7f62a29ccede4966160647c40ec8ba117eb9f8b1f903b8df1"
+  "sourceHash": "f5b5a202b76cd21120c30d174120b5a84c22eb2a954cd0da7475ed57674ff914",
+  "htmlSha256": "8b180b74bf12491e40fb67595c998b5756de76402bedfb0bc90a365bb0a95c82"
 }

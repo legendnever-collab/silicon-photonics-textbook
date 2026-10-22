@@ -1,0 +1,66 @@
+{
+  "id": "6.5",
+  "short": "Monolithic III–V / Ge",
+  "title": "What Must Be Solved to Grow a Laser on Silicon?",
+  "time": "15–22분",
+  "lead": "통합된 위치와 재료를 만든 방법을 구별합니다. III–V Direct Growth와 Germanium 접근을 비교하며 Gain·Defect·Thermal·제조의 연결을 배웁니다.",
+  "question": "Ge Detector가 작동한다는 사실이 Ge Laser의 작동을 보장할까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "광원도 재료 통합의 문제입니다",
+      "scene": "laser",
+      "html": "<p>Source를 Si Platform 안에 형성하려는 이유에는 Optical 연결과 제조 통합이 있습니다. 그러나 통합도를 높이는 목표가 재료의 결정 품질이나 Gain 조건을 자동으로 해결하지는 않습니다.</p><p>원본8.5.1 III–V Monolithic Growth와8.5.2 Germanium Lasers를 구별하고,6.3의 Embedded Bonding과6.4의 Bonded Layer를 복습합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "III–V Growth와 Germanium은 다른 접근입니다",
+      "scene": "laser",
+      "html": "<p><strong>III–V Monolithic Growth</strong>는 Si Platform에 Gain을 제공할 III–V Material을 직접 성장시키는 접근입니다. 별도로 성장시킨 Layer를 옮겨 Bonding하는 것과 재료 형성 경로가 다릅니다. III–V와 Si는 Crystal Lattice와 Thermal Expansion 특성이 다르므로 성장 과정과 냉각 이후의 Defect·Strain·Interface를 관리해야 합니다. 이름만으로 특정 Process Temperature나 Defect Density를 제시할 수 없습니다.</p><p>Defect는 Nonradiative Recombination 경로를 만들 수 있어 같은 주입에서도 유용한 Optical Gain을 얻기 어렵게 할 수 있습니다. 하지만 Defect 수 하나로 Threshold·수명·효율을 모두 환산할 수는 없습니다. Active Region, Carrier Confinement, 주입과 열 경로, Optical Loss를 함께 보아야 합니다. 여기서는 실제 Epitaxy Recipe나 수율 모델을 만들지 않습니다.</p><p><strong>Germanium Lasers</strong>는 III–V Direct Growth와 구별되는 재료 접근입니다. Ge는 Si와 가까운 Material Integration 경로를 제공할 수 있지만 기본적으로 Indirect-gap Semiconductor입니다. Direct Transition과 관련한 Band Valley의 점유, Strain과 Doping, Free-carrier Absorption과 주입·열 조건을 함께 고려해야 합니다. Strain이나 Doping을 늘리는 조작 하나만으로 효율적인 발진이 보장되지 않습니다.</p><p>Chapter 5의 Ge Detector는 빛을 흡수해 전하로 수집했습니다. Laser에서는 주입된 Carrier가 유용한 Stimulated Gain을 만들고 Cavity의 모든 손실을 이겨야 합니다. 잘 흡수하는 Detector Material이라는 사실은 Net Gain과 Feedback이 준비되었다는 증거가 아닙니다. 같은 재료 이름이라도 요구되는 Carrier 분포와 동작 조건이 다릅니다.</p><p>Monolithic이라는 말도 문헌·산업에서 범위가 달라질 수 있습니다. 여기서는 원서 목차의 Growth/Ge 접근을 배울 때 Direct Formation의 의미를 명시합니다. Embedded/Bonded 구조를 무조건 같은 제조 분류로 묶지 않습니다. 비교할 때는 Material 형성, Gain 위치, Cavity, Output Interface를 먼저 쓰고, 이후 Thermal·Reliability·Test 요구를 검토합니다. 2015년의 Research 상태를 현재 Commercial Availability라고 표현하지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "Absorption과 Lasing의 조건을 나눕니다",
+      "scene": "laser",
+      "html": "<div class=\"equation\">Useful modal gain must meet cavity losses<br>Absorption / charge collection ≠ net optical gain</div><p>새로운 재료 성장 모델은 추가하지 않습니다.6.2의 조건은 Gain이 실제로 확보되었다는 가정 뒤에만 적용하는 교육 기준이며, 성장 조건에서 Gain을 예측하지 않습니다.</p><div class=\"worked\"><h3>Worked Example · 같은 손실 기준을 두 재료에 적용할 때</h3><p>독립 가정 Modal Threshold가50 cm⁻¹이고, 어떤 설계의 Modal Gain을40 cm⁻¹라고 가정하면 Power Gain Margin은−10 cm⁻¹입니다. III–V인지 Ge인지 이름을 바꿔도 이 장부 계산은 같습니다. 실제40 cm⁻¹를 얻는 재료·주입·열 조건은 별도 검증해야 합니다.</p></div><p>이 값은 실제 Ge 또는 III–V 장치 데이터가 아니라 조건을 설명하는 독자 예제입니다.</p>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "통합도만으로 순위를 정할 수 있나요?",
+      "scene": "laser",
+      "html": "<p>같은 재료가 Photon Absorption과 Lasing에서 어떤 다른 조건을 요구하는지 Tutor에서 확인합니다. 제조 통합도와 Optical 동작 조건을 하나의 점수로 줄이지 마세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "구조를 비교하고 검증 항목을 남깁니다",
+      "scene": "laser",
+      "html": "<p>Integration Structure에서 Monolithic III–V와 Germanium을 선택하고 Gain Material과 Si Platform을 확인하세요. 이어 Etched-pit과 Hybrid로 돌아가 Material을 형성한 곳과 통합한 방법이 어떻게 다른지 표나 메모로 비교합니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "이름보다 형성 과정과 Gain을 봅니다",
+      "scene": "laser",
+      "html": "<ul><li>Direct Growth와 Bonding은 재료 통합 경로가 다릅니다.</li><li>III–V/Si에서는 결정·열·Defect 관리가 필요합니다.</li><li>Ge Absorption과 Ge Lasing은 다른 동작 조건입니다.</li><li>통합 명칭은 실제 효율이나 수율을 보장하지 않습니다.</li></ul><p>다음에는 Light Generation의 메커니즘과 배치 위치를 다른 축으로 읽습니다.</p>"
+    }
+  ],
+  "prediction": "Ge Detector의 높은 Absorption만 확인했다면 Lasing도 증명되나요?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "아니요.Net Gain과 Feedback/Phase 조건을 더 확인해야 합니다.",
+    "예.빛을 흡수하므로 반드시 같은 효율로 발광합니다.",
+    "예.Package 안에 넣기만 하면 됩니다."
+  ],
+  "predictionFeedback": "Absorption과 Charge Collection 검증만으로 Carrier Inversion, Net Gain, Cavity Resonance와 Source 효율을 증명할 수 없습니다.",
+  "reflection": "III–V Growth와 Ge 접근에서 각각 필요한 추가 검증을 두 가지 적고, Embedded/Bonded 구조와의 차이를 설명하세요.",
+  "sources": [
+    "L0",
+    "L1",
+    "L2"
+  ]
+}
