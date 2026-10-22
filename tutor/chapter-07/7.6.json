@@ -1,0 +1,24 @@
+{
+  "question": "길이 Sweep의 Intercept 6.02 dB가 알려 주는 것은?",
+  "choices": [
+    {
+      "text": "두 GC Loss의 합이며, 동일하다는 가정에서만 각각 절반입니다.",
+      "feedback": "맞습니다. Intercept는 L=0에서 남는 전체 고정 Loss입니다. 비대칭 GC의 개별 Loss는 나눌 수 없습니다.",
+      "correct": true
+    },
+    {
+      "text": "각 GC가 각각 6.02 dB입니다.",
+      "feedback": "두 개를 이미 더한 값입니다. 동일한 GC라고 가정한다면 각각 약 3.01 dB입니다.",
+      "correct": false
+    },
+    {
+      "text": "GC의 Complex Phase와 Reflection까지 결정합니다.",
+      "feedback": "Cutback은 Power Loss의 길이 의존성을 분리합니다. Phase와 Reflection에는 추가 정보가 필요합니다.",
+      "correct": false
+    }
+  ],
+  "why": "측정 결과를 Model로 옮길 때는 어떤 Parameter가 유일하게 결정되는지 먼저 봐야 합니다. 입력 하나와 출력 하나의 비율만으로 여러 독립 손실을 모두 분리할 수는 없습니다. Reference Plane을 고정하고 Shape와 Absolute Efficiency를 나눕니다. 단일 Total Loss의 비유일성을 인정하고 Length Sweep의 Slope/Intercept를 조건부로 해석합니다.",
+  "simple": "Input GC → Waveguide → Output GC를 Reference Plane에 맞춰 연결합니다. 단일 Total Loss와 길이 Sweep이 각각 알려 주는 정보를 구별합니다. 숫자 하나보다 먼저 위치와 단위를 확인하세요. 입력과 모든 출력을 나란히 적으면 무엇을 빠뜨렸는지 알 수 있습니다.",
+  "math": "같은 Coupler 두 개, zero reflection, α가 길이에 무관한 경우입니다. Length는 cm, Slope는 dB/cm, Intercept는 dB입니다. Peak=0이면 출력이 없고 Total Loss는 무한대이며 Cutback 추정은 정의되지 않습니다. λ0=1550 nm, 각 η_peak=0.5, α=3 dB/cm, L=1 cm, 입력 1 mW이면 출력은 0.1252968 mW, Total Loss는 9.0205999 dB입니다. 합성 Length Sweep의 Slope는 3 dB/cm, Intercept는 6.0205999 dB입니다.",
+  "notebook": "Length와 α를 각각 바꾸며 Total Loss를 관찰합니다. Peak Efficiency를 바꾸면 Sweep의 Intercept가, α를 바꾸면 Slope가 변하는지 비교하세요. 관찰한 결과를 본문 식과 대조하고 Parameter 외의 가정은 일정하게 유지하세요."
+}

@@ -1,0 +1,66 @@
+{
+  "short": "Coupler, MZI & Passivity",
+  "title": "A Good Fit Must Also Respect Physics",
+  "lead": "Full 4-port Coupler와 Forward Sub-block을 연결하고, MZI에서 상대 Phase를 관찰합니다. Fit 오차와 Passivity를 별도로 검사합니다.",
+  "question": "입력을 하나씩 켜면 문제가 없는데 동시에 켜면 Passive Model이 Power를 만들 수 있을까요?",
+  "prediction": "Pointwise Scaling으로 σ_max를 1로 만들면?",
+  "reflection": "Full 4-port의 S_11과 Forward U_11의 차이, Column 검사의 반례, Fit 보정 후 남는 한계를 설명하세요.",
+  "id": "7.4",
+  "time": "18–25분",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "circuit",
+      "html": "<p>Model을 회로에 연결하면 여러 Coherent 입력이 동시에 존재합니다. 개별 Column Power Sum만 검사하는 것으로 모든 입력의 에너지 보존을 보장할 수 없습니다.</p><p>Full 4-port Coupler와 Forward Sub-block을 연결하고, MZI에서 상대 Phase를 관찰합니다. Fit 오차와 Passivity를 별도로 검사합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Port와 Model의 의미",
+      "scene": "circuit",
+      "html": "<p>이상적인 Coupler의 Forward Matrix는 U=[[t,iκ],[iκ,t]]이며 t=√(1−K), κ=√K입니다. Cross 경로의 i가 Phase 관계를 나타냅니다. Port를 [L_upper,L_lower,R_upper,R_lower]로 정하면 Full S의 대각은 0입니다. U의 t는 같은 쪽 Port Reflection이 아니라 Left에서 오른쪽으로 가는 Through Transmission입니다.</p><p>두 Coupler를 같은 방향으로 연결한 MZI는 M=UDU입니다. D는 두 Arm의 Complex Propagation입니다. 두 번째 Coupler에 임의의 Conjugate를 넣으면 Dark/Bright Port가 바뀔 수 있습니다. 어떤 Convention도 배선과 함께 일관되어야 하며 여기서는 δ=0에서 Upper Dark, Lower Bright입니다.</p><p>실제 FDTD 추출은 Port Mode와 Reference Plane을 지정하고 입력 Mode를 하나씩 Excite한 뒤 각 Outgoing Mode에 Projection합니다. Mesh·시간창·Boundary·Mode Basis와 Wavelength Grid를 수렴시키고 Magnitude와 Phase를 모두 내보내야 합니다. 이 앱에서는 FDTD를 수행하지 않았으며 현재 데이터는 아래의 명시적인 Analytical 함수로 만든 Synthetic Sample입니다.</p><p>Fit 실험은 x=(λ−1550)/5, K(x)=0.5+0.35 sin(πx/2)에서 Coupler Matrix를 Sample합니다. x=−1,−0.5,0,0.5,1의 5 Complex Sample에 1차 Polynomial Least-squares Fit을 적용합니다. 유효 구간은 1545–1555 nm입니다. 범위 밖에서 Fit Error가 커지는 것과 Passivity 위반은 다른 현상이며 구간 안에서도 위반할 수 있습니다.</p><p>Passive Network는 모든 입력 a에 대해 ||Sa||²≤||a||²이어야 합니다. 이 정규화에서 S†S≤I, 즉 최대 Singular Value σ_max≤1이 조건입니다. Radiation 같은 숨은 Channel이 있으면 Guided-port Submatrix는 Unitary가 아니라 Contractive일 수 있습니다. Reciprocity는 지정된 정규화에서 S=Sᵀ인지 별도로 확인합니다.</p><p>Pointwise Scaling S/max(1,σ_max)는 검사한 Frequency에서 Contractivity를 회복시키는 간단한 보정입니다. 보정 전후 Matrix 오차가 생기며 실제 Device를 고친 것도, Broadband Causality를 보장한 것도 아닙니다. Notebook의 한 Sample 값이나 유한 Grid 검사로 모든 주파수의 물리성을 주장하지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "단위·가정·독립 예제",
+      "scene": "circuit",
+      "html": "<div class=\"equation\">U = [[√(1−K), i√K], [i√K, √(1−K)]]<br>S_full = [[0, Uᵀ], [U, 0]] · M_MZI = U D U<br>Passivity: σ_max(S) ≤ 1</div><p>U는 Forward 2×2, S_full은 Bidirectional 4×4입니다. Full Matrix의 0은 2×2 Zero Block입니다. Power-normalized Propagating Mode에서만 이 간단한 Passivity 기준을 적용합니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>B=(1/√2)[[1,1],[1,1]]의 각 Column Power Sum은 1입니다. 그러나 a=(1/√2)[1,1]이면 입력 Power=1, 출력 Power=2이며 σ_max=√2입니다. 한 입력씩 시험한 결과로 동시 입력의 Passivity를 보장할 수 없음을 보여줍니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "오개념을 구별합니다",
+      "scene": "circuit",
+      "html": "<p>Column 검사만 통과한 B를 Passive라고 부를 수 있나요?</p><p>먼저 선택한 이유를 설명하고 Tutor Feedback을 읽어 보세요. 숫자의 단위와 Reference Plane을 명시하여 어떤 가정에서 답이 성립하는지 연결합니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "예측하고 관찰합니다",
+      "scene": "circuit",
+      "html": "<p>MZI Phase와 Loss를 조절한 뒤 Fit Wavelength를 1545→1550→1555→1565 nm로 이동합니다. Domain 표시·Matrix 오차·σ_max·보정 오차를 각각 읽어 보세요.</p><p>Prediction을 기록한 다음 조작하세요. Notebook과 본문의 Figure는 같은 모델을 사용합니다. 관찰한 결과를 본문의 Equation과 연결하여 한 문장으로 설명해 보세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "circuit",
+      "html": "<p>Coupler의 Port와 Phase를 일치시켜 연결합니다. Fit Accuracy·Passivity·Reciprocity·Causality를 각각 판단하며, 보정 결과를 실제 Device 성능으로 해석하지 않습니다.</p><p>Full 4-port의 S_11과 Forward U_11의 차이, Column 검사의 반례, Fit 보정 후 남는 한계를 설명하세요.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "그 Sample의 Contractivity만 확인됨",
+    "모든 주파수의 Causality도 입증됨",
+    "실제 Fabrication 불량이 복구됨"
+  ],
+  "predictionFeedback": "Scaling은 주파수별 Matrix의 에너지 조건을 고칩니다. Causality·Reciprocity·측정 일치와 제작 가능성은 별도 검증입니다.",
+  "sources": [
+    "P0",
+    "P1",
+    "P2"
+  ]
+}

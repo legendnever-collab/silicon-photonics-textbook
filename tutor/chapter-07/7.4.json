@@ -1,0 +1,24 @@
+{
+  "question": "Column 검사만 통과한 B를 Passive라고 부를 수 있나요?",
+  "choices": [
+    {
+      "text": "아니요. 모든 Coherent 입력을 포함하는 σ_max 검사가 필요합니다.",
+      "feedback": "맞습니다. B의 동상 입력은 출력 Power가 2가 되며 σ_max=√2로 Passivity를 위반합니다.",
+      "correct": true
+    },
+    {
+      "text": "예. 각 입력의 Power Sum이 1이면 충분합니다.",
+      "feedback": "Column 검사는 단일 Port Excitation만 봅니다. Coherent 입력 사이의 Cross Term이 에너지를 키울 수 있습니다.",
+      "correct": false
+    },
+    {
+      "text": "Curve Fit 오차가 작으면 Matrix 검사는 필요 없습니다.",
+      "feedback": "Data 오차와 물리적 제약은 다른 검증입니다. 작은 Fit 오차도 경계에서 Gain을 만들 수 있습니다.",
+      "correct": false
+    }
+  ],
+  "why": "Model을 회로에 연결하면 여러 Coherent 입력이 동시에 존재합니다. 개별 Column Power Sum만 검사하는 것으로 모든 입력의 에너지 보존을 보장할 수 없습니다. Coupler의 Port와 Phase를 일치시켜 연결합니다. Fit Accuracy·Passivity·Reciprocity·Causality를 각각 판단하며, 보정 결과를 실제 Device 성능으로 해석하지 않습니다.",
+  "simple": "Full 4-port Coupler와 Forward Sub-block을 연결하고, MZI에서 상대 Phase를 관찰합니다. Fit 오차와 Passivity를 별도로 검사합니다. 숫자 하나보다 먼저 위치와 단위를 확인하세요. 입력과 모든 출력을 나란히 적으면 무엇을 빠뜨렸는지 알 수 있습니다.",
+  "math": "U는 Forward 2×2, S_full은 Bidirectional 4×4입니다. Full Matrix의 0은 2×2 Zero Block입니다. Power-normalized Propagating Mode에서만 이 간단한 Passivity 기준을 적용합니다. B=(1/√2)[[1,1],[1,1]]의 각 Column Power Sum은 1입니다. 그러나 a=(1/√2)[1,1]이면 입력 Power=1, 출력 Power=2이며 σ_max=√2입니다. 한 입력씩 시험한 결과로 동시 입력의 Passivity를 보장할 수 없음을 보여줍니다.",
+  "notebook": "MZI Phase와 Loss를 조절한 뒤 Fit Wavelength를 1545→1550→1555→1565 nm로 이동합니다. Domain 표시·Matrix 오차·σ_max·보정 오차를 각각 읽어 보세요. 관찰한 결과를 본문 식과 대조하고 Parameter 외의 가정은 일정하게 유지하세요."
+}

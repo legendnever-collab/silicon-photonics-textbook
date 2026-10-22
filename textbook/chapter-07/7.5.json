@@ -1,0 +1,66 @@
+{
+  "short": "Ring Feedback Model",
+  "title": "Closing the Loop Changes the Calculation",
+  "lead": "Coupler에 Round-trip Propagation을 되돌려 연결하면 Feedback 분모가 생깁니다. Chapter 2 Ring 모델을 같은 Phase Convention으로 재사용합니다.",
+  "question": "Ring Through 응답을 Coupler 전달률과 한 바퀴 전달률의 단순 곱으로 구할 수 있나요?",
+  "prediction": "Lossless All-pass Ring의 Through Magnitude는?",
+  "reflection": "Feedback 분모의 의미를 Geometric Series로 설명하고, K=0 경계와 Critical Coupling을 구별하세요.",
+  "id": "7.5",
+  "time": "18–25분",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "circuit",
+      "html": "<p>Ring에는 한 번 통과한 Field뿐 아니라 여러 번 순환한 Field가 동시에 존재합니다. 직렬 Power 곱으로는 Resonance와 Critical Coupling을 만들 수 없습니다.</p><p>Coupler에 Round-trip Propagation을 되돌려 연결하면 Feedback 분모가 생깁니다. Chapter 2 Ring 모델을 같은 Phase Convention으로 재사용합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Port와 Model의 의미",
+      "scene": "circuit",
+      "html": "<p>Single-bus All-pass Ring은 Bus와 Ring이 하나의 Coupler에서 만나는 구조입니다. Coupler의 Self-coupling t와 Cross-coupling iκ, Ring의 Round-trip Complex Factor a exp(−iθ)를 함께 연결합니다. a는 Round-trip Field Attenuation이며 Power Transmission은 a²입니다.</p><p>Ring 내부 Field는 첫 주입과 한 번 돌아온 Field, 두 번 돌아온 Field의 합입니다. 재순환 비율이 t a exp(−iθ)이므로 Geometric Series의 합에서 1−t a exp(−iθ)라는 분모가 생깁니다. 이것이 Loop를 연결할 때 단순한 Block 곱이 아닌 Feedback 해가 필요한 이유입니다.</p><p>Resonance에서는 θ가 2π의 정수배입니다. t=a이면 Through의 분자가 0이 되어 Critical Coupling을 이룹니다. Through Power의 소멸은 입력 에너지가 없어진다는 뜻이 아닙니다. 이 Lossy Ring에서는 순환하며 Dissipation 또는 모델에서 생략한 Radiation Channel로 전달됩니다.</p><p>Round-trip Loss가 0이고 K>0이면 a=1이므로 이상적인 All-pass Ring은 모든 Phase에서 Through Power=1입니다. 그러나 Complex Phase는 변할 수 있습니다. All-pass라는 이름은 Resonance가 없다는 뜻이 아니라 Magnitude만 평평할 수 있다는 뜻입니다. 여기서는 내부 저장 에너지와 Dynamic Photon Lifetime은 정량 표시하지 않습니다.</p><p>K=0이면 Ring은 Bus에서 분리됩니다. a=t=1과 θ=0에서 일반 식이 0/0 모양이어도 Bus Through는 1입니다. 이 경계는 명시적으로 Decoupled로 처리합니다. 작은 수로 분모를 무조건 Clamp하면 물리적 의미가 없는 응답을 만들 수 있습니다.</p><p>이 장은 고정 Bias의 Optical Spectrum을 다룹니다. PN Carrier 변화와 Mode Overlap을 실제 Device에서 검증한 Bias-to-Index 관계가 없으므로 Round-trip Phase와 Loss를 독립 입력으로 둡니다. Bias-dependent Resonance를 설명할 수는 있지만 이 Slider를 실제 Voltage나 EO Bandwidth로 해석하지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "단위·가정·독립 예제",
+      "scene": "circuit",
+      "html": "<div class=\"equation\">q_rt = a exp(−iθ) · a = 10^(−IL_rt/20)<br>H_through = (t − a exp(−iθ)) / (1 − t a exp(−iθ))<br>t = √(1−K) · Critical Coupling: t=a</div><p>K는 Power Coupling, t와 a는 Field Coefficient입니다. θ는 Round-trip rad입니다. Spectrum은 λ0=1550 nm, n_g=4, Ring 길이 2π×10 µm의 국소 Phase Slope를 사용합니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>K=0.1이면 t=0.9486833입니다. Round-trip Power Loss가 −10log10(0.9)=0.4575749 dB이면 a=√0.9=t입니다. Resonance θ=0에서 Through Transmission은 0입니다. Loss=0으로 바꾸면 Transmission은 1입니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "오개념을 구별합니다",
+      "scene": "circuit",
+      "html": "<p>Ring의 0.5 dB Round-trip Loss에서 a는?</p><p>먼저 선택한 이유를 설명하고 Tutor Feedback을 읽어 보세요. 숫자의 단위와 Reference Plane을 명시하여 어떤 가정에서 답이 성립하는지 연결합니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "예측하고 관찰합니다",
+      "scene": "circuit",
+      "html": "<p>K=0.1에서 Loss를 0.4575749 dB 근처로 조절하고 θ=0을 관찰합니다. 이어 Loss=0, K=0의 경계를 각각 비교하세요.</p><p>Prediction을 기록한 다음 조작하세요. Notebook과 본문의 Figure는 같은 모델을 사용합니다. 관찰한 결과를 본문의 Equation과 연결하여 한 문장으로 설명해 보세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "circuit",
+      "html": "<p>Ring은 Coupler와 Round-trip Propagation의 Feedback 해입니다. Field와 Power Loss를 구분하고, 고정 상태 Spectrum을 EO Dynamic Response로 확대 해석하지 않습니다.</p><p>Feedback 분모의 의미를 Geometric Series로 설명하고, K=0 경계와 Critical Coupling을 구별하세요.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "K>0이면 모든 θ에서 1",
+    "Resonance에서 반드시 0",
+    "항상 Coupler의 K와 같음"
+  ],
+  "predictionFeedback": "a=1이면 분자와 분모의 Magnitude가 같습니다. Resonance에서의 Phase 변화와 Lossy Critical Coupling을 구별해야 합니다.",
+  "sources": [
+    "P0",
+    "P1",
+    "P2"
+  ]
+}
