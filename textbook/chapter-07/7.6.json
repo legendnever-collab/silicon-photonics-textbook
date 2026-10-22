@@ -1,0 +1,66 @@
+{
+  "short": "GC Measurement Circuit",
+  "title": "What Can a Total Loss Measurement Identify?",
+  "lead": "Input GC → Waveguide → Output GC를 Reference Plane에 맞춰 연결합니다. 단일 Total Loss와 길이 Sweep이 각각 알려 주는 정보를 구별합니다.",
+  "question": "Total Loss가 9 dB라면 GC Loss와 Waveguide Loss를 각각 알 수 있을까요?",
+  "prediction": "동일 GC에서 Propagation Loss α만 증가하면?",
+  "reflection": "같은 Total Loss를 만드는 서로 다른 GC/Propagation Loss 조합을 두 개 만들고, 무엇을 추가 측정할지 적어 보세요.",
+  "id": "7.6",
+  "time": "18–25분",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "circuit",
+      "html": "<p>측정 결과를 Model로 옮길 때는 어떤 Parameter가 유일하게 결정되는지 먼저 봐야 합니다. 입력 하나와 출력 하나의 비율만으로 여러 독립 손실을 모두 분리할 수는 없습니다.</p><p>Input GC → Waveguide → Output GC를 Reference Plane에 맞춰 연결합니다. 단일 Total Loss와 길이 Sweep이 각각 알려 주는 정보를 구별합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Port와 Model의 의미",
+      "scene": "circuit",
+      "html": "<p>Circuit의 입력 Plane A는 Input Fiber, B는 Input GC 뒤의 Guided Mode, C는 Output GC 앞의 Guided Mode, D는 Output Fiber입니다. 각 Block은 인접한 두 Plane 사이의 Loss만 담당합니다. GC 손실을 Source Power에 포함했다면 같은 손실을 회로 앞에서 다시 곱하지 않아야 합니다.</p><p>Chapter 3의 Normalized Array Factor는 Spectral Shape입니다. 최대값이 1이라는 것이 실제 Coupling Efficiency가 100%라는 뜻은 아닙니다. 이 장은 η_GC(λ)=η_peak F_norm(λ)로 분리하고 Absolute Peak Efficiency를 독립 입력으로 받습니다. λ0에서 Phase Matching이 맞도록 Period를 정한 교육용 Scalar Model입니다.</p><p>기본 Circuit은 두 GC가 같고 Reflection이 무시 가능한 Matched Forward Model입니다. 따라서 Power는 두 GC Efficiency와 Waveguide Transmission을 곱합니다. 이 가정에서는 Fabry–Pérot Ripple을 만들지 않습니다. 실제 Reflection이 중요하면 Bidirectional Complex Port와 Feedback을 검증한 뒤 별도 모델을 사용해야 합니다.</p><p>단일 측정은 IL_total=IL_in+αL+IL_out이라는 하나의 관계를 줍니다. 세 Loss를 독립으로 놓으면 무한히 많은 조합이 같은 결과를 만듭니다. 두 GC가 같다는 추가 가정도 α와 GC Loss를 하나의 길이 측정에서 동시에 식별하기에는 부족합니다. 외부 Calibration이나 여러 길이가 필요합니다.</p><p>Length Sweep에서 GC가 동일하고 길이에 따라 변하지 않는다면 IL_total 대 L의 Slope는 Propagation Loss α, Intercept는 두 GC Loss의 합입니다. 이 Notebook의 Sweep은 교육용 합성 데이터이며 실제 측정이 아닙니다. 비대칭 Coupler에서는 Intercept 하나로 각각의 GC Loss를 분리할 수 없습니다.</p><p>Power Spectrum만 측정해 얻은 Efficiency로는 Complex Phase를 결정할 수 없습니다. 최종 Coherent Circuit에서는 GC Phase를 0으로 지정하는 Teaching Assumption을 사용하며 Coupler 내부 Delay나 Reflection을 추정했다고 하지 않습니다. normalized shape, absolute scale, phase는 서로 다른 정보입니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "단위·가정·독립 예제",
+      "scene": "circuit",
+      "html": "<div class=\"equation\">P_D = P_A η_GC,in η_WG η_GC,out<br>η_GC = η_peak F_norm(λ)<br>IL_total = 2 IL_GC + α_dB/cm L_cm</div><p>같은 Coupler 두 개, zero reflection, α가 길이에 무관한 경우입니다. Length는 cm, Slope는 dB/cm, Intercept는 dB입니다. Peak=0이면 출력이 없고 Total Loss는 무한대이며 Cutback 추정은 정의되지 않습니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>λ0=1550 nm, 각 η_peak=0.5, α=3 dB/cm, L=1 cm, 입력 1 mW이면 출력은 0.1252968 mW, Total Loss는 9.0205999 dB입니다. 합성 Length Sweep의 Slope는 3 dB/cm, Intercept는 6.0205999 dB입니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "오개념을 구별합니다",
+      "scene": "circuit",
+      "html": "<p>길이 Sweep의 Intercept 6.02 dB가 알려 주는 것은?</p><p>먼저 선택한 이유를 설명하고 Tutor Feedback을 읽어 보세요. 숫자의 단위와 Reference Plane을 명시하여 어떤 가정에서 답이 성립하는지 연결합니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "예측하고 관찰합니다",
+      "scene": "circuit",
+      "html": "<p>Length와 α를 각각 바꾸며 Total Loss를 관찰합니다. Peak Efficiency를 바꾸면 Sweep의 Intercept가, α를 바꾸면 Slope가 변하는지 비교하세요.</p><p>Prediction을 기록한 다음 조작하세요. Notebook과 본문의 Figure는 같은 모델을 사용합니다. 관찰한 결과를 본문의 Equation과 연결하여 한 문장으로 설명해 보세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "circuit",
+      "html": "<p>Reference Plane을 고정하고 Shape와 Absolute Efficiency를 나눕니다. 단일 Total Loss의 비유일성을 인정하고 Length Sweep의 Slope/Intercept를 조건부로 해석합니다.</p><p>같은 Total Loss를 만드는 서로 다른 GC/Propagation Loss 조합을 두 개 만들고, 무엇을 추가 측정할지 적어 보세요.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Length Sweep의 Slope만 증가",
+    "Intercept만 증가",
+    "Slope와 Intercept가 반드시 같아짐"
+  ],
+  "predictionFeedback": "L=0의 GC Loss는 그대로이고 길이에 비례한 손실만 커집니다. 실제 측정에서는 다른 길이의 GC가 같다는 가정을 검증해야 합니다.",
+  "sources": [
+    "P0",
+    "P1",
+    "P2"
+  ]
+}

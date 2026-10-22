@@ -1,0 +1,24 @@
+{
+  "question": "3 dB Loss를 Complex Field에 어떻게 적용하나요?",
+  "choices": [
+    {
+      "text": "Amplitude에 10^(−3/20)을 곱합니다.",
+      "feedback": "맞습니다. Power는 |Field|²이므로 같은 Loss의 Field Factor는 Power Factor의 제곱근입니다.",
+      "correct": true
+    },
+    {
+      "text": "Amplitude에 10^(−3/10)을 곱합니다.",
+      "feedback": "그 값은 Power Factor입니다. Field에 곱하고 제곱하면 6 dB Loss가 되어 손실이 중복됩니다.",
+      "correct": false
+    },
+    {
+      "text": "Phase에만 3 rad를 더합니다.",
+      "feedback": "Loss는 Magnitude를 줄입니다. Phase Shift는 이 모델에서 별도 독립 변수이며 rad와 dB는 바꿔 쓸 수 없습니다.",
+      "correct": false
+    }
+  ],
+  "why": "같은 Transmission 값이라도 Mode, 기준 Plane과 Phase가 다르면 서로 다른 Model입니다. Model을 재사용하려면 숫자뿐 아니라 어디까지 사용할 수 있는지 설명하는 Contract가 필요합니다. 좋은 Model은 응답값과 Contract를 함께 제공합니다. Fit 정확도·Passivity·Causality는 서로 다른 검증이며 단위와 적용 범위를 먼저 확인합니다.",
+  "simple": "응답 Curve 하나보다 중요한 것은 그 Curve를 연결할 수 있는 조건입니다. 값·단위·Domain·Port·Reference Plane을 함께 읽습니다. 숫자 하나보다 먼저 위치와 단위를 확인하세요. 입력과 모든 출력을 나란히 적으면 무엇을 빠뜨렸는지 알 수 있습니다.",
+  "math": "Time Convention은 exp(+iωt), Forward Propagation은 exp(−iβL)입니다. α_P는 Power Attenuation Coefficient입니다. dB/cm에 길이 cm를 곱하면 Power Loss dB가 되며 Field에는 /20을 적용합니다. IL=3 dB이면 Field Factor=0.7079458, Power Factor=0.5011872입니다. 입력 1 mW를 이 Block에 통과시키면 약 0.501187 mW입니다. Field Factor를 제곱한 값과 Power Factor가 일치해야 합니다.",
+  "notebook": "Upper Arm Loss를 0→3 dB로 바꾸고 두 Arm의 Field Magnitude와 출력 Power 합을 비교합니다. 다른 Arm에는 Loss가 추가되지 않았음을 확인하세요. 관찰한 결과를 본문 식과 대조하고 Parameter 외의 가정은 일정하게 유지하세요."
+}

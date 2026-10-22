@@ -3,7 +3,7 @@
 기술 용어는 영어, 설명은 한글인 독립적인 Interactive Textbook입니다. 교재 설명 → Guided Tutor → Physics Notebook을 연결합니다. 게임이나 최적화 퍼즐을 중심으로 만들지 않습니다.
 
 ## Run offline
-현재 통합판 `dist/silicon-photonics-textbook-v0.6.0.html`을 다운로드한 후 Browser로 엽니다. HTML 하나에 Source·Content·모델이 포함되며 외부 Script/Font/API를 요청하지 않습니다. Source 파일 `src/index.html`은 Build Template입니다.
+현재 통합판 `dist/silicon-photonics-textbook-v0.7.0.html`을 다운로드한 후 Browser로 엽니다. HTML 하나에 Source·Content·모델이 포함되며 외부 Script/Font/API를 요청하지 않습니다. Source 파일 `src/index.html`은 Build Template입니다.
 
 ## Reproduce
 Node.js 20 이상. Production Build에는 npm 의존성이 없습니다.
@@ -14,7 +14,7 @@ npm test
 npm run serve
 ```
 
-`http://localhost:8080/dist/silicon-photonics-textbook-v0.6.0.html`에서도 실행할 수 있습니다. Browser QA는 Playwright와 Chromium이 설치된 환경에서 `npm run test:browser`로 수행합니다. Browser 의존성은 `tests/README.md`를 따릅니다.
+`http://localhost:8080/dist/silicon-photonics-textbook-v0.7.0.html`에서도 실행할 수 있습니다. Browser QA는 Playwright와 Chromium이 설치된 환경에서 `npm run test:browser`로 수행합니다. Browser 의존성은 `tests/README.md`를 따릅니다.
 
 ## Learning review
 Chapter 1은 약 30–45분을 목표로 한 Pilot입니다. 실제 학습 시간과 교육 효과는 아직 사용자 검토가 필요합니다. 자동 테스트 통과와 학습 효과 검증을 구별합니다. Save/Resume는 같은 Origin/Browser의 Local Storage를 사용하며 기록 JSON으로 백업할 수 있습니다. 파일 위치/Browser가 바뀌면 자동으로 공유되지 않습니다.
@@ -81,3 +81,13 @@ This branch is a Draft stacked on `feature/ch1-textbook-pilot` (PR #1), for user
 - 범위: 공식 Chapter8 목차·공개 Summary 기반. Full text/원본 Equation·Figure·Problem 미확인.8.6의 원본 세부 기술 목록은 미확인이며 Raman은 별도1차 연구의 보충입니다.
 - 검토: `docs/CH6_LEARNING_REVIEW.md`, 결과/제한은 `docs/CH6_QA_REPORT.md`; Source Mapping/Model Contract/Figure Inventory를 함께 확인합니다.
 - 승인 전 main 병합 금지,Chapter7 자동 시작 금지. Remote Push/PR/CI 상태는 QA Report의 실제 관측 결과를 따릅니다.
+
+
+## Chapter 7 — Photonic Circuit Modelling (v0.7.0)
+7.1 Why Circuit Modelling → 7.2 Compact Models → 7.3 Complex Waves/S-parameters → 7.4 Coupler/MZI/Fit/Passivity → 7.5 Ring Feedback → 7.6 GC Measurement → 7.7 Guided Circuit/Photocurrent. 기술 용어 English, 설명 Korean.
+
+`npm run build` creates the current offline43-lesson HTML; `npm run build:ch6` retains the Chapter6 reproduction path. `npm test`, `npm run test:ch7:independent` (Python/numpy) and `npm run test:ch7:browser` (Playwright/Chromium) cover the new release. Existing browser commands target their archived HTML.
+
+Source mapping: docs/CH7_TEXTBOOK_SOURCE_MAPPING.md. Contract/reuse: notebook/CH7_MODEL_CONTRACT.md. Physics validation, QA, figure inventory and review: docs/CH7_*. New v7 save reads previous keys without modifying the originals; JSON export/import remains offline.
+
+Static coherent single-mode models and synthetic fitting/cutback data are teaching assumptions, not FDTD/measured/PDK performance. Explicit phase/loss replace unsupported PN bias calibration. No main merge before user review; stop at Chapter7.

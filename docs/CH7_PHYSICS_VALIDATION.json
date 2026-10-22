@@ -1,0 +1,7 @@
+{
+  "method": "numpy SVD, explicit path summation, 500-term feedback recurrence, least-squares length slope, exact-SI photon count",
+  "checks": 110,
+  "maxAbsoluteError": 3.552713678800501e-15,
+  "tolerance": 2e-12,
+  "status": "PASS"
+}

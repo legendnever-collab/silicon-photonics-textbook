@@ -1,0 +1,66 @@
+{
+  "short": "Guided Circuit & Review",
+  "title": "From a Coherent Source to Photocurrent",
+  "lead": "Source와 Passive Network와 Detector를 한 회로에서 연결합니다. 출력 숫자뿐 아니라 에너지·단위·적용 범위로 결과를 검토합니다.",
+  "question": "Photocurrent 한 숫자를 타당성하려면 어떤 Model 조건이 함께 있어야 할까요?",
+  "prediction": "Source와 Loss 고정, Phase만 바꾸면?",
+  "reflection": "한 회로를 Port Model로 표현하고 Field→Power→Current의 계산 순서를 적으세요. 추가로 필요한 측정·Calibration과 남은 가정을 세 가지 이상 기록하세요.",
+  "id": "7.7",
+  "time": "18–25분",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "circuit",
+      "html": "<p>마지막 실습은 장치를 더 늘리는 것이 아니라 지금까지의 경계를 연결하는 연습입니다. Source Power가 어디에서 정의되었고, 어디에서 Field를 더하며, 어디에서 Power를 Current로 바꾸는지 따라갑니다.</p><p>Source와 Passive Network와 Detector를 한 회로에서 연결합니다. 출력 숫자뿐 아니라 에너지·단위·적용 범위로 결과를 검토합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Port와 Model의 의미",
+      "scene": "circuit",
+      "html": "<p>회로는 Laser Boundary Source → Input GC → MZI → Output GC → Photodetector입니다. MZI의 Upper와 Lower 두 출력에 같은 Output GC를 두고 Upper에 Detector를 연결합니다. Lower의 미관측 Power도 Ledger에 남겨 간섭에 의한 출력 이동이 Loss처럼 보이지 않게 합니다.</p><p>Source는 지정 Plane의 Optical Power를 제공합니다. a_source=√P_source exp(iφ_source)로 정규화하며 Source Phase를 0 기준으로 둡니다. Chapter 6의 L–I나 WPE에서 Power를 숨겨 유도하지 않습니다. Electrical Input과 Source Heat는 이 Passive Optical Network 경계 밖의 별도 문제입니다.</p><p>Input GC를 지난 Field는 첫 Coupler에서 나뉩니다. 두 Arm에서 Phase와 Loss를 각각 적용하고 두 번째 Coupler에서 Complex Field를 합산합니다. 그 뒤에 각 Output의 |Field|²를 계산하고 Output GC의 Efficiency를 적용합니다. 직렬 Loss Ledger와 Interference Node의 계산 순서를 분리해야 합니다.</p><p>Detector는 Chapter 5에서 검증한 Primary Photocurrent 모델 I_photo=R(λ)P_detector를 재사용합니다. QE는 Detector 입력 Plane에 도달한 빛에 대한 값입니다. 앞의 GC 손실을 QE에 다시 포함하지 않습니다. 여기서는 Unity Gain, Dark Current 제외이며 Total Current나 Noise/BER를 계산하지 않습니다.</p><p>PN Phase Shifter와 실제 Bias의 정량 연결은 Calibration 없이 만들지 않습니다. 이 Guided Circuit은 고정 상태의 수동 MZI Phase 입력을 사용합니다. MZM의 한 Bias 지점을 추상화할 수 있지만 Time-varying Modulation, RF Sideband, Eye와 데이터 속도의 성능 검증은 이번 정량 범위가 아닙니다.</p><p>모든 결과는 Source Power = Input GC 미전달 + Arm Loss + Output GC 미전달 + Upper 전달 + Lower 전달로 검토합니다. 미전달은 Radiation·Reflection·흡수 위치를 분리하지 않은 에너지 항입니다. Photon-to-Current 변환은 에너지 생성이 아니라 전기 Readout이며 Bias 회로의 전력까지 이 Optical Ledger에서 풀지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "단위·가정·독립 예제",
+      "scene": "circuit",
+      "html": "<div class=\"equation\">a_source = √(P_source [W]) · exp(iφ_source)<br>I_photo = R(λ) P_detector [A]<br>P_source = P_rejected,in + P_arm,loss + P_rejected,out + P_upper + P_lower</div><p>UI Power는 mW, 모델의 Complex Amplitude는 sqrt(W), Responsivity는 A/W, 출력 Current는 µA입니다. Detector는 Upper Output GC 뒤 Plane에만 있습니다. 두 출력과 명시 Loss를 모두 포함합니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>Source=1 mW, 각 GC Peak=0.5, K=0.5, δ=π/2, Arm Loss=0, λ=1550 nm, Detector QE=0.8이면 두 출력은 각각 0.125 mW입니다. R=1.00012745 A/W이므로 Upper Photocurrent는 125.01593 µA입니다. Ledger는 1=0.5+0+0.25+0.125+0.125 mW입니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "오개념을 구별합니다",
+      "scene": "circuit",
+      "html": "<p>Upper Detector가 Dark여도 에너지 보존을 확인하려면?</p><p>먼저 선택한 이유를 설명하고 Tutor Feedback을 읽어 보세요. 숫자의 단위와 Reference Plane을 명시하여 어떤 가정에서 답이 성립하는지 연결합니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "예측하고 관찰합니다",
+      "scene": "circuit",
+      "html": "<p>δ=0→π/2→π로 바꾸고 두 출력과 Upper Photocurrent를 관찰합니다. Source=0, Peak=1, Arm Loss=0의 경계를 순서대로 시험하세요. 마지막으로 설명을 직접 기록하고 Backup으로 내보내세요.</p><p>Prediction을 기록한 다음 조작하세요. Notebook과 본문의 Figure는 같은 모델을 사용합니다. 관찰한 결과를 본문의 Equation과 연결하여 한 문장으로 설명해 보세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "circuit",
+      "html": "<p>Chapter Review: 왜 Circuit Model이 필요한가? Contract에 무엇을 적는가? 왜 Phase를 보존하는가? 어떻게 Passivity를 검사하는가? Ring Feedback과 측정 식별성의 한계는 무엇인가? 마지막으로 전체 Optical Ledger와 Detector 단위를 검토합니다.</p><p>한 회로를 Port Model로 표현하고 Field→Power→Current의 계산 순서를 적으세요. 추가로 필요한 측정·Calibration과 남은 가정을 세 가지 이상 기록하세요.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Photocurrent가 변해도 전체 Optical Ledger는 보존",
+    "Photocurrent는 항상 고정",
+    "Lower 출력은 에너지 계산에서 제외"
+  ],
+  "predictionFeedback": "Phase는 Upper/Lower 분배를 바꿉니다. Detector는 Upper만 읽으므로 Photocurrent가 변하지만 두 출력과 Loss의 합은 Source와 맞습니다.",
+  "sources": [
+    "P0",
+    "P1",
+    "P2"
+  ]
+}

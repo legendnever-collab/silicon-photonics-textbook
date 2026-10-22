@@ -73,3 +73,6 @@ Primary supporting sources checked: Ansys "Understanding the mode overlap calcul
 
 ## Chapter6 — Lasers
 See [CH6_TEXTBOOK_SOURCE_MAPPING.md](docs/CH6_TEXTBOOK_SOURCE_MAPPING.md) for original8.1–8.7 mapping and access limits.
+
+## Chapter 7 — Photonic Circuit Modelling
+Original Chapter9 pp313–348. Official section-by-section mapping and access limits: [CH7_TEXTBOOK_SOURCE_MAPPING.md](docs/CH7_TEXTBOOK_SOURCE_MAPPING.md). Original seven-lesson content follows9.1→9.6;7.7 is an educational synthesis. No full-text/figure/listing access or reproduction.

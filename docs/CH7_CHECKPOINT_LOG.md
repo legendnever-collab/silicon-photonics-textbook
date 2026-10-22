@@ -1,0 +1,19 @@
+# Chapter 7 Checkpoint Log
+
+Branch feature/ch7-photonic-circuit-modelling. Remote baseline31324f6355a33f2ae8333ab0073627d2776e93aa, merged PR6. Recovered232 source/text/manifest files byte-exact via connected GitHub;v0.6.0 attachment SHA matches4f97aaea0544e3ae33752dd1b736eb6103d4dc47a07950ecd7f98a65759fafc3. Direct git clone unavailable; remote history will retain parent baseline using Git Data API. Local recovery root is intentionally not pushed as main.
+
+D0: Source Mapping, Learning Design, Model Contract and reuse map approved by task scope. Prior118Node tests PASS after recovering retained releases. No existing source/model changes.
+D1: Coherent models, seven authored lesson/tutor payloads,11figure renderers/catalog, stable notebook hooks and first43-lesson offline HTML.139Node tests PASS. Local commit fb44cef includes initial integrated implementation, with ring/measurement/guided sections available early for subsequent gates. Checkpoint checkpoints/ch7/D1-coherent-circuit.html.
+D2: Ring convention adapter, explicit decoupled/ill-conditioned boundary, dynamic resonance markers, GC normalized/absolute separation and synthetic cutback verified. Independent110comparisons PASS, max3.55e−15. No PN calibration invented. Optical spectra remain static.
+D3: Browser matrix and read-only v6/v5/v4 migration scenarios authored; actual download/restore/future/malformed rejection and all43lesson navigation included. Local Chromium package download blocked/truncated; no local browser PASS claimed. Remote CI is the browser execution path.
+D4: Pending remote browser/visual review and release stabilization. User review and main merge remain prohibited until explicit approval. Chapter8 not started.
+
+D4a: New234-file prior-source/release byte-preservation gate added (140Node PASS). Fit displays both pre/post-correction error; GC length sweep explicitly fixed atλ0; ring loop has distinct coupling ports. Independent110comparisons still PASS. README/review/figure inventory/font audit published with latest release. Remote Browser/visual gates pending.
+
+D4b: historical CH6 focus test race found remotely; CH6/CH7 go() now awaits two animation frames after title update, before controls are focused. Existing assertions retained.233priorfilespreserved; only test helper timing changes. No archived source/HTML edited.
+
+D4c: Settled navigation verified. Six viewport/theme combinations passed;320px Lesson7.4 text overflow fixed with scoped wrapping. Actual1440light screenshot inspected; connector line contrast raised. Final matrix rerun required.
+
+D4d: All67functional scenarios observed PASS; remaining aggregate gate isolated to one spectrum caption onmobile. Caption shortened;8matrixscreenshots+guidedzoominspected. Notebook now has direct zoom with Escape/focus-return test. Final rerun required.
+
+D4 COMPLETE — Runtime HEAD eb14c1b365b0fa5e8843cb1e6516c78adbfdb0e8, full CI https://github.com/legendnever-collab/silicon-photonics-textbook/actions/runs/39773408698 observed SUCCESS.140Node,110independent comparisons,67new/integrated +177historical =244browser scenarios PASS.0runtime/console/network/SVGbounds. Final8matrixscreenshots+guided320darkzoom inspected. HTML ae7f102a2ae514d02dc4b39584334df3adac63c4fc9a8c6dc417f982d2050803. D4e is a documentation-only release seal; source/build bytes unchanged. Draft PR7 remains awaiting user study review; main not merged, Chapter8 not started.
