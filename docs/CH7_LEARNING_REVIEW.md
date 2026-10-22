@@ -14,3 +14,5 @@ Light/Dark,Figure 확대/Escape,Keyboard Slider와 학습 기록 JSON 내보내�
 적용 범위: Single coherent TE mode, Static Optical Response, ideal matched coupler, independent phase/loss, synthetic fit/cutback, detector primary current. Full textbook body/figures/listings not accessed. FDTD/PDK/measurement/EO dynamics/BER or calibrated voltage response not claimed. Mobile verification is viewport emulation, not a physical phone. 자동 테스트 통과와 실제 학습 효과 검토는 구분합니다.
 
 PR7은 Draft입니다. 사용자 학습 검토와 별도 승인 전 main 병합 금지. Chapter8 자동 시작 금지.
+
+검증 완료:140Node테스트,독립계산110비교,새통합Browser67시나리오와과거실행파일177시나리오 PASS.8화면MatrixScreenshot을직접확인했습니다. Mobile은Emulation입니다. Notebook의작은Port/축Label은‘회로그림확대’로읽을수있습니다. 전체증거는CH7_QA_REPORT.md와ReleaseCheckpoint를참조하세요.

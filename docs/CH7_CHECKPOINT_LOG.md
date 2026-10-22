@@ -15,3 +15,5 @@ D4b: historical CH6 focus test race found remotely; CH6/CH7 go() now awaits two 
 D4c: Settled navigation verified. Six viewport/theme combinations passed;320px Lesson7.4 text overflow fixed with scoped wrapping. Actual1440light screenshot inspected; connector line contrast raised. Final matrix rerun required.
 
 D4d: All67functional scenarios observed PASS; remaining aggregate gate isolated to one spectrum caption onmobile. Caption shortened;8matrixscreenshots+guidedzoominspected. Notebook now has direct zoom with Escape/focus-return test. Final rerun required.
+
+D4 COMPLETE — Runtime HEAD eb14c1b365b0fa5e8843cb1e6516c78adbfdb0e8, full CI https://github.com/legendnever-collab/silicon-photonics-textbook/actions/runs/39773408698 observed SUCCESS.140Node,110independent comparisons,67new/integrated +177historical =244browser scenarios PASS.0runtime/console/network/SVGbounds. Final8matrixscreenshots+guided320darkzoom inspected. HTML ae7f102a2ae514d02dc4b39584334df3adac63c4fc9a8c6dc417f982d2050803. D4e is a documentation-only release seal; source/build bytes unchanged. Draft PR7 remains awaiting user study review; main not merged, Chapter8 not started.
