@@ -1,0 +1,19 @@
+{
+  "version": "0.6.0",
+  "branch": "feature/ch6-lasers",
+  "verifiedSourceCommit": "a04d03f976344378bb0cd35d7fee1ae366561a76",
+  "baselineMain": "30d04b9ee43e62647544c3942199b9078ccacf3a",
+  "html": "dist/silicon-photonics-textbook-v0.6.0.html",
+  "sha256": "4f97aaea0544e3ae33752dd1b736eb6103d4dc47a07950ecd7f98a65759fafc3",
+  "nodeTestsPass": 118,
+  "chapter6BrowserScenariosPass": 58,
+  "originalChapter1to5BrowserScenariosPass": 119,
+  "runtimeErrors": 0,
+  "externalRuntimeRequests": 0,
+  "remotePush": "blocked by automatic approval review; user-authored explicit external publishing permission requested",
+  "draftPR": "not created",
+  "remoteCI": "not observed",
+  "mainMerged": false,
+  "nextAction": "After explicit publish approval,push existing branch,create Draft PR from docs/CH6_PR_DRAFT.md,observe final-head CI;do not recreate validated code",
+  "userLearningReview": "pending"
+}
