@@ -1,0 +1,9 @@
+{
+  "requiredHangul": 351,
+  "missingHangul": 0,
+  "fonts": [
+    "pretendard-ch3",
+    "noto-kr-ch5-extra",
+    "noto-kr-ch6-extra"
+  ]
+}

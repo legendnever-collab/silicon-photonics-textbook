@@ -7,3 +7,5 @@ D1: Coherent models, seven authored lesson/tutor payloads,11figure renderers/cat
 D2: Ring convention adapter, explicit decoupled/ill-conditioned boundary, dynamic resonance markers, GC normalized/absolute separation and synthetic cutback verified. Independent110comparisons PASS, max3.55e−15. No PN calibration invented. Optical spectra remain static.
 D3: Browser matrix and read-only v6/v5/v4 migration scenarios authored; actual download/restore/future/malformed rejection and all43lesson navigation included. Local Chromium package download blocked/truncated; no local browser PASS claimed. Remote CI is the browser execution path.
 D4: Pending remote browser/visual review and release stabilization. User review and main merge remain prohibited until explicit approval. Chapter8 not started.
+
+D4a: New234-file prior-source/release byte-preservation gate added (140Node PASS). Fit displays both pre/post-correction error; GC length sweep explicitly fixed atλ0; ring loop has distinct coupling ports. Independent110comparisons still PASS. README/review/figure inventory/font audit published with latest release. Remote Browser/visual gates pending.
