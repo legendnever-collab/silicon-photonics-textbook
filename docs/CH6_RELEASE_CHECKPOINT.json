@@ -10,10 +10,10 @@
   "originalChapter1to5BrowserScenariosPass": 119,
   "runtimeErrors": 0,
   "externalRuntimeRequests": 0,
-  "remotePush": "blocked by automatic approval review; user-authored explicit external publishing permission requested",
-  "draftPR": "not created",
-  "remoteCI": "not observed",
+  "remotePush": "authorized by explicit user instruction;pending execution",
+  "draftPR": "pending creation",
+  "remoteCI": "pending observation",
   "mainMerged": false,
-  "nextAction": "After explicit publish approval,push existing branch,create Draft PR from docs/CH6_PR_DRAFT.md,observe final-head CI;do not recreate validated code",
-  "userLearningReview": "pending"
+  "nextAction": "Push existing branch,create PR,verify feature-head CI,merge main as explicitly approved",
+  "userLearningReview": "approved by explicit user merge instruction on2026-10-22 KST"
 }

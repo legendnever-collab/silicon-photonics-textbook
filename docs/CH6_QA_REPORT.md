@@ -37,3 +37,6 @@ HTML:`dist/silicon-photonics-textbook-v0.6.0.html`.
 SHA256:`4f97aaea0544e3ae33752dd1b736eb6103d4dc47a07950ecd7f98a65759fafc3`.
 Retained v0.5.0 SHA:`128f4bbca0423ccb316ff88082c387447511d4330f7be95be9996fdaba7eb8e0`.
 Local feature commit is recorded by git log and CH6_RELEASE_CHECKPOINT.json. User learning approval pending.
+
+## User approval update —2026-10-22 KST
+User explicitly approved the Chapter6 merge after review delivery and the publishing permission question. Push/PR/merge are now authorized. Earlier Remote limitation section records the previous blocked attempt;actual feature-head CI and merge results will be reported through the GitHub PR and final response. No claim of remote success before observation.

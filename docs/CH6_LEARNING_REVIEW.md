@@ -15,4 +15,4 @@ Download and open `dist/silicon-photonics-textbook-v0.6.0.html` in a browser. It
 ## What feedback is useful
 Are Gain/Cavity/Si/Output clear? Can you explain the cause before moving a slider? Are Korean prose,English technical terms and figure labels readable on your actual phone? Is each independent model's limitation clear? Automated test PASS is not a learning-effectiveness claim.
 
-User review is pending. Do not merge main or start Chapter7 until explicit approval. GitHub publishing/CI is separately pending after automatic approval review rejected the push; local commits and offline HTML are available for review.
+User explicitly approved Chapter6 merge on2026-10-22 KST. GitHub publishing and merge may proceed after feature-head CI is verified. The prior automatic approval block is historical. Do not start Chapter7 automatically.
