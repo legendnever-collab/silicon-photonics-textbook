@@ -13,3 +13,8 @@ Added6.3–6.6,all three original co-packaging routes,bonded overlap,III–V/Ge 
 
 ## D3 — Learning completion
 Added6.7 synthesis,3 worked problems,chapter summary,reflection and backup review.118 Node tests PASS. Full CH6/integrated browser matrix58 scenarios PASS across4viewports×2themes:all36 lessons,tutors,4interactions,control node/focus,persistence,download/restore,invalid backups,read-only v5/v4 migration. Fixed320px select overflow. Captions then received specific observation questions; final D4 rerun targets final stable HTML. Previous Ch1–5 original artifact browser suites119 scenarios PASS(70 Ch1–4 +49 Ch5); evidence copied into current regression folder and prior reports/screenshots restored. Next:D4 final stable build/SHA,visual review,CI workflow and handoff.
+
+## D4 — Local release stabilization
+Final stable v0.6.0 SHA4f97aaea0544e3ae33752dd1b736eb6103d4dc47a07950ecd7f98a65759fafc3.118 Node tests PASS;58 final CH6/integrated Chromium scenarios PASS,0runtime/console/network/SVG-text errors.119 prior artifact scenarios PASS;prior sources/releases preserved.598 required Hangul glyphs covered,15new fallback glyphs. Independent Decimal calculation,repeated byte-identical build,independent source manifest and bothCH6/CH5 SHA checks PASS. Four-screen Light/Dark visual QA reviewed;power label/arrow placement corrected. Final checkpoint HTML,QA,review guide,CI workflow andPRdraft prepared.
+
+Remote blocker:automatic approval review rejected git push,stating external publication authorization was unverified. No bypass attempted. Branch/commits remain local,Draft PR and actual remote CI not created/observed;do not mark these PASS. User can review local HTML and authorize publishing. No main merge orChapter7.
