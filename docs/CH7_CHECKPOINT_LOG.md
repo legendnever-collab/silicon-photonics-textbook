@@ -9,3 +9,5 @@ D3: Browser matrix and read-only v6/v5/v4 migration scenarios authored; actual d
 D4: Pending remote browser/visual review and release stabilization. User review and main merge remain prohibited until explicit approval. Chapter8 not started.
 
 D4a: New234-file prior-source/release byte-preservation gate added (140Node PASS). Fit displays both pre/post-correction error; GC length sweep explicitly fixed atλ0; ring loop has distinct coupling ports. Independent110comparisons still PASS. README/review/figure inventory/font audit published with latest release. Remote Browser/visual gates pending.
+
+D4b: historical CH6 focus test race found remotely; CH6/CH7 go() now awaits two animation frames after title update, before controls are focused. Existing assertions retained.233priorfilespreserved; only test helper timing changes. No archived source/HTML edited.

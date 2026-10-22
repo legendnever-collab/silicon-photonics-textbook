@@ -4,7 +4,7 @@ const browser=await pw.chromium.launch({headless:true,...process.env.BROWSER_EXE
 const uri=pathToFileURL(process.cwd()+'/dist/silicon-photonics-textbook-v0.6.0.html').href,out='artifacts/v0.6.0';await mkdir(out,{recursive:true});
 const report={htmlSha256:JSON.parse(await readFile('dist/ch6-build-info.json','utf8')).htmlSha256,artifact:'dist/silicon-photonics-textbook-v0.6.0.html',browser:browser.version(),device:'Desktop/mobile viewport emulation; not a physical smartphone',scenarios:[],errors:[],console:[],network:[],figureBounds:[]};
 async function run(name,fn){await fn();report.scenarios.push({name,status:'PASS'});console.log('PASS '+name);}
-async function go(p,id){if(!await p.locator('#lesson-nav [data-lesson="'+id+'"]').count())await p.locator('#chapter-nav [data-lesson="'+id.split('.')[0]+'.1"]').click();await p.locator('#lesson-nav [data-lesson="'+id+'"]').click();await p.waitForFunction(i=>document.title.startsWith('Lesson '+i),id);}
+async function go(p,id){if(!await p.locator('#lesson-nav [data-lesson="'+id+'"]').count())await p.locator('#chapter-nav [data-lesson="'+id.split('.')[0]+'.1"]').click();await p.locator('#lesson-nav [data-lesson="'+id+'"]').click();await p.waitForFunction(i=>document.title.startsWith('Lesson '+i),id);await p.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));}
 function observe(p){p.on('pageerror',e=>report.errors.push(e.message));p.on('console',m=>{if(m.type()==='error')report.console.push(m.text());});p.on('request',r=>{if(/^https?:/.test(r.url()))report.network.push(r.url());});p.setDefaultTimeout(8000);}
 try{
 for(const viewport of[{width:1440,height:900},{width:1366,height:768},{width:390,height:844},{width:320,height:740}])for(const theme of['light','dark']){

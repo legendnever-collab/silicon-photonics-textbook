@@ -4,7 +4,7 @@
 
 Local gates observed:
 - Baseline118Node tests PASS after exact recovery of prior releases.
-- Current140Node tests PASS: prior118plus CH7 physics/content/manifest/migration sanitizer and234file preservation check.
+- Current140Node tests PASS: prior118plus CH7 physics/content/manifest/migration sanitizer and233file preservation check.
 - Independent Python110comparisons PASS, max error3.552713678800501e−15 at tolerance2e−12: numpySVD,coherent path sum,500termringrecurrence,cutbackLS,exactSIreadout.
 - Repeated deterministic build and independent source/HTML hash verified. Final SHA in dist/CH7_SHA256SUMS.txt and ch7-build-info.json.
 - Embedded font audit351required Hangul,0missing using unchanged existing fonts; docs/CH7_FONT_AUDIT.json.
@@ -16,3 +16,5 @@ Authored browser matrix:67new/integrated scenarios across1440×900,1366×768,390
 Known model limits: singlecoherentTEmode,staticopticalresponse,idealmatching/independentphase-loss,localdispersion;syntheticfitandcutback;noFDTD/fulltextreproduction/PDKcalibration/EOdynamics/BER/broadbandcausality. Mobile is emulation,not physical phone. Source electrical power/heat and detectordark/noise excluded. All original sections mapped including FDTD/extraction/passivity as appropriately bounded teaching substitutes.
 
 User play review remains pending. Keep Draft; do not merge main before explicit approval.
+
+D4b observed historical Chapter6 focus assertion failure in run39771360018: test acted after title update but before requestAnimationFrame navigation focus restoration. Added two-frame navigation settlement to CH6/CH7 test go() helpers; all focus/node/scroll assertions remain. Retained HTML/model/content unchanged. This test synchronization change is excluded explicitly from the233-file preservation manifest. Final-head browser rerun required.

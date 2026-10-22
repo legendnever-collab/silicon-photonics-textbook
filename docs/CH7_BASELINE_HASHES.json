@@ -150,7 +150,6 @@
   "tests/ch5-browser.mjs": "b27acff5eb7b1a4df056a32ebc7e9c24f79187cb2f1fac362394ea64dc396ab5",
   "tests/ch5-content.test.mjs": "288fc535407b0014115dd58e5e1970fcae1d431b1b7e82e3ab4be77855ed6768",
   "tests/ch5-physics.test.mjs": "9ba8e2b72dd59dec4ca7d931de4b02094a5d236601077257719fe198f2a707e7",
-  "tests/ch6-browser.mjs": "91bc4e468b1fef67a420817b9f1fd18b2e9648f3a59baf0f2a251b4613b3c12b",
   "tests/ch6-content.test.mjs": "6a7c9b0236014e62517a4418609e99df917487e671841ef6e7681e97613f32f2",
   "tests/ch6-independent-validation.py": "0be4e389b0f562f5e1f8fcbccc834bcf2b7ab0bc9fdf98cb55ee6e07a8acfec2",
   "tests/ch6-physics.test.mjs": "5692f1a8be33a27cbf7bada197ea0b7bccd533306c4dada36b4da3670340d727",
