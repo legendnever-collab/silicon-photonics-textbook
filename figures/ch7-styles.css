@@ -3,3 +3,8 @@
 [data-chapter="7"] .ch7-spectrum{margin-top:1rem;border-top:1px solid var(--line);padding-top:1rem}
 [data-chapter="7"] .ch7-spectrum summary{cursor:pointer;font-size:1rem;font-weight:700}
 [data-chapter="7"] select{width:100%;font-size:1rem;margin-bottom:1rem}
+/* Long port lists remain readable at 320px without pushing the document wide. */
+#reading[data-chapter="7"]{overflow-wrap:anywhere}
+[data-chapter="7"] select{min-width:0;max-width:100%}
+[data-chapter="7"] .control-row{flex-wrap:wrap}
+[data-chapter="7"] .teaching-svg .f-axis{stroke:var(--ink);stroke-width:1.8}

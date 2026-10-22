@@ -11,3 +11,5 @@ D4: Pending remote browser/visual review and release stabilization. User review 
 D4a: New234-file prior-source/release byte-preservation gate added (140Node PASS). Fit displays both pre/post-correction error; GC length sweep explicitly fixed atλ0; ring loop has distinct coupling ports. Independent110comparisons still PASS. README/review/figure inventory/font audit published with latest release. Remote Browser/visual gates pending.
 
 D4b: historical CH6 focus test race found remotely; CH6/CH7 go() now awaits two animation frames after title update, before controls are focused. Existing assertions retained.233priorfilespreserved; only test helper timing changes. No archived source/HTML edited.
+
+D4c: Settled navigation verified. Six viewport/theme combinations passed;320px Lesson7.4 text overflow fixed with scoped wrapping. Actual1440light screenshot inspected; connector line contrast raised. Final matrix rerun required.

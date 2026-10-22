@@ -18,3 +18,5 @@ Known model limits: singlecoherentTEmode,staticopticalresponse,idealmatching/ind
 User play review remains pending. Keep Draft; do not merge main before explicit approval.
 
 D4b observed historical Chapter6 focus assertion failure in run39771360018: test acted after title update but before requestAnimationFrame navigation focus restoration. Added two-frame navigation settlement to CH6/CH7 test go() helpers; all focus/node/scroll assertions remain. Retained HTML/model/content unchanged. This test synchronization change is excluded explicitly from the233-file preservation manifest. Final-head browser rerun required.
+
+D4c: First settled browser run passed all checks across1440/1366/390 light/dark before finding320px overflow in7.4. Long unbroken port lists now wrap within Chapter7; select/control sizing bounded; SVG connection contrast raised after inspecting the returned1440light screenshot. No global clipping workaround. Visual logging expanded to every MZI viewport/theme for actual inspection. Full rerun pending.
