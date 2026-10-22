@@ -1,0 +1,67 @@
+{
+  "scenarios": [
+    {
+      "name": "all available Ch2 Lessons: A–F, original numbered figures, Tutor feedback and explanations",
+      "status": "PASS"
+    },
+    {
+      "name": "D1 DC model/figure/notebook share state, keyboard focus and conservation",
+      "status": "PASS"
+    },
+    {
+      "name": "D2: phase accumulation stays separate from power and MZI phasor/curve share output",
+      "status": "PASS"
+    },
+    {
+      "name": "D3 Ring, Bragg and Circuit notebooks retain independent settings and match shared model",
+      "status": "PASS"
+    },
+    {
+      "name": "Chapter1 data migration keeps original key untouched, Ch2 resume/backup restore",
+      "status": "PASS"
+    },
+    {
+      "name": "out-of-range imported physics settings clamp safely, malformed records retain current state",
+      "status": "PASS"
+    },
+    {
+      "name": "Ch2 Figure zoom Escape restores keyboard focus",
+      "status": "PASS"
+    },
+    {
+      "name": "1440×900 light: offline responsive reading, Notebook, figures and zoom",
+      "status": "PASS"
+    },
+    {
+      "name": "1440×900 dark: offline responsive reading, Notebook, figures and zoom",
+      "status": "PASS"
+    },
+    {
+      "name": "1366×768 light: offline responsive reading, Notebook, figures and zoom",
+      "status": "PASS"
+    },
+    {
+      "name": "1366×768 dark: offline responsive reading, Notebook, figures and zoom",
+      "status": "PASS"
+    },
+    {
+      "name": "390×844 light: offline responsive reading, Notebook, figures and zoom",
+      "status": "PASS"
+    },
+    {
+      "name": "390×844 dark: offline responsive reading, Notebook, figures and zoom",
+      "status": "PASS"
+    },
+    {
+      "name": "320×740 light: offline responsive reading, Notebook, figures and zoom",
+      "status": "PASS"
+    },
+    {
+      "name": "320×740 dark: offline responsive reading, Notebook, figures and zoom",
+      "status": "PASS"
+    }
+  ],
+  "runtimeErrors": [],
+  "consoleErrors": [],
+  "externalRequests": []
+}

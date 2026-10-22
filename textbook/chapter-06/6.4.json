@@ -1,0 +1,66 @@
+{
+  "id": "6.4",
+  "short": "Hybrid & Gain Overlap",
+  "title": "How Can Bonded Gain Feed a Silicon Mode?",
+  "time": "15–22분",
+  "lead": "Gain을 제공하는 III–V와 빛을 안내하는 Silicon을 하나의 Optical 구조로 연결합니다. Layer가 포개진 그림과 Mode가 Gain을 실제로 경험한다는 물리적 조건을 구별합니다.",
+  "question": "III–V Layer를 Si 위에 붙이면 모든 Optical Mode가 같은 Gain을 얻을까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "재료의 역할을 나눕니다",
+      "scene": "laser",
+      "html": "<p>Hybrid Silicon Laser의 학습 질문은 어떤 재료가 Gain을 만들고 어떤 경로가 빛을 안내하느냐입니다. 두 역할을 나누면 Silicon의 Passive Circuit과 III–V Gain을 함께 사용할 이유가 보입니다.</p><p>이 Lesson의 단면은 Bonded Gain Layer와 Si Waveguide의 관계를 독자적으로 그린 비축척 개념도입니다. 실제 Eigenmode를 계산한 결과는 아닙니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Bonded Layer와 Shared Optical Mode",
+      "scene": "laser",
+      "html": "<p>원서의 <strong>Hybrid Silicon Lasers</strong>는 Bonded Gain Material과 Silicon Optical 구조를 결합하는 접근입니다. Fang et al.의 Hybrid Evanescent Laser 연구는 III–V Quantum Well과 Silicon Waveguide가 함께 만드는 Optical 구조를 다룹니다. 빛의 일부가 Gain Material과 겹쳐야 Stimulated Emission의 이득을 얻을 수 있습니다. Si가 모든 Gain을 만든다고 읽으면 안 됩니다.</p><p><strong>Mode/Gain Overlap</strong>은 단순히 Layer가 위아래로 겹쳤는지와 다릅니다. Optical Field의 공간 분포, Gain Region의 위치와 Material이 중요합니다. Gain Layer가 넓어도 Mode가 거의 닿지 않는다면 Modal Gain은 작을 수 있습니다. 실제 정량 Overlap에는 올바른 Power/Energy 정규화와 복소 Material, Vector Field를 다루는 적절한 모델이 필요합니다.</p><p>여기서는 Γ를 Modal Gain과 Material Gain을 연결하는 유효 교육 입력으로만 사용합니다. 점선 타원은 두 재료에 걸친 Mode 영역의 개념 표시이며 Signed Field나 Intensity의 수치 결과가 아닙니다. 타원 안의 색 면적을 적분하거나 곧바로 Γ라고 부르지 않습니다. Chapter 1의 Slab Field와 달리 이 구조의 Eigenproblem은 풀지 않았습니다.</p><p>Bond Interface, Waveguide Geometry, Transition Taper와 Electrical Contact는 Optical·Electrical·Thermal 요구를 동시에 받습니다. Gain Overlap을 늘리는 변화가 Passive Routing Loss나 Electrical Resistance, 열 배출과 같은 다른 항목을 개선한다는 보장은 없습니다. 이 앱은 그 Trade-off를 정성적으로 묻고 실제 효율·수율 수치를 만들지 않습니다.</p><p>용어에도 주의하세요. 2015년 교재의 Hybrid라는 제목과 후속 문헌의 <strong>Heterogeneous Integration</strong>은 사용 범위가 겹칠 수 있습니다. Hybrid/Heterogeneous를 기술 우열로 읽기보다, Pre-made Die인지 Bonded Material인지 Direct Growth인지와 Optical Coupling 경로를 풀어서 말하는 편이 정확합니다. 여기서는 현대 Foundry별 제공 현황이나 단일 보편 명명법을 단정하지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "Material Gain에서 Modal Gain까지",
+      "scene": "laser",
+      "html": "<div class=\"equation\">Modal Power Gain = Γ × Material Power Gain<br>g_material,th = (α_i + α_m)/Γ   (Γ &gt; 0)</div><p>Γ는 무차원, Gain/Loss는 같은 길이의 역수 단위를 씁니다. 이 관계는6.2의 균일 FP 교육 모델에 대한 보충이며 모든 Bonded Laser 구조의 정확한 Threshold 식은 아닙니다.</p><div class=\"worked\"><h3>Worked Example · 같은 Material Gain, 다른 Overlap</h3><p>독립 가정 g=300 cm⁻¹에서 Γ=0.1이면 Modal Gain은30 cm⁻¹, Γ=0.2이면60 cm⁻¹입니다. 필요한 Modal Threshold가50.1324 cm⁻¹인 별도 FP 예에서는 전자는 부족하고 후자는 양의 Power Margin입니다. 이 숫자를 아래 개념 단면에서 계산한 Γ라고 해석하지 않습니다.</p></div><p>Γ=0에서는 이 Gain Material로 Mode에 이득을 줄 수 없으므로 필요한 Material Gain을 유한한 수치로 표시하지 않습니다.</p>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "눈에 보이는 Layer 면적이 Γ인가요?",
+      "scene": "laser",
+      "html": "<p>Tutor는 공간 Layer와 Optical Mode의 차이를 묻습니다. Material을 붙였다는 사실 외에 실제 Gain을 판단하려면 어떤 Field 정보가 더 필요한지 설명하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "개념 단면과 수치 모델의 경계를 확인합니다",
+      "scene": "laser",
+      "html": "<p>Notebook의 Hybrid 구조에서 III–V Gain, Silicon 경로, 점선 Cavity와 Output Transition을 찾으세요. Γ 수치 변화는6.2 Threshold Notebook에서 별도로 실험합니다. 그 수치가 이 개념 단면으로부터 유도되지 않는다는 점을 비교 기록에 남기세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "Bonding과 Mode Engineering이 모두 필요합니다",
+      "scene": "laser",
+      "html": "<ul><li>III–V Gain과 Silicon Guidance의 역할이 다릅니다.</li><li>Layer Overlap과 Mode/Gain Overlap은 같지 않습니다.</li><li>Γ는 실제 Field와 정의를 확인해야 정량화할 수 있습니다.</li><li>Hybrid/Heterogeneous는 구조 설명과 함께 사용합니다.</li></ul><p>다음에는 Bonding과 구별되는 Direct Growth 및 Ge 접근을 봅니다.</p>"
+    }
+  ],
+  "prediction": "Material Gain 고정, Γ가0.1에서0.2로 증가하면 Modal Gain은?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "이 단순 관계에서 두 배입니다.",
+    "항상 같으며 Si만 결정합니다.",
+    "WPE도 반드시 두 배입니다."
+  ],
+  "predictionFeedback": "Modal Gain=Γg이므로 두 배입니다. Electrical/열 모델이 없으므로 WPE나 실제 I_th 변화량은 결정하지 않습니다.",
+  "reflection": "개념 단면의 타원과 실제 Solver Mode Profile의 차이를 설명하고, Γ를 계산하려면 어떤 공간 정보가 필요한지 적으세요.",
+  "sources": [
+    "L0",
+    "L2",
+    "L5"
+  ]
+}

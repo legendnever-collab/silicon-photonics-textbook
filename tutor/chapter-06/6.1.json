@@ -1,0 +1,22 @@
+{
+  "question": "Source20 mW, WPE20%, IL3 dB에서 Source 내부 Heat는?",
+  "choices": [
+    {
+      "text": "80 mW이며 Coupling 미전달 Power는 별도입니다.",
+      "feedback": "맞습니다. 100−20=80 mW입니다. 미전달 약9.98 mW가 어디에서 흡수되는지는 이 모델로 정하지 않습니다.",
+      "correct": true
+    },
+    {
+      "text": "약90 mW이며 Coupling Loss를 전부 더합니다.",
+      "feedback": "Source에서 생긴 잔차와 Interface 뒤의 손실을 섞었습니다. 반사·방사·흡수 위치를 별도 항목으로 남겨야 합니다."
+    },
+    {
+      "text": "20 mW입니다. Optical Output과 같은 값입니다.",
+      "feedback": "Heat는 Electrical Input에서 총 Optical Output을 뺀 값입니다. 출력과 같다는 일반 법칙은 없습니다."
+    }
+  ],
+  "why": "효율의 분자·분모와 공간 경계를 정해야 Source Dissipation과 Coupling 손실을 중복 계산하지 않습니다. 열 위치를 아는 것이 Package 선택에도 필요합니다.",
+  "simple": "전원에서100을 받고20을 빛으로 보냈다면 Source에는80이 남습니다. 그 빛20 중 길에서 잃은 것은 Source 안의80과 다른 항목입니다.",
+  "math": "P_elec=P_source/η_WPE=100 mW, Q=80 mW, P_PIC=20×10^(−0.3)=10.0237 mW입니다. 단위 mW를 유지합니다.",
+  "notebook": "IL만 바꿀 때 Source Heat가 유지되는지 관찰하세요. PIC Power를 다시20 mW로 맞추려면 Source Power를 별도로 늘려야 하며 자동 보상하지 않습니다."
+}

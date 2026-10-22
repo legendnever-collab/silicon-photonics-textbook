@@ -1,0 +1,205 @@
+{
+  "browser": "153.0.8010.0",
+  "device": "Chromium desktop and mobile viewport emulation; no physical smartphone test",
+  "scenarios": [
+    {
+      "name": "Ch1–5 navigation, all 29 lessons and legacy notebooks 1440×900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Ch5 figures, all tutor feedback and alternative explanations 1440×900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared figure/notebook state, no duplicated QE and independent RC/transit 1440×900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Save/resume, notes, theme, parameters and read record 1440×900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Figure zoom, keyboard close, screenshot 1440×900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual download backup, import restore, invalid import preserves state 1440×900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Ch1–5 navigation, all 29 lessons and legacy notebooks 1440×900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Ch5 figures, all tutor feedback and alternative explanations 1440×900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared figure/notebook state, no duplicated QE and independent RC/transit 1440×900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Save/resume, notes, theme, parameters and read record 1440×900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Figure zoom, keyboard close, screenshot 1440×900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual download backup, import restore, invalid import preserves state 1440×900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Ch1–5 navigation, all 29 lessons and legacy notebooks 1366×768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Ch5 figures, all tutor feedback and alternative explanations 1366×768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared figure/notebook state, no duplicated QE and independent RC/transit 1366×768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Save/resume, notes, theme, parameters and read record 1366×768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Figure zoom, keyboard close, screenshot 1366×768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual download backup, import restore, invalid import preserves state 1366×768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Ch1–5 navigation, all 29 lessons and legacy notebooks 1366×768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Ch5 figures, all tutor feedback and alternative explanations 1366×768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared figure/notebook state, no duplicated QE and independent RC/transit 1366×768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Save/resume, notes, theme, parameters and read record 1366×768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Figure zoom, keyboard close, screenshot 1366×768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual download backup, import restore, invalid import preserves state 1366×768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Ch1–5 navigation, all 29 lessons and legacy notebooks 390×844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Ch5 figures, all tutor feedback and alternative explanations 390×844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared figure/notebook state, no duplicated QE and independent RC/transit 390×844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Save/resume, notes, theme, parameters and read record 390×844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Figure zoom, keyboard close, screenshot 390×844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual download backup, import restore, invalid import preserves state 390×844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Ch1–5 navigation, all 29 lessons and legacy notebooks 390×844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Ch5 figures, all tutor feedback and alternative explanations 390×844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared figure/notebook state, no duplicated QE and independent RC/transit 390×844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Save/resume, notes, theme, parameters and read record 390×844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Figure zoom, keyboard close, screenshot 390×844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual download backup, import restore, invalid import preserves state 390×844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Ch1–5 navigation, all 29 lessons and legacy notebooks 320×740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Ch5 figures, all tutor feedback and alternative explanations 320×740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared figure/notebook state, no duplicated QE and independent RC/transit 320×740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Save/resume, notes, theme, parameters and read record 320×740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Figure zoom, keyboard close, screenshot 320×740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual download backup, import restore, invalid import preserves state 320×740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Ch1–5 navigation, all 29 lessons and legacy notebooks 320×740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Ch5 figures, all tutor feedback and alternative explanations 320×740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared figure/notebook state, no duplicated QE and independent RC/transit 320×740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Save/resume, notes, theme, parameters and read record 320×740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Figure zoom, keyboard close, screenshot 320×740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual download backup, import restore, invalid import preserves state 320×740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only v4 migration retains old learning record and populates v5",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "figureBounds": []
+}

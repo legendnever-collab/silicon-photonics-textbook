@@ -1,0 +1,66 @@
+{
+  "id": "6.1",
+  "short": "External Power Supply",
+  "title": "Where Does the Light Enter a Silicon PIC?",
+  "time": "15–22분",
+  "lead": "Chapter 3에서 배운 Optical I/O 앞에는 빛을 공급하는 Source가 필요합니다. Chapter 6에서는 Source 출력과 PIC 입력을 구별하고 빛과 Heat의 이동을 따라갑니다.",
+  "question": "같은 20 mW Laser인데 PIC에 도달하는 Power는 왜 다를까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "빛을 만드는 일과 전달하는 일을 나눕니다",
+      "scene": "laser",
+      "html": "<p>지금까지의 Waveguide·Modulator·Detector는 입력된 빛을 전달하거나 조절하거나 검출했습니다. 그 앞에는 Optical Energy를 공급하는 Source가 있어야 합니다. Laser를 <strong>Optical Power Supply</strong>로 보면 External Laser를 사용하는 이유가 분명해집니다.</p><p>전기 Power Supply의 단자와 부하 입력이 다르듯, Laser Output Port와 PIC 입력 Plane도 다릅니다. Chapter 3의 Coupling Loss가 이 둘을 연결합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Silicon은 좋은 Waveguide여도 쉬운 Laser Material은 아닙니다",
+      "scene": "laser",
+      "html": "<p>Silicon의 Bandgap은 Indirect입니다. Band Extrema의 Momentum이 달라 단순한 Electron–Hole Radiative Recombination이 Direct-gap III–V처럼 효율적으로 일어나기 어렵습니다. Silicon이 특정 파장에서 빛을 잘 안내한다는 사실이 효율적인 Light Generation을 뜻하지는 않습니다. III–V Gain Material을 사용하는 주요 이유가 여기에 있습니다.</p><p><strong>External Laser</strong>는 Source와 PIC를 다른 위치에 두고 Fiber 또는 다른 Optical Interface로 연결합니다. Source의 파장과 Power를 선택하고 열을 별도로 처리할 수 있으며 교체 가능한 구성도 설계할 수 있습니다. 그러나 Coupling Alignment, Reflection, Polarization과 Package 인터페이스는 여전히 검증해야 합니다. 분리했다는 이름만으로 낮은 전체 소비 전력이 보장되지는 않습니다.</p><p>Source Reference Plane A는 여기서 단일 출력 Laser의 총 Optical Output입니다. PIC Reference Plane B는 정의된 Optical I/O 바로 뒤의 Waveguide 입력입니다. A에서 B까지의 Loss만 IL로 세며, B 이후 Splitter·Propagation Loss를 다시 이 IL에 넣지 않습니다. Chapter 3의 Overlap 계산은 이 Interface를 설명하는 한 방법이며 지금은 IL을 독립 가정합니다.</p><p><strong>Wall-plug Efficiency</strong>는 같은 Source 경계의 Optical Output을 Electrical Input으로 나눈 비율입니다. WPE가 낮으면 같은 Optical Power를 만들 때 Source에서 더 많은 Power를 소비하고 Heat가 남습니다. 여기서는 Driver와 TEC를 제외합니다. 다른 Port로 빛이 나온다면 그 Power도 Source 총 출력에 포함하거나 별도 항목으로 기록해야 합니다.</p><p>Coupling에서 전달되지 않은 빛은 반사되거나 방사되거나 다른 위치에서 흡수될 수 있습니다. 이를 전부 Laser 내부 Heat로 더하면 열의 위치를 잘못 해석합니다. 다음 모델은 에너지 잔차를 계산할 뿐 Source 온도나 Thermal Resistance를 예측하지 않습니다. 교재의 2015년 Foundry 가용성 서술을 현재 상황으로 사용하지도 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "같은 Reference Plane으로 Power를 셉니다",
+      "scene": "laser",
+      "html": "<div class=\"equation\">η_c = 10^(−IL_dB/10)<br>P_PIC = P_source η_c<br>P_elec = P_source / η_WPE<br>Q_source = P_elec − P_source</div><p>모든 Power는 같은 단위로 사용합니다. Notebook은 mW이며 η는 무차원입니다. dBm은 1 mW 기준의 로그 값입니다. 출력 0 mW는 −∞ dBm / 출력 없음으로 표시합니다.</p><div class=\"worked\"><h3>Worked Example · 빛 20 mW의 행방</h3><p>Single-output Source가 20 mW, WPE가 0.20, IL이 3 dB라고 가정합니다. Electrical Input은 100 mW, Source Heat는 80 mW, PIC 입력은 약 10.0237 mW입니다. Coupling 미전달 Power는 약 9.9763 mW입니다. 100=80+10.0237+9.9763 mW로 에너지가 맞습니다.</p></div><p>20 mW Source와 20 mW PIC 입력은 다릅니다. IL=0일 때만 이 단순 Interface에서 둘이 같아집니다.</p>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "미전달 Power는 어디에 있나요?",
+      "scene": "laser",
+      "html": "<p>Tutor에서는 Coupling Loss와 Source Heat의 위치를 구별합니다. 3 dB를 적용한 뒤 같은 손실을 다시 적용하면 어떤 Reference Plane을 두 번 통과시킨 셈인지 설명해 보세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "Coupling과 WPE를 독립적으로 바꿉니다",
+      "scene": "laser",
+      "html": "<p>Source Power를 20 mW로 두고 IL을 0→3→6 dB로 바꿉니다. PIC 입력은 줄지만 Electrical Input과 Source Heat는 그대로인지 확인하세요. 이어 WPE만 높이면 PIC 입력은 같고 Source Heat만 감소하는 이유를 적어 보세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "Source와 PIC의 경계를 먼저 표시합니다",
+      "scene": "laser",
+      "html": "<ul><li>Silicon Guidance와 Light Generation은 다른 기능입니다.</li><li>Source 출력과 PIC 입력의 Plane을 먼저 정합니다.</li><li>WPE는 Source 변환 효율, Coupling은 전달 효율입니다.</li><li>Source Heat와 Coupling 미전달 Power의 위치는 다릅니다.</li></ul><p>다음 Lesson에서는 Gain만으로 충분하지 않은 이유와 Cavity의 역할을 배웁니다.</p>"
+    }
+  ],
+  "prediction": "Source Power와 WPE 고정, IL만 증가하면?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "PIC 입력만 감소하고 Source Heat는 유지",
+    "Source Heat가 반드시 같은 만큼 증가",
+    "PIC 입력과 Electrical Input이 함께 증가"
+  ],
+  "predictionFeedback": "이 독립 Ledger에서는 P_source/WPE가 고정이므로 Source Heat도 고정입니다. 미전달 Power의 열적 위치는 별도 모델이 필요합니다.",
+  "reflection": "Source Plane과 PIC Plane을 그린 뒤 WPE와 Coupling Efficiency가 각각 어떤 두 Power의 비율인지 설명하세요.",
+  "sources": [
+    "L0",
+    "L1",
+    "L3"
+  ]
+}

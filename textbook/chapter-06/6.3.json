@@ -1,0 +1,65 @@
+{
+  "id": "6.3",
+  "short": "Co-packaging",
+  "title": "Where Does the Laser Cavity End?",
+  "time": "15–22분",
+  "lead": "같은 Package 안에 있다고 같은 Laser 구조는 아닙니다. Pre-made Laser, External Cavity, Etched-pit Embedded Epitaxy의 Gain·Cavity·Optical Interface를 비교합니다.",
+  "question": "Gain Chip 밖의 Silicon Waveguide도 Laser Cavity의 일부일 수 있나요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "Package와 Cavity를 따로 그립니다",
+      "scene": "laser",
+      "html": "<p>External Source를 가까이 옮겨 같은 Package에 배치하면 배선과 Optical 연결 방식이 달라집니다. 그러나 물리적으로 가까워졌다는 정보만으로 Gain이 어디에 있는지, Cavity가 어디까지 이어지는지 알 수 없습니다.</p><p>이 Lesson은 원본8.3의 세 하위 항목을 순서대로 다루며 구조 선택의 이유를 설명합니다. Package 경계와 Optical Feedback 경계를 다른 선으로 읽어 보세요.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "세 가지 Co-packaging 접근",
+      "scene": "laser",
+      "html": "<p><strong>Pre-made Laser</strong>는 이미 Gain과 Feedback 구조를 갖춘 Laser Die를 Silicon PIC와 함께 Package에 놓는 접근입니다. Laser Output Facet에서 Si Waveguide까지 Optical Interface가 필요합니다. Laser Die를 미리 검사할 수 있는 장점이 있을 수 있지만, Assembly Alignment와 Thermal Path, Reflection 허용 범위는 별도로 확인해야 합니다. Cavity가 완성된 Laser Die 안에 있는 예시를 그림으로 보여 줍니다.</p><p><strong>External Cavity Laser</strong>는 Gain Chip 자체 바깥의 Optical Path와 Reflector가 Feedback Loop를 완성하는 구조입니다. 예를 들어 Silicon 쪽 Passive Waveguide와 선택적 Reflector가 왕복 경로에 참여할 수 있습니다. 따라서 Gain Chip과 Silicon 사이의 Coupling은 단순 Output 전달뿐 아니라 발진 조건에도 영향을 줄 수 있습니다. Gain Region 길이와 전체 Cavity 길이를 같은 값으로 대입하면 안 됩니다.</p><p><strong>Etched-pit Embedded Epitaxy</strong>는 이 교재 목차에서 별도 통합 접근으로 제시됩니다. Epitaxy라는 단어를 보고 Si 위에 III–V를 직접 성장시키는 방식이라고 단정하지 마세요. 확인한 Creazzo et al.(2013)의 1차 Abstract는 III–V Gain이 Silicon Chip 안에 Embedded되고, Gain Section을 Si Substrate에 Metal Bonding하여 Thermal Path를 만드는 구성을 설명합니다. 여기서는 미리 성장된 Gain Material을 Receiving Site에 통합하는 개념으로 구별합니다.</p><p>다만 원서8.3.3의 전체 본문과 공정 순서를 확인하지 못했습니다. 따라서 Pit 깊이, Bond Stack, Alignment 공차, Reflector 위치와 Yield를 원서 값처럼 재현하지 않습니다. Figure의 Cavity는 가능한 개념 범위이며 특정 논문의 정확한 Mask나 공정도는 아닙니다. Embedded라는 위치와 Direct Growth라는 재료 형성 방법을 혼동하지 않는 것이 이번 학습의 범위입니다.</p><p>세 구조를 비교할 때는 Gain 검증, Cavity Feedback, Output Interface, 열의 위치를 함께 적어야 합니다. 단일 명칭을 성능 순위로 사용하지 않습니다. 같은 Package라도 Cavity가 경계를 가로지르면 Reflection·Round-trip Phase·Alignment에 대한 질문이 달라집니다. 실제 External Cavity의 파장 선택과 안정성은 이 장의 균일 FP 모델이 정확히 풀지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "Interface는 왕복 경로에 들어갈 수 있습니다",
+      "scene": "laser",
+      "html": "<div class=\"equation\">Cavity boundary ≠ Package boundary<br>Round-trip Interface Transmission = η_forward η_return</div><p>한 번 통과하는 Power Transmission이 η이고 왕복이 같은 Interface를 한 번씩 지난다고 가정하면 Interface만의 왕복 Power Factor는 η²입니다. 다른 Loss·Mirror·Gain·Phase는 별도입니다.</p><div class=\"worked\"><h3>Worked Example · 한 번의 Loss와 왕복 Loss</h3><p>Interface가 한 방향1 dB Loss이면 Transmission은 약0.7943입니다. 같은 손실을 돌아오는 길에도 겪는 가정에서 왕복은2 dB, Factor는 약0.6310입니다. 이미 왕복 Loss가 주어졌다면 또 두 배 하지 않습니다. 이 예는 Interface 단독 장부이며 실제 External Cavity Threshold 예측이 아닙니다.</p></div><p>Pre-made Source의 출력 뒤 Loss와 External Cavity 안의 Loss를 같은 역할로 취급할 수 없는 이유가 보입니다.</p>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "같은 Package이면 모두 Hybrid일까요?",
+      "scene": "laser",
+      "html": "<p>완성된 Laser Die를 옆에 놓은 구조와, Si Reflector가 Gain Chip에 Feedback을 돌려주는 구조를 비교하세요. 동일한1 dB Interface가 어떤 경로에서 등장하는지 Tutor와 확인합니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "구조를 선택하고 네 위치를 찾습니다",
+      "scene": "laser",
+      "html": "<p>Integration Structure에서 Pre-made → External Cavity → Etched-pit을 선택하세요. 각 그림에서 Gain·Cavity 점선·Si 경로·Output Port를 찾아 본문에 적습니다. Cavity가 길어 보인다는 이유로 Threshold 수치를 부여하지 마세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "경계가 다르면 검증 항목도 달라집니다",
+      "scene": "laser",
+      "html": "<ul><li>Pre-made는 완성된 Laser Die의 통합입니다.</li><li>External Cavity는 Gain Chip 바깥이 Feedback 경로에 참여합니다.</li><li>Etched-pit Embedded와 Direct Growth는 같은 뜻이 아닙니다.</li><li>Package 경계와 Cavity 경계를 별도로 확인합니다.</li></ul><p>다음은 Bonded Gain과 Silicon Mode의 Overlap을 살펴봅니다.</p>"
+    }
+  ],
+  "prediction": "External Cavity의 왕복 경로에 있는 Interface Loss가 커지면?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Feedback Power가 줄어 발진 조건에 영향을 줄 수 있습니다.",
+    "Output만 줄고 Cavity에는 영향이 없습니다.",
+    "반드시 I_th가1 mA 증가합니다."
+  ],
+  "predictionFeedback": "Cavity 안의 Interface는 왕복 Feedback에 참여합니다. 실제 Threshold Current 변화량은 Geometry·Gain·Injection과 전체 Cavity 모델 없이 정하지 않습니다.",
+  "reflection": "세 Co-packaging 방식에서 Gain·Cavity·Si·Output을 각각 표시하고, Etched-pit과 Direct Growth를 구별하는 질문 한 가지를 적으세요.",
+  "sources": [
+    "L0",
+    "L4"
+  ]
+}
