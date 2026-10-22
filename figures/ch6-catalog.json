@@ -1,0 +1,72 @@
+[
+  {
+    "id": "6.1A",
+    "lesson": "6.1",
+    "title": "Source and PIC Reference Planes",
+    "classification": "Conceptual",
+    "renderer": "laserPower",
+    "anchor": "#section-concept > p:first-of-type",
+    "see": "Gain, Cavity, Silicon과 Output의 위치 또는 축 이름과 단위를 먼저 확인하세요.",
+    "notice": "입력 Parameter와 Reference Plane을 고정한 뒤 하나의 변화만 관찰하세요.",
+    "meaning": "Source에서 생기는 원인과 관찰한 Power 또는 Gain/Loss 결과를 연결하세요.",
+    "parameters": "Source: 독자 SVG와 LaserPhysics 교육 모델; CH6_MODEL_CONTRACT.md 및 CH6_TEXTBOOK_SOURCE_MAPPING.md. Conceptual은 비축척, Analytical은 독립 가정 입력. Power:mW, Current:mA, Gain/Loss:cm⁻¹, Length:µm.",
+    "limits": "실제 Device/PDK/측정 또는 Mode Solver가 아닙니다. Threshold는 균일 FP의 Power 조건만, L–I와 Power Ledger는 독립 모델입니다. 계산하지 않은 Field/Profile/온도/동역학은 표시하지 않습니다.",
+    "source": "Original educational SVG; Cambridge contents/public summary; SMU GAIN manual §4.1.2; Wistey2005 eq2.2"
+  },
+  {
+    "id": "6.1B",
+    "lesson": "6.1",
+    "title": "Power and Heat Ledger",
+    "classification": "Analytical",
+    "renderer": "laserPower",
+    "anchor": "#section-equation > p:first-of-type",
+    "see": "Gain, Cavity, Silicon과 Output의 위치 또는 축 이름과 단위를 먼저 확인하세요.",
+    "notice": "입력 Parameter와 Reference Plane을 고정한 뒤 하나의 변화만 관찰하세요.",
+    "meaning": "Source에서 생기는 원인과 관찰한 Power 또는 Gain/Loss 결과를 연결하세요.",
+    "parameters": "Source: 독자 SVG와 LaserPhysics 교육 모델; CH6_MODEL_CONTRACT.md 및 CH6_TEXTBOOK_SOURCE_MAPPING.md. Conceptual은 비축척, Analytical은 독립 가정 입력. Power:mW, Current:mA, Gain/Loss:cm⁻¹, Length:µm.",
+    "limits": "실제 Device/PDK/측정 또는 Mode Solver가 아닙니다. Threshold는 균일 FP의 Power 조건만, L–I와 Power Ledger는 독립 모델입니다. 계산하지 않은 Field/Profile/온도/동역학은 표시하지 않습니다.",
+    "source": "Original educational SVG; Cambridge contents/public summary; SMU GAIN manual §4.1.2; Wistey2005 eq2.2"
+  },
+  {
+    "id": "6.2A",
+    "lesson": "6.2",
+    "title": "Spontaneous and Stimulated Emission",
+    "classification": "Conceptual",
+    "renderer": "laserEmission",
+    "anchor": "#section-concept > p:first-of-type",
+    "see": "Gain, Cavity, Silicon과 Output의 위치 또는 축 이름과 단위를 먼저 확인하세요.",
+    "notice": "입력 Parameter와 Reference Plane을 고정한 뒤 하나의 변화만 관찰하세요.",
+    "meaning": "Source에서 생기는 원인과 관찰한 Power 또는 Gain/Loss 결과를 연결하세요.",
+    "parameters": "Source: 독자 SVG와 LaserPhysics 교육 모델; CH6_MODEL_CONTRACT.md 및 CH6_TEXTBOOK_SOURCE_MAPPING.md. Conceptual은 비축척, Analytical은 독립 가정 입력. Power:mW, Current:mA, Gain/Loss:cm⁻¹, Length:µm.",
+    "limits": "실제 Device/PDK/측정 또는 Mode Solver가 아닙니다. Threshold는 균일 FP의 Power 조건만, L–I와 Power Ledger는 독립 모델입니다. 계산하지 않은 Field/Profile/온도/동역학은 표시하지 않습니다.",
+    "source": "Original educational SVG; Cambridge contents/public summary; SMU GAIN manual §4.1.2; Wistey2005 eq2.2"
+  },
+  {
+    "id": "6.2B",
+    "lesson": "6.2",
+    "title": "Uniform FP Threshold Margin",
+    "classification": "Analytical",
+    "renderer": "laserThreshold",
+    "anchor": "#section-equation > p:first-of-type",
+    "see": "Gain, Cavity, Silicon과 Output의 위치 또는 축 이름과 단위를 먼저 확인하세요.",
+    "notice": "입력 Parameter와 Reference Plane을 고정한 뒤 하나의 변화만 관찰하세요.",
+    "meaning": "Source에서 생기는 원인과 관찰한 Power 또는 Gain/Loss 결과를 연결하세요.",
+    "parameters": "Source: 독자 SVG와 LaserPhysics 교육 모델; CH6_MODEL_CONTRACT.md 및 CH6_TEXTBOOK_SOURCE_MAPPING.md. Conceptual은 비축척, Analytical은 독립 가정 입력. Power:mW, Current:mA, Gain/Loss:cm⁻¹, Length:µm.",
+    "limits": "실제 Device/PDK/측정 또는 Mode Solver가 아닙니다. Threshold는 균일 FP의 Power 조건만, L–I와 Power Ledger는 독립 모델입니다. 계산하지 않은 Field/Profile/온도/동역학은 표시하지 않습니다.",
+    "source": "Original educational SVG; Cambridge contents/public summary; SMU GAIN manual §4.1.2; Wistey2005 eq2.2"
+  },
+  {
+    "id": "6.2C",
+    "lesson": "6.2",
+    "title": "Independent L–I Curve",
+    "classification": "Analytical",
+    "renderer": "laserLI",
+    "anchor": "#section-experiment > p:first-of-type",
+    "see": "Gain, Cavity, Silicon과 Output의 위치 또는 축 이름과 단위를 먼저 확인하세요.",
+    "notice": "입력 Parameter와 Reference Plane을 고정한 뒤 하나의 변화만 관찰하세요.",
+    "meaning": "Source에서 생기는 원인과 관찰한 Power 또는 Gain/Loss 결과를 연결하세요.",
+    "parameters": "Source: 독자 SVG와 LaserPhysics 교육 모델; CH6_MODEL_CONTRACT.md 및 CH6_TEXTBOOK_SOURCE_MAPPING.md. Conceptual은 비축척, Analytical은 독립 가정 입력. Power:mW, Current:mA, Gain/Loss:cm⁻¹, Length:µm.",
+    "limits": "실제 Device/PDK/측정 또는 Mode Solver가 아닙니다. Threshold는 균일 FP의 Power 조건만, L–I와 Power Ledger는 독립 모델입니다. 계산하지 않은 Field/Profile/온도/동역학은 표시하지 않습니다.",
+    "source": "Original educational SVG; Cambridge contents/public summary; SMU GAIN manual §4.1.2; Wistey2005 eq2.2"
+  }
+]

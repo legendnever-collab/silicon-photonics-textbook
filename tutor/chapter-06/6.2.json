@@ -1,0 +1,22 @@
+{
+  "question": "Gain Threshold가50 cm⁻¹라는 결과만으로 I_th를 알 수 있나요?",
+  "choices": [
+    {
+      "text": "아니요. Gain–Carrier와 Injection/Recombination 관계가 필요합니다.",
+      "feedback": "맞습니다. 길이당 Power Gain과 주입 전류는 단위도 모델도 다릅니다. 앱은 I_th를 독립 가정으로 남깁니다.",
+      "correct": true
+    },
+    {
+      "text": "예.50 cm⁻¹를50 mA로 바꾸면 됩니다.",
+      "feedback": "cm⁻¹와 mA는 다른 차원의 물리량입니다. 단위 변환만으로 Material Gain에서 전류를 얻을 수 없습니다."
+    },
+    {
+      "text": "예.η_d와 WPE가 같으므로 효율만 알면 됩니다.",
+      "feedback": "η_d는 Photon/Electron의 미분 비이고 WPE는 총 Optical/Electrical Power 비입니다. 서로 바꿔 쓸 수 없습니다."
+    }
+  ],
+  "why": "서로 다른 모델 사이에 없는 관계를 숨겨 넣으면 실제 Device 예측처럼 보입니다. Threshold Gain과 Current의 추가 물리를 명시하는 것이 중요합니다.",
+  "simple": "필요한 증폭량을 알았다고 배터리에 흐를 전류가 정해지지는 않습니다. 어느 재료에 얼마나 전하를 넣는지 알아야 전류와 연결할 수 있습니다.",
+  "math": "Γg_th=α_i+α_m의 단위는 cm⁻¹입니다. L–I는 η_d hc/(qλ) [W/A]에 I−I_th [A]를 곱하는 별도 가정 모델입니다.",
+  "notebook": "Threshold에서 Loss를 바꾼 뒤 L–I로 전환해 보세요. I_th가 자동으로 바뀌지 않습니다. 두 설정을 독립적으로 저장하고 비교하는 것이 의도된 동작입니다."
+}

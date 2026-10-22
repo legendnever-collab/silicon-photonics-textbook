@@ -1,0 +1,66 @@
+{
+  "id": "6.2",
+  "short": "Gain, Feedback & L–I",
+  "title": "When Does Optical Gain Become Lasing?",
+  "time": "15–22분",
+  "lead": "Spontaneous Emission에서 Stimulated Emission으로, 한 번의 Amplification에서 Cavity 왕복으로 생각을 옮깁니다. Gain Threshold와 Current 기반 L–I는 독립된 교육 모델로 살펴봅니다.",
+  "question": "Gain Material을 넣기만 하면 왜 Laser가 되지 않을까요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "Amplifier와 Laser를 구별합니다",
+      "scene": "laser",
+      "html": "<p>한 번 지나가는 빛을 키우는 Amplifier와 외부 Seed 없이도 Oscillation을 유지하는 Laser는 다릅니다. Source를 이해하려면 Gain뿐 아니라 Cavity Feedback과 Loss를 함께 봐야 합니다.</p><p>이 Lesson은 균일 Fabry–Pérot 교육 모델로 Gain/Loss의 경계를 설명하고, 별도 L–I 모델로 Current에 따른 출력의 의미를 배웁니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "Emission → Gain → Feedback → Threshold",
+      "scene": "laser",
+      "html": "<p><strong>Spontaneous Emission</strong>은 외부 Photon의 유도 없이 일어나는 전이입니다. 반면 Stimulated Emission에서는 입사한 Optical Mode가 전이를 유도하며 동일 Mode로 Photon이 더해집니다. Semiconductor에서 Absorption을 넘는 Net Optical Gain을 얻으려면 적절한 Carrier 분포가 필요합니다. 단순 에너지 준위 그림은 실제 Si Band Structure 계산이 아닙니다.</p><p>Gain Region 안의 Material Power Gain g와 Mode가 실제 겪는 Modal Gain Γg는 다릅니다. Γ는 Gain과 Optical Mode의 유효 Overlap을 나타냅니다. 여기서는 Γ를 독립 가정하며 그림의 면적을 재서 계산하지 않습니다. Internal Power Loss α_i에는 균일하게 분포했다고 가정한 흡수·산란이 들어갑니다.</p><p><strong>Cavity Feedback</strong>은 일부 빛이 Gain Region으로 되돌아오게 합니다. 두 거울의 Power Reflectivity R₁,R₂와 왕복 길이2L을 생각하면, 돌아온 Power가 줄어들지 않는 경계가 Gain Threshold입니다. 의도한 Cavity Mirror Feedback과 Package 밖에서 돌아오는 원치 않는 Reflection은 같지 않습니다. 후자는 Instability의 원인이 될 수 있으나 여기서는 동역학을 풀지 않습니다.</p><p>Gain=Loss는 Power Balance 조건입니다. 실제 Mode가 발진하려면 왕복 Phase도 Resonance에 맞아야 합니다. Notebook은 Resonant Frequency가 있다는 가정에서 Power Margin만 계산하고 Spectrum·Photon 수·Mode Competition·Gain Clamping은 계산하지 않습니다. 양의 Margin을 무한 Photon 증가나 실제 발진 출력으로 읽으면 안 됩니다.</p><p>Threshold Current I_th는 필요한 Carrier Gain을 만드는 전류와 관련되지만, 이 앱에는 Recombination·Injection·Active Volume 모델이 없습니다. 따라서 별도 <strong>L–I Curve</strong>에서는 I_th를 독립 입력합니다. Differential Quantum Efficiency η_d는 지정된 Output Port로 나오는 Photon 증가량과 주입 Electron 증가량의 비이며, Electrical-to-optical WPE와 다릅니다. R을 높여 Mirror Loss를 줄여도 출력 결합과 실제 효율을 함께 보아야 합니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "왕복 조건과 출력 기울기의 의미",
+      "scene": "laser",
+      "html": "<div class=\"equation\">ln G_rt = ln R₁ + ln R₂ + 2(Γg − α_i)L<br>α_m = ln[1/(R₁R₂)]/(2L)<br>Γg_th = α_i + α_m<br>P_out = η_d hc/(qλ) max(I − I_th, 0)</div><p>R은 Amplitude가 아닌 Power Reflectivity입니다. Gain/Loss는 Power Coefficient이며 cm⁻¹→m⁻¹는×100, L은 µm→m로×10⁻⁶입니다. ln G_rt=0이 왕복 Power Unity입니다. L–I의 Current는 mA→A, λ는 nm→m로 변환합니다.</p><div class=\"worked\"><h3>Worked Example · 두 개의 독립 질문</h3><p>R₁=R₂=0.3, L=300 µm, α_i=10 cm⁻¹이면 α_m≈40.1324 cm⁻¹, Modal Threshold≈50.1324 cm⁻¹입니다. Γ=0.2라면 필요한 Material Gain은 약250.662 cm⁻¹입니다.</p><p>별도로 λ=1550 nm, η_d=0.5, I_th=20 mA, I=80 mA를 가정하면 Slope≈0.399949 W/A, Output≈23.9969 mW입니다. 앞의 Gain Threshold로20 mA를 유도한 것이 아닙니다.</p></div><p>Piecewise L–I는 Below-threshold Spontaneous Output, Thermal Rollover와 Dynamics를 생략합니다. 지정 Port 출력만 계산하므로 독립 Power Ledger에 자동으로 넣지 않습니다.</p>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "Reflectivity를 높이면 모든 문제가 해결될까요?",
+      "scene": "laser",
+      "html": "<p>Loss가 증가하면 같은 Cavity에서 필요한 Modal Gain이 커집니다. 그러나 이 결과를 곧바로 특정 Threshold Current로 바꾸려면 어떤 추가 입력이 필요한지 Tutor에서 확인하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with physics",
+      "title": "Threshold와 L–I를 각각 검증합니다",
+      "scene": "laser",
+      "html": "<p>모델 선택에서 Threshold를 고르고 Internal Loss·R₂·Length를 하나씩 바꿉니다. Γ를0으로 만들면 Material Gain이 있어도 Mode Gain은0입니다. 다음으로 L–I를 선택해 I를 I_th 아래·같음·위로 바꾸고, Threshold 모델의 설정이 L–I 출력을 바꾸지 않는지 확인하세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "모델이 답하는 질문을 구별합니다",
+      "scene": "laser",
+      "html": "<ul><li>Material Gain과 Modal Gain을 Γ로 구별합니다.</li><li>Power Balance와 Phase Resonance가 모두 필요합니다.</li><li>Threshold Gain은 Threshold Current와 다른 물리량입니다.</li><li>η_d, Slope Efficiency, WPE는 서로 다른 정의입니다.</li></ul><p>다음에는 Gain Region과 Cavity가 Package 안에서 어디까지 이어지는지 살펴봅니다.</p>"
+    }
+  ],
+  "prediction": "Internal Loss만 증가하면 필요한 Modal Threshold Gain은?",
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "증가합니다.",
+    "감소합니다.",
+    "항상 그대로이며 Current만 변합니다."
+  ],
+  "predictionFeedback": "Γg_th=α_i+α_m이므로 α_i 증가분만큼 Modal Threshold가 증가합니다. 실제 I_th 변화량은 이 모델이 계산하지 않습니다.",
+  "reflection": "Gain=Loss와 Phase Resonance가 각각 어떤 조건인지 적고, Threshold Gain에서 I_th를 구하려면 어떤 재료·주입 정보가 더 필요한지 설명하세요.",
+  "sources": [
+    "L0",
+    "L2",
+    "L3"
+  ]
+}
