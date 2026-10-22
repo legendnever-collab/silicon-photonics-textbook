@@ -13,3 +13,5 @@ D4a: New234-file prior-source/release byte-preservation gate added (140Node PASS
 D4b: historical CH6 focus test race found remotely; CH6/CH7 go() now awaits two animation frames after title update, before controls are focused. Existing assertions retained.233priorfilespreserved; only test helper timing changes. No archived source/HTML edited.
 
 D4c: Settled navigation verified. Six viewport/theme combinations passed;320px Lesson7.4 text overflow fixed with scoped wrapping. Actual1440light screenshot inspected; connector line contrast raised. Final matrix rerun required.
+
+D4d: All67functional scenarios observed PASS; remaining aggregate gate isolated to one spectrum caption onmobile. Caption shortened;8matrixscreenshots+guidedzoominspected. Notebook now has direct zoom with Escape/focus-return test. Final rerun required.
