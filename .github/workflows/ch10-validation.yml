@@ -20,8 +20,8 @@ jobs:
         run: |
           npm run build
           npm test
-          python3 tests/ch10-independent-validation.py
           pip install fonttools brotli numpy
+          python3 tests/ch10-independent-validation.py
           python3 scripts/audit-ch10-font.py
           python3 tests/ch9-independent-validation.py
           python3 tests/ch8-independent-validation.py
