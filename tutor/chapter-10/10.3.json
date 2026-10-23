@@ -1,0 +1,24 @@
+{
+  "question": "R=0인 Series Inductor에서 Through Power가 줄어들면 나머지 Power는 어디에 있나요?",
+  "choices": [
+    {
+      "text": "이 모델에서는 Reflection으로 되돌아갑니다.",
+      "feedback": "맞습니다. Ideal Inductor는 평균 Power를 소모하지 않습니다. Reflected Power를 따로 계산해야 합니다.",
+      "correct": true
+    },
+    {
+      "text": "모두 열로 소모됩니다.",
+      "feedback": "이 Ideal Model에는 R이 없으므로 Dissipation은 0입니다. Through 감소와 흡수 Loss를 구분하세요.",
+      "correct": false
+    },
+    {
+      "text": "이 결과가 실제 Package의 EO Bandwidth를 보장합니다.",
+      "feedback": "Pad/Return Path/Transmission Line/Active Device Model이 없는 Series R–L 예제입니다. Package 검증이 아닙니다.",
+      "correct": false
+    }
+  ],
+  "why": "Photonics Chip의 Modulator와 Detector, Heater를 사용하려면 Electrical 연결이 필요합니다. 광학 성능만 좋은 Die라도 Pad 접근이나 전기 경로가 목적에 맞지 않으면 시스템으로 동작시키기 어렵습니다. 교재의 Bond Pads→Probing→Wire Bonding→Flip-chip Bonding 순서로 설명합니다. Pad는 접촉할 영역이고 Probe는 검사 중의 임시 접촉입니다. Wire Bond와 Flip-chip은 조립 방식입니다. Optical Fiber 접근, Electrical Probe와 Return Path, 열 경로를 함께 고려해야 합니다. 여기의 도형은 실제 Pad Pitch나 Probe Keep-out Rule을 검증하지 않습니다.",
+  "simple": "Electrical Interface는 DC 접촉뿐 아니라 RF 경로와 Return Path를 정의합니다. 간단한 Series R–L Model로 Parasitic의 의미를 읽습니다. 반사와 소모를 구별해야 Interface의 Power와 RF Response를 해석할 수 있습니다. 실제 Packaging 수치는 별도 모델과 측정이 필요합니다.",
+  "math": "S₂₁ = 2Z₀/(2Z₀+R+jωL); S₁₁ = (R+jωL)/(2Z₀+R+jωL). Z₀=50 Ω, f는 GHz, L은 nH입니다. 이 조합에서 ωL=2π f_GHz L_nH Ω입니다. 같은 Real Reference Impedance의 Power-normalized S-parameter입니다. f=10 GHz, L=1 nH, R=0이면 X_L=62.831853 Ω, |S₂₁|²≈0.716957, |S₁₁|²≈0.283043이며 합은 1입니다. 반사가 포함되므로 Through 감소를 모두 열 손실로 읽지 않습니다.",
+  "notebook": "Frequency와 Inductance를 바꾸며 Through/Reflection을 비교하고 R=0과 R>0에서 Dissipation을 확인하세요. Contact Flag를 바꾸고 Optical Model과 독립인 상태임을 설명하세요. 실제 Wire Bond 또는 Flip-chip의 RF 성능을 검증하려면 이 R–L Model에 어떤 구조와 자료가 더 필요한가요?"
+}

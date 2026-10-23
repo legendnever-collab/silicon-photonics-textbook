@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "htmlSha256": "c925a0bdfe801fa3aeb947f46d49c1703a0ab0df10b2a98d3ade47757508aef2",
+  "browser": "153.0.8010.0",
+  "review": "All eight unique renderers inspected in numbered desktop figures; final station route, raw/normalized spectrum, mobile dark spectrum, numeric Properties and scrollable zoom inspected. Twelve numbered figures are captured; repeated renderer views share declared state. Mobile viewport emulation only.",
+  "screenshots": [
+    {
+      "file": "artifacts/v0.10.0/figure-10-1A.jpg",
+      "sha256": "015bf9360656f6419cd7752fdd8c5478346b5f6983e623441ca0beeacfe58c85"
+    },
+    {
+      "file": "artifacts/v0.10.0/figure-10-2A.jpg",
+      "sha256": "4fbcc7f28d24208966e1b0046ff0ecbac62d3ba68c5b123325517371b9f62ef4"
+    },
+    {
+      "file": "artifacts/v0.10.0/figure-10-2B.jpg",
+      "sha256": "9c466c275ea5e2f69e1a414ff6884a11e4df411c4be63b361d5969b4ce2d2f11"
+    },
+    {
+      "file": "artifacts/v0.10.0/figure-10-3A.jpg",
+      "sha256": "d2af6c7ee9ecbe990ae95e37d452811d27bce172cb2a50dbade463332e3b3b0f"
+    },
+    {
+      "file": "artifacts/v0.10.0/figure-10-4A.jpg",
+      "sha256": "a967c0bf6ac97b8983d0f09ebe6a83a0736278a19f1c7f3c95e0fb7fb0b91b05"
+    },
+    {
+      "file": "artifacts/v0.10.0/figure-10-5A.jpg",
+      "sha256": "960fed20a1d48903bd2ad3bf13af760abaf1f310857d7f2b96d93c6c63eac811"
+    },
+    {
+      "file": "artifacts/v0.10.0/figure-10-5B.jpg",
+      "sha256": "7e33dc2cd4b0b489ff4f0419fbb613dc120c80086e67617e60a13f8c3a693eb1"
+    },
+    {
+      "file": "artifacts/v0.10.0/figure-10-6A.jpg",
+      "sha256": "3af0e202de0d47508c38b7c861ebe8bba7a0080354975c8cfd945b798092baf9"
+    },
+    {
+      "file": "artifacts/v0.10.0/figure-10-6B.jpg",
+      "sha256": "04742dd9645dbe303f407f64b9a82bece0b6568e72b68ee6bde4476624e35f50"
+    },
+    {
+      "file": "artifacts/v0.10.0/figure-10-7A.jpg",
+      "sha256": "04742dd9645dbe303f407f64b9a82bece0b6568e72b68ee6bde4476624e35f50"
+    },
+    {
+      "file": "artifacts/v0.10.0/figure-10-7B.jpg",
+      "sha256": "94a653b2c87226eba5e9b292e8d644b52a44d013bf2167189f6dc7f1aa72ac03"
+    },
+    {
+      "file": "artifacts/v0.10.0/figure-10-8A.jpg",
+      "sha256": "3af0e202de0d47508c38b7c861ebe8bba7a0080354975c8cfd945b798092baf9"
+    },
+    {
+      "file": "artifacts/v0.10.0/properties-320-dark.jpg",
+      "sha256": "e3df6d5561047250d8b36c6aa87fdbfdcdd02d6ce0b52e3197b268af680062be"
+    },
+    {
+      "file": "artifacts/v0.10.0/properties-320-light.jpg",
+      "sha256": "6b8f2f134c865ae7d6e06f7d3faabdd2efbb2d533d675155c7c526b71b9b750c"
+    },
+    {
+      "file": "artifacts/v0.10.0/properties-390-dark.jpg",
+      "sha256": "08bf9421707481d9431c36e3d667910b944aa7d39ff2998256352d942d53255f"
+    },
+    {
+      "file": "artifacts/v0.10.0/properties-390-light.jpg",
+      "sha256": "62fddf2f9e433fb20be2858cb5d0a7f46305a436ef12610f50f41c0b5ac5d1c7"
+    },
+    {
+      "file": "artifacts/v0.10.0/spectrum-1366-dark.jpg",
+      "sha256": "19cd12dc4937fdc1bec5ec33bf4b6f76c2beb3662b4197131be79a272726ee95"
+    },
+    {
+      "file": "artifacts/v0.10.0/spectrum-1366-light.jpg",
+      "sha256": "79230b568710dc00055406f38fe33f30fa970c1b5fc08cb477e0a1649350d22b"
+    },
+    {
+      "file": "artifacts/v0.10.0/spectrum-1440-dark.jpg",
+      "sha256": "a03ec7257be76077c2f2af86e2f98e339b261cec506394829be8f6928d372feb"
+    },
+    {
+      "file": "artifacts/v0.10.0/spectrum-1440-light.jpg",
+      "sha256": "aa722769f8b68be22d40d6f5a579aa7a71399a9eee757e015c089f6a440f9346"
+    },
+    {
+      "file": "artifacts/v0.10.0/spectrum-320-dark.jpg",
+      "sha256": "411ab41506f3fbaee6d6ba005cc13f7cb9b29fad5b9f86b4677198dcaad78941"
+    },
+    {
+      "file": "artifacts/v0.10.0/spectrum-320-light.jpg",
+      "sha256": "9cf4c0f53d940dcba0ddfad15f0065d2171986818e88863dd302926243bf31b5"
+    },
+    {
+      "file": "artifacts/v0.10.0/spectrum-390-dark.jpg",
+      "sha256": "22fff4f52403e38c624063b734b707c618ffd7ff60e99cf268a2aba3cb8fd361"
+    },
+    {
+      "file": "artifacts/v0.10.0/spectrum-390-light.jpg",
+      "sha256": "239137d4a9907412e3bebc0acbffbdd54cfe1cbddac86955bfbb0f7d892e9419"
+    },
+    {
+      "file": "artifacts/v0.10.0/zoom-320-dark.jpg",
+      "sha256": "9b89a995ad7ef294b9a06eb2a233e59e654dd4ea89dbdb635bbf1ed9116e734d"
+    }
+  ],
+  "ciVisualReview": {
+    "workflowRun": 40004450517,
+    "browser": "151.0.7922.34",
+    "inspected": [
+      "figure-10-4A",
+      "spectrum-320-dark"
+    ],
+    "result": "Station routing and mobile spectrum match the local final runtime; no unexpected rendering difference observed"
+  }
+}

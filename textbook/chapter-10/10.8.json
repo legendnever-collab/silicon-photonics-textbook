@@ -1,0 +1,67 @@
+{
+  "id": "10.8",
+  "short": "Packaging Review",
+  "title": "Keep the Test Conditions With the Result",
+  "time": "18–25분",
+  "lead": "Temporary Probing에서 Packaged Interface로 바뀔 때 Alignment, Electrical Path, Thermal/Mechanical 조건을 다시 검토합니다. Snapshot과 근거를 Report로 남깁니다.",
+  "question": "Wafer Test를 통과하면 Packaging 후에도 같은 성능이 자동으로 보장될까요?",
+  "prediction": "현재 조건에서 무엇이 달라질까요?",
+  "reflection": "Wafer Test 결과와 Package Qualification 결과가 각각 무엇을 검증하는지 자신의 말로 설명하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "testing",
+      "html": "<p>Wafer-level 검사는 Die를 평가하는 데 도움이 되지만 이후 Fiber 고정, Electrical 연결과 Package 환경은 새로운 조건을 만듭니다. 마지막 Lesson은 앞서 배운 Test와 Packaging의 관계를 정리합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "testing",
+      "html": "<p>Optical 고정 전후에는 Position, Tilt, Polarization과 열·기계 조건이 달라질 수 있습니다. Wire Bond와 Flip-chip 선택도 Optical 접근과 Electrical Return Path, 열 경로와 함께 검토해야 합니다. 접착제 Cure, Stress, Thermal Cycling, 장기 Drift와 실제 Reliability Test는 이 실습에서 예측하지 않습니다.</p><p>검토 순서는 Interface/Reference Plane→Registration→Optical Alignment→Instrument Range→Frozen Capture→De-embedding→Packaging 조건입니다. 학습용 Checklist는 이런 질문을 빠뜨리지 않게 돕습니다. 실제 Assembly Drawing, 장비 치수, 소재, 공정 조건과 측정 데이터 없이는 Manufacturing Approval을 할 수 없습니다.</p><p>JSON Study Report에는 현재 State, Gate, Coordinate Transform, 현재 Budget, 저장된 Snapshot과 Stale 여부, Sweep Sample, 보류 이유와 Scope를 담습니다. Preview와 Capture가 다른 조건이면 둘을 구별해 기록합니다. 학습 Backup은 메모·Tutor 선택·완료 기록을 저장하는 별도 파일입니다. 보고서에는 Synthetic/hardwareConnected=false가 명시됩니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "testing",
+      "html": "<div class=\"equation\">Review evidence = configuration + reference planes + acquired snapshot + validity + scope</div><p>이 관계는 검사 항목의 구성 원리입니다. 임의의 점수나 확인 비율로 실제 Yield/신뢰성/조립 승인을 계산하지 않습니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>정상 State에서 Acquire 후 Length를 2→4 mm로 바꾸면 이전 Snapshot은 Stale로 남습니다. 다시 Acquire하면 새 Path Length 조건의 Data가 저장되고 Reference 보정에도 0.6 dB 차이가 반영됩니다. 이 과정은 실제 장비가 아니라 재현 가능한 Synthetic Workflow입니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "조건을 구별합니다",
+      "scene": "testing",
+      "html": "<p>이 Report로 실제 Package Reliability를 승인할 수 있나요?</p><p>선택의 근거와 Model의 가정을 먼저 확인하고 Feedback과 비교하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 확인합니다",
+      "scene": "testing",
+      "html": "<p>정상 Capture→설정 변경→Stale 확인→Re-acquire→JSON Report 순서로 완료하세요. 마지막 메모에 Packaging 후 재확인할 Optical, Electrical, Reliability 항목을 적으세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "testing",
+      "html": "<p>Chapter 10은 Chip 밖의 Interface부터 조건이 남는 측정 기록까지 연결했습니다. 다음 Original Chapter13의 System Example은 별도 승인 후 진행합니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Package 후에는 Interface와 환경 조건을 다시 검토해야 함",
+    "Wafer PASS가 모든 Package 성능을 보장함",
+    "Synthetic Report는 실측 데이터와 같은 것임"
+  ],
+  "predictionFeedback": "Chapter 10은 Chip 밖의 Interface부터 조건이 남는 측정 기록까지 연결했습니다. 다음 Original Chapter13의 System Example은 별도 승인 후 진행합니다.",
+  "sources": [
+    "Q0",
+    "Q1",
+    "Q2",
+    "Q3"
+  ]
+}

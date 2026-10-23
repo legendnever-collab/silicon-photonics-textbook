@@ -1,0 +1,67 @@
+{
+  "id": "10.1",
+  "short": "Optical Interfaces",
+  "title": "Bring Light Into a Testable Chip",
+  "time": "18–25분",
+  "lead": "Optical Interface는 빛을 연결하는 구조이면서 측정의 Reference Plane을 정하는 구조입니다. 접근 방향과 Mode 변환, Fiber 배치를 함께 읽습니다.",
+  "question": "같은 Ring을 측정해도 Fiber Interface가 달라지면 Power Meter의 값은 같을까요?",
+  "prediction": "현재 조건에서 무엇이 달라질까요?",
+  "reflection": "Fiber Array, Spot-size Converter, Grating Coupler가 서로 어떤 역할의 차이를 갖는지 설명하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "testing",
+      "html": "<p>Chapter 9에서는 제작 편차가 소자의 응답을 바꾸는 과정을 배웠습니다. 그 응답을 실제로 관측하려면 Chip 밖의 광원과 계측기에 연결해야 합니다. Device 내부의 응답과 외부 Interface가 섞인 측정값을 구분하는 것이 이번 Chapter의 출발점입니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "testing",
+      "html": "<p>교재 순서에 따라 Grating Coupler, Edge Coupler, Individual Fiber, Spot-size Converter, Fiber Array, Free-space Coupling, Fiber Taper를 살펴봅니다. Grating은 Chip 위쪽에서 접근하고, Edge는 Facet 쪽으로 접근합니다. Individual Fiber와 Fiber Array는 배치 형태이며, Spot-size Converter는 Mode 크기를 변환하는 Component입니다. 이들을 모두 같은 종류의 Coupler로 취급하지 않습니다.</p><p>Free-space 구성에는 Lens와 Beam Steering, 초점과 Aperture가 추가됩니다. Fiber Taper는 가까운 거리에서 Evanescent Coupling을 사용할 수 있어 접근과 접촉 조건이 중요합니다. Notebook의 간단한 숫자 Model은 Grating과 Edge의 두 예시만 계산합니다. 나머지 방식은 구조와 사용 조건을 설명하는 Conceptual Figure이며 모든 방식의 Efficiency를 계산하지 않습니다.</p><p>입력 Fiber Plane에서 Pin을 정의하고, Input Interface를 지난 Chip Plane과 Output Interface 뒤 Power Meter Plane을 구별합니다. 본 실습은 Input/Output의 Coupling을 같게 가정합니다. Grating은 Chapter 9의 Gaussian Power Envelope를 재사용하고 Edge는 고정 1.5 dB Base Loss를 가정합니다. 두 값의 차이로 실제 제품의 우열을 판단할 수 없습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "testing",
+      "html": "<div class=\"equation\">P_meter = P_fiber × η_in × T_chip × η_out</div><p>η는 Power Ratio입니다. 두 Interface가 같다면 η_inη_out=η²입니다. Base Interface Response와 Gaussian/Polarization Overlap을 각 Port에 한 번씩 적용합니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>Fine Align 후 λ=1550 nm, Polarization 0°, Tilt 0°이면 Grating의 Base η=0.6입니다. Chip Loss가 없을 때 두 Interface의 합성 Transmission은 0.36이고 Loss는 4.436975 dB입니다. 실제 DUT의 Loss를 이 값과 구분해야 합니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "조건을 구별합니다",
+      "scene": "testing",
+      "html": "<p>두 Interface의 Power Efficiency가 각각 0.6이면 합성 Efficiency는 얼마인가요?</p><p>선택의 근거와 Model의 가정을 먼저 확인하고 Feedback과 비교하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 확인합니다",
+      "scene": "testing",
+      "html": "<p>Optical Interface View에서 Grating과 Edge를 바꾸며 접근 방향을 읽으세요. Fine Align을 적용하고 Power Budget에서 Input Plane, Chip Plane, Meter Plane을 추적하세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "testing",
+      "html": "<p>같은 DUT라도 외부 Interface의 Response가 측정에 포함됩니다. 이 실습의 Numeric Model과 Conceptual Interface 설명 범위를 구분하세요.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Interface만 바꾸어도 Meter Plane의 응답은 달라짐",
+    "동일 DUT이면 Interface는 측정에 영향을 주지 않음",
+    "모든 Interface의 Efficiency가 이 앱에서 계산됨"
+  ],
+  "predictionFeedback": "같은 DUT라도 외부 Interface의 Response가 측정에 포함됩니다. 이 실습의 Numeric Model과 Conceptual Interface 설명 범위를 구분하세요.",
+  "sources": [
+    "Q0",
+    "Q1",
+    "Q2",
+    "Q3"
+  ]
+}

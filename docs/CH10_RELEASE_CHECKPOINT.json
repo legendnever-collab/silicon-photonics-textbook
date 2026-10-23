@@ -1,0 +1,47 @@
+{
+  "version": "0.10.0",
+  "status": "READY_FOR_USER_LEARNING_REVIEW",
+  "repository": "legendnever-collab/silicon-photonics-textbook",
+  "branch": "feature/ch10-testing-packaging",
+  "draftPr": 10,
+  "base": "main",
+  "main": "398428a9ab14cb83aca4b8d233207930960eac35",
+  "verifiedRuntimeHead": "c90f797ef1b1c4885457f008aafcda81b6843f82",
+  "runtimeCi": "https://github.com/legendnever-collab/silicon-photonics-textbook/actions/runs/40004450517",
+  "runtimeCiConclusion": "success",
+  "html": "dist/silicon-photonics-textbook-v0.10.0.html",
+  "htmlSha256": "c925a0bdfe801fa3aeb947f46d49c1703a0ab0df10b2a98d3ade47757508aef2",
+  "checkpoint": "checkpoints/ch10/D4-final-testing-packaging-review.html",
+  "validation": {
+    "node": 208,
+    "newBrowser": 83,
+    "archivedBrowser": 378,
+    "totalBrowser": 461,
+    "independentComparisons": 1416,
+    "independentMaxAbsoluteError": 5.115907697472721e-13,
+    "hangulRequired": 355,
+    "hangulMissing": 0,
+    "localPriorFilesPreserved": 371,
+    "remotePriorBlobsPreserved": 534,
+    "priorMetadataFilesChanged": [
+      "README.md",
+      "TEXTBOOK_SOURCE_MAPPING.md",
+      "package.json"
+    ],
+    "priorFilesDeleted": 0
+  },
+  "mergeApproved": false,
+  "nextChapterStarted": false,
+  "limitations": [
+    "Independent synthetic fixture; no hardware or actual measurements",
+    "Identical port/reference coupling and known additive floor",
+    "Two-fiducial proper rigid registration without uncertainty",
+    "Fixed Gaussian common-waist model and finite noiseless alignment grid",
+    "Declared linear ring/grating models; sampled minimum is not a resonance fit",
+    "Independent series-RL example; no package EM extraction",
+    "No mechanical collision or reliability qualification"
+  ],
+  "localBrowserVersion": "153.0.8010.0",
+  "ciBrowserVersion": "151.0.7922.34",
+  "verifiedAt": "2026-10-24 Asia/Seoul"
+}

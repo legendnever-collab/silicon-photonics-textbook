@@ -1,0 +1,24 @@
+{
+  "question": "이 Report로 실제 Package Reliability를 승인할 수 있나요?",
+  "choices": [
+    {
+      "text": "아니요. 이 결과는 선언한 Model의 Synthetic Study입니다.",
+      "feedback": "맞습니다. 실제 Assembly/Material/장비/환경 시험을 포함하지 않은 학습 보고서입니다.",
+      "correct": true
+    },
+    {
+      "text": "예. 모든 Gate가 PASS면 실제 Reliability도 PASS입니다.",
+      "feedback": "Gate는 교육용 Workflow의 제한된 조건입니다. 실제 장기 안정성이나 조립 공정 품질은 계산하지 않습니다.",
+      "correct": false
+    },
+    {
+      "text": "Stale Snapshot은 새 조건의 측정으로 자동 변경해도 됩니다.",
+      "feedback": "과거 Data의 조건을 바꾸면 추적할 수 없습니다. 기존 Snapshot을 보존하고 새로 Capture해야 합니다.",
+      "correct": false
+    }
+  ],
+  "why": "Wafer-level 검사는 Die를 평가하는 데 도움이 되지만 이후 Fiber 고정, Electrical 연결과 Package 환경은 새로운 조건을 만듭니다. 마지막 Lesson은 앞서 배운 Test와 Packaging의 관계를 정리합니다. Optical 고정 전후에는 Position, Tilt, Polarization과 열·기계 조건이 달라질 수 있습니다. Wire Bond와 Flip-chip 선택도 Optical 접근과 Electrical Return Path, 열 경로와 함께 검토해야 합니다. 접착제 Cure, Stress, Thermal Cycling, 장기 Drift와 실제 Reliability Test는 이 실습에서 예측하지 않습니다.",
+  "simple": "Temporary Probing에서 Packaged Interface로 바뀔 때 Alignment, Electrical Path, Thermal/Mechanical 조건을 다시 검토합니다. Snapshot과 근거를 Report로 남깁니다. Chapter 10은 Chip 밖의 Interface부터 조건이 남는 측정 기록까지 연결했습니다. 다음 Original Chapter13의 System Example은 별도 승인 후 진행합니다.",
+  "math": "Review evidence = configuration + reference planes + acquired snapshot + validity + scope. 이 관계는 검사 항목의 구성 원리입니다. 임의의 점수나 확인 비율로 실제 Yield/신뢰성/조립 승인을 계산하지 않습니다. 정상 State에서 Acquire 후 Length를 2→4 mm로 바꾸면 이전 Snapshot은 Stale로 남습니다. 다시 Acquire하면 새 Path Length 조건의 Data가 저장되고 Reference 보정에도 0.6 dB 차이가 반영됩니다. 이 과정은 실제 장비가 아니라 재현 가능한 Synthetic Workflow입니다.",
+  "notebook": "정상 Capture→설정 변경→Stale 확인→Re-acquire→JSON Report 순서로 완료하세요. 마지막 메모에 Packaging 후 재확인할 Optical, Electrical, Reliability 항목을 적으세요. Wafer Test 결과와 Package Qualification 결과가 각각 무엇을 검증하는지 자신의 말로 설명하세요."
+}

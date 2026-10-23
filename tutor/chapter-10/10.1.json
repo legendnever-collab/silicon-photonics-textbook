@@ -1,0 +1,24 @@
+{
+  "question": "두 Interface의 Power Efficiency가 각각 0.6이면 합성 Efficiency는 얼마인가요?",
+  "choices": [
+    {
+      "text": "0.36입니다. 각 Port의 Power Ratio를 곱합니다.",
+      "feedback": "맞습니다. 0.6×0.6=0.36입니다. 한 Port의 값을 두 Port 전체 결과로 쓰지 마세요.",
+      "correct": true
+    },
+    {
+      "text": "0.6입니다. 같은 Interface이면 한 번만 계산합니다.",
+      "feedback": "Input과 Output은 서로 다른 두 통과 과정입니다. 각각 한 번씩 포함해야 합니다.",
+      "correct": false
+    },
+    {
+      "text": "1.2입니다. Power Efficiency를 더합니다.",
+      "feedback": "직렬 경로의 Transmission은 곱합니다. Efficiency의 합은 이 경로의 전달 비율이 아닙니다.",
+      "correct": false
+    }
+  ],
+  "why": "Chapter 9에서는 제작 편차가 소자의 응답을 바꾸는 과정을 배웠습니다. 그 응답을 실제로 관측하려면 Chip 밖의 광원과 계측기에 연결해야 합니다. Device 내부의 응답과 외부 Interface가 섞인 측정값을 구분하는 것이 이번 Chapter의 출발점입니다. 교재 순서에 따라 Grating Coupler, Edge Coupler, Individual Fiber, Spot-size Converter, Fiber Array, Free-space Coupling, Fiber Taper를 살펴봅니다. Grating은 Chip 위쪽에서 접근하고, Edge는 Facet 쪽으로 접근합니다. Individual Fiber와 Fiber Array는 배치 형태이며, Spot-size Converter는 Mode 크기를 변환하는 Component입니다. 이들을 모두 같은 종류의 Coupler로 취급하지 않습니다.",
+  "simple": "Optical Interface는 빛을 연결하는 구조이면서 측정의 Reference Plane을 정하는 구조입니다. 접근 방향과 Mode 변환, Fiber 배치를 함께 읽습니다. 같은 DUT라도 외부 Interface의 Response가 측정에 포함됩니다. 이 실습의 Numeric Model과 Conceptual Interface 설명 범위를 구분하세요.",
+  "math": "P_meter = P_fiber × η_in × T_chip × η_out. η는 Power Ratio입니다. 두 Interface가 같다면 η_inη_out=η²입니다. Base Interface Response와 Gaussian/Polarization Overlap을 각 Port에 한 번씩 적용합니다. Fine Align 후 λ=1550 nm, Polarization 0°, Tilt 0°이면 Grating의 Base η=0.6입니다. Chip Loss가 없을 때 두 Interface의 합성 Transmission은 0.36이고 Loss는 4.436975 dB입니다. 실제 DUT의 Loss를 이 값과 구분해야 합니다.",
+  "notebook": "Optical Interface View에서 Grating과 Edge를 바꾸며 접근 방향을 읽으세요. Fine Align을 적용하고 Power Budget에서 Input Plane, Chip Plane, Meter Plane을 추적하세요. Fiber Array, Spot-size Converter, Grating Coupler가 서로 어떤 역할의 차이를 갖는지 설명하세요."
+}

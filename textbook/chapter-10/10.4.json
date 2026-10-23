@@ -1,0 +1,67 @@
+{
+  "id": "10.4",
+  "short": "Probe Station",
+  "title": "Coordinate Instruments Before Acquiring Data",
+  "time": "18–25분",
+  "lead": "Sample Stage, Fiber Probe, Electrical Probe, Microscope와 Optical Instruments가 각자 다른 역할을 합니다. Calibration 상태를 확인하고 Capture합니다.",
+  "question": "장비가 자동으로 움직였다는 사실만으로 데이터가 올바른가요?",
+  "prediction": "현재 조건에서 무엇이 달라질까요?",
+  "reflection": "자동 측정 기록에 Position, Polarization, Reference와 Instrument Range를 함께 남겨야 하는 이유를 설명하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "testing",
+      "html": "<p>자동 측정은 반복 동작을 빠르게 수행할 수 있지만 잘못된 Coordinate나 Reference를 반복할 수도 있습니다. 무엇을 고정하고 무엇을 관측하는지 드러나는 절차가 필요합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "testing",
+      "html": "<p>교재 Parts 순서로 Sample Stage, Fiber Array Probe, Electrical Probes, Microscope를 살펴보고 Software, Operation, Optical Test Equipment를 연결합니다. Tunable Laser는 Wavelength를 설정하고 Power Meter는 해당 Reference Plane의 Power를 읽습니다. Microscope의 위치 정보와 광학 Power는 서로 다른 관측입니다.</p><p>이 앱은 장비 연결이 없는 Synthetic Station입니다. Register Fiducials→Fine Align→Reference Range 확인→Acquire Synthetic Sweep→Report 순서를 사용합니다. Test Access가 막혔거나 미등록 상태이면 Capture를 보류합니다. Reference는 Detector Ceiling 아래, 선언한 Floor Margin 위에 있어야 합니다. Passive Ring 측정에는 Electrical Contact를 필수 조건으로 넣지 않았습니다.</p><p>Acquire는 현재 설정을 복사한 Frozen Snapshot을 저장합니다. 이후 Alignment, Power, Sweep Resolution을 바꾸면 기존 Capture는 Stale로 표시되고 그대로 남습니다. Live Preview와 저장된 Data의 조건을 섞지 않습니다. 실제 시간 동기화, Stage 이동 시간, Laser Settling과 통신 장애는 구현하지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "testing",
+      "html": "<div class=\"equation\">Usable reference = access open ∧ registered ∧ power within declared range</div><p>이것은 이 교육용 Workflow의 제한된 Gate입니다. 실제 Wafer Probe Station의 Calibration, Interlock, Collision Avoidance와 장비 운용 절차 전체를 대신하지 않습니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>Misregistered Preset에서는 Acquire가 보류됩니다. Register를 적용한 뒤 Fine Align을 실행하면 Reference가 범위에 들어옵니다. Capture 후 dx를 바꾸면 저장된 Sweep는 유지되고 Stale가 됩니다. 다시 Acquire해야 새 조건의 Snapshot이 생깁니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "조건을 구별합니다",
+      "scene": "testing",
+      "html": "<p>Capture 이후 Alignment를 변경하면 기존 Data는 어떻게 처리해야 하나요?</p><p>선택의 근거와 Model의 가정을 먼저 확인하고 Feedback과 비교하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 확인합니다",
+      "scene": "testing",
+      "html": "<p>Misregistered, Low Reference, Blocked Access Preset을 각각 적용해 Gate가 보류되는 이유를 확인하세요. 정상 State에서 Acquire한 뒤 Parameter를 바꾸고 Recorded State와 Preview를 비교하세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "testing",
+      "html": "<p>Workflow Gate와 Frozen Snapshot은 기록을 해석하고 재현하기 위한 장치입니다. 실제 Hardware 자동화나 장비 운용 검증과는 구분하세요.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "설정 변경 후 기존 Snapshot은 Stale로 남음",
+    "자동 동작이면 Reference 확인은 필요 없음",
+    "Live Preview는 실제 장비의 측정 Data임"
+  ],
+  "predictionFeedback": "Workflow Gate와 Frozen Snapshot은 기록을 해석하고 재현하기 위한 장치입니다. 실제 Hardware 자동화나 장비 운용 검증과는 구분하세요.",
+  "sources": [
+    "Q0",
+    "Q1",
+    "Q2",
+    "Q3"
+  ]
+}
