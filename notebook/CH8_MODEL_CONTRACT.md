@@ -1,5 +1,5 @@
 # Chapter 8 Geometry / Connectivity / Physics Contract
-D0 · 2026-10-23. Independent teaching technology SIPT-DEMO-1, not foundry/PDK calibration. Units µm, radians; world y-up; SVG inverts y. Drawing grid .001µm, round-to-nearest (JS Math.round, positive half ties toward +∞). Geometry coordinate maximum 10000µm. No mirror support; quarter rotations only.
+D0 · 2026-10-23. Independent teaching technology SIPT-DEMO-1, not foundry/PDK calibration. Units µm, radians; world y-up; SVG inverts y. Coordinates are continuous floating-point µm; no GDS writer or enforced layout grid. DBU=.001µm is an independent explanatory example; quantize helper rounds that example to nearest (JS Math.round, positive half ties toward +∞), and is not applied to analytic route geometry. Grid alignment is Not checked. Geometry coordinate maximum 10000µm. No mirror support; quarter rotations only.
 
 Technology layers Si 1/0, shallow-etch illustration 2/0, metal 10/0, annotation 99/0 are drawing purposes, not etch depths or process sequence. Width minimum .4µm; coupon spacing minimum .3µm. Rule tolerance1e-9µm. Optical TE/strip ports use fixed interface width .5µm; independent route body width can fail width DRC while endpoints remain compatible (conceptual end transition, not solved). No arbitrary polygon DRC.
 

@@ -9,7 +9,7 @@
     "see": "선택한 Instance·Port·Net과 해당 Geometry/Graph를 함께 봅니다.",
     "notice": "표현이 바뀌어도 같은 정보와 새로 필요한 정보를 구별해 보세요.",
     "meaning": "Geometry Rule·Connectivity·Optical Model·Test 접근은 각각 다른 검토입니다.",
-    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; grid .001µm; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
+    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; continuous coordinates; DBU .001µm example only; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
     "limits": "Independent teaching model; no foundry process or polygon extraction. Width/parallel coupon spacing only; curved spacing and optical loss Not checked. Conceptual test access no equipment dimensions. JSON not GDS.",
     "source": "Original SVG/content; Cambridge official Chapter10 contents; KLayout official DRC/LVS/database documentation. Full textbook not accessed."
   },
@@ -23,7 +23,7 @@
     "see": "선택한 Instance·Port·Net과 해당 Geometry/Graph를 함께 봅니다.",
     "notice": "표현이 바뀌어도 같은 정보와 새로 필요한 정보를 구별해 보세요.",
     "meaning": "Geometry Rule·Connectivity·Optical Model·Test 접근은 각각 다른 검토입니다.",
-    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; grid .001µm; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
+    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; continuous coordinates; DBU .001µm example only; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
     "limits": "Independent teaching model; no foundry process or polygon extraction. Width/parallel coupon spacing only; curved spacing and optical loss Not checked. Conceptual test access no equipment dimensions. JSON not GDS.",
     "source": "Original SVG/content; Cambridge official Chapter10 contents; KLayout official DRC/LVS/database documentation. Full textbook not accessed."
   },
@@ -37,7 +37,7 @@
     "see": "선택한 Instance·Port·Net과 해당 Geometry/Graph를 함께 봅니다.",
     "notice": "표현이 바뀌어도 같은 정보와 새로 필요한 정보를 구별해 보세요.",
     "meaning": "Geometry Rule·Connectivity·Optical Model·Test 접근은 각각 다른 검토입니다.",
-    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; grid .001µm; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
+    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; continuous coordinates; DBU .001µm example only; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
     "limits": "Independent teaching model; no foundry process or polygon extraction. Width/parallel coupon spacing only; curved spacing and optical loss Not checked. Conceptual test access no equipment dimensions. JSON not GDS.",
     "source": "Original SVG/content; Cambridge official Chapter10 contents; KLayout official DRC/LVS/database documentation. Full textbook not accessed."
   },
@@ -51,7 +51,7 @@
     "see": "선택한 Instance·Port·Net과 해당 Geometry/Graph를 함께 봅니다.",
     "notice": "표현이 바뀌어도 같은 정보와 새로 필요한 정보를 구별해 보세요.",
     "meaning": "Geometry Rule·Connectivity·Optical Model·Test 접근은 각각 다른 검토입니다.",
-    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; grid .001µm; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
+    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; continuous coordinates; DBU .001µm example only; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
     "limits": "Independent teaching model; no foundry process or polygon extraction. Width/parallel coupon spacing only; curved spacing and optical loss Not checked. Conceptual test access no equipment dimensions. JSON not GDS.",
     "source": "Original SVG/content; Cambridge official Chapter10 contents; KLayout official DRC/LVS/database documentation. Full textbook not accessed."
   },
@@ -65,7 +65,7 @@
     "see": "선택한 Instance·Port·Net과 해당 Geometry/Graph를 함께 봅니다.",
     "notice": "표현이 바뀌어도 같은 정보와 새로 필요한 정보를 구별해 보세요.",
     "meaning": "Geometry Rule·Connectivity·Optical Model·Test 접근은 각각 다른 검토입니다.",
-    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; grid .001µm; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
+    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; continuous coordinates; DBU .001µm example only; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
     "limits": "Independent teaching model; no foundry process or polygon extraction. Width/parallel coupon spacing only; curved spacing and optical loss Not checked. Conceptual test access no equipment dimensions. JSON not GDS.",
     "source": "Original SVG/content; Cambridge official Chapter10 contents; KLayout official DRC/LVS/database documentation. Full textbook not accessed."
   },
@@ -79,7 +79,7 @@
     "see": "선택한 Instance·Port·Net과 해당 Geometry/Graph를 함께 봅니다.",
     "notice": "표현이 바뀌어도 같은 정보와 새로 필요한 정보를 구별해 보세요.",
     "meaning": "Geometry Rule·Connectivity·Optical Model·Test 접근은 각각 다른 검토입니다.",
-    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; grid .001µm; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
+    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; continuous coordinates; DBU .001µm example only; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
     "limits": "Independent teaching model; no foundry process or polygon extraction. Width/parallel coupon spacing only; curved spacing and optical loss Not checked. Conceptual test access no equipment dimensions. JSON not GDS.",
     "source": "Original SVG/content; Cambridge official Chapter10 contents; KLayout official DRC/LVS/database documentation. Full textbook not accessed."
   },
@@ -93,7 +93,7 @@
     "see": "선택한 Instance·Port·Net과 해당 Geometry/Graph를 함께 봅니다.",
     "notice": "표현이 바뀌어도 같은 정보와 새로 필요한 정보를 구별해 보세요.",
     "meaning": "Geometry Rule·Connectivity·Optical Model·Test 접근은 각각 다른 검토입니다.",
-    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; grid .001µm; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
+    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; continuous coordinates; DBU .001µm example only; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
     "limits": "Independent teaching model; no foundry process or polygon extraction. Width/parallel coupon spacing only; curved spacing and optical loss Not checked. Conceptual test access no equipment dimensions. JSON not GDS.",
     "source": "Original SVG/content; Cambridge official Chapter10 contents; KLayout official DRC/LVS/database documentation. Full textbook not accessed."
   },
@@ -107,7 +107,7 @@
     "see": "선택한 Instance·Port·Net과 해당 Geometry/Graph를 함께 봅니다.",
     "notice": "표현이 바뀌어도 같은 정보와 새로 필요한 정보를 구별해 보세요.",
     "meaning": "Geometry Rule·Connectivity·Optical Model·Test 접근은 각각 다른 검토입니다.",
-    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; grid .001µm; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
+    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; continuous coordinates; DBU .001µm example only; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
     "limits": "Independent teaching model; no foundry process or polygon extraction. Width/parallel coupon spacing only; curved spacing and optical loss Not checked. Conceptual test access no equipment dimensions. JSON not GDS.",
     "source": "Original SVG/content; Cambridge official Chapter10 contents; KLayout official DRC/LVS/database documentation. Full textbook not accessed."
   },
@@ -121,7 +121,7 @@
     "see": "선택한 Instance·Port·Net과 해당 Geometry/Graph를 함께 봅니다.",
     "notice": "표현이 바뀌어도 같은 정보와 새로 필요한 정보를 구별해 보세요.",
     "meaning": "Geometry Rule·Connectivity·Optical Model·Test 접근은 각각 다른 검토입니다.",
-    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; grid .001µm; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
+    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; continuous coordinates; DBU .001µm example only; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
     "limits": "Independent teaching model; no foundry process or polygon extraction. Width/parallel coupon spacing only; curved spacing and optical loss Not checked. Conceptual test access no equipment dimensions. JSON not GDS.",
     "source": "Original SVG/content; Cambridge official Chapter10 contents; KLayout official DRC/LVS/database documentation. Full textbook not accessed."
   },
@@ -135,7 +135,7 @@
     "see": "선택한 Instance·Port·Net과 해당 Geometry/Graph를 함께 봅니다.",
     "notice": "표현이 바뀌어도 같은 정보와 새로 필요한 정보를 구별해 보세요.",
     "meaning": "Geometry Rule·Connectivity·Optical Model·Test 접근은 각각 다른 검토입니다.",
-    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; grid .001µm; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
+    "parameters": "SIPT-DEMO-1; world µm/y-up; outward port angles degree; continuous coordinates; DBU .001µm example only; R5µm; n_eff2.4 λ1.55µm K.5 fixed lossless UDU; defaults shared with Notebook.",
     "limits": "Independent teaching model; no foundry process or polygon extraction. Width/parallel coupon spacing only; curved spacing and optical loss Not checked. Conceptual test access no equipment dimensions. JSON not GDS.",
     "source": "Original SVG/content; Cambridge official Chapter10 contents; KLayout official DRC/LVS/database documentation. Full textbook not accessed."
   }

@@ -8,3 +8,5 @@ Analytic examples (absolute tolerance1e−10 unless stated): base L=111.41592653
 Export: JSON Study Report schema1; technology/state/reference/extracted/rules/length/phase/two outputs/unchecked scope. No binary GDS export. Save uses v8 key and reads previous keys without writing to them. Actual Browser download/restore, modal focus and viewport gates are tracked separately in QA; do not infer PASS from unit tests.
 
 Physics reuses Chapter7 UDU with independent fixed n_eff2.4/λ1.55µm. No voltage/index calibration, bend-loss prediction, arbitrary Polygon DRC or device extraction. Curved spacing, component internals and foundry rules are explicitly Not checked.
+
+DBU distinction: .001µm is an explanatory storage example only. The route model retains continuous floating-point µm for analytical phase exploration; no GDS DBU/quantized-mask output or grid-alignment DRC is claimed. The standalone quantize helper is independently boundary-tested.
