@@ -18,7 +18,7 @@
     }
   ],
   "why": "Chapter 7에서는 Port 응답을 연결해 회로를 계산했습니다. 실제 Mask를 만들려면 그 Model이 어느 Process Stack과 Cell Geometry에 대응하는지 알아야 합니다. 동일한 회로 기호라도 공정 조건과 도면 의미가 다르면 같은 물리 소자가 아닙니다. PDK에는 Process Stack 설명, Layer Map, Component Library, Compact Model, Design Rule와 검증 절차가 포함될 수 있습니다. 이들은 서로 관련되지만 같은 정보는 아닙니다. Library 형상이 존재한다는 사실만으로 모든 Parameter에서 성능 모델이 검증된 것은 아닙니다.",
-  "simple": "PDK는 Process와 Drawing, Component Model과 Verification의 관계를 묶습니다. Layer 번호를 Process Sequence로 해석하지 않습니다. Process Cross-section은 높이 방향 Material/Etch의 의미를 보여주고 Top-view Drawing Layer는 도면의 목적을 구분합니다. Layer/Datatype 쌍은 도형의 용도를 찾는 식별자이며 숫자의 크기가 Etch Depth 또는 공정 순서를 뜻하지 않습니다. 같은 Silicon Pattern도 Process 정의가 있어야 해석할 수 있습니다.",
+  "simple": "PDK는 Process와 Drawing, Component Model과 Verification의 관계를 묶습니다. Layer 번호를 Process Sequence로 해석하지 않습니다. Process Cross-section은 높이 방향 Material/Etch의 의미를 보여주고 Top-view Drawing Layer는 도면의 목적을 구분합니다. Layer/Datatype Pair은 도형의 용도를 찾는 식별자이며 숫자의 크기가 Etch Depth 또는 공정 순서를 뜻하지 않습니다. 같은 Silicon Pattern도 Process 정의가 있어야 해석할 수 있습니다.",
   "math": "Physical length = integer coordinate × DBU. DBU=0.001 µm에서 좌표 12500은 12.5 µm입니다. Layer 10/0의 10은 10 µm 깊이라는 뜻이 아닙니다. Width 0.5 µm를 2배 확대해도 저장된 Width는 0.5 µm입니다.",
   "notebook": "Layer 표시를 바꾸고 Cross-section·Layer Legend·Top-view를 대응해 보세요. 같은 도형의 번호와 물리 의미를 분리해 설명하세요. Layer 번호·Datatype·DBU·Process Stack의 서로 다른 역할을 한 예로 설명하세요."
 }

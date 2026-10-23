@@ -1,0 +1,62 @@
+name: Chapter 8 validation
+on:
+  push:
+    branches: [feature/ch8-tools-pdk-layout]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build content geometry connectivity and independent reference
+        run: |
+          npm run build
+          npm test
+          python3 tests/ch8-independent-validation.py
+          pip install fonttools brotli numpy
+          python3 scripts/audit-ch8-font.py
+          python3 tests/ch7-independent-validation.py
+      - name: Deterministic build and retained release hashes
+        run: |
+          cp dist/silicon-photonics-textbook-v0.8.0.html /tmp/ch8.html
+          npm run build
+          cmp /tmp/ch8.html dist/silicon-photonics-textbook-v0.8.0.html
+          cd dist
+          sha256sum -c CH8_SHA256SUMS.txt
+          sha256sum -c CH7_SHA256SUMS.txt
+      - name: Browser dependencies
+        run: |
+          npm install --no-save --no-package-lock playwright@1.62.0
+          npx playwright install --with-deps chromium
+      - name: Chapter8 browser matrix and integrated50 lessons
+        env:
+          CI_VISUAL_LOG: '1'
+        run: npm run test:ch8:browser
+      - name: Historical Chapter1–7 independent browser regressions
+        run: |
+          npm run test:browser
+          npm run test:ch2:browser
+          npm run test:ch3:browser
+          npm run test:ch4:browser
+          npm run test:ch5:browser
+          npm run test:ch6:browser
+          npm run test:ch7:browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: silicon-photonics-textbook-v0.8.0-review
+          path: |
+            dist/silicon-photonics-textbook-v0.8.0.html
+            dist/CH8_SHA256SUMS.txt
+            dist/ch8-build-info.json
+            artifacts/v0.8.0/
+            docs/CH8_*
+          retention-days: 30
