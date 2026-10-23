@@ -1,0 +1,67 @@
+{
+  "id": "8.4",
+  "short": "Schematic → Layout",
+  "title": "Same Topology, Different Optical Length",
+  "time": "15–22분",
+  "lead": "실제 Straight/Arc Geometry의 Length를 Chapter 7 MZI Phase에 연결합니다. Placement 변화와 Route 변화의 차이를 관찰합니다.",
+  "question": "같은 Netlist인데 두 Layout의 출력이 달라질 수 있나요?",
+  "prediction": "현재 실습에서 무엇이 달라질까요?",
+  "reflection": "Topology가 같은 두 Layout의 응답이 같을 조건과 달라질 조건을 각각 설명하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "circuit",
+      "html": "<p>연결 관계가 같다는 것은 필요한 조건이지만 모든 Optical Performance가 같다는 뜻은 아닙니다. MZI의 상대 Phase는 두 경로의 실제 길이와 전파 상수에 의존합니다. 따라서 Layout은 Connectivity와 Geometry를 함께 관리해야 합니다.</p><p>실제 Straight/Arc Geometry의 Length를 Chapter 7 MZI Phase에 연결합니다. Placement 변화와 Route 변화의 차이를 관찰합니다. 이번 학습에서는 먼저 같은 Component와 Port를 찾고, 표현이 바뀌어도 유지되는 정보와 새로 필요한 정보를 구별합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "circuit",
+      "html": "<p>두 Coupler의 Reference Plane 사이를 Straight와 Radius 5 µm Circular Arc로 연결합니다. Upper/Lower는 기본 Excursion h=20 µm로 대칭이고, Upper Extra Excursion e를 늘리면 두 수직 구간이 각각 e만큼 길어집니다. ΔL=2e이며 두 Coupler 내부 길이는 Route 합계에서 제외합니다.</p><p>전체 Layout을 Translation/Quarter Rotation하면 Local Shape와 길이는 유지됩니다. 이에 비해 Upper Route의 Excursion을 바꾸면 실제 Geometry와 Length가 바뀝니다. 화면 확대나 Schematic 선 길이는 이 계산에 들어가지 않습니다.</p><p>기존 Chapter 7의 UDU Convention을 그대로 사용합니다. n_eff=2.4, λ=1.55 µm는 독립 교육용 상수입니다. Positive accumulated phase δ=βΔL이고 Upper Propagation은 exp(−iδ)입니다. 실제 Signed Relative Phase는 −βΔL입니다. Width 변경으로 n_eff가 달라지는 모델은 구현하지 않았습니다.</p><p>Notebook은 두 Output을 모두 보여줍니다. K=.5, Loss=0, Input=1 mW에서 Upper=sin²(δ/2), Lower=cos²(δ/2) mW입니다. 미접속/오접속이면 정상 Transfer를 숨기고 원인을 표시합니다. Geometry/Connectivity 통과는 실제 Bend Loss나 제작 가능성의 검증이 아닙니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "circuit",
+      "html": "<div class=\"equation\">L_route = 80 + 2h + (2π−8)R; ΔL = 2e; δ = (2π n_eff/λ)ΔL</div><p>좌표와 Length는 µm, Angle은 degree 또는 명시한 rad입니다. 교육용 Parameter이며 실제 Foundry의 성능/제작 결과가 아닙니다. 식의 적용 범위와 Reference Plane을 함께 읽으세요.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>h=20 µm, R=5 µm에서 각 Route Length는 111.415927 µm입니다. e=0이면 Upper Dark/Lower 1 mW입니다. e=λ/(4n_eff)=0.1614583 µm이면 ΔL=0.3229167 µm, δ=π이므로 두 출력이 교환됩니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "오개념을 구별합니다",
+      "scene": "circuit",
+      "html": "<p>전체 MZI를 같이 90° 회전하면 무엇이 달라지나요?</p><p>먼저 선택한 이유를 적고 Feedback에서 오류의 종류를 확인하세요. Geometry와 Connectivity, Model의 유효 범위 가운데 어떤 정보를 근거로 판단했는지 연결합니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with geometry",
+      "title": "예측하고 관찰합니다",
+      "scene": "circuit",
+      "html": "<p>Upper Extra Excursion을 0→0.1614583 µm로 바꾸고 두 출력을 비교하세요. 회전·이동만 바꿔 Length와 Power가 보존되는지도 확인하세요.</p><p>예측을 남긴 뒤 한 Parameter씩 바꾸세요. 원래 상태와 수정 상태를 비교하고 검사 범위 밖의 결론을 내리지 않았는지 확인합니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "circuit",
+      "html": "<p>실제 Straight/Arc Geometry의 Length를 Chapter 7 MZI Phase에 연결합니다. Placement 변화와 Route 변화의 차이를 관찰합니다.</p><p>Topology가 같은 두 Layout의 응답이 같을 조건과 달라질 조건을 각각 설명하세요. 실제 Layout 검토에서는 PASS와 Not checked를 구분하고 사용한 Technology/단위/연결 기준을 함께 기록해야 합니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Arm Length 변화는 같은 Topology에서도 Phase를 바꿀 수 있음",
+    "Translation만으로 Relative Phase가 자동 변경됨",
+    "Width를 바꾸면 실제 n_eff가 자동 계산됨"
+  ],
+  "predictionFeedback": "맞습니다. Rigid Transform은 길이를 보존합니다. Port와 Route를 함께 변환하고 Reference Plane을 일관되게 유지하면 동일한 Optical Response가 나옵니다. Upper Extra Excursion을 0→0.1614583 µm로 바꾸고 두 출력을 비교하세요. 회전·이동만 바꿔 Length와 Power가 보존되는지도 확인하세요.",
+  "sources": [
+    "T0",
+    "T1",
+    "T2",
+    "T3"
+  ]
+}

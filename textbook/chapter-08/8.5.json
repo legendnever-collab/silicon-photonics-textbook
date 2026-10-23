@@ -1,0 +1,67 @@
+{
+  "id": "8.5",
+  "short": "DRC & LVS",
+  "title": "Two Checks, Two Kinds of Error",
+  "time": "15–22분",
+  "lead": "Width/Spacing Rule과 Port Connectivity 검사를 각각 실행하고, 하나의 PASS가 다른 검사 결과를 대신하지 못함을 확인합니다.",
+  "question": "DRC PASS이면서 LVS FAIL인 Layout이 가능할까요?",
+  "prediction": "현재 실습에서 무엇이 달라질까요?",
+  "reflection": "DRC FAIL/LVS PASS와 DRC PASS/LVS FAIL 예시를 각각 만들고 검사 범위를 설명하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "circuit",
+      "html": "<p>도형이 올바른 규칙을 따르는지와 회로가 의도한 대로 연결됐는지는 다른 질문입니다. DRC는 Geometry Rule, LVS는 추출한 Connectivity와 Reference 비교를 다룹니다. 한 종류 오류만 고쳐 전체 회로가 검증됐다고 결론 내리지 않습니다.</p><p>Width/Spacing Rule과 Port Connectivity 검사를 각각 실행하고, 하나의 PASS가 다른 검사 결과를 대신하지 못함을 확인합니다. 이번 학습에서는 먼저 같은 Component와 Port를 찾고, 표현이 바뀌어도 유지되는 정보와 새로 필요한 정보를 구별합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "circuit",
+      "html": "<p>교육용 WG_WIDTH Rule은 명시된 Route Primitive Width≥0.4 µm를 검사합니다. COUPON_SPACE는 MZI 옆 독립 평행 Straight Coupon 두 개의 Edge Gap≥0.3 µm를 검사합니다. Curved Network Spacing, Coupler 내부 Polygon, Density/Enclosure는 검사하지 않습니다.</p><p>Coupon Gap은 두 Centerline 거리에서 반폭의 합을 뺀 값입니다. Width를 줄이면 도형 내부 Width Rule은 실패할 수 있지만 고정 Interface Port Width=.5 µm인 이 교육 모델의 Topology는 그대로일 수 있습니다. End Transition은 개념적이며 실제 Taper 성능을 검증한 것이 아닙니다.</p><p>Layout Port/Route Endpoint에서 추출한 Graph는 Instance Type, Stable Port 이름, 외부 Terminal과 연결 Edge를 Reference와 비교합니다. 거리≤0.002 µm, 방향은 마주 보아야 함, Domain/Cross-section/Width Compatibility를 요구합니다. 내부 선 교차는 Net을 연결하지 않습니다.</p><p>Reference, Geometry Error, Connectivity Error, Combined Error Preset은 실제 Parameter를 바꿉니다. 검사 결과는 현재 상태에서 다시 계산합니다. Markers는 Rule ID/측정값/허용값/위치를 가집니다. PASS는 선언한 Check Set에만 해당하며 Foundry Sign-off나 실제 Polygon-based LVS가 아닙니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "circuit",
+      "html": "<div class=\"equation\">Gap = d_center − (w₁+w₂)/2; Width ≥ 0.4 µm; Coupon Gap ≥ 0.3 µm</div><p>좌표와 Length는 µm, Angle은 degree 또는 명시한 rad입니다. 교육용 Parameter이며 실제 Foundry의 성능/제작 결과가 아닙니다. 식의 적용 범위와 Reference Plane을 함께 읽으세요.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>w₁=w₂=0.5 µm, d_center=0.8 µm이면 Edge Gap=.3 µm로 경계값을 통과합니다. Width=.25 µm인 Route는 WG_WIDTH FAIL일 수 있지만 고정 Port Interface가 연결돼 있으면 LVS는 PASS입니다. Endpoint 2 µm 단선은 Width를 고쳐도 남습니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "오개념을 구별합니다",
+      "scene": "circuit",
+      "html": "<p>DRC PASS가 의미하는 것은 무엇인가요?</p><p>먼저 선택한 이유를 적고 Feedback에서 오류의 종류를 확인하세요. Geometry와 Connectivity, Model의 유효 범위 가운데 어떤 정보를 근거로 판단했는지 연결합니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with geometry",
+      "title": "예측하고 관찰합니다",
+      "scene": "circuit",
+      "html": "<p>네 Preset을 비교하세요. Combined에서 Width/Spacing만 수정한 뒤 LVS가 계속 FAIL인지 확인하고, Endpoint를 연결해 두 검사 결과를 다시 읽으세요.</p><p>예측을 남긴 뒤 한 Parameter씩 바꾸세요. 원래 상태와 수정 상태를 비교하고 검사 범위 밖의 결론을 내리지 않았는지 확인합니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "circuit",
+      "html": "<p>Width/Spacing Rule과 Port Connectivity 검사를 각각 실행하고, 하나의 PASS가 다른 검사 결과를 대신하지 못함을 확인합니다.</p><p>DRC FAIL/LVS PASS와 DRC PASS/LVS FAIL 예시를 각각 만들고 검사 범위를 설명하세요. 실제 Layout 검토에서는 PASS와 Not checked를 구분하고 사용한 Technology/단위/연결 기준을 함께 기록해야 합니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Geometry와 Connectivity는 서로 독립적으로 실패할 수 있음",
+    "Width를 고치면 모든 단선도 해결됨",
+    "DRC PASS이면 모든 미지원 Rule도 PASS임"
+  ],
+  "predictionFeedback": "맞습니다. 검사한 Rule과 Geometry 범위를 먼저 읽어야 합니다. Connectivity 비교와 Optical Model, Foundry의 공정 검증을 별도로 확인해야 합니다. 네 Preset을 비교하세요. Combined에서 Width/Spacing만 수정한 뒤 LVS가 계속 FAIL인지 확인하고, Endpoint를 연결해 두 검사 결과를 다시 읽으세요.",
+  "sources": [
+    "T0",
+    "T1",
+    "T2",
+    "T3"
+  ]
+}

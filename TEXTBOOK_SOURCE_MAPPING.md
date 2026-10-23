@@ -76,3 +76,6 @@ See [CH6_TEXTBOOK_SOURCE_MAPPING.md](docs/CH6_TEXTBOOK_SOURCE_MAPPING.md) for or
 
 ## Chapter 7 — Photonic Circuit Modelling
 Original Chapter9 pp313–348. Official section-by-section mapping and access limits: [CH7_TEXTBOOK_SOURCE_MAPPING.md](docs/CH7_TEXTBOOK_SOURCE_MAPPING.md). Original seven-lesson content follows9.1→9.6;7.7 is an educational synthesis. No full-text/figure/listing access or reproduction.
+
+## Chapter 8 — Tools and techniques
+Original Chapter10 pp349–366: [mapping](docs/CH8_TEXTBOOK_SOURCE_MAPPING.md). Full text not accessed.

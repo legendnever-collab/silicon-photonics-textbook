@@ -1,0 +1,7 @@
+{
+  "comparisons": 320,
+  "maxAbsoluteError": 1.8369701987210296e-15,
+  "method": "Python independent primitive decomposition, complex field summation, trig transforms",
+  "states": 32,
+  "status": "PASS"
+}

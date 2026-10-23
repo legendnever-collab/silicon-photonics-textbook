@@ -1,0 +1,67 @@
+{
+  "id": "8.1",
+  "short": "PDK",
+  "title": "What Does a PDK Actually Describe?",
+  "time": "15–22분",
+  "lead": "PDK는 Process와 Drawing, Component Model과 Verification의 관계를 묶습니다. Layer 번호를 Process Sequence로 해석하지 않습니다.",
+  "question": "Si 도형을 그리면 제작 가능한 설계가 되는 걸까요?",
+  "prediction": "현재 실습에서 무엇이 달라질까요?",
+  "reflection": "Layer 번호·Datatype·DBU·Process Stack의 서로 다른 역할을 한 예로 설명하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "circuit",
+      "html": "<p>Chapter 7에서는 Port 응답을 연결해 회로를 계산했습니다. 실제 Mask를 만들려면 그 Model이 어느 Process Stack과 Cell Geometry에 대응하는지 알아야 합니다. 동일한 회로 기호라도 공정 조건과 도면 의미가 다르면 같은 물리 소자가 아닙니다.</p><p>PDK는 Process와 Drawing, Component Model과 Verification의 관계를 묶습니다. Layer 번호를 Process Sequence로 해석하지 않습니다. 이번 학습에서는 먼저 같은 Component와 Port를 찾고, 표현이 바뀌어도 유지되는 정보와 새로 필요한 정보를 구별합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "circuit",
+      "html": "<p>PDK에는 Process Stack 설명, Layer Map, Component Library, Compact Model, Design Rule와 검증 절차가 포함될 수 있습니다. 이들은 서로 관련되지만 같은 정보는 아닙니다. Library 형상이 존재한다는 사실만으로 모든 Parameter에서 성능 모델이 검증된 것은 아닙니다.</p><p>Process Cross-section은 높이 방향 Material/Etch의 의미를 보여주고 Top-view Drawing Layer는 도면의 목적을 구분합니다. Layer/Datatype Pair은 도형의 용도를 찾는 식별자이며 숫자의 크기가 Etch Depth 또는 공정 순서를 뜻하지 않습니다. 같은 Silicon Pattern도 Process 정의가 있어야 해석할 수 있습니다.</p><p>Database Unit(DBU)은 저장 좌표 정수 한 단위의 물리적 길이입니다. DBU=0.001 µm는 저장 형식을 설명하는 예시입니다. 이 앱의 Route 계산은 연속적인 부동소수점 µm 좌표이며 실제 GDS Grid를 강제하지 않습니다. Layer Visibility를 숨겨도 Geometry나 검사 결과는 바뀌지 않습니다. 화면 확대도 물리적 Width를 바꾸지 않습니다.</p><p>이 장의 SIPT-DEMO-1은 독립 교육용 Technology입니다. Si 1/0, Shallow etch 2/0, Metal 10/0, Annotation 99/0은 임의 Layer Map입니다. 그림의 Stack은 개념도이며 실제 Foundry PDK, Etch Calibration 또는 제작 보장을 나타내지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "circuit",
+      "html": "<div class=\"equation\">Physical length = integer coordinate × DBU</div><p>좌표와 Length는 µm, Angle은 degree 또는 명시한 rad입니다. 교육용 Parameter이며 실제 Foundry의 성능/제작 결과가 아닙니다. 식의 적용 범위와 Reference Plane을 함께 읽으세요.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>DBU=0.001 µm에서 좌표 12500은 12.5 µm입니다. Layer 10/0의 10은 10 µm 깊이라는 뜻이 아닙니다. Width 0.5 µm를 2배 확대해도 저장된 Width는 0.5 µm입니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "오개념을 구별합니다",
+      "scene": "circuit",
+      "html": "<p>Layer Map 숫자에서 직접 알 수 있는 것은 무엇인가요?</p><p>먼저 선택한 이유를 적고 Feedback에서 오류의 종류를 확인하세요. Geometry와 Connectivity, Model의 유효 범위 가운데 어떤 정보를 근거로 판단했는지 연결합니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with geometry",
+      "title": "예측하고 관찰합니다",
+      "scene": "circuit",
+      "html": "<p>Layer 표시를 바꾸고 Cross-section·Layer Legend·Top-view를 대응해 보세요. 같은 도형의 번호와 물리 의미를 분리해 설명하세요.</p><p>예측을 남긴 뒤 한 Parameter씩 바꾸세요. 원래 상태와 수정 상태를 비교하고 검사 범위 밖의 결론을 내리지 않았는지 확인합니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "circuit",
+      "html": "<p>PDK는 Process와 Drawing, Component Model과 Verification의 관계를 묶습니다. Layer 번호를 Process Sequence로 해석하지 않습니다.</p><p>Layer 번호·Datatype·DBU·Process Stack의 서로 다른 역할을 한 예로 설명하세요. 실제 Layout 검토에서는 PASS와 Not checked를 구분하고 사용한 Technology/단위/연결 기준을 함께 기록해야 합니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Layer를 숨겨도 물리 Geometry와 검사 결과는 그대로임",
+    "Layer를 숨기면 제작 대상 Geometry가 제거됨",
+    "Layer 숫자가 Etch 깊이를 결정함"
+  ],
+  "predictionFeedback": "맞습니다. Layer/Datatype과 Process 정의를 대응해야 실제 도형 의미를 읽을 수 있습니다. 번호 자체는 깊이 또는 순서가 아닙니다. Layer 표시를 바꾸고 Cross-section·Layer Legend·Top-view를 대응해 보세요. 같은 도형의 번호와 물리 의미를 분리해 설명하세요.",
+  "sources": [
+    "T0",
+    "T1",
+    "T2",
+    "T3"
+  ]
+}

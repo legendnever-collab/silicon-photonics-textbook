@@ -1,0 +1,6 @@
+{
+  "requiredHangul": 335,
+  "missingHangul": 0,
+  "missingCharacters": "",
+  "method": "fontTools cmap audit against all three embedded fonts; CH8 runtime payload sources"
+}

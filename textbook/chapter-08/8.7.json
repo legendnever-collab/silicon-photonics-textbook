@@ -1,0 +1,67 @@
+{
+  "id": "8.7",
+  "short": "Guided Review",
+  "title": "Review the Layout Before Trusting It",
+  "time": "15–22분",
+  "lead": "PDK 정보·Port 연결·Geometry Rule·Test 접근을 차례로 검토하고 근거가 남는 JSON Report로 정리합니다.",
+  "question": "모든 초록색 표시를 본 뒤에도 무엇이 미검증으로 남을까요?",
+  "prediction": "현재 실습에서 무엇이 달라질까요?",
+  "reflection": "검사한 것·검사하지 않은 것·다음 단계에 필요한 자료를 분리해 검토 의견을 작성하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "circuit",
+      "html": "<p>마지막 실습은 앞선 개념을 같은 MZI에서 연결합니다. 무작위 점수 게임이 아니라 오류의 위치와 의미를 설명하는 검토 과정입니다. 한 검사에서 PASS가 나오면 다른 가정과 검사 범위를 다시 확인합니다.</p><p>PDK 정보·Port 연결·Geometry Rule·Test 접근을 차례로 검토하고 근거가 남는 JSON Report로 정리합니다. 이번 학습에서는 먼저 같은 Component와 Port를 찾고, 표현이 바뀌어도 유지되는 정보와 새로 필요한 정보를 구별합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "circuit",
+      "html": "<p>먼저 Technology와 Layer 목적을 읽고 C1/C2 Instance와 Port를 추적합니다. Reference Netlist가 의도한 회로인지 확인한 뒤 Layout에서 독립적으로 추출한 Graph를 비교합니다. Reference 자체가 잘못되었으면 일치 결과도 올바른 설계를 보장하지 않습니다.</p><p>Combined Error를 불러와 Width/Spacing Marker부터 고쳐 보세요. Endpoint 단선은 남습니다. Connect를 복구하면 추출 Edge가 Reference와 일치합니다. Swap을 켜면 Geometry Rule이 통과하더라도 Upper/Lower가 다른 Port로 연결되어 LVS가 실패합니다.</p><p>Route Length와 Phase Readout은 유효한 연결에서만 계산됩니다. 두 Output을 함께 읽고 Lossless 1 mW 합계를 확인합니다. Width DRC를 통과했다고 실제 n_eff/손실 모델이 검증된 것이 아니며 교육용 고정 n_eff 가정을 계속 명시합니다.</p><p>마지막으로 Fiber/Probe 접근과 Not checked 목록을 읽고 JSON Study Report를 저장합니다. Report에는 Technology ID, State, Reference/Extracted Graph, Rule 결과, Length/Phase/두 Output과 적용 범위가 포함됩니다. 학습 기록 전체 Backup과 단일 Layout Report는 목적이 다릅니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "circuit",
+      "html": "<div class=\"equation\">Accept within scope = declared checks executed AND passed; unchecked ≠ passed</div><p>좌표와 Length는 µm, Angle은 degree 또는 명시한 rad입니다. 교육용 Parameter이며 실제 Foundry의 성능/제작 결과가 아닙니다. 식의 적용 범위와 Reference Plane을 함께 읽으세요.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>Combined에서 Width=.25 µm, Coupon Gap=.1 µm, Endpoint Offset=2 µm이면 DRC/LVS가 모두 실패합니다. Width=.5, Gap=.5로 고쳐도 LVS는 실패합니다. Endpoint를 복구하면 선언 Check Set은 PASS이나 Foundry Rules/실제 Optical Loss/제조 수율은 여전히 미검증입니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "오개념을 구별합니다",
+      "scene": "circuit",
+      "html": "<p>마지막 Report에 남겨야 할 것은 무엇인가요?</p><p>먼저 선택한 이유를 적고 Feedback에서 오류의 종류를 확인하세요. Geometry와 Connectivity, Model의 유효 범위 가운데 어떤 정보를 근거로 판단했는지 연결합니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with geometry",
+      "title": "예측하고 관찰합니다",
+      "scene": "circuit",
+      "html": "<p>Combined→Geometry 수정→Endpoint 복구→Port/Route 추적→Test 접근 검토→Report Download 순서로 완료하세요. Not checked 중 후속 검증이 필요한 항목을 적으세요.</p><p>예측을 남긴 뒤 한 Parameter씩 바꾸세요. 원래 상태와 수정 상태를 비교하고 검사 범위 밖의 결론을 내리지 않았는지 확인합니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "circuit",
+      "html": "<p>PDK 정보·Port 연결·Geometry Rule·Test 접근을 차례로 검토하고 근거가 남는 JSON Report로 정리합니다.</p><p>검사한 것·검사하지 않은 것·다음 단계에 필요한 자료를 분리해 검토 의견을 작성하세요. 실제 Layout 검토에서는 PASS와 Not checked를 구분하고 사용한 Technology/단위/연결 기준을 함께 기록해야 합니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "선언 Check Set의 PASS와 실제 제조 승인은 다름",
+    "Not checked도 PASS로 집계해도 됨",
+    "Reference가 틀려도 LVS가 자동으로 수정함"
+  ],
+  "predictionFeedback": "맞습니다. 같은 입력에서 검사를 재현하고 남은 한계를 알 수 있어야 결과를 판단할 수 있습니다. 교육용 PASS는 실제 제조 Sign-off나 성능 보장이 아닙니다. Combined→Geometry 수정→Endpoint 복구→Port/Route 추적→Test 접근 검토→Report Download 순서로 완료하세요. Not checked 중 후속 검증이 필요한 항목을 적으세요.",
+  "sources": [
+    "T0",
+    "T1",
+    "T2",
+    "T3"
+  ]
+}
