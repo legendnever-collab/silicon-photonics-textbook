@@ -8,6 +8,8 @@ replace(" if(l.id.startsWith('7.')){$('#notebook').innerHTML=Ch7Notebook.render"
 replace(" if(current().id.startsWith('7.')){Ch7Notebook.update"," if(current().id.startsWith('8.')){Ch8Notebook.update(current(),settings());return;}\n if(current().id.startsWith('7.')){Ch7Notebook.update");
 replace("settings()[e.target.dataset.setting]=Number(e.target.value);updateNotebook();","settings()[e.target.dataset.setting]=Number(e.target.value);if(state.lesson.startsWith('8.'))Ch8Notebook.changed(e,settings());updateNotebook();");
 replace("$('#notebook').addEventListener('click',e=>{const ch2=","$('#notebook').addEventListener('click',e=>{if(state.lesson.startsWith('8.')&&Ch8Notebook.handle(e,current(),settings())){updateNotebook();TeachingFigures.refresh($('#reading'),settings());save();}const ch2=");
+replace("if(e.target.dataset.setting){settings()[","if(e.target.dataset.setting){const viewAnchor=state.lesson.startsWith('8.')?Ch8Notebook.captureView():null;settings()[");
+replace("TeachingFigures.refresh($('#reading'),settings());save();}});\n$('#notebook').addEventListener('change'","TeachingFigures.refresh($('#reading'),settings());if(viewAnchor)Ch8Notebook.restoreView(viewAnchor);save();}});\n$('#notebook').addEventListener('change'");
 // Linked figure selection in reading and native dialog Escape focus are contained to CH8.
 replace("$('#reading').addEventListener('click',e=>{","$('#reading').addEventListener('click',e=>{if(state.lesson.startsWith('8.')&&Ch8Notebook.handle(e,current(),settings())){updateNotebook();TeachingFigures.refresh($('#reading'),settings());save();}");
 return app;}

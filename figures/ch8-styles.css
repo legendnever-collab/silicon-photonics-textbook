@@ -17,3 +17,4 @@
 @container(max-width:600px){.ch8-pair{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:760px){.ch8-pair{grid-template-columns:minmax(0,1fr)}}
 [data-chapter="8"] .teaching-svg .f-axis{stroke:var(--ink);stroke-width:1.5}
+.ch8-pair .f-axis{stroke:var(--ink);stroke-width:1.5}
