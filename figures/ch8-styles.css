@@ -18,3 +18,5 @@
 @media(max-width:760px){.ch8-pair{grid-template-columns:minmax(0,1fr)}}
 [data-chapter="8"] .teaching-svg .f-axis{stroke:var(--ink);stroke-width:1.5}
 .ch8-pair .f-axis{stroke:var(--ink);stroke-width:1.5}
+#ch8-net-links{display:flex;gap:.4rem;flex-wrap:wrap;margin:.6rem 0}#ch8-net-links button{min-height:44px;font-size:.9rem}#ch8-net-links [aria-pressed="true"]{background:var(--soft);border-color:var(--accent);font-weight:700}
+[data-chapter="8"] .readout details{margin:.5rem 0}[data-chapter="8"] .readout summary{cursor:pointer;font-weight:700}
