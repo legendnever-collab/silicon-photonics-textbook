@@ -1,0 +1,24 @@
+{
+  "question": "t=222 nm, e=71 nm인 Rib의 Residual Slab은 얼마인가요?",
+  "choices": [
+    {
+      "text": "151 nm이며 Nominal보다 1 nm 두껍습니다.",
+      "feedback": "맞습니다. 222−71=151 nm입니다. Thickness와 Etch Offset을 따로 더한 뒤 차이를 계산합니다.",
+      "correct": true
+    },
+    {
+      "text": "149 nm입니다. Etch가 깊어졌으므로 항상 더 얇습니다.",
+      "feedback": "Etch만 보면 얇아지지만 Thickness도 +2 nm 변했습니다. 두 변화를 함께 계산해야 합니다.",
+      "correct": false
+    },
+    {
+      "text": "Thickness 222 nm와 같은 값입니다.",
+      "feedback": "Etch Depth만큼 제거한 영역에는 t−e가 남습니다. Core Thickness와 Residual Slab을 구분하세요.",
+      "correct": false
+    }
+  ],
+  "why": "Chapter 8의 DRC는 선언한 Geometry Rule을, LVS는 의도한 연결을 확인했습니다. 이 검토를 통과한 Layout도 실제 Process를 거치면 치수 편차를 가질 수 있습니다. 이제 질문은 “연결했는가?”에서 “어떤 치수로 만들어졌고, 응답은 얼마나 달라졌는가?”로 이어집니다. Nominal은 Model을 정의하는 기준점이고 Fabricated는 제작 후의 실제 Geometry입니다. Width w, Silicon Thickness t, Etch Depth e를 서로 다른 변수로 기록합니다. Δw가 양수이면 더 넓고, Δt가 양수이면 더 두꺼우며, Δe가 양수이면 더 깊게 Etch한 경우입니다. 이 장의 단면은 Shallow-etched Rib 개념도입니다. Strip 전체 Etch와 같은 것으로 읽지 마세요.",
+  "simple": "Nominal Geometry는 설계의 기준입니다. Width, Thickness, Etch Depth의 편차를 분리해야 같은 Layout에서 다른 응답이 생기는 이유를 설명할 수 있습니다. Nominal에서 Fabricated로 가는 편차를 단위와 부호로 기록했습니다. Geometry Check의 PASS는 Optical Response의 불변성을 보장하지 않습니다. 이후 Lesson에서는 편차의 발생 위치와 공통성까지 구분합니다.",
+  "math": "p_fab = p_nom + Δp; residual slab = t − e. p는 w, t, e 중 하나이며 모두 nm입니다. Δp는 signed offset입니다. w 방향의 양쪽 Edge가 각각 바깥으로 b만큼 이동하면 Δw=2b입니다. Centerline은 고정합니다. Thickness Offset +2 nm, Etch Offset +1 nm이면 t=222 nm, e=71 nm, Residual Slab=151 nm입니다. Nominal 150 nm보다 1 nm 두껍습니다. Width Offset +4 nm는 w=504 nm이며 두께 변화를 뜻하지 않습니다.",
+  "notebook": "Nominal Preset에서 시작해 Common Width만 +4 nm로 바꾸고 A/B Geometry와 두 Ring의 Resonance를 기록하세요. 이어 Thickness +2 nm만 적용한 결과와 비교하세요. Width와 Thickness의 단위를 같게 읽더라도 Optical Sensitivity는 다릅니다. DRC/LVS 결과와 Fabrication Sensitivity 결과가 각각 어떤 질문에 답하는지 설명하세요."
+}

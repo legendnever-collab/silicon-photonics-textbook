@@ -1,0 +1,24 @@
+{
+  "question": "Δn=0.0032의 Ring Shift는 얼마인가요?",
+  "choices": [
+    {
+      "text": "1.180952 nm입니다. λ₀Δn/n_g₀를 사용합니다.",
+      "feedback": "맞습니다. Wavelength가 이동하면서 Effective Index도 바뀌므로 Group Index가 분모에 나타납니다.",
+      "correct": true
+    },
+    {
+      "text": "2.066667 nm입니다. 분모에는 n_eff만 넣으면 됩니다.",
+      "feedback": "그 값은 이 모델의 Dispersion을 빠뜨립니다. n_g=n_eff−λ dn_eff/dλ를 사용해 조건식을 미분하세요.",
+      "correct": false
+    },
+    {
+      "text": "Spectrum에서 가장 가까운 Dip이면 항상 같은 Mode Order입니다.",
+      "feedback": "Ring Spectrum에는 반복된 Order가 있습니다. 이 실습은 m=100을 식으로 추적해 Marker를 표시합니다.",
+      "correct": false
+    }
+  ],
+  "why": "Chapter 2와 Chapter 7에서 익힌 Ring Interference에 Fabrication 편차를 연결합니다. Resonance를 단순히 n_eff 비율로 움직이면 Wavelength Dispersion을 빠뜨리기 쉽습니다. Mode Order를 고정하고 조건식을 다시 읽어야 합니다. Resonance는 n_eff(λ,p)L=mλ를 만족합니다. L과 Mode Order m을 고정하고 작은 Geometry 변화를 주면 Wavelength가 변하면서 n_eff 자체도 변합니다. n_g=n_eff−λ∂n_eff/∂λ이므로 First-order Shift는 Δλ≈(λ₀/n_g)Δn_geometry입니다. 실제 길이도 바뀌면 추가 길이 Sensitivity가 필요합니다.",
+  "simple": "Resonance Condition을 미분하면 Group Index가 나타납니다. 같은 Mode Order의 이동과 반복되는 Spectrum Dip을 구별합니다. Geometry-induced Index 변화가 Resonance로 이어지는 관계를 유도하고 Group Index의 역할을 확인했습니다. 반복된 Dip, 추적 Order, 고정 Coupling/Loss의 한계를 함께 읽습니다.",
+  "math": "n_eff(λ,p)L=mλ; Δλ≈λ₀Δn/n_g₀; T=(a²+t²−2at cosφ)/(1+a²t²−2at cosφ). φ=2πn_effL/λ, a와 t는 Field 계수, T는 무차원 Power Ratio입니다. Δn은 고정 λ₀에서의 Geometry-induced Index 변화입니다. L과 λ를 같은 길이 단위로 대입합니다. Power Input은 1로 정규화합니다. Common Width +4 nm이면 Δn=0.0008×4=0.0032, Δλ=1550×0.0032/4.2=1.180952 nm입니다. n_eff₀=2.4로 나눈 2.066667 nm는 Dispersion을 빠뜨린 결과입니다. a=t이면 각 Resonance에서 T=0이며 그 밖에서 0≤T≤1입니다.",
+  "notebook": "Common Width Preset과 Local Mismatch Preset을 번갈아 적용하세요. m=100의 A/B Marker와 Through Spectrum을 함께 읽으세요. Width, Thickness, Etch 각각의 부호를 바꾸며 Shift 방향을 예측하고 Common/Local 결과를 구분하세요. 이 Ring Model을 실제 측정 데이터와 비교하려면 어떤 Geometry와 Spectral Parameter를 Fit하거나 다시 계산해야 하나요?"
+}

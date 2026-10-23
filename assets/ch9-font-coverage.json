@@ -1,0 +1,16 @@
+{
+  "base": "pretendard-ch3.b64",
+  "extra": "noto-kr-ch9-extra.b64",
+  "hangulRequired": 336,
+  "addedCodepoints": [
+    44732,
+    44749,
+    45916,
+    46310,
+    47553,
+    48268,
+    49483,
+    50567
+  ],
+  "missingHangul": 0
+}

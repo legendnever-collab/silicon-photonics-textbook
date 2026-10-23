@@ -1,0 +1,67 @@
+{
+  "id": "9.3",
+  "short": "Corner Analysis",
+  "title": "Corners Bound Scenarios, Not Probabilities",
+  "time": "18–25분",
+  "lead": "선언한 Parameter Box의 조합을 검사하고 Nominal 결과와 비교합니다. Corner Count를 제조 확률이나 Yield로 해석하지 않습니다.",
+  "question": "8개 Corner 중 7개가 조건을 만족하면 Yield가 87.5%일까요?",
+  "prediction": "어떤 변화가 나타날까요?",
+  "reflection": "Corner 검사를 확률적 Yield 예측으로 확장하려면 어떤 자료와 가정이 추가되어야 하나요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "fabrication",
+      "html": "<p>Nominal에서만 잘 동작하는 소자는 Parameter가 조금 달라질 때 목표 응답을 벗어날 수 있습니다. Corner Analysis는 검사할 극단 조합을 명시해 이 질문을 다루는 출발점입니다. 확률 Model이 없는 Corner Table에 확률을 덧붙이지 않는 것도 설계 판단의 일부입니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "fabrication",
+      "html": "<p>여기서는 Width ±10 nm, Thickness ±4 nm, Etch ±5 nm의 교육용 Parameter Box를 정합니다. 세 독립 좌표의 두 끝값을 조합하면 2³=8 Corner가 됩니다. Nominal 한 행을 더해 Table에는 9개 Scenario를 표시합니다. Box 크기는 Foundry Process Specification이 아닙니다.</p><p>Ring의 Δn은 Δw, Δt, Δe의 Linear Combination입니다. 이 Model에서 선택한 Mode Order의 Resonance Shift도 Linear이므로 각 변수에 대해 Monotonic하며 Box 내 최대/최소가 Corner에서 나옵니다. Etch Coefficient는 음수이므로 “모두 +”가 최대 Shift인 것은 아닙니다.</p><p>실제 Device Response가 Nonlinear이거나 내부 Optimum을 가지면 Corner만으로 내부 극값을 보장할 수 없습니다. Parameter Correlation이 있으면 직육면체의 어떤 조합은 실제 Process에서 드물거나 불가능할 수도 있습니다. 확률과 Correlation, 측정 근거가 없으므로 이 Table에는 Yield를 표시하지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "fabrication",
+      "html": "<div class=\"equation\">Δn_ring = 0.0008·Δw + 0.002·Δt − 0.0005·Δe</div><p>Δw, Δt, Δe는 nm이고 Coefficient 단위는 nm⁻¹이므로 Δn은 무차원입니다. Near-nominal Sensitivity를 선언한 Teaching Model이며 이 Box에서 정확한 선형식으로 취급합니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>최대 Δn은 Δw=+10, Δt=+4, Δe=−5 nm에서 0.008+0.008+0.0025=0.0185입니다. 같은 Mode Order의 Δλ=1550×0.0185/4.2=+6.827381 nm입니다. 반대 Corner는 −6.827381 nm입니다. Etch의 부호를 바꾸면 최대 Corner를 놓칩니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "가정을 구별합니다",
+      "scene": "fabrication",
+      "html": "<p>이 Linear Model에서 최대 Ring Red Shift를 만드는 Corner는 무엇인가요?</p><p>선택 전 자신의 근거를 적고 Feedback에서 가정·부호·단위를 확인하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 관찰합니다",
+      "scene": "fabrication",
+      "html": "<p>Corner Table에서 가장 큰 Ring Shift를 찾고 그 행의 Width/Thickness/Etch 부호를 설명하세요. 현재 Slider Scenario는 별도 표시됩니다. Slider를 바꾸어도 선언한 Corner Box는 바뀌지 않으므로 두 종류의 결과를 혼동하지 마세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "fabrication",
+      "html": "<p>Corner는 Parameter 조합이고 Probability Sample이 아닙니다. 선언한 Model의 Monotonicity와 Box를 명시할 때 검사 결과의 의미가 분명해집니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "선언한 Linear Box의 최대/최소는 Corner에서 찾을 수 있음",
+    "Corner 통과 비율은 곧 제조 Yield임",
+    "모두 +인 Corner가 항상 최대 Shift임"
+  ],
+  "predictionFeedback": "Linear Response라는 조건에서는 Corner가 Box의 극값을 포함합니다. 이 조건을 실제 모든 Device와 성능 지표에 일반화하지 마세요.",
+  "sources": [
+    "F0",
+    "F1",
+    "F2",
+    "F3"
+  ]
+}

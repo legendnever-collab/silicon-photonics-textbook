@@ -1,0 +1,24 @@
+{
+  "question": "Edge Bias +2 nm와 Rounding Radius +20 nm 중 이 모델의 Index를 바꾸는 것은 무엇인가요?",
+  "choices": [
+    {
+      "text": "Edge Bias는 Δw=+4 nm로 Index에 반영됩니다. Rounding은 도형만 바꿉니다.",
+      "feedback": "맞습니다. 구현된 Model의 연결 범위를 읽은 답입니다. 실제 Rounding의 Optical 영향은 별도 검증이 필요합니다.",
+      "correct": true
+    },
+    {
+      "text": "두 값 모두 Ring Circumference를 직접 늘립니다.",
+      "feedback": "그림의 Corner Radius와 Ring Centerline Radius는 다릅니다. 이 모델의 Ring Length는 고정입니다.",
+      "correct": false
+    },
+    {
+      "text": "Edge Bias +2 nm는 Width +2 nm입니다.",
+      "feedback": "이 정의에서는 양쪽 Edge가 각각 2 nm 이동합니다. 두 Edge 사이 Width 변화는 +4 nm입니다.",
+      "correct": false
+    }
+  ],
+  "why": "Mask에서 직각인 Corner가 제작 후에도 정확한 직각이라고 단정할 수 없습니다. Drawing과 Process Contour의 차이를 이해해야 “같은 Layout Parameter”라는 말이 실제 치수에서도 성립하는지 판단할 수 있습니다. Lithography에서는 Mask Pattern, Imaging, Resist와 후속 Etch의 효과를 거쳐 최종 경계가 형성됩니다. 이 Lesson의 Overlay는 Nominal Drawing을 점선으로, Fabricated Boundary를 실선으로 보여줍니다. 실제 Lithography Simulation이나 SEM 이미지가 아니라 signed Edge Bias를 설명하는 독자 도형입니다.",
+  "simple": "Drawing Boundary와 Process Contour를 겹쳐 읽고, Edge Bias와 Corner Rounding이 서로 다른 Geometry 변화임을 구분합니다. Contour를 Drawing과 같은 것으로 읽지 않았고, Symmetric Edge Bias와 Corner Rounding을 분리했습니다. 도형이 보이는 것과 Optical Effect가 계산되는 것은 별개의 구현 범위입니다.",
+  "math": "w_fab = w₀ + Δw_common + 2b + g·x + ε_device. b는 각 Edge의 바깥 방향 Offset (nm), g는 normalized x 한 단위당 Width 변화 (nm), x는 무차원 위치입니다. A/B는 x=∓d/2입니다. ε_A=−m/2, ε_B=+m/2이며 m은 signed B−A Local Width Offset (nm)입니다. Common Width=0, Gradient=0, Local Mismatch=0에서 Edge Bias +2 nm이면 Width=504 nm입니다. Edge Bias −2 nm이면 Width=496 nm입니다. 두 경우 Centerline은 같으며 Rounding 20→40 nm만 바꾸어도 Width Readout과 Spectrum은 그대로입니다.",
+  "notebook": "Edge Bias를 −2, 0, +2 nm로 차례로 바꾸며 Δw=2b를 확인하세요. Width를 고정한 채 Corner Radius를 0→40 nm로 바꾸고 Corner 도형만 바뀌는지 확인하세요. Spectrum이 같다는 결과는 실제 Rounding의 영향이 없다는 주장이 아니라 아직 그 효과를 계산하지 않았다는 뜻입니다. Mask, Process Contour, Optical Model을 연결할 때 추가로 필요한 데이터는 무엇인가요?"
+}

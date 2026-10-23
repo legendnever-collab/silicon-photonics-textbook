@@ -1,0 +1,9 @@
+# Chapter 9 validation
+
+Local Node181 tests PASS (159retained +22new), including independent geometry signs, edge factor2, group-index resonance condition, fixed-mode order, all-pass boundedness, common cancellation, gradient/separation/local algebra, grating product cross term and half-power width, geometry-only rounding, fixed corners, covariance degenerate cases, sanitation, all seven A–F lessons, ten finite SVG figure renderers, source/HTML manifests and byte preservation.
+
+Independent Python:48 states,1204 comparisons PASS; maximum absolute error6.821210263296962e−13. Solves dispersive phase roots and grating wavevector matching by bisection, compares independent complex field ratio for all-pass power, sigma-form Gaussian for grating power, and exact8-state covariance ensemble. See CH9_INDEPENDENT_VALIDATION.json. These are numerical consistency checks, not actual device/model validation.
+
+Font cmap audit:336required Chapter9 Hangul;8new glyphs added without changing prior assets;0missing. New fallback uses Noto Sans KR5.3.1 under retained OFL. Build has57 exact lessons and tutors, source hash and release SHA256; no runtime network dependency. Existing releases/source/assertions remain untouched except package/README/top-level mapping.
+
+Browser matrix and archived regressions are pending actual CI execution at the D1 checkpoint. No browser PASS is claimed here until verified. Test plan:1440×900/1366×768/390×844/320×740 ×Light/Dark; all57 lessons, tutor/prediction, geometry controls, presets, spectra, corner table, stable node/focus/viewport, numeric modal, zoom, actual report/backup downloads and restore, malformed/future rejection, v8/v7/v6 read-only migration, zero runtime/console/network/SVG bounds/overflow. Retain historical Chapter1–8 browser tests without altering assertions.
