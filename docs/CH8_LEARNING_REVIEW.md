@@ -11,4 +11,6 @@ On mobile, no dragging is required. Properties actions remain in a sticky footer
 
 Limits: SIPT-DEMO-1 only, port/endpoint graph (not polygon extraction), route width and parallel coupon spacing only, fixed n_eff, no optical-loss/EO/foundry/GDS sign-off. Chapter7 and all previous release HTML retained. PR8 Draft; explicit user approval needed before main merge.
 
-Technical runtime validation complete:159Node/320independent/67new+244archived Browser PASS; [CI](https://github.com/legendnever-collab/silicon-photonics-textbook/actions/runs/39938850918). User study review remains separate. SHA256 `f2c1440f499612f73cfa4403bc867760357055f7ba28226acfa41fe2dbfb0362`.
+Technical runtime validation complete:159Node/320independent/67new+244archived Browser PASS; [CI](https://github.com/legendnever-collab/silicon-photonics-textbook/actions/runs/39940141993). User study review remains separate. SHA256 `df4ddf94cb13a9536c3df5a2dcaf71f73fb6cab6ce45af17df3915fc467618bc`.
+
+Netlist 상세를 열고 Instance/Port/Route 버튼을 선택하면 Schematic/Layout과 선택이 연동됩니다. Error Lab Marker를 펼쳐 Rule ID,Actual/Minimum,World Position과 수정 이유를 확인하세요.

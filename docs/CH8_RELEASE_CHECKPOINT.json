@@ -4,11 +4,11 @@
   "branch": "feature/ch8-tools-pdk-layout",
   "draftPr": "https://github.com/legendnever-collab/silicon-photonics-textbook/pull/8",
   "baselineMain": "dfca9db6be3140c0c3ba5fbd9c717e289c81f30c",
-  "validatedRuntimeHead": "782d755604f3082815a6c9896dcdf423238983d2",
-  "validatedRuntimeCi": "https://github.com/legendnever-collab/silicon-photonics-textbook/actions/runs/39938850918",
+  "validatedRuntimeHead": "b2209ea30cf795de41ce6568d4707479927a6839",
+  "validatedRuntimeCi": "https://github.com/legendnever-collab/silicon-photonics-textbook/actions/runs/39940141993",
   "html": "dist/silicon-photonics-textbook-v0.8.0.html",
-  "htmlSha256": "f2c1440f499612f73cfa4403bc867760357055f7ba28226acfa41fe2dbfb0362",
-  "sourceHash": "4ef9823c53190e67559063dd64e3d07a9cc5673e8a1f204e7432282145422780",
+  "htmlSha256": "df4ddf94cb13a9536c3df5a2dcaf71f73fb6cab6ce45af17df3915fc467618bc",
+  "sourceHash": "8ba317d243bb2feaee7ffb9aeaf7554cedc3cf0f77d5faf863a4ac21d48b4ff9",
   "nodeTests": 159,
   "independentComparisons": 320,
   "retainedIndependentComparisons": 110,
@@ -22,5 +22,5 @@
   "review": "User learning review pending",
   "mergeAllowed": false,
   "nextChapterStarted": false,
-  "finalHead": "Resolve current PR8 head; release seal is documentation/checkpoint only"
+  "finalHead": "Resolve current PR8 head; final seal changes documentation/checkpoint and historical migration fixtures only"
 }
