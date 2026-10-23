@@ -1,0 +1,24 @@
+{
+  "question": "두 Port가 각각 45° Linear Polarization Projection을 겪으면 합성 Polarization Efficiency는 얼마인가요?",
+  "choices": [
+    {
+      "text": "0.25입니다. 각 Port의 cos²45°=0.5를 곱합니다.",
+      "feedback": "맞습니다. 이 모델은 두 Port가 동일한 Projection을 겪는다는 가정을 사용합니다.",
+      "correct": true
+    },
+    {
+      "text": "0.5입니다. 각도는 한 번만 존재합니다.",
+      "feedback": "이 Fixture에는 두 번의 동일한 Projection을 선언했습니다. 실제 시스템에서도 같은지 먼저 확인해야 합니다.",
+      "correct": false
+    },
+    {
+      "text": "Registration만 하면 Polarization도 자동으로 맞습니다.",
+      "feedback": "기계 좌표 보정은 Polarization을 결정하지 않습니다. Optical Alignment와 별도로 조절해야 합니다.",
+      "correct": false
+    }
+  ],
+  "why": "기계 좌표를 찾는 것과 Optical Mode를 맞추는 것은 같은 문제의 두 단계입니다. Chip Marker를 기준으로 이동한 후에도 Fiber Mode와 Coupler의 실제 Optical Center 사이에 차이가 남을 수 있습니다. Chapter 3의 정규화된 Gaussian Overlap과 Jones Projection을 재사용합니다. Field Radius w는 Intensity가 중심의 1/e²가 되는 Radius이며 Diameter가 아닙니다. w₁=w₂=2 µm, 동일한 Waist Plane, 약한 반사와 Scalar/Paraxial 조건을 가정합니다. Axial Defocus, Vector Mode, Lens Aberration이나 실제 Coupler Alignment Map은 계산하지 않습니다.",
+  "simple": "Position, Tilt, Polarization은 Coupling의 서로 다른 자유도입니다. Fiducial Registration 이후에도 Optical Fine Alignment가 필요할 수 있습니다. Fiducial은 기계 좌표를 정하고 Optical Search는 Mode의 최대 Overlap을 찾습니다. 각도와 Polarization도 같은 변수로 합치지 마세요.",
+  "math": "η_offset = exp[−(Δx²+Δy²)/w²]; η_pol = cos²θ. 같은 Gaussian Radius에서 lateral offset만 있는 식입니다. Δx, Δy, w는 µm이며 θ는 Polarization Angle입니다. 1 dB Offset Tolerance는 한 Port 기준이며 Pair의 1 dB 조건과 다릅니다. Fine Align 위치에서 x를 1 µm 더 움직이면 w=2 µm에서 η_offset=e^(−0.25)=0.778801, 한 Port Loss=1.085736 dB입니다. 두 Port가 같은 Offset을 가지면 추가 Pair Loss는 2.171472 dB입니다.",
+  "notebook": "Alignment Map에서 Fine Align 전후의 Marker와 Power를 비교하세요. 이어 dx를 1 µm 더 움직이거나 Polarization을 45°로 바꾸고 같은 Loss가 두 번 적용되는지 확인하세요. Registration Error, Optical Center Offset, Polarization Error를 서로 다른 원인으로 설명하세요."
+}

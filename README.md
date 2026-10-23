@@ -100,6 +100,13 @@ Build: `npm run build`; Node/content/preservation: `npm test`; independent refer
 
 ## Chapter 9 Fabrication — review candidate
 
-`npm run build` builds `dist/silicon-photonics-textbook-v0.9.0.html`:57lessons across Chapters1–9. Chapter8 is an unmerged dependency; Chapter9 PR targets its feature branch until separately approved. Main remains Chapter7. Seven A–F lessons,10original SVG figures, shared geometry/contour/corners/spatial/ring/grating lab, numeric Properties, JSON study report and v9 backup migration. SIPT-FAB-1 is independent teaching assumptions, not measured/foundry distributions or yield. See `notebook/CH9_MODEL_CONTRACT.md`, `docs/CH9_TEXTBOOK_SOURCE_MAPPING.md`, `docs/CH9_VALIDATION.md`, `docs/CH9_QA_REPORT.md` and `docs/CH9_LEARNING_REVIEW.md`.
+`npm run build` builds `dist/silicon-photonics-textbook-v0.9.0.html`:57lessons across Chapters1–9. Chapter8/9 were merged by user approval; the Chapter9 checkpoint preserves its original review history. Seven A–F lessons,10original SVG figures, shared geometry/contour/corners/spatial/ring/grating lab, numeric Properties, JSON study report and v9 backup migration. SIPT-FAB-1 is independent teaching assumptions, not measured/foundry distributions or yield. See `notebook/CH9_MODEL_CONTRACT.md`, `docs/CH9_TEXTBOOK_SOURCE_MAPPING.md`, `docs/CH9_VALIDATION.md`, `docs/CH9_QA_REPORT.md` and `docs/CH9_LEARNING_REVIEW.md`.
 
 Checks: `npm test`, `npm run test:ch9:independent`, `python3 scripts/audit-ch9-font.py`, `npm run test:ch9:browser`. Prior releases/build scripts and archived assertions preserved. Verified local Node182, independent Python1204comparisons and Browser378(67new+311archived) PASS; runtime/console/network/SVG bounds errors0. CI and exact artifact hash are recorded in `docs/CH9_RELEASE_CHECKPOINT.json` and `docs/CH9_QA_REPORT.md`. No automatic merge or next chapter start.
+
+
+## Chapter 10 Testing & Packaging — review candidate
+
+`npm run build` builds `dist/silicon-photonics-textbook-v0.10.0.html`,65lessons acrossChapters1–10. Verified baseline main398428a includes mergedCh8/9. New8A–F lessons/12original figures link interface/alignment, electricalRL, station/registration, synthetic sweep/reference/floor,DFTbudget and packaging review. CH3Gaussian/Jones andCH9ring/grating reused. Frozen snapshots survive edits/presets, numeric Properties/JSON Report and v10backup/read-only migration included.
+
+SIPT-TEST-1 is independent synthetic assumptions; no hardware/actual measured data/real calibration/collision/reliability qualification. See `notebook/CH10_MODEL_CONTRACT.md`, `docs/CH10_TEXTBOOK_SOURCE_MAPPING.md`, `docs/CH10_VALIDATION.md`, `docs/CH10_QA_REPORT.md`, `docs/CH10_LEARNING_REVIEW.md`. Checks: `npm test`, `npm run test:ch10:independent`, `python3 scripts/audit-ch10-font.py`, `npm run test:ch10:browser`. User learning review and explicit approval before merge; no Chapter11 auto-start.

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "states": 36,
+  "registrationPoses": 12,
+  "electricalCases": 48,
+  "comparisons": 1416,
+  "maxAbsoluteError": 5.115907697472721e-13,
+  "method": "Independent complex all-pass transfer and optical budget in explicit cm; Gaussian/Jones/envelope chain; exact known-floor sensor; NumPy SVD rigid registration; complex voltage-divider RL power waves",
+  "scope": "Numerical consistency of declared synthetic fixture, not hardware or measurement accuracy"
+}

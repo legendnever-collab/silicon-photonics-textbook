@@ -1,0 +1,67 @@
+{
+  "id": "10.5",
+  "short": "Chip Registration",
+  "title": "Separate Chip Coordinates From Stage Coordinates",
+  "time": "18–25분",
+  "lead": "두 Fiducial로 Translation과 Rotation을 추정하고 Design Coordinate를 Stage Coordinate로 옮깁니다. Registration 이후의 Optical Offset은 별도입니다.",
+  "question": "Design에서 (1000,500) µm인 지점을 Stage에서도 같은 숫자로 이동하면 될까요?",
+  "prediction": "현재 조건에서 무엇이 달라질까요?",
+  "reflection": "이 두 Fiducial 예제의 Error=0을 실제 장비 정밀도로 해석할 수 없는 이유는 무엇인가요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "testing",
+      "html": "<p>Chip을 Stage에 올린 뒤에는 원점과 각도가 달라질 수 있습니다. Layout의 좌표를 그대로 이동 명령으로 쓰면 Fine Alignment의 탐색 영역 밖으로 벗어날 수도 있습니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "testing",
+      "html": "<p>World Coordinate는 x/y 모두 µm인 평면 좌표입니다. Design Fiducial은 (0,0), (1000,0) µm이고 Synthetic Stage 위치는 선언한 Translation/Rotation으로 생성합니다. 서로 다른 두 점으로 Proper Rigid Transform을 Fit합니다. Scale, Mirror, Lens Distortion과 측정 Noise는 포함하지 않습니다.</p><p>두 Fiducial의 Baseline Length가 같지 않거나 점들이 겹치면 이 Rigid Model을 사용할 수 없습니다. 실제 장비에서는 여러 Marker와 Residual을 사용해 Calibration의 품질과 적용 범위를 검토해야 합니다. 이 예제의 Error=0은 Noise-free Synthetic Point에서의 식 일치이며 실제 Registration Accuracy가 아닙니다.</p><p>Registration 전 Planned Stage Point는 Design 숫자 그대로입니다. Registration 후에는 Fit으로 변환한 점으로 이동한다고 가정합니다. 그 Stage Error를 Chip Frame으로 다시 회전시켜 Gaussian Lateral Offset에 더합니다. 따라서 Registration 상태가 Alignment와 Reference Power에 실제로 연결됩니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "testing",
+      "html": "<div class=\"equation\">r_stage = R(θ) r_design + t</div><p>θ는 degree Control을 rad로 바꿔 계산합니다. Translation t와 Position은 µm입니다. 두 점의 벡터 각도 차이가 θ이고 첫 Fiducial로 Translation을 구합니다. SVG에서는 y를 아래 방향으로 뒤집어 표시하지만 World의 y는 위 방향입니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>Rotation=0°, tx=25 µm, ty=−12 µm이면 Design Target (1000,500)은 Stage (1025,488)입니다. 미등록 상태에서 (1000,500)으로 이동하면 Error 크기는 √(25²+12²)=27.730849 µm입니다. Register 후 같은 Synthetic Point에 대한 Error는 0입니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "조건을 구별합니다",
+      "scene": "testing",
+      "html": "<p>Rigid Registration만으로 계산할 수 없는 것은 무엇인가요?</p><p>선택의 근거와 Model의 가정을 먼저 확인하고 Feedback과 비교하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 확인합니다",
+      "scene": "testing",
+      "html": "<p>Rotation을 0으로 두고 Translation 예제를 재현하세요. 이어 Rotation을 +1°로 바꾸고 두 Fiducial과 Target을 추적하세요. Register 전후 Reference Gate를 확인한 뒤 Optical Fine Align이 여전히 필요한 이유를 설명하세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "testing",
+      "html": "<p>좌표 변환과 Optical Fine Alignment를 분리하면 서로 다른 원인의 오차를 추적할 수 있습니다. 이 실습의 기계 좌표는 실제 장비로 전송되지 않습니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "등록된 Stage Target과 Design Coordinate의 숫자는 다를 수 있음",
+    "Stage Coordinate는 항상 Layout Coordinate와 같음",
+    "두 점의 계산 일치가 실제 장비 Accuracy를 보장함"
+  ],
+  "predictionFeedback": "좌표 변환과 Optical Fine Alignment를 분리하면 서로 다른 원인의 오차를 추적할 수 있습니다. 이 실습의 기계 좌표는 실제 장비로 전송되지 않습니다.",
+  "sources": [
+    "Q0",
+    "Q1",
+    "Q2",
+    "Q3"
+  ]
+}

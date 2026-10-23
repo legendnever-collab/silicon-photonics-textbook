@@ -1,0 +1,7 @@
+# Chapter 10 validation
+
+D1 local Node208PASS(182retained+26new); independent Python1416comparisons PASS across36optical configurations,12registration poses and48electrical cases; max absolute error5.115907697472721e−13. NumPy SVD provides an independent rigid-registration fit; complex all-pass field ratio, explicit cm units, Gaussian/polarization chain, known-floor qualification and voltage-divider RL power waves provide independent references. Numerical consistency of declared assumptions, not actual measurement/hardware accuracy.
+
+Font audit355required Hangul/0missing;6new Noto Sans KR glyphs added without changing old font assets. Exact65lesson/tutor source parity, source/HTML hashes and baseline preservation are unit checked. Prior Chapter1–9 content/models/releases/assertions remain byte-identical; README/top-level mapping/package are allowed metadata updates.
+
+Browser actual matrix is in progress atD1, not yet claimed complete. Planned1440×900/1366×768/390×844/320×740 ×Light/Dark:65lesson navigation;8lessons/12figures; alignment, rigid registration,RL energy, limited capture gates, frozen/stale preservation, path correction/floor/saturation/sampling, stable input/focus/viewport, actual mobile zoom pan, numeric Properties, actual JSON report and Backup downloads/restores, invalid/future rejection, read-only v9/v8/v7migration. Retain all378archived Chapter1–9 browser scenarios without assertion changes.

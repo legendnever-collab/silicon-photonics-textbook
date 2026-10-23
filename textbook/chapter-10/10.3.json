@@ -1,0 +1,67 @@
+{
+  "id": "10.3",
+  "short": "Electrical Interfaces",
+  "title": "Pads, Probes, Wire Bonds and Flip-chip",
+  "time": "18–25분",
+  "lead": "Electrical Interface는 DC 접촉뿐 아니라 RF 경로와 Return Path를 정의합니다. 간단한 Series R–L Model로 Parasitic의 의미를 읽습니다.",
+  "question": "짧은 연결선이라도 RF에서는 이상적인 도선으로 취급할 수 있을까요?",
+  "prediction": "현재 조건에서 무엇이 달라질까요?",
+  "reflection": "실제 Wire Bond 또는 Flip-chip의 RF 성능을 검증하려면 이 R–L Model에 어떤 구조와 자료가 더 필요한가요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "testing",
+      "html": "<p>Photonics Chip의 Modulator와 Detector, Heater를 사용하려면 Electrical 연결이 필요합니다. 광학 성능만 좋은 Die라도 Pad 접근이나 전기 경로가 목적에 맞지 않으면 시스템으로 동작시키기 어렵습니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "testing",
+      "html": "<p>교재의 Bond Pads→Probing→Wire Bonding→Flip-chip Bonding 순서로 설명합니다. Pad는 접촉할 영역이고 Probe는 검사 중의 임시 접촉입니다. Wire Bond와 Flip-chip은 조립 방식입니다. Optical Fiber 접근, Electrical Probe와 Return Path, 열 경로를 함께 고려해야 합니다. 여기의 도형은 실제 Pad Pitch나 Probe Keep-out Rule을 검증하지 않습니다.</p><p>Notebook은 두 50 Ω Reference Port 사이의 Series Impedance Z=R+jωL만 계산합니다. Wire와 Bump의 실제 Geometry에서 L을 추출하지 않으며, 숫자는 사용자가 넣는 교육용 Parameter입니다. Pad Capacitance, Transmission-line Delay, Crosstalk, Via/Return Path와 EO Response는 포함하지 않습니다. 따라서 L을 바꾼 결과를 실제 Package Bandwidth로 부를 수 없습니다.</p><p>Through Power와 Reflected Power, Resistor Dissipation의 합을 확인합니다. Lossless Inductor에서 Through가 줄어드는 것은 전부 흡수되기 때문이 아닙니다. Return Loss와 Insertion Loss도 서로 다른 지표입니다. Contact Flag는 접촉 여부를 설명하는 상태 표시이며 Optical Passive Ring의 Sweep를 막지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "testing",
+      "html": "<div class=\"equation\">S₂₁ = 2Z₀/(2Z₀+R+jωL); S₁₁ = (R+jωL)/(2Z₀+R+jωL)</div><p>Z₀=50 Ω, f는 GHz, L은 nH입니다. 이 조합에서 ωL=2π f_GHz L_nH Ω입니다. 같은 Real Reference Impedance의 Power-normalized S-parameter입니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>f=10 GHz, L=1 nH, R=0이면 X_L=62.831853 Ω, |S₂₁|²≈0.716957, |S₁₁|²≈0.283043이며 합은 1입니다. 반사가 포함되므로 Through 감소를 모두 열 손실로 읽지 않습니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "조건을 구별합니다",
+      "scene": "testing",
+      "html": "<p>R=0인 Series Inductor에서 Through Power가 줄어들면 나머지 Power는 어디에 있나요?</p><p>선택의 근거와 Model의 가정을 먼저 확인하고 Feedback과 비교하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 확인합니다",
+      "scene": "testing",
+      "html": "<p>Frequency와 Inductance를 바꾸며 Through/Reflection을 비교하고 R=0과 R>0에서 Dissipation을 확인하세요. Contact Flag를 바꾸고 Optical Model과 독립인 상태임을 설명하세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "testing",
+      "html": "<p>반사와 소모를 구별해야 Interface의 Power와 RF Response를 해석할 수 있습니다. 실제 Packaging 수치는 별도 모델과 측정이 필요합니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "R=0이면 Through와 Reflection의 합은 1",
+    "Through 감소는 항상 같은 크기의 열 손실임",
+    "Electrical Contact가 없으면 Passive Ring의 식도 사라짐"
+  ],
+  "predictionFeedback": "반사와 소모를 구별해야 Interface의 Power와 RF Response를 해석할 수 있습니다. 실제 Packaging 수치는 별도 모델과 측정이 필요합니다.",
+  "sources": [
+    "Q0",
+    "Q1",
+    "Q2",
+    "Q3"
+  ]
+}

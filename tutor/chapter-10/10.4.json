@@ -1,0 +1,24 @@
+{
+  "question": "Capture 이후 Alignment를 변경하면 기존 Data는 어떻게 처리해야 하나요?",
+  "choices": [
+    {
+      "text": "기존 조건의 Snapshot으로 보존하고 새 조건과 다르면 Stale로 표시합니다.",
+      "feedback": "맞습니다. 설정 변경이 과거 Data의 조건을 자동으로 바꾸면 재현할 수 없습니다.",
+      "correct": true
+    },
+    {
+      "text": "기존 Data도 새 설정으로 조용히 다시 계산한 측정값이라고 부릅니다.",
+      "feedback": "Live Preview와 Acquired Snapshot을 구별해야 합니다. 이 앱도 실제 측정 데이터라고 부르지 않습니다.",
+      "correct": false
+    },
+    {
+      "text": "Passive Ring 측정에는 Electrical Probe가 항상 필수입니다.",
+      "feedback": "이 실습의 Passive Optical DUT에는 Electrical Contact를 요구하지 않습니다. 필요한 Interface는 DUT와 Test 목적에 따라 다릅니다.",
+      "correct": false
+    }
+  ],
+  "why": "자동 측정은 반복 동작을 빠르게 수행할 수 있지만 잘못된 Coordinate나 Reference를 반복할 수도 있습니다. 무엇을 고정하고 무엇을 관측하는지 드러나는 절차가 필요합니다. 교재 Parts 순서로 Sample Stage, Fiber Array Probe, Electrical Probes, Microscope를 살펴보고 Software, Operation, Optical Test Equipment를 연결합니다. Tunable Laser는 Wavelength를 설정하고 Power Meter는 해당 Reference Plane의 Power를 읽습니다. Microscope의 위치 정보와 광학 Power는 서로 다른 관측입니다.",
+  "simple": "Sample Stage, Fiber Probe, Electrical Probe, Microscope와 Optical Instruments가 각자 다른 역할을 합니다. Calibration 상태를 확인하고 Capture합니다. Workflow Gate와 Frozen Snapshot은 기록을 해석하고 재현하기 위한 장치입니다. 실제 Hardware 자동화나 장비 운용 검증과는 구분하세요.",
+  "math": "Usable reference = access open ∧ registered ∧ power within declared range. 이것은 이 교육용 Workflow의 제한된 Gate입니다. 실제 Wafer Probe Station의 Calibration, Interlock, Collision Avoidance와 장비 운용 절차 전체를 대신하지 않습니다. Misregistered Preset에서는 Acquire가 보류됩니다. Register를 적용한 뒤 Fine Align을 실행하면 Reference가 범위에 들어옵니다. Capture 후 dx를 바꾸면 저장된 Sweep는 유지되고 Stale가 됩니다. 다시 Acquire해야 새 조건의 Snapshot이 생깁니다.",
+  "notebook": "Misregistered, Low Reference, Blocked Access Preset을 각각 적용해 Gate가 보류되는 이유를 확인하세요. 정상 State에서 Acquire한 뒤 Parameter를 바꾸고 Recorded State와 Preview를 비교하세요. 자동 측정 기록에 Position, Polarization, Reference와 Instrument Range를 함께 남겨야 하는 이유를 설명하세요."
+}

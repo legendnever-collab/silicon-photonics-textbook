@@ -84,3 +84,8 @@ Original Chapter10 pp349–366: [mapping](docs/CH8_TEXTBOOK_SOURCE_MAPPING.md). 
 ## App Chapter9 — Original Chapter11 Fabrication
 
 Original11.1(non-uniformity368),11.1.1(contours369),11.1.2(corner370),11.1.3(on-chip experimental results372;ring373;grating377),11.2(problems379) map to app9.1–9.7. Official contents verified; full chapter and measurements not accessed/reproduced. Independent explanations, worked examples, SVG and declared teaching models. Detailed coverage/limits: `docs/CH9_TEXTBOOK_SOURCE_MAPPING.md`. Next appChapter10 maps originalChapter12 Testing and packaging381. Chapter9 is a separately reviewed feature depending on unmerged Chapter8.
+
+
+## App Chapter10 — Original Chapter12 Testing and packaging
+
+Original12.1optical/electrical interfaces381–388,12.2station/parts/software/registration/testing/equipment389–397,12.3DFT/power/layout/review398–404 map to8app lessons10.1–10.8. All optical interface types and pads/probing/wire bond/flip-chip are covered conceptually; Gaussian alignment is introduced early as a prerequisite and revisited with registration. Independent synthetic examples, not original measured data or paid-text replication. Detailed mapping/deferrals: `docs/CH10_TEXTBOOK_SOURCE_MAPPING.md`; formula/units/scope: `notebook/CH10_MODEL_CONTRACT.md`. Next appChapter11 maps originalChapter13System Example406–412; no automatic development.

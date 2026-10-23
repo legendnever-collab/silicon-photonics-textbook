@@ -1,0 +1,67 @@
+{
+  "id": "10.6",
+  "short": "Measurement & Reference",
+  "title": "Normalize Only Data Within Instrument Range",
+  "time": "18–25분",
+  "lead": "Fiber-plane Spectrum에서 Reference와 Floor를 분리하고 Path Length 차이를 보정합니다. Sampling Resolution이 Ring Minimum을 놓칠 수 있음을 확인합니다.",
+  "question": "Reference로 나누기만 하면 모든 파장에서 정확한 Chip Transmission을 알 수 있나요?",
+  "prediction": "현재 조건에서 무엇이 달라질까요?",
+  "reflection": "Normalized T가 null인 지점과 T=0인 물리적 Model Truth를 왜 구분해야 하나요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "testing",
+      "html": "<p>측정한 Ring Spectrum에는 Input/Output Coupling, Reference Path와 Detector Response가 함께 들어갑니다. Range와 Reference 조건을 읽지 않으면 깊은 Dip을 장비 Floor로 착각하거나 잘못된 Transmission을 얻기 쉽습니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "testing",
+      "html": "<p>Synthetic DUT와 Reference는 같은 두 Coupler, Alignment와 Polarization을 공유한다고 가정합니다. Reference Path는 2 mm, Propagation Loss는 3 dB/cm입니다. DUT Path Length는 별도 Control입니다. Ring은 Chapter 9의 Dispersive All-pass Model을 재사용하고 m=100 Resonance Shift를 Geometry Sensitivity로 환산합니다. 실제 Data를 Fit한 것이 아닙니다.</p><p>Detector는 일정한 Additive Floor Power와 0 dBm Ceiling을 가진 이상화된 Sensor입니다. 이 예제에서는 Floor 값을 정확히 알고 빼지만 실제 Dark Correction과 Noise Uncertainty는 별도입니다. Signal이 Floor보다 6 dB 이상 크지 않거나 Saturated이면 Normalized T를 null로 보류합니다. 보류 지점을 0이나 완벽한 Extinction으로 표시하지 않습니다.</p><p>Sweep는 1546–1554 nm에서 17/161/801점으로 계산합니다. Step은 0.5/0.05/0.01 nm이며 실제 Laser Linewidth, Wavelength Error와 Settling은 포함하지 않습니다. Model Resonance는 1550+Shift이고 Sample Minimum은 Grid에서 가장 작은 Meter Power의 위치입니다. 그 위치를 Fitted Resonance나 측정 Q라고 부르지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "testing",
+      "html": "<div class=\"equation\">T_chip = [(P_DUT−P_floor)/(P_ref−P_floor)] × 10^[α(L_DUT−L_ref)/10]</div><p>이 식의 Length는 cm, α는 dB/cm입니다. UI의 Length mm를 cm로 바꿔 대입합니다. 두 경로가 같은 Coupling을 공유하고 Floor가 알려져 있으며 Sensor가 Unsaturated인 조건에서 성립합니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>L_DUT=4 mm, L_ref=2 mm이면 추가 Path Loss는 3×0.2=0.6 dB입니다. Floor를 뺀 Raw Ratio는 T×10^(−0.6/10)이므로 ×10^(+0.6/10)로 보정해야 T가 됩니다. Reference로 나눴다는 이유만으로 다른 Path Length가 사라지지 않습니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "조건을 구별합니다",
+      "scene": "testing",
+      "html": "<p>Floor Margin 아래의 Dip Sample을 어떤 값으로 내보내야 하나요?</p><p>선택의 근거와 Model의 가정을 먼저 확인하고 Feedback과 비교하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 확인합니다",
+      "scene": "testing",
+      "html": "<p>Fine Align 후 Length를 4 mm로 바꾸고 Meter Ratio와 Normalized T를 비교하세요. Resolution을 Coarse→Fine으로 바꾸며 Sample Minimum과 Model Truth의 차이를 확인하세요. Floor와 Source Power를 바꾸어 보류 지점과 Gate를 관찰하세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "testing",
+      "html": "<p>Reference Plane, Known Floor, Path Length Correction과 Sample Qualification을 함께 기록해야 계산의 의미가 분명해집니다. 실제 Noise/PDL/Wavelength Calibration은 후속 검증입니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Reference 보정에도 Path Length와 Instrument Range 조건이 필요함",
+    "Floor 아래 Sample도 Reference로 나누면 항상 정확함",
+    "Sampling Grid의 Minimum은 언제나 Fitted Resonance임"
+  ],
+  "predictionFeedback": "Reference Plane, Known Floor, Path Length Correction과 Sample Qualification을 함께 기록해야 계산의 의미가 분명해집니다. 실제 Noise/PDL/Wavelength Calibration은 후속 검증입니다.",
+  "sources": [
+    "Q0",
+    "Q1",
+    "Q2",
+    "Q3"
+  ]
+}

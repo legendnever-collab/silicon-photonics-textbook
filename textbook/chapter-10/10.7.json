@@ -1,0 +1,67 @@
+{
+  "id": "10.7",
+  "short": "Design for Test",
+  "title": "Design the Optical Power Budget and Access",
+  "time": "18–25분",
+  "lead": "Test Port와 Reference Structure, 접근 경로와 예상 Power를 Layout 단계에서 함께 검토합니다. DFT는 실제로 관측 가능한지를 설계하는 일입니다.",
+  "question": "측정할 수 없는 Layout도 Circuit Model만 맞으면 검토가 끝난 걸까요?",
+  "prediction": "현재 조건에서 무엇이 달라질까요?",
+  "reflection": "실제 Layout의 DFT Checklist에 Reference Plane, Calibration과 Access 관련 항목을 각각 하나씩 추가해 보세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "testing",
+      "html": "<p>Chip을 만든 뒤 Test Access와 Reference를 추가하기는 어렵습니다. 교재의 Design for Test를 따라 필요한 입력과 관측, Optical Power Budget과 Layout 제약을 제작 전에 확인합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "testing",
+      "html": "<p>DFT에서는 DUT의 응답 외에 Reference Path, 반복 측정 가능한 Port, 필요하면 Monitor와 Test Structure를 고려합니다. 본 실습의 Reference는 DUT와 같은 Coupler를 공유한다는 강한 가정을 사용합니다. 실제로 다른 위치의 Coupler나 다른 Polarization을 사용하면 보정이 정확히 소거되지 않을 수 있습니다.</p><p>Power Budget은 Source→Input Interface→Propagation→Ring→Output Interface→Meter의 순서입니다. 각 Stage의 Power Ratio와 손실을 한 번씩 적용합니다. dBm은 절대 Power, dB는 Ratio이며 Propagation의 mm/cm 변환을 확인합니다. 작은 Mode Mismatch도 Input/Output 두 번 들어갈 수 있습니다.</p><p>Layout에서는 Fiber/Probe 접근, Facet/Grating 위치, Reference 배치, Marker, Port Naming과 장비의 이동 범위를 검토합니다. Access Toggle은 개념상 열린/가려진 경로를 나타내며 실제3D Collision/Probe Keep-out 검사나 Foundry Rule이 아닙니다. PASS 표시가 실제 조립 가능성이나 제조 승인을 뜻하지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "testing",
+      "html": "<div class=\"equation\">P_out,dBm = P_in,dBm − L_in − αL − L_ring − L_out</div><p>모든 L은 Power Loss dB입니다. Ring T가 0이면 이상적 Loss는 발산하지만 Detector는 Floor를 읽습니다. 앱은 null과 Floor 제한을 구별하며 무한한 숫자를 JSON에 넣지 않습니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>Fine Align, Grating Peak λ=1550 nm에서 두 Coupler Loss 4.436975 dB와 Reference Propagation 0.6 dB를 더하면 Reference 총 Loss는 5.036975 dB입니다. Pin=0 dBm이면 Floor를 더하기 전 Reference는 −5.036975 dBm입니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "조건을 구별합니다",
+      "scene": "testing",
+      "html": "<p>Optical Budget에서 dBm과 dB의 관계로 올바른 것은 무엇인가요?</p><p>선택의 근거와 Model의 가정을 먼저 확인하고 Feedback과 비교하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 확인합니다",
+      "scene": "testing",
+      "html": "<p>Budget View에서 각 Stage를 따라가며 양쪽 Interface와 Propagation을 한 번씩 포함했는지 확인하세요. Low Reference와 Blocked Access Preset을 비교하고 서로 다른 종류의 검토가 보류되는 이유를 적으세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "testing",
+      "html": "<p>관측할 수 있는 Interface와 해석할 수 있는 Reference를 함께 설계했습니다. 이 앱의 간단한 Gate와 Budget은 실제 DFT Sign-off를 대신하지 않습니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Budget과 Test Access는 서로 다른 검토 항목임",
+    "Layout은 DFT와 무관하고 측정 후 정하면 됨",
+    "Conceptual Access 표시가 실제 Collision 검사를 대신함"
+  ],
+  "predictionFeedback": "관측할 수 있는 Interface와 해석할 수 있는 Reference를 함께 설계했습니다. 이 앱의 간단한 Gate와 Budget은 실제 DFT Sign-off를 대신하지 않습니다.",
+  "sources": [
+    "Q0",
+    "Q1",
+    "Q2",
+    "Q3"
+  ]
+}

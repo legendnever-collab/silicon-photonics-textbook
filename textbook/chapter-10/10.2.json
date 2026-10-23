@@ -1,0 +1,67 @@
+{
+  "id": "10.2",
+  "short": "Alignment & Polarization",
+  "title": "Find the Optical Maximum After Registration",
+  "time": "18–25분",
+  "lead": "Position, Tilt, Polarization은 Coupling의 서로 다른 자유도입니다. Fiducial Registration 이후에도 Optical Fine Alignment가 필요할 수 있습니다.",
+  "question": "Chip 위치를 정확히 알면 Optical Coupling도 반드시 최대일까요?",
+  "prediction": "현재 조건에서 무엇이 달라질까요?",
+  "reflection": "Registration Error, Optical Center Offset, Polarization Error를 서로 다른 원인으로 설명하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "testing",
+      "html": "<p>기계 좌표를 찾는 것과 Optical Mode를 맞추는 것은 같은 문제의 두 단계입니다. Chip Marker를 기준으로 이동한 후에도 Fiber Mode와 Coupler의 실제 Optical Center 사이에 차이가 남을 수 있습니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "testing",
+      "html": "<p>Chapter 3의 정규화된 Gaussian Overlap과 Jones Projection을 재사용합니다. Field Radius w는 Intensity가 중심의 1/e²가 되는 Radius이며 Diameter가 아닙니다. w₁=w₂=2 µm, 동일한 Waist Plane, 약한 반사와 Scalar/Paraxial 조건을 가정합니다. Axial Defocus, Vector Mode, Lens Aberration이나 실제 Coupler Alignment Map은 계산하지 않습니다.</p><p>이 교육용 Fixture의 Optical Center는 Chip 기준 (+0.75,−0.50) µm입니다. 이는 실측 위치가 아니라 Fine Alignment를 설명하는 고정 Offset입니다. Registered State에서 dx=0,dy=0으로 이동하면 이 Offset이 남습니다. Fine Align 버튼은 −5…+5 µm Grid를 0.25 µm 간격으로 검색해 최대 Coupling을 찾습니다. 실제 장비를 제어하거나 Noise가 있는 Sensor를 최적화하지 않습니다.</p><p>Tilt는 Wavefront의 Phase Gradient에 의한 Overlap 변화로, Polarization은 Linear Analyzer에 대한 Projection으로 계산합니다. 두 Interface가 같은 오차를 공유한다는 추가 가정이 있으므로 Port Loss와 Pair Loss를 따로 읽습니다. 미등록 상태에서는 Macro Position Error가 더해져 작은 Fine Search 범위로 Peak를 찾지 못할 수 있습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "testing",
+      "html": "<div class=\"equation\">η_offset = exp[−(Δx²+Δy²)/w²]; η_pol = cos²θ</div><p>같은 Gaussian Radius에서 lateral offset만 있는 식입니다. Δx, Δy, w는 µm이며 θ는 Polarization Angle입니다. 1 dB Offset Tolerance는 한 Port 기준이며 Pair의 1 dB 조건과 다릅니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>Fine Align 위치에서 x를 1 µm 더 움직이면 w=2 µm에서 η_offset=e^(−0.25)=0.778801, 한 Port Loss=1.085736 dB입니다. 두 Port가 같은 Offset을 가지면 추가 Pair Loss는 2.171472 dB입니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "조건을 구별합니다",
+      "scene": "testing",
+      "html": "<p>두 Port가 각각 45° Linear Polarization Projection을 겪으면 합성 Polarization Efficiency는 얼마인가요?</p><p>선택의 근거와 Model의 가정을 먼저 확인하고 Feedback과 비교하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 확인합니다",
+      "scene": "testing",
+      "html": "<p>Alignment Map에서 Fine Align 전후의 Marker와 Power를 비교하세요. 이어 dx를 1 µm 더 움직이거나 Polarization을 45°로 바꾸고 같은 Loss가 두 번 적용되는지 확인하세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "testing",
+      "html": "<p>Fiducial은 기계 좌표를 정하고 Optical Search는 Mode의 최대 Overlap을 찾습니다. 각도와 Polarization도 같은 변수로 합치지 마세요.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Registration 이후에도 Optical Fine Alignment가 필요함",
+    "Chip Marker를 찾으면 Optical Peak가 자동으로 보장됨",
+    "Radius 2 µm는 Diameter 2 µm라는 뜻임"
+  ],
+  "predictionFeedback": "Fiducial은 기계 좌표를 정하고 Optical Search는 Mode의 최대 Overlap을 찾습니다. 각도와 Polarization도 같은 변수로 합치지 마세요.",
+  "sources": [
+    "Q0",
+    "Q1",
+    "Q2",
+    "Q3"
+  ]
+}
