@@ -10,3 +10,5 @@ Open dist/silicon-photonics-textbook-v0.8.0.html in a Browser. Entire textbook r
 On mobile, no dragging is required. Properties actions remain in a sticky footer; numeric values accept finite in-range input. Try Figure Zoom/Escape and Light/Dark. File-origin storage can vary by Browser; use JSON backup to transfer records.
 
 Limits: SIPT-DEMO-1 only, port/endpoint graph (not polygon extraction), route width and parallel coupon spacing only, fixed n_eff, no optical-loss/EO/foundry/GDS sign-off. Chapter7 and all previous release HTML retained. PR8 Draft; explicit user approval needed before main merge.
+
+Technical runtime validation complete:159Node/320independent/67new+244archived Browser PASS; [CI](https://github.com/legendnever-collab/silicon-photonics-textbook/actions/runs/39938850918). User study review remains separate. SHA256 `f2c1440f499612f73cfa4403bc867760357055f7ba28226acfa41fe2dbfb0362`.

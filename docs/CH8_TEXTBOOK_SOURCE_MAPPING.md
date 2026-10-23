@@ -1,6 +1,6 @@
 # Chapter 8 Textbook Source Mapping
 Verified 2026-10-23 KST. Cambridge official contents, printed x–xi / PDF10–11: https://assets.cambridge.org/97811070/85459/frontmatter/9781107085459_frontmatter.pdf
-Original Chapter10 pp349–366. Full paid text, original figures and listings **not accessed**. Independent Korean prose, examples and SVG. No original numerical example reproduction.
+Original Chapter10 starts349, References start366, next Chapter11 starts368. Full paid text, original figures and listings **not accessed**. Independent Korean prose, examples and SVG. No original numerical example reproduction.
 
 | Original section/start | App lesson | Treatment and scope |
 |---|---|---|

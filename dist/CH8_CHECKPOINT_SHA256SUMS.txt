@@ -1,0 +1,2 @@
+b84e5d9c42ba7200e2839a341feaa620a669e495abc5eb649e9c2166934e5568  ../checkpoints/ch8/D1-linked-views.html
+f2c1440f499612f73cfa4403bc867760357055f7ba28226acfa41fe2dbfb0362  ../checkpoints/ch8/D4-layout-review.html
