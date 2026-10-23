@@ -1,0 +1,40 @@
+{
+  "version": "0.9.0",
+  "status": "READY_FOR_USER_LEARNING_REVIEW",
+  "repository": "legendnever-collab/silicon-photonics-textbook",
+  "branch": "feature/ch9-fabrication",
+  "draftPr": 9,
+  "base": "feature/ch8-tools-pdk-layout",
+  "chapter8Dependency": "8a4f3b6080dd86aa0e0aa51bd0109ccf460a8dae",
+  "main": "dfca9db6be3140c0c3ba5fbd9c717e289c81f30c",
+  "verifiedRuntimeHead": "42ff7a0ab735421e26a50c4fa39fd17c93188233",
+  "runtimeCi": "https://github.com/legendnever-collab/silicon-photonics-textbook/actions/runs/39990950206",
+  "runtimeCiConclusion": "success",
+  "html": "dist/silicon-photonics-textbook-v0.9.0.html",
+  "htmlSha256": "942ee24d28d769c45251a858e082fc424054456df42013c220dfbd7f6a022c28",
+  "checkpoint": "checkpoints/ch9/D4-final-fabrication-review.html",
+  "validation": {
+    "node": 182,
+    "newBrowser": 67,
+    "archivedBrowser": 311,
+    "totalBrowser": 378,
+    "independentComparisons": 1204,
+    "independentMaxAbsoluteError": 6.821210263296962e-13,
+    "hangulRequired": 336,
+    "hangulMissing": 0,
+    "priorFilesPreserved": 323
+  },
+  "mergeApproved": false,
+  "nextChapterStarted": false,
+  "limitations": [
+    "Independent teaching assumptions only",
+    "No measured foundry distribution or manufacturing yield",
+    "Linear ring dispersion; fixed length/loss/coupling",
+    "Frozen grating dispersion; fixed Gaussian envelope",
+    "Rounding is geometry-only; no lithography solver",
+    "Normalized die positions; no local spatial covariance function"
+  ],
+  "localBrowserVersion": "153.0.8010.0",
+  "ciBrowserVersion": "151.0.7922.34",
+  "verifiedAt": "2026-10-24 Asia/Seoul"
+}

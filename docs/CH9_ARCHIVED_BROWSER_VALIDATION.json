@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "browser": "153.0.8010.0",
+  "method": "Every archived original browser command executed without assertion changes; temporary local executable override only",
+  "scenarios": 311,
+  "reports": [
+    {
+      "release": "0.1.1",
+      "report": "browser-results.json",
+      "scenarios": 15,
+      "errorCounters": {
+        "runtimeErrors": 0,
+        "externalRequests": 0,
+        "consoleErrors": 0
+      },
+      "sha256": "de17a0b275836e308b8b77381418fcf5344554f93496f698d5949dd3d9445cc6"
+    },
+    {
+      "release": "0.1.1",
+      "report": "figure-browser-results.json",
+      "scenarios": 17,
+      "errorCounters": {
+        "runtimeErrors": 0,
+        "consoleErrors": 0,
+        "externalRequests": 0
+      },
+      "sha256": "bc1c4d44168fbcb0f47f13502a6c8948a88687111c6b9ca008966500528a4e85"
+    },
+    {
+      "release": "0.2.0",
+      "report": "browser-results.json",
+      "scenarios": 15,
+      "errorCounters": {
+        "runtimeErrors": 0,
+        "consoleErrors": 0,
+        "externalRequests": 0
+      },
+      "sha256": "fa89fd8db6afa58532b782eef3326f56a0bada486000a025f96ed3a66738c423"
+    },
+    {
+      "release": "0.3.0",
+      "report": "browser-results.json",
+      "scenarios": 15,
+      "errorCounters": {
+        "runtimeErrors": 0,
+        "consoleErrors": 0,
+        "externalRequests": 0
+      },
+      "sha256": "c8e461f227fbaadcf1dcb0c9690cf6d15f66d5806749dec5fb81b1a5e49e81af"
+    },
+    {
+      "release": "0.4.0",
+      "report": "browser-results.json",
+      "scenarios": 8,
+      "errorCounters": {
+        "errors": 0,
+        "network": 0
+      },
+      "sha256": "7a206d360ea83ee7fa6d1110e0eecc1ea30740d69612c243226b0c8279469e6e"
+    },
+    {
+      "release": "0.5.0",
+      "report": "browser-results.json",
+      "scenarios": 49,
+      "errorCounters": {
+        "errors": 0,
+        "network": 0,
+        "figureBounds": 0
+      },
+      "sha256": "c8b2cba8788b106503b8d7e0f1209f7f84a19a100231456ea265c4f978874bd0"
+    },
+    {
+      "release": "0.6.0",
+      "report": "browser-results.json",
+      "scenarios": 58,
+      "errorCounters": {
+        "errors": 0,
+        "network": 0,
+        "figureBounds": 0
+      },
+      "sha256": "5f539ffa9db6c209eddb2ca5aca3c07fb7200f35db37be9bc1e4b005d4c69b85"
+    },
+    {
+      "release": "0.7.0",
+      "report": "browser-results.json",
+      "scenarios": 67,
+      "errorCounters": {
+        "errors": 0,
+        "network": 0,
+        "bounds": 0
+      },
+      "sha256": "2b05ff4c88a29e1a026b12897e006631b30ab7c057fbbeeb62592f58791f3b92"
+    },
+    {
+      "release": "0.8.0",
+      "report": "browser-results.json",
+      "scenarios": 67,
+      "errorCounters": {
+        "errors": 0,
+        "network": 0,
+        "bounds": 0
+      },
+      "sha256": "7b50da30cad22bcbcec015e111d83a9b4b14873301f9f3c6f78cdefb8343517e"
+    }
+  ]
+}

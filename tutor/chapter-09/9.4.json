@@ -1,0 +1,24 @@
+{
+  "question": "같은 Sensitivity를 가진 Pair에 Common Offset만 더하면 B−A는 어떻게 되나요?",
+  "choices": [
+    {
+      "text": "변하지 않습니다. 두 값에서 Common 성분이 소거됩니다.",
+      "feedback": "맞습니다. 두 Ring이 동일한 Linear Sensitivity와 Centerline을 갖는다는 이 모델의 조건도 함께 기억하세요.",
+      "correct": true
+    },
+    {
+      "text": "두 배 커집니다. 각 Ring이 같은 방향으로 움직이기 때문입니다.",
+      "feedback": "같은 방향으로 같은 크기만큼 움직이면 차이는 유지됩니다. 합과 차이를 구분하세요.",
+      "correct": false
+    },
+    {
+      "text": "Separation=0이면 모든 Local Mismatch도 사라집니다.",
+      "feedback": "이 모델은 Local Offset을 Separation과 독립으로 지정합니다. Local Correlation이나 실제 공간 길이는 모델링하지 않았습니다.",
+      "correct": false
+    }
+  ],
+  "why": "Pair를 사용하는 Circuit에서는 각 Device의 절대 응답과 두 Device 사이의 차이가 모두 중요합니다. 측정 결과를 한 개의 표준편차로만 요약하면 공통 이동과 소자 사이 차이를 놓칠 수 있습니다. 이 실습의 Width 편차는 Common Width+2×Edge Bias, 위치 성분 g·x, Local Offset의 합입니다. A/B 위치는 normalized Die x에서 −d/2, +d/2이고 d는 0–1의 무차원 Separation입니다. 길이 단위나 실제 Die 치수로 해석하지 않습니다. Local Mismatch m은 B−A Width Difference이며 A/B에 ∓m/2를 줍니다.",
+  "simple": "공통 편차와 위치에 따른 Gradient, 소자별 Local Offset을 분리합니다. 절대 Shift가 크더라도 Mismatch는 작을 수 있습니다. Systematic Field와 Local Offset을 분리했고, 절대 Shift와 Mismatch를 별도 지표로 읽었습니다. 결정론적 예제와 Analytical Variance 예제도 서로 다른 데이터로 취급해야 합니다.",
+  "math": "Δw_B − Δw_A = g·d + m; Var(B−A) = 2σ_local². 첫 식은 현재 결정론적 Pair의 Width Difference (nm)입니다. 두 번째는 별도 독립 Local Random Variable 예제의 Ensemble Variance (nm²)이며 Slider State에서 추정한 값이 아닙니다. ρ=σ_common²/(σ_common²+σ_local²)입니다. g=4 nm, d=0.5, m=0이면 Width Difference=2 nm이고 Ring Mismatch=1550×0.0008×2/4.2=0.590476 nm입니다. Common Width를 +4 nm 더해도 Mismatch는 같습니다. 별도 σ_common=3 nm, σ_local=1 nm 예제에서는 ρ=0.9, Difference σ=√2 nm입니다.",
+  "notebook": "Gradient Preset에서 Separation을 1→0으로 줄이며 Mismatch가 줄어드는지 확인하세요. 이어 Local Mismatch=4 nm를 설정하고 Separation=0에서도 남는 차이를 관찰하세요. Common Width를 바꾸며 두 Ring의 절대 Shift와 B−A 차이를 따로 기록하세요. Common Shift를 줄이는 방법과 Pair Mismatch를 줄이는 방법을 같은 기준으로 평가할 수 있나요?"
+}

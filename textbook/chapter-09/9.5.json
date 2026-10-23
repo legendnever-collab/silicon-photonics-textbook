@@ -1,0 +1,67 @@
+{
+  "id": "9.5",
+  "short": "Ring Sensitivity",
+  "title": "Follow One Ring Resonance Order",
+  "time": "18–25분",
+  "lead": "Resonance Condition을 미분하면 Group Index가 나타납니다. 같은 Mode Order의 이동과 반복되는 Spectrum Dip을 구별합니다.",
+  "question": "Resonance Sensitivity를 계산할 때 n_eff 대신 n_g가 분모에 나오는 이유는 무엇인가요?",
+  "prediction": "어떤 변화가 나타날까요?",
+  "reflection": "이 Ring Model을 실제 측정 데이터와 비교하려면 어떤 Geometry와 Spectral Parameter를 Fit하거나 다시 계산해야 하나요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "fabrication",
+      "html": "<p>Chapter 2와 Chapter 7에서 익힌 Ring Interference에 Fabrication 편차를 연결합니다. Resonance를 단순히 n_eff 비율로 움직이면 Wavelength Dispersion을 빠뜨리기 쉽습니다. Mode Order를 고정하고 조건식을 다시 읽어야 합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "fabrication",
+      "html": "<p>Resonance는 n_eff(λ,p)L=mλ를 만족합니다. L과 Mode Order m을 고정하고 작은 Geometry 변화를 주면 Wavelength가 변하면서 n_eff 자체도 변합니다. n_g=n_eff−λ∂n_eff/∂λ이므로 First-order Shift는 Δλ≈(λ₀/n_g)Δn_geometry입니다. 실제 길이도 바뀌면 추가 길이 Sensitivity가 필요합니다.</p><p>이 모델은 λ₀=1550 nm, n_eff₀=2.4, n_g₀=4.2, m=100으로 L=64.583333 µm를 정합니다. n_eff(λ,p)=2.4+Δn+(2.4−4.2)(λ−1550)/1550인 선형 Dispersion을 사용합니다. 이 선언한 식과 고정 L에서는 λ_m=1550(1+Δn/4.2)가 정확히 성립합니다. 실제 소자의 광대역 정확도를 의미하지 않습니다.</p><p>Spectrum은 All-pass Ring의 Through Power입니다. Round-trip Field Attenuation a=0.98, Self-coupling Field t=0.98을 고정해 Critical Coupling 상태를 유지합니다. 여러 Dip이 보이는 것은 다른 Mode Order입니다. Marker와 숫자는 항상 m=100의 Resonance를 추적하며 가장 가까운 Dip을 무작정 따라가지 않습니다. Fabrication에 따른 Coupling/Loss, Backscattering, Temperature와 Polarization 변화는 계산하지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "fabrication",
+      "html": "<div class=\"equation\">n_eff(λ,p)L=mλ; Δλ≈λ₀Δn/n_g₀; T=(a²+t²−2at cosφ)/(1+a²t²−2at cosφ)</div><p>φ=2πn_effL/λ, a와 t는 Field 계수, T는 무차원 Power Ratio입니다. Δn은 고정 λ₀에서의 Geometry-induced Index 변화입니다. L과 λ를 같은 길이 단위로 대입합니다. Power Input은 1로 정규화합니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>Common Width +4 nm이면 Δn=0.0008×4=0.0032, Δλ=1550×0.0032/4.2=1.180952 nm입니다. n_eff₀=2.4로 나눈 2.066667 nm는 Dispersion을 빠뜨린 결과입니다. a=t이면 각 Resonance에서 T=0이며 그 밖에서 0≤T≤1입니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "가정을 구별합니다",
+      "scene": "fabrication",
+      "html": "<p>Δn=0.0032의 Ring Shift는 얼마인가요?</p><p>선택 전 자신의 근거를 적고 Feedback에서 가정·부호·단위를 확인하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 관찰합니다",
+      "scene": "fabrication",
+      "html": "<p>Common Width Preset과 Local Mismatch Preset을 번갈아 적용하세요. m=100의 A/B Marker와 Through Spectrum을 함께 읽으세요. Width, Thickness, Etch 각각의 부호를 바꾸며 Shift 방향을 예측하고 Common/Local 결과를 구분하세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "fabrication",
+      "html": "<p>Geometry-induced Index 변화가 Resonance로 이어지는 관계를 유도하고 Group Index의 역할을 확인했습니다. 반복된 Dip, 추적 Order, 고정 Coupling/Loss의 한계를 함께 읽습니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Positive Width Offset은 선언한 Positive Sensitivity에 따라 Red Shift",
+    "이 모델의 Shift 분모는 n_eff₀만 사용함",
+    "실제 모든 Ring도 Coupling/Loss가 고정됨"
+  ],
+  "predictionFeedback": "이 모델에서는 Width Sensitivity가 양수여서 Red Shift합니다. Mode Order, Group Index와 고정 Length 가정까지 함께 확인하세요.",
+  "sources": [
+    "F0",
+    "F1",
+    "F2",
+    "F3"
+  ]
+}

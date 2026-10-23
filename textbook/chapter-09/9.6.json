@@ -1,0 +1,67 @@
+{
+  "id": "9.6",
+  "short": "Grating Sensitivity",
+  "title": "Period and Process Change the Grating Spectrum",
+  "time": "18–25분",
+  "lead": "Grating Period와 Bloch Effective Index가 Phase Matching에 함께 작용합니다. Peak 위치와 Coupling Efficiency를 같은 정보로 취급하지 않습니다.",
+  "question": "Grating Period가 같으면 Etch Depth가 달라도 Peak Wavelength는 같을까요?",
+  "prediction": "어떤 변화가 나타날까요?",
+  "reflection": "Peak 위치가 맞는 것만으로 Fiber Coupling Efficiency가 검증되었다고 할 수 없는 이유를 설명하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "fabrication",
+      "html": "<p>Optical I/O의 Spectrum이 이동하면 Ring을 측정할 때도 장비에 보이는 Envelope가 달라질 수 있습니다. Ring의 좁은 Resonance와 Grating의 넓은 응답을 구별해야 Fabrication 결과를 올바르게 해석할 수 있습니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "fabrication",
+      "html": "<p>고정 출사각 θ에서 1차 Phase Matching을 λ_peak=Λ(n_B−n_clad sinθ)로 씁니다. Λ는 Grating Period이고 n_B는 해당 Grating Mode의 Effective Index입니다. Ring의 n_eff와 같은 Parameter가 아닙니다. 이 실습은 θ=10°, n_clad=1을 고정하고 Nominal Period 630 nm에서 Peak가 1550 nm가 되도록 n_B₀를 정의합니다.</p><p>Geometry Offset에 대해 Δn_B=0.0005Δw+0.0015Δt−0.001Δe를 가정합니다. 이 Coefficient는 교육용 상수입니다. 이 장의 Grating Formula는 n_B의 Wavelength Dispersion을 무시합니다. 실제 Dispersive Grating에서는 Implicit Phase Matching을 풀어야 하며 여기의 Ring Group Index를 가져와 대신 넣지 않습니다.</p><p>Coupling Power Envelope는 Peak 0.6, Power FWHM 40 nm의 Gaussian으로 표시합니다. Period와 Geometry가 Peak를 이동시키지만 Peak Height와 FWHM은 고정합니다. 실제 Etch 변화에 따른 Radiation Strength, Directionality, Reflection, Polarization, Fiber Overlap과 최적 정렬을 예측하지 않습니다. 곡선은 측정이나 Full-wave 결과가 아닙니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "fabrication",
+      "html": "<div class=\"equation\">λ_peak=(630+ΔΛ)(1550/630+Δn_B); η(λ)=0.6 exp[−4 ln2 ((λ−λ_peak)/40)²]</div><p>λ, Λ, ΔΛ는 nm, Index는 무차원, η는 Power Ratio입니다. 정확한 Product 안에는 ΔΛ·Δn_B Cross Term이 포함됩니다. Gaussian의 FWHM은 Power 기준이므로 Peak에서 ±20 nm일 때 η=0.3입니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>Geometry Offset=0에서 Period +4 nm이면 Δλ=(1550/630)×4=9.841270 nm입니다. Δw=+4 nm도 더하면 Δn_B=0.002, 추가 Shift는 634×0.002=1.268 nm이므로 총 Shift=11.109270 nm입니다. 서로 다른 Perturbation을 더할 때 Product의 Cross Term을 놓치지 마세요.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "가정을 구별합니다",
+      "scene": "fabrication",
+      "html": "<p>Gaussian Power FWHM이 40 nm이면 Peak에서 +20 nm의 η는 얼마인가요?</p><p>선택 전 자신의 근거를 적고 Feedback에서 가정·부호·단위를 확인하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 관찰합니다",
+      "scene": "fabrication",
+      "html": "<p>Period를 0→+4 nm로 바꾸고 Ring 응답과 Grating 응답을 비교하세요. 이 Model에서 Period는 Grating에만 연결됩니다. 이어 Common Width +4 nm를 더해 Grating Peak를 계산하고 고정된 Peak 0.6, FWHM 40 nm를 확인하세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "fabrication",
+      "html": "<p>Grating의 Phase Matching과 가정한 Efficiency Envelope를 분리했습니다. Period와 Geometry의 Product, Power FWHM, 고정 Angle과 Dispersion 생략 조건을 확인했습니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Period만 바꾸면 Grating Peak가 이동하고 Ring은 그대로임",
+    "Period가 같으면 Etch의 영향은 항상 없음",
+    "Gaussian Peak 0.6은 실제 제작 보장임"
+  ],
+  "predictionFeedback": "Period는 Grating의 Phase Matching에만 연결했습니다. 실제 Geometry가 효율의 높이와 폭까지 바꾸는 효과는 이 Envelope에 포함되지 않습니다.",
+  "sources": [
+    "F0",
+    "F1",
+    "F2",
+    "F3"
+  ]
+}

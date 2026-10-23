@@ -1,0 +1,24 @@
+{
+  "question": "이 Linear Model에서 최대 Ring Red Shift를 만드는 Corner는 무엇인가요?",
+  "choices": [
+    {
+      "text": "Width +10, Thickness +4, Etch −5 nm입니다.",
+      "feedback": "맞습니다. Etch Coefficient가 음수이므로 Etch가 덜 깊은 Corner에서 Δn이 더 커집니다.",
+      "correct": true
+    },
+    {
+      "text": "Width +10, Thickness +4, Etch +5 nm입니다.",
+      "feedback": "모든 Parameter의 +가 같은 방향의 Optical Effect를 뜻하지 않습니다. Etch의 Coefficient 부호를 확인하세요.",
+      "correct": false
+    },
+    {
+      "text": "7개 Corner PASS이면 제조 Yield가 7/8입니다.",
+      "feedback": "Corner는 확률을 붙이지 않은 Scenario입니다. 실측 기반 Distribution과 Correlation 없이 Yield를 계산할 수 없습니다.",
+      "correct": false
+    }
+  ],
+  "why": "Nominal에서만 잘 동작하는 소자는 Parameter가 조금 달라질 때 목표 응답을 벗어날 수 있습니다. Corner Analysis는 검사할 극단 조합을 명시해 이 질문을 다루는 출발점입니다. 확률 Model이 없는 Corner Table에 확률을 덧붙이지 않는 것도 설계 판단의 일부입니다. 여기서는 Width ±10 nm, Thickness ±4 nm, Etch ±5 nm의 교육용 Parameter Box를 정합니다. 세 독립 좌표의 두 끝값을 조합하면 2³=8 Corner가 됩니다. Nominal 한 행을 더해 Table에는 9개 Scenario를 표시합니다. Box 크기는 Foundry Process Specification이 아닙니다.",
+  "simple": "선언한 Parameter Box의 조합을 검사하고 Nominal 결과와 비교합니다. Corner Count를 제조 확률이나 Yield로 해석하지 않습니다. Corner는 Parameter 조합이고 Probability Sample이 아닙니다. 선언한 Model의 Monotonicity와 Box를 명시할 때 검사 결과의 의미가 분명해집니다.",
+  "math": "Δn_ring = 0.0008·Δw + 0.002·Δt − 0.0005·Δe. Δw, Δt, Δe는 nm이고 Coefficient 단위는 nm⁻¹이므로 Δn은 무차원입니다. Near-nominal Sensitivity를 선언한 Teaching Model이며 이 Box에서 정확한 선형식으로 취급합니다. 최대 Δn은 Δw=+10, Δt=+4, Δe=−5 nm에서 0.008+0.008+0.0025=0.0185입니다. 같은 Mode Order의 Δλ=1550×0.0185/4.2=+6.827381 nm입니다. 반대 Corner는 −6.827381 nm입니다. Etch의 부호를 바꾸면 최대 Corner를 놓칩니다.",
+  "notebook": "Corner Table에서 가장 큰 Ring Shift를 찾고 그 행의 Width/Thickness/Etch 부호를 설명하세요. 현재 Slider Scenario는 별도 표시됩니다. Slider를 바꾸어도 선언한 Corner Box는 바뀌지 않으므로 두 종류의 결과를 혼동하지 마세요. Corner 검사를 확률적 Yield 예측으로 확장하려면 어떤 자료와 가정이 추가되어야 하나요?"
+}

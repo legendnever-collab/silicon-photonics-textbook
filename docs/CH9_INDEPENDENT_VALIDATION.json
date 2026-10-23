@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "states": 48,
+  "comparisons": 1204,
+  "maxAbsoluteError": 6.821210263296962e-13,
+  "method": "Python bisection of dispersive resonance and wavevector phase matching; independent complex all-pass transfer and Gaussian sigma conversion; finite covariance sign ensemble",
+  "scope": "Numerical consistency of declared teaching assumptions, not manufacturing accuracy"
+}

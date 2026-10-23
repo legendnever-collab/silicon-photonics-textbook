@@ -1,0 +1,67 @@
+{
+  "id": "9.4",
+  "short": "On-chip Variation",
+  "title": "Common Shift and Local Mismatch",
+  "time": "18–25분",
+  "lead": "공통 편차와 위치에 따른 Gradient, 소자별 Local Offset을 분리합니다. 절대 Shift가 크더라도 Mismatch는 작을 수 있습니다.",
+  "question": "Chip 전체의 Resonance가 함께 이동하는 경우와 두 Ring이 서로 벌어지는 경우는 같을까요?",
+  "prediction": "어떤 변화가 나타날까요?",
+  "reflection": "Common Shift를 줄이는 방법과 Pair Mismatch를 줄이는 방법을 같은 기준으로 평가할 수 있나요?",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "fabrication",
+      "html": "<p>Pair를 사용하는 Circuit에서는 각 Device의 절대 응답과 두 Device 사이의 차이가 모두 중요합니다. 측정 결과를 한 개의 표준편차로만 요약하면 공통 이동과 소자 사이 차이를 놓칠 수 있습니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "fabrication",
+      "html": "<p>이 실습의 Width 편차는 Common Width+2×Edge Bias, 위치 성분 g·x, Local Offset의 합입니다. A/B 위치는 normalized Die x에서 −d/2, +d/2이고 d는 0–1의 무차원 Separation입니다. 길이 단위나 실제 Die 치수로 해석하지 않습니다. Local Mismatch m은 B−A Width Difference이며 A/B에 ∓m/2를 줍니다.</p><p>Map의 25개 점은 Common과 Linear Gradient만 표시한 결정론적 Systematic Field입니다. A/B Marker 위치에서 Gradient를 계산한 뒤 Local Offset을 각각 더합니다. Map은 Wafer 측정 데이터나 Random Sample이 아닙니다. Separation=0이어도 독립 Local Offset을 유지할 수 있으며, 이 실습은 Local Spatial Correlation Function을 구현하지 않습니다.</p><p>별도의 Analytical Variance 예제에서는 δw_A=C+L_A, δw_B=C+L_B로 놓고 C, L_A, L_B가 서로 독립이고 Local Variance가 같다고 가정합니다. 각 소자의 Variance에는 Common이 포함되지만 Difference에서는 C가 소거됩니다. 이 사실은 Common Shift를 무시해도 된다는 뜻이 아닙니다. 고정 Laser와의 절대 Detuning에는 여전히 중요합니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "fabrication",
+      "html": "<div class=\"equation\">Δw_B − Δw_A = g·d + m; Var(B−A) = 2σ_local²</div><p>첫 식은 현재 결정론적 Pair의 Width Difference (nm)입니다. 두 번째는 별도 독립 Local Random Variable 예제의 Ensemble Variance (nm²)이며 Slider State에서 추정한 값이 아닙니다. ρ=σ_common²/(σ_common²+σ_local²)입니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>g=4 nm, d=0.5, m=0이면 Width Difference=2 nm이고 Ring Mismatch=1550×0.0008×2/4.2=0.590476 nm입니다. Common Width를 +4 nm 더해도 Mismatch는 같습니다. 별도 σ_common=3 nm, σ_local=1 nm 예제에서는 ρ=0.9, Difference σ=√2 nm입니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "가정을 구별합니다",
+      "scene": "fabrication",
+      "html": "<p>같은 Sensitivity를 가진 Pair에 Common Offset만 더하면 B−A는 어떻게 되나요?</p><p>선택 전 자신의 근거를 적고 Feedback에서 가정·부호·단위를 확인하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 관찰합니다",
+      "scene": "fabrication",
+      "html": "<p>Gradient Preset에서 Separation을 1→0으로 줄이며 Mismatch가 줄어드는지 확인하세요. 이어 Local Mismatch=4 nm를 설정하고 Separation=0에서도 남는 차이를 관찰하세요. Common Width를 바꾸며 두 Ring의 절대 Shift와 B−A 차이를 따로 기록하세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "fabrication",
+      "html": "<p>Systematic Field와 Local Offset을 분리했고, 절대 Shift와 Mismatch를 별도 지표로 읽었습니다. 결정론적 예제와 Analytical Variance 예제도 서로 다른 데이터로 취급해야 합니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Common Offset은 절대 Shift를 바꾸고 Pair Difference에서는 소거됨",
+    "Common Offset만으로 B−A가 항상 커짐",
+    "Map은 실측 Wafer 분포임"
+  ],
+  "predictionFeedback": "절대 파장과 Pair Difference를 따로 읽으세요. 공통 Offset의 소거는 두 Device의 Sensitivity가 같다는 가정에 의존합니다.",
+  "sources": [
+    "F0",
+    "F1",
+    "F2",
+    "F3"
+  ]
+}
