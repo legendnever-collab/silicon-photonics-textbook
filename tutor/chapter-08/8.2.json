@@ -1,0 +1,24 @@
+{
+  "question": "Port를 90° 회전할 때 무엇을 함께 바꾸나요?",
+  "choices": [
+    {
+      "text": "Position과 outward Orientation을 모두 바꿉니다.",
+      "feedback": "맞습니다. Transform은 위치와 방향을 함께 옮깁니다. 연결 판정은 거리만이 아니라 반대 방향과 Domain/Cross-section의 호환성도 확인합니다.",
+      "correct": true
+    },
+    {
+      "text": "Position만 바꾸면 됩니다.",
+      "feedback": "Position만 바꾸면 회전 뒤 상대 Port와 마주 보지 않게 될 수 있습니다. Local Arrow도 같은 회전 행렬로 변환해야 합니다.",
+      "correct": false
+    },
+    {
+      "text": "동일 좌표면 Electrical과 Optical을 연결합니다.",
+      "feedback": "Domain이 다른 Port는 좌표가 같아도 같은 신호가 아닙니다. Optical Mode와 Electrical Node 사이에는 명시적인 Transducer가 필요합니다.",
+      "correct": false
+    }
+  ],
+  "why": "Library는 검증한 Component를 재사용해 설계 의미를 일관되게 유지하는 수단입니다. 도형을 복사하는 것만으로는 Port 이름과 Model, Parameter Domain까지 공유되지 않습니다. Cell 정의와 실제 배치된 Instance를 구분해야 합니다. Cell은 Local Geometry와 Port의 정의입니다. PCell은 지원하는 Parameter에서 도형을 생성하는 절차를 가집니다. Instance는 Cell Reference에 Parameter와 Translation/Rotation을 부여한 배치입니다. 두 Instance가 같은 Cell을 참조해도 좌표와 방향은 다를 수 있습니다.",
+  "simple": "Cell/PCell의 Local Geometry와 Instance Transform, Optical Port의 위치·방향·Compatibility를 연결합니다. Optical Port는 이름만이 아니라 Position, outward Orientation, Mode/Cross-section, Width와 Domain을 포함합니다. Electrical Port와 Optical Port가 같은 위치에 있어도 연결될 수 없습니다. Port Arrow는 외향 기준이며 실제 빛의 현재 진행 방향을 뜻하지 않습니다.",
+  "math": "p_world = R(θ) p_local + t; orientation_world = orientation_local + θ. Local Port (10,0), outward 0°를 90° 회전하고 (100,20) µm 이동하면 World Port는 (100,30) µm, outward 90°입니다. 전체 회로를 함께 회전하면 Route Length는 변하지 않습니다.",
+  "notebook": "Instance와 Library Cell을 선택하고 전체 회로 Quarter Rotation을 바꾸세요. 선택한 Port ID·World 좌표·방향과 Length의 불변성을 확인하세요. Cell·PCell·Instance의 차이와 Port에 필요한 네 가지 정보를 예를 들어 설명하세요."
+}

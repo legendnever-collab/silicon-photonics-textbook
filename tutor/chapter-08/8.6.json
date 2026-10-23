@@ -1,0 +1,24 @@
+{
+  "question": "Layout 면적을 줄였을 때 반드시 확인해야 할 것은 무엇인가요?",
+  "choices": [
+    {
+      "text": "Route/Rule/연결과 Fiber·Probe 접근을 함께 검토합니다.",
+      "feedback": "맞습니다. Footprint와 Routing, Test 접근은 함께 검토해야 합니다. Conceptual 접근 그림은 실제 장비 치수 검증을 대신하지 않으며 모델 범위를 함께 기록합니다.",
+      "correct": true
+    },
+    {
+      "text": "작아지면 Optical Loss는 반드시 감소합니다.",
+      "feedback": "짧은 길이 외에도 Bend, Spacing, Component 성능과 접근성이 영향을 줍니다. 이 앱에는 실제 Bend Radius→Loss Calibration이 없어 성능 개선을 단정할 수 없습니다.",
+      "correct": false
+    },
+    {
+      "text": "JSON Report를 .gds로 바꾸면 Mask가 됩니다.",
+      "feedback": "파일 확장자는 실제 형식을 바꾸지 않습니다. JSON은 Study Report이고 GDS는 별도의 유효한 Geometry/Hierarchy Encoding과 독립 검증이 필요합니다.",
+      "correct": false
+    }
+  ],
+  "why": "Mask Layout은 실제 도형과 Hierarchy을 전달하는 표현입니다. 도형을 작게 배치하는 것뿐 아니라 Optical/Electrical Test를 위한 접근과 식별, 반복 제작의 일관성까지 고려해야 합니다. 이 장은 상세 Packaging 전에 필요한 Layout 관점을 준비합니다. Hierarchy에서는 하나의 Cell 정의를 여러 Instance가 참조합니다. 반복 Component를 재사용하면 수정 범위와 도면 의미를 관리하기 쉽지만 Instance Parameter와 Transform을 정확히 전달해야 합니다. Flat Geometry로 풀어 보는 것과 Hierarchy을 유지하는 것은 다른 저장 표현입니다.",
+  "simple": "Layer/Hierarchy와 생성 재사용을 이해하고 Fiber/Probe 접근을 고려한 배치를 검토합니다. GDS의 Layer/Datatype, Boundary/Path, Cell/Instance는 Geometry와 Hierarchy을 다룹니다. GDS 파일만으로 모든 Optical Mode/Port/Model 의도가 완전하게 전달된다고 가정하지 않습니다. 이 앱은 JSON Study Report를 내보내며 실제 Binary GDS Writer는 제공하지 않습니다.",
+  "math": "Layout review = Geometry + Connectivity + Model domain + Test access. 동일 Cell을 8회 배치했다면 Cell 정의는 공유하고 Instance Transform을 8개 기록할 수 있습니다. 개념적 Probe 접근 공간을 회로 위에 겹쳐 놓으면 Optical Net은 그대로여도 Test 접근 문제는 남습니다. 이 그림만으로 실제 치수 적합성을 판정하지 않습니다.",
+  "notebook": "Test Access 그림에서 접근 가능/가림 Preset을 비교하세요. Optical Topology와 DRC/LVS가 그대로여도 남는 검토 항목을 기록하세요. GDS·Netlist·Compact Model의 다른 역할과 Footprint/Test 접근의 절충을 설명하세요."
+}

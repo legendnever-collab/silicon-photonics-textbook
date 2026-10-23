@@ -1,0 +1,24 @@
+{
+  "question": "DRC PASS가 의미하는 것은 무엇인가요?",
+  "choices": [
+    {
+      "text": "이번에 실행한 Geometry Check Set을 통과했습니다. LVS/Performance는 별도입니다.",
+      "feedback": "맞습니다. 검사한 Rule과 Geometry 범위를 먼저 읽어야 합니다. Connectivity 비교와 Optical Model, Foundry의 공정 검증을 별도로 확인해야 합니다.",
+      "correct": true
+    },
+    {
+      "text": "Reference Netlist와 완전히 같은 회로입니다.",
+      "feedback": "DRC는 Reference Netlist를 비교하지 않습니다. Rule에 맞는 두 선도 Port가 어긋나거나 잘못 연결될 수 있어 LVS 교육 검사가 필요합니다.",
+      "correct": false
+    },
+    {
+      "text": "모든 Geometry와 제조 가능성을 검증했습니다.",
+      "feedback": "이 실습은 Route Width와 평행 Coupon Spacing만 검사합니다. Curved Network와 Device 내부 Polygon 등은 Not checked이며 실제 제조 Sign-off가 아닙니다.",
+      "correct": false
+    }
+  ],
+  "why": "도형이 올바른 규칙을 따르는지와 회로가 의도한 대로 연결됐는지는 다른 질문입니다. DRC는 Geometry Rule, LVS는 추출한 Connectivity와 Reference 비교를 다룹니다. 한 종류 오류만 고쳐 전체 회로가 검증됐다고 결론 내리지 않습니다. 교육용 WG_WIDTH Rule은 명시된 Route Primitive Width≥0.4 µm를 검사합니다. COUPON_SPACE는 MZI 옆 독립 평행 Straight Coupon 두 개의 Edge Gap≥0.3 µm를 검사합니다. Curved Network Spacing, Coupler 내부 Polygon, Density/Enclosure는 검사하지 않습니다.",
+  "simple": "Width/Spacing Rule과 Port Connectivity 검사를 각각 실행하고, 하나의 PASS가 다른 검사 결과를 대신하지 못함을 확인합니다. Coupon Gap은 두 Centerline 거리에서 반폭의 합을 뺀 값입니다. Width를 줄이면 도형 내부 Width Rule은 실패할 수 있지만 고정 Interface Port Width=.5 µm인 이 교육 모델의 Topology는 그대로일 수 있습니다. End Transition은 개념적이며 실제 Taper 성능을 검증한 것이 아닙니다.",
+  "math": "Gap = d_center − (w₁+w₂)/2; Width ≥ 0.4 µm; Coupon Gap ≥ 0.3 µm. w₁=w₂=0.5 µm, d_center=0.8 µm이면 Edge Gap=.3 µm로 경계값을 통과합니다. Width=.25 µm인 Route는 WG_WIDTH FAIL일 수 있지만 고정 Port Interface가 연결돼 있으면 LVS는 PASS입니다. Endpoint 2 µm 단선은 Width를 고쳐도 남습니다.",
+  "notebook": "네 Preset을 비교하세요. Combined에서 Width/Spacing만 수정한 뒤 LVS가 계속 FAIL인지 확인하고, Endpoint를 연결해 두 검사 결과를 다시 읽으세요. DRC FAIL/LVS PASS와 DRC PASS/LVS FAIL 예시를 각각 만들고 검사 범위를 설명하세요."
+}

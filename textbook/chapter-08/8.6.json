@@ -1,0 +1,67 @@
+{
+  "id": "8.6",
+  "short": "Mask & Test Access",
+  "title": "A Small Layout Still Needs Access",
+  "time": "15–22분",
+  "lead": "Layer/Hierarchy와 생성 재사용을 이해하고 Fiber/Probe 접근을 고려한 배치를 검토합니다.",
+  "question": "회로를 가장 작게 압축하면 항상 더 좋은 Layout일까요?",
+  "prediction": "현재 실습에서 무엇이 달라질까요?",
+  "reflection": "GDS·Netlist·Compact Model의 다른 역할과 Footprint/Test 접근의 절충을 설명하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "circuit",
+      "html": "<p>Mask Layout은 실제 도형과 Hierarchy을 전달하는 표현입니다. 도형을 작게 배치하는 것뿐 아니라 Optical/Electrical Test를 위한 접근과 식별, 반복 제작의 일관성까지 고려해야 합니다. 이 장은 상세 Packaging 전에 필요한 Layout 관점을 준비합니다.</p><p>Layer/Hierarchy와 생성 재사용을 이해하고 Fiber/Probe 접근을 고려한 배치를 검토합니다. 이번 학습에서는 먼저 같은 Component와 Port를 찾고, 표현이 바뀌어도 유지되는 정보와 새로 필요한 정보를 구별합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "circuit",
+      "html": "<p>Hierarchy에서는 하나의 Cell 정의를 여러 Instance가 참조합니다. 반복 Component를 재사용하면 수정 범위와 도면 의미를 관리하기 쉽지만 Instance Parameter와 Transform을 정확히 전달해야 합니다. Flat Geometry로 풀어 보는 것과 Hierarchy을 유지하는 것은 다른 저장 표현입니다.</p><p>GDS의 Layer/Datatype, Boundary/Path, Cell/Instance는 Geometry와 Hierarchy을 다룹니다. GDS 파일만으로 모든 Optical Mode/Port/Model 의도가 완전하게 전달된다고 가정하지 않습니다. 이 앱은 JSON Study Report를 내보내며 실제 Binary GDS Writer는 제공하지 않습니다.</p><p>Optical Test를 위해 Fiber 접근 방향, GC Array의 Pitch/배치, Edge 접근, Alignment Target 등을 검토할 수 있습니다. Electrical Test에는 Pad와 Probe의 Keepout/접근 경로가 필요합니다. 여기의 Fiber/Probe 그림과 Keepout은 Conceptual이며 실제 장비 치수나 패키지 간섭을 계산한 결과가 아닙니다.</p><p>Compact 배치는 Footprint를 줄이지만 Routing 우회, Bend, 다른 Channel과의 간격, 접근성에 영향을 줍니다. 작은 면적이 항상 Low Loss나 Test 용이를 의미하지 않습니다. 실제 공정 Corner/Yield는 후속 Fabrication, 정량 Test/Power Budget/Packaging은 후속 Testing 장에서 다룹니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "circuit",
+      "html": "<div class=\"equation\">Layout review = Geometry + Connectivity + Model domain + Test access</div><p>좌표와 Length는 µm, Angle은 degree 또는 명시한 rad입니다. 교육용 Parameter이며 실제 Foundry의 성능/제작 결과가 아닙니다. 식의 적용 범위와 Reference Plane을 함께 읽으세요.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>동일 Cell을 8회 배치했다면 Cell 정의는 공유하고 Instance Transform을 8개 기록할 수 있습니다. 개념적 Probe 접근 공간을 회로 위에 겹쳐 놓으면 Optical Net은 그대로여도 Test 접근 문제는 남습니다. 이 그림만으로 실제 치수 적합성을 판정하지 않습니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "오개념을 구별합니다",
+      "scene": "circuit",
+      "html": "<p>Layout 면적을 줄였을 때 반드시 확인해야 할 것은 무엇인가요?</p><p>먼저 선택한 이유를 적고 Feedback에서 오류의 종류를 확인하세요. Geometry와 Connectivity, Model의 유효 범위 가운데 어떤 정보를 근거로 판단했는지 연결합니다.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with geometry",
+      "title": "예측하고 관찰합니다",
+      "scene": "circuit",
+      "html": "<p>Test Access 그림에서 접근 가능/가림 Preset을 비교하세요. Optical Topology와 DRC/LVS가 그대로여도 남는 검토 항목을 기록하세요.</p><p>예측을 남긴 뒤 한 Parameter씩 바꾸세요. 원래 상태와 수정 상태를 비교하고 검사 범위 밖의 결론을 내리지 않았는지 확인합니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "circuit",
+      "html": "<p>Layer/Hierarchy와 생성 재사용을 이해하고 Fiber/Probe 접근을 고려한 배치를 검토합니다.</p><p>GDS·Netlist·Compact Model의 다른 역할과 Footprint/Test 접근의 절충을 설명하세요. 실제 Layout 검토에서는 PASS와 Not checked를 구분하고 사용한 Technology/단위/연결 기준을 함께 기록해야 합니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Test 접근은 Geometry/Connectivity PASS와 별도 검토임",
+    "DRC PASS이면 Fiber 접근도 자동 승인됨",
+    "작은 면적이면 항상 Low Loss임"
+  ],
+  "predictionFeedback": "맞습니다. Footprint와 Routing, Test 접근은 함께 검토해야 합니다. Conceptual 접근 그림은 실제 장비 치수 검증을 대신하지 않으며 모델 범위를 함께 기록합니다. Test Access 그림에서 접근 가능/가림 Preset을 비교하세요. Optical Topology와 DRC/LVS가 그대로여도 남는 검토 항목을 기록하세요.",
+  "sources": [
+    "T0",
+    "T1",
+    "T2",
+    "T3"
+  ]
+}

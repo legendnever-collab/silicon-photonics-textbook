@@ -1,10 +1,10 @@
 {
   "name": "silicon-photonics-textbook",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-chapter7.mjs",
+    "build": "node scripts/build-chapter8.mjs",
     "test": "node --test tests/*.test.mjs",
     "test:browser": "node tests/browser.mjs && node tests/figures-browser.mjs",
     "serve": "python3 -m http.server 8080",
@@ -19,7 +19,10 @@
     "test:ch6:browser": "node tests/ch6-browser.mjs",
     "build:ch6": "node scripts/build-chapter6.mjs",
     "test:ch7:browser": "node tests/ch7-browser.mjs",
-    "test:ch7:independent": "python3 tests/ch7-independent-validation.py"
+    "test:ch7:independent": "python3 tests/ch7-independent-validation.py",
+    "build:ch7": "node scripts/build-chapter7.mjs",
+    "test:ch8:browser": "node tests/ch8-browser.mjs",
+    "test:ch8:independent": "python3 tests/ch8-independent-validation.py"
   },
   "engines": {
     "node": ">=20"
