@@ -1,0 +1,279 @@
+{
+  "htmlSha256": "942ee24d28d769c45251a858e082fc424054456df42013c220dfbd7f6a022c28",
+  "browser": "153.0.8010.0",
+  "device": "Desktop/mobile viewport emulation, not physical phones",
+  "scenarios": [
+    {
+      "name": "Integrated57 lessons and retained Notebook smoke 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH9 seven lessons feedback predictions figures and SVG bounds 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Geometry signs edge factor and rounding limited to contour 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Common shift local mismatch gradient separation and fixed corners 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Grating period geometry product and fixed power envelope 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Stable slider focus screen position linked figure and zoom 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric properties invalid apply close Escape focus and visible footer 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual report download learning backup restore and invalid rejection 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated57 lessons and retained Notebook smoke 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH9 seven lessons feedback predictions figures and SVG bounds 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Geometry signs edge factor and rounding limited to contour 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Common shift local mismatch gradient separation and fixed corners 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Grating period geometry product and fixed power envelope 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Stable slider focus screen position linked figure and zoom 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric properties invalid apply close Escape focus and visible footer 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual report download learning backup restore and invalid rejection 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated57 lessons and retained Notebook smoke 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH9 seven lessons feedback predictions figures and SVG bounds 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Geometry signs edge factor and rounding limited to contour 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Common shift local mismatch gradient separation and fixed corners 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Grating period geometry product and fixed power envelope 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Stable slider focus screen position linked figure and zoom 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric properties invalid apply close Escape focus and visible footer 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual report download learning backup restore and invalid rejection 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated57 lessons and retained Notebook smoke 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH9 seven lessons feedback predictions figures and SVG bounds 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Geometry signs edge factor and rounding limited to contour 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Common shift local mismatch gradient separation and fixed corners 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Grating period geometry product and fixed power envelope 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Stable slider focus screen position linked figure and zoom 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric properties invalid apply close Escape focus and visible footer 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual report download learning backup restore and invalid rejection 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated57 lessons and retained Notebook smoke 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH9 seven lessons feedback predictions figures and SVG bounds 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Geometry signs edge factor and rounding limited to contour 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Common shift local mismatch gradient separation and fixed corners 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Grating period geometry product and fixed power envelope 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Stable slider focus screen position linked figure and zoom 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric properties invalid apply close Escape focus and visible footer 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual report download learning backup restore and invalid rejection 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated57 lessons and retained Notebook smoke 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH9 seven lessons feedback predictions figures and SVG bounds 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Geometry signs edge factor and rounding limited to contour 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Common shift local mismatch gradient separation and fixed corners 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Grating period geometry product and fixed power envelope 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Stable slider focus screen position linked figure and zoom 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric properties invalid apply close Escape focus and visible footer 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual report download learning backup restore and invalid rejection 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated57 lessons and retained Notebook smoke 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH9 seven lessons feedback predictions figures and SVG bounds 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Geometry signs edge factor and rounding limited to contour 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Common shift local mismatch gradient separation and fixed corners 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Grating period geometry product and fixed power envelope 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Stable slider focus screen position linked figure and zoom 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric properties invalid apply close Escape focus and visible footer 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual report download learning backup restore and invalid rejection 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated57 lessons and retained Notebook smoke 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH9 seven lessons feedback predictions figures and SVG bounds 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Geometry signs edge factor and rounding limited to contour 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Common shift local mismatch gradient separation and fixed corners 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Grating period geometry product and fixed power envelope 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Stable slider focus screen position linked figure and zoom 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric properties invalid apply close Escape focus and visible footer 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual report download learning backup restore and invalid rejection 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only migration sipt-textbook-v8",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only migration sipt-textbook-v7",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only migration sipt-textbook-v6",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "network": [],
+  "bounds": []
+}
