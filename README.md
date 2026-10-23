@@ -91,3 +91,8 @@ This branch is a Draft stacked on `feature/ch1-textbook-pilot` (PR #1), for user
 Source mapping: docs/CH7_TEXTBOOK_SOURCE_MAPPING.md. Contract/reuse: notebook/CH7_MODEL_CONTRACT.md. Physics validation, QA, figure inventory and review: docs/CH7_*. New v7 save reads previous keys without modifying the originals; JSON export/import remains offline.
 
 Static coherent single-mode models and synthetic fitting/cutback data are teaching assumptions, not FDTD/measured/PDK performance. Explicit phase/loss replace unsupported PN bias calibration. No main merge before user review; stop at Chapter7.
+
+## Chapter 8 — Tools & Techniques (v0.8.0 learning review)
+Open `dist/silicon-photonics-textbook-v0.8.0.html` offline and select Chapter8. Seven textbook-first lessons connect PDK/layers/cells/ports to linked MZI schematic/layout/netlist, width/coupon-spacing DRC and endpoint graph comparison, hierarchy/test access and guided review. Properties supports numeric Apply/Close on narrow screens; JSON Study Report is distinct from learning Backup and is not GDS. This is SIPT-DEMO-1 teaching technology, not a foundry PDK or sign-off tool.
+
+Build: `npm run build`; Node/content/preservation: `npm test`; independent reference: `npm run test:ch8:independent`; browser: `npm run test:ch8:browser`. Reproduce Chapter7 with `npm run build:ch7`; other historical commands remain. Chapter1–7 source/releases preserved. See `docs/CH8_LEARNING_REVIEW.md`, QA, Model Contract and Source Mapping. PR8 remains Draft pending completed QA/user review; do not merge or start Chapter9 without explicit instruction.
