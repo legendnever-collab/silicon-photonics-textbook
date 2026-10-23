@@ -1,6 +1,6 @@
 # Chapter 9 validation
 
-Local Node181 tests PASS (159retained +22new), including independent geometry signs, edge factor2, group-index resonance condition, fixed-mode order, all-pass boundedness, common cancellation, gradient/separation/local algebra, grating product cross term and half-power width, geometry-only rounding, fixed corners, covariance degenerate cases, sanitation, all seven A–F lessons, ten finite SVG figure renderers, source/HTML manifests and byte preservation.
+Local Node182 tests PASS (159retained +23new), including independent geometry signs, edge factor2, group-index resonance condition, fixed-mode order, all-pass boundedness, common cancellation, gradient/separation/local algebra, grating product cross term and half-power width, geometry-only rounding, fixed corners, covariance degenerate cases, sanitation, all seven A–F lessons, ten finite SVG figure renderers, source/HTML manifests and byte preservation.
 
 Independent Python:48 states,1204 comparisons PASS; maximum absolute error6.821210263296962e−13. Solves dispersive phase roots and grating wavevector matching by bisection, compares independent complex field ratio for all-pass power, sigma-form Gaussian for grating power, and exact8-state covariance ensemble. See CH9_INDEPENDENT_VALIDATION.json. These are numerical consistency checks, not actual device/model validation.
 
