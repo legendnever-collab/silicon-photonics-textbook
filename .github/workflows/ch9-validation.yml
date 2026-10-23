@@ -37,7 +37,7 @@ jobs:
       - name: Browser dependencies
         run: |
           npm install --no-save --no-package-lock playwright@1.62.0
-          npx playwright install --with-deps chromium
+          npx playwright install chromium
       - name: Chapter9 browser matrix and integrated57 lessons
         env:
           CI_VISUAL_LOG: '1'
