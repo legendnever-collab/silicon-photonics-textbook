@@ -3,7 +3,7 @@
 기술 용어는 영어, 설명은 한글인 독립적인 Interactive Textbook입니다. 교재 설명 → Guided Tutor → Physics Notebook을 연결합니다. 게임이나 최적화 퍼즐을 중심으로 만들지 않습니다.
 
 ## Run offline
-현재 통합판 `dist/silicon-photonics-textbook-v0.8.0.html`을 다운로드한 후 Browser로 엽니다. HTML 하나에 Source·Content·모델이 포함되며 외부 Script/Font/API를 요청하지 않습니다. Source 파일 `src/index.html`은 Build Template입니다.
+현재 Chapter 10 검토용 통합판 `dist/silicon-photonics-textbook-v0.10.0.html`을 다운로드한 후 Browser로 엽니다. HTML 하나에 Source·Content·모델이 포함되며 외부 Script/Font/API를 요청하지 않습니다. Source 파일 `src/index.html`은 Build Template입니다.
 
 ## Reproduce
 Node.js 20 이상. Production Build에는 npm 의존성이 없습니다.
@@ -14,7 +14,7 @@ npm test
 npm run serve
 ```
 
-`http://localhost:8080/dist/silicon-photonics-textbook-v0.8.0.html`에서도 실행할 수 있습니다. Chapter 8 Browser QA는 Playwright와 Chromium이 설치된 환경에서 `npm run test:ch8:browser`로 수행합니다. `npm run test:browser`는 보존된 Chapter 1 검증입니다. Browser 의존성은 `tests/README.md`를 따릅니다.
+`http://localhost:8080/dist/silicon-photonics-textbook-v0.10.0.html`에서도 실행할 수 있습니다. Chapter 10 Browser QA는 Playwright와 Chromium이 설치된 환경에서 `npm run test:ch10:browser`로 수행합니다. `npm run test:browser`는 보존된 Chapter 1 검증입니다. Browser 의존성은 `tests/README.md`를 따릅니다.
 
 ## Learning review
 Chapter 1은 약 30–45분을 목표로 한 Pilot입니다. 실제 학습 시간과 교육 효과는 아직 사용자 검토가 필요합니다. 자동 테스트 통과와 학습 효과 검증을 구별합니다. Save/Resume는 같은 Origin/Browser의 Local Storage를 사용하며 기록 JSON으로 백업할 수 있습니다. 파일 위치/Browser가 바뀌면 자동으로 공유되지 않습니다.
@@ -30,7 +30,7 @@ Chapter 1은 약 30–45분을 목표로 한 Pilot입니다. 실제 학습 시�
 - `dist/`: Offline HTML, Build Info, SHA256
 - `checkpoints/`: 단계별 Offline HTML 보존
 
-아래 각 과거 Release의 승인 대기 문구는 당시 기록입니다. 현재 Chapter1–5는 병합 완료, Chapter6은 사용자 학습 검토 및 명시적 승인 전 main 병합 금지. Chapter7 자동 시작 금지. 저작권이 있는 교재 PDF·원본 그림·표는 포함하지 않습니다.
+아래 각 과거 Release의 승인 대기 문구는 당시 기록입니다. 현재 Chapter1–9는 병합 완료이며, Chapter10은 검토용 Draft PR #10입니다. Chapter10 병합은 사용자 승인 후 진행하고 Chapter11은 자동으로 시작하지 않습니다. 저작권이 있는 교재 PDF·원본 그림·표는 포함하지 않습니다.
 
 ## v0.1.1 · Figure & Physics Upgrade
 10개의 번호가 있는 Inline Figure를 추가했습니다. 기존 본문·Tutor·검증된 Analytical Model은 그대로 유지합니다. Figure별 Caption, 분류, 계산 조건, 한계와 모바일 확대를 제공합니다.
@@ -95,12 +95,12 @@ Static coherent single-mode models and synthetic fitting/cutback data are teachi
 ## Chapter 8 — Tools & Techniques (v0.8.0 learning review)
 Open `dist/silicon-photonics-textbook-v0.8.0.html` offline and select Chapter8. Seven textbook-first lessons connect PDK/layers/cells/ports to linked MZI schematic/layout/netlist, width/coupon-spacing DRC and endpoint graph comparison, hierarchy/test access and guided review. Properties supports numeric Apply/Close on narrow screens; JSON Study Report is distinct from learning Backup and is not GDS. This is SIPT-DEMO-1 teaching technology, not a foundry PDK or sign-off tool.
 
-Build: `npm run build`; Node/content/preservation: `npm test`; independent reference: `npm run test:ch8:independent`; browser: `npm run test:ch8:browser`. Reproduce Chapter7 with `npm run build:ch7`; other historical commands remain. Chapter1–7 source/releases preserved. See `docs/CH8_LEARNING_REVIEW.md`, QA, Model Contract and Source Mapping. PR8 remains Draft pending completed QA/user review; do not merge or start Chapter9 without explicit instruction.
+Build: `npm run build`; Node/content/preservation: `npm test`; independent reference: `npm run test:ch8:independent`; browser: `npm run test:ch8:browser`. Reproduce Chapter7 with `npm run build:ch7`; other historical commands remain. Chapter1–7 source/releases preserved. See `docs/CH8_LEARNING_REVIEW.md`, QA, Model Contract and Source Mapping. PR8 and PR9 were merged after user approval; their checkpoint documents retain the original review history.
 
 
-## Chapter 9 Fabrication — review candidate
+## Chapter 9 Fabrication — merged release
 
-`npm run build` builds `dist/silicon-photonics-textbook-v0.9.0.html`:57lessons across Chapters1–9. Chapter8/9 were merged by user approval; the Chapter9 checkpoint preserves its original review history. Seven A–F lessons,10original SVG figures, shared geometry/contour/corners/spatial/ring/grating lab, numeric Properties, JSON study report and v9 backup migration. SIPT-FAB-1 is independent teaching assumptions, not measured/foundry distributions or yield. See `notebook/CH9_MODEL_CONTRACT.md`, `docs/CH9_TEXTBOOK_SOURCE_MAPPING.md`, `docs/CH9_VALIDATION.md`, `docs/CH9_QA_REPORT.md` and `docs/CH9_LEARNING_REVIEW.md`.
+`npm run build:ch9` builds `dist/silicon-photonics-textbook-v0.9.0.html`:57lessons across Chapters1–9. Chapter8/9 were merged by user approval; the Chapter9 checkpoint preserves its original review history. Seven A–F lessons,10original SVG figures, shared geometry/contour/corners/spatial/ring/grating lab, numeric Properties, JSON study report and v9 backup migration. SIPT-FAB-1 is independent teaching assumptions, not measured/foundry distributions or yield. See `notebook/CH9_MODEL_CONTRACT.md`, `docs/CH9_TEXTBOOK_SOURCE_MAPPING.md`, `docs/CH9_VALIDATION.md`, `docs/CH9_QA_REPORT.md` and `docs/CH9_LEARNING_REVIEW.md`.
 
 Checks: `npm test`, `npm run test:ch9:independent`, `python3 scripts/audit-ch9-font.py`, `npm run test:ch9:browser`. Prior releases/build scripts and archived assertions preserved. Verified local Node182, independent Python1204comparisons and Browser378(67new+311archived) PASS; runtime/console/network/SVG bounds errors0. CI and exact artifact hash are recorded in `docs/CH9_RELEASE_CHECKPOINT.json` and `docs/CH9_QA_REPORT.md`. No automatic merge or next chapter start.
 

@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "runtimeHead": "c90f797ef1b1c4885457f008aafcda81b6843f82",
+  "workflowRun": 40004450517,
+  "event": "push",
+  "url": "https://github.com/legendnever-collab/silicon-photonics-textbook/actions/runs/40004450517",
+  "htmlSha256": "c925a0bdfe801fa3aeb947f46d49c1703a0ab0df10b2a98d3ade47757508aef2",
+  "node": 208,
+  "independentComparisons": 1416,
+  "newBrowser": 83,
+  "archivedBrowser": 378,
+  "totalBrowser": 461,
+  "browser": "151.0.7922.34",
+  "playwright": "1.62.0",
+  "deterministicBuild": true,
+  "releaseHashes": "PASS",
+  "duplicateRetainedWorkflowObservation": {
+    "run": 40004456472,
+    "chapter7Matrix": "PASS",
+    "failure": "Unchanged archived Chapter3 Save/Resume reload timed out; identical test passed in the corresponding full Chapter10 CI and local originals",
+    "archivedAssertionsChanged": false
+  }
+}

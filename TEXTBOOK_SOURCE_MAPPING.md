@@ -83,7 +83,7 @@ Original Chapter10 pp349–366: [mapping](docs/CH8_TEXTBOOK_SOURCE_MAPPING.md). 
 
 ## App Chapter9 — Original Chapter11 Fabrication
 
-Original11.1(non-uniformity368),11.1.1(contours369),11.1.2(corner370),11.1.3(on-chip experimental results372;ring373;grating377),11.2(problems379) map to app9.1–9.7. Official contents verified; full chapter and measurements not accessed/reproduced. Independent explanations, worked examples, SVG and declared teaching models. Detailed coverage/limits: `docs/CH9_TEXTBOOK_SOURCE_MAPPING.md`. Next appChapter10 maps originalChapter12 Testing and packaging381. Chapter9 is a separately reviewed feature depending on unmerged Chapter8.
+Original11.1(non-uniformity368),11.1.1(contours369),11.1.2(corner370),11.1.3(on-chip experimental results372;ring373;grating377),11.2(problems379) map to app9.1–9.7. Official contents verified; full chapter and measurements not accessed/reproduced. Independent explanations, worked examples, SVG and declared teaching models. Detailed coverage/limits: `docs/CH9_TEXTBOOK_SOURCE_MAPPING.md`. Next appChapter10 maps originalChapter12 Testing and packaging381. Chapter8 and Chapter9 were separately reviewed and merged after user approval.
 
 
 ## App Chapter10 — Original Chapter12 Testing and packaging
