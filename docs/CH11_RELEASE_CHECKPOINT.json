@@ -1,0 +1,132 @@
+{
+  "version": "0.11.0",
+  "status": "RUNTIME_VERIFIED_DRAFT_LEARNING_REVIEW",
+  "verifiedAt": "2026-10-25 Asia/Seoul",
+  "repository": "legendnever-collab/silicon-photonics-textbook",
+  "branch": "feature/ch11-system-example",
+  "base": "main",
+  "verifiedMainHead": "53e12bdd053083a04ff4d94ae4f69fb7e2597e43",
+  "verifiedRuntimeHead": "d096da73722d2d202a5c4e949688d6ba4d920970",
+  "finalizationHead": {
+    "resolution": "The commit containing this checkpoint (git log -1 --format=%H -- docs/CH11_RELEASE_CHECKPOINT.json); exact final PR head is recorded in the PR body/checks.",
+    "scope": "Documentation only; all runtime/source/test/dist blobs unchanged from verifiedRuntimeHead.",
+    "ci": "Verify the containing/final PR head separately; no later-head success is inferred from runtime CI. Exact result and run URL are recorded in the PR body after completion."
+  },
+  "runtimeCi": {
+    "url": "https://github.com/legendnever-collab/silicon-photonics-textbook/actions/runs/40075540868",
+    "head": "d096da73722d2d202a5c4e949688d6ba4d920970",
+    "status": "completed",
+    "conclusion": "success",
+    "jobId": 120817960139,
+    "completedAt": "2026-10-24T07:58:29Z",
+    "evidence": "Run metadata, successful steps and decoded job logs inspected during recovery.",
+    "artifactId": 12553386970
+  },
+  "html": {
+    "path": "dist/silicon-photonics-textbook-v0.11.0.html",
+    "sha256": "1ff93ff3175a26ec4c4adc19c23b76d549dffac1bad7f51c760e6856a32bed1b",
+    "deterministicBuild": "PASS; byte-identical recovery rebuild; existing runtime retained"
+  },
+  "validation": {
+    "originalLocal": {
+      "node": 234,
+      "independentComparisons": 28032,
+      "newBrowser": 84,
+      "retainedBrowser": 461,
+      "totalBrowser": 545,
+      "chromium": "153.0.8010.0",
+      "fontRequired": 349,
+      "fontMissing": 0,
+      "priorFileManifestPreserved": 423
+    },
+    "hostedRuntime": {
+      "node": 234,
+      "independentComparisons": 28032,
+      "fontRequired": 349,
+      "fontMissing": 0,
+      "newBrowser": 84,
+      "historicalBrowserCommands": "all succeeded",
+      "deterministicBuild": "PASS",
+      "retainedReleaseHashChecks": [
+        "0.11.0",
+        "0.10.0",
+        "0.9.0",
+        "0.8.0",
+        "0.7.0"
+      ],
+      "reviewArtifactUpload": "success"
+    },
+    "recoveryLocal": {
+      "node": 234,
+      "nodeFailed": 0,
+      "independentComparisons": 28032,
+      "independentMaxAbsoluteError": 2.935488901652586e-14,
+      "fontRequired": 349,
+      "fontMissing": 0,
+      "deterministicBuild": "PASS",
+      "allExistingDistFilesPreserved": 38,
+      "remoteMainTrackedFiles": 589,
+      "remoteMainFilesPreserved": 586,
+      "metadataExceptions": [
+        "README.md",
+        "TEXTBOOK_SOURCE_MAPPING.md",
+        "package.json"
+      ],
+      "unexpectedPriorFileChanges": 0,
+      "browserRerun": false
+    },
+    "browserMatrix": {
+      "viewports": [
+        "1440x900",
+        "1366x768",
+        "390x844",
+        "320x740"
+      ],
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "mobile": "viewport emulation; no physical Android-device test in recovery",
+      "reportedRuntimeConsoleNetworkSvgErrors": 0
+    }
+  },
+  "implementation": {
+    "lessons": 72,
+    "newLessons": 7,
+    "figures": 12,
+    "notebookViews": 6,
+    "carriers": 4,
+    "staticBitPatterns": 16,
+    "reusedModels": [
+      "Chapter3",
+      "Chapter5",
+      "Chapter7",
+      "Chapter9"
+    ],
+    "runtimeChangesInFinalization": false,
+    "assertionsChanged": false
+  },
+  "sourceMapping": "docs/CH11_TEXTBOOK_SOURCE_MAPPING.md",
+  "modelContract": "notebook/CH11_MODEL_CONTRACT.md",
+  "userReviewGuide": "docs/CH11_LEARNING_REVIEW.md",
+  "limitations": [
+    "Independent static synthetic fixture, not measured hardware performance",
+    "No time-domain eye, BER or signal-integrity qualification",
+    "No thermal-controller dynamics, foundry calibration or measured crosstalk",
+    "No full-wave EM or real packaging reliability validation",
+    "Static opening is not validated link performance; no universal architecture ranking",
+    "Mobile automation uses viewport emulation; learning usefulness requires user review"
+  ],
+  "userReviewChecklist": [
+    "11.1 frequency/wavelength grid",
+    "11.2 resonance and bit state",
+    "11.3 Common-bus alias data dependence",
+    "11.4 Mod-Mux passive filter penalty",
+    "11.5 detuning and separate noiseless mod/mux tuning",
+    "11.6 tap/alignment/polarization budget and monitor current",
+    "11.7 Current/Frozen/Stale/re-acquisition/JSON Report",
+    "Mobile Properties Apply/Close, Figure Zoom, Light/Dark and Backup/Restore"
+  ],
+  "mergeApproved": false,
+  "nextChapterStarted": false
+}
