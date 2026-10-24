@@ -1,0 +1,66 @@
+{
+  "id": "11.6",
+  "short": "Budget & Monitoring",
+  "title": "Count Each Loss Once and Ask What the Monitor Knows",
+  "time": "18–25분",
+  "lead": "광학 경로별 Power와 Output Tap Current를 연결하고 관찰 가능한 정보를 구별합니다.",
+  "question": "Total Monitor Current 하나로 네 Channel의 Alignment를 모두 알 수 있을까요?",
+  "prediction": "현재 설정에서 무엇이 바뀔까요?",
+  "reflection": "Power Sum과 Channel-resolved 정보의 차이, Output Tap의 관찰 이득과 Power 비용을 설명하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "wdm",
+      "html": "<p>Optical Power가 줄어드는 위치와 그것을 관찰하는 위치가 분명해야 Test와 제어를 설계할 수 있습니다. Chapter 10의 Reference Plane 관점을 WDM 경로에 적용하고 Chapter 5의 Detector Responsivity를 재사용합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "wdm",
+      "html": "<p>각 Carrier에서 Fiber Source→Input Coupling→Ring/Routing와 Bus Segment→Output Tap→Output Coupling을 순서대로 기록합니다. 두 Architecture는 같은 Input/Output Coupling을 사용하지만 경로상 Ring과 Segment 수는 다릅니다. Mod-Mux의 앞쪽 Branch는 뒤쪽 Add Filter를 더 많이 지나므로 Channel별 Output이 달라도 계산 오류는 아닙니다.</p><p>Output Tap은 Coupling 전 Bus Power의 지정 비율을 Monitor로 보냅니다. 이를 실제로 전달 경로에서 빼고 나머지를 Output Coupling에 입력합니다. Detector Current는 각 λ에서 ηqλ/(hc)로 계산한 Responsivity와 Tap Power를 곱해 합합니다. Quantum Efficiency=0.8, Gain=1의 평균 Current이며 TIA, Noise와 Electrical Bandwidth는 포함하지 않습니다.</p><p>한 Aggregate Current는 네 Carrier의 합성 정보입니다. 같은 Total을 만드는 다른 Channel 조합이 가능하므로 그 값만으로 각 Resonance를 식별했다고 주장할 수 없습니다. Notebook의 Tune은 Source가 켜져 있을 때 Selected Channel의 이상적 Nonloading Model Probe를 81개 지점에서 탐색합니다. 실제 Sensor/Thermal Closed-loop 알고리즘이 아니며 Probe 자체의 Tap Loss도 실제 소자로 구현한 것이 아닙니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "wdm",
+      "html": "<div class=\"equation\">P_tap=τP_bus; P_out=(1−τ)η_outP_bus; I_monitor=ΣₖR(λₖ)P_tap,k</div><p>기호와 Reference Plane을 확인하세요. 수치는 SIPT-WDM-1의 독립 가정이며 실제 Device Parameter 추출이나 High-speed Link 검증이 아닙니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>독립 예제로 Bus=1 mW, Tap=2%, Output η=0.6이면 Monitor는 0.02 mW, Output은 0.98×0.6=0.588 mW입니다. Output Coupling에서 제외된 Power는 0.392 mW이므로 0.02+0.588+0.392=1 mW입니다. λ1550 nm, ηQE=0.8에서 R≈1 A/W이므로 20 µW의 Monitor Current는 약 20 µA입니다. 실제 수치는 각 Carrier의 λ로 따로 계산합니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "경로와 가정을 생각합니다",
+      "scene": "wdm",
+      "html": "<p>Output Tap을 2%에서 10%로 늘리면 이 모델에서 무엇이 달라지나요?</p><p>먼저 광학 경로와 가정을 자신의 말로 설명한 뒤 선택하고 Feedback과 비교하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 확인합니다",
+      "scene": "wdm",
+      "html": "<p>Power Budget에서 Selected Channel과 Architecture를 바꾸며 단계 수를 읽으세요. Tap을 0→10%로 늘리고 Monitor Current와 Output의 반대 방향 변화를 확인하세요. Source Off에서 Tune이 보류되는지 확인한 뒤 Source를 복구하고 Drift Scenario의 Selected Mod/Mux를 순서대로 Tune하세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "wdm",
+      "html": "<p>Monitor는 정보를 얻는 대신 Power를 사용합니다. 합성 Current와 Channel별 관측을 구별하고, 모델 탐색과 실제 안정화의 증거 수준을 나누어 설명해야 합니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Tap을 늘리면 Monitor Current가 증가하고 전달 Output이 감소함",
+    "Tap은 Source를 증폭하므로 두 Power가 모두 증가함",
+    "Source Off에서도 실제 관측 없이 Tune 성공을 측정했다고 표시함"
+  ],
+  "predictionFeedback": "Tap은 Passive 분기입니다. Source가 켜진 같은 조건에서 Monitor와 전달 경로 사이에 Power Trade-off가 생깁니다. Source Off에서는 모델 Tune 액션을 보류합니다.",
+  "sources": [
+    "W0",
+    "W1",
+    "W2"
+  ]
+}

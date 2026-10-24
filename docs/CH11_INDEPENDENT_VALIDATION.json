@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "states": 32,
+  "architectures": 2,
+  "patternsPerState": 16,
+  "channels": 4,
+  "comparisons": 28032,
+  "maxAbsoluteError": 2.935488901652586e-14,
+  "tolerance": 3e-10,
+  "method": "Independent real all-pass power expression; lossless add-drop power conservation; explicit frequency/wavelength and per-stage dB sum; Gaussian/Jones/grating chain; exact-SI photocurrent; exhaustive binary state and matrix enumeration",
+  "scope": "Consistency of declared static synthetic assumptions, not link bandwidth, BER, hardware or measured accuracy"
+}

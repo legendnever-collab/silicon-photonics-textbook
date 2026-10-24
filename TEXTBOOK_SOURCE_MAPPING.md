@@ -89,3 +89,8 @@ Original11.1(non-uniformity368),11.1.1(contours369),11.1.2(corner370),11.1.3(on-
 ## App Chapter10 — Original Chapter12 Testing and packaging
 
 Original12.1optical/electrical interfaces381–388,12.2station/parts/software/registration/testing/equipment389–397,12.3DFT/power/layout/review398–404 map to8app lessons10.1–10.8. All optical interface types and pads/probing/wire bond/flip-chip are covered conceptually; Gaussian alignment is introduced early as a prerequisite and revisited with registration. Independent synthetic examples, not original measured data or paid-text replication. Detailed mapping/deferrals: `docs/CH10_TEXTBOOK_SOURCE_MAPPING.md`; formula/units/scope: `notebook/CH10_MODEL_CONTRACT.md`. Next appChapter11 maps originalChapter13System Example406–412; no automatic development.
+
+
+## App Chapter11 — Original Chapter13 Silicon photonic system example
+
+Original13.1WDM406,13.1.1Ring architectures406,13.1.2Common-bus408,13.1.3Mod-Mux410 and13.1.4Conclusion411 map to seven app lessons.11.5/11.6 are explicit educational additions connecting detuning/all-state comparison and budget/monitoring to earlier chapters before the conclusion. Full paid chapter/figures/data not accessed. Independent explanations/parameters/SVG, with inventor technical disclosure and published OFC abstract as qualitative support. Details: `docs/CH11_TEXTBOOK_SOURCE_MAPPING.md`; equations/units/reuse/limits: `notebook/CH11_MODEL_CONTRACT.md`. Original book ends with Chapter13; no invented next original chapter.

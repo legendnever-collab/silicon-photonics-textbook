@@ -1,0 +1,66 @@
+{
+  "id": "11.7",
+  "short": "System Review",
+  "title": "Compare Architectures With the Same Assumptions",
+  "time": "18–25분",
+  "lead": "동일 조건의 Architecture 비교를 저장하고 변화의 원인을 근거와 함께 정리합니다.",
+  "question": "한 Architecture가 이 모델에서 좋아 보이면 모든 System에 더 좋은 선택일까요?",
+  "prediction": "현재 설정에서 무엇이 바뀔까요?",
+  "reflection": "두 Architecture의 장점 하나와 남은 검증 항목 하나씩을 실제 경로와 연결해 설명하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "wdm",
+      "html": "<p>원본 교재의 마지막 System Example은 개별 Component를 연결해 Architecture를 판단하는 단계입니다. 마지막 Lesson에서는 결과 숫자와 그 숫자를 만든 가정을 함께 남겨 다른 조건과 섞이지 않게 합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "wdm",
+      "html": "<p>같은 네 Carrier, Per-carrier Source, Coupling, Ring 상태와 Bus Segment Loss를 사용해 Common-bus와 Mod-Mux를 비교합니다. Common-bus는 모든 Active Ring을 공유하고 Mod-Mux는 Active 경로를 분리한 대신 Passive Add/Through 경로가 추가됩니다. 단순히 Ring 수가 많거나 Off-diagonal이 작다는 사실만으로 전체 System 우열을 정하지 않습니다.</p><p>Save Comparison은 현재 Physical 설정의 두 Architecture와 16개 상태 비교를 Frozen Snapshot으로 남깁니다. 설정이나 Scenario를 바꾸면 이전 비교가 Stale로 남고, 다시 Save할 때 명시적으로 교체됩니다. Architecture, 관찰 Channel, View와 표시 Bit Pattern만 바꾸는 것은 같은 전수 비교의 관찰 방법이므로 Snapshot을 Stale로 만들지 않습니다.</p><p>JSON Study Report는 현재 Grid, 경로, Static Opening, Cross-modulation Matrix와 저장된 비교의 조건/상태를 담습니다. Learning Backup은 메모와 Tutor, 완료 기록까지 복구하는 별도 파일입니다. 보고서의 Synthetic Scope를 확인하세요. 실제 Link에는 Dynamic EO Response, Sideband Filtering, Laser Noise, Thermal Crosstalk, Receiver, Package/Test Uncertainty 검증이 추가로 필요합니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "wdm",
+      "html": "<div class=\"equation\">Architecture evidence = topology + reference planes + state combinations + assumptions</div><p>기호와 Reference Plane을 확인하세요. 수치는 SIPT-WDM-1의 독립 가정이며 실제 Device Parameter 추출이나 High-speed Link 검증이 아닙니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>FSR=300 GHz, Channel Spacing=100 GHz의 Comparison을 저장한 뒤 FSR=800 GHz로 바꾸세요. 이전 결과는 Alias 조건을 유지한 Stale Snapshot입니다. Architecture만 바꿔도 과거 결과가 새 조건으로 덮어써지는 일은 없습니다. 새 Comparison을 저장한 뒤 JSON에서 두 Architecture의 Matrix와 Scope를 확인하세요.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "경로와 가정을 생각합니다",
+      "scene": "wdm",
+      "html": "<p>다른 설정으로 바꾼 뒤 이전 Comparison이 Stale이면 어떻게 해석해야 하나요?</p><p>먼저 광학 경로와 가정을 자신의 말로 설명한 뒤 선택하고 Feedback과 비교하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 확인합니다",
+      "scene": "wdm",
+      "html": "<p>Reference→FSR Alias→Drift/Mismatch→Filter Offset 네 Scenario를 비교하세요. 각 경우에 어떤 경로가 원인인지 한 문장씩 적고 Save Comparison→설정 변경→Stale→Save→JSON Report 순서로 마무리하세요. Light/Dark와 저장 복원을 포함해 자신의 학습 기록도 확인하세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "wdm",
+      "html": "<p>Chapter 1–11은 Waveguide에서 WDM System Example까지 연결했습니다. 다음 탐구에서는 실제 조건에 필요한 모델과 관측이 무엇인지 먼저 정하고, 검증 범위에 맞는 결론을 내립니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Physical 설정 변경은 이전 Snapshot을 보존하며 Stale로 표시함",
+    "View만 바꾸면 반드시 새 물리 모델이 됨",
+    "저장된 Synthetic Report가 실제 측정 데이터로 바뀜"
+  ],
+  "predictionFeedback": "Physical 설정이 달라지면 과거 조건을 그대로 남기고 Stale로 표시합니다. View/관찰 Channel/Architecture는 같은 전수 비교를 보는 선택이며 Synthetic Scope도 그대로입니다.",
+  "sources": [
+    "W0",
+    "W1",
+    "W2"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "11.5",
+  "short": "Detuning & Interaction",
+  "title": "A Good Nominal Trace Can Hide a Bad State Combination",
+  "time": "18–25분",
+  "lead": "16개 정적 Bit 조합과 Detuning을 함께 비교해 독립 Channel의 조건을 찾습니다.",
+  "question": "모든 Bit가 1일 때 Output이 충분하면 다른 조합도 안전할까요?",
+  "prediction": "현재 설정에서 무엇이 바뀔까요?",
+  "reflection": "Nominal OMA와 모든 다른 Bit 조합을 포함한 Static Opening의 차이를 설명하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "wdm",
+      "html": "<p>하나의 밝은 Trace만 보면 Alias와 Bias 문제를 놓칠 수 있습니다. System은 Data 조합이 바뀌면서 동작하므로 같은 관찰 Carrier에도 여러 Output Level이 생길 수 있습니다. 이 Lesson은 모든 조합을 전수 비교하는 이유를 배웁니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "wdm",
+      "html": "<p>Carrier k의 자기 Bit가 0인 여덟 조합에서 Low의 Min/Max를, 자기 Bit가 1인 여덟 조합에서 High의 Min/Max를 얻습니다. Static Opening은 min(High)−max(Low)입니다. High/Low는 Bit Label이며, Detuning이 Polarity를 뒤집으면 Opening이 음수가 될 수 있습니다. 이를 임의로 0으로 잘라 성공처럼 표시하지 않습니다.</p><p>Nominal OMA는 다른 세 Bit를 모두 1로 고정하고 자기 Bit만 바꾼 Power 차이입니다. 모든 조합의 Static Opening과 같을 필요가 없습니다. 특히 Common-bus Alias에서는 Nominal High가 좋아도 다른 Bit 하나가 Carrier를 억제할 수 있습니다. 실제 시간축 Eye를 계산하지 않으므로 이 수치를 Eye Height나 BER Margin이라고 부르지 않습니다.</p><p>Drift는 네 Modulator와 네 Mux의 Resonance를 함께 이동시키는 GHz 단위 가정입니다. Mismatch는 고정된 Channel Pattern에 다른 Offset을 줍니다. Probability/Temperature Calibration을 뜻하지 않습니다. Filter Offset은 Mod-Mux Layer만 별도로 이동시킵니다. 구조 비교 중 Source, Coupling과 Bus 조건을 같게 유지해야 원인을 읽을 수 있습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "wdm",
+      "html": "<div class=\"equation\">Static Openingₖ=min(Pₖ|bₖ=1)−max(Pₖ|bₖ=0)</div><p>기호와 Reference Plane을 확인하세요. 수치는 SIPT-WDM-1의 독립 가정이며 실제 Device Parameter 추출이나 High-speed Link 검증이 아닙니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>High의 범위가 0.25–0.30 mW, Low가 0.02–0.08 mW라면 Static Opening은 0.25−0.08=0.17 mW입니다. 한 Nominal 조합에서 0.30−0.02=0.28 mW를 얻어도 0.17 mW 조건이 사라지지는 않습니다. 반대로 High Min=0.04, Low Max=0.07이면 −0.03 mW이며 가정한 Bit Polarity에서 범위가 겹칩니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "경로와 가정을 생각합니다",
+      "scene": "wdm",
+      "html": "<p>Static Opening이 음수이면 올바른 해석은 무엇인가요?</p><p>먼저 광학 경로와 가정을 자신의 말로 설명한 뒤 선택하고 Feedback과 비교하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 확인합니다",
+      "scene": "wdm",
+      "html": "<p>FSR Alias에서 Common-bus CH1의 Nominal OMA와 Static Opening을 비교하세요. 이후 Drift/Mismatch Scenario로 바꾸고 Selected Channel의 Modulator Tune을 움직여 두 상태의 Through를 확인하세요. 단순히 평균 Output을 최대화하는 것이 목적에 맞는지도 생각해 보세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "wdm",
+      "html": "<p>Nominal OMA는 한 조건의 차이입니다. 다른 Channel의 상태와 Detuning을 함께 볼 때 독립적인 정적 Modulation 범위를 더 명확히 설명할 수 있습니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "다른 Bit를 포함한 Worst Static Opening은 Nominal OMA보다 작을 수 있음",
+    "모든 Bit=1의 Output 하나면 모든 조합을 대표함",
+    "음수 Opening은 반드시 계산 오류임"
+  ],
+  "predictionFeedback": "전수 비교는 다른 Bit 조건을 포함하므로 하나의 Nominal 결과보다 제한적인 Opening을 보일 수 있습니다. 음수도 정의에 맞는 유효한 결과입니다.",
+  "sources": [
+    "W0",
+    "W1",
+    "W2"
+  ]
+}

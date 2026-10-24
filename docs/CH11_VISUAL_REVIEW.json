@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "htmlSha256": "1ff93ff3175a26ec4c4adc19c23b76d549dffac1bad7f51c760e6856a32bed1b",
+  "browser": "153.0.8010.0",
+  "review": "All distinct renderers inspected: frequency grid, Common-bus path, separated Mod-Mux path, spectrum, data interaction matrix, finite tuning scan, budget and architecture comparison. Mobile Properties sticky footer and scrollable zoom inspected. Long budget figure is scrollable in the reading pane; viewport screenshot may show only part of it. Mobile is viewport emulation, not a physical phone.",
+  "screenshots": [
+    {
+      "file": "artifacts/v0.11.0/figure-11-1A.jpg",
+      "sha256": "edabfd621fff7518cbaf78509bde7f3bd5ac7406849418a23fcb23becdcd3c82"
+    },
+    {
+      "file": "artifacts/v0.11.0/figure-11-1B.jpg",
+      "sha256": "1df73457feb3b6da64e0c570ed2e0d3ef63ff2379734d67fd22aec6b40f0e6e3"
+    },
+    {
+      "file": "artifacts/v0.11.0/figure-11-2A.jpg",
+      "sha256": "371c47287ddedc520014f782c2ad6f0883f7976e847efb040e9b7309eb1e4edf"
+    },
+    {
+      "file": "artifacts/v0.11.0/figure-11-2B.jpg",
+      "sha256": "371c47287ddedc520014f782c2ad6f0883f7976e847efb040e9b7309eb1e4edf"
+    },
+    {
+      "file": "artifacts/v0.11.0/figure-11-3A.jpg",
+      "sha256": "616b69ef538f4042d36b2bc726aa3ee6a9701703ec25cfeaa21a201f323ec1cd"
+    },
+    {
+      "file": "artifacts/v0.11.0/figure-11-3B.jpg",
+      "sha256": "74ba92b93e1bccfe6a5628ecfcaf9d10d5d8ed745120d4755fae797f8a5ae90f"
+    },
+    {
+      "file": "artifacts/v0.11.0/figure-11-4A.jpg",
+      "sha256": "993b9f2f99b4112ef61461520ae2dd79618b92ba9564b497240b7cb9279f1307"
+    },
+    {
+      "file": "artifacts/v0.11.0/figure-11-4B.jpg",
+      "sha256": "9a0d224e29f611d74fe4772523bd65c65f6df2f400c9f097fc5ef3bb6a22f4b7"
+    },
+    {
+      "file": "artifacts/v0.11.0/figure-11-5A.jpg",
+      "sha256": "d6b41335c832471a17b11275c8b7711ecbf5af7b8f16ecd16e704e690eee8922"
+    },
+    {
+      "file": "artifacts/v0.11.0/figure-11-5B.jpg",
+      "sha256": "8496bf37c4d1f657b7d342da088105a159f3194e84f9d7b3276a6347ce11b678"
+    },
+    {
+      "file": "artifacts/v0.11.0/figure-11-6A.jpg",
+      "sha256": "86cd97328405ff8dfe66706daf8cb91a2a54d85f688a848a9b52b32181cdeb77"
+    },
+    {
+      "file": "artifacts/v0.11.0/figure-11-7A.jpg",
+      "sha256": "dffe4c7590dde997304b6c46b64dcf0a697fc82701472b7b5511f050b5f8c4ea"
+    },
+    {
+      "file": "artifacts/v0.11.0/properties-320-dark.jpg",
+      "sha256": "56411f57de33cba97210b49182ac42a1dd9139abf0bc2285e56a5b11b26a3b52"
+    },
+    {
+      "file": "artifacts/v0.11.0/properties-320-light.jpg",
+      "sha256": "f085a0143873fe4498d1e7147b17e910ec2a444e62544968d2695e57d1a79d1f"
+    },
+    {
+      "file": "artifacts/v0.11.0/properties-390-dark.jpg",
+      "sha256": "5580b85e41fe9925468f33f5185a9eacad9a8b47272043979511f82215d0863c"
+    },
+    {
+      "file": "artifacts/v0.11.0/properties-390-light.jpg",
+      "sha256": "6e84dbbfd9878de85f022a3c783cc52c0685d509926fd287a677ea5f66b72a6d"
+    },
+    {
+      "file": "artifacts/v0.11.0/spectrum-1366-dark.jpg",
+      "sha256": "0b96c54841251c63e367dd5937b1988ca8996b886a7fc96617eb25a79f7d4252"
+    },
+    {
+      "file": "artifacts/v0.11.0/spectrum-1366-light.jpg",
+      "sha256": "5328cb9f6237e59e61499cf393a9787f507ad391fb26f5eb6d0ecd8ca72528be"
+    },
+    {
+      "file": "artifacts/v0.11.0/spectrum-1440-dark.jpg",
+      "sha256": "40a2beef05f911dc0f927fe5328d7419c79db04efc456dfc69f2558bdafa409b"
+    },
+    {
+      "file": "artifacts/v0.11.0/spectrum-1440-light.jpg",
+      "sha256": "92a7f61abf9cb6ac912e62a3845c14612695c2d3ba6f18a57963f93211e1e57e"
+    },
+    {
+      "file": "artifacts/v0.11.0/spectrum-320-dark.jpg",
+      "sha256": "ea8a1969cdbbeb6ee1a4a90532314a49f923f56c5f5ff8d30d912163d0d45ac5"
+    },
+    {
+      "file": "artifacts/v0.11.0/spectrum-320-light.jpg",
+      "sha256": "c5e2cd699e2f84852139b374f4dccda4c5f1a3f7c3819fcbf0a9d5e6cc7e370a"
+    },
+    {
+      "file": "artifacts/v0.11.0/spectrum-390-dark.jpg",
+      "sha256": "2af33e51f116f427a636b250999ff590318e2218940b969cd12058cf0acf8697"
+    },
+    {
+      "file": "artifacts/v0.11.0/spectrum-390-light.jpg",
+      "sha256": "1753a84d66e113f252a4cf694ca6d7cec428d93ee1d72e7f1490db42b9bb20f6"
+    },
+    {
+      "file": "artifacts/v0.11.0/zoom-320-dark.jpg",
+      "sha256": "337808145ba6540df8000cdced7e1ec37dd1d686764b36df420ffbac6cac7127"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "question": "Static Opening이 음수이면 올바른 해석은 무엇인가요?",
+  "choices": [
+    {
+      "text": "이 정적 상태와 Bit Polarity에서 High/Low 범위가 겹칩니다.",
+      "feedback": "맞습니다. 값을 지우지 말고 Detuning, 상태 의존성과 Polarity를 점검해야 합니다.",
+      "correct": true
+    },
+    {
+      "text": "음수를 0으로 바꾸면 정상 동작이 입증됩니다.",
+      "feedback": "표시를 바꿔도 겹침은 사라지지 않습니다. 원래 값을 유지해 원인을 찾아야 합니다.",
+      "correct": false
+    },
+    {
+      "text": "정확한 BER 값이 바로 계산된 것입니다.",
+      "feedback": "시간축 응답, Noise와 Receiver 판정이 없습니다. 이 Static Opening은 BER이 아닙니다.",
+      "correct": false
+    }
+  ],
+  "why": "하나의 밝은 Trace만 보면 Alias와 Bias 문제를 놓칠 수 있습니다. System은 Data 조합이 바뀌면서 동작하므로 같은 관찰 Carrier에도 여러 Output Level이 생길 수 있습니다. 이 Lesson은 모든 조합을 전수 비교하는 이유를 배웁니다. Carrier k의 자기 Bit가 0인 여덟 조합에서 Low의 Min/Max를, 자기 Bit가 1인 여덟 조합에서 High의 Min/Max를 얻습니다. Static Opening은 min(High)−max(Low)입니다. High/Low는 Bit Label이며, Detuning이 Polarity를 뒤집으면 Opening이 음수가 될 수 있습니다. 이를 임의로 0으로 잘라 성공처럼 표시하지 않습니다.",
+  "simple": "Nominal OMA는 다른 세 Bit를 모두 1로 고정하고 자기 Bit만 바꾼 Power 차이입니다. 모든 조합의 Static Opening과 같을 필요가 없습니다. 특히 Common-bus Alias에서는 Nominal High가 좋아도 다른 Bit 하나가 Carrier를 억제할 수 있습니다. 실제 시간축 Eye를 계산하지 않으므로 이 수치를 Eye Height나 BER Margin이라고 부르지 않습니다.",
+  "math": "Static Openingₖ=min(Pₖ|bₖ=1)−max(Pₖ|bₖ=0) High의 범위가 0.25–0.30 mW, Low가 0.02–0.08 mW라면 Static Opening은 0.25−0.08=0.17 mW입니다. 한 Nominal 조합에서 0.30−0.02=0.28 mW를 얻어도 0.17 mW 조건이 사라지지는 않습니다. 반대로 High Min=0.04, Low Max=0.07이면 −0.03 mW이며 가정한 Bit Polarity에서 범위가 겹칩니다.",
+  "notebook": "FSR Alias에서 Common-bus CH1의 Nominal OMA와 Static Opening을 비교하세요. 이후 Drift/Mismatch Scenario로 바꾸고 Selected Channel의 Modulator Tune을 움직여 두 상태의 Through를 확인하세요. 단순히 평균 Output을 최대화하는 것이 목적에 맞는지도 생각해 보세요. Nominal OMA와 모든 다른 Bit 조합을 포함한 Static Opening의 차이를 설명하세요."
+}

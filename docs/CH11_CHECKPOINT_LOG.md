@@ -1,0 +1,6 @@
+# Chapter 11 checkpoint log
+
+- D0: verified merged main53e12bdd053083a04ff4d94ae4f69fb7e2597e43, remote tree72388c53128dd6e33030e82e932c995bfa904331. Created feature/ch11-system-example directly from remote main. Isolated local worktree starts at equivalent represented source baseline78b415f; remote history/base tree remains authoritative. Local prior baseline426files;423preserved plus3allowed metadata updates.
+- D1: official originalChapter13 section mapping verified. Implemented7A–Flessons/tutors,12SVGfigures,6Notebookviews,4carrier/all16state Common-bus/Mod-Mux paths, direct earlier-model reuse and new lossless mux, finite noiseless tuning, detector/tap ledger, frozen comparison/report/v11migration. Local Node234PASS and independent28032comparisons across32states PASS(maxerror2.94e−14). Browser and prior regressions in progress; first desktop cases passed. One new Browser locator matched reading and Notebook status copies; scoped it to the intended Notebook without changing runtime or assertion.
+
+- D2: actual local Chromium153 Browser84PASS plus all461archived Chapter1–10 scenarios PASS(total545); runtime/console/network/SVG-bounds counters0. Figures/mobile Properties/zoom visually reviewed. Deterministic runtime HTML and reports retained. GitHub CI pending.

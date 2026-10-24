@@ -1,0 +1,5 @@
+# Chapter 11 validation
+
+D1: Node234PASS(208retained+26new). Independent Python28032comparisons PASS across32physical states×2architectures×16patterns×4carriers, including multiple reference planes/matrix/current; maximum absolute error2.935488901652586e−14. Independent real all-pass power, lossless add/drop conservation, explicit frequency/wavelength/units, Gaussian/Jones/grating chain and exact-SI photocurrent references. Declared synthetic static consistency, not measured accuracy or real link validation.
+
+D1 font349required Hangul/0missing,4additional glyphs. Exact72lesson/tutor parity, offline source manifest, source/HTML hash and423prior-file preservation are unit checked. Actual local Chromium153:84new Browser+461original Chapter1–10 Browser scenarios PASS(total545), with all reported runtime/console/network/SVG text-bounds counters0. Four viewports1440×900/1366×768/390×844/320×740 ×Light/Dark; Mobile viewport emulation. Twelve figures and Mobile Properties/zoom visually reviewed. GitHub CI is pending.

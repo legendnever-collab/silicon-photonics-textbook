@@ -1,0 +1,347 @@
+{
+  "htmlSha256": "1ff93ff3175a26ec4c4adc19c23b76d549dffac1bad7f51c760e6856a32bed1b",
+  "browser": "153.0.8010.0",
+  "device": "Desktop/mobile viewport emulation, not physical phones",
+  "scenarios": [
+    {
+      "name": "Integrated72 lessons retained Chapter1–10 Notebook smoke 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH11 seven lessons tutors alternatives predictions twelve figures 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Common bus alias data interaction differs from passive Mod Mux stripping 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Frequency grid spectrum and passive mux offset preserve architecture meaning 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Selected noiseless model probe tuning source hold and independent layer trims 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Per channel budget tap coupling detector current source off and zero drive 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Frozen all state comparison survives observational edits physical changes presets reload 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Stable control node focus viewport linked figure and actual mobile zoom pan 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric Properties validation all channel trims apply close Escape footer 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual Study Report all16 states scope learning backup restore malformed future 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated72 lessons retained Chapter1–10 Notebook smoke 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH11 seven lessons tutors alternatives predictions twelve figures 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Common bus alias data interaction differs from passive Mod Mux stripping 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Frequency grid spectrum and passive mux offset preserve architecture meaning 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Selected noiseless model probe tuning source hold and independent layer trims 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Per channel budget tap coupling detector current source off and zero drive 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Frozen all state comparison survives observational edits physical changes presets reload 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Stable control node focus viewport linked figure and actual mobile zoom pan 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric Properties validation all channel trims apply close Escape footer 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual Study Report all16 states scope learning backup restore malformed future 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated72 lessons retained Chapter1–10 Notebook smoke 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH11 seven lessons tutors alternatives predictions twelve figures 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Common bus alias data interaction differs from passive Mod Mux stripping 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Frequency grid spectrum and passive mux offset preserve architecture meaning 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Selected noiseless model probe tuning source hold and independent layer trims 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Per channel budget tap coupling detector current source off and zero drive 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Frozen all state comparison survives observational edits physical changes presets reload 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Stable control node focus viewport linked figure and actual mobile zoom pan 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric Properties validation all channel trims apply close Escape footer 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual Study Report all16 states scope learning backup restore malformed future 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated72 lessons retained Chapter1–10 Notebook smoke 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH11 seven lessons tutors alternatives predictions twelve figures 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Common bus alias data interaction differs from passive Mod Mux stripping 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Frequency grid spectrum and passive mux offset preserve architecture meaning 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Selected noiseless model probe tuning source hold and independent layer trims 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Per channel budget tap coupling detector current source off and zero drive 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Frozen all state comparison survives observational edits physical changes presets reload 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Stable control node focus viewport linked figure and actual mobile zoom pan 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric Properties validation all channel trims apply close Escape footer 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual Study Report all16 states scope learning backup restore malformed future 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated72 lessons retained Chapter1–10 Notebook smoke 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH11 seven lessons tutors alternatives predictions twelve figures 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Common bus alias data interaction differs from passive Mod Mux stripping 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Frequency grid spectrum and passive mux offset preserve architecture meaning 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Selected noiseless model probe tuning source hold and independent layer trims 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Per channel budget tap coupling detector current source off and zero drive 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Frozen all state comparison survives observational edits physical changes presets reload 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Stable control node focus viewport linked figure and actual mobile zoom pan 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric Properties validation all channel trims apply close Escape footer 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual Study Report all16 states scope learning backup restore malformed future 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated72 lessons retained Chapter1–10 Notebook smoke 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH11 seven lessons tutors alternatives predictions twelve figures 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Common bus alias data interaction differs from passive Mod Mux stripping 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Frequency grid spectrum and passive mux offset preserve architecture meaning 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Selected noiseless model probe tuning source hold and independent layer trims 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Per channel budget tap coupling detector current source off and zero drive 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Frozen all state comparison survives observational edits physical changes presets reload 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Stable control node focus viewport linked figure and actual mobile zoom pan 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric Properties validation all channel trims apply close Escape footer 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual Study Report all16 states scope learning backup restore malformed future 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated72 lessons retained Chapter1–10 Notebook smoke 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH11 seven lessons tutors alternatives predictions twelve figures 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Common bus alias data interaction differs from passive Mod Mux stripping 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Frequency grid spectrum and passive mux offset preserve architecture meaning 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Selected noiseless model probe tuning source hold and independent layer trims 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Per channel budget tap coupling detector current source off and zero drive 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Frozen all state comparison survives observational edits physical changes presets reload 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Stable control node focus viewport linked figure and actual mobile zoom pan 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric Properties validation all channel trims apply close Escape footer 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual Study Report all16 states scope learning backup restore malformed future 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated72 lessons retained Chapter1–10 Notebook smoke 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH11 seven lessons tutors alternatives predictions twelve figures 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Common bus alias data interaction differs from passive Mod Mux stripping 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Frequency grid spectrum and passive mux offset preserve architecture meaning 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Selected noiseless model probe tuning source hold and independent layer trims 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Per channel budget tap coupling detector current source off and zero drive 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Frozen all state comparison survives observational edits physical changes presets reload 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Stable control node focus viewport linked figure and actual mobile zoom pan 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric Properties validation all channel trims apply close Escape footer 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual Study Report all16 states scope learning backup restore malformed future 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only migration sipt-textbook-v10",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only migration sipt-textbook-v9",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only migration sipt-textbook-v8",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only migration sipt-textbook-v7",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "network": [],
+  "bounds": []
+}

@@ -1,0 +1,11 @@
+# Chapter 11 learning design
+
+Seven textbook-first A–F lessons follow verified original Chapter13 WDM→Ring architectures→Common-bus→Mod-Mux→Conclusion. Two educational bridge lessons on detuning/all-state comparison and budget/monitoring integrate earlier chapters before the conclusion. Technical terms English, explanatory prose Korean. Each lesson has worked calculation, three misconception choices with distinct feedback, four alternative explanations, prediction/experiment and reflection. No automatic grading of written explanations.
+
+One central contrast: all four carriers pass all active rings in Common-bus; each Mod-Mux carrier passes its own active modulator, then passive add/through filters. Both actual path products are retained. FSR alias can cause data cross-modulation in Common-bus and passive carrier stripping in Mod-Mux; those are different mechanisms. Same-assumption comparison prevents claiming a universal winner.
+
+Six Notebook views: Architecture, Spectrum, Cross-modulation Matrix, Per-channel Budget, Selected Ring Tuning, Comparison. Twelve numbered figures use seven shared renderers. Controls preserve real input nodes and view position; selected-channel trim fields remain in DOM. Numeric Properties provides all20numeric fields with scrolling, sticky Apply/Close, validation, Escape/focus return. Mobile uses retained scrollable zoom. Five independent scenarios plus Custom explain nominal, FSR alias, drift/mismatch, mux offset and source off.
+
+Save Comparison freezes both architectures/all16patterns across physical edits/presets. View/channel/architecture/display-pattern selections retain current status because they only inspect the saved exhaustive comparison. Current versus frozen tables and JSON scope are explicit; learning Backup remains distinct. v11 reads previous storage keys without modifying them. Existing Chapter1–10 releases/source/assertions are preserved.
+
+Limits appear with relevant concepts and model/report evidence. Static opening is not an Eye or BER result. Ideal zeros do not become finite ER. Model tuning is not hardware thermal control and uses an ideal nonloading channel probe, not aggregate monitor inversion. No development/approval workflow is imposed on the learner. Main merge awaits user review; next app chapter is not started.
