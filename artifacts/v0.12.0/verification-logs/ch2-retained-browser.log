@@ -1,0 +1,20 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> silicon-photonics-textbook@0.12.0 test:ch2:browser
+> node tests/ch2-browser.mjs
+
+PASS all available Ch2 Lessons: A–F, original numbered figures, Tutor feedback and explanations
+PASS D1 DC model/figure/notebook share state, keyboard focus and conservation
+PASS D2: phase accumulation stays separate from power and MZI phasor/curve share output
+PASS D3 Ring, Bragg and Circuit notebooks retain independent settings and match shared model
+PASS Chapter1 data migration keeps original key untouched, Ch2 resume/backup restore
+PASS out-of-range imported physics settings clamp safely, malformed records retain current state
+PASS Ch2 Figure zoom Escape restores keyboard focus
+PASS 1440×900 light: offline responsive reading, Notebook, figures and zoom
+PASS 1440×900 dark: offline responsive reading, Notebook, figures and zoom
+PASS 1366×768 light: offline responsive reading, Notebook, figures and zoom
+PASS 1366×768 dark: offline responsive reading, Notebook, figures and zoom
+PASS 390×844 light: offline responsive reading, Notebook, figures and zoom
+PASS 390×844 dark: offline responsive reading, Notebook, figures and zoom
+PASS 320×740 light: offline responsive reading, Notebook, figures and zoom
+PASS 320×740 dark: offline responsive reading, Notebook, figures and zoom

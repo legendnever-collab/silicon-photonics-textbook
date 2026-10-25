@@ -1,0 +1,64 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> silicon-photonics-textbook@0.12.0 test:ch6:browser
+> node tests/ch6-browser.mjs
+
+PASS Integrated Ch1–6 all36 lessons and notebooks 1440×900 light
+PASS All7 lessons13 figures21 tutor choices28 explanations and prediction 1440×900 light
+PASS Threshold/L–I independent groups,figure state,control node and focus 1440×900 light
+PASS Power conservation,zero output,loss heat separation and7 structure choices 1440×900 light
+PASS Save/reload retains notes,parameters,selection,theme,read record 1440×900 light
+PASS Zoom Escape restores focus and screenshot visual matrix 1440×900 light
+PASS Actual backup download/restore and invalid file rejection 1440×900 light
+PASS Integrated Ch1–6 all36 lessons and notebooks 1440×900 dark
+PASS All7 lessons13 figures21 tutor choices28 explanations and prediction 1440×900 dark
+PASS Threshold/L–I independent groups,figure state,control node and focus 1440×900 dark
+PASS Power conservation,zero output,loss heat separation and7 structure choices 1440×900 dark
+PASS Save/reload retains notes,parameters,selection,theme,read record 1440×900 dark
+PASS Zoom Escape restores focus and screenshot visual matrix 1440×900 dark
+PASS Actual backup download/restore and invalid file rejection 1440×900 dark
+PASS Integrated Ch1–6 all36 lessons and notebooks 1366×768 light
+PASS All7 lessons13 figures21 tutor choices28 explanations and prediction 1366×768 light
+PASS Threshold/L–I independent groups,figure state,control node and focus 1366×768 light
+PASS Power conservation,zero output,loss heat separation and7 structure choices 1366×768 light
+PASS Save/reload retains notes,parameters,selection,theme,read record 1366×768 light
+PASS Zoom Escape restores focus and screenshot visual matrix 1366×768 light
+PASS Actual backup download/restore and invalid file rejection 1366×768 light
+PASS Integrated Ch1–6 all36 lessons and notebooks 1366×768 dark
+PASS All7 lessons13 figures21 tutor choices28 explanations and prediction 1366×768 dark
+PASS Threshold/L–I independent groups,figure state,control node and focus 1366×768 dark
+PASS Power conservation,zero output,loss heat separation and7 structure choices 1366×768 dark
+PASS Save/reload retains notes,parameters,selection,theme,read record 1366×768 dark
+PASS Zoom Escape restores focus and screenshot visual matrix 1366×768 dark
+PASS Actual backup download/restore and invalid file rejection 1366×768 dark
+PASS Integrated Ch1–6 all36 lessons and notebooks 390×844 light
+PASS All7 lessons13 figures21 tutor choices28 explanations and prediction 390×844 light
+PASS Threshold/L–I independent groups,figure state,control node and focus 390×844 light
+PASS Power conservation,zero output,loss heat separation and7 structure choices 390×844 light
+PASS Save/reload retains notes,parameters,selection,theme,read record 390×844 light
+PASS Zoom Escape restores focus and screenshot visual matrix 390×844 light
+PASS Actual backup download/restore and invalid file rejection 390×844 light
+PASS Integrated Ch1–6 all36 lessons and notebooks 390×844 dark
+PASS All7 lessons13 figures21 tutor choices28 explanations and prediction 390×844 dark
+PASS Threshold/L–I independent groups,figure state,control node and focus 390×844 dark
+PASS Power conservation,zero output,loss heat separation and7 structure choices 390×844 dark
+PASS Save/reload retains notes,parameters,selection,theme,read record 390×844 dark
+PASS Zoom Escape restores focus and screenshot visual matrix 390×844 dark
+PASS Actual backup download/restore and invalid file rejection 390×844 dark
+PASS Integrated Ch1–6 all36 lessons and notebooks 320×740 light
+PASS All7 lessons13 figures21 tutor choices28 explanations and prediction 320×740 light
+PASS Threshold/L–I independent groups,figure state,control node and focus 320×740 light
+PASS Power conservation,zero output,loss heat separation and7 structure choices 320×740 light
+PASS Save/reload retains notes,parameters,selection,theme,read record 320×740 light
+PASS Zoom Escape restores focus and screenshot visual matrix 320×740 light
+PASS Actual backup download/restore and invalid file rejection 320×740 light
+PASS Integrated Ch1–6 all36 lessons and notebooks 320×740 dark
+PASS All7 lessons13 figures21 tutor choices28 explanations and prediction 320×740 dark
+PASS Threshold/L–I independent groups,figure state,control node and focus 320×740 dark
+PASS Power conservation,zero output,loss heat separation and7 structure choices 320×740 dark
+PASS Save/reload retains notes,parameters,selection,theme,read record 320×740 dark
+PASS Zoom Escape restores focus and screenshot visual matrix 320×740 dark
+PASS Actual backup download/restore and invalid file rejection 320×740 dark
+PASS Read-only migration from sipt-textbook-v5 retains all prior chapter fields
+PASS Read-only migration from sipt-textbook-v4 retains all prior chapter fields
+{"pass":58,"errors":0,"network":0,"figureTextOutOfBounds":0}

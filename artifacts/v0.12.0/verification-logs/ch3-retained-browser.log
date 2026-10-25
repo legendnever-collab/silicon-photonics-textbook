@@ -1,0 +1,20 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> silicon-photonics-textbook@0.12.0 test:ch3:browser
+> node tests/ch3-browser.mjs
+
+PASS available Chapter3 lessons retain A–F, substantial prose, three Tutor feedbacks and figure model captions
+PASS Gaussian notebook/figures share inputs, matched profiles reach unity and offsets reduce overlap
+PASS Grating factor is explicitly relative, state/marker and signed phase conditions agree
+PASS Edge offset/tilt limits and Jones relative-phase projections match figures
+PASS IO power ledger matches worked conditions, avoids double count and handles orthogonal state
+PASS v2 migration is read-only, v3 resume and full backup restore preserve Ch1/2/3 notes
+PASS all Ch3 figure zooms support Escape and restore focus
+PASS 1440×900 light: offline chapter navigation, reading, notebook and zoom
+PASS 1440×900 dark: offline chapter navigation, reading, notebook and zoom
+PASS 1366×768 light: offline chapter navigation, reading, notebook and zoom
+PASS 1366×768 dark: offline chapter navigation, reading, notebook and zoom
+PASS 390×844 light: offline chapter navigation, reading, notebook and zoom
+PASS 390×844 dark: offline chapter navigation, reading, notebook and zoom
+PASS 320×740 light: offline chapter navigation, reading, notebook and zoom
+PASS 320×740 dark: offline chapter navigation, reading, notebook and zoom

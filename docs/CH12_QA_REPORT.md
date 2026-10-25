@@ -15,3 +15,6 @@ New storage keyv12, version1learning schema, read-onlyv11→older fallback, futu
 
 ## Review limits
 Four viewports1440×900/1366×768/390×844/320×740 and Light/Dark are browser emulation, not physical Android testing. Scientific visual consistency, numeric units, deterministic build and offline/no-console/no-external-request checks are separated from hardware accuracy and learning usefulness. Main merge waits for explicit user Play Review approval; no next chapter started. Hosted CI is independently reported at the exact PR head, never inferred from historical Chapter11 success.
+
+## Final local verification
+Node264PASS; independent11955comparisons PASS; Browser67new+545unchanged archived=612PASS, runtime/console/network/SVG-bounds0; font318/0missing;633baseline files restored/preserved. Deterministic final HTML and all prior v0.7–v0.11hash manifests pass. Runtime source unchanged in documentation finalization. Exact final-head hosted CI is recorded in PR12 checks/body after completion, independently of these local results.

@@ -1,0 +1,11 @@
+{
+  "base": "8f5f36f148951199fab584a3d51fc6007d69645e",
+  "filesVerified": 633,
+  "unexpectedChanges": [],
+  "metadataExceptions": [
+    "README.md",
+    "TEXTBOOK_SOURCE_MAPPING.md",
+    "package.json"
+  ],
+  "allPreviousReleaseFilesPreserved": true
+}

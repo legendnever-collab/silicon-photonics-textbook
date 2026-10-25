@@ -1,0 +1,89 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> silicon-photonics-textbook@0.12.0 test:ch10:browser
+> node tests/ch10-browser.mjs
+
+PASS Integrated65 lessons all prior notebooks 1440 light
+PASS CH10 eight lessons tutor choices explanations predictions figures 1440 light
+PASS Alignment grid two-port loss polarization and interface change 1440 light
+PASS Rigid registration solves macro error before optical fine alignment 1440 light
+PASS Electrical RL through reflection dissipation and optional contact 1440 light
+PASS Workflow hold gates capture frozen stale presets and reacquisition 1440 light
+PASS Reference correction sampling floor saturation and model parameter wrapping 1440 light
+PASS Control node focus viewport figure parity and real mobile zoom pan 1440 light
+PASS Numeric properties validation apply close Escape reachable footer 1440 light
+PASS Actual JSON report snapshot export backup restore and future rejection 1440 light
+PASS Integrated65 lessons all prior notebooks 1440 dark
+PASS CH10 eight lessons tutor choices explanations predictions figures 1440 dark
+PASS Alignment grid two-port loss polarization and interface change 1440 dark
+PASS Rigid registration solves macro error before optical fine alignment 1440 dark
+PASS Electrical RL through reflection dissipation and optional contact 1440 dark
+PASS Workflow hold gates capture frozen stale presets and reacquisition 1440 dark
+PASS Reference correction sampling floor saturation and model parameter wrapping 1440 dark
+PASS Control node focus viewport figure parity and real mobile zoom pan 1440 dark
+PASS Numeric properties validation apply close Escape reachable footer 1440 dark
+PASS Actual JSON report snapshot export backup restore and future rejection 1440 dark
+PASS Integrated65 lessons all prior notebooks 1366 light
+PASS CH10 eight lessons tutor choices explanations predictions figures 1366 light
+PASS Alignment grid two-port loss polarization and interface change 1366 light
+PASS Rigid registration solves macro error before optical fine alignment 1366 light
+PASS Electrical RL through reflection dissipation and optional contact 1366 light
+PASS Workflow hold gates capture frozen stale presets and reacquisition 1366 light
+PASS Reference correction sampling floor saturation and model parameter wrapping 1366 light
+PASS Control node focus viewport figure parity and real mobile zoom pan 1366 light
+PASS Numeric properties validation apply close Escape reachable footer 1366 light
+PASS Actual JSON report snapshot export backup restore and future rejection 1366 light
+PASS Integrated65 lessons all prior notebooks 1366 dark
+PASS CH10 eight lessons tutor choices explanations predictions figures 1366 dark
+PASS Alignment grid two-port loss polarization and interface change 1366 dark
+PASS Rigid registration solves macro error before optical fine alignment 1366 dark
+PASS Electrical RL through reflection dissipation and optional contact 1366 dark
+PASS Workflow hold gates capture frozen stale presets and reacquisition 1366 dark
+PASS Reference correction sampling floor saturation and model parameter wrapping 1366 dark
+PASS Control node focus viewport figure parity and real mobile zoom pan 1366 dark
+PASS Numeric properties validation apply close Escape reachable footer 1366 dark
+PASS Actual JSON report snapshot export backup restore and future rejection 1366 dark
+PASS Integrated65 lessons all prior notebooks 390 light
+PASS CH10 eight lessons tutor choices explanations predictions figures 390 light
+PASS Alignment grid two-port loss polarization and interface change 390 light
+PASS Rigid registration solves macro error before optical fine alignment 390 light
+PASS Electrical RL through reflection dissipation and optional contact 390 light
+PASS Workflow hold gates capture frozen stale presets and reacquisition 390 light
+PASS Reference correction sampling floor saturation and model parameter wrapping 390 light
+PASS Control node focus viewport figure parity and real mobile zoom pan 390 light
+PASS Numeric properties validation apply close Escape reachable footer 390 light
+PASS Actual JSON report snapshot export backup restore and future rejection 390 light
+PASS Integrated65 lessons all prior notebooks 390 dark
+PASS CH10 eight lessons tutor choices explanations predictions figures 390 dark
+PASS Alignment grid two-port loss polarization and interface change 390 dark
+PASS Rigid registration solves macro error before optical fine alignment 390 dark
+PASS Electrical RL through reflection dissipation and optional contact 390 dark
+PASS Workflow hold gates capture frozen stale presets and reacquisition 390 dark
+PASS Reference correction sampling floor saturation and model parameter wrapping 390 dark
+PASS Control node focus viewport figure parity and real mobile zoom pan 390 dark
+PASS Numeric properties validation apply close Escape reachable footer 390 dark
+PASS Actual JSON report snapshot export backup restore and future rejection 390 dark
+PASS Integrated65 lessons all prior notebooks 320 light
+PASS CH10 eight lessons tutor choices explanations predictions figures 320 light
+PASS Alignment grid two-port loss polarization and interface change 320 light
+PASS Rigid registration solves macro error before optical fine alignment 320 light
+PASS Electrical RL through reflection dissipation and optional contact 320 light
+PASS Workflow hold gates capture frozen stale presets and reacquisition 320 light
+PASS Reference correction sampling floor saturation and model parameter wrapping 320 light
+PASS Control node focus viewport figure parity and real mobile zoom pan 320 light
+PASS Numeric properties validation apply close Escape reachable footer 320 light
+PASS Actual JSON report snapshot export backup restore and future rejection 320 light
+PASS Integrated65 lessons all prior notebooks 320 dark
+PASS CH10 eight lessons tutor choices explanations predictions figures 320 dark
+PASS Alignment grid two-port loss polarization and interface change 320 dark
+PASS Rigid registration solves macro error before optical fine alignment 320 dark
+PASS Electrical RL through reflection dissipation and optional contact 320 dark
+PASS Workflow hold gates capture frozen stale presets and reacquisition 320 dark
+PASS Reference correction sampling floor saturation and model parameter wrapping 320 dark
+PASS Control node focus viewport figure parity and real mobile zoom pan 320 dark
+PASS Numeric properties validation apply close Escape reachable footer 320 dark
+PASS Actual JSON report snapshot export backup restore and future rejection 320 dark
+PASS Read-only migration sipt-textbook-v9
+PASS Read-only migration sipt-textbook-v8
+PASS Read-only migration sipt-textbook-v7
+{"pass":83,"errors":0,"network":0,"bounds":0}
