@@ -1,0 +1,20 @@
+{
+  "version": "0.12.2",
+  "runtimeSourceCheckpoint": "26408dfca5871a137e9361e3f330e51f62f9bafc",
+  "finalHeadAndCI": "https://github.com/legendnever-collab/silicon-photonics-textbook/pull/13",
+  "html": "dist/silicon-photonics-textbook-v0.12.2.html",
+  "htmlSha256": "123a669cb5bac4acc8a2e8f6bd76d737c0dad3aed393946930053109ffcdd2a6",
+  "uiSourceHash": "5864c64ccef9dc8042ee324072f3533d0564fe44c9d27c344b45fe91821054d7",
+  "chapters": 12,
+  "lessons": 79,
+  "nodeTests": 264,
+  "independentComparisons": 11955,
+  "protectedPriorFiles": 766,
+  "browserMatrixScenarios": 632,
+  "parityLessons": 79,
+  "totalWorkspaceScenarios": 634,
+  "integratedOriginalScenarios": 67,
+  "results": "artifacts/v0.12.2/all-validation-summary.json",
+  "mergeAuthorized": false,
+  "reviewGuide": "docs/WORKSPACE_ALL_LEARNING_REVIEW.md"
+}

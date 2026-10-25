@@ -1,0 +1,279 @@
+{
+  "htmlSha256": "123a669cb5bac4acc8a2e8f6bd76d737c0dad3aed393946930053109ffcdd2a6",
+  "browser": "153.0.8010.0",
+  "device": "Desktop/mobile viewport emulation; no physical Android test",
+  "scenarios": [
+    {
+      "name": "Integrated79 lessons A–F prior notebooks preserved 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH12 seven tutors predictions explanations reflections linked figures 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual time Eye sample phase signed opening control focus scroll 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Noise sources seed reproducibility bypass and actual negative electrical samples 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Frozen survives observation edits stale settings re-acquire report evidence 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric Properties validation ordering footer Apply Close Escape 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Figure zoom pan closes and preserves evidence 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual learning backup restore current frozen reflection future schema reject 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated79 lessons A–F prior notebooks preserved 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH12 seven tutors predictions explanations reflections linked figures 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual time Eye sample phase signed opening control focus scroll 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Noise sources seed reproducibility bypass and actual negative electrical samples 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Frozen survives observation edits stale settings re-acquire report evidence 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric Properties validation ordering footer Apply Close Escape 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Figure zoom pan closes and preserves evidence 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual learning backup restore current frozen reflection future schema reject 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated79 lessons A–F prior notebooks preserved 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH12 seven tutors predictions explanations reflections linked figures 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual time Eye sample phase signed opening control focus scroll 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Noise sources seed reproducibility bypass and actual negative electrical samples 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Frozen survives observation edits stale settings re-acquire report evidence 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric Properties validation ordering footer Apply Close Escape 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Figure zoom pan closes and preserves evidence 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual learning backup restore current frozen reflection future schema reject 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated79 lessons A–F prior notebooks preserved 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH12 seven tutors predictions explanations reflections linked figures 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual time Eye sample phase signed opening control focus scroll 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Noise sources seed reproducibility bypass and actual negative electrical samples 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Frozen survives observation edits stale settings re-acquire report evidence 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric Properties validation ordering footer Apply Close Escape 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Figure zoom pan closes and preserves evidence 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual learning backup restore current frozen reflection future schema reject 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated79 lessons A–F prior notebooks preserved 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH12 seven tutors predictions explanations reflections linked figures 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual time Eye sample phase signed opening control focus scroll 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Noise sources seed reproducibility bypass and actual negative electrical samples 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Frozen survives observation edits stale settings re-acquire report evidence 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric Properties validation ordering footer Apply Close Escape 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Figure zoom pan closes and preserves evidence 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual learning backup restore current frozen reflection future schema reject 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated79 lessons A–F prior notebooks preserved 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH12 seven tutors predictions explanations reflections linked figures 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual time Eye sample phase signed opening control focus scroll 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Noise sources seed reproducibility bypass and actual negative electrical samples 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Frozen survives observation edits stale settings re-acquire report evidence 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric Properties validation ordering footer Apply Close Escape 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Figure zoom pan closes and preserves evidence 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual learning backup restore current frozen reflection future schema reject 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated79 lessons A–F prior notebooks preserved 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH12 seven tutors predictions explanations reflections linked figures 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual time Eye sample phase signed opening control focus scroll 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Noise sources seed reproducibility bypass and actual negative electrical samples 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Frozen survives observation edits stale settings re-acquire report evidence 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric Properties validation ordering footer Apply Close Escape 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Figure zoom pan closes and preserves evidence 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual learning backup restore current frozen reflection future schema reject 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated79 lessons A–F prior notebooks preserved 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH12 seven tutors predictions explanations reflections linked figures 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual time Eye sample phase signed opening control focus scroll 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Noise sources seed reproducibility bypass and actual negative electrical samples 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Frozen survives observation edits stale settings re-acquire report evidence 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric Properties validation ordering footer Apply Close Escape 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Figure zoom pan closes and preserves evidence 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual learning backup restore current frozen reflection future schema reject 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only historical migration sipt-textbook-v11",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only historical migration sipt-textbook-v10",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only historical migration sipt-textbook-v9",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "network": [],
+  "bounds": []
+}

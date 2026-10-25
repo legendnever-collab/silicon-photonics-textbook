@@ -10,4 +10,6 @@
 
 계산 모델과 실제 성능 가정은 기존 Chapter의 계약을 그대로 사용합니다. 화면 확대·복귀·Resize·Theme는 Evidence 재취득이 아닙니다. 기존 Source Report 버전/Hash는 Physics provenance이고, 새 UI sourceHash는 workspace-all-build-info.json에 별도로 기록됩니다.
 
+학습 기록의 내보내기/가져오기는 기존 기능을 그대로 사용합니다. 새 UI에 별도 학습 저장소를 만들지 않았으므로 Reflection·예측·Current/Frozen 기록도 기존 백업에 포함됩니다. 자동 검사에서는 실제 백업/복원과 미래 스키마 거부도 확인합니다.
+
 자동 검증은 Viewport Emulation입니다. 실제 Android Keyboard/IME·시스템 Back·Touch 감각과 학습 효과는 사용자 확인이 필요합니다. 이번 변경의 main 병합은 사용자 Play Review와 명시적 승인 후 진행합니다. 새로운 학습 안내/비교/U2–U3 기능이나 Chapter13은 이번 범위에 포함하지 않았습니다.
