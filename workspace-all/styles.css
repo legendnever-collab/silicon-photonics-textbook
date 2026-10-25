@@ -8,3 +8,5 @@
 .ws-observe .ws-frame>svg{max-width:none!important}
 .ws-controls pre{max-width:100%;white-space:pre-wrap;overflow-wrap:anywhere}
 .ws-controls .ch8-actions,.ws-controls .ch9-actions,.ws-controls .ch10-actions,.ws-controls .ch11-actions{display:flex;flex-wrap:wrap;gap:8px}
+/* Background figures may reflow after a live parameter update; do not anchor-scroll the reading page behind the modal. */
+html:has(body.ws-expanded),body.ws-expanded{overflow-anchor:none}
