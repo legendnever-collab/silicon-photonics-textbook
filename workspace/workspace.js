@@ -25,7 +25,7 @@ function mount(n){
  toolbar.querySelector('h2').textContent=n.querySelector('.scene-title').textContent;
  const observe=create('section','ws-observe');observe.setAttribute('aria-label','그래프와 주요 결과');
  const view=create('div','ws-view');view.id='ws-view';
- const lensControl=create('div','ws-lens');lensControl.innerHTML='<label for="ws-lens">표시 영역</label><select id="ws-lens"><option value="rx">Rx Current</option><option value="tx">Tx Power</option><option value="full">전체 그림</option></select>';
+ const lensControl=create('div','ws-lens');lensControl.innerHTML='<label for="ws-lens">표시 영역</label><select id="ws-lens"><option value="rx">Rx Current (µA)</option><option value="tx">Tx Power (mW)</option><option value="full">전체 그림</option></select>';
  lensControl.querySelector('select').value=lens;lensControl.querySelector('select').onchange=e=>{lens=e.target.value;frame();};
  const plot=n.querySelector('#notebook-plot');
  plot.setAttribute('tabindex','0');plot.setAttribute('aria-label','Live 그래프 · 필요한 경우 그래프 안에서 스크롤');
@@ -48,6 +48,7 @@ function sync(){
  // Present renderer-produced values without evaluating or duplicating physics.
  const ps=[...s.querySelectorAll('p')];
  const items=lesson==='1.4'?ps.slice(0,2):ps.filter(p=>p.querySelector('strong')&&!p.querySelector('[data-dynamic-snapshot]')).slice(0,2);
+ if(lesson==='12.5'){const noise=ps.find(p=>p.textContent.includes('Noise ENBW='));if(noise?.querySelector('br')){const value=create('p','');let node=noise.querySelector('br').nextSibling;while(node){value.append(node.cloneNode(true));node=node.nextSibling;}items[0]=value;}}
  out.replaceChildren(...items.map(p=>{const e=create('div','ws-metric');const c=p.cloneNode(true);if(lesson!=='1.4'){const br=c.querySelector('br');if(br){let node=br.nextSibling;while(node){const next=node.nextSibling;node.remove();node=next;}br.remove();}}e.textContent=c.textContent;return e;}));
  const view=$('#view'),pressed=$('#notebook [data-view][aria-pressed=true]');
  $('#ws-view').textContent=view?view.selectedOptions[0].textContent:pressed?.textContent||'Field Profile';
@@ -85,6 +86,7 @@ function layout(){
  const n=$('#notebook.ws-pilot');if(!n)return;
  const sep=$('.ws-separator'),wide=isColumns(),active=modal?.open||matchMedia('(min-width:761px)').matches;
  sep.setAttribute('aria-orientation',wide?'vertical':'horizontal');sep.hidden=!active;
+ $('#ws-expand').hidden=!!modal?.open;$('#ws-close').hidden=!modal?.open;
  if(!active){n.style.removeProperty('--ws-size');return;}
  const span=wide?n.clientWidth:n.clientHeight-$('.ws-toolbar').offsetHeight;
  const minObserve=wide?400:240,minControls=wide?280:144,gap=14;
@@ -110,7 +112,9 @@ function open(){
 function close(){
  if(!modal?.open)return;const n=$('#notebook'),s=saved;
  // Closing before moving preserves native dialog return-focus semantics.
- modal.close();origin.replaceWith(n);origin=null;document.body.classList.remove('ws-expanded');document.body.style.overflow=s.bodyOverflow;
+ modal.close();origin.replaceWith(n);origin=null;
+ // The viewport may have crossed the inline/desktop breakpoint while expanded.
+ (matchMedia('(max-width:760px)').matches?$('#mobile-notebook-slot'):$('.workspace')).append(n);document.body.classList.remove('ws-expanded');document.body.style.overflow=s.bodyOverflow;
  layout();$('.ws-controls').scrollTop=s.controls;$('#reading').scrollTop=s.reading;window.scrollTo(0,s.windowY);s.focus?.focus({preventScroll:true});saved=null;
 }
 root.addEventListener('resize',layout);root.visualViewport?.addEventListener('resize',()=>{if(modal?.open){modal.style.height=root.visualViewport.height+'px';modal.style.top=root.visualViewport.offsetTop+'px';}layout();});

@@ -1,5 +1,11 @@
 # Interactive Silicon Photonics Textbook
 
+## v0.12.1 — Interactive Workspace U1 Pilot
+
+현재 검토판은 `dist/silicon-photonics-textbook-v0.12.1.html`입니다. 1.4 / 12.2 / 12.5에서 Live 그래프·주요 KPI를 고정하고 Parameter를 독립 스크롤합니다. `실험 화면 확대`는 같은 Notebook을 넓은 실험 화면으로 옮기며 닫기/Escape로 교재 위치·값·Focus를 복원합니다. Pointer/Keyboard 구분선과 Mobile 실험 모드를 제공합니다. 좁은 그래프는 글씨를 작게 줄이지 않고 내부 Pan/Scroll하며, Time Waveform은 Rx/Tx/전체 그림을 선택합니다. 기존 그림 확대도 유지합니다.
+
+`npm run build`는 hash-checked v0.12.0 HTML에 UI 확장만 더합니다. 과거 Release와 모든 Physics/Content/Renderer는 그대로 보존하며 `npm run build:ch12`도 유지합니다. 원래 Physics Report의 version/source hash와 Save key는 유지하고 UI provenance는 별도 `workspace-build-info.json`에 기록합니다. U1 Pilot 외 Lesson은 기존 화면을 유지합니다. 검토: `docs/WORKSPACE_LEARNING_REVIEW.md`, 검증: `docs/WORKSPACE_VALIDATION.md`. 사용자 Play Review 및 명시적 승인 전 병합하지 않습니다. U2–U4/Chapter13은 이번 범위가 아닙니다.
+
 기술 용어는 영어, 설명은 한글인 독립적인 Interactive Textbook입니다. 교재 설명 → Guided Tutor → Physics Notebook을 연결합니다. 게임이나 최적화 퍼즐을 중심으로 만들지 않습니다.
 
 ## Run offline
