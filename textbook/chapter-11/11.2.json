@@ -1,0 +1,66 @@
+{
+  "id": "11.2",
+  "short": "Ring Architecture",
+  "title": "A Resonance Repeats: FSR and Two Static States",
+  "time": "18–25분",
+  "lead": "Ring의 두 Resonance 상태와 주기적인 응답을 WDM Grid 위에서 읽습니다.",
+  "question": "한 Carrier에 맞춘 Ring이 다른 Carrier에는 항상 영향을 주지 않을까요?",
+  "prediction": "현재 설정에서 무엇이 바뀔까요?",
+  "reflection": "FSR와 Channel Spacing의 관계가 왜 단일 Ring의 Extinction Ratio보다 System에서 중요해질 수 있는지 설명하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "wdm",
+      "html": "<p>단일 Ring에서 높은 Contrast를 얻어도 같은 Bus의 다른 Carrier를 건드리면 System은 독립 Channel을 유지하지 못합니다. Ring은 원하는 Wavelength 근처에만 한 번 반응하는 이상적인 Selector가 아닙니다. Round-trip Phase가 다시 맞으면 Resonance가 반복됩니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "wdm",
+      "html": "<p>기존 Chapter 7의 All-pass Ring Feedback을 그대로 호출합니다. Field Self-coupling t=0.98, Round-trip Field a=0.98의 Critical-coupling 예제입니다. Power Coupling K=1−t²=0.0396이며 a는 Power Transmission이 아니라 Field Amplitude입니다. Ring Through Power가 Resonance에서 줄어든다고 모든 손실을 Output으로 보낸 것으로 해석하면 안 됩니다.</p><p>Frequency Periodic 모델로 θ=2π(f−f_res)/FSR를 사용합니다. Bit0의 Resonance는 설정된 f_res이고 Bit1은 +Drive Shift만큼 이동합니다. 이 Shift는 독립적으로 선언한 GHz 단위의 두 정적 상태이며 PN Voltage, Vπ, Thermal Efficiency에서 유도한 값이 아닙니다. Bit 번호는 상태의 이름이고 어느 상태가 더 밝은지는 Detuning에 따라 달라질 수 있습니다.</p><p>이상적인 Critical Ring의 정확한 Low가 0이면 유한한 ER을 만들지 않습니다. ER 표시의 withhold는 실제 Detector Floor를 계산했다는 뜻도 아닙니다. 이 Chapter에는 Noise/Floor 모델이 없으므로 Chapter 10의 Range-qualified Measurement와 구별합니다. Spectrum은 반복되는 Ring Through와 독립 Mux Filter의 Drop을 보여 줍니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "wdm",
+      "html": "<div class=\"equation\">T_mod=|(t−a·e^(−iθ))/(1−a·t·e^(−iθ))|²; θ=2πΔf/FSR</div><p>기호와 Reference Plane을 확인하세요. 수치는 SIPT-WDM-1의 독립 가정이며 실제 Device Parameter 추출이나 High-speed Link 검증이 아닙니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>a=t=0.98이면 Δf=0에서 T_mod=0입니다. FSR=800 GHz, 두 상태의 Resonance Shift=15 GHz일 때 Carrier에서 Bit1 Through는 약 0.894629입니다. FSR를 300 GHz로 바꾸면 100 GHz 간격 네 Carrier의 첫 번째와 네 번째가 한 FSR 차이입니다. 같은 Ring의 반복 Resonance가 다른 Channel을 다시 건드릴 수 있습니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "경로와 가정을 생각합니다",
+      "scene": "wdm",
+      "html": "<p>FSR=300 GHz이고 네 Carrier 간격이 100 GHz이면 어떤 문제가 생길 수 있나요?</p><p>먼저 광학 경로와 가정을 자신의 말로 설명한 뒤 선택하고 Feedback과 비교하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 확인합니다",
+      "scene": "wdm",
+      "html": "<p>Spectrum에서 Low/High Through와 Carrier Marker를 관찰하세요. FSR Alias Scenario로 바꾸고 첫 번째와 네 번째 Channel을 비교하세요. Drive Shift를 0으로 만들면 두 정적 상태의 차이가 사라지는지도 확인하세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "wdm",
+      "html": "<p>FSR는 주기적 Resonance의 간격이고 Channel Spacing과 다른 변수입니다. Static Contrast는 중요한 단서지만 Bandwidth, Eye와 BER을 대신하지 않습니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Drive Shift=0이면 두 상태의 Modulation 차이가 사라짐",
+    "Drive Shift=0이어도 항상 같은 OMA가 유지됨",
+    "FSR는 Source Power를 바꾸면 자동으로 증가함"
+  ],
+  "predictionFeedback": "Drive Shift=0이면 동일한 두 Ring 상태를 비교하므로 OMA와 모든 Bit Toggle 응답이 0입니다. FSR는 이 Fixture에서 독립적으로 설정합니다.",
+  "sources": [
+    "W0",
+    "W1",
+    "W2"
+  ]
+}

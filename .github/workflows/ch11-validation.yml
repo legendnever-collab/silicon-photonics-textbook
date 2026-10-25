@@ -1,0 +1,72 @@
+name: Chapter 11 validation
+on:
+  push:
+    branches: [feature/ch11-system-example]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build content physics and independent reference
+        run: |
+          npm run build
+          npm test
+          pip install fonttools brotli numpy
+          python3 tests/ch11-independent-validation.py
+          python3 scripts/audit-ch11-font.py
+          python3 tests/ch9-independent-validation.py
+          python3 tests/ch8-independent-validation.py
+          python3 tests/ch7-independent-validation.py
+      - name: Deterministic build and retained release hashes
+        run: |
+          cp dist/silicon-photonics-textbook-v0.11.0.html /tmp/ch11.html
+          npm run build
+          cmp /tmp/ch11.html dist/silicon-photonics-textbook-v0.11.0.html
+          cd dist
+          sha256sum -c CH11_SHA256SUMS.txt
+          sha256sum -c CH10_SHA256SUMS.txt
+          sha256sum -c CH9_SHA256SUMS.txt
+          sha256sum -c CH8_SHA256SUMS.txt
+          sha256sum -c CH7_SHA256SUMS.txt
+      - name: Browser dependencies
+        run: |
+          npm install --no-save --no-package-lock playwright@1.62.0
+          npx playwright install chromium
+      - name: Chapter11 browser matrix and integrated72 lessons
+        env:
+          CI_VISUAL_LOG: '1'
+        run: npm run test:ch11:browser
+      - name: Historical Chapter1–10 browser regressions
+        run: |
+          npm run test:browser
+          npm run test:ch2:browser
+          npm run test:ch3:browser
+          npm run test:ch4:browser
+          npm run test:ch5:browser
+          npm run test:ch6:browser
+          npm run test:ch7:browser
+          npm run test:ch8:browser
+          npm run test:ch9:browser
+          npm run test:ch10:browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: silicon-photonics-textbook-v0.11.0-review
+          path: |
+            dist/silicon-photonics-textbook-v0.11.0.html
+            dist/CH11_SHA256SUMS.txt
+            dist/CH11_CHECKPOINT_SHA256SUMS.txt
+            checkpoints/ch11/
+            dist/ch11-build-info.json
+            artifacts/v0.11.0/
+            docs/CH11_*
+          retention-days: 30

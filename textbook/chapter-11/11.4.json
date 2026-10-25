@@ -1,0 +1,66 @@
+{
+  "id": "11.4",
+  "short": "Mod-Mux",
+  "title": "Modulate Separately, Then Add to the Bus",
+  "time": "18–25분",
+  "lead": "각 Carrier의 Modulation과 Wavelength Multiplexing을 별도 Ring으로 나눕니다.",
+  "question": "다른 Active Ring을 피하면 모든 Optical Penalty도 사라질까요?",
+  "prediction": "현재 설정에서 무엇이 바뀔까요?",
+  "reflection": "Mod-Mux의 Active-path 분리와 Passive Mux Filter Penalty를 함께 설명하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "wdm",
+      "html": "<p>두 번째 Architecture는 각 Carrier가 독립 Branch의 Modulator를 먼저 통과하고 그 뒤 Add Filter로 Bus에 들어가게 합니다. Active Ring과 Multiplexer의 역할을 분리하면 Data 간 상호작용을 줄이는 이유와 새로 확인해야 할 조건을 동시에 볼 수 있습니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "wdm",
+      "html": "<p>각 Branch에는 하나의 Carrier와 하나의 Active Modulator가 있습니다. 이후 별도의 Passive Add Filter가 그 Carrier를 Output Bus로 보냅니다. 이미 Bus에 들어간 Carrier는 뒤쪽 Add Filter들의 Through를 통과하지만 다른 Branch의 Active Modulator로 들어가지는 않습니다. 이 실습은 반사와 역방향 Coupling을 무시한 단방향 경로를 가정합니다.</p><p>Mux Filter는 새로 선언한 Lossless Symmetric Add-drop Ring입니다. 두 Coupler는 같은 Power K를 사용하고 내부 Round-trip Attenuation은 1입니다. 해당 Filter의 Through+Drop=1을 확인할 수 있습니다. Mux Drop을 Ring Modulator의 Notch와 동일한 함수로 놓지 않았으며, Critical Ring의 흡수 손실과도 구별합니다.</p><p>같은 Carrier가 뒤쪽 Filter의 반복 Resonance에 걸리면 Bus에서 빠져나갈 수 있습니다. 이 경로로 제거된 Power를 모두 Heat라고 부르지 않습니다. 이 Fixture에서는 다른 Modulator Bit에 대한 의존성이 0이지만 Filter Detuning, Bandwidth와 FSR Alias의 영향은 남습니다. 실제 Thermo-optic Crosstalk, Back-reflection과 Data Sideband까지 0이라는 주장은 아닙니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "wdm",
+      "html": "<div class=\"equation\">P_out,k∝T_mod,k·D_mux,k·[∏ⱼ₍ⱼ>k₎T_mux,j]·L_seg^(N−k)</div><p>기호와 Reference Plane을 확인하세요. 수치는 SIPT-WDM-1의 독립 가정이며 실제 Device Parameter 추출이나 High-speed Link 검증이 아닙니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>독립 경로 예제로 T_mod=0.9, 자기 Add Filter Drop=0.95, 뒤쪽 두 Filter Through=0.98,0.97이면 Ring 경로 Factor는 0.9×0.95×0.98×0.97=0.812763입니다. 다른 Active Ring의 Bit는 이 곱에 없습니다. 그러나 Drop이나 Through를 1이라고 생략하면 Output을 과대평가합니다. 기본 모델에서 Filter가 정확히 맞으면 자기 Drop은 1이고, Alias에서 뒤쪽 Filter가 같은 Carrier를 제거할 수 있습니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "경로와 가정을 생각합니다",
+      "scene": "wdm",
+      "html": "<p>이 모델의 Mod-Mux Off-diagonal이 0인데 Output이 낮다면 무엇을 확인해야 하나요?</p><p>먼저 광학 경로와 가정을 자신의 말로 설명한 뒤 선택하고 Feedback과 비교하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 확인합니다",
+      "scene": "wdm",
+      "html": "<p>같은 FSR Alias Scenario에서 Architecture만 Mod-Mux로 바꾸세요. Matrix의 Off-diagonal과 CH1 Output을 함께 보세요. Off-diagonal이 0이어도 CH1이 약해질 수 있습니다. 이어 Filter Offset을 바꾸어 Common-bus와 Mod-Mux 중 어느 결과만 바뀌는지 확인하세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "wdm",
+      "html": "<p>Mod-Mux는 Modulation과 Add Filter를 분리합니다. Active Cross-modulation 감소와 실제 Optical 경로의 Penalty는 서로 다른 결론입니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Filter Offset은 Mod-Mux의 Add/Through 경로를 바꿀 수 있음",
+    "Mod-Mux에는 Passive Filter가 없으므로 변화 없음",
+    "Filter Offset은 Source Power 자체를 늘림"
+  ],
+  "predictionFeedback": "Mod-Mux에는 자기 Add Filter와 뒤쪽 Through Filter가 포함됩니다. Filter Offset은 이 경로에 영향을 주지만, Mux Filter가 없는 Common-bus에는 적용되지 않습니다.",
+  "sources": [
+    "W0",
+    "W1",
+    "W2"
+  ]
+}

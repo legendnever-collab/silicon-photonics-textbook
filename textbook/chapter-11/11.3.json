@@ -1,0 +1,66 @@
+{
+  "id": "11.3",
+  "short": "Common-bus",
+  "title": "Every Carrier Visits Every Ring Modulator",
+  "time": "18–25분",
+  "lead": "미리 모인 네 Carrier가 네 Active Ring을 모두 지나는 경로를 추적합니다.",
+  "question": "CH1의 Data만 바꿨는데 CH4의 Output이 변할 수 있는 이유는 무엇일까요?",
+  "prediction": "현재 설정에서 무엇이 바뀔까요?",
+  "reflection": "Common-bus에서 원하는 Modulation과 다른 Ring의 Cross-modulation을 구별하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "wdm",
+      "html": "<p>Common-bus는 여러 Ring이 하나의 Bus를 공유하는 직관적인 Architecture입니다. 연결이 간단해 보여도 각 Carrier는 자기 Ring만 지나지 않습니다. 앞뒤의 다른 Active Ring을 모두 통과한다는 사실이 System 응답을 결정합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "wdm",
+      "html": "<p>Common Input에는 이미 네 Carrier가 존재한다고 가정합니다. Comb Source 또는 사전에 합쳐진 Laser 입력이 필요한 구조적 의미를 설명하되, 이 실습은 실제 Comb 형성이나 입력 Multiplexer의 추가 Loss를 계산하지 않습니다. 그 조건을 포함하지 않은 결과로 Laser Power 효율의 우열을 단정하지 마세요.</p><p>Carrier k의 Through는 네 Ring의 응답을 순서대로 곱합니다. Ring j의 Data가 바뀌어 그 Carrier 주파수에서 Through가 달라지면 j≠k여도 Carrier k의 Power가 변합니다. 이를 Cross-modulation으로 관찰합니다. 다른 Wavelength가 Receiver Filter로 새어 들어가는 Spectral Crosstalk와 같은 정의가 아닙니다.</p><p>네 Bit 조합 16개를 전부 평가합니다. Matrix의 Row는 관찰 Carrier, Column은 Toggle한 Modulator입니다. 각 항목은 다른 Bit 조건 전체에서 얻은 최대 Output Transfer Fraction 변화입니다. Diagonal은 자기 Modulation, Off-diagonal은 다른 Data 경로의 영향입니다. 값은 해당 Carrier의 입력 Power에 대한 Fraction이며 Total WDM Power로 나눈 값이 아닙니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "wdm",
+      "html": "<div class=\"equation\">P_out,k=P_source,k·η_in,k·[∏ⱼT_mod,j(fₖ,bⱼ)]·L_seg⁴·(1−tap)·η_out,k</div><p>기호와 Reference Plane을 확인하세요. 수치는 SIPT-WDM-1의 독립 가정이며 실제 Device Parameter 추출이나 High-speed Link 검증이 아닙니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>독립적인 곱셈 예제로 자기 Ring의 High Through가 0.9이고 다른 세 Ring이 각각 0.99이면 Ring 부분의 합성 Through는 0.9×0.99³=0.8732691입니다. 한 이웃 Ring이 0.8로 바뀌면 0.9×0.99²×0.8=0.705672로 줄어듭니다. Source가 그대로여도 다른 Data 상태가 Target Carrier를 바꾼 것입니다. 이 숫자는 실제 Ring 측정이 아닌 경로 곱의 예제입니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "경로와 가정을 생각합니다",
+      "scene": "wdm",
+      "html": "<p>Common-bus의 Cross-modulation Matrix에서 Off-diagonal이 뜻하는 것은 무엇인가요?</p><p>먼저 광학 경로와 가정을 자신의 말로 설명한 뒤 선택하고 Feedback과 비교하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 확인합니다",
+      "scene": "wdm",
+      "html": "<p>Architecture를 Common-bus로 두고 FSR Alias Scenario를 선택하세요. CH1을 관찰하면서 CH4 Bit만 Toggle하세요. Cross-modulation Matrix의 [CH1,Mod4]를 확인한 뒤, FSR=800 GHz로 되돌려 같은 항목과 비교하세요.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "wdm",
+      "html": "<p>Common-bus에서는 모든 Active Ring이 모든 Carrier의 경로에 들어갑니다. 원하는 Channel의 Contrast와 Off-diagonal Data 의존성을 함께 평가해야 합니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "FSR Alias에서 다른 Ring Bit가 관찰 Carrier를 크게 바꿀 수 있음",
+    "Common-bus에서는 다른 Ring을 광학적으로 전혀 지나지 않음",
+    "Matrix의 모든 Off-diagonal은 정의상 항상 0임"
+  ],
+  "predictionFeedback": "Common-bus는 다른 Active Ring도 지나므로 Off-diagonal이 생길 수 있습니다. 특히 반복 Resonance가 겹치는 Alias Scenario에서 의존성이 커집니다.",
+  "sources": [
+    "W0",
+    "W1",
+    "W2"
+  ]
+}

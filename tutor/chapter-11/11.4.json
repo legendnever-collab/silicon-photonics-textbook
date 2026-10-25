@@ -1,0 +1,24 @@
+{
+  "question": "이 모델의 Mod-Mux Off-diagonal이 0인데 Output이 낮다면 무엇을 확인해야 하나요?",
+  "choices": [
+    {
+      "text": "자기 Modulator, Add Drop, 뒤쪽 Filter Through와 Bus Loss를 확인합니다.",
+      "feedback": "맞습니다. Data 간 독립성과 충분한 Optical Power는 별도의 요구 조건입니다.",
+      "correct": true
+    },
+    {
+      "text": "Cross-modulation이 0이면 Output은 반드시 Source와 같습니다.",
+      "feedback": "Input/Output Coupling과 Filter Routing, Tap, Bus Loss가 남아 있습니다. Power Budget을 따라가세요.",
+      "correct": false
+    },
+    {
+      "text": "자동으로 BER=0이 입증된 것입니다.",
+      "feedback": "정적 Data 의존성만 계산합니다. Noise, Dynamic Response와 Receiver가 없어 BER을 추론할 수 없습니다.",
+      "correct": false
+    }
+  ],
+  "why": "두 번째 Architecture는 각 Carrier가 독립 Branch의 Modulator를 먼저 통과하고 그 뒤 Add Filter로 Bus에 들어가게 합니다. Active Ring과 Multiplexer의 역할을 분리하면 Data 간 상호작용을 줄이는 이유와 새로 확인해야 할 조건을 동시에 볼 수 있습니다. 각 Branch에는 하나의 Carrier와 하나의 Active Modulator가 있습니다. 이후 별도의 Passive Add Filter가 그 Carrier를 Output Bus로 보냅니다. 이미 Bus에 들어간 Carrier는 뒤쪽 Add Filter들의 Through를 통과하지만 다른 Branch의 Active Modulator로 들어가지는 않습니다. 이 실습은 반사와 역방향 Coupling을 무시한 단방향 경로를 가정합니다.",
+  "simple": "Mux Filter는 새로 선언한 Lossless Symmetric Add-drop Ring입니다. 두 Coupler는 같은 Power K를 사용하고 내부 Round-trip Attenuation은 1입니다. 해당 Filter의 Through+Drop=1을 확인할 수 있습니다. Mux Drop을 Ring Modulator의 Notch와 동일한 함수로 놓지 않았으며, Critical Ring의 흡수 손실과도 구별합니다.",
+  "math": "P_out,k∝T_mod,k·D_mux,k·[∏ⱼ₍ⱼ>k₎T_mux,j]·L_seg^(N−k) 독립 경로 예제로 T_mod=0.9, 자기 Add Filter Drop=0.95, 뒤쪽 두 Filter Through=0.98,0.97이면 Ring 경로 Factor는 0.9×0.95×0.98×0.97=0.812763입니다. 다른 Active Ring의 Bit는 이 곱에 없습니다. 그러나 Drop이나 Through를 1이라고 생략하면 Output을 과대평가합니다. 기본 모델에서 Filter가 정확히 맞으면 자기 Drop은 1이고, Alias에서 뒤쪽 Filter가 같은 Carrier를 제거할 수 있습니다.",
+  "notebook": "같은 FSR Alias Scenario에서 Architecture만 Mod-Mux로 바꾸세요. Matrix의 Off-diagonal과 CH1 Output을 함께 보세요. Off-diagonal이 0이어도 CH1이 약해질 수 있습니다. 이어 Filter Offset을 바꾸어 Common-bus와 Mod-Mux 중 어느 결과만 바뀌는지 확인하세요. Mod-Mux의 Active-path 분리와 Passive Mux Filter Penalty를 함께 설명하세요."
+}
