@@ -1,5 +1,5 @@
 {
-  "comparisons": 8540,
+  "comparisons": 11955,
   "status": "PASS",
   "reference": "Closed-form continuous piecewise constant two-pole ODE, exact SI, independent math.erfc",
   "cascadeMaxNormalizedErrorBySamplesUI": {

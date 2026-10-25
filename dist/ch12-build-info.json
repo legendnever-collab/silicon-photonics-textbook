@@ -75,7 +75,10 @@
     "11.7",
     "12.1",
     "12.2",
-    "12.3"
+    "12.3",
+    "12.4",
+    "12.5",
+    "12.6"
   ],
   "sources": [
     "assets/NotoSansKR-OFL.txt",
@@ -234,6 +237,9 @@
     "textbook/chapter-12/12.1.json",
     "textbook/chapter-12/12.2.json",
     "textbook/chapter-12/12.3.json",
+    "textbook/chapter-12/12.4.json",
+    "textbook/chapter-12/12.5.json",
+    "textbook/chapter-12/12.6.json",
     "tutor/1.1.json",
     "tutor/1.2.json",
     "tutor/1.3.json",
@@ -308,8 +314,11 @@
     "tutor/chapter-11/11.7.json",
     "tutor/chapter-12/12.1.json",
     "tutor/chapter-12/12.2.json",
-    "tutor/chapter-12/12.3.json"
+    "tutor/chapter-12/12.3.json",
+    "tutor/chapter-12/12.4.json",
+    "tutor/chapter-12/12.5.json",
+    "tutor/chapter-12/12.6.json"
   ],
-  "sourceHash": "589802ebd33a2cb3c9e14418716b1536c496f4dccc21a20caade47e723e48391",
-  "htmlSha256": "6edf44f463854f507605d4650372a90b892ac6a46e9b9861e6f0fa458a5783e5"
+  "sourceHash": "cfa46f5dc438a3ebe21b7a26a1c404076ea765796ff1b0dc47c781745b3b70c6",
+  "htmlSha256": "420f503b9ed3b1d34d8c1c622607efcff649b3873ef48f1a3b0ee5c89c30d986"
 }

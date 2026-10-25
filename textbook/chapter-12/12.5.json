@@ -1,0 +1,66 @@
+{
+  "id": "12.5",
+  "short": "Noise Sources",
+  "title": "Shot Noise and Thermal Noise",
+  "time": "12–18분",
+  "lead": "Rx Bandwidth를 낮추면 왜 Noise와 Signal Settling을 함께 비교해야 할까요?",
+  "question": "Rx Bandwidth를 낮추면 왜 Noise와 Signal Settling을 함께 비교해야 할까요?",
+  "prediction": "설정을 바꾸면 어떤 결과가 나타날까요?",
+  "reflection": "3-dB Bandwidth와 ENBW, Continuous Eye와 Decision-sample Noise를 구별하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "dynamic",
+      "html": "<p>Noise가 없던 Eye와 실제 Decision Sample의 산포는 다른 결과입니다. 이 실습은 연속시간 Noisy Waveform Solver 대신 각 Decision Sample에 독립 Gaussian Noise를 한 번 더합니다. Eye의 연속선은 Deterministic이며 Histogram과 Scatter는 생성한 Noisy Samples를 사용합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "dynamic",
+      "html": "<p>Shot Noise PSD는 Plateau Photocurrent와 Dark Current에 비례합니다. Thermal Input Current-noise Density는 A/√Hz이고 그 제곱이 One-sided PSD입니다. Analog First-order Rx의 ENBW는π/2·f3dB이므로3-dB Bandwidth와 같지 않습니다. Rx를 Ideal Bypass하면 유한 ENBW가 정의되지 않아 Noise가 비활성화됩니다.</p><p>모델의 경로는 Bit Pattern→Tx Optical Intensity→Optical Loss→Photocurrent→Rx Bandwidth→Samples→Decision입니다. Figure, Notebook과 Report는 같은 계산 결과를 사용합니다. 이 장은 Extension Curriculum E1 · Independent Teaching Supplement입니다. 원본 Chapter14가 아니며 모든 수치는 독립 교육 가정입니다. 실제 Hardware, IEEE 규격, 상용 Simulator와 수치 동등성 또는 Low BER을 검증하지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "dynamic",
+      "html": "<div class=\"equation\">Bn=∫₀∞|H_rx(f)|²df=πf3dB/2; σ_b²=[2q(I_photo,b+I_dark)+i_th²]·Bn</div><p>시간은 내부에서 s, Power는 W, Current는 A로 계산하고 UI/ps/mW/µA를 표시할 때 명시적으로 변환합니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>Rx f3dB=10 GHz이면 Bn≈15.708 GHz입니다. Thermal Density10 pA/√Hz의 RMS는 약1.2533 µA입니다. Signal 증가 시 Shot RMS도 커지지만 Signal/Noise 비가 반드시 나빠지는 것은 아닙니다. Optical Loss로 Signal과 Shot Noise가 같이 줄어도 SNR이 개선된다는 뜻은 아닙니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "원인을 생각합니다",
+      "scene": "dynamic",
+      "html": "<p>Ideal Rx Bypass에서 Noise는 어떻게 처리하나요?</p><p>답을 선택하기 전에 원인과 결과를 설명하고, 오답의 Feedback으로 자신의 가정을 확인하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 확인합니다",
+      "scene": "dynamic",
+      "html": "<p>Noise View에서 Shot와 Thermal을 하나씩 켜고 Histogram을 비교하세요. Rx Bandwidth를15→3 GHz로 낮춰 Noise RMS와 Signed Opening을 함께 보세요. Seed만 바꾸면 같은 Named Pattern의 Deterministic Eye는 그대로이고 Scatter가 바뀝니다.</p><p>Prediction을 적은 뒤 계산 결과와 비교하세요. 예상과 다른 경우 Pattern·Reference Plane·Sample Phase부터 확인합니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "dynamic",
+      "html": "<p>3-dB Bandwidth와 ENBW, Continuous Eye와 Decision-sample Noise를 구별하세요.</p><p>이 장은 Extension Curriculum E1 · Independent Teaching Supplement입니다. 원본 Chapter14가 아니며 모든 수치는 독립 교육 가정입니다. 실제 Hardware, IEEE 규격, 상용 Simulator와 수치 동등성 또는 Low BER을 검증하지 않습니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "유한 ENBW가 없으므로 Noise를 끄고 이유를 표시합니다.",
+    "무한 Bandwidth를1 GHz로 조용히 바꿉니다.",
+    "같은 Noise RMS를 항상 유지합니다."
+  ],
+  "predictionFeedback": "맞습니다. 별도 Measurement Bandwidth를 선언하지 않은 Ideal Bypass에 임의의 유한 Noise를 넣지 않습니다. 명시하지 않은 Bandwidth를 대입하면 물리적 가정이 숨겨집니다. 이 모델은 비활성화 이유를 보여줍니다.",
+  "sources": [
+    "E0",
+    "E1",
+    "E2"
+  ]
+}
