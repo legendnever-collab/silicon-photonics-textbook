@@ -1,0 +1,4 @@
+import{readFile,writeFile,mkdtemp,rm}from'node:fs/promises';import{join}from'node:path';import{spawn}from'node:child_process';
+const dir=await mkdtemp(join(process.cwd(),'scripts','.workspace-all-'));
+try{let source=await readFile('scripts/workspace-regressions.mjs','utf8');source=source.replaceAll('artifacts/v0.12.1','artifacts/v0.12.2').replaceAll("'silicon-photonics-textbook-v0.12.1.html'","'silicon-photonics-textbook-v0.12.2.html'").replaceAll("'dist/workspace-build-info.json'","'dist/workspace-all-build-info.json'");
+const path=join(dir,'runner.mjs');await writeFile(path,source);const code=await new Promise((resolve,reject)=>{const child=spawn(process.execPath,[path,'integrated'],{stdio:'inherit',env:process.env});child.on('close',resolve);child.on('error',reject)});if(code!==0)throw Error('All-lesson original regression failed');}finally{await rm(dir,{recursive:true,force:true})}

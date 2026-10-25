@@ -1,0 +1,10 @@
+/* Common extension for every existing notebook; original chapter styles stay unchanged. */
+.ws-view{max-height:3em;overflow:auto;overscroll-behavior:contain}
+.ws-metric{max-height:2.6em;overflow:auto;overscroll-behavior:contain}
+.ws-lens select{min-height:44px}
+.ws-observe .ch8-pair{display:flex;gap:16px;align-items:flex-start;min-width:0}
+.ws-observe .ch8-pair>div:not([hidden]){flex:0 0 auto;min-width:0}
+.ws-observe .ch8-pair>[hidden]{display:none}
+.ws-observe .ws-frame>svg{max-width:none!important}
+.ws-controls pre{max-width:100%;white-space:pre-wrap;overflow-wrap:anywhere}
+.ws-controls .ch8-actions,.ws-controls .ch9-actions,.ws-controls .ch10-actions,.ws-controls .ch11-actions{display:flex;flex-wrap:wrap;gap:8px}
