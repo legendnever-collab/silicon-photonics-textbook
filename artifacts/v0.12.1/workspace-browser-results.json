@@ -1,0 +1,6736 @@
+{
+  "browser": "153.0.8010.0",
+  "htmlSha256": "566537810b9ad8a0d52317c942d0ef7f1e2ac26a15000a82eb1be109d98f41b8",
+  "device": "Viewport emulation only; no physical Android/IME",
+  "scenarios": [
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 1.4 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 1.4 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 1.4 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A9 multi-mode and dispersion view focus 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 12.2 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 12.2 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 12.2 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A4 Tx Rx frame is observation-only 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 12.5 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 12.5 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 12.5 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A8 A9 A10 frozen numeric editor inner Escape zoom report 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 theme keeps Pilot physical settings and frozen evidence 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A11 nonpilot existing path 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 1.4 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 1.4 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 1.4 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A9 multi-mode and dispersion view focus 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 12.2 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 12.2 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 12.2 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A4 Tx Rx frame is observation-only 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 12.5 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 12.5 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 12.5 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A8 A9 A10 frozen numeric editor inner Escape zoom report 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 theme keeps Pilot physical settings and frozen evidence 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A11 nonpilot existing path 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 1.4 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 1.4 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 1.4 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A9 multi-mode and dispersion view focus 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 12.2 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 12.2 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 12.2 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A4 Tx Rx frame is observation-only 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 12.5 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 12.5 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 12.5 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A8 A9 A10 frozen numeric editor inner Escape zoom report 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 theme keeps Pilot physical settings and frozen evidence 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A11 nonpilot existing path 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 1.4 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 1.4 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 1.4 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A9 multi-mode and dispersion view focus 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 12.2 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 12.2 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 12.2 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A4 Tx Rx frame is observation-only 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 12.5 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 12.5 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 12.5 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A8 A9 A10 frozen numeric editor inner Escape zoom report 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 theme keeps Pilot physical settings and frozen evidence 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A11 nonpilot existing path 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 1.4 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 1.4 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 1.4 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A9 multi-mode and dispersion view focus 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 12.2 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 12.2 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 12.2 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A4 Tx Rx frame is observation-only 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 12.5 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 12.5 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 12.5 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A8 A9 A10 frozen numeric editor inner Escape zoom report 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 theme keeps Pilot physical settings and frozen evidence 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A11 nonpilot existing path 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A8 portrait landscape transition and close 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 1.4 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 1.4 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 1.4 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A9 multi-mode and dispersion view focus 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 12.2 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 12.2 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 12.2 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A4 Tx Rx frame is observation-only 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 12.5 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 12.5 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 12.5 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A8 A9 A10 frozen numeric editor inner Escape zoom report 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 theme keeps Pilot physical settings and frozen evidence 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A11 nonpilot existing path 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A8 portrait landscape transition and close 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 1.4 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 1.4 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 1.4 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A9 multi-mode and dispersion view focus 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 12.2 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 12.2 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 12.2 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A4 Tx Rx frame is observation-only 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 12.5 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 12.5 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 12.5 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A8 A9 A10 frozen numeric editor inner Escape zoom report 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 theme keeps Pilot physical settings and frozen evidence 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A11 nonpilot existing path 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A8 portrait landscape transition and close 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 1.4 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 1.4 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 1.4 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A9 multi-mode and dispersion view focus 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 12.2 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 12.2 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 12.2 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A4 Tx Rx frame is observation-only 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A1 A2 A4 A5 last parameter live / independent scroll 12.5 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A3 pointer keyboard resize bounded 12.5 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A7 identity observation evidence and return 12.5 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 A8 A9 A10 frozen numeric editor inner Escape zoom report 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A6 theme keeps Pilot physical settings and frozen evidence 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A11 nonpilot existing path 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A8 portrait landscape transition and close 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "A4 original baseline parameter / graphic numerical parity",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "network": [],
+  "geometry": [
+    {
+      "name": "1.4 last 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 355.125,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 437.5,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 726.5,
+        "width": 705.890625,
+        "height": 173.5,
+        "scrollTop": 168
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 662.125,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "1.4 second interaction 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 355.125,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 437.5,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 726.5,
+        "width": 705.890625,
+        "height": 173.5,
+        "scrollTop": 168
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 662.125,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "1.4 minimum 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 157.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 529,
+        "width": 705.890625,
+        "height": 371,
+        "scrollTop": 168
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 464.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "1.4 maximum 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 384.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 467,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 756,
+        "width": 705.890625,
+        "height": 144,
+        "scrollTop": 168
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 691.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "1.4 pointer 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 339.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 422,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 711,
+        "width": 705.890625,
+        "height": 189,
+        "scrollTop": 168
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 646.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "1.4 arrow 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 323.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 406,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 695,
+        "width": 705.890625,
+        "height": 205,
+        "scrollTop": 168
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 630.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "1.4 expanded 1440x900 light",
+      "plot": {
+        "x": 24,
+        "y": 119.578125,
+        "width": 902.390625,
+        "height": 722.046875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 79.578125,
+        "width": 950.390625,
+        "height": 820.421875,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 964.390625,
+        "y": 79.578125,
+        "width": 475.609375,
+        "height": 820.421875,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 24,
+        "y": 841.625,
+        "width": 902.390625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.2 last 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 348,
+        "width": 677.890625,
+        "height": 282.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 406,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 695,
+        "width": 705.890625,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 630.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.2 second interaction 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 348,
+        "width": 677.890625,
+        "height": 282.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 406,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 695,
+        "width": 705.890625,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 630.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.2 minimum 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 348,
+        "width": 677.890625,
+        "height": 116.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 529,
+        "width": 705.890625,
+        "height": 371,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 464.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.2 maximum 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 348,
+        "width": 677.890625,
+        "height": 343.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 467,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 756,
+        "width": 705.890625,
+        "height": 144,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 691.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.2 pointer 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 348,
+        "width": 677.890625,
+        "height": 298.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 422,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 711,
+        "width": 705.890625,
+        "height": 189,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 646.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.2 arrow 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 348,
+        "width": 677.890625,
+        "height": 282.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 406,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 695,
+        "width": 705.890625,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 630.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.2 expanded 1440x900 light",
+      "plot": {
+        "x": 24,
+        "y": 160.578125,
+        "width": 902.390625,
+        "height": 681.046875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 79.578125,
+        "width": 950.390625,
+        "height": 820.421875,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 964.390625,
+        "y": 79.578125,
+        "width": 475.609375,
+        "height": 820.421875,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 24,
+        "y": 841.625,
+        "width": 902.390625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.5 last 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 323.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 406,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 695,
+        "width": 705.890625,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 630.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.5 second interaction 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 323.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 406,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 695,
+        "width": 705.890625,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 630.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.5 minimum 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 157.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 529,
+        "width": 705.890625,
+        "height": 371,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 464.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.5 maximum 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 384.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 467,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 756,
+        "width": 705.890625,
+        "height": 144,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 691.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.5 pointer 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 339.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 422,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 711,
+        "width": 705.890625,
+        "height": 189,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 646.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.5 arrow 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 323.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 406,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 695,
+        "width": 705.890625,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 630.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.5 expanded 1440x900 light",
+      "plot": {
+        "x": 24,
+        "y": 119.578125,
+        "width": 902.390625,
+        "height": 722.046875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 79.578125,
+        "width": 950.390625,
+        "height": 820.421875,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 964.390625,
+        "y": 79.578125,
+        "width": 475.609375,
+        "height": 820.421875,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 24,
+        "y": 841.625,
+        "width": 902.390625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.5 noise final 1440x900 light",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 323.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 406,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 695,
+        "width": 705.890625,
+        "height": 205,
+        "scrollTop": 308
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 630.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "1.4 last 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 355.125,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 437.5,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 726.5,
+        "width": 705.890625,
+        "height": 173.5,
+        "scrollTop": 168
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 662.125,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "1.4 second interaction 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 355.125,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 437.5,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 726.5,
+        "width": 705.890625,
+        "height": 173.5,
+        "scrollTop": 168
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 662.125,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "1.4 minimum 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 157.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 529,
+        "width": 705.890625,
+        "height": 371,
+        "scrollTop": 168
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 464.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "1.4 maximum 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 384.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 467,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 756,
+        "width": 705.890625,
+        "height": 144,
+        "scrollTop": 168
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 691.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "1.4 pointer 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 339.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 422,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 711,
+        "width": 705.890625,
+        "height": 189,
+        "scrollTop": 168
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 646.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "1.4 arrow 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 323.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 406,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 695,
+        "width": 705.890625,
+        "height": 205,
+        "scrollTop": 168
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 630.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "1.4 expanded 1440x900 dark",
+      "plot": {
+        "x": 24,
+        "y": 119.578125,
+        "width": 902.390625,
+        "height": 722.046875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 79.578125,
+        "width": 950.390625,
+        "height": 820.421875,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 964.390625,
+        "y": 79.578125,
+        "width": 475.609375,
+        "height": 820.421875,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 24,
+        "y": 841.625,
+        "width": 902.390625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.2 last 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 348,
+        "width": 677.890625,
+        "height": 282.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 406,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 695,
+        "width": 705.890625,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 630.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.2 second interaction 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 348,
+        "width": 677.890625,
+        "height": 282.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 406,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 695,
+        "width": 705.890625,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 630.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.2 minimum 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 348,
+        "width": 677.890625,
+        "height": 116.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 529,
+        "width": 705.890625,
+        "height": 371,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 464.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.2 maximum 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 348,
+        "width": 677.890625,
+        "height": 343.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 467,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 756,
+        "width": 705.890625,
+        "height": 144,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 691.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.2 pointer 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 348,
+        "width": 677.890625,
+        "height": 298.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 422,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 711,
+        "width": 705.890625,
+        "height": 189,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 646.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.2 arrow 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 348,
+        "width": 677.890625,
+        "height": 282.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 406,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 695,
+        "width": 705.890625,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 630.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.2 expanded 1440x900 dark",
+      "plot": {
+        "x": 24,
+        "y": 160.578125,
+        "width": 902.390625,
+        "height": 681.046875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 79.578125,
+        "width": 950.390625,
+        "height": 820.421875,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 964.390625,
+        "y": 79.578125,
+        "width": 475.609375,
+        "height": 820.421875,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 24,
+        "y": 841.625,
+        "width": 902.390625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.5 last 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 323.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 406,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 695,
+        "width": 705.890625,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 630.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.5 second interaction 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 323.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 406,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 695,
+        "width": 705.890625,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 630.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.5 minimum 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 157.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 529,
+        "width": 705.890625,
+        "height": 371,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 464.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.5 maximum 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 384.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 467,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 756,
+        "width": 705.890625,
+        "height": 144,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 691.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.5 pointer 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 339.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 422,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 711,
+        "width": 705.890625,
+        "height": 189,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 646.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.5 arrow 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 323.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 406,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 695,
+        "width": 705.890625,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 630.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.5 expanded 1440x900 dark",
+      "plot": {
+        "x": 24,
+        "y": 119.578125,
+        "width": 902.390625,
+        "height": 722.046875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 79.578125,
+        "width": 950.390625,
+        "height": 820.421875,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 964.390625,
+        "y": 79.578125,
+        "width": 475.609375,
+        "height": 820.421875,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 24,
+        "y": 841.625,
+        "width": 902.390625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "12.5 noise final 1440x900 dark",
+      "plot": {
+        "x": 748.109375,
+        "y": 307,
+        "width": 677.890625,
+        "height": 323.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 734.109375,
+        "y": 275,
+        "width": 705.890625,
+        "height": 406,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 734.109375,
+        "y": 695,
+        "width": 705.890625,
+        "height": 205,
+        "scrollTop": 308
+      },
+      "kpi": {
+        "x": 748.109375,
+        "y": 630.625,
+        "width": 677.890625,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1440,
+      "vh": 900,
+      "overflow": false
+    },
+    {
+      "name": "1.4 last 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 252.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 335,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 624,
+        "width": 669.609375,
+        "height": 144,
+        "scrollTop": 198
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 559.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "1.4 second interaction 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 252.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 335,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 624,
+        "width": 669.609375,
+        "height": 144,
+        "scrollTop": 198
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 559.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "1.4 minimum 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 157.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 529,
+        "width": 669.609375,
+        "height": 239,
+        "scrollTop": 198
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 464.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "1.4 maximum 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 252.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 335,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 624,
+        "width": 669.609375,
+        "height": 144,
+        "scrollTop": 198
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 559.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "1.4 pointer 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 207.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 290,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 579,
+        "width": 669.609375,
+        "height": 189,
+        "scrollTop": 198
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 514.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "1.4 arrow 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 191.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 274,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 563,
+        "width": 669.609375,
+        "height": 205,
+        "scrollTop": 198
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 498.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "1.4 expanded 1366x768 light",
+      "plot": {
+        "x": 24,
+        "y": 119.578125,
+        "width": 853.546875,
+        "height": 590.046875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 79.578125,
+        "width": 901.546875,
+        "height": 688.421875,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 915.546875,
+        "y": 79.578125,
+        "width": 450.453125,
+        "height": 688.421875,
+        "scrollTop": 35
+      },
+      "kpi": {
+        "x": 24,
+        "y": 709.625,
+        "width": 853.546875,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.2 last 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 348,
+        "width": 641.609375,
+        "height": 150.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 274,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 563,
+        "width": 669.609375,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 498.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.2 second interaction 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 348,
+        "width": 641.609375,
+        "height": 150.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 274,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 563,
+        "width": 669.609375,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 498.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.2 minimum 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 348,
+        "width": 641.609375,
+        "height": 116.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 529,
+        "width": 669.609375,
+        "height": 239,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 464.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.2 maximum 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 348,
+        "width": 641.609375,
+        "height": 211.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 335,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 624,
+        "width": 669.609375,
+        "height": 144,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 559.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.2 pointer 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 348,
+        "width": 641.609375,
+        "height": 166.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 290,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 579,
+        "width": 669.609375,
+        "height": 189,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 514.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.2 arrow 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 348,
+        "width": 641.609375,
+        "height": 150.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 274,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 563,
+        "width": 669.609375,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 498.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.2 expanded 1366x768 light",
+      "plot": {
+        "x": 24,
+        "y": 160.578125,
+        "width": 853.546875,
+        "height": 549.046875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 79.578125,
+        "width": 901.546875,
+        "height": 688.421875,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 915.546875,
+        "y": 79.578125,
+        "width": 450.453125,
+        "height": 688.421875,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 24,
+        "y": 709.625,
+        "width": 853.546875,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.5 last 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 191.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 274,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 563,
+        "width": 669.609375,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 498.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.5 second interaction 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 191.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 274,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 563,
+        "width": 669.609375,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 498.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.5 minimum 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 157.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 529,
+        "width": 669.609375,
+        "height": 239,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 464.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.5 maximum 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 252.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 335,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 624,
+        "width": 669.609375,
+        "height": 144,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 559.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.5 pointer 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 207.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 290,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 579,
+        "width": 669.609375,
+        "height": 189,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 514.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.5 arrow 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 191.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 274,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 563,
+        "width": 669.609375,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 498.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.5 expanded 1366x768 light",
+      "plot": {
+        "x": 24,
+        "y": 119.578125,
+        "width": 853.546875,
+        "height": 590.046875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 79.578125,
+        "width": 901.546875,
+        "height": 688.421875,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 915.546875,
+        "y": 79.578125,
+        "width": 450.453125,
+        "height": 688.421875,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 24,
+        "y": 709.625,
+        "width": 853.546875,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.5 noise final 1366x768 light",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 191.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 274,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 563,
+        "width": 669.609375,
+        "height": 205,
+        "scrollTop": 308
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 498.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "1.4 last 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 252.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 335,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 624,
+        "width": 669.609375,
+        "height": 144,
+        "scrollTop": 198
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 559.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "1.4 second interaction 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 252.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 335,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 624,
+        "width": 669.609375,
+        "height": 144,
+        "scrollTop": 198
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 559.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "1.4 minimum 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 157.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 529,
+        "width": 669.609375,
+        "height": 239,
+        "scrollTop": 198
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 464.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "1.4 maximum 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 252.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 335,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 624,
+        "width": 669.609375,
+        "height": 144,
+        "scrollTop": 198
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 559.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "1.4 pointer 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 207.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 290,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 579,
+        "width": 669.609375,
+        "height": 189,
+        "scrollTop": 198
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 514.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "1.4 arrow 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 191.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 274,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 563,
+        "width": 669.609375,
+        "height": 205,
+        "scrollTop": 198
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 498.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "1.4 expanded 1366x768 dark",
+      "plot": {
+        "x": 24,
+        "y": 119.578125,
+        "width": 853.546875,
+        "height": 590.046875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 79.578125,
+        "width": 901.546875,
+        "height": 688.421875,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 915.546875,
+        "y": 79.578125,
+        "width": 450.453125,
+        "height": 688.421875,
+        "scrollTop": 35
+      },
+      "kpi": {
+        "x": 24,
+        "y": 709.625,
+        "width": 853.546875,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.2 last 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 348,
+        "width": 641.609375,
+        "height": 150.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 274,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 563,
+        "width": 669.609375,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 498.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.2 second interaction 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 348,
+        "width": 641.609375,
+        "height": 150.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 274,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 563,
+        "width": 669.609375,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 498.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.2 minimum 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 348,
+        "width": 641.609375,
+        "height": 116.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 529,
+        "width": 669.609375,
+        "height": 239,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 464.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.2 maximum 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 348,
+        "width": 641.609375,
+        "height": 211.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 335,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 624,
+        "width": 669.609375,
+        "height": 144,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 559.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.2 pointer 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 348,
+        "width": 641.609375,
+        "height": 166.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 290,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 579,
+        "width": 669.609375,
+        "height": 189,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 514.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.2 arrow 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 348,
+        "width": 641.609375,
+        "height": 150.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 274,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 563,
+        "width": 669.609375,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 498.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.2 expanded 1366x768 dark",
+      "plot": {
+        "x": 24,
+        "y": 160.578125,
+        "width": 853.546875,
+        "height": 549.046875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 79.578125,
+        "width": 901.546875,
+        "height": 688.421875,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 915.546875,
+        "y": 79.578125,
+        "width": 450.453125,
+        "height": 688.421875,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 24,
+        "y": 709.625,
+        "width": 853.546875,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.5 last 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 191.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 274,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 563,
+        "width": 669.609375,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 498.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.5 second interaction 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 191.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 274,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 563,
+        "width": 669.609375,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 498.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.5 minimum 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 157.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 529,
+        "width": 669.609375,
+        "height": 239,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 464.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.5 maximum 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 252.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 335,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 624,
+        "width": 669.609375,
+        "height": 144,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 559.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.5 pointer 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 207.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 290,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 579,
+        "width": 669.609375,
+        "height": 189,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 514.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.5 arrow 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 191.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 274,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 563,
+        "width": 669.609375,
+        "height": 205,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 498.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.5 expanded 1366x768 dark",
+      "plot": {
+        "x": 24,
+        "y": 119.578125,
+        "width": 853.546875,
+        "height": 590.046875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 79.578125,
+        "width": 901.546875,
+        "height": 688.421875,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 915.546875,
+        "y": 79.578125,
+        "width": 450.453125,
+        "height": 688.421875,
+        "scrollTop": 2902
+      },
+      "kpi": {
+        "x": 24,
+        "y": 709.625,
+        "width": 853.546875,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "12.5 noise final 1366x768 dark",
+      "plot": {
+        "x": 710.390625,
+        "y": 307,
+        "width": 641.609375,
+        "height": 191.625,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 696.390625,
+        "y": 275,
+        "width": 669.609375,
+        "height": 274,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 696.390625,
+        "y": 563,
+        "width": 669.609375,
+        "height": 205,
+        "scrollTop": 308
+      },
+      "kpi": {
+        "x": 710.390625,
+        "y": 498.625,
+        "width": 641.609375,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 1366,
+      "vh": 768,
+      "overflow": false
+    },
+    {
+      "name": "1.4 last 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 343.375,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 420.65625,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 499.65625,
+        "width": 390,
+        "height": 344.34375,
+        "scrollTop": 196
+      },
+      "kpi": {
+        "x": 8,
+        "y": 437.875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "1.4 second interaction 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 343.375,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 420.65625,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 499.65625,
+        "width": 390,
+        "height": 344.34375,
+        "scrollTop": 196
+      },
+      "kpi": {
+        "x": 8,
+        "y": 437.875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "1.4 minimum 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 162.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 319,
+        "width": 390,
+        "height": 525,
+        "scrollTop": 143
+      },
+      "kpi": {
+        "x": 8,
+        "y": 257.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "1.4 maximum 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 543.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 621,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 700,
+        "width": 390,
+        "height": 144,
+        "scrollTop": 196
+      },
+      "kpi": {
+        "x": 8,
+        "y": 638.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "1.4 pointer 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 498.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 576,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 655,
+        "width": 390,
+        "height": 189,
+        "scrollTop": 196
+      },
+      "kpi": {
+        "x": 8,
+        "y": 593.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "1.4 arrow 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 482.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 196
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "1.4 expanded 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 482.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.2 last 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 374,
+        "height": 441.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.2 second interaction 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 374,
+        "height": 441.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.2 minimum 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 374,
+        "height": 121.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 319,
+        "width": 390,
+        "height": 525,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 257.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.2 maximum 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 374,
+        "height": 502.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 621,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 700,
+        "width": 390,
+        "height": 144,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 638.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.2 pointer 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 374,
+        "height": 457.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 576,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 655,
+        "width": 390,
+        "height": 189,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 593.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.2 arrow 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 374,
+        "height": 441.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.2 expanded 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 374,
+        "height": 441.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.5 last 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 482.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.5 second interaction 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 482.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.5 minimum 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 162.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 319,
+        "width": 390,
+        "height": 525,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 257.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.5 maximum 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 543.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 621,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 700,
+        "width": 390,
+        "height": 144,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 638.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.5 pointer 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 498.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 576,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 655,
+        "width": 390,
+        "height": 189,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 593.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.5 arrow 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 482.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.5 expanded 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 482.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.5 noise final 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 482.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 358
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "landscape 390x844 light",
+      "plot": {
+        "x": 24,
+        "y": 119.578125,
+        "width": 502,
+        "height": 212.046875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 79.578125,
+        "width": 550,
+        "height": 310.421875,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 564,
+        "y": 79.578125,
+        "width": 280,
+        "height": 310.421875,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 24,
+        "y": 331.625,
+        "width": 502,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 844,
+      "vh": 390,
+      "overflow": false
+    },
+    {
+      "name": "portrait return 390x844 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 482.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 453
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "1.4 last 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 343.375,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 420.65625,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 499.65625,
+        "width": 390,
+        "height": 344.34375,
+        "scrollTop": 196
+      },
+      "kpi": {
+        "x": 8,
+        "y": 437.875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "1.4 second interaction 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 343.375,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 420.65625,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 499.65625,
+        "width": 390,
+        "height": 344.34375,
+        "scrollTop": 196
+      },
+      "kpi": {
+        "x": 8,
+        "y": 437.875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "1.4 minimum 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 162.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 319,
+        "width": 390,
+        "height": 525,
+        "scrollTop": 143
+      },
+      "kpi": {
+        "x": 8,
+        "y": 257.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "1.4 maximum 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 543.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 621,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 700,
+        "width": 390,
+        "height": 144,
+        "scrollTop": 196
+      },
+      "kpi": {
+        "x": 8,
+        "y": 638.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "1.4 pointer 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 498.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 576,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 655,
+        "width": 390,
+        "height": 189,
+        "scrollTop": 196
+      },
+      "kpi": {
+        "x": 8,
+        "y": 593.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "1.4 arrow 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 482.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 196
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "1.4 expanded 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 482.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.2 last 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 374,
+        "height": 441.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.2 second interaction 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 374,
+        "height": 441.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.2 minimum 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 374,
+        "height": 121.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 319,
+        "width": 390,
+        "height": 525,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 257.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.2 maximum 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 374,
+        "height": 502.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 621,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 700,
+        "width": 390,
+        "height": 144,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 638.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.2 pointer 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 374,
+        "height": 457.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 576,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 655,
+        "width": 390,
+        "height": 189,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 593.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.2 arrow 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 374,
+        "height": 441.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.2 expanded 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 374,
+        "height": 441.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.5 last 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 482.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.5 second interaction 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 482.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.5 minimum 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 162.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 319,
+        "width": 390,
+        "height": 525,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 257.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.5 maximum 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 543.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 621,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 700,
+        "width": 390,
+        "height": 144,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 638.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.5 pointer 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 498.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 576,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 655,
+        "width": 390,
+        "height": 189,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 593.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.5 arrow 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 482.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 3010
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.5 expanded 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 482.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "12.5 noise final 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 482.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 358
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "landscape 390x844 dark",
+      "plot": {
+        "x": 24,
+        "y": 119.578125,
+        "width": 502,
+        "height": 212.046875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 79.578125,
+        "width": 550,
+        "height": 310.421875,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 564,
+        "y": 79.578125,
+        "width": 280,
+        "height": 310.421875,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 24,
+        "y": 331.625,
+        "width": 502,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 844,
+      "vh": 390,
+      "overflow": false
+    },
+    {
+      "name": "portrait return 390x844 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 374,
+        "height": 482.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 390,
+        "height": 560,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 639,
+        "width": 390,
+        "height": 205,
+        "scrollTop": 453
+      },
+      "kpi": {
+        "x": 8,
+        "y": 577.21875,
+        "width": 374,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 390,
+      "vh": 844,
+      "overflow": false
+    },
+    {
+      "name": "1.4 last 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 287.21875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 364.5,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 443.5,
+        "width": 320,
+        "height": 296.5,
+        "scrollTop": 204
+      },
+      "kpi": {
+        "x": 8,
+        "y": 381.71875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "1.4 second interaction 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 287.21875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 364.5,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 443.5,
+        "width": 320,
+        "height": 296.5,
+        "scrollTop": 204
+      },
+      "kpi": {
+        "x": 8,
+        "y": 381.71875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "1.4 minimum 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 162.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 319,
+        "width": 320,
+        "height": 421,
+        "scrollTop": 204
+      },
+      "kpi": {
+        "x": 8,
+        "y": 257.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "1.4 maximum 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 439.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 517,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 596,
+        "width": 320,
+        "height": 144,
+        "scrollTop": 204
+      },
+      "kpi": {
+        "x": 8,
+        "y": 534.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "1.4 pointer 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 394.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 472,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 551,
+        "width": 320,
+        "height": 189,
+        "scrollTop": 204
+      },
+      "kpi": {
+        "x": 8,
+        "y": 489.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "1.4 arrow 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 378.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 204
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "1.4 expanded 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 378.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.2 last 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 304,
+        "height": 337.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.2 second interaction 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 304,
+        "height": 337.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.2 minimum 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 304,
+        "height": 121.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 319,
+        "width": 320,
+        "height": 421,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 257.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.2 maximum 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 304,
+        "height": 398.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 517,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 596,
+        "width": 320,
+        "height": 144,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 534.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.2 pointer 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 304,
+        "height": 353.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 472,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 551,
+        "width": 320,
+        "height": 189,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 489.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.2 arrow 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 304,
+        "height": 337.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.2 expanded 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 304,
+        "height": 337.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.5 last 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 378.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.5 second interaction 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 378.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.5 minimum 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 162.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 319,
+        "width": 320,
+        "height": 421,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 257.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.5 maximum 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 439.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 517,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 596,
+        "width": 320,
+        "height": 144,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 534.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.5 pointer 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 394.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 472,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 551,
+        "width": 320,
+        "height": 189,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 489.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.5 arrow 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 378.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.5 expanded 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 378.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.5 noise final 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 378.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 416
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "landscape 320x740 light",
+      "plot": {
+        "x": 24,
+        "y": 119.578125,
+        "width": 502,
+        "height": 212.046875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 79.578125,
+        "width": 550,
+        "height": 310.421875,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 564,
+        "y": 79.578125,
+        "width": 280,
+        "height": 310.421875,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 24,
+        "y": 331.625,
+        "width": 502,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 844,
+      "vh": 390,
+      "overflow": false
+    },
+    {
+      "name": "portrait return 320x740 light",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 378.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 453
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "1.4 last 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 287.21875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 364.5,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 443.5,
+        "width": 320,
+        "height": 296.5,
+        "scrollTop": 204
+      },
+      "kpi": {
+        "x": 8,
+        "y": 381.71875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "1.4 second interaction 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 287.21875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 364.5,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 443.5,
+        "width": 320,
+        "height": 296.5,
+        "scrollTop": 204
+      },
+      "kpi": {
+        "x": 8,
+        "y": 381.71875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "1.4 minimum 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 162.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 319,
+        "width": 320,
+        "height": 421,
+        "scrollTop": 204
+      },
+      "kpi": {
+        "x": 8,
+        "y": 257.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "1.4 maximum 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 439.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 517,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 596,
+        "width": 320,
+        "height": 144,
+        "scrollTop": 204
+      },
+      "kpi": {
+        "x": 8,
+        "y": 534.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "1.4 pointer 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 394.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 472,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 551,
+        "width": 320,
+        "height": 189,
+        "scrollTop": 204
+      },
+      "kpi": {
+        "x": 8,
+        "y": 489.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "1.4 arrow 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 378.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 204
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "1.4 expanded 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 378.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.2 last 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 304,
+        "height": 337.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.2 second interaction 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 304,
+        "height": 337.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.2 minimum 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 304,
+        "height": 121.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 319,
+        "width": 320,
+        "height": 421,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 257.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.2 maximum 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 304,
+        "height": 398.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 517,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 596,
+        "width": 320,
+        "height": 144,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 534.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.2 pointer 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 304,
+        "height": 353.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 472,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 551,
+        "width": 320,
+        "height": 189,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 489.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.2 arrow 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 304,
+        "height": 337.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.2 expanded 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 135.5,
+        "width": 304,
+        "height": 337.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.5 last 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 378.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.5 second interaction 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 378.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.5 minimum 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 162.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 240,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 319,
+        "width": 320,
+        "height": 421,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 257.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.5 maximum 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 439.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 517,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 596,
+        "width": 320,
+        "height": 144,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 534.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.5 pointer 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 394.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 472,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 551,
+        "width": 320,
+        "height": 189,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 489.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.5 arrow 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 378.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 3068
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.5 expanded 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 378.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "12.5 noise final 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 378.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 416
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    },
+    {
+      "name": "landscape 320x740 dark",
+      "plot": {
+        "x": 24,
+        "y": 119.578125,
+        "width": 502,
+        "height": 212.046875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 79.578125,
+        "width": 550,
+        "height": 310.421875,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 564,
+        "y": 79.578125,
+        "width": 280,
+        "height": 310.421875,
+        "scrollTop": 0
+      },
+      "kpi": {
+        "x": 24,
+        "y": 331.625,
+        "width": 502,
+        "height": 42.375,
+        "scrollTop": 0
+      },
+      "vw": 844,
+      "vh": 390,
+      "overflow": false
+    },
+    {
+      "name": "portrait return 320x740 dark",
+      "plot": {
+        "x": 8,
+        "y": 94.5,
+        "width": 304,
+        "height": 378.71875,
+        "scrollTop": 0
+      },
+      "observe": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 456,
+        "scrollTop": 0
+      },
+      "controls": {
+        "x": 0,
+        "y": 535,
+        "width": 320,
+        "height": 205,
+        "scrollTop": 453
+      },
+      "kpi": {
+        "x": 8,
+        "y": 473.21875,
+        "width": 304,
+        "height": 40.78125,
+        "scrollTop": 0
+      },
+      "vw": 320,
+      "vh": 740,
+      "overflow": false
+    }
+  ]
+}

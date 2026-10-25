@@ -1,0 +1,71 @@
+{
+  "mode": "archived",
+  "changes": "Only output directory, browser executable and integrated artifact/build-info target. Original assertions unmodified.",
+  "suites": [
+    {
+      "name": "browser",
+      "sourceSha256": "4a2fd2bfeb54de88d2b9b94449cb4b7048ca3f1c57dd5c002cd477599e2132c7",
+      "exitCode": 0
+    },
+    {
+      "name": "figures-browser",
+      "sourceSha256": "270988ae48d2693c840d30577cd888cc53399e193c7556ec7279b67dfb310f17",
+      "exitCode": 0
+    },
+    {
+      "name": "ch2-browser",
+      "sourceSha256": "83884de3acbe2415ac37ab48604e0c1182a0fc858d6826594d1eb8a28f562463",
+      "exitCode": 0
+    },
+    {
+      "name": "ch3-browser",
+      "sourceSha256": "55180ac99374e3a2ee4877e2a32c57c6f4b76d5cd74dfdd2ebe195a471bd3960",
+      "exitCode": 0
+    },
+    {
+      "name": "ch4-browser",
+      "sourceSha256": "c200d326f38370162d7a050e7b34ba398dbe6418396ab63621099dcea38275d5",
+      "exitCode": 0
+    },
+    {
+      "name": "ch5-browser",
+      "sourceSha256": "b27acff5eb7b1a4df056a32ebc7e9c24f79187cb2f1fac362394ea64dc396ab5",
+      "exitCode": 0
+    },
+    {
+      "name": "ch6-browser",
+      "sourceSha256": "5781f091e76e54be74f9b26c6fcc85a89cfd75d65737acb9084cc606593e422c",
+      "exitCode": 0
+    },
+    {
+      "name": "ch7-browser",
+      "sourceSha256": "1f72cc0ffdf01c48edeb1cba69a4e011385137483d513841cc7b712d78faf5a6",
+      "exitCode": 0
+    },
+    {
+      "name": "ch8-browser",
+      "sourceSha256": "258fc789ed92071122c99bb1a554a26a72b35ea2b4552ff2d3f9defe34463725",
+      "exitCode": 0
+    },
+    {
+      "name": "ch9-browser",
+      "sourceSha256": "4ccbc0d3c5336d8021a33a9b6f8fa363154c6f3b7424bfda4c98d748fe4514e6",
+      "exitCode": 0
+    },
+    {
+      "name": "ch10-browser",
+      "sourceSha256": "f21259c289b6c6bd0c3169498df5f61ad872cdbc9d445c86f442c1f4c8cd5653",
+      "exitCode": 0
+    },
+    {
+      "name": "ch11-browser",
+      "sourceSha256": "b6f90ea0eb0f2d2ce4112ac10a4a5b19c476194e9f4e25d1f526026ecb0ee6f7",
+      "exitCode": 0
+    },
+    {
+      "name": "ch12-browser",
+      "sourceSha256": "9abdf068099f56ef83dd3415eea3a4c14853c3026bfa3be3f11f5139839cf00a",
+      "exitCode": 0
+    }
+  ]
+}

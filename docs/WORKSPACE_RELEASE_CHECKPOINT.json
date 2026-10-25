@@ -1,0 +1,107 @@
+{
+  "version": "0.12.1",
+  "status": "RUNTIME_VERIFIED_DRAFT_USER_REVIEW",
+  "repository": "legendnever-collab/silicon-photonics-textbook",
+  "branch": "feature/workspace-u1-pinned-graph",
+  "pr": "https://github.com/legendnever-collab/silicon-photonics-textbook/pull/13",
+  "baseMain": "45db327da3b4c40cff88dae42d7d8a816501c4f6",
+  "verifiedRuntimeHead": "437e9d3d3738fc88099ad00e4d53e73d3585ee70",
+  "finalizationHead": "Resolve exact HEAD and hosted status in PR13; finalization only changes runner routing and review evidence, HTML unchanged.",
+  "pilots": [
+    "1.4",
+    "12.2",
+    "12.5"
+  ],
+  "html": {
+    "path": "dist/silicon-photonics-textbook-v0.12.1.html",
+    "sha256": "566537810b9ad8a0d52317c942d0ef7f1e2ac26a15000a82eb1be109d98f41b8",
+    "sourceHash": "b61beb32f98ba8bf847b00177abd82e2fc540b7b4f1be7ca7a41791d121b365b",
+    "deterministicBuild": "PASS"
+  },
+  "local": {
+    "runtimeHead": "437e9d3d3738fc88099ad00e4d53e73d3585ee70",
+    "htmlSha256": "566537810b9ad8a0d52317c942d0ef7f1e2ac26a15000a82eb1be109d98f41b8",
+    "sourceHash": "b61beb32f98ba8bf847b00177abd82e2fc540b7b4f1be7ca7a41791d121b365b",
+    "node": 264,
+    "independentComparisons": 11955,
+    "acceptance": 117,
+    "integratedOldChapter12": 67,
+    "archived": {
+      "browser": {
+        "pass": 15,
+        "failed": 0
+      },
+      "ch10-browser": {
+        "pass": 83,
+        "failed": 0
+      },
+      "ch11-browser": {
+        "pass": 84,
+        "failed": 0
+      },
+      "ch12-browser": {
+        "pass": 67,
+        "failed": 0
+      },
+      "ch2-browser": {
+        "pass": 15,
+        "failed": 0
+      },
+      "ch3-browser": {
+        "pass": 15,
+        "failed": 0
+      },
+      "ch4-browser": {
+        "pass": 8,
+        "failed": 0
+      },
+      "ch5-browser": {
+        "pass": 49,
+        "failed": 0
+      },
+      "ch6-browser": {
+        "pass": 58,
+        "failed": 0
+      },
+      "ch7-browser": {
+        "pass": 67,
+        "failed": 0
+      },
+      "ch8-browser": {
+        "pass": 67,
+        "failed": 0
+      },
+      "ch9-browser": {
+        "pass": 67,
+        "failed": 0
+      },
+      "figures-browser": {
+        "pass": 17,
+        "failed": 0
+      }
+    },
+    "archivedTotal": 612,
+    "preservedFiles": 397,
+    "font": {
+      "requiredHangul": 40,
+      "missingHangul": 0,
+      "missingCharacters": "",
+      "method": "fontTools cmap against original seven embedded fonts; workspace runtime strings"
+    },
+    "device": "Viewport emulation, no physical Android/IME",
+    "mergeApproved": false
+  },
+  "hosted": {
+    "runtimeLegacyWorkflows": "9 SUCCESS at runtime437e9d3",
+    "runtimeWorkspace": "117acceptance PASS; harness dependency path failure40163039268, fixed in finalization",
+    "exactFinalHead": "Resolve PR13 checks; do not substitute intermediate success"
+  },
+  "limitations": [
+    "No physical Android/IME/system Back validation",
+    "Narrow live SVGs may require internal pan; full source plot and Figure Zoom preserved",
+    "No measured learning gain; U2\u2013U4/pop-out/Chapter13 excluded"
+  ],
+  "mergeApproved": false,
+  "mainMerged": false,
+  "reviewGuide": "docs/WORKSPACE_LEARNING_REVIEW.md"
+}

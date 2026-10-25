@@ -1,0 +1,11 @@
+{
+  "mode": "integrated",
+  "changes": "Only output directory, browser executable and integrated artifact/build-info target. Original assertions unmodified.",
+  "suites": [
+    {
+      "name": "ch12-browser",
+      "sourceSha256": "9abdf068099f56ef83dd3415eea3a4c14853c3026bfa3be3f11f5139839cf00a",
+      "exitCode": 0
+    }
+  ]
+}

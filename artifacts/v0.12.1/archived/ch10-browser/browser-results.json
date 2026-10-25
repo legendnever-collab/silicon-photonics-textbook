@@ -1,0 +1,343 @@
+{
+  "htmlSha256": "c925a0bdfe801fa3aeb947f46d49c1703a0ab0df10b2a98d3ade47757508aef2",
+  "browser": "153.0.8010.0",
+  "device": "Desktop/mobile viewport emulation, not physical phones",
+  "scenarios": [
+    {
+      "name": "Integrated65 lessons all prior notebooks 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH10 eight lessons tutor choices explanations predictions figures 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Alignment grid two-port loss polarization and interface change 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Rigid registration solves macro error before optical fine alignment 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Electrical RL through reflection dissipation and optional contact 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Workflow hold gates capture frozen stale presets and reacquisition 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Reference correction sampling floor saturation and model parameter wrapping 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Control node focus viewport figure parity and real mobile zoom pan 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric properties validation apply close Escape reachable footer 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON report snapshot export backup restore and future rejection 1440 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated65 lessons all prior notebooks 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH10 eight lessons tutor choices explanations predictions figures 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Alignment grid two-port loss polarization and interface change 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Rigid registration solves macro error before optical fine alignment 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Electrical RL through reflection dissipation and optional contact 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Workflow hold gates capture frozen stale presets and reacquisition 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Reference correction sampling floor saturation and model parameter wrapping 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Control node focus viewport figure parity and real mobile zoom pan 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric properties validation apply close Escape reachable footer 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON report snapshot export backup restore and future rejection 1440 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated65 lessons all prior notebooks 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH10 eight lessons tutor choices explanations predictions figures 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Alignment grid two-port loss polarization and interface change 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Rigid registration solves macro error before optical fine alignment 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Electrical RL through reflection dissipation and optional contact 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Workflow hold gates capture frozen stale presets and reacquisition 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Reference correction sampling floor saturation and model parameter wrapping 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Control node focus viewport figure parity and real mobile zoom pan 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric properties validation apply close Escape reachable footer 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON report snapshot export backup restore and future rejection 1366 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated65 lessons all prior notebooks 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH10 eight lessons tutor choices explanations predictions figures 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Alignment grid two-port loss polarization and interface change 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Rigid registration solves macro error before optical fine alignment 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Electrical RL through reflection dissipation and optional contact 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Workflow hold gates capture frozen stale presets and reacquisition 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Reference correction sampling floor saturation and model parameter wrapping 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Control node focus viewport figure parity and real mobile zoom pan 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric properties validation apply close Escape reachable footer 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON report snapshot export backup restore and future rejection 1366 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated65 lessons all prior notebooks 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH10 eight lessons tutor choices explanations predictions figures 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Alignment grid two-port loss polarization and interface change 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Rigid registration solves macro error before optical fine alignment 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Electrical RL through reflection dissipation and optional contact 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Workflow hold gates capture frozen stale presets and reacquisition 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Reference correction sampling floor saturation and model parameter wrapping 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Control node focus viewport figure parity and real mobile zoom pan 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric properties validation apply close Escape reachable footer 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON report snapshot export backup restore and future rejection 390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated65 lessons all prior notebooks 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH10 eight lessons tutor choices explanations predictions figures 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Alignment grid two-port loss polarization and interface change 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Rigid registration solves macro error before optical fine alignment 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Electrical RL through reflection dissipation and optional contact 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Workflow hold gates capture frozen stale presets and reacquisition 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Reference correction sampling floor saturation and model parameter wrapping 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Control node focus viewport figure parity and real mobile zoom pan 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric properties validation apply close Escape reachable footer 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON report snapshot export backup restore and future rejection 390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated65 lessons all prior notebooks 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH10 eight lessons tutor choices explanations predictions figures 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Alignment grid two-port loss polarization and interface change 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Rigid registration solves macro error before optical fine alignment 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Electrical RL through reflection dissipation and optional contact 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Workflow hold gates capture frozen stale presets and reacquisition 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Reference correction sampling floor saturation and model parameter wrapping 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Control node focus viewport figure parity and real mobile zoom pan 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric properties validation apply close Escape reachable footer 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON report snapshot export backup restore and future rejection 320 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated65 lessons all prior notebooks 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH10 eight lessons tutor choices explanations predictions figures 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Alignment grid two-port loss polarization and interface change 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Rigid registration solves macro error before optical fine alignment 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Electrical RL through reflection dissipation and optional contact 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Workflow hold gates capture frozen stale presets and reacquisition 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Reference correction sampling floor saturation and model parameter wrapping 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Control node focus viewport figure parity and real mobile zoom pan 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Numeric properties validation apply close Escape reachable footer 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON report snapshot export backup restore and future rejection 320 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only migration sipt-textbook-v9",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only migration sipt-textbook-v8",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only migration sipt-textbook-v7",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "network": [],
+  "bounds": []
+}

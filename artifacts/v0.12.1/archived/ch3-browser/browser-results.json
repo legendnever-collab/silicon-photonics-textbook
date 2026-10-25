@@ -1,0 +1,68 @@
+{
+  "browser": "153.0.8010.0",
+  "scenarios": [
+    {
+      "name": "available Chapter3 lessons retain A–F, substantial prose, three Tutor feedbacks and figure model captions",
+      "status": "PASS"
+    },
+    {
+      "name": "Gaussian notebook/figures share inputs, matched profiles reach unity and offsets reduce overlap",
+      "status": "PASS"
+    },
+    {
+      "name": "Grating factor is explicitly relative, state/marker and signed phase conditions agree",
+      "status": "PASS"
+    },
+    {
+      "name": "Edge offset/tilt limits and Jones relative-phase projections match figures",
+      "status": "PASS"
+    },
+    {
+      "name": "IO power ledger matches worked conditions, avoids double count and handles orthogonal state",
+      "status": "PASS"
+    },
+    {
+      "name": "v2 migration is read-only, v3 resume and full backup restore preserve Ch1/2/3 notes",
+      "status": "PASS"
+    },
+    {
+      "name": "all Ch3 figure zooms support Escape and restore focus",
+      "status": "PASS"
+    },
+    {
+      "name": "1440×900 light: offline chapter navigation, reading, notebook and zoom",
+      "status": "PASS"
+    },
+    {
+      "name": "1440×900 dark: offline chapter navigation, reading, notebook and zoom",
+      "status": "PASS"
+    },
+    {
+      "name": "1366×768 light: offline chapter navigation, reading, notebook and zoom",
+      "status": "PASS"
+    },
+    {
+      "name": "1366×768 dark: offline chapter navigation, reading, notebook and zoom",
+      "status": "PASS"
+    },
+    {
+      "name": "390×844 light: offline chapter navigation, reading, notebook and zoom",
+      "status": "PASS"
+    },
+    {
+      "name": "390×844 dark: offline chapter navigation, reading, notebook and zoom",
+      "status": "PASS"
+    },
+    {
+      "name": "320×740 light: offline chapter navigation, reading, notebook and zoom",
+      "status": "PASS"
+    },
+    {
+      "name": "320×740 dark: offline chapter navigation, reading, notebook and zoom",
+      "status": "PASS"
+    }
+  ],
+  "runtimeErrors": [],
+  "consoleErrors": [],
+  "externalRequests": []
+}
