@@ -78,18 +78,21 @@
     "12.3",
     "12.4",
     "12.5",
-    "12.6"
+    "12.6",
+    "12.7"
   ],
   "sources": [
     "assets/NotoSansKR-OFL.txt",
     "assets/Pretendard-LICENSE.txt",
     "assets/ch10-font-coverage.json",
     "assets/ch11-font-coverage.json",
+    "assets/ch12-font-coverage.json",
     "assets/ch5-font-coverage.json",
     "assets/ch6-font-coverage.json",
     "assets/ch9-font-coverage.json",
     "assets/noto-kr-ch10-extra.b64",
     "assets/noto-kr-ch11-extra.b64",
+    "assets/noto-kr-ch12-extra.b64",
     "assets/noto-kr-ch5-extra.b64",
     "assets/noto-kr-ch6-extra.b64",
     "assets/noto-kr-ch9-extra.b64",
@@ -240,6 +243,7 @@
     "textbook/chapter-12/12.4.json",
     "textbook/chapter-12/12.5.json",
     "textbook/chapter-12/12.6.json",
+    "textbook/chapter-12/12.7.json",
     "tutor/1.1.json",
     "tutor/1.2.json",
     "tutor/1.3.json",
@@ -317,8 +321,9 @@
     "tutor/chapter-12/12.3.json",
     "tutor/chapter-12/12.4.json",
     "tutor/chapter-12/12.5.json",
-    "tutor/chapter-12/12.6.json"
+    "tutor/chapter-12/12.6.json",
+    "tutor/chapter-12/12.7.json"
   ],
-  "sourceHash": "cfa46f5dc438a3ebe21b7a26a1c404076ea765796ff1b0dc47c781745b3b70c6",
-  "htmlSha256": "420f503b9ed3b1d34d8c1c622607efcff649b3873ef48f1a3b0ee5c89c30d986"
+  "sourceHash": "968b9713a751381c561e99d55d1ee87d85caec27abd4e6af52e3b64e84162eac",
+  "htmlSha256": "3fd513bdfb35af4854b7e3d9d300d330c75dd87b7804c5ce28bbb14bb08e54db"
 }

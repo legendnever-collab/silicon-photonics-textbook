@@ -1,0 +1,84 @@
+{
+  "scope": "Numerical independent teaching fixture, not hardware validation",
+  "reference": {
+    "timing": {
+      "uiSec": 4e-11,
+      "dtSec": 6.25e-13,
+      "samplesPerUI": 64,
+      "sampleRateHz": 1600000000000,
+      "warmupBits": 8,
+      "warmupSec": 3.2e-10,
+      "testedBits": 256,
+      "initialConvention": "first warmup plateau; left boundary state; Rx driven by left Tx hold"
+    },
+    "planes": {
+      "txLevelsW": [
+        0.00002,
+        0.0002
+      ],
+      "lossFactor": 0.251188643150958,
+      "rxPlateauW": [
+        0.00000502377286301916,
+        0.0000502377286301916
+      ],
+      "responsivityAperW": 1.0001274482313025,
+      "photoPlateauA": [
+        0.000005024413133985018,
+        0.00005024413133985018
+      ],
+      "darkA": 1e-8,
+      "decisionPlateauA": [
+        0.000005034413133985018,
+        0.00005025413133985018
+      ],
+      "thresholdA": 0.000027499999999999998
+    },
+    "openingA": 0.00002750558529895704,
+    "noise": {
+      "enbwHz": 23561944901.923447,
+      "shotVarianceA2": [
+        3.801021947139378e-14,
+        3.794226875576155e-13
+      ],
+      "thermalVarianceA2": 2.3561944901923445e-12,
+      "sigmaA": [
+        0.0000015473217860754556,
+        0.0000016539701260149652
+      ],
+      "shotEnabled": true,
+      "thermalEnabled": true,
+      "reason": "Plateau-conditioned independent Gaussian decision samples",
+      "scope": "One-sided input-referred PSD; plateau shot approximation, not continuous/cyclostationary noise or correlated samples"
+    },
+    "observed": {
+      "errors": 0,
+      "testedBits": 256,
+      "interpretation": "0/N is a finite observation, not BER=0 or verified BER<1/N"
+    },
+    "expectedError": 1.1308398712069277e-17,
+    "q": {
+      "value": null,
+      "equalTailThresholdA": null,
+      "gaussianProxy": null,
+      "reason": "Q withheld: ISI/context-dependent means"
+    },
+    "displayedEyeBitClasses": [
+      0,
+      1
+    ]
+  },
+  "steadyQExample": {
+    "value": 3.868416312151639,
+    "equalTailThresholdA": 0.00002689104385106278,
+    "gaussianProxy": 0.00005477226011757016,
+    "reason": "Steady binary Gaussian equal-tail proxy; not measured BER or necessarily minimum-BER threshold"
+  },
+  "seededNormal": {
+    "seed": 42,
+    "count": 8192,
+    "mean": -0.015509753703039322,
+    "variance": 0.9948007321938499,
+    "meanTolerance": 0.05,
+    "varianceTolerance": 0.08
+  }
+}

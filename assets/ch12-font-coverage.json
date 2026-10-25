@@ -1,0 +1,17 @@
+{
+  "base": "pretendard-ch3.b64",
+  "extra": "noto-kr-ch12-extra.b64",
+  "hangulRequired": 318,
+  "addedCodepoints": [
+    44081,
+    45124,
+    49325,
+    49567,
+    50420,
+    54876
+  ],
+  "missingHangul": 0,
+  "source": "Google Fonts Noto Sans KR subset / SIL OFL; assets/NotoSansKR-OFL.txt",
+  "sourceCss": "https://fonts.googleapis.com/css2?family=Noto+Sans+KR&text=%EA%B0%B1%EB%81%84%EC%82%AD%EC%86%9F%EC%93%B4%ED%99%9C",
+  "woffSha256": "cdd4248bdf55f3d4ce3657f862f904740f26e00735df2a2058023922b7517911"
+}

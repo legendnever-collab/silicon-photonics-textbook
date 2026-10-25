@@ -124,5 +124,19 @@
     "parameters": "SIPT-DYNAMIC-1; declared NRZ P0/P1; SI internal units; first-order Tx intensity / Rx current poles; 64 samples/UI default; warm-up excluded; explicit phase, threshold and seed.",
     "limits": "Independent single-lane teaching fixture. No device/PDK calibration, actual measurement, continuous stochastic waveform, CDR/FEC/PAM4/WDM dynamics or hardware BER verification.",
     "source": "Original prose/examples/SVG. Independent Extension Curriculum E1; supplementary public Cambridge contents, Ansys PIN element and Synopsys Receiver Sensitivity documentation."
+  },
+  {
+    "id": "12.7A",
+    "lesson": "12.7",
+    "title": "Current and Frozen Evidence",
+    "renderer": "dynamicComparison",
+    "classification": "Independent numerical teaching model",
+    "anchor": "#section-concept > p:first-of-type",
+    "see": "실제로 계산한 시간 파형과 같은 조건의 Sample을 비교합니다.",
+    "notice": "Finite Pattern, Sampling Phase와 선언한 Model Scope를 함께 확인하세요.",
+    "meaning": "Signal Settling과 Receiver Noise를 구별하고 유한한 관측 증거를 보존합니다.",
+    "parameters": "SIPT-DYNAMIC-1; declared NRZ P0/P1; SI internal units; first-order Tx intensity / Rx current poles; 64 samples/UI default; warm-up excluded; explicit phase, threshold and seed.",
+    "limits": "Independent single-lane teaching fixture. No device/PDK calibration, actual measurement, continuous stochastic waveform, CDR/FEC/PAM4/WDM dynamics or hardware BER verification.",
+    "source": "Original prose/examples/SVG. Independent Extension Curriculum E1; supplementary public Cambridge contents, Ansys PIN element and Synopsys Receiver Sensitivity documentation."
   }
 ]
