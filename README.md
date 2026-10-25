@@ -3,7 +3,7 @@
 기술 용어는 영어, 설명은 한글인 독립적인 Interactive Textbook입니다. 교재 설명 → Guided Tutor → Physics Notebook을 연결합니다. 게임이나 최적화 퍼즐을 중심으로 만들지 않습니다.
 
 ## Run offline
-현재 Chapter 11 검토용 통합판 `dist/silicon-photonics-textbook-v0.11.0.html`을 다운로드한 후 Browser로 엽니다. HTML 하나에 Source·Content·모델이 포함되며 외부 Script/Font/API를 요청하지 않습니다. Source 파일 `src/index.html`은 Build Template입니다.
+현재 Chapter 12 검토용 통합판 `dist/silicon-photonics-textbook-v0.12.0.html`을 다운로드한 후 Browser로 엽니다. HTML 하나에 Source·Content·모델이 포함되며 외부 Script/Font/API를 요청하지 않습니다. Source 파일 `src/index.html`은 Build Template입니다.
 
 ## Reproduce
 Node.js 20 이상. Production Build에는 npm 의존성이 없습니다.
@@ -14,7 +14,7 @@ npm test
 npm run serve
 ```
 
-`http://localhost:8080/dist/silicon-photonics-textbook-v0.11.0.html`에서도 실행할 수 있습니다. Chapter 11 Browser QA는 Playwright와 Chromium이 설치된 환경에서 `npm run test:ch11:browser`로 수행합니다. `npm run test:browser`는 보존된 Chapter 1 검증입니다. Browser 의존성은 `tests/README.md`를 따릅니다.
+`http://localhost:8080/dist/silicon-photonics-textbook-v0.12.0.html`에서도 실행할 수 있습니다. Chapter 11 Browser QA는 Playwright와 Chromium이 설치된 환경에서 `npm run test:ch11:browser`로 수행합니다. `npm run test:browser`는 보존된 Chapter 1 검증입니다. Browser 의존성은 `tests/README.md`를 따릅니다.
 
 ## Learning review
 Chapter 1은 약 30–45분을 목표로 한 Pilot입니다. 실제 학습 시간과 교육 효과는 아직 사용자 검토가 필요합니다. 자동 테스트 통과와 학습 효과 검증을 구별합니다. Save/Resume는 같은 Origin/Browser의 Local Storage를 사용하며 기록 JSON으로 백업할 수 있습니다. 파일 위치/Browser가 바뀌면 자동으로 공유되지 않습니다.
@@ -30,7 +30,7 @@ Chapter 1은 약 30–45분을 목표로 한 Pilot입니다. 실제 학습 시�
 - `dist/`: Offline HTML, Build Info, SHA256
 - `checkpoints/`: 단계별 Offline HTML 보존
 
-아래 각 과거 Release의 승인 대기 문구는 당시 기록입니다. 현재 Chapter1–10은 사용자 승인 후 병합 완료입니다. Chapter11은 검토용 Feature이며 사용자 승인 전 병합하지 않습니다. 저작권이 있는 교재 PDF·원본 그림·표는 포함하지 않습니다.
+아래 각 과거 Release의 승인 대기 문구는 당시 기록입니다. 현재 Chapter1–11은 사용자 승인 후 병합 완료입니다. Chapter12는 검토용 Feature이며 사용자 승인 전 병합하지 않습니다. 저작권이 있는 교재 PDF·원본 그림·표는 포함하지 않습니다.
 
 ## v0.1.1 · Figure & Physics Upgrade
 10개의 번호가 있는 Inline Figure를 추가했습니다. 기존 본문·Tutor·검증된 Analytical Model은 그대로 유지합니다. Figure별 Caption, 분류, 계산 조건, 한계와 모바일 확대를 제공합니다.
@@ -116,3 +116,9 @@ SIPT-TEST-1 is independent synthetic assumptions; no hardware/actual measured da
 `npm run build` creates `dist/silicon-photonics-textbook-v0.11.0.html`:72lessons acrossChapters1–11. Seven textbook-first A–Flessons,12originalSVGfigures and6Notebookviews follow originalChapter13 WDM→Ring architectures→Common-bus→Mod-Mux→Conclusion. Four carriers/all16static bit states connect data cross-modulation, passive filter aliasing, detuning, per-channel budget, monitor current and same-assumption architecture comparison. Existing Chapter3/5/7/9 models are called directly.
 
 SIPT-WDM-1 is an independent static teaching fixture, not measured data, a time-domain Eye/BER model or real thermal stabilization. Numeric Properties, frozen/current/stale comparison, JSON Report and v11read-only migration retain the established learning experience. Source scope/units: `docs/CH11_TEXTBOOK_SOURCE_MAPPING.md`, `notebook/CH11_MODEL_CONTRACT.md`. Review/verification: `docs/CH11_LEARNING_REVIEW.md`, `docs/CH11_VALIDATION.md`, `docs/CH11_QA_REPORT.md`. Commands: `npm test`, `npm run test:ch11:independent`, `python3 scripts/audit-ch11-font.py`, `npm run test:ch11:browser`. Prior Chapter1–10 releases/assertions remain unchanged. Merge awaits user review; no automatic next chapter.
+
+## Chapter12 — Time-domain Optical Link (v0.12.0 learning review)
+
+`npm run build` creates `dist/silicon-photonics-textbook-v0.12.0.html`:79lessons, including7new A–F lessons/tutors and10original linked figures. Chapter12 is **Extension Curriculum E1 — Independent Teaching Supplement**, not an invented original textbook Chapter14. Independent NRZ P0/P1→Tx pole→loss→photocurrent→Rx pole→actual2UI Eye/samples→decision connects Chapters4/5/7/10/11 without changing their models or static claims.
+
+Chapter4/5 RC, responsivity/current/shot functions are directly reused. Noise is an explicit plateau-conditioned Gaussian decision-sample approximation using analog Rx ENBW; continuous Eye is deterministic. Observed Errors/Tested Bits, per-context Gaussian Expected Error and scoped steady-level Q proxy are separate. No hardware/low-BER/standards/commercial-simulator equivalence claim. Current/Frozen/Stale, numeric Properties, JSON Report/source hashes and v12backup/read-only migration preserve evidence. Commands: `npm test`, `npm run test:ch12:independent`, `python3 scripts/audit-ch12-font.py`, `npm run test:ch12:browser`. Archived Chapter1–11 build/release/test paths are retained; `npm run build:ch11` reproduces Chapter11. See `docs/CH12_LEARNING_REVIEW.md`, `docs/CH12_VALIDATION.md`, `notebook/CH12_MODEL_CONTRACT.md`. User Play Review and explicit approval required before main merge; no automatic next chapter.

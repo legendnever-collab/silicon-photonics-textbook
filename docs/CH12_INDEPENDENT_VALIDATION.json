@@ -1,0 +1,12 @@
+{
+  "comparisons": 11955,
+  "status": "PASS",
+  "reference": "Closed-form continuous piecewise constant two-pole ODE, exact SI, independent math.erfc",
+  "cascadeMaxNormalizedErrorBySamplesUI": {
+    "32": 0.010741117759850644,
+    "64": 0.005280413303913673,
+    "128": 0.002622361385960783,
+    "256": 0.0013056145629424104
+  },
+  "scope": "Numerical teaching-model consistency, not calibrated hardware accuracy"
+}

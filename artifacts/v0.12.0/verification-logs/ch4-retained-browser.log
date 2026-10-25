@@ -1,0 +1,6 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> silicon-photonics-textbook@0.12.0 test:ch4:browser
+> node tests/ch4-browser.mjs
+
+{"pass":8,"errors":0,"network":0}

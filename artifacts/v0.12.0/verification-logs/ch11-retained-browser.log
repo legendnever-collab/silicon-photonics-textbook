@@ -1,0 +1,90 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> silicon-photonics-textbook@0.12.0 test:ch11:browser
+> node tests/ch11-browser.mjs
+
+PASS Integrated72 lessons retained Chapter1–10 Notebook smoke 1440 light
+PASS CH11 seven lessons tutors alternatives predictions twelve figures 1440 light
+PASS Common bus alias data interaction differs from passive Mod Mux stripping 1440 light
+PASS Frequency grid spectrum and passive mux offset preserve architecture meaning 1440 light
+PASS Selected noiseless model probe tuning source hold and independent layer trims 1440 light
+PASS Per channel budget tap coupling detector current source off and zero drive 1440 light
+PASS Frozen all state comparison survives observational edits physical changes presets reload 1440 light
+PASS Stable control node focus viewport linked figure and actual mobile zoom pan 1440 light
+PASS Numeric Properties validation all channel trims apply close Escape footer 1440 light
+PASS Actual Study Report all16 states scope learning backup restore malformed future 1440 light
+PASS Integrated72 lessons retained Chapter1–10 Notebook smoke 1440 dark
+PASS CH11 seven lessons tutors alternatives predictions twelve figures 1440 dark
+PASS Common bus alias data interaction differs from passive Mod Mux stripping 1440 dark
+PASS Frequency grid spectrum and passive mux offset preserve architecture meaning 1440 dark
+PASS Selected noiseless model probe tuning source hold and independent layer trims 1440 dark
+PASS Per channel budget tap coupling detector current source off and zero drive 1440 dark
+PASS Frozen all state comparison survives observational edits physical changes presets reload 1440 dark
+PASS Stable control node focus viewport linked figure and actual mobile zoom pan 1440 dark
+PASS Numeric Properties validation all channel trims apply close Escape footer 1440 dark
+PASS Actual Study Report all16 states scope learning backup restore malformed future 1440 dark
+PASS Integrated72 lessons retained Chapter1–10 Notebook smoke 1366 light
+PASS CH11 seven lessons tutors alternatives predictions twelve figures 1366 light
+PASS Common bus alias data interaction differs from passive Mod Mux stripping 1366 light
+PASS Frequency grid spectrum and passive mux offset preserve architecture meaning 1366 light
+PASS Selected noiseless model probe tuning source hold and independent layer trims 1366 light
+PASS Per channel budget tap coupling detector current source off and zero drive 1366 light
+PASS Frozen all state comparison survives observational edits physical changes presets reload 1366 light
+PASS Stable control node focus viewport linked figure and actual mobile zoom pan 1366 light
+PASS Numeric Properties validation all channel trims apply close Escape footer 1366 light
+PASS Actual Study Report all16 states scope learning backup restore malformed future 1366 light
+PASS Integrated72 lessons retained Chapter1–10 Notebook smoke 1366 dark
+PASS CH11 seven lessons tutors alternatives predictions twelve figures 1366 dark
+PASS Common bus alias data interaction differs from passive Mod Mux stripping 1366 dark
+PASS Frequency grid spectrum and passive mux offset preserve architecture meaning 1366 dark
+PASS Selected noiseless model probe tuning source hold and independent layer trims 1366 dark
+PASS Per channel budget tap coupling detector current source off and zero drive 1366 dark
+PASS Frozen all state comparison survives observational edits physical changes presets reload 1366 dark
+PASS Stable control node focus viewport linked figure and actual mobile zoom pan 1366 dark
+PASS Numeric Properties validation all channel trims apply close Escape footer 1366 dark
+PASS Actual Study Report all16 states scope learning backup restore malformed future 1366 dark
+PASS Integrated72 lessons retained Chapter1–10 Notebook smoke 390 light
+PASS CH11 seven lessons tutors alternatives predictions twelve figures 390 light
+PASS Common bus alias data interaction differs from passive Mod Mux stripping 390 light
+PASS Frequency grid spectrum and passive mux offset preserve architecture meaning 390 light
+PASS Selected noiseless model probe tuning source hold and independent layer trims 390 light
+PASS Per channel budget tap coupling detector current source off and zero drive 390 light
+PASS Frozen all state comparison survives observational edits physical changes presets reload 390 light
+PASS Stable control node focus viewport linked figure and actual mobile zoom pan 390 light
+PASS Numeric Properties validation all channel trims apply close Escape footer 390 light
+PASS Actual Study Report all16 states scope learning backup restore malformed future 390 light
+PASS Integrated72 lessons retained Chapter1–10 Notebook smoke 390 dark
+PASS CH11 seven lessons tutors alternatives predictions twelve figures 390 dark
+PASS Common bus alias data interaction differs from passive Mod Mux stripping 390 dark
+PASS Frequency grid spectrum and passive mux offset preserve architecture meaning 390 dark
+PASS Selected noiseless model probe tuning source hold and independent layer trims 390 dark
+PASS Per channel budget tap coupling detector current source off and zero drive 390 dark
+PASS Frozen all state comparison survives observational edits physical changes presets reload 390 dark
+PASS Stable control node focus viewport linked figure and actual mobile zoom pan 390 dark
+PASS Numeric Properties validation all channel trims apply close Escape footer 390 dark
+PASS Actual Study Report all16 states scope learning backup restore malformed future 390 dark
+PASS Integrated72 lessons retained Chapter1–10 Notebook smoke 320 light
+PASS CH11 seven lessons tutors alternatives predictions twelve figures 320 light
+PASS Common bus alias data interaction differs from passive Mod Mux stripping 320 light
+PASS Frequency grid spectrum and passive mux offset preserve architecture meaning 320 light
+PASS Selected noiseless model probe tuning source hold and independent layer trims 320 light
+PASS Per channel budget tap coupling detector current source off and zero drive 320 light
+PASS Frozen all state comparison survives observational edits physical changes presets reload 320 light
+PASS Stable control node focus viewport linked figure and actual mobile zoom pan 320 light
+PASS Numeric Properties validation all channel trims apply close Escape footer 320 light
+PASS Actual Study Report all16 states scope learning backup restore malformed future 320 light
+PASS Integrated72 lessons retained Chapter1–10 Notebook smoke 320 dark
+PASS CH11 seven lessons tutors alternatives predictions twelve figures 320 dark
+PASS Common bus alias data interaction differs from passive Mod Mux stripping 320 dark
+PASS Frequency grid spectrum and passive mux offset preserve architecture meaning 320 dark
+PASS Selected noiseless model probe tuning source hold and independent layer trims 320 dark
+PASS Per channel budget tap coupling detector current source off and zero drive 320 dark
+PASS Frozen all state comparison survives observational edits physical changes presets reload 320 dark
+PASS Stable control node focus viewport linked figure and actual mobile zoom pan 320 dark
+PASS Numeric Properties validation all channel trims apply close Escape footer 320 dark
+PASS Actual Study Report all16 states scope learning backup restore malformed future 320 dark
+PASS Read-only migration sipt-textbook-v10
+PASS Read-only migration sipt-textbook-v9
+PASS Read-only migration sipt-textbook-v8
+PASS Read-only migration sipt-textbook-v7
+{"pass":84,"errors":0,"network":0,"bounds":0}

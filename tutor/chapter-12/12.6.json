@@ -1,0 +1,24 @@
+{
+  "question": "0 Errors / N Bits의 올바른 설명은 무엇인가요?",
+  "choices": [
+    {
+      "text": "이 유한 Sample에서 Error를 관측하지 못했습니다.",
+      "feedback": "맞습니다. Observed Count와 모델의 Expected Probability를 구분하고 Bit 수와 조건을 함께 기록해야 합니다.",
+      "correct": true
+    },
+    {
+      "text": "BER=0이 증명되었습니다.",
+      "feedback": "유한한 무오류 관찰은 실제 Error Probability가0이라는 증명이 아닙니다. Rare Event는 짧은 Sequence에 나타나지 않을 수 있습니다.",
+      "correct": false
+    },
+    {
+      "text": "검증된 BER<1/N입니다.",
+      "feedback": "신뢰 수준이나 통계적 추론 없이1/N을 검증된 상한으로 바꾸면 안 됩니다. 이 실습은 관측0/N을 그대로 표시합니다.",
+      "correct": false
+    }
+  ],
+  "why": "Observed Errors는 실제 생성한 Sample을 Threshold와 비교해 센 개수입니다. 유한한 Bit 수에서 Error가 없었다는 사실은 BER=0의 증명이 아닙니다. Gaussian Expected Error는 같은 물리 가정에서 각 Sample Mean과 Noise Sigma를 넣어 계산한 확률이며 측정 결과가 아닙니다. ISI가 있으면 같은1이라도 앞 Bit에 따라 Mean이 다릅니다. 모든 산포를 하나의 Noise Sigma로 섞지 않고 각 Context의 Gaussian Tail을 평균합니다. Sample≥Threshold이면1로 판정하며 Noise가0인 경우에도 이 Equality Convention을 적용합니다. Gaussian Current Sample은 음수가 될 수 있고0으로 Clamp하지 않습니다.",
+  "simple": "ISI가 있으면 같은1이라도 앞 Bit에 따라 Mean이 다릅니다. 모든 산포를 하나의 Noise Sigma로 섞지 않고 각 Context의 Gaussian Tail을 평균합니다. Sample≥Threshold이면1로 판정하며 Noise가0인 경우에도 이 Equality Convention을 적용합니다. Gaussian Current Sample은 음수가 될 수 있고0으로 Clamp하지 않습니다. 이 장은 Extension Curriculum E1 · Independent Teaching Supplement입니다. 원본 Chapter14가 아니며 모든 수치는 독립 교육 가정입니다. 실제 Hardware, IEEE 규격, 상용 Simulator와 수치 동등성 또는 Low BER을 검증하지 않습니다.",
+  "math": "E[P_error]=mean_b-context GaussianTail(mean_k,σ_b,θ); Q=(μ1−μ0)/(σ1+σ0) 독립 Gaussian Sample로0/256 Errors를 관측해도 기대 Error가0이라는 뜻은 아닙니다. 정상 Steady Binary Levels에서 Q=3이고 Equal-tail Threshold를 쓴다면 Gaussian Proxy≈0.0013499입니다. Unequal Sigma의 Equal-tail Threshold를 무조건 Minimum-BER Threshold라고 부르지 않습니다.",
+  "notebook": "Decisions View에서 Threshold를 낮추고 높여0→1과1→0 오류를 비교하세요. Seed를 바꾸어 Observed Errors가 달라져도 Expected Error는 같은 Named Pattern에서 그대로인지 확인합니다. Noise를 끄고 Threshold를 정확한 Level에 놓아 Equality Convention을 관찰하세요. Observed Errors, Pattern-conditional Expected Error, 제한된 Q Proxy의 차이를 설명하세요."
+}

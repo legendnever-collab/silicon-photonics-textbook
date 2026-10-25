@@ -1,0 +1,24 @@
+{
+  "question": "Ideal Rx Bypass에서 Noise는 어떻게 처리하나요?",
+  "choices": [
+    {
+      "text": "유한 ENBW가 없으므로 Noise를 끄고 이유를 표시합니다.",
+      "feedback": "맞습니다. 별도 Measurement Bandwidth를 선언하지 않은 Ideal Bypass에 임의의 유한 Noise를 넣지 않습니다.",
+      "correct": true
+    },
+    {
+      "text": "무한 Bandwidth를1 GHz로 조용히 바꿉니다.",
+      "feedback": "명시하지 않은 Bandwidth를 대입하면 물리적 가정이 숨겨집니다. 이 모델은 비활성화 이유를 보여줍니다.",
+      "correct": false
+    },
+    {
+      "text": "같은 Noise RMS를 항상 유지합니다.",
+      "feedback": "Noise Variance는 PSD를 Bandwidth에 적분한 값입니다. 유한 ENBW가 정의되지 않은 상태에서 기존 RMS를 유지할 수 없습니다.",
+      "correct": false
+    }
+  ],
+  "why": "Noise가 없던 Eye와 실제 Decision Sample의 산포는 다른 결과입니다. 이 실습은 연속시간 Noisy Waveform Solver 대신 각 Decision Sample에 독립 Gaussian Noise를 한 번 더합니다. Eye의 연속선은 Deterministic이며 Histogram과 Scatter는 생성한 Noisy Samples를 사용합니다. Shot Noise PSD는 Plateau Photocurrent와 Dark Current에 비례합니다. Thermal Input Current-noise Density는 A/√Hz이고 그 제곱이 One-sided PSD입니다. Analog First-order Rx의 ENBW는π/2·f3dB이므로3-dB Bandwidth와 같지 않습니다. Rx를 Ideal Bypass하면 유한 ENBW가 정의되지 않아 Noise가 비활성화됩니다.",
+  "simple": "Shot Noise PSD는 Plateau Photocurrent와 Dark Current에 비례합니다. Thermal Input Current-noise Density는 A/√Hz이고 그 제곱이 One-sided PSD입니다. Analog First-order Rx의 ENBW는π/2·f3dB이므로3-dB Bandwidth와 같지 않습니다. Rx를 Ideal Bypass하면 유한 ENBW가 정의되지 않아 Noise가 비활성화됩니다. 이 장은 Extension Curriculum E1 · Independent Teaching Supplement입니다. 원본 Chapter14가 아니며 모든 수치는 독립 교육 가정입니다. 실제 Hardware, IEEE 규격, 상용 Simulator와 수치 동등성 또는 Low BER을 검증하지 않습니다.",
+  "math": "Bn=∫₀∞|H_rx(f)|²df=πf3dB/2; σ_b²=[2q(I_photo,b+I_dark)+i_th²]·Bn Rx f3dB=10 GHz이면 Bn≈15.708 GHz입니다. Thermal Density10 pA/√Hz의 RMS는 약1.2533 µA입니다. Signal 증가 시 Shot RMS도 커지지만 Signal/Noise 비가 반드시 나빠지는 것은 아닙니다. Optical Loss로 Signal과 Shot Noise가 같이 줄어도 SNR이 개선된다는 뜻은 아닙니다.",
+  "notebook": "Noise View에서 Shot와 Thermal을 하나씩 켜고 Histogram을 비교하세요. Rx Bandwidth를15→3 GHz로 낮춰 Noise RMS와 Signed Opening을 함께 보세요. Seed만 바꾸면 같은 Named Pattern의 Deterministic Eye는 그대로이고 Scatter가 바뀝니다. 3-dB Bandwidth와 ENBW, Continuous Eye와 Decision-sample Noise를 구별하세요."
+}

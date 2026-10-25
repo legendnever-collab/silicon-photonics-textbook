@@ -1,0 +1,66 @@
+{
+  "id": "12.3",
+  "short": "Actual Eye",
+  "title": "Build an Eye From Actual Waveforms",
+  "time": "12–18분",
+  "lead": "Eye Diagram의 각 선과 Sampling Marker는 실제 Sequence의 어디에 대응할까요?",
+  "question": "Eye Diagram의 각 선과 Sampling Marker는 실제 Sequence의 어디에 대응할까요?",
+  "prediction": "설정을 바꾸면 어떤 결과가 나타날까요?",
+  "reflection": "Eye의2UI Fold, Bit Label, Sample Phase와 Signed Opening의 관계를 설명하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "dynamic",
+      "html": "<p>Eye는 장식용 사인파가 아닙니다. 계산한 Receiver Current 파형을 같은 Bit Boundary에 맞춰 두 UI씩 잘라 겹칩니다. 각 Trace는 실제 Bit Context를 보존합니다. Warm-up 구간을 제외하므로 초기 Filter State가 만든 가짜 Opening을 통계로 사용하지 않습니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "dynamic",
+      "html": "<p>Sampling Phase는 UI 안에서 Sample을 읽는 위치입니다. Marker를 이동하면 실제 파형에서 보간한 Current와 해당 Bit Label이 함께 바뀝니다. 이 모델은 CDR이나 지연 보정을 하지 않습니다. 따라서 느린 Link에서 현재 Bit의 앞부분을 읽으면 이전 Bit가 더 강하게 보일 수 있고 Signed Opening은 음수가 될 수 있습니다.</p><p>모델의 경로는 Bit Pattern→Tx Optical Intensity→Optical Loss→Photocurrent→Rx Bandwidth→Samples→Decision입니다. Figure, Notebook과 Report는 같은 계산 결과를 사용합니다. 이 장은 Extension Curriculum E1 · Independent Teaching Supplement입니다. 원본 Chapter14가 아니며 모든 수치는 독립 교육 가정입니다. 실제 Hardware, IEEE 규격, 상용 Simulator와 수치 동등성 또는 Low BER을 검증하지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "dynamic",
+      "html": "<div class=\"equation\">Opening_finite=min(I_sample | b=1)−max(I_sample | b=0); t_sample=(k+phase)·T_UI</div><p>시간은 내부에서 s, Power는 W, Current는 A로 계산하고 UI/ps/mW/µA를 표시할 때 명시적으로 변환합니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>Ideal Bypass에서 두 Current Level이5 µA와50 µA이면 Sampling Phase와 관계없이 Opening은45 µA입니다. 낮은 Bandwidth의0101에서 이른 Sample을 읽으면 현재1의 Current가 현재0보다 작을 수 있습니다. 이때 음의 Opening을0으로 잘라 성공처럼 보이지 않습니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "원인을 생각합니다",
+      "scene": "dynamic",
+      "html": "<p>이 모델의 Eye Opening이 음수라면 어떻게 해석해야 할까요?</p><p>답을 선택하기 전에 원인과 결과를 설명하고, 오답의 Feedback으로 자신의 가정을 확인하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 확인합니다",
+      "scene": "dynamic",
+      "html": "<p>Eye View에서 Sampling Phase를0.70→0.10→0.90 UI로 옮기세요. Both Poles와 Ideal Bypass를 비교하고 Current Sample Marker가 같은 Phase의 Trace 위에 놓이는지 확인합니다. Marker는 실제 Bit Label을 유지합니다.</p><p>Prediction을 적은 뒤 계산 결과와 비교하세요. 예상과 다른 경우 Pattern·Reference Plane·Sample Phase부터 확인합니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "dynamic",
+      "html": "<p>Eye의2UI Fold, Bit Label, Sample Phase와 Signed Opening의 관계를 설명하세요.</p><p>이 장은 Extension Curriculum E1 · Independent Teaching Supplement입니다. 원본 Chapter14가 아니며 모든 수치는 독립 교육 가정입니다. 실제 Hardware, IEEE 규격, 상용 Simulator와 수치 동등성 또는 Low BER을 검증하지 않습니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "현재 Pattern·Phase에서1의 최솟값이0의 최댓값보다 작습니다.",
+    "모델이 자동으로0으로 바꾸므로 성공입니다.",
+    "실제 장비의 Low BER이 검증되었습니다."
+  ],
+  "predictionFeedback": "맞습니다. Signed Opening은 해당 유한 Pattern과 Sampling Phase의 결과입니다. 실제 CDR이나 모든 Pattern의 결과로 일반화하지 마세요. 음수 Opening을 유지해야 잘못된 Sampling과 ISI를 발견할 수 있습니다.0으로 자르면 중요한 증거가 사라집니다.",
+  "sources": [
+    "E0",
+    "E1",
+    "E2"
+  ]
+}

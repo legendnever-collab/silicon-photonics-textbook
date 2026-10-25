@@ -1,0 +1,68 @@
+name: Chapter 12 validation
+on:
+  push:
+    branches: [feature/ch12-dynamic-optical-link]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build Node physics and independent reference
+        run: |
+          npm run build
+          npm test
+          pip install fonttools brotli numpy
+          python3 tests/ch12-independent-validation.py
+          python3 scripts/audit-ch12-font.py
+      - name: Deterministic build and historical release preservation
+        run: |
+          cp dist/silicon-photonics-textbook-v0.12.0.html /tmp/ch12.html
+          npm run build
+          cmp /tmp/ch12.html dist/silicon-photonics-textbook-v0.12.0.html
+          cd dist
+          sha256sum -c CH12_SHA256SUMS.txt
+          sha256sum -c CH11_SHA256SUMS.txt
+          sha256sum -c CH10_SHA256SUMS.txt
+          sha256sum -c CH9_SHA256SUMS.txt
+          sha256sum -c CH8_SHA256SUMS.txt
+          sha256sum -c CH7_SHA256SUMS.txt
+      - name: Browser dependencies
+        run: |
+          npm install --no-save --no-package-lock playwright@1.62.0
+          npx playwright install chromium
+      - name: Chapter12 matrix integrated79 lessons and actual downloads
+        env:
+          CI_VISUAL_LOG: '1'
+        run: npm run test:ch12:browser
+      - name: Original Chapter1–11 browser assertions
+        run: |
+          npm run test:browser
+          npm run test:ch2:browser
+          npm run test:ch3:browser
+          npm run test:ch4:browser
+          npm run test:ch5:browser
+          npm run test:ch6:browser
+          npm run test:ch7:browser
+          npm run test:ch8:browser
+          npm run test:ch9:browser
+          npm run test:ch10:browser
+          npm run test:ch11:browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: silicon-photonics-textbook-v0.12.0-review
+          path: |
+            dist/*12*
+            checkpoints/ch12/
+            artifacts/v0.12.0/
+            docs/CH12_*
+          retention-days: 30

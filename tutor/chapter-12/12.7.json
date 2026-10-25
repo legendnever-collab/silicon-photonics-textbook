@@ -1,0 +1,24 @@
+{
+  "question": "View만 바꾼 경우 Frozen Evidence는 어떻게 되나요?",
+  "choices": [
+    {
+      "text": "동일 Evidence를 유지하며 Stale이 되지 않습니다.",
+      "feedback": "맞습니다. Observation-only 변경은 물리 조건과 Sample Evidence를 바꾸지 않습니다. 재취득은 명시적으로 수행합니다.",
+      "correct": true
+    },
+    {
+      "text": "새 Seed로 자동 재생성됩니다.",
+      "feedback": "Seed가 바뀌면 Observed Samples가 달라집니다. 단순 View 변경으로 Evidence를 자동 교체하면 비교할 수 없습니다.",
+      "correct": false
+    },
+    {
+      "text": "이전 Snapshot을 삭제합니다.",
+      "feedback": "Snapshot은 사용자가 Save Comparison으로 교체할 때까지 유지합니다. 관찰과 재취득을 분리해야 재현할 수 있습니다.",
+      "correct": false
+    }
+  ],
+  "why": "보기에 좋은 Eye만 저장하면 Rate, Pattern, Bandwidth와 Noise 조건을 잃기 쉽습니다. Save Comparison은 현재 Physical/Evidence Settings를 Frozen Snapshot으로 보존합니다. 이후 설정을 바꿔도 이전 값은 유지되며 Stale 표시로 두 조건이 다름을 알려줍니다. Sampling Phase, Threshold, Seed도 결과를 바꾸므로 Evidence Settings입니다. View나 Light/Dark, Zoom은 관찰 방법만 바꾸며 새 Evidence를 만들지 않습니다. Explicit Re-acquisition은 Save Comparison을 다시 누르는 동작입니다. Chapter11 결과를 자동 변환하지 않고 Chapter12의 독립 Fixture 안에서 비교합니다.",
+  "simple": "Sampling Phase, Threshold, Seed도 결과를 바꾸므로 Evidence Settings입니다. View나 Light/Dark, Zoom은 관찰 방법만 바꾸며 새 Evidence를 만들지 않습니다. Explicit Re-acquisition은 Save Comparison을 다시 누르는 동작입니다. Chapter11 결과를 자동 변환하지 않고 Chapter12의 독립 Fixture 안에서 비교합니다. 이 장은 Extension Curriculum E1 · Independent Teaching Supplement입니다. 원본 Chapter14가 아니며 모든 수치는 독립 교육 가정입니다. 실제 Hardware, IEEE 규격, 상용 Simulator와 수치 동등성 또는 Low BER을 검증하지 않습니다.",
+  "math": "Same assumptions + declared settings + frozen evidence → reproducible comparison 25 Gb/s,6 dB Loss에서 Snapshot을 저장한 뒤50 Gb/s로 바꾸면 이전 결과는25 Gb/s 조건을 유지하고 Stale이 됩니다. View를 Eye에서 Histogram으로 바꾸어도 Snapshot의 Seed와 Sample Evidence는 변하지 않습니다. 같은 Settings와 Seed로 복원하면 같은 Sample과 Error Count를 얻습니다.",
+  "notebook": "Save Comparison→Bit Rate 변경→Frozen 값과 Stale 확인→JSON Report 다운로드→Save Comparison 재취득을 수행하세요. 학습 기록에서 Backup을 내보내고 Restore하여 Reflection과 Snapshot이 복원되는지도 확인하세요. 같은 평균 Power의 두 Link에서 Signal Settling, Noise, Threshold와 유한 Evidence를 함께 설명하세요."
+}

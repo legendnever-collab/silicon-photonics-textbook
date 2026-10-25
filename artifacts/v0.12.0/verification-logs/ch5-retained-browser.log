@@ -1,0 +1,55 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> silicon-photonics-textbook@0.12.0 test:ch5:browser
+> node tests/ch5-browser.mjs
+
+PASS Ch1–5 navigation, all 29 lessons and legacy notebooks 1440×900 light
+PASS Ch5 figures, all tutor feedback and alternative explanations 1440×900 light
+PASS Shared figure/notebook state, no duplicated QE and independent RC/transit 1440×900 light
+PASS Save/resume, notes, theme, parameters and read record 1440×900 light
+PASS Figure zoom, keyboard close, screenshot 1440×900 light
+PASS Actual download backup, import restore, invalid import preserves state 1440×900 light
+PASS Ch1–5 navigation, all 29 lessons and legacy notebooks 1440×900 dark
+PASS Ch5 figures, all tutor feedback and alternative explanations 1440×900 dark
+PASS Shared figure/notebook state, no duplicated QE and independent RC/transit 1440×900 dark
+PASS Save/resume, notes, theme, parameters and read record 1440×900 dark
+PASS Figure zoom, keyboard close, screenshot 1440×900 dark
+PASS Actual download backup, import restore, invalid import preserves state 1440×900 dark
+PASS Ch1–5 navigation, all 29 lessons and legacy notebooks 1366×768 light
+PASS Ch5 figures, all tutor feedback and alternative explanations 1366×768 light
+PASS Shared figure/notebook state, no duplicated QE and independent RC/transit 1366×768 light
+PASS Save/resume, notes, theme, parameters and read record 1366×768 light
+PASS Figure zoom, keyboard close, screenshot 1366×768 light
+PASS Actual download backup, import restore, invalid import preserves state 1366×768 light
+PASS Ch1–5 navigation, all 29 lessons and legacy notebooks 1366×768 dark
+PASS Ch5 figures, all tutor feedback and alternative explanations 1366×768 dark
+PASS Shared figure/notebook state, no duplicated QE and independent RC/transit 1366×768 dark
+PASS Save/resume, notes, theme, parameters and read record 1366×768 dark
+PASS Figure zoom, keyboard close, screenshot 1366×768 dark
+PASS Actual download backup, import restore, invalid import preserves state 1366×768 dark
+PASS Ch1–5 navigation, all 29 lessons and legacy notebooks 390×844 light
+PASS Ch5 figures, all tutor feedback and alternative explanations 390×844 light
+PASS Shared figure/notebook state, no duplicated QE and independent RC/transit 390×844 light
+PASS Save/resume, notes, theme, parameters and read record 390×844 light
+PASS Figure zoom, keyboard close, screenshot 390×844 light
+PASS Actual download backup, import restore, invalid import preserves state 390×844 light
+PASS Ch1–5 navigation, all 29 lessons and legacy notebooks 390×844 dark
+PASS Ch5 figures, all tutor feedback and alternative explanations 390×844 dark
+PASS Shared figure/notebook state, no duplicated QE and independent RC/transit 390×844 dark
+PASS Save/resume, notes, theme, parameters and read record 390×844 dark
+PASS Figure zoom, keyboard close, screenshot 390×844 dark
+PASS Actual download backup, import restore, invalid import preserves state 390×844 dark
+PASS Ch1–5 navigation, all 29 lessons and legacy notebooks 320×740 light
+PASS Ch5 figures, all tutor feedback and alternative explanations 320×740 light
+PASS Shared figure/notebook state, no duplicated QE and independent RC/transit 320×740 light
+PASS Save/resume, notes, theme, parameters and read record 320×740 light
+PASS Figure zoom, keyboard close, screenshot 320×740 light
+PASS Actual download backup, import restore, invalid import preserves state 320×740 light
+PASS Ch1–5 navigation, all 29 lessons and legacy notebooks 320×740 dark
+PASS Ch5 figures, all tutor feedback and alternative explanations 320×740 dark
+PASS Shared figure/notebook state, no duplicated QE and independent RC/transit 320×740 dark
+PASS Save/resume, notes, theme, parameters and read record 320×740 dark
+PASS Figure zoom, keyboard close, screenshot 320×740 dark
+PASS Actual download backup, import restore, invalid import preserves state 320×740 dark
+PASS Read-only v4 migration retains old learning record and populates v5
+{"pass":49,"errors":0,"network":0,"figureTextOutOfBounds":0}

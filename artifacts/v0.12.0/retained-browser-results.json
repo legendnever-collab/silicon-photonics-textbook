@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "browser": "151.0.7922.34",
+  "retainedScenarios": 545,
+  "newScenarios": 67,
+  "totalExecutedScenarios": 612,
+  "retained": [
+    {
+      "chapter": 1,
+      "status": "PASS",
+      "scenarios": 32,
+      "runtime": "Unchanged archived release HTML; original assertions unchanged",
+      "log": "artifacts/v0.12.0/verification-logs/ch1-retained-browser.log"
+    },
+    {
+      "chapter": 2,
+      "status": "PASS",
+      "scenarios": 15,
+      "runtime": "Unchanged archived release HTML; original assertions unchanged",
+      "log": "artifacts/v0.12.0/verification-logs/ch2-retained-browser.log"
+    },
+    {
+      "chapter": 3,
+      "status": "PASS",
+      "scenarios": 15,
+      "runtime": "Unchanged archived release HTML; original assertions unchanged",
+      "log": "artifacts/v0.12.0/verification-logs/ch3-retained-browser.log"
+    },
+    {
+      "chapter": 4,
+      "status": "PASS",
+      "scenarios": 8,
+      "runtime": "Unchanged archived release HTML; original assertions unchanged",
+      "log": "artifacts/v0.12.0/verification-logs/ch4-retained-browser.log"
+    },
+    {
+      "chapter": 5,
+      "status": "PASS",
+      "scenarios": 49,
+      "runtime": "Unchanged archived release HTML; original assertions unchanged",
+      "log": "artifacts/v0.12.0/verification-logs/ch5-retained-browser.log"
+    },
+    {
+      "chapter": 6,
+      "status": "PASS",
+      "scenarios": 58,
+      "runtime": "Unchanged archived release HTML; original assertions unchanged",
+      "log": "artifacts/v0.12.0/verification-logs/ch6-retained-browser.log"
+    },
+    {
+      "chapter": 7,
+      "status": "PASS",
+      "scenarios": 67,
+      "runtime": "Unchanged archived release HTML; original assertions unchanged",
+      "log": "artifacts/v0.12.0/verification-logs/ch7-retained-browser.log"
+    },
+    {
+      "chapter": 8,
+      "status": "PASS",
+      "scenarios": 67,
+      "runtime": "Unchanged archived release HTML; original assertions unchanged",
+      "log": "artifacts/v0.12.0/verification-logs/ch8-retained-browser.log"
+    },
+    {
+      "chapter": 9,
+      "status": "PASS",
+      "scenarios": 67,
+      "runtime": "Unchanged archived release HTML; original assertions unchanged",
+      "log": "artifacts/v0.12.0/verification-logs/ch9-retained-browser.log"
+    },
+    {
+      "chapter": 10,
+      "status": "PASS",
+      "scenarios": 83,
+      "runtime": "Unchanged archived release HTML; original assertions unchanged",
+      "log": "artifacts/v0.12.0/verification-logs/ch10-retained-browser.log"
+    },
+    {
+      "chapter": 11,
+      "status": "PASS",
+      "scenarios": 84,
+      "runtime": "Unchanged archived release HTML; original assertions unchanged",
+      "log": "artifacts/v0.12.0/verification-logs/ch11-retained-browser.log"
+    }
+  ],
+  "preservedBaselineFiles": 633,
+  "priorArtifacts": "Executed reports retained as logs here; prior tracked artifacts restored byte-for-byte",
+  "runtimeConsoleNetworkSvgErrors": 0,
+  "matrix": "Viewport emulation, not actual Android"
+}

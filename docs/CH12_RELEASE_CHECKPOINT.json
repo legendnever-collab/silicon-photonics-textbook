@@ -1,0 +1,102 @@
+{
+  "version": "0.12.0",
+  "status": "RUNTIME_VERIFIED_DRAFT_LEARNING_REVIEW",
+  "verifiedAt": "2026-10-25T12:02:35.855452+09:00",
+  "repository": "legendnever-collab/silicon-photonics-textbook",
+  "branch": "feature/ch12-dynamic-optical-link",
+  "pr": "https://github.com/legendnever-collab/silicon-photonics-textbook/pull/12",
+  "verifiedMainHead": "8f5f36f148951199fab584a3d51fc6007d69645e",
+  "verifiedRuntimeHead": "c12501dc33f2c0aedabf1cce31d5878bff54c618",
+  "finalizationHead": {
+    "resolution": "The commit containing this checkpoint; exact final SHA and CI conclusions are recorded in PR12 body/checks to avoid self-referential commit hashes.",
+    "scope": "Documentation/review evidence only; runtime/source manifest/HTML unchanged from verifiedRuntimeHead."
+  },
+  "curriculum": "Extension Curriculum E1 — Independent Teaching Supplement, not original textbook Chapter14",
+  "implementation": {
+    "lessons": 79,
+    "newLessons": 7,
+    "newFigures": 10,
+    "frozenComparison": true,
+    "studyReport": true,
+    "backupReadOnlyMigration": true
+  },
+  "html": {
+    "path": "dist/silicon-photonics-textbook-v0.12.0.html",
+    "sha256": "3fd513bdfb35af4854b7e3d9d300d330c75dd87b7804c5ce28bbb14bb08e54db",
+    "sourceHash": "968b9713a751381c561e99d55d1ee87d85caec27abd4e6af52e3b64e84162eac",
+    "deterministicBuild": "PASS byte-identical second build"
+  },
+  "checkpoints": {
+    "D0": "12bf15347be29ce703369ea25b5992573a1d50f9",
+    "D1": "7a06e4804db31263e4b47b6b5e4ac3c2c02e121e",
+    "D2": "768cc9d7f09969c2b8cf7dab083111aac22a087c",
+    "D3": "c12501dc33f2c0aedabf1cce31d5878bff54c618"
+  },
+  "validation": {
+    "local": {
+      "node": 264,
+      "nodeFailed": 0,
+      "independentComparisons": 11955,
+      "newBrowser": 67,
+      "retainedBrowser": 545,
+      "totalBrowser": 612,
+      "runtimeConsoleNetworkSvgErrors": 0,
+      "browser": "151.0.7922.34",
+      "requiredHangul": 318,
+      "missingHangul": 0,
+      "priorFilesPreserved": 633,
+      "unexpectedPriorFileChanges": 0,
+      "retainedReleaseHashChecks": [
+        "0.7.0",
+        "0.8.0",
+        "0.9.0",
+        "0.10.0",
+        "0.11.0"
+      ],
+      "viewports": [
+        "1440x900",
+        "1366x768",
+        "390x844",
+        "320x740"
+      ],
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "device": "Viewport emulation, not physical Android"
+    },
+    "hosted": {
+      "runtimeRunUrl": "https://github.com/legendnever-collab/silicon-photonics-textbook/actions/runs/40156512829",
+      "runtimeHead": "c12501dc33f2c0aedabf1cce31d5878bff54c618",
+      "exactFinalHeadCi": "Resolve from PR12 body/checks after completion; local/historical success is not substituted for exact-head hosted CI."
+    }
+  },
+  "physics": {
+    "fixture": "SIPT-DYNAMIC-1",
+    "reused": [
+      "ActivePhysics.rc",
+      "DetectorPhysics.responsivity",
+      "DetectorPhysics.current",
+      "DetectorPhysics.rc",
+      "DetectorPhysics.shot"
+    ],
+    "noise": "Independent seeded Gaussian decision samples, plateau-conditioned shot/thermal input PSD, analog Rx ENBW; deterministic continuous Eye",
+    "errorEvidence": [
+      "Observed Errors/Tested Bits",
+      "Pattern-conditional Gaussian expected error",
+      "Scoped steady binary equal-tail Q proxy"
+    ],
+    "defaultCascadeMaxErrorNormalizedToP1Photocurrent": 0.005280413303913673,
+    "scope": "Independent numerical teaching consistency, not hardware/device calibration or low-BER/standards/commercial simulator qualification"
+  },
+  "limitations": [
+    "No physical Android-device test or measured learning effectiveness",
+    "No continuous stochastic waveform or cyclostationary/correlated shot-noise solver",
+    "No CDR/FEC/PAM4/coherent/equalizer/jitter/dispersion/chirp/RIN/ASE/WDM dynamic channels",
+    "No calibrated PN/Ring lifetime/real TIA/full-wave/TCAD/device performance or commercial simulator equivalence",
+    "Observed0/N is not BER=0 or verified BER<1/N; tiny Gaussian probabilities may underflow"
+  ],
+  "reviewGuide": "docs/CH12_LEARNING_REVIEW.md",
+  "mergeApproved": false,
+  "nextChapterStarted": false
+}
