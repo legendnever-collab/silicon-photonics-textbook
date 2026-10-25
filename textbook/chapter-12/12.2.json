@@ -1,0 +1,66 @@
+{
+  "id": "12.2",
+  "short": "Bandwidth & Memory",
+  "title": "Bandwidth Limits Create Memory",
+  "time": "12–18분",
+  "lead": "앞 Bit가 끝났는데 왜 Receiver가 이전 상태의 영향을 받을까요?",
+  "question": "앞 Bit가 끝났는데 왜 Receiver가 이전 상태의 영향을 받을까요?",
+  "prediction": "설정을 바꾸면 어떤 결과가 나타날까요?",
+  "reflection": "Tx-only와 Rx-only 실험에서 어느 Reference Plane부터 파형이 달라지는지 설명하세요.",
+  "sections": [
+    {
+      "key": "why",
+      "label": "A · Why are we learning this?",
+      "title": "배우는 이유",
+      "scene": "dynamic",
+      "html": "<p>같은 평균 Power라도 낮은 Bandwidth에서는 짧은 Bit가 충분히 올라가거나 내려가기 전에 다음 Bit를 만납니다. 이것이 ISI의 출발점입니다. Filter State를 Bit마다 Reset하면 이 기억이 사라져 잘못된 Eye를 만들기 때문에 전체 연속 Sequence에서 상태를 유지합니다.</p>"
+    },
+    {
+      "key": "concept",
+      "label": "B · Learn the concept",
+      "title": "개념과 연결",
+      "scene": "dynamic",
+      "html": "<p>이 실습은 Effective Optical-intensity Tx Pole과 Receiver-input Current Rx Pole을 분리합니다. Tx Pole은 PN Voltage나 Ring Cavity Dynamics가 아닙니다. Rx Pole은 광학 Loss 뒤의 Photocurrent를 필터링합니다. Tx-only, Rx-only, Both Poles, Ideal Bypass를 비교하면 어느 위치의 시간 응답이 Edge를 제한하는지 확인할 수 있습니다.</p><p>모델의 경로는 Bit Pattern→Tx Optical Intensity→Optical Loss→Photocurrent→Rx Bandwidth→Samples→Decision입니다. Figure, Notebook과 Report는 같은 계산 결과를 사용합니다. 이 장은 Extension Curriculum E1 · Independent Teaching Supplement입니다. 원본 Chapter14가 아니며 모든 수치는 독립 교육 가정입니다. 실제 Hardware, IEEE 규격, 상용 Simulator와 수치 동등성 또는 Low BER을 검증하지 않습니다.</p>"
+    },
+    {
+      "key": "equation",
+      "label": "C · Understand the equation",
+      "title": "식·단위·독립 예제",
+      "scene": "dynamic",
+      "html": "<div class=\"equation\">τ=1/(2πf_3dB); a=exp(−dt/τ); y[n+1]=a·y[n]+(1−a)·x[n]</div><p>시간은 내부에서 s, Power는 W, Current는 A로 계산하고 UI/ps/mW/µA를 표시할 때 명시적으로 변환합니다.</p><div class=\"worked\"><h3>Worked Example · 독립 교육 예제</h3><p>f3dB=10 GHz이면 τ≈15.915 ps입니다. 한 Pole의 Step은1τ 후 최종 변화의63.2%,3τ 후95.0%에 도달합니다.25 Gb/s의40 ps UI에서 τ/UI≈0.398입니다. 두 Pole Cascade는 한 Pole Step을 그대로 쓰지 않고 앞 Pole의 출력으로 뒤 Pole을 갱신합니다.</p></div>"
+    },
+    {
+      "key": "tutor",
+      "label": "D · Think with your tutor",
+      "title": "원인을 생각합니다",
+      "scene": "dynamic",
+      "html": "<p>Bandwidth를 낮췄을 때 Edge가 느려지는 주된 이유는 무엇인가요?</p><p>답을 선택하기 전에 원인과 결과를 설명하고, 오답의 Feedback으로 자신의 가정을 확인하세요.</p>"
+    },
+    {
+      "key": "experiment",
+      "label": "E · Verify with the model",
+      "title": "예측하고 확인합니다",
+      "scene": "dynamic",
+      "html": "<p>Pattern=0101, Filter Mode=Both Poles에서 Tx Bandwidth만20→3 GHz로 내린 뒤 원래 값으로 되돌리세요. 이어 Rx만15→3 GHz로 내리세요. Long Run에서는 마지막 Bit가 Plateau에 가까워지는지,0101에서는 Opening이 어떻게 달라지는지 비교하세요.</p><p>Prediction을 적은 뒤 계산 결과와 비교하세요. 예상과 다른 경우 Pattern·Reference Plane·Sample Phase부터 확인합니다.</p>"
+    },
+    {
+      "key": "summary",
+      "label": "F · What did we learn?",
+      "title": "배운 원리를 연결합니다",
+      "scene": "dynamic",
+      "html": "<p>Tx-only와 Rx-only 실험에서 어느 Reference Plane부터 파형이 달라지는지 설명하세요.</p><p>이 장은 Extension Curriculum E1 · Independent Teaching Supplement입니다. 원본 Chapter14가 아니며 모든 수치는 독립 교육 가정입니다. 실제 Hardware, IEEE 규격, 상용 Simulator와 수치 동등성 또는 Low BER을 검증하지 않습니다.</p>"
+    }
+  ],
+  "predictionOptions": [
+    "먼저 예측을 선택하세요",
+    "Time Constant가 길어져 이전 상태의 영향이 남습니다.",
+    "Filter가 Bit마다 State를 Reset하기 때문입니다.",
+    "Optical Loss가 자동으로 커지기 때문입니다."
+  ],
+  "predictionFeedback": "맞습니다. State가 연속해서 이어지기 때문에 짧은 Bit는 완전히 Settling하지 못합니다. 이것은 이전 Bit Context와 연결됩니다. 실제 구현은 Bit Boundary에서 State를 Reset하지 않습니다. Reset은 ISI를 숨기는 잘못된 모델을 만듭니다.",
+  "sources": [
+    "E0",
+    "E1",
+    "E2"
+  ]
+}

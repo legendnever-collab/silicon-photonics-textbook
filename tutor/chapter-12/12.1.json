@@ -1,0 +1,24 @@
+{
+  "question": "Bit Rate를 두 배로 올리고 같은 P0/P1·Bit 비율을 유지하면 어떻게 될까요?",
+  "choices": [
+    {
+      "text": "UI가 절반이 되고 이상 평균 Power는 같습니다.",
+      "feedback": "맞습니다. 시간 배정과 Optical Level은 서로 다른 입력입니다. 평균 Power만으로 Transition 응답을 설명할 수 없습니다.",
+      "correct": true
+    },
+    {
+      "text": "평균 Power가 두 배가 됩니다.",
+      "feedback": "Bit 수와 각 Bit의 Power를 곱해 Power를 다시 세지 마세요. 같은 Duty 비율에서는 평균 Power가 같습니다.",
+      "correct": false
+    },
+    {
+      "text": "UI가 두 배가 됩니다.",
+      "feedback": "UI=1/R입니다. Rate가 커지면 더 짧은 시간에 Bit를 구별해야 하므로 UI는 줄어듭니다.",
+      "correct": false
+    }
+  ],
+  "why": "Chapter11의 Static Opening은 여러 정적 상태의 범위를 비교했습니다. 이제 Bit가 정해진 시간 동안 유지되는 NRZ-OOK를 만듭니다. P0와 P1은 Tx Optical Intensity Plane에서 직접 지정하는 독립적인 두 Power입니다. Ring의 정적 Spectrum을 시간축으로 옮기거나 기존 WDM 결과를 새로운 Link의 입력처럼 사용하지 않습니다. Bit Rate R은 1초에 보내는 Bit 수이고 Unit Interval T는 한 Bit에 배정된 시간입니다. R을 두 배로 올리면 T는 절반이 됩니다. 0101과 0011은 0/1 비율이 같으므로 이상적인 평균 Power가 같아도 Transition 사이의 시간이 다릅니다. Long-run Pattern은 같은 Bit가 오래 유지될 때의 Settling을 관찰하게 합니다.",
+  "simple": "Bit Rate R은 1초에 보내는 Bit 수이고 Unit Interval T는 한 Bit에 배정된 시간입니다. R을 두 배로 올리면 T는 절반이 됩니다. 0101과 0011은 0/1 비율이 같으므로 이상적인 평균 Power가 같아도 Transition 사이의 시간이 다릅니다. Long-run Pattern은 같은 Bit가 오래 유지될 때의 Settling을 관찰하게 합니다. 이 장은 Extension Curriculum E1 · Independent Teaching Supplement입니다. 원본 Chapter14가 아니며 모든 수치는 독립 교육 가정입니다. 실제 Hardware, IEEE 규격, 상용 Simulator와 수치 동등성 또는 Low BER을 검증하지 않습니다.",
+  "math": "T_UI=1/R_bit; P_ideal(t)=P_b; P_average=(N0·P0+N1·P1)/(N0+N1) 25 Gb/s이면 UI=40 ps입니다. P0=0.02 mW, P1=0.20 mW이고 0/1이 같은 비율이면 평균은 0.11 mW입니다. 50 Gb/s에서도 이 비율의 평균은 같지만 UI는20 ps로 줄어듭니다. 이는 실제 Device가50 Gb/s를 지원한다는 뜻이 아닙니다.",
+  "notebook": "Filter Mode를 Ideal Bypass로 두고 Bit Rate를25→50 Gb/s로 바꾸세요. Pattern을0101→0011→Long Run으로 바꾸며 Bit Label과 시간축을 비교하세요. Filter를 다시 Both Poles로 두어 같은 입력이 시간 응답에 따라 달라지는지 관찰합니다. Power Level, 평균 Power, Bit Rate와 UI의 차이를 자신의 말로 설명하세요."
+}
