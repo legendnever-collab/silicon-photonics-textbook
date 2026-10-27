@@ -1,0 +1,25 @@
+{
+  "htmlSha256": "0c71675a1e945e4d65e31c73ab4e9ee22e8d45b2171a3fd4649c2b799c39c30d",
+  "passedBrowserScenarios": 732,
+  "suites": [
+    {
+      "path": "u2/browser-results.json",
+      "sha256": "3e09f3c6f7319cbbc61bd7264004439547b7dba0a9d4059b5706245ab6836eff",
+      "passed": 31
+    },
+    {
+      "path": "all/all-browser-results.json",
+      "sha256": "ec9c72f08efb9c4c1ef8e878d8bcc9b35052304ed7c948379d9215e4a8509521",
+      "passed": 634
+    },
+    {
+      "path": "integrated/ch12-browser/browser-results.json",
+      "sha256": "f69c115d9860d2d34f6695b6aa302222757ecb1bc12ab93c2d6e7be368e39d22",
+      "passed": 67
+    }
+  ],
+  "nodeTests": 269,
+  "independentComparisons": 11955,
+  "preservedPriorFiles": 804,
+  "limitations": "Viewport emulation; physical Android/IME/system Back/touch and measured learning gain unverified. Ch1 reference is separate UI storage; Ch12 reuses original Frozen/backup."
+}
