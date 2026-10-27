@@ -1,0 +1,11 @@
+# U2 Pilot · v0.12.3
+
+User approved the next U2 Pilot after merging U1 all-chapter PR13. Remote main verified at `4c59804424700ac8fc2680feb3820e6f438612d4`; clean checkout, no applicable AGENTS.md. Branch `feature/workspace-u2-guided-comparison`. Preserve all tracked prior files except README/package metadata using WORKSPACE_U2_PRESERVATION.json. Do not merge this new UI release without user review.
+
+Only 1.4 Width & Mode, 12.2 Bandwidth/ISI and 12.5 Receiver Noise get U2. All79 lessons retain U1. Original controls move into a primary group; IDs, node identity and delegated events stay original, all controls remain accessible. Formula terms and changed controls/text signal changes. No new Prediction/Reflection forms, gates or curriculum: U3 remains later work.
+
+Reference/current graphics reuse Photonics and DynamicLinkPhysics results without a new physical model. Ch12 uses the original Save Comparison capture and snap_* storage; explicit capture replaces Frozen evidence. Observation view/theme/axis/expansion do not capture. Ch1 reference and all UI preferences use a separate versioned key; original learning backup format remains unchanged.
+
+Field uses a common spatial axis and separately normalized original Slab solutions, declaring actual TE indices and cutoff fallback. Time Waveform uses physical ps, mW and µA, first8UI of each condition. Eye folds original deterministic traces on 0–2UI; different physical UI durations are listed. Histogram rebins actual seeded noisy decision samples on shared current bins; per-bit counts and excluded samples remain explicit. No continuous noisy waveform/BER claim. Auto axes use the union of both conditions; Fixed uses reference bounds and explicit clipping. Unsupported views retain original graphics and numeric comparison table.
+
+Checkpoints: presentation/data implementation → direct model/axis/histogram invariants → U2 browser matrix and baseline/state/report tests → all79 U1/parity and original integrated regressions retargeted without assertion edits → deterministic HTML/hash/font/preservation checks → standalone HTML and Draft PR → exact-head CI. Current final head and hosted results resolve in PR to avoid self-referential commit metadata.

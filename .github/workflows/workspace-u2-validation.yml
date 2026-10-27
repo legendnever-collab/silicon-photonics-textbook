@@ -1,0 +1,67 @@
+name: Workspace U2 Pilot validation
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  pilot-and-physics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          npm run build
+          npm test
+          npm run test:workspace:u2:preservation
+          pip install fonttools brotli numpy
+          python3 tests/ch12-independent-validation.py
+          python3 scripts/audit-workspace-u2-font.py
+          cp dist/silicon-photonics-textbook-v0.12.3.html /tmp/u2.html
+          npm run build
+          cmp /tmp/u2.html dist/silicon-photonics-textbook-v0.12.3.html
+          cd dist
+          sha256sum -c WORKSPACE_U2_SHA256SUMS.txt
+          sha256sum -c WORKSPACE_ALL_SHA256SUMS.txt
+      - run: |
+          npm install --no-save --no-package-lock playwright@1.62.0
+          npx playwright install chromium
+          npm run test:workspace:u2
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workspace-u2-pilot
+          path: |
+            artifacts/v0.12.3/u2/
+            docs/WORKSPACE_U2_*
+            dist/*0.12.3*
+            dist/workspace-u2-*
+            dist/WORKSPACE_U2_*
+  regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        suite: [all, integrated]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          npm run build
+          npm install --no-save --no-package-lock playwright@1.62.0
+          npx playwright install chromium
+          node scripts/workspace-u2-regressions.mjs ${{ matrix.suite }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workspace-u2-${{ matrix.suite }}
+          path: artifacts/v0.12.3/
