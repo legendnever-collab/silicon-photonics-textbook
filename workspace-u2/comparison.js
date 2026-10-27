@@ -27,7 +27,8 @@ function charts(id,current,reference,view,axis='auto'){
  }
  if(view===1){
   const traces=r=>root.DynamicLinkPhysics.eyeTraceStarts(r,24).map(start=>r.waveform.rxA.slice(start,start+2*r.settings.samplesUI+1).map((v,i)=>[i/r.settings.samplesUI,v*1e6]));
-  return{kind:'eye',height:500,panels:[{title:'Deterministic 2-UI Eye · no noisy continuous waveform',xLabel:'Time (UI) · UI duration is listed in the table',yLabel:'Rx (µA)',x:[0,2],y:range(pair.flatMap(r=>traces(r).flat().map(p=>p[1])),true),current:traces(current),reference:traces(reference)}]};
+  const scatter=r=>r.samples.slice(0,128).map(p=>[r.settings.phase,p.noisyA*1e6]);
+  return{kind:'eye',height:500,panels:[{title:'2-UI Eye · traces + actual decision samples (≤128)',xLabel:'Time (UI) · UI duration is listed in the table',yLabel:'Rx (µA)',x:[0,2],y:range(pair.flatMap(r=>[...traces(r).flat().map(p=>p[1]),...scatter(r).map(p=>p[1])]),true),current:traces(current),reference:traces(reference),currentPoints:scatter(current),referencePoints:scatter(reference)}]};
  }
  if(view===3){
   const x=range(pair.flatMap(r=>r.samples.map(p=>p.noisyA*1e6))),a=bins(current.samples,x),b=bins(reference.samples,x),peak=Math.max(1,...b.counts.flat(),...(axis==='fixed'?[]:a.counts.flat()));

@@ -32,11 +32,12 @@ function draw(chart){
  chart.panels.forEach((p,i)=>{
   const top=wave?(i?390:125):n===2?(i?355:100):85,bottom=wave?(i?505:260):n===2?(i?475:220):height-85;
   const X=x=>80+(x-p.x[0])/(p.x[1]-p.x[0])*510,Y=y=>bottom-(y-p.y[0])/(p.y[1]-p.y[0])*(bottom-top),clip='u2-clip-'+i;
-  body+='<defs><clipPath id="'+clip+'"><rect x="80" y="'+top+'" width="510" height="'+(bottom-top)+'"/></clipPath></defs>'+text(24,top-42,p.title)+text(80,top-17,'Reference - - -   Current ━━━');
+  body+='<defs><clipPath id="'+clip+'"><rect x="80" y="'+top+'" width="510" height="'+(bottom-top)+'"/></clipPath></defs>'+text(24,top-42,p.title)+text(80,top-17,chart.kind==='eye'?'Ref: dashed / square · Cur: solid / circle':'Reference - - -   Current ━━━');
   body+='<path class="u2-axis-line" d="M80 '+top+' V'+bottom+' H590"/>';
   for(const f of[0,.5,1]){body+=text(70,Y(p.y[0]+f*(p.y[1]-p.y[0]))+5,fmt(p.y[0]+f*(p.y[1]-p.y[0])),'end')+text(X(p.x[0]+f*(p.x[1]-p.x[0])),bottom+23,fmt(p.x[0]+f*(p.x[1]-p.x[0])),'middle');}
   body+=text(335,bottom+48,p.xLabel,'middle');
   for(const [kind,series]of[['reference',p.reference],['current',p.current]])for(const points of series){clipped+=points.filter(([x,y])=>x<p.x[0]||x>p.x[1]||y<p.y[0]||y>p.y[1]).length;body+='<path data-u2-series="'+kind+'" clip-path="url(#'+clip+')" class="u2-curve u2-'+kind+'" d="'+points.map(([x,y],j)=>(j?'L':'M')+X(x).toFixed(3)+' '+Y(y).toFixed(3)).join(' ')+'"/>';}
+  for(const kind of['reference','current'])for(const[x,y]of p[kind+'Points']||[]){if(x<p.x[0]||x>p.x[1]||y<p.y[0]||y>p.y[1])clipped++;body+=kind==='reference'?'<rect data-u2-sample="reference" x="'+(X(x)-3)+'" y="'+(Y(y)-3)+'" width="6" height="6" fill="none" stroke="var(--warm)" clip-path="url(#'+clip+')"/>':'<circle data-u2-sample="current" cx="'+X(x)+'" cy="'+Y(y)+'" r="2" fill="var(--accent)" clip-path="url(#'+clip+')"/>';}
  });
  return{graphic:'<svg class="u2-svg" role="img" aria-label="Reference dashed and Current solid on shared '+esc(chart.kind)+' axes" viewBox="0 0 640 '+height+'">'+body+'</svg>',clipped};
 }

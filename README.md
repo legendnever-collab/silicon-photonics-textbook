@@ -1,3 +1,9 @@
+# v0.12.3 — U2 Guided Comparison Pilot
+
+현재 실행 파일: [silicon-photonics-textbook-v0.12.3.html](dist/silicon-photonics-textbook-v0.12.3.html). 1.4 / 12.2 / 12.5의 핵심 Parameter·변경 표시·Reference/Current 비교·공통 Auto/Fixed 축. Chapter12는 원래 Frozen Evidence를 재사용합니다. 모든 79 Lesson의 U1과 기존 Physics/학습 기록은 보존합니다. 검토: [WORKSPACE_U2_LEARNING_REVIEW.md](docs/WORKSPACE_U2_LEARNING_REVIEW.md). `npm run build`, `npm run test:workspace:u2`, `npm run test:workspace:u2:preservation`. U3/전체 U2 확대와 main 병합은 별도 사용자 검토 후 진행합니다.
+
+아래는 기존 Release 기록입니다.
+
 # Interactive Silicon Photonics Textbook
 
 ## v0.12.2 — All-Chapter Workspace

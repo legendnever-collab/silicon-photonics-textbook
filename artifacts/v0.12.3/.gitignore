@@ -1,0 +1,4 @@
+*.jpg
+!review/*.jpg
+*.png
+*.log

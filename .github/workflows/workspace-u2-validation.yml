@@ -50,6 +50,8 @@ jobs:
       fail-fast: false
       matrix:
         suite: [all, integrated]
+    env:
+      WS_ALL_OUT: artifacts/v0.12.3/all
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
