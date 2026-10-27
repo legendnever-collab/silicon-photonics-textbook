@@ -1,0 +1,38 @@
+{
+  "scenarios": [
+    {
+      "name": "Chapter4 navigation and original lessons remain 1440",
+      "status": "PASS"
+    },
+    {
+      "name": "All Chapter4 lessons, figures and tutor 1440",
+      "status": "PASS"
+    },
+    {
+      "name": "MZI voltage updates phase and two port powers 1440",
+      "status": "PASS"
+    },
+    {
+      "name": "Study record keeps Chapter4 lesson and parameters 1440",
+      "status": "PASS"
+    },
+    {
+      "name": "Chapter4 navigation and original lessons remain 390",
+      "status": "PASS"
+    },
+    {
+      "name": "All Chapter4 lessons, figures and tutor 390",
+      "status": "PASS"
+    },
+    {
+      "name": "MZI voltage updates phase and two port powers 390",
+      "status": "PASS"
+    },
+    {
+      "name": "Study record keeps Chapter4 lesson and parameters 390",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "network": []
+}

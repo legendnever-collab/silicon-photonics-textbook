@@ -1,0 +1,6 @@
+{
+  "requiredHangul": 40,
+  "missingHangul": 0,
+  "missingCharacters": "",
+  "method": "fontTools cmap against original seven embedded fonts; all-Chapter workspace runtime strings"
+}

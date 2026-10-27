@@ -1,0 +1,5 @@
+import{readFile}from'node:fs/promises';import{createHash}from'node:crypto';import assert from'node:assert/strict';const sha=x=>createHash('sha256').update(x).digest('hex'),read=p=>readFile(p,'utf8');
+const baseline=JSON.parse(await read('docs/WORKSPACE_ALL_PRESERVATION.json'));for(const[path,hash]of Object.entries(baseline.files))assert.equal(sha(await readFile(path)),hash,path);
+const info=JSON.parse(await read('dist/workspace-all-build-info.json')),html=await read('dist/silicon-photonics-textbook-v0.12.2.html'),old=await read('dist/silicon-photonics-textbook-v0.12.1.html');assert.equal(sha(html),info.htmlSha256);for(const{path,sha256}of info.sourceManifest)assert.equal(sha(await readFile(path)),sha256,path);assert.equal(sha(JSON.stringify(info.sourceManifest)),info.sourceHash);
+const data=s=>JSON.parse(s.match(/window.TEXTBOOK=(.*?);<\/script>/s)[1]);assert.deepEqual(data(html),data(old));assert.equal(data(html).lessons.length,79);assert.equal(info.allLessons,true);assert.equal(info.lessons.length,79);
+console.log(JSON.stringify({preservedFiles:Object.keys(baseline.files).length,allLessons:79,htmlSha256:info.htmlSha256,sourceHash:info.sourceHash}));

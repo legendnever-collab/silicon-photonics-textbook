@@ -1,0 +1,30 @@
+{
+  "version": "0.12.1",
+  "baseVersion": "0.12.0",
+  "pilots": [
+    "1.4",
+    "12.2",
+    "12.5"
+  ],
+  "sourceHash": "b61beb32f98ba8bf847b00177abd82e2fc540b7b4f1be7ca7a41791d121b365b",
+  "sourceManifest": [
+    {
+      "path": "dist/silicon-photonics-textbook-v0.12.0.html",
+      "sha256": "3fd513bdfb35af4854b7e3d9d300d330c75dd87b7804c5ce28bbb14bb08e54db"
+    },
+    {
+      "path": "scripts/build-workspace.mjs",
+      "sha256": "cd77e0fc841976fbc32495af3c5c3a4ff85cb161c7a9a7f9f9abfb907feb163d"
+    },
+    {
+      "path": "workspace/workspace.js",
+      "sha256": "de286ed372355c9cd3692cf25ee65fc34c0906ae32852159b97deb74e3506bc7"
+    },
+    {
+      "path": "workspace/workspace.css",
+      "sha256": "52d7838ef8264b86f3a2e6752cbddbbb55f383f9906ddd55229cff195df4049a"
+    }
+  ],
+  "lessons": 79,
+  "htmlSha256": "566537810b9ad8a0d52317c942d0ef7f1e2ac26a15000a82eb1be109d98f41b8"
+}

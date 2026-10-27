@@ -1,0 +1,280 @@
+{
+  "artifact": "file:///workspace/scratch/11d5e8a0ba49/silicon-photonics-textbook/dist/silicon-photonics-textbook-v0.7.0.html",
+  "htmlSha256": "ae7f102a2ae514d02dc4b39584334df3adac63c4fc9a8c6dc417f982d2050803",
+  "browser": "153.0.8010.0",
+  "device": "Desktop/mobile viewport emulation; not a physical smartphone",
+  "scenarios": [
+    {
+      "name": "All43 integrated lessons and prior notebooks 1440×900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Seven CH7 lessons all tutor choices explanations prediction and finite figures 1440×900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "MZI continuous slider node focus scroll and figure parity 1440×900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Fit/passivity model selection and domain boundaries 1440×900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Ring feedback decoupling critical coupling and static spectrum 1440×900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Measurement normalized absolute efficiency cutback zero output 1440×900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Guided circuit detector ledger zero source save reload and figure zoom 1440×900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON download restore malformed future rejection 1440×900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "All43 integrated lessons and prior notebooks 1440×900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Seven CH7 lessons all tutor choices explanations prediction and finite figures 1440×900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "MZI continuous slider node focus scroll and figure parity 1440×900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Fit/passivity model selection and domain boundaries 1440×900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Ring feedback decoupling critical coupling and static spectrum 1440×900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Measurement normalized absolute efficiency cutback zero output 1440×900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Guided circuit detector ledger zero source save reload and figure zoom 1440×900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON download restore malformed future rejection 1440×900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "All43 integrated lessons and prior notebooks 1366×768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Seven CH7 lessons all tutor choices explanations prediction and finite figures 1366×768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "MZI continuous slider node focus scroll and figure parity 1366×768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Fit/passivity model selection and domain boundaries 1366×768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Ring feedback decoupling critical coupling and static spectrum 1366×768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Measurement normalized absolute efficiency cutback zero output 1366×768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Guided circuit detector ledger zero source save reload and figure zoom 1366×768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON download restore malformed future rejection 1366×768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "All43 integrated lessons and prior notebooks 1366×768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Seven CH7 lessons all tutor choices explanations prediction and finite figures 1366×768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "MZI continuous slider node focus scroll and figure parity 1366×768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Fit/passivity model selection and domain boundaries 1366×768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Ring feedback decoupling critical coupling and static spectrum 1366×768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Measurement normalized absolute efficiency cutback zero output 1366×768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Guided circuit detector ledger zero source save reload and figure zoom 1366×768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON download restore malformed future rejection 1366×768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "All43 integrated lessons and prior notebooks 390×844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Seven CH7 lessons all tutor choices explanations prediction and finite figures 390×844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "MZI continuous slider node focus scroll and figure parity 390×844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Fit/passivity model selection and domain boundaries 390×844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Ring feedback decoupling critical coupling and static spectrum 390×844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Measurement normalized absolute efficiency cutback zero output 390×844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Guided circuit detector ledger zero source save reload and figure zoom 390×844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON download restore malformed future rejection 390×844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "All43 integrated lessons and prior notebooks 390×844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Seven CH7 lessons all tutor choices explanations prediction and finite figures 390×844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "MZI continuous slider node focus scroll and figure parity 390×844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Fit/passivity model selection and domain boundaries 390×844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Ring feedback decoupling critical coupling and static spectrum 390×844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Measurement normalized absolute efficiency cutback zero output 390×844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Guided circuit detector ledger zero source save reload and figure zoom 390×844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON download restore malformed future rejection 390×844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "All43 integrated lessons and prior notebooks 320×740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Seven CH7 lessons all tutor choices explanations prediction and finite figures 320×740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "MZI continuous slider node focus scroll and figure parity 320×740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Fit/passivity model selection and domain boundaries 320×740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Ring feedback decoupling critical coupling and static spectrum 320×740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Measurement normalized absolute efficiency cutback zero output 320×740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Guided circuit detector ledger zero source save reload and figure zoom 320×740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON download restore malformed future rejection 320×740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "All43 integrated lessons and prior notebooks 320×740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Seven CH7 lessons all tutor choices explanations prediction and finite figures 320×740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "MZI continuous slider node focus scroll and figure parity 320×740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Fit/passivity model selection and domain boundaries 320×740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Ring feedback decoupling critical coupling and static spectrum 320×740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Measurement normalized absolute efficiency cutback zero output 320×740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Guided circuit detector ledger zero source save reload and figure zoom 320×740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON download restore malformed future rejection 320×740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only migration sipt-textbook-v6",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only migration sipt-textbook-v5",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only migration sipt-textbook-v4",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "network": [],
+  "bounds": []
+}

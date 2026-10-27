@@ -1,0 +1,35 @@
+{
+  "node": {
+    "command": "npm test",
+    "pass": 264,
+    "fail": 0
+  },
+  "independent": {
+    "comparisons": 11955,
+    "status": "PASS",
+    "reference": "Closed-form continuous piecewise constant two-pole ODE, exact SI, independent math.erfc",
+    "cascadeMaxNormalizedErrorBySamplesUI": {
+      "32": 0.010741117759850644,
+      "64": 0.005280413303913673,
+      "128": 0.002622361385960783,
+      "256": 0.0013056145629424104
+    },
+    "scope": "Numerical teaching-model consistency, not calibrated hardware accuracy"
+  },
+  "preservation": {
+    "command": "node scripts/verify-workspace-all.mjs",
+    "files": 766,
+    "TEXTBOOK": "unchanged"
+  },
+  "priorPilotPreservation": {
+    "command": "node scripts/verify-workspace.mjs",
+    "files": 397
+  },
+  "fontAudit": {
+    "requiredHangul": 40,
+    "missingHangul": 0,
+    "missingCharacters": "",
+    "method": "fontTools cmap against original seven embedded fonts; all-Chapter workspace runtime strings"
+  },
+  "deterministicHTML": "123a669cb5bac4acc8a2e8f6bd76d737c0dad3aed393946930053109ffcdd2a6"
+}

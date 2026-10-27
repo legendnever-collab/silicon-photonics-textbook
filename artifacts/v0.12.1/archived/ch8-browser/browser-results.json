@@ -1,0 +1,280 @@
+{
+  "artifact": "file:///workspace/scratch/11d5e8a0ba49/silicon-photonics-textbook/dist/silicon-photonics-textbook-v0.8.0.html",
+  "htmlSha256": "df4ddf94cb13a9536c3df5a2dcaf71f73fb6cab6ce45af17df3915fc467618bc",
+  "browser": "153.0.8010.0",
+  "device": "Desktop/mobile viewport emulation, not physical phone",
+  "scenarios": [
+    {
+      "name": "Integrated50 lessons and prior notebook smoke 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH8 all7 lessons tutor feedback prediction and figures 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "PDK cell layer selection survives reload 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Linked views identity and rigid transform phase interchange 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Four actual presets DRC LVS repair swap and suppression 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Mobile properties invalid input apply close Escape focus 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON report and backup restore saved notes invalid future rejection 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Test access distinct from geometry connectivity 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated50 lessons and prior notebook smoke 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH8 all7 lessons tutor feedback prediction and figures 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "PDK cell layer selection survives reload 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Linked views identity and rigid transform phase interchange 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Four actual presets DRC LVS repair swap and suppression 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Mobile properties invalid input apply close Escape focus 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON report and backup restore saved notes invalid future rejection 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Test access distinct from geometry connectivity 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated50 lessons and prior notebook smoke 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH8 all7 lessons tutor feedback prediction and figures 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "PDK cell layer selection survives reload 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Linked views identity and rigid transform phase interchange 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Four actual presets DRC LVS repair swap and suppression 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Mobile properties invalid input apply close Escape focus 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON report and backup restore saved notes invalid future rejection 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Test access distinct from geometry connectivity 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated50 lessons and prior notebook smoke 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH8 all7 lessons tutor feedback prediction and figures 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "PDK cell layer selection survives reload 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Linked views identity and rigid transform phase interchange 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Four actual presets DRC LVS repair swap and suppression 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Mobile properties invalid input apply close Escape focus 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON report and backup restore saved notes invalid future rejection 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Test access distinct from geometry connectivity 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated50 lessons and prior notebook smoke 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH8 all7 lessons tutor feedback prediction and figures 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "PDK cell layer selection survives reload 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Linked views identity and rigid transform phase interchange 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Four actual presets DRC LVS repair swap and suppression 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Mobile properties invalid input apply close Escape focus 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON report and backup restore saved notes invalid future rejection 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Test access distinct from geometry connectivity 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated50 lessons and prior notebook smoke 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH8 all7 lessons tutor feedback prediction and figures 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "PDK cell layer selection survives reload 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Linked views identity and rigid transform phase interchange 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Four actual presets DRC LVS repair swap and suppression 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Mobile properties invalid input apply close Escape focus 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON report and backup restore saved notes invalid future rejection 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Test access distinct from geometry connectivity 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated50 lessons and prior notebook smoke 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "CH8 all7 lessons tutor feedback prediction and figures 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "PDK cell layer selection survives reload 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Linked views identity and rigid transform phase interchange 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Four actual presets DRC LVS repair swap and suppression 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Mobile properties invalid input apply close Escape focus 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON report and backup restore saved notes invalid future rejection 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Test access distinct from geometry connectivity 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "Integrated50 lessons and prior notebook smoke 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "CH8 all7 lessons tutor feedback prediction and figures 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "PDK cell layer selection survives reload 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Linked views identity and rigid transform phase interchange 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Four actual presets DRC LVS repair swap and suppression 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Mobile properties invalid input apply close Escape focus 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual JSON report and backup restore saved notes invalid future rejection 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Test access distinct from geometry connectivity 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only prior migration sipt-textbook-v7",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only prior migration sipt-textbook-v6",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only prior migration sipt-textbook-v5",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "network": [],
+  "bounds": []
+}

@@ -1,0 +1,80 @@
+name: All-Chapter Workspace validation
+on:
+  push:
+    branches: [feature/workspace-u1-pinned-graph]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  physics-and-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          npm run build
+          npm test
+          npm run test:workspace:all:preservation
+          npm run test:workspace:preservation
+          pip install fonttools brotli numpy
+          python3 tests/ch12-independent-validation.py
+          python3 scripts/audit-workspace-all-font.py
+          cp dist/silicon-photonics-textbook-v0.12.2.html /tmp/all.html
+          npm run build
+          cmp /tmp/all.html dist/silicon-photonics-textbook-v0.12.2.html
+          cd dist
+          sha256sum -c WORKSPACE_ALL_SHA256SUMS.txt
+          sha256sum -c WORKSPACE_SHA256SUMS.txt
+      - run: |
+          npm install --no-save --no-package-lock playwright@1.62.0
+          npx playwright install chromium
+          npm run test:workspace:all:regression
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workspace-all-physics-regression
+          path: |
+            dist/*0.12.2*
+            dist/workspace-all-*
+            dist/WORKSPACE_ALL_*
+            docs/WORKSPACE_ALL_*
+            artifacts/v0.12.2/integrated/
+  all-lessons:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: desktop
+            widths: '1440,1366'
+            extras: '1'
+          - name: mobile
+            widths: '390,320'
+            extras: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          npm run build
+          npm install --no-save --no-package-lock playwright@1.62.0
+          npx playwright install chromium
+      - run: npm run test:workspace:all
+        env:
+          WS_ALL_WIDTHS: '${{ matrix.widths }}'
+          WS_ALL_EXTRAS: '${{ matrix.extras }}'
+          WS_ALL_OUT: 'artifacts/v0.12.2/${{ matrix.name }}'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workspace-all-${{ matrix.name }}
+          path: artifacts/v0.12.2/${{ matrix.name }}/

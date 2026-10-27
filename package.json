@@ -1,10 +1,10 @@
 {
   "name": "silicon-photonics-textbook",
-  "version": "0.12.0",
+  "version": "0.12.2",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-chapter12.mjs",
+    "build": "node scripts/build-workspace-all.mjs",
     "test": "node --test tests/*.test.mjs",
     "test:browser": "node tests/browser.mjs && node tests/figures-browser.mjs",
     "serve": "python3 -m http.server 8080",
@@ -34,7 +34,17 @@
     "test:ch11:independent": "python3 tests/ch11-independent-validation.py",
     "build:ch11": "node scripts/build-chapter11.mjs",
     "test:ch12:independent": "python3 tests/ch12-independent-validation.py",
-    "test:ch12:browser": "node tests/ch12-browser.mjs"
+    "test:ch12:browser": "node tests/ch12-browser.mjs",
+    "build:ch12": "node scripts/build-chapter12.mjs",
+    "build:workspace": "node scripts/build-workspace.mjs",
+    "test:workspace:browser": "node tests/workspace-browser.mjs",
+    "test:workspace:regression": "node scripts/workspace-regressions.mjs integrated",
+    "test:workspace:archived": "node scripts/workspace-regressions.mjs archived",
+    "test:workspace:preservation": "node scripts/verify-workspace.mjs",
+    "build:workspace:all": "node scripts/build-workspace-all.mjs",
+    "test:workspace:all": "node tests/workspace-all-browser.mjs",
+    "test:workspace:all:preservation": "node scripts/verify-workspace-all.mjs",
+    "test:workspace:all:regression": "node scripts/workspace-all-regressions.mjs"
   },
   "engines": {
     "node": ">=20"
