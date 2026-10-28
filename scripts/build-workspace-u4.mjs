@@ -28,6 +28,8 @@ const element=()=>({innerHTML:'',textContent:'',setAttribute(){},nextElementSibl
 ${['esc','num','svg','fieldPlot','dispersionPlot','updateNotebookOriginal','updateAdvancedNotebook','updateEngineeringNotebook'].map(fn).join('\n')}
 updateNotebookOriginal();return{graphic:$('#notebook-plot').innerHTML,values:$('#notebook-readout').innerHTML};};})(globalThis);`;
 replace('</style>',await read('workspace-u4/styles.css')+'\n</style>');
+// Original Chapter8–12 focus restoration predates the split panes. Restore the actual scrolling pane in the workspace.
+replace("if(matchMedia('(max-width:760px)').matches)window.scrollBy(0,dy);else document.getElementById('notebook').scrollTop+=dy;","const pane=a.el.closest('.ws-controls');if(pane&&(root.WorkspaceUI?.expanded()||matchMedia('(min-width:761px)').matches))pane.scrollTop+=dy;else if(matchMedia('(max-width:760px)').matches)window.scrollBy(0,dy);else document.getElementById('notebook').scrollTop+=dy;");
 replace("const $=s=>document.querySelector(s),pilots=new Set(['1.4','12.2','12.5']),key='sipt-workspace-u3-v1';","const $=s=>document.querySelector(s),pilots=new Set(root.TEXTBOOK.lessons.map(l=>l.id)),key='sipt-workspace-u3-v1';");
 replace("(function(){\n'use strict';\nconst {lessons}=TEXTBOOK",ch1+'\n'+await read('workspace-u4/catalog.js')+'\n'+await read('workspace-u4/workspace.js')+"\n(function(){\n'use strict';\nconst {lessons}=TEXTBOOK");
 replace('WorkspaceU2.mount(current().id,settings(),()=>updateNotebook());WorkspaceU3.mount(current(),{','WorkspaceU2.mount(current().id,settings(),()=>updateNotebook());WorkspaceU4.mount(current(),settings(),()=>updateNotebook());WorkspaceU3.mount(current(),{');

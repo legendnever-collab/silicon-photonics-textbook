@@ -19,7 +19,7 @@ function reference(l,s){
  if(type==='wdm'){const a=root.WDMPhysics.snapshot(s);return a.state?{state:{...s,...a.state},keys:root.WDMPhysics.captureKeys,status:a.status,type}:null;}
  if(type==='dynamic'){const a=root.DynamicLinkPhysics.snapshot(s);return a.settings?{state:{...s,...a.settings,view:s.view,captured:s.captured},keys:root.DynamicLinkPhysics.physical,status:a.status,type}:null;}
  let r=pref().reference;if(r){const ch=Number(l.id.split('.')[0]);if(ch>1)r=cleanRecord(root['Ch'+ch+'Notebook'].sanitize(l.id,r));else{const limits={angle:[5,80],neff:[1.5,3.4],length:[0,20],width:[100,1000],radius:[0,3],mode:[0,4]};if(Object.entries(r).some(([k,v])=>limits[k]&&(v<limits[k][0]||v>limits[k][1])))r=null;}}
- return r?{state:r,keys:[...new Set([...Object.keys(r),...Object.keys(cleanRecord(s))])],status:'UI Reference',type}:null;
+ return r&&Object.keys(r).length?{state:r,keys:[...new Set([...Object.keys(r),...Object.keys(cleanRecord(s))])],status:'UI Reference',type}:null;
 }
 function present(l,s){
  const ch=Number(l.id.split('.')[0]);if(ch===1)return root.WorkspaceU4Ch1(l,s);
@@ -29,12 +29,12 @@ function observationChanged(a,b){return ['view','modelView','ch2View','viewMode'
 function numericRows(html){
  const box=document.createElement('div');box.innerHTML=html;const rows=[];
  for(const p of box.querySelectorAll('p')){
-  const copy=p.cloneNode(true);for(const e of copy.querySelectorAll('strong'))e.textContent='□';const context=copy.textContent.replace(/\s+/g,' ').trim();
+  const copy=p.cloneNode(true);for(const e of copy.querySelectorAll('strong'))if(/^[+−-]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+−-]?\d+)?\s*[^\d]*$/i.test(e.textContent.trim()))e.textContent='□';const context=copy.textContent.replace(/\s+/g,' ').trim();
   [...p.querySelectorAll('strong')].forEach((e,index)=>{const m=e.textContent.trim().match(/^([+−-]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+−-]?\d+)?)\s*([^\d]*)$/i);if(!m)return;const value=Number(m[1].replaceAll('−','-'));if(Number.isFinite(value))rows.push({key:context+'|'+index+'|'+m[2].trim(),label:context,unit:m[2].trim(),value,display:e.textContent.trim()});});
  }
  return rows;
 }
-function metricDeltas(a,b){const refs=new Map(numericRows(a).map(r=>[r.key,r]));return numericRows(b).filter(r=>refs.has(r.key)).map(r=>({label:r.label,unit:r.unit,reference:refs.get(r.key).display,current:r.display,delta:Number((r.value-refs.get(r.key).value).toPrecision(8))}));}
+function metricDeltas(a,b){const ar=numericRows(a),br=numericRows(b),refs=new Map(ar.map(r=>[r.key,r]));return br.filter(r=>refs.has(r.key)&&ar.filter(x=>x.key===r.key).length===1&&br.filter(x=>x.key===r.key).length===1).map(r=>({label:r.label,unit:r.unit,reference:refs.get(r.key).display,current:r.display,delta:Number((r.value-refs.get(r.key).value).toPrecision(8))}));}
 function cell(tag,text){const e=document.createElement(tag);e.textContent=String(text);return e;}
 function table(headers,rows,caption){const t=document.createElement('table'),cap=document.createElement('caption');cap.textContent=caption;t.append(cap);const head=document.createElement('tr');headers.forEach(x=>head.append(cell('th',x)));const thead=document.createElement('thead');thead.append(head);t.append(thead);const body=document.createElement('tbody');for(const row of rows){const tr=document.createElement('tr');row.forEach((x,i)=>tr.append(cell(i?'td':'th',x)));body.append(tr);}t.append(body);return t;}
 function graphic(html,prefix){
