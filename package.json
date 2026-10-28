@@ -1,10 +1,10 @@
 {
   "name": "silicon-photonics-textbook",
-  "version": "0.12.3",
+  "version": "0.12.4",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-workspace-u2.mjs",
+    "build": "node scripts/build-workspace-u3.mjs",
     "test": "node --test tests/*.test.mjs",
     "test:browser": "node tests/browser.mjs && node tests/figures-browser.mjs",
     "serve": "python3 -m http.server 8080",
@@ -48,7 +48,11 @@
     "build:workspace:u2": "node scripts/build-workspace-u2.mjs",
     "test:workspace:u2": "node tests/workspace-u2-browser.mjs",
     "test:workspace:u2:preservation": "node scripts/verify-workspace-u2.mjs",
-    "test:workspace:u2:regression": "node scripts/workspace-u2-regressions.mjs"
+    "test:workspace:u2:regression": "node scripts/workspace-u2-regressions.mjs",
+    "build:workspace:u3": "node scripts/build-workspace-u3.mjs",
+    "test:workspace:u3": "node tests/workspace-u3-browser.mjs",
+    "test:workspace:u3:preservation": "node scripts/verify-workspace-u3.mjs",
+    "test:workspace:u3:regression": "node scripts/workspace-u3-regressions.mjs"
   },
   "engines": {
     "node": ">=20"

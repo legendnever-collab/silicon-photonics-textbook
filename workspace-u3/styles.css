@@ -1,0 +1,4 @@
+.u3-learning{border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:16px;margin:18px 0;background:var(--paper);overflow-wrap:anywhere}
+.u3-learning h3{font-size:18px}.u3-learning p{font-size:14px;line-height:1.75;margin-bottom:12px}.u3-learning button{font-size:14px;min-height:44px;white-space:normal;max-width:100%}
+#u3-fields[hidden]{display:none}#u3-fields .prediction{padding-bottom:0}#u3-fields textarea{min-height:110px;scroll-margin:16px}#u3-fields select{max-width:100%}#u3-status{margin:12px 0 0;color:var(--muted)}#u3-recall{margin-bottom:0}#u3-recall summary{font-size:15px}
+.u3-return{margin:12px 0;min-height:44px}.u3-origin:empty{display:none}
