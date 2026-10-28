@@ -1,0 +1,70 @@
+name: Workspace U3 Pilot validation
+on:
+  pull_request:
+    branches: [main, feature/workspace-u2-guided-comparison]
+  workflow_dispatch:
+jobs:
+  pilot-and-physics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          npm run build
+          npm test
+          npm run test:workspace:u3:preservation
+          pip install fonttools brotli numpy
+          python3 tests/ch12-independent-validation.py
+          python3 scripts/audit-workspace-u3-font.py
+          cp dist/silicon-photonics-textbook-v0.12.4.html /tmp/u3.html
+          npm run build
+          cmp /tmp/u3.html dist/silicon-photonics-textbook-v0.12.4.html
+          cd dist
+          sha256sum -c WORKSPACE_U3_SHA256SUMS.txt
+          sha256sum -c WORKSPACE_U2_SHA256SUMS.txt
+          sha256sum -c WORKSPACE_ALL_SHA256SUMS.txt
+      - run: |
+          npm install --no-save --no-package-lock playwright@1.62.0
+          npx playwright install chromium
+          npm run test:workspace:u3
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workspace-u3-pilot
+          path: |
+            artifacts/v0.12.4/u3/
+            docs/WORKSPACE_U3_*
+            dist/*0.12.4*
+            dist/workspace-u3-*
+            dist/WORKSPACE_U3_*
+  regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        suite: [u2, all, integrated]
+    env:
+      WS_ALL_OUT: artifacts/v0.12.4/all
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          npm run build
+          npm install --no-save --no-package-lock playwright@1.62.0
+          npx playwright install chromium
+          node scripts/workspace-u3-regressions.mjs ${{ matrix.suite }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workspace-u3-${{ matrix.suite }}
+          path: artifacts/v0.12.4/

@@ -1,0 +1,30 @@
+{
+  "htmlSha256": "40b2329ef02d05f33670caa17b8e6d56f5647e4bd5c007959bf12c0f5734530f",
+  "passedBrowserScenarios": 763,
+  "suites": [
+    {
+      "path": "u3/browser-results.json",
+      "sha256": "0b291ce08b258b42378d923bd9354be182640db6d1ac9bb0698de64788a844c6",
+      "passed": 31
+    },
+    {
+      "path": "u2/browser-results.json",
+      "sha256": "2874957c9873d7b0d750be066ac8d949eb9506eae66b0160967d101a4a805a73",
+      "passed": 31
+    },
+    {
+      "path": "all/all-browser-results.json",
+      "sha256": "4dfb6e7bad22e7693a3b7836a0be79507f051f9a6d724550347e3d657648764d",
+      "passed": 634
+    },
+    {
+      "path": "integrated/ch12-browser/browser-results.json",
+      "sha256": "2cdbfc84fb3c8fc344863eae3e1c246f9aa9b0490daa66db2c8605dbcad46dd4",
+      "passed": 67
+    }
+  ],
+  "nodeTests": 269,
+  "independentComparisons": 11955,
+  "preservedPriorFiles": 838,
+  "limitations": "Viewport emulation; physical Android/IME/system Back/touch and measured learning gain unverified. U3 visits and Ch1 reference are separate UI storage; all original notes/predictions and Ch12 Frozen use original learning backup."
+}

@@ -1,3 +1,9 @@
+# v0.12.4 — U3 Learning Flow Pilot
+
+현재 실행 파일: [silicon-photonics-textbook-v0.12.4.html](dist/silicon-photonics-textbook-v0.12.4.html). 1.4 / 12.2 / 12.5에서 **실험 옆에서 쓰기**를 열면 기존 Prediction·관찰 후 설명·Reflection 입력을 실제 노드 그대로 이동합니다. 닫으면 교재로 복귀하고, 재방문 시 선택적 회상 질문을 엽니다. 입력은 선택 사항이며 자동 채점하지 않습니다. 기존 메모/Prediction/Backup과 Physics/Frozen을 보존합니다.
+
+`npm run build`, `npm run test:workspace:u3`, `npm run test:workspace:u3:preservation`. [학습 검토](docs/WORKSPACE_U3_LEARNING_REVIEW.md) · [검증](docs/WORKSPACE_U3_VALIDATION.md). PR14의 v0.12.3 위에 쌓은 별도 Draft이며 두 PR 모두 사용자 검토 전 병합하지 않습니다. U2·U3 전체79 Lesson 확대는 후속 U4입니다. 아래 “현재” 문구는 각 당시의 Release 기록입니다.
+
 # v0.12.3 — U2 Guided Comparison Pilot
 
 현재 실행 파일: [silicon-photonics-textbook-v0.12.3.html](dist/silicon-photonics-textbook-v0.12.3.html). 1.4 / 12.2 / 12.5의 핵심 Parameter·변경 표시·Reference/Current 비교·공통 Auto/Fixed 축. Chapter12는 원래 Frozen Evidence를 재사용합니다. 모든 79 Lesson의 U1과 기존 Physics/학습 기록은 보존합니다. 검토: [WORKSPACE_U2_LEARNING_REVIEW.md](docs/WORKSPACE_U2_LEARNING_REVIEW.md). `npm run build`, `npm run test:workspace:u2`, `npm run test:workspace:u2:preservation`. U3/전체 U2 확대와 main 병합은 별도 사용자 검토 후 진행합니다.
