@@ -1,3 +1,9 @@
+# v0.12.5 — U4 All-Lesson Workspace
+
+현재 실행 파일: [silicon-photonics-textbook-v0.12.5.html](dist/silicon-photonics-textbook-v0.12.5.html). 모든12 Chapter /79 Lesson에 핵심 Parameter 안내·변경 표시·기준/현재 비교와 선택적 Prediction/Reflection 연결을 제공합니다. 기존 세 Pilot의 Overlay/Auto/Fixed 축은 유지하고, 나머지는 각 원래 축의 나란히 보기를 제공합니다. 원래 Physics·Renderer·교재·학습 기록·Frozen·Report·과거 Release를 보존합니다.
+
+`npm run build`, `npm run test:workspace:u4`, `npm run test:workspace:u4:preservation`. [학습 검토](docs/WORKSPACE_U4_LEARNING_REVIEW.md) · [Lesson별 안내](docs/WORKSPACE_U4_CATALOG.md) · [검증](docs/WORKSPACE_U4_VALIDATION.md). PR15 위에 쌓은 별도 Draft이며 PR14/15와 함께 사용자 검토 전 병합하지 않습니다. UI Reference와 원래 Frozen Capture의 범위는 검토 안내를 확인하세요. 아래 내용은 각 당시 Release 기록입니다.
+
 # v0.12.4 — U3 Learning Flow Pilot
 
 현재 실행 파일: [silicon-photonics-textbook-v0.12.4.html](dist/silicon-photonics-textbook-v0.12.4.html). 1.4 / 12.2 / 12.5에서 **실험 옆에서 쓰기**를 열면 기존 Prediction·관찰 후 설명·Reflection 입력을 실제 노드 그대로 이동합니다. 닫으면 교재로 복귀하고, 재방문 시 선택적 회상 질문을 엽니다. 입력은 선택 사항이며 자동 채점하지 않습니다. 기존 메모/Prediction/Backup과 Physics/Frozen을 보존합니다.

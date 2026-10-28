@@ -1,0 +1,71 @@
+name: Workspace U4 All-Lesson validation
+on:
+  pull_request:
+    branches: [main, feature/workspace-u3-learning-flow]
+  workflow_dispatch:
+jobs:
+  all-lesson-and-physics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          npm run build
+          npm test
+          npm run test:workspace:u4:preservation
+          pip install fonttools brotli numpy
+          python3 tests/ch12-independent-validation.py
+          python3 scripts/audit-workspace-u4-font.py
+          cp dist/silicon-photonics-textbook-v0.12.5.html /tmp/u4.html
+          npm run build
+          cmp /tmp/u4.html dist/silicon-photonics-textbook-v0.12.5.html
+          cd dist
+          sha256sum -c WORKSPACE_U4_SHA256SUMS.txt
+          sha256sum -c WORKSPACE_U3_SHA256SUMS.txt
+          sha256sum -c WORKSPACE_U2_SHA256SUMS.txt
+          sha256sum -c WORKSPACE_ALL_SHA256SUMS.txt
+      - run: |
+          npm install --no-save --no-package-lock playwright@1.62.0
+          npx playwright install chromium
+          npm run test:workspace:u4
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workspace-u4-all-lesson
+          path: |
+            artifacts/v0.12.5/u4/
+            docs/WORKSPACE_U4_*
+            dist/*0.12.5*
+            dist/workspace-u4-*
+            dist/WORKSPACE_U4_*
+  regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        suite: [u2, u3, all, integrated]
+    env:
+      WS_ALL_OUT: artifacts/v0.12.5/all
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          npm run build
+          npm install --no-save --no-package-lock playwright@1.62.0
+          npx playwright install chromium
+          node scripts/workspace-u4-regressions.mjs ${{ matrix.suite }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workspace-u4-${{ matrix.suite }}
+          path: artifacts/v0.12.5/

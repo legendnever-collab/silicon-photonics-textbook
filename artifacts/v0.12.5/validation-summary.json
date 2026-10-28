@@ -1,0 +1,35 @@
+{
+  "htmlSha256": "20d45f4962e918f151aac6ef32a872a8815459c36ae87cbbad5442d82650bfe1",
+  "passedBrowserScenarios": 1089,
+  "suites": [
+    {
+      "path": "u4/browser-results.json",
+      "sha256": "e76ecf602a2cfd4f075b92b0debafa04dcb2bce457b0a97ced6766ce33b82941",
+      "passed": 326
+    },
+    {
+      "path": "u3/browser-results.json",
+      "sha256": "17faae4c4c039327992d628e61c26f28c151fc61eb2a449d5ccaee400ca0f39b",
+      "passed": 31
+    },
+    {
+      "path": "u2/browser-results.json",
+      "sha256": "3f1778a0ef2b384f6257265b5adcc7577ccf07308d5e9f0ab50294062a690b8f",
+      "passed": 31
+    },
+    {
+      "path": "all/all-browser-results.json",
+      "sha256": "bcfc85ece1159ba2d127f86576415bd47852a1248f49f203b518055e226ac2b3",
+      "passed": 634
+    },
+    {
+      "path": "integrated/ch12-browser/browser-results.json",
+      "sha256": "7b376e1c8130445601b0fbb1e0f8aeed32688a672f07bdd4f0428eba99243cd3",
+      "passed": 67
+    }
+  ],
+  "nodeTests": 269,
+  "independentComparisons": 11955,
+  "preservedPriorFiles": 870,
+  "limitations": "Viewport emulation; physical Android/IME/system Back/touch and measured learning gain unverified. UI References and visit flags are separate UI storage; all original notes/predictions/native Frozen use original learning backup. Chapter10 electrical inputs are outside Sweep capture. U3 availability assertion adapted for all79; all original source assertions remain archived."
+}

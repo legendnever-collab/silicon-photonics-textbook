@@ -1,0 +1,1314 @@
+{
+  "htmlSha256": "20d45f4962e918f151aac6ef32a872a8815459c36ae87cbbad5442d82650bfe1",
+  "browser": "153.0.8010.0",
+  "device": "Viewport emulation only; physical Android/IME/Touch unverified",
+  "scenarios": [
+    {
+      "name": "U4 1.1 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.2 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.3 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.4 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.5 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.1 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.2 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.3 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.4 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.5 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.1 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.2 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.3 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.4 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.5 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.1 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.2 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.3 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.4 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.5 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.6 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.7 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.1 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.2 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.3 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.4 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.5 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.6 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.7 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.1 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.2 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.3 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.4 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.5 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.6 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.7 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.1 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.2 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.3 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.4 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.5 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.6 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.7 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.1 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.2 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.3 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.4 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.5 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.6 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.7 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.1 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.2 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.3 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.4 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.5 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.6 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.7 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.1 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.2 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.3 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.4 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.5 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.6 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.7 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.8 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.1 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.2 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.3 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.4 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.5 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.6 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.7 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.1 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.2 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.3 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.4 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.5 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.6 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.7 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.1 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.2 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.3 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.4 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.5 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.1 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.2 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.3 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.4 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.5 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.1 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.2 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.3 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.4 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.5 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.1 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.2 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.3 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.4 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.5 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.6 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.7 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.1 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.2 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.3 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.4 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.5 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.6 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.7 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.1 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.2 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.3 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.4 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.5 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.6 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.7 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.1 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.2 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.3 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.4 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.5 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.6 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.7 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.1 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.2 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.3 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.4 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.5 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.6 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.7 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.1 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.2 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.3 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.4 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.5 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.6 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.7 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.1 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.2 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.3 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.4 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.5 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.6 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.7 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.8 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.1 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.2 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.3 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.4 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.5 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.6 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.7 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.1 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.2 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.3 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.4 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.5 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.6 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.7 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.1 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.2 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.3 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.4 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.5 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.1 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.2 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.3 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.4 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.5 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.1 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.2 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.3 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.4 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.5 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.1 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.2 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.3 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.4 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.5 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.6 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.7 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.1 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.2 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.3 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.4 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.5 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.6 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.7 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.1 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.2 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.3 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.4 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.5 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.6 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.7 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.1 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.2 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.3 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.4 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.5 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.6 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.7 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.1 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.2 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.3 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.4 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.5 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.6 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.7 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.1 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.2 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.3 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.4 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.5 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.6 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.7 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.1 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.2 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.3 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.4 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.5 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.6 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.7 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.8 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.1 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.2 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.3 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.4 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.5 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.6 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.7 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.1 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.2 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.3 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.4 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.5 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.6 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.7 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.1 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.2 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.3 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.4 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 1.5 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.1 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.2 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.3 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.4 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 2.5 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.1 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.2 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.3 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.4 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 3.5 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.1 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.2 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.3 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.4 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.5 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.6 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 4.7 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.1 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.2 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.3 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.4 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.5 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.6 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 5.7 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.1 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.2 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.3 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.4 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.5 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.6 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 6.7 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.1 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.2 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.3 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.4 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.5 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.6 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 7.7 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.1 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.2 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.3 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.4 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.5 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.6 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 8.7 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.1 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.2 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.3 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.4 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.5 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.6 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 9.7 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.1 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.2 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.3 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.4 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.5 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.6 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.7 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 10.8 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.1 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.2 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.3 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.4 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.5 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.6 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 11.7 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.1 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.2 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.3 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.4 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.5 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.6 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U4 12.7 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "12-chapter writing and comparison walkthrough 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "12-chapter writing and comparison walkthrough 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "12-chapter writing and comparison walkthrough 844x390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "12-chapter writing and comparison walkthrough 844x390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "Model changes keep original controls and withhold incompatible deltas",
+      "status": "PASS"
+    },
+    {
+      "name": "Chapter10 electrical UI reference and native Sweep scope stay distinct",
+      "status": "PASS"
+    },
+    {
+      "name": "Original native Capture hold cannot be bypassed by comparison UI",
+      "status": "PASS"
+    },
+    {
+      "name": "Matching display deltas retain units and withhold null or different contexts",
+      "status": "PASS"
+    },
+    {
+      "name": "Original actual backup and restore all79 learning fields and native Frozen",
+      "status": "PASS"
+    },
+    {
+      "name": "Corrupt UI preference cannot change original learning or Frozen state",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "network": []
+}

@@ -1,0 +1,20 @@
+# U4 all79 · v0.12.5
+
+User asked to continue after completed U3 Pilot. Continue the saved master plan's U4 full rollout: all79 lessons in12 chapters, preserving textbook/Tutor depth, every original Parameter, Physics, notes, Prediction/Reflection, reports, Frozen and previous releases. No new curriculum, score, gate, notification or pop-out.
+
+Remote verified before changes: main `4c59804424700ac8fc2680feb3820e6f438612d4`; PR14 Draft/open at `1f742b10cba8f1964b29139ffb58b471e63f97a3`; PR15 Draft/open at `cabae4dd7db286e77c062121b68f1d73c94baee6`. U4 stacks on PR15 without merging either prerequisite. Branch `feature/workspace-u4-all-lessons`. No applicable AGENTS.md and no subagents.
+
+## Implementation contract
+
+- Explicit79-entry catalog associates actual primary controls with lesson-specific model relations and limits. Original node IDs, delegated events, hidden model groups, numeric Properties and full controls stay available.
+- Preserve the three original U2 overlays and their common Auto/Fixed axes. Other76 lessons compare original Renderer graphics/readouts side by side, retaining and declaring each independent original axis/unit/normalization. No invented common-axis overlay or new model. Changed controls and the related model explanation use text and dashed emphasis.
+- Read-only presentation adapters call the original Graphics functions in existing module closures. Chapter1 rendering functions are copied mechanically, unchanged, into a read-only DOM facade. Current live plot and readout are never replaced by U4. Compare original current/reference Readouts, and subtract only single numeric strong values with identical surrounding text and units. Deltas are rounded display-value differences; null/withheld is never zero. Different model/View contexts withhold deltas.
+- Chapter1–9 and Chapter10 non-Sweep views use separate UI References, excluded from learning backup. They do not acquire Frozen evidence. Chapter10 Sweep/Budget uses original acquisition conditions and capture checks. Its electrical inputs are outside original Sweep Capture, and use the explicitly separate UI Reference. Chapter11 reuses Frozen physical capture keys, sharing current Architecture/Channel/Pattern as the original snapshot enumerates both architectures/all16 states. Chapter12 uses original Physical/Evidence snapshot, sharing current View. Every reference is rendered by the original model/Renderer with declared scope. Original buttons remain actual controls; original hold conditions are not bypassed.
+- Extend the existing U3 node-moving adapter to all79 IDs. Same notes, selection, prepared feedback,12,000-character limit, backup/import and optional collapsed revisit prompt. Separate visited flags remain UI preferences. No duplicated input forms.
+- UI preference corruption is isolated from learning state. Reference settings are numeric/allowed enum data, not stored executable markup; duplicate comparison SVGs are read-only, inert and namespaced, with original interactive data attributes removed.
+
+## Validation contract
+
+Freeze all870 prior tracked files except README/package metadata. Check full TEXTBOOK identity and immutable v0.12.0–v0.12.4 bytes. Build additively from exact v0.12.4. Verify deterministic build/source manifests and embedded font coverage. Test all79 actual control layouts, current/model parity, UI and native capture scope, baseline immutability, learning save/restore, focus and scrolling on desktop/mobile/themes. Retarget original U2/all79/integrated suites without assertion edits. For U3 only, adapt the one old “nonpilot has no learning panel” assertion to the authorized all-lesson panel availability; all other original assertions remain unchanged and all original files stay protected.
+
+Deliver source checkpoints, standalone HTML, guide/catalog/validation evidence and a stacked Draft PR. User review and explicit instruction remain required before main merge. Physical Android IME/Touch/system Back and measured learning benefit remain unverified unless independently checked.
