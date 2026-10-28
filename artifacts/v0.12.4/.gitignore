@@ -1,0 +1,5 @@
+*.jpg
+*.png
+*.log
+!review/*.jpg
+all/all-browser-results.json

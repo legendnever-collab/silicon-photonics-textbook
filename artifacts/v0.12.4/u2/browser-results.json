@@ -1,0 +1,134 @@
+{
+  "htmlSha256": "40b2329ef02d05f33670caa17b8e6d56f5647e4bd5c007959bf12c0f5734530f",
+  "browser": "153.0.8010.0",
+  "device": "Viewport emulation only; physical Android/IME unverified",
+  "scenarios": [
+    {
+      "name": "U2 1.4 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.2 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.5 1440x900 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 1.4 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.2 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.5 1440x900 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 1.4 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.2 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.5 1366x768 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 1.4 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.2 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.5 1366x768 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 1.4 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.2 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.5 390x844 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 1.4 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.2 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.5 390x844 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 1.4 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.2 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.5 320x740 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 1.4 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.2 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.5 320x740 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 1.4 844x390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.2 844x390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.5 844x390 light",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 1.4 844x390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.2 844x390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "U2 12.5 844x390 dark",
+      "status": "PASS"
+    },
+    {
+      "name": "UI reference corruption is isolated from learning data",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "network": []
+}

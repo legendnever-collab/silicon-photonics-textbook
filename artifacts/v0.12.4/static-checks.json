@@ -1,0 +1,29 @@
+{
+  "htmlSha256": "40b2329ef02d05f33670caa17b8e6d56f5647e4bd5c007959bf12c0f5734530f",
+  "node": {
+    "tests": 269,
+    "passed": 269,
+    "failed": 0
+  },
+  "independent": {
+    "comparisons": 11955,
+    "status": "PASS",
+    "reference": "Closed-form continuous piecewise constant two-pole ODE, exact SI, independent math.erfc",
+    "cascadeMaxNormalizedErrorBySamplesUI": {
+      "32": 0.010741117759850644,
+      "64": 0.005280413303913673,
+      "128": 0.002622361385960783,
+      "256": 0.0013056145629424104
+    },
+    "scope": "Numerical teaching-model consistency, not calibrated hardware accuracy"
+  },
+  "font": {
+    "requiredHangul": 88,
+    "missingHangul": 0,
+    "missingCharacters": ""
+  },
+  "preservedPriorFiles": 838,
+  "fullTextbookEqual": true,
+  "deterministicRebuildSameHash": true,
+  "originalSourceAndAssertionsUnchanged": true
+}
